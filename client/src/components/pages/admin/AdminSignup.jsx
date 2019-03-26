@@ -9,8 +9,9 @@ import PasswordError from '../../alerts/PasswordError';
 
 
 class Signup extends Component {
-
-    state = {
+    constructor(props) {
+        super(props)
+        this.state = {
         firstName: '',
         lastName: '',
         username: '',
@@ -20,6 +21,14 @@ class Signup extends Component {
         nameTaken: false,
         passwordError: false
       }
+        this.setRedirect = this.setRedirect.bind(this)
+        this.renderRedirect = this.renderRedirect.bind(this)
+        this.handleInputChange = this.handleInputChange.bind(this)
+        this.handleFormSubmit = this.handleFormSubmit.bind(this)
+        this.checkPassword = this.checkPassword.bind(this)
+        this.checkUserName = this.checkUserName.bind(this)
+      
+    }
 
     componentDidMount() {
         console.log('Ready')
@@ -44,6 +53,24 @@ class Signup extends Component {
             [name]: value
         })
       }
+
+    checkPassword = event => {
+        const password = event.target.value
+        this.setState({
+         confirmPassword: password
+        })
+        if (this.state.password !== password) {
+            console.log('THE PASSWORDS DO NOT MATCH')
+            this.setState({
+                passwordError: 'PASSWORDS DO NOT MATCH'
+            })
+        } else {
+            this.setState({
+                passwordError: 'PASSWORDS MATCH'
+            })
+        }
+
+    }
 
     checkUserName = event => {
         const username = event.target.value;
@@ -186,7 +213,7 @@ class Signup extends Component {
                             <input
                                 value={this.state.confirmPassword}
                                 name="confirmPassword"
-                                onChange={this.handleInputChange}
+                                onChange={this.checkPassword}
                                 type="password"
                                 className="form-control"
                                 id="confirmPassword"

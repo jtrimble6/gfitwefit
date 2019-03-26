@@ -6,6 +6,7 @@ import ReactTable from "react-table";
 import AdminBar from '../../nav/AdminBar'
 import '../../../css/admin.css'
 import 'react-table/react-table.css'
+import AdminSignup from './AdminSignup'
 // import ExistingAccount from "../../alerts/ExistingAccount";
 // import PasswordError from '../../alerts/PasswordError';
 
@@ -302,6 +303,10 @@ class AdminPage extends Component {
               />
             </div>
             
+            <AdminSignup 
+            
+            />
+
           </div>
         
         )
