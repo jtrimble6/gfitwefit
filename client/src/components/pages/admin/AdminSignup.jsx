@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Redirect } from 'react-router-dom'
 import API from '../../../utils/API'
-import Navbar from '../../nav/Navbar'
+// import Navbar from '../../nav/Navbar'
 import '../../../css/signup.css'
 import ExistingAccount from "../../alerts/ExistingAccount";
 import PasswordError from '../../alerts/PasswordError';
@@ -153,7 +153,6 @@ class Signup extends Component {
     render() {
         return (
             <div id="loginPage">
-            <Navbar />
               {this.renderRedirect()}
                 <div className="formContainer">    
                   <form className="formSignup" action="index.html">
