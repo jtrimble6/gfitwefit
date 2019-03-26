@@ -1,0 +1,70 @@
+#loginPage {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 10%;
+    padding: 5%;
+    text-align: center;
+    background-color: white;
+}
+
+#adminPage {
+    margin: 0 auto;
+    margin-top: 10%;
+    margin-bottom: 20%;
+    color: white;
+    text-align: center;
+}
+
+#adminPage hr {
+    border: solid 2px white;
+    width: 80%;
+    margin-top: 5% !important;
+    margin-bottom: 5% !important;
+}
+
+#adminPage h1, h2 {
+    color: #B1864F
+}
+
+.formRow {
+    width: 50%;
+    margin-top: 5%;
+    margin: 0 auto;
+}
+
+.formRow .formContainer {
+    width: 100%;
+}
+
+.scheduleRow {
+    margin: 0 auto;
+    width: 100%;
+}
+
+.scheduleTable {
+    width: 80%;
+    text-align: center;
+    color: gold;
+    border-color: gold;
+    margin: 0 auto;
+}
+
+.scheduleTable .rt-td {
+    white-space: pre-wrap !important;
+    color: white;
+}
+
+.scheduleHeaders {
+    font-size: 24px;
+    color: #B1864F
+}
+
+#logoutPage {
+    color: white;
+    text-align: center;
+    margin-top: 10%;
+}
+
+#logoutPage a {
+    color: #B1864F
+}

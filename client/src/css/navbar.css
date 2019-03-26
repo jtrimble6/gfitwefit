@@ -1,0 +1,279 @@
+
+    /* NAVBAR */
+    .container {
+        max-height: 50px !important;
+    }
+
+    .masterRow {
+        height: 50px !important;
+        max-width: 100% !important;
+    }
+
+    .navbar {
+        position: fixed;
+        margin-bottom: 0;
+        background-color: white;
+        border-top: solid 2px #B1864F;
+        border-bottom: solid 3px #B1864F;
+    }
+    
+    .navbar-brand {
+        position: fixed !important;
+        left: 15px !important;
+        font-family: 'Sarpanch', sans-serif;
+        font-size: 25px;
+        color: #B1864F !important;
+    }
+    .navbar-brand:hover {
+        background-color: transparent !important;
+        color: white !important;
+        cursor: pointer !important;
+      }
+    .navbar-toggler {
+        position: absolute;
+        right: 0;
+        background-color: #B1864F !important;
+    }
+    .navbar-toggler-icon {
+        color: #B1864F !important;
+    }
+    .nav-item {
+        padding-bottom: 10px;
+    }
+    .nav-item:hover {
+        text-shadow: 2px 2px #B1864F;
+        background-color: transparent !important;
+        color: black !important;
+        cursor: pointer !important;
+    }
+    .navItems {
+        font-family: 'Sarpanch', sans-serif;
+        position: absolute;
+        z-index: 1;
+        font-family: 'Sarpanch', sans-serif;
+        background-color: black;
+        padding: 15px;
+        color: #B1864F !important;
+        position: absolute;
+        top: 45px;
+        right: 1%;
+        border-radius: 3%;
+    }
+    .nav-link {
+        text-align: center !important;
+        font-family: 'Sarpanch', sans-serif !important;
+        color: #B1864F !important;
+        min-width: 100px !important;
+    }
+    .nav-link:hover {
+        text-shadow: 2px 2px #B1864F;
+        background-color: transparent !important;
+        color: black !important;
+    }
+    .pages {
+        position: absolute;
+        right: 3%;
+    }
+    .iconBar {
+        color: #B1864F !important;
+        background-color: transparent !important;
+    }
+    
+    /* a:hover {
+        background-color: transparent !important;
+        color: white !important;
+    } */
+    .navbar-toggler .iconBar {
+        width: 22px;
+        -webkit-transition: all 0.2s;
+        transition: all 0.2s;
+    }
+    .navbar-toggler-icon {
+        color: white !important;
+    }
+    .navbar-toggler .iconBar:nth-of-type(1) {
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+        -webkit-transform-origin: 10% 10%;
+        -ms-transform-origin: 10% 10%;
+        transform-origin: 10% 10%;
+    }
+    
+    .navbar-toggler .iconBar:nth-of-type(2) {
+        opacity: 0;
+        filter: alpha(opacity=0);
+    }
+    
+    .navbar-toggler .iconBar:nth-of-type(3) {
+        -webkit-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+        -webkit-transform-origin: 10% 90%;
+        -ms-transform-origin: 10% 90%;
+        transform-origin: 10% 90%;
+    }
+    .navbar-toggler.collapsed .iconBar:nth-of-type(1) {
+        -webkit-transform: rotate(0);
+        -ms-transform: rotate(0);
+        transform: rotate(0);
+    }
+    
+    .navbar-toggler.collapsed .iconBar:nth-of-type(2) {
+        opacity: 1;
+        filter: alpha(opacity=100);
+    }
+    
+    .navbar-toggler.collapsed .iconBar:nth-of-type(3) {
+        -webkit-transform: rotate(0);
+        -ms-transform: rotate(0);
+        transform: rotate(0);
+    }
+
+    /* CONNECT TABS */
+
+    .connectIcons {
+        position: fixed;
+        bottom: 5px;
+        width: 100% !important;
+        justify-content: center;
+        margin: 0 auto;
+        background-color: transparent !important;
+        text-shadow: 2px 2px #B1864F;
+        
+    }
+    .connectIcons a:hover {
+        background-color: transparent !important;
+    }
+    .connectIcons i:hover {
+        color: #B1864F !important;
+        text-shadow: 2px 2px black;
+        background-color: transparent !important;
+    }
+
+    .fa-instagram, .fa-map-marker-alt, .fa-facebook-square {
+        color: white;
+        font-size: 2.5em;
+        margin: 5px;
+    }
+
+
+
+
+
+/* GALAXY S5 */
+@media (min-width: 321px) and (max-width: 400px) and (max-height: 650px) {
+    /* CONNECT TABS */
+    /* .connectIcons {
+        position: absolute;
+        top: 585px;
+        right: 35%;
+    } */
+}
+
+/* IPHONE 5 */
+@media (max-width: 321px) and (max-height: 570px) {
+    /* NAVBAR */
+    .navbar-brand {
+        font-size: 20px;
+    }
+    .navbar-toggler {
+        font-size: 15px;
+    }
+    
+    /* CONNECT TABS */
+
+    /* .connectIcons {
+        position: absolute;
+        top: 510px;
+        right: 33%;
+    } */
+
+    .fa-instagram, .fa-map-marker-alt, .fa-facebook-square {
+        font-size: 2.5em;
+        margin: 5px;
+    }
+
+}
+
+/* IPAD PRO */
+@media (min-width: 1000px) and (max-width: 1100px) and (min-height: 1350px) and (max-height: 1450px) {
+    .navbar {
+        min-height: 100px !important;
+    }
+    .navbar-brand {
+        height: 50px;
+        font-size: 55px;
+    }
+    /* .nav-item {
+        min-width: 10%;
+    } */
+    .nav-link {
+        font-size: 20px;
+    }
+    /* .connectIcons {
+        position: fixed !important;
+        bottom: 3% !important;
+        right: 38% !important;
+    } */
+    .fa-instagram, .fa-map-marker-alt, .fa-facebook-square {
+        font-size: 4.5em;
+        margin: 15px;
+    }
+}
+
+/* IPHONE PLUS && PIXEL 2 && PIXEL 2 XL */
+@media (max-width: 500px) and (min-height: 750px) and (max-height: 830px) {
+    .navbar-brand {
+        font-size: 25px;
+    }
+    /* CONNECT TABS */
+    /* .connectIcons {
+        position: fixed;
+        top: 740px;
+        right: 37% !important;
+    } */
+
+}
+
+
+
+
+.bm-menu {
+    position: fixed;
+    top: 0px;
+    background: white;
+    width: 250px;
+    text-align: center;
+  }
+
+a.bm-item.iconBar.nav-link {
+    margin: 0 auto !important;
+    margin-left: 2% !important;
+    margin-top: 15% !important;
+}
+
+.bm-cross {
+    margin-top: 0;
+}
+
+/* IPHONE 6,7,8 */
+@media (min-width: 321px) and (max-width: 400px) {
+    .bm-menu {
+        width: 250px;
+        text-align: center;
+      }
+    
+    a.bm-item.iconBar.nav-link {
+        margin: 0 auto !important;
+        margin-left: 2% !important;
+        margin-top: 15% !important;
+    }
+    
+    .bm-cross {
+        margin-top: 0;
+    }
+    .burgerMenu {
+        width: 50% !important;
+    }
+}
