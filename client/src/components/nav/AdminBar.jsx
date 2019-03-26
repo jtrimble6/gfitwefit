@@ -34,7 +34,7 @@ class AdminBar extends Component {
 
                     <div className="pages">
                       <div className="row">
-                        <button className="navbar-toggler collapsed navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                        {/* <button className="navbar-toggler collapsed navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"> */}
                         <span className="navbar-toggler-icon" onClick={this.toggleNavbar}>
                         <Menu 
                           right 
@@ -59,7 +59,7 @@ class AdminBar extends Component {
                           {/* <a onClick={ this.showSettings } className="menu-item--small" href="">Settings</a> */}
                         </Menu>
                         </span>
-                        </button>
+                        {/* </button> */}
                         <div className="collapse navbar-collapse" id="navbarResponsive">
                         <ul className="navbar-nav ml-auto">
                           <li className="nav-item" >

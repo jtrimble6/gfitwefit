@@ -34,8 +34,8 @@ class LoginBar extends Component {
 
                     <div className="pages">
                       <div className="row">
-                        <button className="navbar-toggler collapsed navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                        <span className="navbar-toggler-icon" onClick={this.toggleNavbar}>
+                        {/* <button className="navbar-toggler collapsed navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"> */}
+                        {/* <span className="navbar-toggler-icon" onClick={this.toggleNavbar}> */}
                         <Menu 
                           right 
                           noOverlay
@@ -52,8 +52,8 @@ class LoginBar extends Component {
                             href='/'
                           > Home </NavLink>                          
                         </Menu>
-                        </span>
-                        </button>
+                        {/* </span> */}
+                        {/* </button> */}
                         <div className="collapse navbar-collapse" id="navbarResponsive">
                         <ul className="navbar-nav ml-auto">
                           <li className="nav-item" >
