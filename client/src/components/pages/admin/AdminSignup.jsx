@@ -152,11 +152,11 @@ class Signup extends Component {
 
     render() {
         return (
-            <div id="loginPage">
+            <div id="signUpPage">
               {this.renderRedirect()}
                 <div className="formContainer">    
                   <form className="formSignup" action="index.html">
-                    <h2 className="formSignup-heading">Sign Up</h2>
+                    <h2 className="formSignup-heading">Admin Sign Up</h2>
                       <div className="signupWrap">
                         <div className="form-group">
                             <label htmlFor="firstName">First Name</label>

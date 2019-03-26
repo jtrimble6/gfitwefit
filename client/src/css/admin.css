@@ -44,9 +44,11 @@
 .scheduleTable {
     width: 80%;
     text-align: center;
-    color: gold;
-    border-color: gold;
+    color: #B1864F;
+    border-color: #B1864F;
     margin: 0 auto;
+    border-bottom: 2px solid #B1864F !important;
+    padding-bottom: 10%;
 }
 
 .scheduleTable .rt-td {
@@ -67,4 +69,13 @@
 
 #logoutPage a {
     color: #B1864F
+}
+
+@media (max-width: 900px) {
+    #adminPage {
+        margin-top: 30%;
+    }
+    #loginPage {
+        margin-top: 30%;
+    }
 }
