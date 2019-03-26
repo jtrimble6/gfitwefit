@@ -6,8 +6,6 @@ const session = require('express-session');
 const scheduleRoutes = require("./routes/API/scheduleAPI")
 const userRoutes = require("./routes/API/userAPI");
 const sessionRoutes = require("./routes/API/sessionAPI");
-const dbConnection = require("./server/database");
-const MongoStore = require('connect-mongo')(session)
 const passport = require('./server/passport');
 const app = express();
 const path = require("path");
@@ -17,6 +15,8 @@ const PORT = process.env.PORT || 3001;
 app.use(morgan('dev'))
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+app.use(bodyParser.json({limit: '50mb'}));
+app.use(bodyParser.urlencoded({limit: '50mb', extended: true}));
 
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {
@@ -39,15 +39,25 @@ app.use(
   })
 );
 
+//DUPLICATE CODE AS ABOVE W/ ONE ADDITIONAL LINE OF CODE
+// app.use(
+//   session({
+//     secret: 'fraggle-rock',
+//     store: new MongoStore({ mongooseConnection: dbConnection }),
+//     resave: false,
+//     saveUninitialized: false
+//   })
+// );
+
 passport.serializeUser(function(user, done) {
   done(null, user._id);
 });
-
-// passport.deserializeUser(function(id, done) {
-//   User.findById(id, function(err, user) {
-//     done(err, user);
-//   });
-// });
+ 
+passport.deserializeUser(function(id, done) {
+  User.findById(id, function(err, user) {
+    done(err, user);
+  });
+});
 
 app.use( (req, res, next) => {
   console.log('req.session', req.session);
@@ -56,6 +66,7 @@ app.use( (req, res, next) => {
 
 // Connect to the Mongo DB
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/gfitwefit");
+
 
 app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "client/build/index.html"));

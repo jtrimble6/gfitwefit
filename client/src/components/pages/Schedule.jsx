@@ -21,12 +21,12 @@ class Schedule extends Component {
   getSchedule = () => {
     API.getSchedules()
       .then(res => {
-          console.log('SCHEDULE: ', res.data)
+          // console.log('SCHEDULE: ', res.data)
           this.setState({
               currentSchedule: res.data
           })
           this.orderSchedule()
-          console.log('THE CURRENT SCHEDULE: ',  this.state.currentSchedule)
+          // console.log('THE CURRENT SCHEDULE: ',  this.state.currentSchedule)
       })
       .catch(err => console.log(err))
 }
@@ -37,35 +37,35 @@ orderSchedule = () => {
     for (var g=0; g<schedule.length; g++) {
         let day = ''
         let data = schedule[g]
-        console.log('THIS DAY: ', schedule[g].dayOfWeek)
+        // console.log('THIS DAY: ', schedule[g].dayOfWeek)
         switch (schedule[g].dayOfWeek) {
             case 'Monday':
               day = 1;
-              console.log('TODAY IS: ', day)
+              // console.log('TODAY IS: ', day)
               break;
             case 'Tuesday':
                day = 2;
-               console.log('TODAY IS: ', day)
+              //  console.log('TODAY IS: ', day)
               break;
             case 'Wednesday':
               day = 3;
-              console.log('TODAY IS: ', day)
+              // console.log('TODAY IS: ', day)
               break;
             case 'Thursday':
               day = 4;
-              console.log('TODAY IS: ', day)
+              // console.log('TODAY IS: ', day)
               break;
             case 'Friday':
               day = 5;
-              console.log('TODAY IS: ', day)
+              // console.log('TODAY IS: ', day)
               break;
             case 'Saturday':
               day = 6;
-              console.log('TODAY IS: ', day)
+              // console.log('TODAY IS: ', day)
               break;
             default: 
               day = "Monday";
-              console.log('TODAY IS: ', day)
+              // console.log('TODAY IS: ', day)
           }
 
         let scheduleData = {
@@ -78,11 +78,11 @@ orderSchedule = () => {
 
     }
 
-    console.log('NEW SCHEDULE: ', newSchedule)
+    // console.log('NEW SCHEDULE: ', newSchedule)
 
     let sortedSchedule = newSchedule.sort((a,b) => (a.day) - (b.day))
 
-    console.log('ORDERED SCHEDULE: ', sortedSchedule)
+    // console.log('ORDERED SCHEDULE: ', sortedSchedule)
     this.setState({
         sortedSchedule: sortedSchedule
     })

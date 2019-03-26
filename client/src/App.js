@@ -37,34 +37,34 @@ class Landing extends Component {
     )
     localStorage.setItem('user', this.state.username)
     localStorage.setItem('sessionID', this.state.sessionID)
-    console.log('LOCAL STORAGE: ', localStorage)
+    // console.log('LOCAL STORAGE: ', localStorage)
     // debugger;
   }
 
   getUser = () => {
     let localSessionID = localStorage.getItem('sessionID')
-    console.log('LOCAL SESSION ID: ', localSessionID)
+    // console.log('LOCAL SESSION ID: ', localSessionID)
     if (!localSessionID || localSessionID === 'null') {
       this.setState({
         loggedIn: false
       })
-      console.log('LOGGED IN? ', this.state.loggedIn)
+      // console.log('LOGGED IN? ', this.state.loggedIn)
     } else {
-      console.log("Session not null")
+      // console.log("Session not null")
       API.checkSession(localSessionID)
         .then(response => {
           if (response.data._id === localSessionID) {
-            console.log("Login confirmed");
+            // console.log("Login confirmed");
             this.setState({
               loggedIn: true
             })
             console.log('LOGGED IN? ', this.state.loggedIn)
           } else {
-            console.log("No matching sessions");
+            // console.log("No matching sessions");
             this.setState({
               loggedIn: false
             })
-            console.log(this.state.loggedIn)
+            // console.log(this.state.loggedIn)
           }
         }).catch(error => {
           console.log('Login Error: ', error)
