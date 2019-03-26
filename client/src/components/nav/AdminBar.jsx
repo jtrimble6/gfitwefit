@@ -39,7 +39,7 @@ class AdminBar extends Component {
                         <Menu 
                           right 
                           noOverlay
-                          customCrossIcon={ <img src={require("../../css/images/cross.png")} alt='close' /> }
+                          // customCrossIcon={ <img src={require("../../css/images/cross.png")} alt='close' /> }
                           isOpen={!this.state.collapsed}
                           width='25%'
                           padding='10%'
