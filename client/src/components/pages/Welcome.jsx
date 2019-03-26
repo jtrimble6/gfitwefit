@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link, animateScroll as scroll } from "react-scroll";
+import { Link } from "react-scroll";
 import logo from '../../css/images/gfit.svg';
 // import $ from 'jquery'
 import '../../css/landing.css'

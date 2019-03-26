@@ -13,7 +13,7 @@ import Admin from './components/pages/admin/Admin';
 import AdminSignup from './components/pages/admin/AdminSignup';
 import AdminPage from './components/pages/admin/AdminPage';
 import Logout from './components/pages/admin/Logout'
-import $ from 'jquery'
+// import $ from 'jquery'
 // import logo from './gfit.svg';
 import './css/main.css';
 
@@ -73,7 +73,7 @@ class Landing extends Component {
   }
 
   render() {
-    let background1 = require('./css/images/gfitinsta/insta6.jpg')
+    // let background1 = require('./css/images/gfitinsta/insta6.jpg')
     let landingStyle = {
       zIndex: '100'
     }       

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 // import { Collapse, Nav, NavItem } from 'reactstrap';
 import { NavLink } from 'reactstrap';
-import { Link, animateScroll as scroll } from "react-scroll";
+// import { Link, animateScroll as scroll } from "react-scroll";
 import { slide as Menu } from 'react-burger-menu'
 import '../../css/navbar.css'
 
@@ -34,12 +34,11 @@ class AdminBar extends Component {
 
                     <div className="pages">
                       <div className="row">
-                        {/* <button className="navbar-toggler collapsed navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"> */}
-                        <span className="navbar-toggler-icon" onClick={this.toggleNavbar}>
+                        <i className="fas fa-bars navbar-toggler collapsed navbar-toggler-right" data-toggle='collapse' data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation" onClick={this.toggleNavbar}>
                         <Menu 
                           right 
                           noOverlay
-                          // customCrossIcon={ <img src={require("../../css/images/cross.png")} alt='close' /> }
+                          customCrossIcon={ <img src={require("../../css/images/cross.png")} alt='close' /> }
                           isOpen={!this.state.collapsed}
                           width='25%'
                           padding='10%'
@@ -58,8 +57,7 @@ class AdminBar extends Component {
                           > Logout </NavLink>
                           {/* <a onClick={ this.showSettings } className="menu-item--small" href="">Settings</a> */}
                         </Menu>
-                        </span>
-                        {/* </button> */}
+                        </i>
                         <div className="collapse navbar-collapse" id="navbarResponsive">
                         <ul className="navbar-nav ml-auto">
                           <li className="nav-item" >
