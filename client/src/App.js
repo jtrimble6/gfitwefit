@@ -115,7 +115,7 @@ class Landing extends Component {
             />
             <Route exact path='/admin'
               render={() =>
-                <Admin 
+                <AdminSignup 
                   updateUser={this.updateUser}
                 />
               }
