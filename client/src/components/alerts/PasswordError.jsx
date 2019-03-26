@@ -22,7 +22,7 @@ class PasswordError extends Component {
         if (this.props.passwordError === true) {
             return (
                 <Alert color='info' isOpen={this.state.visible} toggle={this.onDismiss}>
-                    The passwords entered do not match!
+                    The passwords do not match!
                 </Alert>
             )
         } else {
