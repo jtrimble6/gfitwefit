@@ -4,16 +4,16 @@ self.__precacheManifest = [
     "url": "/gfitwefit/static/media/insta3.2c85ac55.jpg"
   },
   {
-    "revision": "2051ce6be2ce08074373",
-    "url": "/gfitwefit/static/css/main.08c05439.chunk.css"
+    "revision": "f7adbad2f2d3f3bd44d5",
+    "url": "/gfitwefit/static/css/main.25ca874f.chunk.css"
   },
   {
     "revision": "1404eb150bbf4ad7d8086cef5c7af442",
     "url": "/gfitwefit/static/media/gym2.1404eb15.jpg"
   },
   {
-    "revision": "da16b4d6d812b77c087b",
-    "url": "/gfitwefit/static/js/1.da16b4d6.chunk.js"
+    "revision": "75587f366b875c7da9a1",
+    "url": "/gfitwefit/static/js/1.75587f36.chunk.js"
   },
   {
     "revision": "d29235fff80311d1e229",
@@ -36,8 +36,8 @@ self.__precacheManifest = [
     "url": "/gfitwefit/static/media/insta2.3f86005f.jpg"
   },
   {
-    "revision": "2051ce6be2ce08074373",
-    "url": "/gfitwefit/static/js/main.2051ce6b.chunk.js"
+    "revision": "f7adbad2f2d3f3bd44d5",
+    "url": "/gfitwefit/static/js/main.f7adbad2.chunk.js"
   },
   {
     "revision": "acfbe3a8ea9e46c5cf4204bb5e23520d",
@@ -68,11 +68,11 @@ self.__precacheManifest = [
     "url": "/gfitwefit/static/media/gym.6e345b17.jpg"
   },
   {
-    "revision": "da16b4d6d812b77c087b",
-    "url": "/gfitwefit/static/css/1.af44d189.chunk.css"
+    "revision": "75587f366b875c7da9a1",
+    "url": "/gfitwefit/static/css/1.8b1cfc43.chunk.css"
   },
   {
-    "revision": "e5f4db49c3842ca102543618abf7b516",
+    "revision": "1c420dea213ec5c1f8716e250d4a2b4d",
     "url": "/gfitwefit/index.html"
   }
 ];
