@@ -97,6 +97,12 @@
   .Landing-logo {
     height: 50%;
   }
+  .Landing-header {
+    text-shadow: 1px 1px #B1864F;
+  }
+  .landing-link:hover {
+    text-shadow: 1px 1px black;
+  }
 
   .Landing-header h1 {
     font-size: calc(15px + 2vmin) !important;
@@ -115,6 +121,12 @@
   }
   .Landing-logo {
     height: 50%;
+  }
+  .Landing-header {
+    text-shadow: 1px 1px #B1864F;
+  }
+  .landing-link:hover {
+    text-shadow: 1px 1px black;
   }
 
   .Landing-header h1 {
@@ -138,6 +150,12 @@
   .Landing-header h1 {
     font-size: calc(15px + 2vmin) !important;
   }
+  .Landing-header {
+    text-shadow: 1px 1px #B1864F;
+  }
+  .landing-link:hover {
+    text-shadow: 1px 1px black;
+  }
   .landing-link {
     font-size: calc(10px + 2vmin) !important;
   }
@@ -151,6 +169,12 @@
   }
   .Landing-logo {
     height: 50%;
+  }
+  .Landing-header {
+    text-shadow: 1px 1px #B1864F;
+  }
+  .landing-link:hover {
+    text-shadow: 1px 1px black;
   }
 
   .Landing-header h1 {
@@ -169,6 +193,12 @@
   }
   .Landing-logo {
     height: 50%;
+  }
+  .Landing-header {
+    text-shadow: 1px 1px #B1864F;
+  }
+  .landing-link:hover {
+    text-shadow: 1px 1px black;
   }
 
   .Landing-header h1 {
@@ -189,6 +219,12 @@
   .Landing-logo {
     height: 50%;
   }
+  .Landing-header {
+    text-shadow: 1px 1px #B1864F;
+  }
+  .landing-link:hover {
+    text-shadow: 1px 1px black;
+  }
 
   .Landing-header h1 {
     font-size: calc(15px + 2vmin) !important;
@@ -206,6 +242,12 @@
   }
   .Landing-logo {
     height: 50%;
+  }
+  .Landing-header {
+    text-shadow: 1px 1px #B1864F;
+  }
+  .landing-link:hover {
+    text-shadow: 1px 1px black;
   }
 
   .Landing-header h1 {
