@@ -29,7 +29,7 @@ class LoginBar extends Component {
                   <div className="row masterRow">
 
                     <div className="brandName">
-                      <a className="navbar-brand js-scroll-trigger" href="/">GFit</a>
+                      <a className="navbar-brand js-scroll-trigger" href="/">GFIT</a>
                     </div>
 
                     <div className="pages">

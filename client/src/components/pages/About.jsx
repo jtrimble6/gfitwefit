@@ -12,12 +12,12 @@ class About extends Component {
                   <div className="col trainer">
                     <img src={require('../../css/images/gfitinsta/wg.jpg')} alt='Walter Gouveia'></img>
                     <p className='name'>Walt Gouveia</p>
-                    <p className='position'>Owner</p>
+                    <p className='position'>Co-Owner</p>
                   </div>
                   <div className="col trainer">
                     <img src={require('../../css/images/gfitinsta/kg.jpeg')} alt='Kyle Gouveia'></img>
                     <p className='name'>Kyle Gouveia</p>
-                    <p className='position'>Head Trainer</p>
+                    <p className='position'>Co-Owner</p>
                   </div>
                   {/* <div className="col trainer">
                     <img src={require('../../css/images/gfitinsta/jt.png')} alt='Joshua Trimble'></img>
@@ -27,11 +27,13 @@ class About extends Component {
                 </div>
                 <div className="row">
                    <p>
-                     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                     Gouveia Fitness is a family-owned and operated fitness center located at the Fungo in Cornelius, NC! Here at G-FIT we bring community and fitness together in one place. If you’re looking to lose weight/body fat, gain muscular strength/endurance, or boost your confidence, G-FIT offers adult group classes that will help you reach your goals. Our training foundation is based on creative interval workouts that provide a safe and upbeat environment. The G-fit team schedules monthly events, so we can all work toward a common goal, and strengthen our community outside of the gym.
                    </p>
                    <p>
-                     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                     The co-ed Junior Elite program is for young athletes ages 7-13. Our main focus is to develop speed and agility, functional strength and promote discipline! <br /> <br />
+                     Come in and receive your free week today!
                    </p>
+                    
                 </div>
             </div>
         // </div>

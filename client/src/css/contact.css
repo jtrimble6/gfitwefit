@@ -1,6 +1,15 @@
+@font-face {
+    font-family: 'gfitfont';
+    font-style: normal;
+    font-weight: normal;
+    src: local('gfitfont'), url('./gfitfont.ttf'), url('./gfitfont.woff') format('truetype');
+  }
+
 .contactPage {
     margin: 0 auto;
-    font-family: 'Pangolin', cursive;
+    font-family: 'gfitfont';
+    font-style: normal;
+    font-weight: 300;
     font-size: 20px;
     padding: 30px;
     margin-top: 10%;

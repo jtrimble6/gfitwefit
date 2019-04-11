@@ -1,5 +1,11 @@
 
     /* NAVBAR */
+    @font-face {
+        font-family: 'gfitfont';
+        font-style: normal;
+        font-weight: normal;
+        src: local('gfitfont'), url('./gfitfont.ttf'), url('./gfitfont.woff') format('truetype');
+      }
     .container {
         max-height: 50px !important;
     }
@@ -20,7 +26,9 @@
     .navbar-brand {
         position: fixed !important;
         left: 15px !important;
-        font-family: 'Sarpanch', sans-serif;
+        font-family: 'gfitfont';
+        font-style: normal;
+        font-weight: 300;
         font-size: 25px;
         color: #B1864F !important;
     }
@@ -47,10 +55,11 @@
         cursor: pointer !important;
     }
     .navItems {
-        font-family: 'Sarpanch', sans-serif;
         position: absolute;
         z-index: 1;
-        font-family: 'Sarpanch', sans-serif;
+        font-family: 'gfitfont';
+        font-style: normal;
+        font-weight: 300;
         background-color: black;
         padding: 15px;
         color: #B1864F !important;
@@ -61,7 +70,6 @@
     }
     .nav-link {
         text-align: center !important;
-        font-family: 'Sarpanch', sans-serif !important;
         color: #B1864F !important;
         min-width: 100px !important;
     }

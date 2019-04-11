@@ -1,3 +1,10 @@
+@font-face {
+  font-family: 'gfitfont';
+  font-style: normal;
+  font-weight: normal;
+  src: local('gfitfont'), url('./gfitfont.ttf'), url('./gfitfont.woff') format('truetype');
+}
+
 .welcomePage {
   /* width: 60%; */
   min-width: 100%;
@@ -31,23 +38,26 @@
 
 .Landing-header {
   /* margin-top: 0 !important; */
-  font-family: 'Sarpanch', sans-serif;
+  font-family: 'gfitfont';
+  font-style: normal;
+  font-weight: 300;
   height: 25vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: calc(12px + 2vmin);
   color: black;
-  text-shadow: 2px 2px #B1864F;
+  text-shadow: 2px 1px #B1864F;
   /* font-weight: bolder !important; */
 }
 
 .landing-link {
-  font-family: 'Sarpanch', sans-serif;
+  font-family: 'gfitfont';
+  font-style: normal;
+  font-weight: 300;
   font-weight: bolder !important;
   padding: 10px;
-  font-family: 'Sarpanch', sans-serif;
   color: black;
 }
 .landing-link:hover {
@@ -268,10 +278,10 @@
   }
 
   .Landing-header h1 {
-    font-size: calc(15px + 2vmin) !important;
+    font-size: calc(20px + 2vmin) !important;
   }
   .landing-link {
-    font-size: calc(10px + 2vmin) !important;
+    font-size: calc(15px + 2vmin) !important;
   }
 }
 

@@ -1,9 +1,18 @@
+@font-face {
+  font-family: 'gfitfont';
+  font-style: normal;
+  font-weight: normal;
+  src: local('gfitfont'), url('./gfitfont.ttf'), url('./gfitfont.woff') format('truetype');
+}
+
 .tableWorkouts {
   background-image: url('../css/images/gfitinsta/gym2.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    font-family: 'Pangolin', cursive;
+    font-family: 'gfitfont';
+    font-style: normal;
+    font-weight: 300;
     text-align: center;
     font-size: 25px;
     padding: 30px;

@@ -1,3 +1,10 @@
+/* @font-face {
+    font-family: 'gfitfont';
+    font-style: normal;
+    font-weight: normal;
+    src: url("./css/gfitfont.woff") format("woff"), url("./css/gfitfont.ttf")  format("truetype");
+  } */
+
 #signUpPage {
     margin-top: 20%;
     margin-bottom: 10%;

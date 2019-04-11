@@ -13,7 +13,7 @@ class Welcome extends Component {
         <header className="Landing-header">
           <img src={logo} className="Landing-logo" alt="logo" />
           <h1>
-              Welcome to GFit!
+              Welcome to Gouveia Fitness!
           </h1>
           {/* <a
             className="landing-link"
