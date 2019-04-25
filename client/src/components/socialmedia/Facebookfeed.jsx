@@ -89,9 +89,6 @@ class Facebookfeed extends Component {
             <iframe title='fb7' src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fmichelle.f.delossantos%2Fposts%2F10217665139526489%3A0&width=350&show_text=true&height=368&appId" width="350" height="368" style={fbFeedStyle} scrolling="no"  frameBorder="0"   allow="encrypted-media"></iframe>
           </div>
           <div>
-            <iframe title='fb8' src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fcynthia.delay.9%2Fposts%2F10215251252408912%3A0&width=350&show_text=true&height=368&appId" width="350" height="368" style={fbFeedStyle} scrolling="no"  frameBorder="0"   allow="encrypted-media"></iframe>
-          </div>
-          <div>
             <iframe title='fb9' src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpenny.moore.7399%2Fposts%2F10156035049449635&width=350&show_text=true&height=251&appId" width="350" height="251" style={fbFeedStyle} scrolling="no"  frameBorder="0"   allow="encrypted-media"></iframe>
           </div>
           <div>
