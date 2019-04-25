@@ -19,13 +19,15 @@
     padding-top: 5px;
     /* margin-top: 15% !important; */
     margin: 0 auto;
+    margin-top: 15%;
+    margin-left: 10%;
     /* background-color: lightgrey; */
     color: white;
     position: absolute;
     left: 0;
-    top: 2400px;
+    top: 2700px;
     max-width: 80%;
-    margin-left: 10%;
+    
     overflow: scroll;
     border-radius: 5%;
     border: solid 2px #B1864F;
@@ -80,7 +82,7 @@
 /* IPHONE 6/7/8 && GALAXY S5 */
 @media (min-width: 322px) and (max-width: 500px) and (max-height: 700px) {
   .tableWorkouts {
-    top: 2000px;
+    top: 2200px;
   }
 }
 

@@ -6,6 +6,7 @@
   }
 
 .contactPage {
+    position: relative;
     margin: 0 auto;
     font-family: 'gfitfont';
     font-style: normal;
@@ -114,7 +115,7 @@
 
   @media (min-width: 501px) {
     .contactPage {
-        top: 3750px;
+        top: 3350px;
     }
     .contactPage .contactTrainer img {
         width: 30% !important; 

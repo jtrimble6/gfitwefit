@@ -64,34 +64,49 @@ class Instafeed extends Component {
       <div className='instafeed' style={this.props.style}>
         <Slider {...settings}>
           <div>
-            <img src={require('../../css/images/gfitinsta/insta1.jpg')} alt='InstagramPost'></img>
+            <img src={require('../../css/images/gfitinsta0419/insta1.jpg')} alt='InstagramPost'></img>
           </div>
           <div>
-            <img src={require('../../css/images/gfitinsta/insta2.jpg')} alt='InstagramPost'></img>
+            <img src={require('../../css/images/gfitinsta0419/insta2.jpg')} alt='InstagramPost'></img>
           </div>
           <div>
-            <img src={require('../../css/images/gfitinsta/insta3.jpg')} alt='InstagramPost'></img>
+            <img src={require('../../css/images/gfitinsta0419/insta3.jpg')} alt='InstagramPost'></img>
           </div>
           <div>
-            <img src={require('../../css/images/gfitinsta/insta4.jpg')} alt='InstagramPost'></img>
+            <img src={require('../../css/images/gfitinsta0419/insta4.jpg')} alt='InstagramPost'></img>
           </div>
           <div>
-            <img src={require('../../css/images/gfitinsta/insta5.jpg')} alt='InstagramPost'></img>
+            <img src={require('../../css/images/gfitinsta0419/insta5.jpg')} alt='InstagramPost'></img>
           </div>
           <div>
-            <img src={require('../../css/images/gfitinsta/insta6.jpg')} alt='InstagramPost'></img>
+            <img src={require('../../css/images/gfitinsta0419/insta6.jpg')} alt='InstagramPost'></img>
           </div>
           <div>
-            <img src={require('../../css/images/gfitinsta/insta7.jpg')} alt='InstagramPost'></img>
+            <img src={require('../../css/images/gfitinsta0419/insta7.jpg')} alt='InstagramPost'></img>
           </div>
           <div>
-            <img src={require('../../css/images/gfitinsta/insta8.jpg')} alt='InstagramPost'></img>
+            <img src={require('../../css/images/gfitinsta0419/insta8.jpg')} alt='InstagramPost'></img>
           </div>
           <div>
-            <img src={require('../../css/images/gfitinsta/insta9.jpg')} alt='InstagramPost'></img>
+            <img src={require('../../css/images/gfitinsta0419/insta9.jpg')} alt='InstagramPost'></img>
           </div>
           <div>
-            <img src={require('../../css/images/gfitinsta/insta10.jpg')} alt='InstagramPost'></img>
+            <img src={require('../../css/images/gfitinsta0419/insta10.jpg')} alt='InstagramPost'></img>
+          </div>
+          <div>
+            <img src={require('../../css/images/gfitinsta0419/insta11.jpg')} alt='InstagramPost'></img>
+          </div>
+          <div>
+            <img src={require('../../css/images/gfitinsta0419/insta12.jpg')} alt='InstagramPost'></img>
+          </div>
+          <div>
+            <img src={require('../../css/images/gfitinsta0419/insta13.jpg')} alt='InstagramPost'></img>
+          </div>
+          <div>
+            <img src={require('../../css/images/gfitinsta0419/insta14.jpg')} alt='InstagramPost'></img>
+          </div>
+          <div>
+            <img src={require('../../css/images/gfitinsta0419/insta15.jpg')} alt='InstagramPost'></img>
           </div>
         </Slider>
       </div>

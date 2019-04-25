@@ -10,15 +10,15 @@ class About extends Component {
                 <h1>Who We Are:</h1>
                 <div className="row">
                   <div className="col trainer">
-                    <img src={require('../../css/images/gfitinsta/wg.jpg')} alt='Walter Gouveia'></img>
-                    <p className='name'>Walt Gouveia</p>
-                    <p className='position'>Co-Owner</p>
+                    <img src={require('../../css/images/gfitinsta/gfitfam.jpg')} alt='Walter Gouveia & Kyle Gouveia'></img>
+                    <p className='name'>Walt Gouveia & Kyle Gouveia</p>
+                    <p className='position'>Co-Owners</p>
                   </div>
-                  <div className="col trainer">
+                  {/* <div className="col trainer">
                     <img src={require('../../css/images/gfitinsta/kg.jpeg')} alt='Kyle Gouveia'></img>
                     <p className='name'>Kyle Gouveia</p>
                     <p className='position'>Co-Owner</p>
-                  </div>
+                  </div> */}
                   {/* <div className="col trainer">
                     <img src={require('../../css/images/gfitinsta/jt.png')} alt='Joshua Trimble'></img>
                     <p className='name'>Josh Trimble</p>
