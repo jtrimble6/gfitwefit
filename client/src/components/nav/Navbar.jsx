@@ -176,7 +176,7 @@ class Navbar extends Component {
                         <a href='https://www.facebook.com/gfitwefit/' target='_blank' rel='noopener noreferrer'>
                           <i className="fab fa-facebook-square"></i>
                         </a>
-                        <a href='https://goo.gl/maps/itU5E9NRMvw' target='_blank' rel='noopener noreferrer'>
+                        <a href='https://goo.gl/maps/C1jpxUZfzX1wt42D8' target='_blank' rel='noopener noreferrer'>
                         <i className="fas fa-map-marker-alt"></i>
                         </a>
                     </div>
