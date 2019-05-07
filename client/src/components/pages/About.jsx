@@ -27,7 +27,7 @@ class About extends Component {
                 </div>
                 <div className="row">
                    <p>
-                     Gouveia Fitness is a family-owned and operated fitness center located at the Fungo in Cornelius, NC! Here at G-FIT we bring community and fitness together in one place. If you’re looking to lose weight/body fat, gain muscular strength/endurance, or boost your confidence, G-FIT offers adult group classes that will help you reach your goals. Our training foundation is based on creative interval workouts that provide a safe and upbeat environment. The G-fit team schedules monthly events, so we can all work toward a common goal, and strengthen our community outside of the gym.
+                     Gouveia Fitness is a family-owned and operated fitness center located at 18515 Old Statesville Rd in Cornelius, NC! Here at G-FIT we bring community and fitness together in one place. If you’re looking to lose weight/body fat, gain muscular strength/endurance, or boost your confidence, G-FIT offers adult group classes that will help you reach your goals. Our training foundation is based on creative interval workouts that provide a safe and upbeat environment. The G-fit team schedules monthly events, so we can all work toward a common goal, and strengthen our community outside of the gym.
                    </p>
                    <p>
                      The co-ed Junior Elite program is for young athletes ages 7-13. Our main focus is to develop speed and agility, functional strength and promote discipline! <br /> <br />
