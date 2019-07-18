@@ -33,7 +33,35 @@ class About extends Component {
                      The co-ed Junior Elite program is for young athletes ages 7-13. Our main focus is to develop speed and agility, functional strength and promote discipline! <br /> <br />
                      Come in and receive your free week today!
                    </p>
-                    
+                </div> <hr />
+                <div className="trainerBlog">
+                  <h2 className='trainerHeader'>Meet Our Trainers:</h2>
+                  <div className="row">
+                    <div className="col trainer">
+                      {/* <img src={require('../../css/images/gfitinsta/gfitfam.jpg')} alt='Jennifer'></img> */}
+                      <h1 className='trainerName'>Jennifer</h1>
+                      {/* <p className='position'>Trainer</p> */}
+                    </div>
+                    {/* <div className="col trainer">
+                      <img src={require('../../css/images/gfitinsta/kg.jpeg')} alt='Kyle Gouveia'></img>
+                      <p className='name'>Kyle Gouveia</p>
+                      <p className='position'>Co-Owner</p>
+                    </div> */}
+                    {/* <div className="col trainer">
+                      <img src={require('../../css/images/gfitinsta/jt.png')} alt='Joshua Trimble'></img>
+                      <p className='name'>Josh Trimble</p>
+                      <p className='position'>Lead Developer</p>
+                    </div> */}
+                </div>
+                  <div className="row">
+                     <p>
+                       Jennifer believes that exercise and working out does not have to be a daunting task.  Her creativity shines through in her design of workouts for individuals and classes that are fun, educational and highly effective. She strives to push people to be the best, strongest and healthiest versions of themselves through healthy living and dedication to exercise.  Her passion lies in this approach, both personally and professionally.
+                     </p>
+                     <p>
+                       Jennifer spent two decades working twelve hour shifts as a Dispatcher and 911 operator.  She is no stranger to the negative mental and physical effects of working long hours in a desk-bound environment. Fitness became the perfect outlet while also decreasing the challenges that can be associated with having Type One diabetes for nearly a lifetime.  Jennifer dedicates her personal journey to inspire her clients to live stronger lives, both mind and body. <br /> <br />
+                       Jennifer is a Certified Personal Trainer and Certified Group Personal Trainer through the National Association of Sports Medicine.
+                     </p>
+                  </div>
                 </div>
             </div>
         // </div>

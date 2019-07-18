@@ -58,6 +58,33 @@
     height: auto !important;
 }
 
+.trainerBlog {
+    justify-content: center !important;
+}
+
+.trainerHeader {
+    color: white !important;
+    margin-bottom: 5%;
+}
+
+.trainerName {
+    color: #B1864F;
+}
+
+hr {
+    border: solid 1px white;
+}
+
+@media (min-width: 501px) {
+    .aboutPage {
+        top: 1500px;
+    }
+    .aboutPage .trainer img {
+        width: 40% !important; 
+        height: auto !important;
+    }
+}
+
 /* IPHONE 5 */
 @media (max-width: 321px) {
     .aboutPage {
@@ -123,7 +150,7 @@
 /* IPAD PRO */
 @media (min-width: 1000px) and (max-width: 1100px) and (min-height: 1350px) and (max-height: 1400px) {
     .aboutPage {
-        top: 2550px;
+        top: 2250px;
     }
     .aboutPage p {
         font-size: 22px;
@@ -131,9 +158,3 @@
   
   }
 
-@media (min-width: 501px) {
-    .aboutPage .trainer img {
-        width: 40% !important; 
-        height: auto !important;
-    }
-}

@@ -259,7 +259,6 @@
   .landing-link:hover {
     text-shadow: 1px 1px black;
   }
-
   .Landing-header h1 {
     font-size: calc(15px + 2vmin) !important;
   }

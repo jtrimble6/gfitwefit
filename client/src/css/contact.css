@@ -51,10 +51,20 @@
     height: auto !important;
 }
 
+@media (min-width: 501px) {
+    .contactPage {
+        top: 5150px;
+    }
+    .contactPage .contactTrainer img {
+        width: 30% !important; 
+        height: auto !important;
+    }
+  }
+
 /* IPHONE 6/7/8 && GALAXY S5 */
 @media (min-width: 320px) and (max-width: 500px) {
     .contactPage {
-        top: 2550px;
+        top: 3750px;
     }
     .contactPage {
         font-size: 14px;
@@ -79,20 +89,20 @@
 /* IPHONE 6/7/8 && GALAXY S5 */
 @media (min-width: 320px) and (max-width: 500px) and (max-height: 700px) {
     .contactPage {
-        top: 2750px;
+        top: 3750px;
     }
 }
 
 /* IPHONE 6/7/8 PLUS && PIXEL 2 */
 @media (min-width: 320px) and (max-width: 500px) and (min-height: 701px) and (max-height: 800px) {
     .contactPage {
-        top: 2850px;
+        top: 3750px;
     }
 }
 /* IPHONE X && PIXEL 2 */
 @media (min-width: 320px) and (max-width: 500px) and (min-height: 801px) and  (max-height: 900px) {
     .contactPage {
-        top: 3350px;
+        top: 3850px;
     }
 }
 
@@ -106,19 +116,11 @@
 /* IPAD PRO */
 @media (min-width: 1000px) and (max-width: 1100px) and (min-height: 1350px) and (max-height: 1400px) {
     .contactPage {
-        top: 5250px;
+        top: 5750px;
     }
     .contactPage .contactTrainer p {
         font-size: 25px !important;
     }
   }
 
-  @media (min-width: 501px) {
-    .contactPage {
-        top: 3350px;
-    }
-    .contactPage .contactTrainer img {
-        width: 30% !important; 
-        height: auto !important;
-    }
-  }
+

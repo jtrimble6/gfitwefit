@@ -1,5 +1,6 @@
 body {
   height: 750px !important;
+  overflow: scroll !important;
   /* background-image: url('./css/images/gfitinsta/gfitwefit2.jpg'); */
   background-color: black;
   background-repeat: no-repeat;

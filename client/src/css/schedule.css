@@ -27,8 +27,7 @@
     left: 0;
     top: 2700px;
     max-width: 80%;
-    
-    overflow: scroll;
+    overflow: auto;
     border-radius: 5%;
     border: solid 2px #B1864F;
 }
@@ -41,11 +40,22 @@
   /* color: #B1864F; */
 }
 
+@media (min-width: 501px) {
+  .tableWorkouts {
+    top: 3400px; 
+    width: 80%; 
+    margin-left: 10%;
+  }
+  .tableWorkouts tr {
+    font-size: 28px !important;
+  }
+}
+
 /* IPHONE 5 */
 @media (max-width: 321px) {
 .tableWorkouts {
     font-size: 10px;
-    top: 2100px;
+    top: 3000px;
     min-width: 100%;
     margin: 0 auto;
     overflow: scroll;
@@ -64,7 +74,7 @@
 @media (min-width: 322px) and (max-width: 500px) {
   .tableWorkouts {
       font-size: 10px;
-      top: 2000px;
+      top: 3000px;
       min-width: 100%;
       margin: 0 auto;
       overflow: scroll;
@@ -82,27 +92,27 @@
 /* IPHONE 6/7/8 && GALAXY S5 */
 @media (min-width: 322px) and (max-width: 500px) and (max-height: 700px) {
   .tableWorkouts {
-    top: 2200px;
+    top: 3000px;
   }
 }
 
 /* IPHONE 6/7/8 PLUS && PIXEL 2 */
 @media (min-width: 320px) and (max-width: 500px) and (min-height: 701px) and (max-height: 800px) {
   .tableWorkouts {
-    top: 2150px;
+    top: 3050px;
   }
 }
 /* IPHONE X && PIXEL 2 XL */
 @media (min-width: 320px) and (max-width: 500px) and (min-height: 801px) and  (max-height: 900px) {
   .tableWorkouts {
-    top: 2400px;
+    top: 3300px;
   }
 }
 
 /* IPAD */
 @media (min-width: 600px) and (max-width: 990px) and (min-height: 1000px) and (max-height: 1030px)  {
   .tableWorkouts {
-    top: 3400px;
+    top: 3700px;
   }
   .tableWorkouts tr {
     font-size: 20px !important;
@@ -112,20 +122,10 @@
 /* IPAD PRO */
 @media (min-width: 1000px) and (max-width: 1300px) and (min-height: 1350px) and (max-height: 1400px) {
   .tableWorkouts {
-    top: 3900px;
+    top: 4400px;
   }
   .tableWorkouts tr {
     font-size: 28px !important;
   }
 }
 
-@media (min-width: 501px) {
-  .tableWorkouts {
-    top: 2400px;
-    width: 80%;
-    margin-left: 10%;
-  }
-  .tableWorkouts tr {
-    font-size: 28px !important;
-  }
-}
