@@ -29,7 +29,8 @@ class Contact extends Component {
       const phone = document.getElementById('phone').value;
       axios({
           method: "POST", 
-          url:"http://localhost:3000/send", 
+          url:"http://gfitwefit.com/send",
+          // url:"http://localhost:3000/send", 
           data: {
               name: name,   
               email: email,  
