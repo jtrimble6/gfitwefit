@@ -6,6 +6,7 @@ const session = require('express-session');
 const scheduleRoutes = require("./routes/API/scheduleAPI")
 const userRoutes = require("./routes/API/userAPI");
 const sessionRoutes = require("./routes/API/sessionAPI");
+const contactRoutes = require('./routes/API/contactAPI')
 const passport = require('./server/passport');
 const app = express();
 const path = require("path");
@@ -29,7 +30,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 // Add routes, both API and view
-app.use(userRoutes, sessionRoutes, scheduleRoutes);
+app.use(userRoutes, sessionRoutes, scheduleRoutes, contactRoutes);
 
 app.use(
   session({
@@ -60,6 +61,8 @@ passport.deserializeUser(function(id, done) {
 });
 
 app.use( (req, res, next) => {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
   console.log('req.session', req.session);
   return next();
 });

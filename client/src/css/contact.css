@@ -5,6 +5,27 @@
     src: local('gfitfont'), url('./gfitfont.ttf'), url('./gfitfont.woff') format('truetype');
   }
 
+.contactButton {
+    height: 10%;
+    width: 20%;
+    position: absolute;
+    bottom: 5px;
+    left: 40%;
+    background-color: #B1864F
+}
+
+#contact-form {
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 10%;
+    
+}
+
+.submitButton {
+    color: white;
+    background-color: black;
+}
+
 .contactPage {
     position: relative;
     margin: 0 auto;
