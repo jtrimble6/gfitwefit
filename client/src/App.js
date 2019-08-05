@@ -6,6 +6,7 @@ import Navbar from './components/nav/Navbar'
 import Welcome from './components/pages/Welcome'
 import Instafeed from './components/socialmedia/Instafeed'
 import Facebookfeed from './components/socialmedia/Facebookfeed'
+import Video from './components/pages/Video'
 import About from './components/pages/About'
 import Schedule from './components/pages/Schedule'
 import Contact from './components/pages/Contact'
@@ -94,6 +95,7 @@ class Landing extends Component {
                   <Instafeed 
                     style={instafeedStyle}
                   />
+                  <Video />
                   <Facebookfeed
                     style={instafeedStyle}
                   />

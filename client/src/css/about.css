@@ -77,7 +77,7 @@ hr {
 
 @media (min-width: 501px) {
     .aboutPage {
-        top: 1500px;
+        top: 2300px;
     }
     .aboutPage .trainer img {
         width: 40% !important; 
@@ -88,7 +88,7 @@ hr {
 /* IPHONE 5 */
 @media (max-width: 321px) {
     .aboutPage {
-        top: 850px;
+        top: 700px;
     }
 }
 
@@ -120,27 +120,27 @@ hr {
 /* IPHONE 6/7/8 && GALAXY S5 */
 @media (min-width: 320px) and (max-width: 500px) and (max-height: 700px) {
     .aboutPage {
-        top: 1350px;
+        top: 2150px;
     }
 }
 
 /* IPHONE 6/7/8 PLUS && PIXEL */
 @media (min-width: 320px) and (max-width: 500px) and (min-height: 701px) and (max-height: 800px) {
     .aboutPage {
-        top: 1400px;
+        top: 2200px;
     }
 }
 /* IPHONE X && PIXEL 2 */
 @media (min-width: 320px) and (max-width: 500px) and (min-height: 801px) and  (max-height: 900px) {
     .aboutPage {
-        top: 1650px;
+        top: 2050px;
     }
 }
 
 /* IPAD */
 @media (min-width: 600px) and (max-width: 990px) and (min-height: 1000px) and (max-height: 1030px)  {
     .aboutPage {
-        top: 2050px;
+        top: 2450px;
     }
     .aboutPage p {
         font-size: 14px;
@@ -150,7 +150,7 @@ hr {
 /* IPAD PRO */
 @media (min-width: 1000px) and (max-width: 1100px) and (min-height: 1350px) and (max-height: 1400px) {
     .aboutPage {
-        top: 2250px;
+        top: 2650px;
     }
     .aboutPage p {
         font-size: 22px;

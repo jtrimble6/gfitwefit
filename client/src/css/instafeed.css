@@ -78,3 +78,9 @@
     }
   
   }
+
+@media (min-width: 1300px) {
+    .instafeed {
+        margin-top: 5% !important;
+    }
+}

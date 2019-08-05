@@ -30,7 +30,7 @@ router.post('/send', (req, res, next) => {
 
   var mail = {
     from: name,
-    to: 'noreply_gouveiaFitness@yahoo.com',  //Change to email address that you want to receive messages on
+    to: 'kgouveia@gfitwefit.com',  //Change to email address that you want to receive messages on
     subject: 'New Message from Contact Form',
     text: content
   }

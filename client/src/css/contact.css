@@ -11,7 +11,9 @@
     position: absolute;
     bottom: 5px;
     left: 40%;
-    background-color: #B1864F
+    background-color: #B1864F;
+    /* margin: 0 auto !important; */
+    padding-bottom: 5%;
 }
 
 #contact-form {
@@ -66,6 +68,7 @@
 
 .contactTrainer .phone {
     line-height: 1em;
+    margin-bottom: 15% !important;
 }
 .contactPage .contactTrainer img {
     width: 100% !important; 
@@ -83,7 +86,11 @@
   }
 
 /* IPHONE 6/7/8 && GALAXY S5 */
-@media (min-width: 320px) and (max-width: 500px) {
+@media (min-width: 322px) and (max-width: 500px) {
+    .contactButton {
+        max-height: 6%;
+        padding-bottom: 8%;
+    }
     .contactPage {
         top: 3750px;
     }
@@ -110,20 +117,20 @@
 /* IPHONE 6/7/8 && GALAXY S5 */
 @media (min-width: 320px) and (max-width: 500px) and (max-height: 700px) {
     .contactPage {
-        top: 3750px;
+        top: 4050px;
     }
 }
 
 /* IPHONE 6/7/8 PLUS && PIXEL 2 */
 @media (min-width: 320px) and (max-width: 500px) and (min-height: 701px) and (max-height: 800px) {
     .contactPage {
-        top: 3750px;
+        top: 4250px;
     }
 }
 /* IPHONE X && PIXEL 2 */
 @media (min-width: 320px) and (max-width: 500px) and (min-height: 801px) and  (max-height: 900px) {
     .contactPage {
-        top: 3850px;
+        top: 4150px;
     }
 }
 
@@ -137,11 +144,26 @@
 /* IPAD PRO */
 @media (min-width: 1000px) and (max-width: 1100px) and (min-height: 1350px) and (max-height: 1400px) {
     .contactPage {
-        top: 5750px;
+        top: 5650px;
     }
     .contactPage .contactTrainer p {
         font-size: 25px !important;
     }
   }
+
+/* IPHONE 5 */
+@media (max-width: 321px) {
+    .contactPage {
+        top: 4450px;
+    }
+  }
+
+@media (max-width: 700px) {
+    .contactButton {
+        height: 10%;
+        width: 60%;
+        margin-left: -17% !important;
+    }
+}
 
 
