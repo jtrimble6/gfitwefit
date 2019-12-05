@@ -105,6 +105,7 @@ class Landing extends Component {
                   />
                   <Contact 
                   />
+                  <div className='spacer'><hr className='spacerLine'></hr></div>
                 </div>
               }
             />
