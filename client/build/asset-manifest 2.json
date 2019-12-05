@@ -7,7 +7,7 @@
   "static/js/1.7194fa2b.chunk.js.map": "/gfitwefit/static/js/1.7194fa2b.chunk.js.map",
   "runtime~main.js": "/gfitwefit/static/js/runtime~main.d29235ff.js",
   "runtime~main.js.map": "/gfitwefit/static/js/runtime~main.d29235ff.js.map",
-  "static/media/contact.css": "/gfitwefit/static/media/gfitfont.a4286c09.ttf",
+  "static/media/contact.css": "/gfitwefit/static/media/gfitfont.5d26fd49.woff",
   "static/media/gfit.svg": "/gfitwefit/static/media/gfit.e6f2ab43.svg",
   "static/media/insta41.jpg": "/gfitwefit/static/media/insta41.8c2fd8cb.jpg",
   "static/media/insta44.jpg": "/gfitwefit/static/media/insta44.70d7fd03.jpg",
@@ -65,6 +65,6 @@
   "static/css/1.98510ded.chunk.css.map": "/gfitwefit/static/css/1.98510ded.chunk.css.map",
   "static/css/main.c6a5c312.chunk.css.map": "/gfitwefit/static/css/main.c6a5c312.chunk.css.map",
   "index.html": "/gfitwefit/index.html",
-  "precache-manifest.c32201ae698278a0ef7f8d9794e7d090.js": "/gfitwefit/precache-manifest.c32201ae698278a0ef7f8d9794e7d090.js",
+  "precache-manifest.567926469176a68d242d28793fd83d05.js": "/gfitwefit/precache-manifest.567926469176a68d242d28793fd83d05.js",
   "service-worker.js": "/gfitwefit/service-worker.js"
 }
