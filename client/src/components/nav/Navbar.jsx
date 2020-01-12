@@ -3,6 +3,8 @@ import React, { Component } from 'react';
 import { NavLink } from 'reactstrap';
 import { Link} from "react-scroll";
 import { slide as Menu } from 'react-burger-menu'
+import classnames from "classnames";
+import Footer from "./Footer"
 import '../../css/navbar.css'
 
 class Navbar extends Component {
@@ -10,11 +12,34 @@ class Navbar extends Component {
         super(props);
 
         this.toggleNavbar = this.toggleNavbar.bind(this);
+        this.handleScroll = this.handleScroll.bind(this);
 
         this.state = {
-          collapsed: true
+          collapsed: true,
+          prevScrollpos: window.pageYOffset,
+          visible: true
         }
     }
+
+    componentDidMount() {
+      window.addEventListener("scroll", this.handleScroll);
+    }
+    
+    componentWillUnmount() {
+      window.removeEventListener("scroll", this.handleScroll);
+    }
+
+    handleScroll = () => {
+      const { prevScrollpos } = this.state;
+    
+      const currentScrollPos = window.pageYOffset;
+      const visible = prevScrollpos > currentScrollPos;
+    
+      this.setState({
+        prevScrollpos: currentScrollPos,
+        visible
+      });
+    };
 
     toggleNavbar() {
         this.setState({
@@ -24,7 +49,11 @@ class Navbar extends Component {
 
     render() {                                                          
         return (
-            <nav className="navbar navbar-expand-lg navbar-light fixed-top" role='navigation' id="mainNav">
+            <nav 
+              className={classnames("navbar navbar-expand-lg navbar-light fixed-top", {"navbar--hidden": !this.state.visible})} 
+              role='navigation' 
+              id="mainNav"
+            >
                 {/* <div className="container"> */}
                   <div className="row masterRow">
 
@@ -169,17 +198,7 @@ class Navbar extends Component {
                       
                     </div>
 
-                    <div className="row connectIcons">
-                        <a href='https://www.instagram.com/gfitwefit/?hl=en' target='_blank' rel='noopener noreferrer'>
-                          <i className="fab fa-instagram"></i>
-                        </a>
-                        <a href='https://www.facebook.com/gfitwefit/' target='_blank' rel='noopener noreferrer'>
-                          <i className="fab fa-facebook-square"></i>
-                        </a>
-                        <a href='https://goo.gl/maps/C1jpxUZfzX1wt42D8' target='_blank' rel='noopener noreferrer'>
-                        <i className="fas fa-map-marker-alt"></i>
-                        </a>
-                    </div>
+                    <Footer />
                       
                   </div>
                     
