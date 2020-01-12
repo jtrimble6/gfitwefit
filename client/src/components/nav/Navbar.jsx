@@ -16,7 +16,7 @@ class Navbar extends Component {
 
         this.state = {
           collapsed: true,
-          prevScrollpos: window.pageYOffset,
+          prevScrollPos: window.pageYOffset,
           visible: true
         }
     }
@@ -30,13 +30,13 @@ class Navbar extends Component {
     }
 
     handleScroll = () => {
-      const { prevScrollpos } = this.state;
+      const { prevScrollPos } = this.state;
     
       const currentScrollPos = window.pageYOffset;
-      const visible = prevScrollpos > currentScrollPos;
+      const visible = prevScrollPos > currentScrollPos;
     
       this.setState({
-        prevScrollpos: currentScrollPos,
+        prevScrollPos: currentScrollPos,
         visible
       });
     };

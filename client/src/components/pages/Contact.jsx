@@ -67,7 +67,6 @@ class Contact extends Component {
 
     render() {                                                                  
         return (
-        // <div className='container'>
             <div className='contactPage'>
                 <h1>Contact Us:</h1>
                 <div className="row">
@@ -120,8 +119,7 @@ class Contact extends Component {
                       <button type="submit" className="btn submitButton">Send Message</button>
                   </form>
                 </div>
-            </div>
-        // </div>
+              </div>
         )
     }
 }

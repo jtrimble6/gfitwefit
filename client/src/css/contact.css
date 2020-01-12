@@ -48,6 +48,7 @@
     margin-left: 10%;
     border-radius: 15%;
     border: solid 2px #B1864F;
+    
 }
 
 .contactTrainer img {
@@ -118,7 +119,8 @@
 @media (min-width: 320px) and (max-width: 500px) and (max-height: 700px) {
     .contactPage {
         top: 4050px;
-        padding-bottom: 10%;
+        
+        /* margin-bottom: 10%; */
     }
 }
 
@@ -126,12 +128,14 @@
 @media (min-width: 320px) and (max-width: 500px) and (min-height: 701px) and (max-height: 800px) {
     .contactPage {
         top: 4250px;
+        /* margin-bottom: 10%; */
     }
 }
 /* IPHONE X && PIXEL 2 */
 @media (min-width: 320px) and (max-width: 500px) and (min-height: 801px) and  (max-height: 900px) {
     .contactPage {
         top: 4150px;
+        /* margin-bottom: 10%; */
     }
 }
 
@@ -139,6 +143,7 @@
 @media (min-width: 600px) and (max-width: 990px) and (min-height: 1000px) and (max-height: 1030px)  {
     .contactPage {
         top: 4850px;
+        /* margin-bottom: 10%; */
     }
   }
 
@@ -146,6 +151,7 @@
 @media (min-width: 1000px) and (max-width: 1100px) and (min-height: 1350px) and (max-height: 1400px) {
     .contactPage {
         top: 5650px;
+        /* margin-bottom: 10%; */
     }
     .contactPage .contactTrainer p {
         font-size: 25px !important;
@@ -156,6 +162,7 @@
 @media (max-width: 321px) {
     .contactPage {
         top: 4450px;
+        /* margin-bottom: 10%; */
     }
   }
 
@@ -164,6 +171,7 @@
         height: 10%;
         width: 60%;
         margin-left: -17% !important;
+        /* margin-bottom: 10%; */
     }
 }
 
