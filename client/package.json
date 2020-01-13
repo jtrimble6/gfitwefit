@@ -3,7 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "proxy": "http://localhost:3001",
-  "homepage": "https://jtrimbl6.github.io/gfitwefit/",
+  // "homepage": "https://jtrimbl6.github.io/gfitwefit/",
+  "homepage": "gftiwefit.com",
   "dependencies": {
     "axios": "^0.18.0",
     "bcryptjs": "^2.4.3",
