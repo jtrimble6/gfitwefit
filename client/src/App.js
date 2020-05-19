@@ -11,7 +11,8 @@ import About from './components/pages/About'
 import Schedule from './components/pages/Schedule'
 import Contact from './components/pages/Contact'
 import Admin from './components/pages/admin/Admin';
-import AdminSignup from './components/pages/admin/AdminSignup';
+import AdminSignUp from './components/pages/admin/AdminSignUp';
+import UserSignUp from './components/pages/user/UserSignUp';
 import AdminPage from './components/pages/admin/AdminPage';
 import Logout from './components/pages/admin/Logout'
 import Spacer from './components/pages/Spacer'
@@ -114,6 +115,13 @@ class Landing extends Component {
                 />
               }
             />
+            <Route exact path='/signup'
+              render={() =>
+                <UserSignUp 
+                  updateUser={this.updateUser}
+                />
+              }
+            />
             <Route exact path='/admin'
               render={() =>
                 <Admin 
@@ -124,7 +132,7 @@ class Landing extends Component {
             <Route exact path='/adminSignup'
               render={() =>
                 this.state.loggedIn === true ? (
-                  <AdminSignup />
+                  <AdminSignUp />
                 ) : this.state.loggedIn === false ? (
                   <Redirect to='/' />
                 ) : (

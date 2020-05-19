@@ -8,7 +8,7 @@ import PasswordError from '../../alerts/PasswordError';
 
 
 
-class Signup extends Component {
+class AdminSignUp extends Component {
     constructor(props) {
         super(props)
         this.state = {
@@ -242,5 +242,5 @@ class Signup extends Component {
     };
 };
 
-export default Signup;
+export default AdminSignUp;
        

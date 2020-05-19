@@ -63,13 +63,16 @@ passport.deserializeUser(function(id, done) {
 app.use( (req, res, next) => {
   res.header("Access-Control-Allow-Origin", "*");
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-  console.log('req.session', req.session);
+  // console.log('req.session', req.session);
   return next();
 });
 
 // Connect to the Mongo DB
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/gfitwefit");
 
+app.get('/express_backend', (req, res) => {
+  res.send({ express: 'YOUR EXPRESS BACKEND IS CONNECTED TO REACT' });
+});
 
 app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "client/build/index.html"));

@@ -1,6 +1,9 @@
 import axios from 'axios'
 
 export default {
+    getConvergePay: function() {
+        return axios.get('https://www.convergepay.com/hosted-payments/myip')
+    },
     getUsers: function() {
         return axios.get('/api/users/')
     },

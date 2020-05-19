@@ -127,6 +127,11 @@ class Navbar extends Component {
                           <NavLink 
                             className=' iconBar nav-link' 
                             onClick={this.toggleNavbar}
+                            href="/signup"
+                          > Sign Up</NavLink>
+                          <NavLink 
+                            className=' iconBar nav-link' 
+                            onClick={this.toggleNavbar}
                             href="/admin"
                           > Admin</NavLink>
                           {/* <a onClick={ this.showSettings } className="menu-item--small" href="">Settings</a> */}
@@ -188,6 +193,9 @@ class Navbar extends Component {
                               offset={-100}
                               duration= {500}
                             > Contact </Link>
+                          </li>
+                          <li className="nav-item" >
+                            <a className="nav-link js-scroll-trigger" href='/signup'>Sign Up</a>
                           </li>
                           <li className="nav-item" >
                             <a className="nav-link js-scroll-trigger" href='/admin'>Admin</a>
