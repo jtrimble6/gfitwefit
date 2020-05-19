@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Redirect } from 'react-router-dom'
-// import Navbar from '../../nav/Navbar'
+import Navbar from '../../nav/Navbar'
 import '../../../css/signup.css'
 // import ExistingAccount from "../../alerts/ExistingAccount";
 // import PasswordError from '../../alerts/PasswordError';
@@ -8,6 +8,7 @@ import API from '../../../utils/API'
 import UserInfo from './UserInfo.jsx'
 import UserHealth from './UserHealth.jsx'
 import UserPayment from './UserPayment.jsx'
+import UnderConstructionPage from '../UnderConstructionPage.jsx'
 import { Form, Button, Col, FormCheck } from 'react-bootstrap'
 
 
@@ -237,7 +238,10 @@ class UserSignUp extends Component {
     render() {
         return (
             <div id="container">
-              <div className="userSignUp">
+              <Navbar />
+              <UnderConstructionPage />
+
+              {/* <div className="userSignUp">
               {this.renderRedirect()}
               <h1>User Sign Up</h1>
               <p>Step {this.state.currentStep}</p>
@@ -312,7 +316,7 @@ class UserSignUp extends Component {
                 </Form.Row>
 
               </Form>
-              </div>
+              </div> */}
             </div>
         
         )
