@@ -61,6 +61,10 @@ passport.deserializeUser(function(id, done) {
 });
 
 app.use( (req, res, next) => {
+  if (process.env.NODE_ENV === "production") {
+    res.header("Access-Control-Allow-Origin", "https://gfitwefit.com");
+  }
+  
   res.header("Access-Control-Allow-Origin", "*");
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
   // console.log('req.session', req.session);

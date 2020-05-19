@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Redirect } from 'react-router-dom'
-import Navbar from '../../nav/Navbar'
+import LoginBar from '../../nav/LoginBar'
 import '../../../css/signup.css'
 // import ExistingAccount from "../../alerts/ExistingAccount";
 // import PasswordError from '../../alerts/PasswordError';
@@ -10,6 +10,7 @@ import UserHealth from './UserHealth.jsx'
 import UserPayment from './UserPayment.jsx'
 import UnderConstructionPage from '../UnderConstructionPage.jsx'
 import { Form, Button, Col, FormCheck } from 'react-bootstrap'
+import Login from '../admin/Admin'
 
 
 class UserSignUp extends Component {
@@ -238,7 +239,7 @@ class UserSignUp extends Component {
     render() {
         return (
             <div id="container">
-              <Navbar />
+              <LoginBar />
               <UnderConstructionPage />
 
               {/* <div className="userSignUp">
