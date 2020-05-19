@@ -240,84 +240,82 @@ class UserSignUp extends Component {
         return (
             <div id="container">
               <LoginBar />
-              <UnderConstructionPage />
+              {/* <UnderConstructionPage /> */}
 
-              {/* <div className="userSignUp">
+              <div className="userSignUp">
               {this.renderRedirect()}
               <h1>User Sign Up</h1>
               <p>Step {this.state.currentStep}</p>
 
               <Form>
               
-              <UserInfo 
-                currentStep={this.state.currentStep}
-                handleChange={this.handleChange}
-                firstName={this.state.firstName}
-                lastName={this.state.lastName}
-                email={this.state.email}
-                phoneNumber={this.state.phoneNumber}
-                username={this.state.userName}
-                password={this.state.password}
-                checkPassword={this.checkPassword}
-                checkUserName={this.checkUserName}
-              />
+                <UserInfo 
+                  currentStep={this.state.currentStep}
+                  handleChange={this.handleChange}
+                  firstName={this.state.firstName}
+                  lastName={this.state.lastName}
+                  email={this.state.email}
+                  phoneNumber={this.state.phoneNumber}
+                  username={this.state.userName}
+                  password={this.state.password}
+                  checkPassword={this.checkPassword}
+                  checkUserName={this.checkUserName}
+                />
 
-              <UserHealth 
-                currentStep={this.state.currentStep}
-                handleChange={this.handleChange}
-                height={this.state.height}
-                weight={this.state.weight}
-                gender={this.state.gender}
-                dob={this.state.dob}
-                medicalConditions={this.state.medicalConditions}
-                surgeryHistory={this.state.surgeryHistory}
-                surgeryHistoryDescription={this.state.surgeryHistoryDescription}
-                cardiovascularRisk={this.state.cardiovascularRisk}
-              />
+                <UserHealth 
+                  currentStep={this.state.currentStep}
+                  handleChange={this.handleChange}
+                  height={this.state.height}
+                  weight={this.state.weight}
+                  gender={this.state.gender}
+                  dob={this.state.dob}
+                  medicalConditions={this.state.medicalConditions}
+                  surgeryHistory={this.state.surgeryHistory}
+                  surgeryHistoryDescription={this.state.surgeryHistoryDescription}
+                  cardiovascularRisk={this.state.cardiovascularRisk}
+                />
 
-              <UserPayment 
-                currentStep={this.state.currentStep}
-                handleChange={this.handleChange}
-                formChecked={this.state.formChecked}
-                checkWaiver={this.checkWaiver}
-                handleConvergePay={this.handleConvergePay}
-              />
+                <UserPayment 
+                  currentStep={this.state.currentStep}
+                  handleChange={this.handleChange}
+                  formChecked={this.state.formChecked}
+                  checkWaiver={this.checkWaiver}
+                  handleConvergePay={this.handleConvergePay}
+                />
 
                 <Form.Row className="formNav">
-
-                    { 
-
-                      (this.state.currentStep === 1) ? 
-                      
-                      <Button onClick={this.handleNextStep} variant="primary" className="nextStep">
-                        Next
-                      </Button>
-
-                      :
-
-                      (this.state.currentStep < 3) ?
+                  { 
+                    (this.state.currentStep === 1) ? 
                     
-                      <span>
-                        <Button onClick={this.handlePrevStep} variant="warning" className="prevStep">
-                            Prev
-                        </Button> 
+                    <Button onClick={this.handleNextStep} variant="primary" className="nextStep">
+                      Next
+                    </Button>
 
-                        <Button onClick={this.handleNextStep} variant="primary" className="nextStep">
-                            Next
-                        </Button>
-                      </span>
-                      :
+                    :
 
-                      <Button onClick={this.handleFormSubmit} variant="success" type="submit" className="submitSignUp">
-                        Submit
+                    (this.state.currentStep < 3) ?
+                  
+                    <span>
+                      <Button onClick={this.handlePrevStep} variant="warning" className="prevStep">
+                          Prev
+                      </Button> 
+
+                      <Button onClick={this.handleNextStep} variant="primary" className="nextStep">
+                          Next
                       </Button>
+                    </span>
 
-                    }
+                    :
 
+                    <Button onClick={this.handleFormSubmit} variant="success" type="submit" className="submitSignUp">
+                      Submit
+                    </Button>
+
+                  }
                 </Form.Row>
 
               </Form>
-              </div> */}
+              </div>
             </div>
         
         )
