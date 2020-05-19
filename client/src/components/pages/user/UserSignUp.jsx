@@ -240,9 +240,9 @@ class UserSignUp extends Component {
         return (
             <div id="container">
               <LoginBar />
-              <UnderConstructionPage />
+              {/* <UnderConstructionPage /> */}
 
-              {/* <div className="userSignUp">
+              <div className="userSignUp">
                 {this.renderRedirect()}
                 <h1>User Sign Up</h1>
                 <p>Step {this.state.currentStep}</p>
@@ -315,7 +315,7 @@ class UserSignUp extends Component {
                   </Form.Row>
 
                 </Form>
-              </div> */}
+              </div>
 
             </div>
         
