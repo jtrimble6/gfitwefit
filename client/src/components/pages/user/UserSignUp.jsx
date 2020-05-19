@@ -92,12 +92,12 @@ class UserSignUp extends Component {
         event.preventDefault();
         console.log('Handling converge payment')
         API.getConvergePay()
-        .then(res => {
-          console.log(res)
-        })
-        .catch(err => {
-          console.log(err)
-        })
+          .then(res => {
+            console.log(res)
+          })
+          .catch(err => {
+            console.log(err)
+          })
     }
 
     checkWaiver = () => {
