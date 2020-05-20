@@ -11,6 +11,31 @@ const passport = require('./server/passport');
 const app = express();
 const path = require("path");
 const PORT = process.env.PORT || 3001;
+require('dotenv').config();
+
+var options, proxy;
+
+const http = require("http");
+
+const url = require("url");
+
+proxy = url.parse(process.env.QUOTAGUARDSTATIC_URL);
+target  = url.parse("http://ip.quotaguard.com/");
+
+options = {
+  hostname: proxy.hostname,
+  port: proxy.port || 80,
+  path: target.href,
+  headers: {
+    "Proxy-Authorization": "Basic " + (new Buffer(proxy.auth).toString("base64")),
+    "Host" : target.hostname
+  }
+};
+
+http.get(options, function(res) {
+  res.pipe(process.stdout);
+  return console.log("status code", res.statusCode);
+});
 
 // Define middleware here
 app.use(morgan('dev'))
@@ -66,7 +91,6 @@ app.use( (req, res, next) => {
   // }
   
   res.header("Access-Control-Allow-Origin", "https://gfitwefit.com");
-  // res.header("Access-Control-Allow-Origin", "*");
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
   // console.log('req.session', req.session);
   return next();
