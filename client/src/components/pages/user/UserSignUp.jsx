@@ -11,7 +11,7 @@ import UserPayment from './UserPayment.jsx'
 import UnderConstructionPage from '../UnderConstructionPage.jsx'
 import { Form, Button, Col, FormCheck } from 'react-bootstrap'
 import Login from '../admin/Admin'
-// require('dotenv').config();
+require('dotenv').config();
 
 
 
@@ -96,38 +96,39 @@ class UserSignUp extends Component {
         console.log('Handling converge payment')
 
         // Start the HTTPS server
+
+        
         var request = require('request');
 
-        request({
-          'url':'https://cors-anywhere.herokuapp.com/https://www.convergepay.com/hosted-payments/myip',
-          'method': "GET",
-          'proxy': 'http://yf049c3hcft2sr:1l2ccrygp16fcj91maogtfiswwad2@us-east-static-04.quotaguard.com:9293'
-        },function (error, response, body) {
+        // request({
+        //   'url':'https://cors-anywhere.herokuapp.com/https://www.convergepay.com/hosted-payments/myip',
+        //   'method': "GET",
+        //   'proxy': 'http://yf049c3hcft2sr:1l2ccrygp16fcj91maogtfiswwad2@us-east-static-04.quotaguard.com:9293'
+        // },function (error, response, body) {
           
-          if (!error && response.statusCode === 200) {
-            console.log(body);
-          } else {
-            console.log(error)
-          }
-        })
+        //   if (!error && response.statusCode === 200) {
+        //     console.log(body);
+        //   } else {
+        //     console.log(error)
+        //   }
+        // })
 
-        // var options = {
-        //     // proxy: process.env.QUOTAGUARD_URL,
-        //     proxy: 'http://yf049c3hcft2sr:1l2ccrygp16fcj91maogtfiswwad2@us-east-static-04.quotaguard.com:9293',
-        //     url: 'https://cors-anywhere.herokuapp.com/https://www.convergepay.com/hosted-payments/myip',
-        //     headers: {
-        //         'User-Agent': 'node.js'
-        //     }
-        // };
+        var options = {
+            proxy: process.env.QUOTAGUARD_URL,
+            url: 'https://cors-anywhere.herokuapp.com/https://www.convergepay.com/hosted-payments/myip',
+            headers: {
+                'User-Agent': 'node.js'
+            }
+        };
 
-        // function callback(error, response, body) {
-        //     if (!error && response.statusCode === 200) {
-        //         console.log(body);
-        //     }
-        // }
+        function callback(error, response, body) {
+            if (!error && response.statusCode === 200) {
+                console.log(body);
+            }
+        }
 
-        // console.log(options)
-        // request(options, callback);
+        console.log(options)
+        request(options, callback);
         
 
     }
