@@ -61,7 +61,7 @@ passport.deserializeUser(function(id, done) {
 });
 
 app.use( (req, res, next) => {
-  res.header("Access-Control-Allow-Origin", process.env.QUOTAGUARD_URL);
+  res.header("Access-Control-Allow-Origin", "https://gfitwefit.com");
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
   // console.log('req.session', req.session);
   return next();
