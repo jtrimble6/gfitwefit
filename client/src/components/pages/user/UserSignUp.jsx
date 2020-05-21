@@ -8,9 +8,8 @@ import API from '../../../utils/API'
 import UserInfo from './UserInfo.jsx'
 import UserHealth from './UserHealth.jsx'
 import UserPayment from './UserPayment.jsx'
-import UnderConstructionPage from '../UnderConstructionPage.jsx'
-import { Form, Button, Col, FormCheck } from 'react-bootstrap'
-import Login from '../admin/Admin'
+// import UnderConstructionPage from '../UnderConstructionPage.jsx'
+import { Form, Button} from 'react-bootstrap'
 require('dotenv').config();
 
 
@@ -114,7 +113,7 @@ class UserSignUp extends Component {
         // })
 
         var options = {
-            proxy: process.env.QUOTAGUARD_URL,
+            proxy: process.env.REACT_APP_QUOTAGUARD_URL,
             url: 'https://cors-anywhere.herokuapp.com/https://www.convergepay.com/hosted-payments/myip',
             headers: {
                 'User-Agent': 'node.js'

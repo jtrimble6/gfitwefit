@@ -1,7 +1,6 @@
 var express = require('express');
 var router = express.Router();
 var nodemailer = require('nodemailer');
-const creds = require('../../../config/config');
 require('dotenv').config();
 
 var transport = {
