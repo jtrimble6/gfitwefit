@@ -1,9 +1,6 @@
 import axios from 'axios'
 
 export default {
-    getConvergePay: function() {
-        return axios.get('https://cors-anywhere.herokuapp.com/https://www.convergepay.com/hosted-payments/myip')
-    },
     getUsers: function() {
         return axios.get('/api/users/')
     },
