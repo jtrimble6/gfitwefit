@@ -99,8 +99,8 @@ class UserSignUp extends Component {
 
         var options = {
             proxy: process.env.REACT_APP_QUOTAGUARD_URL,
-            // url: 'https://cors-anywhere.herokuapp.com/https://www.convergepay.com/hosted-payments/myip',
-            url: 'https://www.convergepay.com/hosted-payments/myip',
+            url: 'https://cors-anywhere.herokuapp.com/https://www.convergepay.com/hosted-payments/myip',
+            // url: 'https://www.convergepay.com/hosted-payments/myip',
             headers: {
                 'User-Agent': 'node.js'
             }
