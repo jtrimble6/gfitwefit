@@ -1,1 +1,1 @@
-web: npm run server
+web: bin/qgtunnel npm run server

@@ -67,6 +67,19 @@ app.use( (req, res, next) => {
   return next();
 });
 
+// app.get('/signup', (req, res) => {
+//   request(
+//     { url: 'https://localhost:3000/signup' },
+//     (error, response, body) => {
+//       if (error || response.statusCode !== 200) {
+//         return res.status(500).json({ type: 'error', message: err.message });
+//       }
+
+//       res.json(JSON.parse(body));
+//     }
+//   )
+// });
+
 // Connect to the Mongo DB
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/gfitwefit");
 

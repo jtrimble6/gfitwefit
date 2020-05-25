@@ -95,12 +95,12 @@ class UserSignUp extends Component {
         console.log('Handling converge payment')
 
         // Start the HTTPS server
-        var request = require('request');
 
+        var request = require('request');
+        var cors = "https://cors-anywhere.herokuapp.com/"
         var options = {
             proxy: process.env.REACT_APP_QUOTAGUARD_URL,
-            url: 'https://cors-anywhere.herokuapp.com/https://www.convergepay.com/hosted-payments/myip',
-            // url: 'https://www.convergepay.com/hosted-payments/myip',
+            url: cors + 'https://api.github.com/repos/joyent/node',
             headers: {
                 'User-Agent': 'node.js'
             }
@@ -108,12 +108,31 @@ class UserSignUp extends Component {
 
         function callback(error, response, body) {
             if (!error && response.statusCode === 200) {
-                console.log(response)
                 console.log(body);
             }
         }
 
         request(options, callback);
+
+        // var request = require('request');
+        // var cors = "https://cors-anywhere.herokuapp.com/"
+        // var options = {
+        //     proxy: process.env.REACT_APP_QUOTAGUARD_URL,
+        //     url: cors + 'https://www.convergepay.com/hosted-payments/myip',
+        //     // mode: 'no-cors',
+        //     headers: {
+        //         'User-Agent': 'node.js',
+        //     }
+        // };
+
+        // function callback(error, response, body) {
+        //     if (!error && response.statusCode === 200) {
+        //         // console.log(response)
+        //         console.log(body);
+        //     }
+        // }
+
+        // request(options, callback);
         
 
     }

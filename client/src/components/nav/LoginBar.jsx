@@ -45,7 +45,7 @@ class LoginBar extends Component {
                           className='burgerMenu'
                         >
                           <NavLink
-                            activeClass="active"
+                            activeclass="active"
                             className=' iconBar nav-link'
                             onClick={this.toggleNavbar}
                             href='/'
@@ -56,7 +56,7 @@ class LoginBar extends Component {
                         <ul className="navbar-nav ml-auto">
                           <li className="nav-item" >
                             <NavLink
-                              activeClass="active"
+                              activeclass="active"
                               className='nav-link js-scroll-trigger'
                               href='/'
                             > Home </NavLink>
