@@ -100,7 +100,7 @@ class UserSignUp extends Component {
         var cors = "https://cors-anywhere.herokuapp.com/"
         var options = {
             proxy: process.env.REACT_APP_QUOTAGUARD_URL,
-            url: cors + 'https://api.github.com/repos/joyent/node',
+            url: cors + 'https://www.convergepay.com/hosted-payments/myip',
             headers: {
                 'User-Agent': 'node.js'
             }
