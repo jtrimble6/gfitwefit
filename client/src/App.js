@@ -1,21 +1,27 @@
 import React, { Component } from 'react'
-import { BrowserRouter as Router, Route } from 'react-router-dom';
-import { Switch, Redirect } from 'react-router-dom';
-import API from './utils/API';
-import Navbar from './components/nav/Navbar'
-import Welcome from './components/pages/Welcome'
-import Instafeed from './components/socialmedia/Instafeed'
-import Facebookfeed from './components/socialmedia/Facebookfeed'
-import Video from './components/pages/Video'
-import About from './components/pages/About'
-import Schedule from './components/pages/Schedule'
-import Contact from './components/pages/Contact'
-import Admin from './components/pages/admin/Admin';
-import AdminSignUp from './components/pages/admin/AdminSignUp';
-import UserSignUp from './components/pages/user/UserSignUp';
-import AdminPage from './components/pages/admin/AdminPage';
-import Logout from './components/pages/admin/Logout'
-import Spacer from './components/pages/Spacer'
+import { BrowserRouter as Router, Route } from 'react-router-dom'
+import { Switch, Redirect } from 'react-router-dom'
+import API from './utils/API'
+// import Navbar from './components/nav/Navbar'
+// import Welcome from './pages/Welcome'
+// import Instafeed from './components/socialmedia/Instafeed'
+// import Facebookfeed from './components/socialmedia/Facebookfeed'
+// import Video from './pages/Video'
+// import About from './pages/About'
+// import Schedule from './pages/Schedule'
+// import Contact from './pages/Contact'
+import Admin from './pages/admin/Admin'
+import AdminSignUp from './pages/admin/AdminSignUp'
+import AdminPage from './pages/admin/AdminPage'
+import Logout from './pages/admin/Logout'
+
+import UserSignUpPage from './pages/user/UserSignUpPage'
+import UserLoginPage from './pages/user/UserLoginPage'
+import LandingPage from './pages/LandingPage'
+import PricingPage from './pages/PricingPage'
+import ContactPage from './pages/ContactPage'
+import TryItOutPage from './pages/TryItOutPage'
+
 // import $ from 'jquery'
 // import logo from './gfit.svg';
 import './css/main.css';
@@ -77,34 +83,41 @@ class Landing extends Component {
 
   render() {
     // let background1 = require('./css/images/gfitinsta/insta6.jpg')
-    let landingStyle = {
-      zIndex: '100'
-    }       
-    let instafeedStyle = {
-      zIndex: '1'
-    }    
+    // let landingStyle = {
+    //   zIndex: '100'
+    // }       
+    // let instafeedStyle = {
+    //   zIndex: '1'
+    // }    
     return (
       <Router>
-        <div className="App">
+        <div id='appRoot' className="App">
           <Switch>
-          <Route exact path='/'
+            <Route exact path='/'
               render={() =>
-                <div className='container'>
-                  <Navbar />
-                  <Welcome 
-                    style={landingStyle}
-                  />
-                  <Instafeed 
-                    style={instafeedStyle}
-                  />
-                  <Video />
-                  <Facebookfeed
-                    style={instafeedStyle}
-                  />
-                  <About />
-                  <Schedule />
-                  <Contact />
-                  <Spacer />
+                <div>
+                  <LandingPage />
+                </div>
+              }
+            />
+            <Route exact path='/pricing'
+              render={() =>
+                <div>
+                  <PricingPage />
+                </div>
+              }
+            />
+            <Route exact path='/contact'
+              render={() =>
+                <div>
+                  <ContactPage />
+                </div>
+              }
+            />
+            <Route exact path='/tryitout'
+              render={() =>
+                <div>
+                  <TryItOutPage />
                 </div>
               }
             />
@@ -117,7 +130,14 @@ class Landing extends Component {
             />
             <Route exact path='/signup'
               render={() =>
-                <UserSignUp 
+                <UserSignUpPage 
+                  updateUser={this.updateUser}
+                />
+              }
+            />
+            <Route exact path='/login'
+              render={() =>
+                <UserLoginPage 
                   updateUser={this.updateUser}
                 />
               }

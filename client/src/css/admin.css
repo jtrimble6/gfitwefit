@@ -1,20 +1,26 @@
 @font-face {
     font-family: 'gfitfont';
     font-style: normal;
-    font-weight: normal;
-    src: local('gfitfont'), url('./gfitfont.ttf'), url('./gfitfont.woff') format('truetype');
+    font-weight: bolder;
+    src: local('gfitfont'), url('./fonts/gfitfont.ttf'), url('./fonts/gfitfont.woff'), format('truetype');
+  }
+@font-face {
+    font-family: 'gfitfont-bold';
+    font-style: normal;
+    font-weight: bolder;
+    src: local('gfitfontBold'), url('./fonts/gfitfontBold.ttf'), url('./fonts/gfitfontBold.woff') format('truetype');
   }
 
 #loginPage {
     width: 80%;
     margin: 0 auto;
     margin-top: 10%;
+    /* margin-bottom: 80%; */
     padding: 5%;
     text-align: center;
     background-color: white;
-    font-family: 'gfitfont';
-    font-style: normal;
-    font-weight: 300;
+    font-family: 'gfitfontbold';
+    margin-bottom: calc(100vh - 510px);
 }
 
 #adminPage {
@@ -33,7 +39,7 @@
 }
 
 #adminPage h1, h2 {
-    color: #B1864F
+    color: #FAC04E
 }
 
 .formRow {
@@ -54,10 +60,10 @@
 .scheduleTable {
     width: 80%;
     text-align: center;
-    color: #B1864F;
-    border-color: #B1864F;
+    color: #FAC04E;
+    border-color: #FAC04E;
     margin: 0 auto;
-    border-bottom: 2px solid #B1864F !important;
+    border-bottom: 2px solid #FAC04E !important;
     padding-bottom: 10%;
 }
 
@@ -68,7 +74,7 @@
 
 .scheduleHeaders {
     font-size: 24px;
-    color: #B1864F
+    color: #FAC04E
 }
 
 #logoutPage {
@@ -78,7 +84,7 @@
 }
 
 #logoutPage a {
-    color: #B1864F
+    color: #FAC04E
 }
 
 @media (max-width: 900px) {

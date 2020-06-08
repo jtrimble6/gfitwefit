@@ -1,0 +1,1417 @@
+@font-face {
+  font-family: 'gfitfont';
+  font-style: normal;
+  font-weight: bolder;
+  src: local('gfitfont'), url('./fonts/gfitfont.ttf'), url('./fonts/gfitfont.woff'), format('truetype');
+}
+@font-face {
+    font-family: 'gfitfont-bold';
+    font-style: normal;
+    font-weight: bolder;
+    src: local('gfitfontBold'), url('./fonts/gfitfontBold.ttf'), url('./fonts/gfitfontBold.woff') format('truetype');
+  }
+
+.goldOut {
+    height: 675px;
+    background-image: url('./images/goldOutBackground.jpg');
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; 
+    border-top: 4px solid white;
+}
+
+.goldOutSection {
+    width: 90%;
+    margin: 0 auto;
+    background-color: #211C18;
+    padding: 3%;
+    margin-top: 5%;
+}
+
+.goldOutTitleLeft {
+    font-family: 'gfitfont-bold', Times, serif;
+    font-size: 1.8vw;
+    letter-spacing: 3px;
+    color: white;
+    font-weight: bolder; 
+    padding-left: 15px;
+}
+
+.goldOutTitleRight {
+    font-family: 'gfitfont-bold', Times, serif;
+    font-size: 1.8vw;
+    letter-spacing: 3px;
+    color: #FAC04E;
+    font-weight: bolder; 
+}
+
+.goldOutRow1 {
+    font-family: 'Arial';
+    font-size: 1vw;
+    margin-top: 2%;
+    font-weight: bold;
+    color: white;
+}
+
+.goldOutRow2 {
+    font-family: 'Arial';
+    margin-top: 3%;
+    margin-bottom: 3%;
+    font-weight: bolder;
+    line-height: 1.0;
+}
+
+.goldOutCard {
+    background: transparent;
+    border: none;
+}
+
+.goldOutCardText {
+    font-family: 'Arial';
+    font-size: 1vw;
+    line-height: 1.5vw;
+    color: #444040;
+    text-align: left;
+}
+
+.goldOutCardTitle {
+    font-family: 'gfitfont-bold', Times, serif;
+    color: #211C18;
+    font-weight: bolder;
+    text-align: left;
+}
+
+.goldOutCardSubTitle {
+    font-family: 'Arial';
+    font-weight: bold;
+    color: #444040 !important;
+    text-align: left;
+}
+.rec-dot {
+  color: white !important;
+  box-shadow: 0 0 1px 3px #FAC04E !important;
+}
+
+.rec-dot_active {
+  color: #FAC04E !important;
+  background-color: #FAC04E !important;
+  box-shadow: 0 0 1px 3px white !important;
+}
+
+.rec-arrow {
+  color: #FAC04E !important;
+}
+
+.rec-arrow:hover {
+  background-color: #FAC04E !important;
+  color: white !important;
+}
+
+
+
+
+/* ----------- iPhones ----------- */
+
+/* ----------- iPhone 4 and 4S ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+}
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) {
+
+}
+
+/* ----------- iPhone 5, 5S, 5C and 5SE ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+}
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+    .goldOut {
+        height: 100%;
+        padding-bottom: 25%;
+        padding-top: 15%;
+    }
+    
+    .goldOutSection {
+        text-align: center;
+    }
+    
+    .goldOutTitleLeft {
+        font-size: 5vw;
+        letter-spacing: 1px;
+        padding-left: 15px;
+    }
+    
+    .goldOutTitleRight {
+        font-size: 5vw;
+        letter-spacing: 1px;
+    }
+    
+    .goldOutRow1 {
+        font-size: 3vw;
+        margin-top: 2%;
+    }
+    
+    .goldOutRow2 {
+        margin-top: 3%;
+        margin-bottom: 3%;
+        line-height: 1.0;
+    }
+    
+    .goldOutCardText {
+        font-size: 3vw;
+        line-height: 3.5vw;
+
+    }
+
+    .goldOutCardTitle {
+        font-size: 5vw;
+    }
+    
+    .goldOutCardSubTitle {
+        font-size: 3.5vw;
+        font-weight: bold;
+    }
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) {
+
+}
+
+/* ----------- iPhone 6, 6S, 7 and 8 ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2) { 
+
+}
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) { 
+
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) { 
+
+}
+
+/* ----------- iPhone 6+, 7+ and 8+ ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 3) { 
+
+}
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: portrait) { 
+
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: landscape) { 
+
+}
+
+/* ----------- iPhone X ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3) { 
+
+}
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: portrait) { 
+    .goldOut {
+        height: 100%;
+        padding-bottom: 25%;
+        padding-top: 15%;
+    }
+    
+    .goldOutSection {
+        text-align: center;
+    }
+    
+    .goldOutTitleLeft {
+        font-size: 5vw;
+        letter-spacing: 1px;
+        padding-left: 15px;
+    }
+    
+    .goldOutTitleRight {
+        font-size: 5vw;
+        letter-spacing: 1px;
+    }
+    
+    .goldOutRow1 {
+        font-size: 3vw;
+        margin-top: 2%;
+    }
+    
+    .goldOutRow2 {
+        margin-top: 3%;
+        margin-bottom: 3%;
+        line-height: 1.0;
+    }
+    
+    .goldOutCardText {
+        font-size: 3vw;
+        line-height: 3.5vw;
+
+    }
+    
+    .goldOutCardSubTitle {
+        font-weight: bold;
+    }
+
+    
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: landscape) { 
+
+}
+
+
+
+
+/* ----------- iPads ----------- */
+
+/* ----------- iPad 1, 2, Mini and Air ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+
+}
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+    
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: landscape) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+
+}
+
+/* ----------- iPad 3, 4 and Pro 9.7" ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+}
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+    .goldOut {
+      width: 100%;
+      height: auto;
+      padding-bottom: 45%;
+      padding-top: 15%;
+  }
+  
+  .goldOutSection {
+      text-align: center;
+
+  }
+  
+  .goldOutTitleLeft {
+      font-size: 4vw;
+      letter-spacing: 1px;
+      padding-left: 15px;
+  }
+  
+  .goldOutTitleRight {
+      font-size: 4vw;
+      letter-spacing: 1px;
+  }
+  
+  .goldOutRow1 {
+      font-size: 2vw;
+      margin-top: 2%;
+      text-align: left;
+  }
+  
+  .goldOutRow2 {
+      margin-top: 3%;
+      margin-bottom: 3%;
+      line-height: 1.0;
+  }
+  
+  .goldOutCardText {
+      font-size: 2vw;
+      line-height: 2vw;
+  }
+  
+  .goldOutCardSubTitle {
+      font-weight: bold;
+  }
+    
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: landscape) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+}
+
+/* ----------- iPad Pro 10.5" ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 834px) 
+  and (max-device-width: 1112px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+}
+
+/* Portrait */
+/* Declare the same value for min- and max-width to avoid colliding with desktops */
+/* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
+@media only screen 
+  and (min-device-width: 834px) 
+  and (max-device-width: 834px) 
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+}
+
+/* Landscape */
+/* Declare the same value for min- and max-width to avoid colliding with desktops */
+/* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
+@media only screen 
+  and (min-device-width: 1112px) 
+  and (max-device-width: 1112px) 
+  and (orientation: landscape) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+}
+
+/* ----------- iPad Pro 12.9" ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 1024px) 
+  and (max-device-width: 1366px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    
+}
+
+/* Portrait */
+/* Declare the same value for min- and max-width to avoid colliding with desktops */
+/* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
+@media only screen 
+  and (min-device-width: 1024px) 
+  and (max-device-width: 1024px) 
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+    .goldOut {
+      width: 100%;
+      height: auto;
+      padding-bottom: 85%;
+      padding-top: 15%;
+  }
+  
+  .goldOutSection {
+      text-align: center;
+
+  }
+  
+  .goldOutTitleLeft {
+      font-size: 3.5vw;
+      letter-spacing: 1px;
+      padding-left: 15px;
+  }
+  
+  .goldOutTitleRight {
+      font-size: 3.5vw;
+      letter-spacing: 1px;
+  }
+  
+  .goldOutRow1 {
+      font-size: 2vw;
+      margin-top: 2%;
+      text-align: left;
+  }
+  
+  .goldOutRow2 {
+      margin-top: 3%;
+      margin-bottom: 3%;
+      line-height: 1.0;
+  }
+  
+  .goldOutCardText {
+      font-size: 1.5vw;
+      line-height: 1.5vw;
+  }
+  
+  .goldOutCardSubTitle {
+      font-weight: bold;
+  }
+}
+
+/* Landscape */
+/* Declare the same value for min- and max-width to avoid colliding with desktops */
+/* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
+@media only screen 
+  and (min-device-width: 1366px) 
+  and (max-device-width: 1366px) 
+  and (orientation: landscape) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+}
+
+
+
+
+/* ----------- LAPTOPS ----------- */
+
+
+/* ----------- Non-Retina Screens ----------- */
+@media screen 
+  and (min-device-width: 800px) 
+  and (max-device-width: 1200px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+    .goldOut {
+        padding-top: 15%;
+        width: 100%;
+        height: 1200px;
+    }
+    .goldOutTitleLeft {
+        font-size: 3vw;
+        letter-spacing: 0.5px;
+        padding-left: 15px;
+    }
+    .goldOutTitleRight {
+        font-size: 3vw;
+        letter-spacing: 0.5px;
+    }
+    .goldOutRow1 {
+        font-size: 1.5vw;
+        margin-top: 2%;
+        text-align: left;
+    }
+    .goldOutRow2 {
+        margin-top: 3%;
+        margin-bottom: 3%;
+        line-height: 1vw !important;
+    }
+    .rec-slider-container {
+        justify-content: center;
+    }
+    .rec-item-wrapper .gjyOHz {
+        height: 100%;
+    }
+    .goldOutCarousel {
+        height: 500px;
+    }
+    .goldOutCard {
+        height: 400px;
+    }
+    .goldOutCardText {
+        font-size: 1.5vw;
+        line-height: 1.8vw;
+    }
+    .goldOutCardTitle {
+        font-size: 2vw;
+    }
+    .goldOutCardSubTitle {
+        font-size: 1.7vw;
+        font-weight: bold;
+    }
+}
+@media screen 
+  and (min-device-width: 1201px) 
+  and (max-device-width: 2000px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+    .goldOut {
+        padding-bottom: 85%;
+        padding-top: 15%;
+        height: 1475px;
+    }
+    .goldOutTitleLeft {
+        font-size: 3vw;
+        letter-spacing: 0.5px;
+        padding-left: 15px;
+    }
+    .goldOutTitleRight {
+        font-size: 3vw;
+        letter-spacing: 0.5px;
+    }
+    .goldOutRow1 {
+        font-size: 1.5vw;
+        margin-top: 2%;
+        text-align: left;
+    }
+    .goldOutRow2 {
+        margin-top: 3%;
+        margin-bottom: 3%;
+        line-height: 1vw !important;
+    }
+    .rec-slider-container {
+        justify-content: center;
+    }
+    .rec-item-wrapper .gjyOHz {
+        height: 100%;
+    }
+    .goldOutCarousel {
+        height: 500px;
+    }
+    .goldOutCard {
+        height: 400px;
+    }
+    .goldOutCardText {
+        font-size: 1.5vw;
+        line-height: 1.8vw;
+    }
+    .goldOutCardTitle {
+        font-size: 2vw;
+    }
+    .goldOutCardSubTitle {
+        font-size: 1.7vw;
+        font-weight: bold;
+    }
+}
+@media screen 
+  and (min-device-width: 1301px) 
+  and (max-device-width: 1400px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+    .goldOutCardText {
+        font-size: 1.4vw;
+        line-height: 1.5vw;
+    }
+}
+@media screen 
+  and (min-device-width: 1401px) 
+  and (max-device-width: 1500px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+    .goldOutCardText {
+        font-size: 1.3vw;
+        line-height: 1.5vw;
+    }
+    .goldOutCardTitle {
+      font-size: 1.5vw;
+    }
+    .goldOutCardSubTitle {
+        font-size: 1.5vw;
+    }
+
+}
+@media screen 
+  and (min-device-width: 1501px) 
+  and (max-device-width: 1600px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+    .goldOutCardText {
+        font-size: 1.2vw;
+        line-height: 1.4vw;
+    }
+    .goldOutCardTitle {
+        font-size: 1.5vw;
+    }
+    .goldOutCardSubTitle {
+        font-size: 1.5vw;
+    }
+
+}
+@media screen 
+  and (min-device-width: 1601px) 
+  and (max-device-width: 1700px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+    .goldOut {
+        height: 1075px;
+    }
+    .goldOutRow1 {
+        font-size: 1.5vw;
+    }
+    .goldOutCardText {
+        font-size: 1.2vw;
+        line-height: 1.4vw;
+    }
+    .goldOutCardTitle {
+        font-size: 1.3vw;
+    }
+    .goldOutCardSubTitle {
+        font-size: 1.1vw;
+    }
+}
+@media screen 
+  and (min-device-width: 1701px) 
+  and (max-device-width: 1800px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+    .goldOut {
+      height: 1075px;
+    }
+    .goldOutCardText {
+        font-size: 1.2vw;
+        line-height: 1.4vw;
+    }
+    .goldOutCardTitle {
+      font-size: 1.3vw;
+    }
+    .goldOutCardSubTitle {
+        font-size: 1.1vw;
+    }
+}
+@media screen 
+  and (min-device-width: 1801px) 
+  and (max-device-width: 2000px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+    .goldOut {
+        height: 1075px;
+    }
+    .goldOutCarousel {
+        height: 600px;
+    }
+    .goldOutCard {
+        height: 500px;
+    }
+    .goldOutCardText {
+        font-size: 1.2vw;
+        line-height: 1.4vw;
+    }
+    .goldOutCardTitle {
+        font-size: 1.3vw;
+    }
+    .goldOutCardSubTitle {
+        font-size: 1.1vw;
+    }
+}
+
+@media screen 
+  and (min-device-width: 2001px) 
+  and (max-device-width: 3000px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+    .goldOutCard {
+      width: 25rem !important;
+      margin: 0 auto;
+    }
+    .goldOut {
+      width: 100%;
+      padding-top: 15%;
+      height: 2575px;
+    }
+    .goldOutTitleLeft {
+        font-size: 3vw;
+        letter-spacing: 0.5px;
+        padding-left: 15px;
+    }
+    .goldOutTitleRight {
+        font-size: 3vw;
+        letter-spacing: 0.5px;
+    }
+    .goldOutRow1 {
+        font-size: 1.5vw;
+        margin-top: 2%;
+        text-align: left;
+    }
+    .goldOutRow2 {
+        margin-top: 3%;
+        margin-bottom: 3%;
+        line-height: 1vw !important;
+    }
+    .rec-slider-container {
+      justify-content: center;
+    }
+    .rec-item-wrapper .gjyOHz {
+        height: 100%;
+    }
+    .goldOutCarousel {
+        height: 900px;
+    }
+    .goldOutCard {
+        height: 700px;
+    }
+    .goldOutCardText {
+      font-size: 1.1vw;
+      line-height: 1.8vw;
+    }
+    .goldOutCardTitle {
+        white-space: nowrap;
+        font-size: 1.5vw;
+    }
+    .goldOutCardSubTitle {
+        font-size: 1.1vw;
+    }
+}
+
+@media screen 
+  and (min-device-width: 2001px) 
+  and (max-device-width: 2100px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+    .goldOutCardText {
+      font-size: 1.1vw;
+      line-height: 1.8vw;
+    }
+    .goldOutCardTitle {
+      white-space: nowrap;
+      font-size: 1.8vw;
+    }
+    .goldOutCardSubTitle {
+        font-size: 1.5vw;
+    }
+    
+}
+@media screen 
+  and (min-device-width: 2101px) 
+  and (max-device-width: 2200px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+    .goldOutCardText {
+      font-size: 1.2vw;
+      line-height: 1.9vw;
+    }
+    .goldOutCardTitle {
+      white-space: nowrap;
+      font-size: 1.8vw;
+    }
+    .goldOutCardSubTitle {
+        font-size: 1.5vw;
+    }
+    
+}
+@media screen 
+  and (min-device-width: 2201px) 
+  and (max-device-width: 2300px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+    .goldOutCardText {
+      font-size: 1.2vw;
+      line-height: 1.9vw;
+    }
+    .goldOutCardTitle {
+      white-space: nowrap;
+      font-size: 1.7vw;
+    }
+    .goldOutCardSubTitle {
+        font-size: 1.3vw;
+    }
+}
+@media screen 
+  and (min-device-width: 2301px) 
+  and (max-device-width: 2400px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+    .goldOutCardText {
+      font-size: 1.1vw;
+      line-height: 1.8vw;
+    }
+    .goldOutCardTitle {
+      white-space: nowrap;
+      font-size: 1.7vw;
+    }
+    .goldOutCardSubTitle {
+        font-size: 1.4vw;
+    }
+}
+@media screen 
+  and (min-device-width: 2401px) 
+  and (max-device-width: 2500px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+    .goldOutCardText {
+      font-size: 1.1vw;
+      line-height: 1.7vw;
+    }
+    
+}
+@media screen 
+  and (min-device-width: 2501px) 
+  and (max-device-width: 2600px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+    .goldOutCardText {
+      font-size: 1.1vw;
+      line-height: 1.7vw;
+    }
+    
+}
+@media screen 
+  and (min-device-width: 2601px) 
+  and (max-device-width: 2700px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+    .goldOutCardText {
+      font-size: 1.1vw;
+      line-height: 1.6vw;
+    }
+    .goldOutCardTitle {
+      white-space: nowrap;
+      font-size: 1.7vw;
+    }
+    .goldOutCardSubTitle {
+        font-size: 1.4vw;
+    } 
+    
+}
+@media screen 
+  and (min-device-width: 2701px) 
+  and (max-device-width: 2800px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+    .goldOutCardText {
+      font-size: 1vw;
+      line-height: 1.5vw;
+    }
+    .goldOutCardTitle {
+      white-space: nowrap;
+      font-size: 1.7vw;
+    }
+    .goldOutCardSubTitle {
+        font-size: 1.4vw;
+    } 
+    
+}
+@media screen 
+  and (min-device-width: 2801px) 
+  and (max-device-width: 2900px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+    .goldOutCardText {
+      font-size: 1vw;
+      line-height: 1.4vw;
+    }
+    .goldOutCardTitle {
+      white-space: nowrap;
+      font-size: 1.5vw;
+    }
+    .goldOutCardSubTitle {
+        font-size: 1.3vw;
+    } 
+    
+}
+@media screen 
+  and (min-device-width: 2901px) 
+  and (max-device-width: 3000px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+    .goldOutCardText {
+      font-size: 1vw;
+      line-height: 1.4vw;
+    }
+    .goldOutCardTitle {
+      white-space: nowrap;
+      font-size: 1.5vw;
+    }
+    .goldOutCardSubTitle {
+        font-size: 1.3vw;
+    }    
+}
+
+
+
+/* ----------- Retina Screens ----------- */
+@media screen 
+  and (min-device-width: 800px) 
+  and (max-device-width: 1200px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (min-resolution: 192dpi) { 
+    .goldOut {
+        padding-top: 15%;
+        width: 100%;
+        height: 1200px;
+    }
+    .goldOutTitleLeft {
+        font-size: 3vw;
+        letter-spacing: 0.5px;
+        padding-left: 15px;
+    }
+    .goldOutTitleRight {
+        font-size: 3vw;
+        letter-spacing: 0.5px;
+    }
+    .goldOutRow1 {
+        font-size: 1.5vw;
+        margin-top: 2%;
+        text-align: left;
+    }
+    .goldOutRow2 {
+        margin-top: 3%;
+        margin-bottom: 3%;
+        line-height: 1vw !important;
+    }
+    .rec-slider-container {
+        justify-content: center;
+    }
+    .rec-item-wrapper .gjyOHz {
+        height: 100%;
+    }
+    .goldOutCarousel {
+        height: 500px;
+    }
+    .goldOutCard {
+        height: 400px;
+    }
+    .goldOutCardText {
+        font-size: 1.5vw;
+        line-height: 1.8vw;
+    }
+    .goldOutCardTitle {
+        font-size: 2vw;
+    }
+    .goldOutCardSubTitle {
+        font-size: 1.7vw;
+        font-weight: bold;
+    }
+}
+@media screen 
+  and (min-device-width: 1200px) 
+  and (max-device-width: 2000px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (min-resolution: 192dpi) { 
+    .goldOut {
+        padding-bottom: 85%;
+        padding-top: 15%;
+        height: 1475px;
+    }
+    .goldOutTitleLeft {
+        font-size: 3vw;
+        letter-spacing: 0.5px;
+        padding-left: 15px;
+    }
+    .goldOutTitleRight {
+        font-size: 3vw;
+        letter-spacing: 0.5px;
+    }
+    .goldOutRow1 {
+        font-size: 1.5vw;
+        margin-top: 2%;
+        text-align: left;
+    }
+    .goldOutRow2 {
+        margin-top: 3%;
+        margin-bottom: 3%;
+        line-height: 1vw !important;
+    }
+    .rec-slider-container {
+        justify-content: center;
+    }
+    .rec-item-wrapper .gjyOHz {
+        height: 100%;
+    }
+    .goldOutCarousel {
+        height: 500px;
+    }
+    .goldOutCard {
+        height: 400px;
+    }
+    .goldOutCardText {
+        font-size: 1.5vw;
+        line-height: 1.8vw;
+    }
+    .goldOutCardTitle {
+        font-size: 2vw;
+    }
+    .goldOutCardSubTitle {
+        font-size: 1.7vw;
+        font-weight: bold;
+    }
+}
+@media screen 
+  and (min-device-width: 1301px) 
+  and (max-device-width: 1400px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (min-resolution: 192dpi) { 
+    .goldOutCardText {
+        font-size: 1.4vw;
+        line-height: 1.5vw;
+    }
+}
+@media screen 
+  and (min-device-width: 1401px) 
+  and (max-device-width: 1500px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (min-resolution: 192dpi) { 
+    .goldOutCardText {
+        font-size: 1.3vw;
+        line-height: 1.5vw;
+    }
+    .goldOutCardTitle {
+      font-size: 1.5vw;
+    }
+    .goldOutCardSubTitle {
+        font-size: 1.5vw;
+    }
+}
+@media screen 
+  and (min-device-width: 1501px) 
+  and (max-device-width: 1600px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (min-resolution: 192dpi) { 
+    .goldOutCardText {
+        font-size: 1.2vw;
+        line-height: 1.4vw;
+    }
+    .goldOutCardTitle {
+        font-size: 1.5vw;
+    }
+    .goldOutCardSubTitle {
+        font-size: 1.5vw;
+    }
+
+}
+@media screen 
+  and (min-device-width: 1601px) 
+  and (max-device-width: 1700px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (min-resolution: 192dpi) { 
+    .goldOut {
+        height: 1075px;
+    }
+    .goldOutRow1 {
+        font-size: 1.5vw;
+    }
+    .goldOutCardText {
+        font-size: 1.2vw;
+        line-height: 1.4vw;
+    }
+    .goldOutCardTitle {
+        font-size: 1.3vw;
+    }
+    .goldOutCardSubTitle {
+        font-size: 1.1vw;
+    }
+}
+@media screen 
+  and (min-device-width: 1701px) 
+  and (max-device-width: 1800px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (min-resolution: 192dpi) { 
+    .goldOut {
+      height: 1075px;
+    }
+    .goldOutCardText {
+        font-size: 1.2vw;
+        line-height: 1.4vw;
+    }
+    .goldOutCardTitle {
+      font-size: 1.3vw;
+    }
+    .goldOutCardSubTitle {
+        font-size: 1.1vw;
+    }
+}
+@media screen 
+  and (min-device-width: 1801px) 
+  and (max-device-width: 2000px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (min-resolution: 192dpi) { 
+    .goldOut {
+        height: 1075px;
+    }
+    .goldOutCarousel {
+        height: 600px;
+    }
+    .goldOutCard {
+        height: 500px;
+    }
+    .goldOutCardText {
+        font-size: 1.2vw;
+        line-height: 1.4vw;
+    }
+    .goldOutCardTitle {
+        font-size: 1.3vw;
+    }
+    .goldOutCardSubTitle {
+        font-size: 1.1vw;
+    }
+}
+
+@media screen 
+  and (min-device-width: 2001px) 
+  and (max-device-width: 3000px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (min-resolution: 192dpi) { 
+    .goldOutCard {
+      width: 25rem !important;
+      margin: 0 auto;
+    }
+    .goldOut {
+      width: 100%;
+      padding-top: 15%;
+      height: 2575px;
+    }
+    .goldOutTitleLeft {
+        font-size: 3vw;
+        letter-spacing: 0.5px;
+        padding-left: 15px;
+    }
+    .goldOutTitleRight {
+        font-size: 3vw;
+        letter-spacing: 0.5px;
+    }
+    .goldOutRow1 {
+        font-size: 1.5vw;
+        margin-top: 2%;
+        text-align: left;
+    }
+    .goldOutRow2 {
+        margin-top: 3%;
+        margin-bottom: 3%;
+        line-height: 1vw !important;
+    }
+    .rec-slider-container {
+      justify-content: center;
+    }
+    .rec-item-wrapper .gjyOHz {
+        height: 100%;
+    }
+    .goldOutCarousel {
+        height: 900px;
+    }
+    .goldOutCard {
+        height: 700px;
+    }
+    .goldOutCardText {
+      font-size: 1.1vw;
+      line-height: 1.8vw;
+    }
+    .goldOutCardTitle {
+        white-space: nowrap;
+        font-size: 1.5vw;
+    }
+    .goldOutCardSubTitle {
+        font-size: 1.1vw;
+    }
+}
+
+@media screen 
+  and (min-device-width: 2001px) 
+  and (max-device-width: 2100px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (min-resolution: 192dpi) { 
+    .goldOutCardText {
+      font-size: 1.1vw;
+      line-height: 1.8vw;
+    }
+    .goldOutCardTitle {
+      white-space: nowrap;
+      font-size: 1.8vw;
+    }
+    .goldOutCardSubTitle {
+        font-size: 1.5vw;
+    }
+    
+}
+@media screen 
+  and (min-device-width: 2101px) 
+  and (max-device-width: 2200px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (min-resolution: 192dpi) { 
+    .goldOutCardText {
+      font-size: 1.2vw;
+      line-height: 1.9vw;
+    }
+    .goldOutCardTitle {
+      white-space: nowrap;
+      font-size: 1.8vw;
+    }
+    .goldOutCardSubTitle {
+        font-size: 1.5vw;
+    }
+    
+}
+@media screen 
+  and (min-device-width: 2201px) 
+  and (max-device-width: 2300px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (min-resolution: 192dpi) { 
+    .goldOutCardText {
+      font-size: 1.2vw;
+      line-height: 1.9vw;
+    }
+    .goldOutCardTitle {
+      white-space: nowrap;
+      font-size: 1.7vw;
+    }
+    .goldOutCardSubTitle {
+        font-size: 1.3vw;
+    }
+}
+@media screen 
+  and (min-device-width: 2301px) 
+  and (max-device-width: 2400px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (min-resolution: 192dpi) { 
+    .goldOutCardText {
+      font-size: 1.1vw;
+      line-height: 1.8vw;
+    }
+    .goldOutCardTitle {
+      white-space: nowrap;
+      font-size: 1.7vw;
+    }
+    .goldOutCardSubTitle {
+        font-size: 1.4vw;
+    }
+}
+@media screen 
+  and (min-device-width: 2401px) 
+  and (max-device-width: 2500px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (min-resolution: 192dpi) { 
+    .goldOutCardText {
+      font-size: 1.1vw;
+      line-height: 1.7vw;
+    }
+    
+}
+@media screen 
+  and (min-device-width: 2501px) 
+  and (max-device-width: 2600px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (min-resolution: 192dpi) { 
+    .goldOutCardText {
+      font-size: 1.1vw;
+      line-height: 1.7vw;
+    }
+    
+}
+@media screen 
+  and (min-device-width: 2601px) 
+  and (max-device-width: 2700px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (min-resolution: 192dpi) {
+    .goldOutCardText {
+      font-size: 1.1vw;
+      line-height: 1.6vw;
+    }
+    .goldOutCardTitle {
+      white-space: nowrap;
+      font-size: 1.7vw;
+    }
+    .goldOutCardSubTitle {
+        font-size: 1.4vw;
+    } 
+    
+}
+@media screen 
+  and (min-device-width: 2701px) 
+  and (max-device-width: 2800px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (min-resolution: 192dpi) { 
+    .goldOutCardText {
+      font-size: 1vw;
+      line-height: 1.5vw;
+    }
+    .goldOutCardTitle {
+      white-space: nowrap;
+      font-size: 1.7vw;
+    }
+    .goldOutCardSubTitle {
+        font-size: 1.4vw;
+    } 
+    
+}
+@media screen 
+  and (min-device-width: 2801px) 
+  and (max-device-width: 2900px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (min-resolution: 192dpi) { 
+    .goldOutCardText {
+      font-size: 1vw;
+      line-height: 1.4vw;
+    }
+    .goldOutCardTitle {
+      white-space: nowrap;
+      font-size: 1.5vw;
+    }
+    .goldOutCardSubTitle {
+        font-size: 1.3vw;
+    } 
+    
+}
+@media screen 
+  and (min-device-width: 2901px) 
+  and (max-device-width: 3000px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (min-resolution: 192dpi) { 
+    .goldOutCardText {
+      font-size: 1vw;
+      line-height: 1.4vw;
+    }
+    .goldOutCardTitle {
+      white-space: nowrap;
+      font-size: 1.5vw;
+    }
+    .goldOutCardSubTitle {
+        font-size: 1.3vw;
+    }    
+}

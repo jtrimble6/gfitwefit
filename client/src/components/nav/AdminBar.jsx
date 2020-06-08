@@ -3,6 +3,8 @@ import React, { Component } from 'react';
 import { NavLink } from 'reactstrap';
 // import { Link, animateScroll as scroll } from "react-scroll";
 import { slide as Menu } from 'react-burger-menu'
+import logo from '../../css/images/GOUVEIA-FITNESS_Mark_Black.jpg';
+import classnames from "classnames";
 import '../../css/navbar.css'
 
 class AdminBar extends Component {
@@ -24,25 +26,27 @@ class AdminBar extends Component {
 
     render() {                                                                  
         return (
-            <nav className="navbar navbar-expand-lg navbar-light fixed-top" role='navigation' id="mainNav">
+          <nav 
+              className={classnames("navbar navbar-expand-lg navbar fixed-top", {"navbar--hidden": !this.state.visible})} 
+              role='navigation' 
+              id="mainNav"
+            >
+              <span className="brandName">
+                {/* <a className="navbar-brand js-scroll-trigger" href="/">GFIT</a> */}
+                <img src={logo} className="navbar-brand Navbar-logo" alt="logo" />
+              </span>
                 {/* <div className="container"> */}
                   <div className="row masterRow">
-
-                    <div className="brandName">
-                      <a className="navbar-brand js-scroll-trigger" href="/">GFIT</a>
-                    </div>
-
                     <div className="pages">
                       <div className="row">
-                        <i className="fas fa-bars navbar-toggler collapsed navbar-toggler-right" data-toggle='collapse' data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation" onClick={this.toggleNavbar}>
+                        <i className="navbarTogglerButtonCustom fas fa-bars navbar-toggler collapsed navbar-toggler-right" data-toggle='collapse' data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation" onClick={this.toggleNavbar}>
                         <Menu 
                           right 
-                          noOverlay
-                          customCrossIcon={ <img src={require("../../css/images/cross.png")} alt='close' /> }
-                          isOpen={!this.state.collapsed}
-                          width='25%'
-                          padding='10%'
+                          disableAutoFocus               
                           className='burgerMenu'
+                          // noOverlay
+                          // customBurgerIcon={ bars }
+                          // customCrossIcon={ <img src={require("../../css/images/cross.png")} alt='close' /> } 
                         >
                           <NavLink
                             activeClass="active"
@@ -78,18 +82,6 @@ class AdminBar extends Component {
                         </div>
                       </div>
                       
-                    </div>
-
-                    <div className="row connectIcons">
-                        <a href='https://www.instagram.com/gfitwefit/?hl=en' target='_blank' rel='noopener noreferrer'>
-                          <i className="fab fa-instagram"></i>
-                        </a>
-                        <a href='https://www.facebook.com/gfitwefit/' target='_blank' rel='noopener noreferrer'>
-                          <i className="fab fa-facebook-square"></i>
-                        </a>
-                        <a href='https://goo.gl/maps/itU5E9NRMvw' target='_blank' rel='noopener noreferrer'>
-                        <i className="fas fa-map-marker-alt"></i>
-                        </a>
                     </div>
                       
                   </div>

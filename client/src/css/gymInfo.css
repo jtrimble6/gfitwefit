@@ -1,0 +1,972 @@
+@font-face {
+  font-family: 'gfitfont';
+  font-style: normal;
+  font-weight: bolder;
+  src: local('gfitfont'), url('./fonts/gfitfont.ttf'), url('./fonts/gfitfont.woff'), format('truetype');
+}
+@font-face {
+    font-family: 'gfitfont-bold';
+    font-style: normal;
+    font-weight: bolder;
+    src: local('gfitfontBold'), url('./fonts/gfitfontBold.ttf'), url('./fonts/gfitfontBold.woff') format('truetype');
+  }
+
+.gymInfo {
+    font-family: 'gfitfont-bold', Times, serif;
+    min-height: 575px;
+    background-color: #322824;
+    border-top: 2px solid white;
+}
+
+.gymInfoRow {
+    height: 100%;
+    width: 80%;
+    margin: 0 auto !important;
+    margin-top: 20% !important;
+    padding-bottom: 10% !important;
+}
+
+.gymInfoLogo {
+    width: 100%;   
+}
+
+.gymInfoHeaderRow {
+    padding: 1%;
+}
+
+.gymInfoHeaderLeft {
+    font-size: 1.8vw;
+    font-weight: bolder;
+    letter-spacing: 3px;
+    color: white;
+}
+
+.gymInfoHeaderRight {
+    font-size: 1.8vw;
+    font-weight: bolder;
+    letter-spacing: 3px;
+    color: #FAC04E;
+}
+
+.gymInfoAddressRow {
+    padding: 1%;
+}
+
+.gymInfoAddress {
+    font-size: 1.4vw;
+    font-weight: bolder;
+    color: white;
+    line-height: 1.5vw;
+}
+
+.gymInfoAddressRow {
+  padding-bottom: 0px !important;
+  margin-bottom: 0px !important;
+}
+
+.gymInfoAddressRow2 {
+  padding-top: 0px !important;
+  margin-bottom: 10% !important;
+}
+
+.gymInfoBodyRow {
+    font-family: 'Arial';
+    padding: 1%;
+}
+
+.gymInfoBody {
+    font-size: 1.2vw;
+    color: white;
+    font-weight: bold;
+}
+
+.gymInfoStrongLeft {
+  font-family: 'gfitfont-bold', Times, serif;
+  font-size: 1.5vw;
+}
+
+.gymInfoStrongRight {
+  font-family: 'gfitfont-bold', Times, serif;
+  font-size: 1.5vw;
+  color: #FAC04E;
+}
+
+.gymInfoLink {
+  color: #FAC04E;
+}
+
+.gymInfoLink:hover {
+  color: #FAC04E;
+}
+
+
+
+
+
+
+
+
+/* ----------- iPads ----------- */
+
+/* ----------- iPhone 4 and 4S ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+}
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) {
+
+}
+
+/* ----------- iPhone 5, 5S, 5C and 5SE ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+}
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+    .gymInfo {
+        min-height: 605px;
+        margin-top: 40%;
+        padding-bottom: 20%;
+    }
+    
+    .gymInfoRow {
+        height: 100%;
+        width: 80%;
+        margin: 0 auto !important;
+        margin-top: 70% !important;
+        padding-bottom: 10% !important;
+    }
+    
+    .gymInfoHeaderLeft {
+        font-size: 5vw;
+        letter-spacing: .5px;
+    }
+    
+    .gymInfoHeaderRight {
+        font-size: 5vw;
+        letter-spacing: .5px;
+    }
+    .gymInfoAddress {
+        font-size: 3vw;
+    }
+    
+    .gymInfoBody {
+        font-size: 2.5vw;
+    }
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) {
+
+}
+
+/* ----------- iPhone 6, 6S, 7 and 8 ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2) { 
+
+}
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) { 
+    
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) { 
+
+}
+
+
+
+/* ----------- iPhone X ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3) { 
+
+}
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: portrait) { 
+    .gymInfo {
+        min-height: 805px;
+    }
+    
+    .gymInfoRow {
+        height: 100%;
+        width: 80%;
+        margin: 0 auto !important;
+        margin-top: 70% !important;
+        padding-bottom: 10% !important;
+    }
+    
+    .gymInfoHeaderLeft {
+        font-size: 5vw;
+        letter-spacing: .5px;
+    }
+    
+    .gymInfoHeaderRight {
+        font-size: 5vw;
+        letter-spacing: .5px;
+    }
+    .gymInfoAddress {
+        font-size: 3vw;
+    }
+    
+    .gymInfoBody {
+        font-size: 2.5vw;
+    }
+    
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: landscape) { 
+
+}
+
+/* ----------- iPhone 6+, 7+ and 8+ ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 3) { 
+
+}
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: portrait) { 
+    .gymInfo {
+      min-height: 705px;
+  }
+  
+  .gymInfoRow {
+      height: 100%;
+      width: 80%;
+      margin: 0 auto !important;
+      margin-top: 35% !important;
+      padding-bottom: 10% !important;
+  }
+  
+  .gymInfoHeaderLeft {
+      font-size: 5vw;
+      letter-spacing: .5px;
+  }
+  
+  .gymInfoHeaderRight {
+      font-size: 5vw;
+      letter-spacing: .5px;
+  }
+  .gymInfoAddress {
+      font-size: 3vw;
+  }
+  
+  .gymInfoBody {
+      font-size: 2.5vw;
+  }
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: landscape) { 
+
+}
+
+
+
+
+
+
+
+/* ----------- iPads ----------- */
+
+/* ----------- iPad 1, 2, Mini and Air ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+
+}
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+    
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: landscape) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+
+}
+
+/* ----------- iPad 3, 4 and Pro 9.7" ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+}
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+    .gymInfo {
+        min-height: 605px;
+        padding-bottom: 15%;
+    }
+    
+    .gymInfoRow {
+        height: 100%;
+        width: 80%;
+        margin: 0 auto !important;
+        margin-left: 5% !important;
+        margin-top: 30% !important;
+        padding-bottom: 10% !important;
+    }
+    
+    .gymInfoHeaderLeft {
+        font-size: 3vw;
+        letter-spacing: .5px;
+    }
+    
+    .gymInfoHeaderRight {
+        font-size: 3vw;
+        letter-spacing: .5px;
+    }
+    .gymInfoAddress {
+        font-size: 2.3vw;
+    }
+    
+    .gymInfoBody {
+        font-size: 1.8vw;
+    }
+
+    .gymInfoLogo {
+      margin-top: 35%;
+      width: 130%;
+      height: auto;
+    }
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: landscape) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+}
+
+/* ----------- iPad Pro 10.5" ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 834px) 
+  and (max-device-width: 1112px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+}
+
+/* Portrait */
+/* Declare the same value for min- and max-width to avoid colliding with desktops */
+/* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
+@media only screen 
+  and (min-device-width: 834px) 
+  and (max-device-width: 834px) 
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+}
+
+/* Landscape */
+/* Declare the same value for min- and max-width to avoid colliding with desktops */
+/* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
+@media only screen 
+  and (min-device-width: 1112px) 
+  and (max-device-width: 1112px) 
+  and (orientation: landscape) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+}
+
+/* ----------- iPad Pro 12.9" ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 1024px) 
+  and (max-device-width: 1366px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    
+}
+
+/* Portrait */
+/* Declare the same value for min- and max-width to avoid colliding with desktops */
+/* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
+@media only screen 
+  and (min-device-width: 1024px) 
+  and (max-device-width: 1024px) 
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+    
+}
+
+/* Landscape */
+/* Declare the same value for min- and max-width to avoid colliding with desktops */
+/* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
+@media only screen 
+  and (min-device-width: 1366px) 
+  and (max-device-width: 1366px) 
+  and (orientation: landscape) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+}
+
+
+
+
+/* ----------- LAPTOPS ----------- */
+
+
+/* ----------- Non-Retina Screens ----------- */
+@media screen 
+  and (min-device-width: 1200px) 
+  and (max-device-width: 1600px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+    .gymInfo {
+      min-height: 875px;
+      padding-bottom: 15%;
+    }
+    
+    .gymInfoRow {
+        height: 100%;
+        width: 80%;
+        margin: 0 auto !important;
+        margin-left: 5% !important;
+        margin-top: 30% !important;
+        padding-bottom: 10% !important;
+    }
+    
+    .gymInfoHeaderLeft {
+        font-size: 3vw;
+        letter-spacing: .5px;
+    }
+    
+    .gymInfoHeaderRight {
+        font-size: 3vw;
+        letter-spacing: .5px;
+    }
+    .gymInfoAddress {
+        font-size: 2.3vw;
+    }
+    
+    .gymInfoBody {
+        font-size: 1.8vw;
+    }
+
+    .gymInfoLogo {
+      margin-top: 35%;
+      width: 130%;
+      height: auto;
+    }
+    .gymInfoStrongLeft {
+      font-family: 'gfitfont-bold', Times, serif;
+      font-size: 2vw;
+    }
+    
+    .gymInfoStrongRight {
+      font-family: 'gfitfont-bold', Times, serif;
+      font-size: 2vw;
+      color: #FAC04E;
+    }
+}
+
+@media screen 
+  and (min-device-width: 1600px) 
+  and (max-device-width: 2000px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+    .gymInfo {
+      min-height: 1075px;
+      padding-bottom: 15%;
+    }
+    .gymInfoHeaderRow {
+      width: 150%;
+    }
+    .gymInfoRow {
+        height: 100%;
+        width: 80%;
+        margin: 0 auto !important;
+        margin-left: 5% !important;
+        margin-top: 30% !important;
+        padding-bottom: 10% !important;
+    }
+    
+    .gymInfoHeaderLeft {
+        font-size: 3.5vw;
+        letter-spacing: .5px;
+    }
+    
+    .gymInfoHeaderRight {
+        font-size: 3.5vw;
+        letter-spacing: .5px;
+    }
+    .gymInfoAddress {
+        font-size: 2vw;
+    }
+    
+    .gymInfoBody {
+        font-size: 1.8vw;
+    }
+
+    .gymInfoLogo {
+      margin-top: 35%;
+      width: 130%;
+      height: auto;
+    }
+    .gymInfoStrongLeft {
+      font-family: 'gfitfont-bold', Times, serif;
+      font-size: 2vw;
+    }
+    
+    .gymInfoStrongRight {
+      font-family: 'gfitfont-bold', Times, serif;
+      font-size: 2vw;
+      color: #FAC04E;
+    }
+}
+
+@media screen 
+  and (min-device-width: 2001px) 
+  and (max-device-width: 3000px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+    .gymInfo {
+      min-height: 1075px;
+      padding-bottom: 15%;
+    }
+    .gymInfoHeaderRow {
+      width: 150%;
+    }
+    .gymInfoRow {
+        height: 100%;
+        width: 80%;
+        margin: 0 auto !important;
+        margin-left: 5% !important;
+        margin-top: 30% !important;
+        padding-bottom: 10% !important;
+    }
+    
+    .gymInfoHeaderLeft {
+        font-size: 3.5vw;
+        letter-spacing: .5px;
+    }
+    
+    .gymInfoHeaderRight {
+        font-size: 3.5vw;
+        letter-spacing: .5px;
+    }
+    .gymInfoAddress {
+        font-size: 2vw;
+    }
+    
+    .gymInfoBody {
+        font-size: 1.8vw;
+    }
+
+    .gymInfoLogo {
+      margin-top: 35%;
+      width: 130%;
+      height: auto;
+    }
+    .gymInfoStrongLeft {
+      font-family: 'gfitfont-bold', Times, serif;
+      font-size: 2vw;
+    }
+    
+    .gymInfoStrongRight {
+      font-family: 'gfitfont-bold', Times, serif;
+      font-size: 2vw;
+      color: #FAC04E;
+    }
+
+}
+
+@media screen 
+  and (min-device-width: 2001px) 
+  and (max-device-width: 2100px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+    
+    
+}
+@media screen 
+  and (min-device-width: 2101px) 
+  and (max-device-width: 2200px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+   
+    
+}
+@media screen 
+  and (min-device-width: 2201px) 
+  and (max-device-width: 2300px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+   
+}
+@media screen 
+  and (min-device-width: 2301px) 
+  and (max-device-width: 2400px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+    
+}
+@media screen 
+  and (min-device-width: 2401px) 
+  and (max-device-width: 2500px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+    
+    
+}
+@media screen 
+  and (min-device-width: 2501px) 
+  and (max-device-width: 2600px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+
+}
+@media screen 
+  and (min-device-width: 2601px) 
+  and (max-device-width: 2700px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+
+    
+}
+@media screen 
+  and (min-device-width: 2701px) 
+  and (max-device-width: 2800px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+
+    
+}
+@media screen 
+  and (min-device-width: 2801px) 
+  and (max-device-width: 2900px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+ 
+    
+}
+@media screen 
+  and (min-device-width: 2901px) 
+  and (max-device-width: 3000px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+    
+}
+
+
+
+
+/* ----------- Retina Screens ----------- */
+@media screen 
+  and (min-device-width: 1200px) 
+  and (max-device-width: 1600px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (min-resolution: 192dpi) { 
+    .gymInfo {
+      min-height: 875px;
+      padding-bottom: 15%;
+    }
+    
+    .gymInfoRow {
+        height: 100%;
+        width: 80%;
+        margin: 0 auto !important;
+        margin-left: 5% !important;
+        margin-top: 30% !important;
+        padding-bottom: 10% !important;
+    }
+    .gymInfoHeaderLeft {
+        font-size: 3vw;
+        letter-spacing: .5px;
+    }
+    .gymInfoHeaderRight {
+        font-size: 3vw;
+        letter-spacing: .5px;
+    }
+    .gymInfoAddress {
+        font-size: 2.3vw;
+    }
+    .gymInfoBody {
+        font-size: 1.8vw;
+    }
+    .gymInfoLogo {
+      margin-top: 35%;
+      width: 130%;
+      height: auto;
+    }
+    .gymInfoStrongLeft {
+      font-family: 'gfitfont-bold', Times, serif;
+      font-size: 2vw;
+    }
+    .gymInfoStrongRight {
+      font-family: 'gfitfont-bold', Times, serif;
+      font-size: 2vw;
+      color: #FAC04E;
+    }
+}
+
+@media screen 
+  and (min-device-width: 1600px) 
+  and (max-device-width: 2000px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (min-resolution: 192dpi) { 
+    .gymInfo {
+      min-height: 1075px;
+      padding-bottom: 15%;
+    }
+    .gymInfoHeaderRow {
+      width: 150%;
+    }
+    .gymInfoRow {
+        height: 100%;
+        width: 80%;
+        margin: 0 auto !important;
+        margin-left: 5% !important;
+        margin-top: 30% !important;
+        padding-bottom: 10% !important;
+    }
+    
+    .gymInfoHeaderLeft {
+        font-size: 3.5vw;
+        letter-spacing: .5px;
+    }
+    
+    .gymInfoHeaderRight {
+        font-size: 3.5vw;
+        letter-spacing: .5px;
+    }
+    .gymInfoAddress {
+        font-size: 2vw;
+    }
+    
+    .gymInfoBody {
+        font-size: 1.8vw;
+    }
+
+    .gymInfoLogo {
+      margin-top: 35%;
+      width: 130%;
+      height: auto;
+    }
+    .gymInfoStrongLeft {
+      font-family: 'gfitfont-bold', Times, serif;
+      font-size: 2vw;
+    }
+    
+    .gymInfoStrongRight {
+      font-family: 'gfitfont-bold', Times, serif;
+      font-size: 2vw;
+      color: #FAC04E;
+    }
+}
+
+@media screen 
+  and (min-device-width: 2001px) 
+  and (max-device-width: 3000px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (min-resolution: 192dpi) { 
+    .gymInfo {
+      min-height: 1075px;
+      padding-bottom: 15%;
+    }
+    .gymInfoHeaderRow {
+      width: 150%;
+    }
+    .gymInfoRow {
+        height: 100%;
+        width: 80%;
+        margin: 0 auto !important;
+        margin-left: 5% !important;
+        margin-top: 30% !important;
+        padding-bottom: 10% !important;
+    }
+    
+    .gymInfoHeaderLeft {
+        font-size: 3.5vw;
+        letter-spacing: .5px;
+    }
+    
+    .gymInfoHeaderRight {
+        font-size: 3.5vw;
+        letter-spacing: .5px;
+    }
+    .gymInfoAddress {
+        font-size: 2vw;
+    }
+    
+    .gymInfoBody {
+        font-size: 1.8vw;
+    }
+
+    .gymInfoLogo {
+      margin-top: 35%;
+      width: 130%;
+      height: auto;
+    }
+    .gymInfoStrongLeft {
+      font-family: 'gfitfont-bold', Times, serif;
+      font-size: 2vw;
+    }
+    
+    .gymInfoStrongRight {
+      font-family: 'gfitfont-bold', Times, serif;
+      font-size: 2vw;
+      color: #FAC04E;
+    }
+
+}
+
+@media screen 
+  and (min-device-width: 2001px) 
+  and (max-device-width: 2100px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (min-resolution: 192dpi) { 
+    
+    
+}
+@media screen 
+  and (min-device-width: 2101px) 
+  and (max-device-width: 2200px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (min-resolution: 192dpi) { 
+   
+    
+}
+@media screen 
+  and (min-device-width: 2201px) 
+  and (max-device-width: 2300px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (min-resolution: 192dpi) { 
+   
+}
+@media screen 
+  and (min-device-width: 2301px) 
+  and (max-device-width: 2400px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (min-resolution: 192dpi) { 
+    
+}
+@media screen 
+  and (min-device-width: 2401px) 
+  and (max-device-width: 2500px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (min-resolution: 192dpi) { 
+    
+    
+}
+@media screen 
+  and (min-device-width: 2501px) 
+  and (max-device-width: 2600px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (min-resolution: 192dpi) { 
+
+}
+@media screen 
+  and (min-device-width: 2601px) 
+  and (max-device-width: 2700px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (min-resolution: 192dpi) {
+
+    
+}
+@media screen 
+  and (min-device-width: 2701px) 
+  and (max-device-width: 2800px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (min-resolution: 192dpi) { 
+
+    
+}
+@media screen 
+  and (min-device-width: 2801px) 
+  and (max-device-width: 2900px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (min-resolution: 192dpi) { 
+ 
+    
+}
+@media screen 
+  and (min-device-width: 2901px) 
+  and (max-device-width: 3000px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (min-resolution: 192dpi) { 
+    
+}

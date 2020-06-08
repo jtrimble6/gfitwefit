@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 // import { Collapse, Nav, NavItem } from 'reactstrap';
 import { NavLink } from 'reactstrap';
-import { Link} from "react-scroll";
-import { slide as Menu } from 'react-burger-menu'
+import { Link } from "react-scroll";
+import { stack as Menu } from 'react-burger-menu'
 import classnames from "classnames";
-import Footer from "./Footer"
 import '../../css/navbar.css'
+import logo from '../../css/images/GOUVEIA-FITNESS_Mark_Black.png';
 
 class Navbar extends Component {
     constructor(props) {
@@ -45,168 +45,114 @@ class Navbar extends Component {
         this.setState({
             collapsed: !this.state.collapsed
         })
+        if (this.state.collapsed) {
+          // document.getElementById('appRoot').style.filter = 'blur(5px)'
+        } else {
+          // document.getElementById('appRoot').style.filter = 'blur(0px)'
+        }
+        
       }
 
     render() {                                                          
         return (
             <nav 
-              className={classnames("navbar navbar-expand-lg navbar-light fixed-top", {"navbar--hidden": !this.state.visible})} 
+              className={classnames("navbar navbar-expand-lg navbar fixed-top", {"navbar--hidden": !this.state.visible})} 
               role='navigation' 
               id="mainNav"
             >
+              <span className="brandName">
+                {/* <a className="navbar-brand js-scroll-trigger" href="/">GFIT</a> */}
+                <img src={logo} className="navbar-brand Navbar-logo" alt="logo" />
+              </span>
                 {/* <div className="container"> */}
                   <div className="row masterRow">
-
-                    <div className="brandName">
-                      <a className="navbar-brand js-scroll-trigger" href="/">GFIT</a>
-                    </div>
-
                     <div className="pages">
                       <div className="row">
-                        <i className="fas fa-bars navbar-toggler collapsed navbar-toggler-right" data-toggle='collapse' data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation" onClick={this.toggleNavbar}>
+                        <i className="navbarTogglerButtonCustom fas fa-bars navbar-toggler collapsed navbar-toggler-right" data-toggle='collapse' data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation" onClick={this.toggleNavbar}>
                         <Menu 
                           right 
-                          noOverlay
-                          // customBurgerIcon={ bars }
-                          customCrossIcon={ <img src={require("../../css/images/cross.png")} alt='close' /> }
-                          isOpen={!this.state.collapsed}
-                          width='25%'
-                          padding='10%'
+                          disableAutoFocus               
                           className='burgerMenu'
+                          // noOverlay
+                          // customBurgerIcon={ bars }
+                          customCrossIcon={ <img src={require("../../css/images/cross.png")} alt='close' /> } 
                         >
+                          <NavLink 
+                            className='iconBar nav-link' 
+                            onClick={this.toggleNavbar}
+                            href="/"
+                          > HOME</NavLink>
                           <Link
                             activeClass="active"
-                            className=' iconBar nav-link'
+                            className='iconBar nav-link'
                             onClick={this.toggleNavbar}
-                            to="welcomePage"
-                            spy={true}
-                            smooth={true}
-                            offset={-100}
-                            duration= {500}
-                          > Home </Link>
-                          <Link
-                            activeClass="active"
-                            className=' iconBar nav-link'
-                            onClick={this.toggleNavbar}
-                            to="tableWorkouts"
+                            to="scheduleInfo"
                             spy={true}
                             smooth={true}
                             offset={-150}
                             duration= {500}
-                          > Schedule </Link>
-                          <Link
-                            activeClass="active"
-                            className=' iconBar nav-link'
-                            onClick={this.toggleNavbar}
-                            to="facebookFeed"
-                            spy={true}
-                            smooth={true}
-                            offset={-140}
-                            duration= {500}
-                          > Reviews </Link>
-                          <Link
-                            activeClass="active"
-                            className=' iconBar nav-link'
-                            onClick={this.toggleNavbar}
-                            to="aboutPage"
-                            spy={true}
-                            smooth={true}
-                            offset={-110}
-                            duration= {500}
-                          > About </Link>
-                          <Link
-                            activeClass="active"
-                            className=' iconBar nav-link'
-                            onClick={this.toggleNavbar}
-                            to="contactPage"
-                            spy={true}
-                            smooth={true}
-                            offset={-100}
-                            duration= {500}
-                          > Contact </Link>
-                          {/* <NavLink 
-                            className=' iconBar nav-link' 
-                            onClick={this.toggleNavbar}
-                            href="/signup"
-                          > Sign Up</NavLink> */}
+                          > SCHEDULE </Link>
                           <NavLink 
-                            className=' iconBar nav-link' 
+                            className='iconBar nav-link' 
+                            onClick={this.toggleNavbar}
+                            href="/pricing"
+                          > PRICING</NavLink>
+                          <NavLink 
+                            className='iconBar nav-link' 
+                            onClick={this.toggleNavbar}
+                            href="/contact"
+                          > CONTACT</NavLink>
+                          <NavLink 
+                            className='iconBar nav-link signUp' 
+                            onClick={this.toggleNavbar}
+                            href="/tryitout"
+                          > TRY IT OUT</NavLink>
+                          <NavLink 
+                            className='iconBar nav-link' 
                             onClick={this.toggleNavbar}
                             href="/admin"
-                          > Admin</NavLink>
+                          > ADMIN</NavLink>
                           {/* <a onClick={ this.showSettings } className="menu-item--small" href="">Settings</a> */}
                         </Menu>
                         </i>
                         <div className="collapse navbar-collapse" id="navbarResponsive">
                         <ul className="navbar-nav ml-auto">
                           <li className="nav-item" >
-                            <Link
-                              activeClass="active"
-                              className='nav-link js-scroll-trigger'
-                              to="welcomePage"
-                              spy={true}
-                              smooth={true}
-                              offset={-100}
-                              duration= {500}
-                            > Home </Link>
+                            <a className="nav-link js-scroll-trigger" href='/'>
+                              HOME
+                            </a>
                           </li>
                           <li className="nav-item">
                             <Link
                               activeClass="active"
                               className='nav-link js-scroll-trigger'
-                              to="tableWorkouts"
+                              to="scheduleInfo"
                               spy={true}
                               smooth={true}
                               offset={-150}
                               duration= {500}
-                            > Schedule </Link>
+                            > SCHEDULE </Link>
                           </li>
                           <li className="nav-item" >
-                            <Link
-                              activeClass="active"
-                              className='nav-link js-scroll-trigger'
-                              to="facebookFeed"
-                              spy={true}
-                              smooth={true}
-                              offset={-140}
-                              duration= {500}
-                            > Reviews </Link>
+                            <a className="nav-link js-scroll-trigger" href='/pricing'>
+                              PRICING
+                            </a>
                           </li>
                           <li className="nav-item" >
-                            <Link
-                              activeClass="active"
-                              className='nav-link js-scroll-trigger'
-                              to="aboutPage"
-                              spy={true}
-                              smooth={true}
-                              offset={-70}
-                              duration= {500}
-                            > About </Link>
+                            <a className="nav-link js-scroll-trigger" href='/contact'>
+                              CONTACT
+                            </a>
                           </li>
                           <li className="nav-item" >
-                            <Link
-                              activeClass="active"
-                              className='nav-link js-scroll-trigger'
-                              to="contactPage"
-                              spy={true}
-                              smooth={true}
-                              offset={-100}
-                              duration= {500}
-                            > Contact </Link>
-                          </li>
-                          {/* <li className="nav-item" >
-                            <a className="nav-link js-scroll-trigger" href='/signup'>Sign Up</a>
-                          </li> */}
-                          <li className="nav-item" >
-                            <a className="nav-link js-scroll-trigger" href='/admin'>Admin</a>
+                            <a className="nav-link js-scroll-trigger signUp" href='/tryitout'>
+                              TRY IT OUT
+                            </a>
                           </li>
                         </ul>
                         </div>
                       </div>
                       
                     </div>
-
-                    <Footer />
                       
                   </div>
                     

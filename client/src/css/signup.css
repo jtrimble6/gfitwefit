@@ -1,36 +1,242 @@
-/* @font-face {
+@font-face {
     font-family: 'gfitfont';
     font-style: normal;
-    font-weight: normal;
-    src: url("./css/gfitfont.woff") format("woff"), url("./css/gfitfont.ttf")  format("truetype");
-  } */
+    font-weight: bolder;
+    src: local('gfitfont'), url('./fonts/gfitfont.ttf'), url('./fonts/gfitfont.woff'), format('truetype');
+  }
+@font-face {
+    font-family: 'gfitfont-bold';
+    font-style: normal;
+    font-weight: bolder;
+    src: local('gfitfontBold'), url('./fonts/gfitfontBold.ttf'), url('./fonts/gfitfontBold.woff') format('truetype');
+  }
 
-#signUpPage {
-    margin-top: 20%;
+/* #signUpPage {
+    margin-top: 50% !important;
     margin-bottom: 10%;
-}
+} */
 
-@media (max-width: 900px) {
+/* @media (max-width: 900px) {
     #signUpPage {
         margin-bottom: 30%;
     }
+} */
+
+.signUpUserDiv {
+    font-family: 'gfitfont-bold';
+    height: 125vw;
+    min-height: 100%;
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 20%;
+    /* margin-bottom: 20% !important; */
+    color: white;
 }
 
-.container {
-    text-align: center
+.signUpUserForm {
+    margin-bottom: 5%;
+}
+
+.signUpUserTitle {
+    text-align: center;
+    color: #FAC04E;
+    font-size: 3vw;
+}
+
+.signUpUserStep {
+    font-size: 2vw;
+    text-align: center;
+    color: #FAC04E;
 }
 
 .userSignUp {
+    font-family: 'gfitfont-bold';
     color: white;
     width: 50%;
-    margin: auto;
+    margin: 0 auto;
     margin-top: 10%;
+}
+
+.userSignUpFormRow {
+    margin-bottom: 3%;
+}
+
+.formGridDOBRow {
+    max-width: 100% !important;
+    margin: 0 auto;
+}
+
+.formGridDOBDayInput {
+    width: 25% !important;
+    /* display: inline-block !important; */
+}
+.formGridDOBMonthInput {
+    margin-left: 5% !important;
+    margin-right: 5% !important;
+    width: 25% !important;
+}
+.formGridDOBYearInput {
+    width: 40% !important;
+    /* display: inline-block !important; */
+}
+
+.formWaiverDiv {
+    justify-content: center;
+}
+
+.formWaiverRow {
+    margin: 5%;
 }
 
 .waiver {
     text-align: center;
 }
 
+.payWithConverge {
+    background-color: #85bb65;
+    color: white;
+    border: none;
+    width: 90%;
+    margin-left: 5%;
+    margin-bottom: 10%;
+    text-align: center;
+}
+
 .submitSignUp {
     width: 25%;
+}
+
+.signInButton {
+    text-align: center !important;
+    width: 25%;
+    margin: 0 auto;
+    margin-top: 5%;
+    background-color: #FAC04E !important;
+    color: black !important;
+}
+
+.signInButton:hover {
+    text-align: center !important;
+    width: 25%;
+    margin: 0 auto;
+    margin-top: 5%;
+    background-color: white !important;
+    color: black !important;
+}
+
+.stepButtonSpan {
+    width: 100%;
+}
+
+.formNav {
+    height: 40%;
+}
+
+.formNav .btn-primary {
+    background-color: white !important;
+}
+
+.nextStep {
+    width: 90% !important;
+    height: 100% !important;
+    margin: 0 auto !important;
+    color: #211C18 !important;
+    border: 2px solid #FAC04E !important;
+}
+
+.stepButtonSpan .nextStep {
+    width: 45% !important;
+    height: 100% !important;
+    margin: 0 auto !important;
+    margin-left: 2.5% !important;
+    margin-right: 2.5% !important;
+}
+
+.prevStep {
+    color: white;
+    width: 45% !important;
+    height: 100% !important;
+    margin: 0 auto !important;
+    margin-left: 2.5% !important;
+    margin-right: 2.5% !important;
+}
+
+.stepButtonSpan .submitSignUp {
+    background-color: #211C18;
+    color: white;
+    border: 2px solid #FAC04E;
+    width: 45% !important;
+    height: 100% !important;
+    margin: 0 auto !important;
+    margin-left: 2.5% !important;
+    margin-right: 2.5% !important;
+}
+
+.formWaiverRow {
+    margin-bottom: 1%;
+}
+
+.userSignUpAcknowledgementTitle {
+    color: white;
+    text-align: center;
+}
+
+
+/* ----------- Laptops ----------- */
+
+/* ----------- Non-Retina Screens ----------- */
+@media screen 
+  and (min-device-width: 1200px) 
+  and (max-device-width: 1600px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+    .signUpUserDiv {
+        margin-top: 10%;
+    }
+}
+
+@media screen 
+  and (min-device-width: 1601px) 
+  and (max-device-width: 2000px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+    .signUpUserDiv {
+        margin-top: 10%;
+    }
+}
+
+@media screen 
+  and (min-device-width: 2001px) 
+  and (max-device-width: 3000px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+    .signUpUserDiv {
+        margin-top: 10%;
+    }
+}
+
+/* ----------- Retina Screens ----------- */
+@media screen 
+  and (min-device-width: 1200px) 
+  and (max-device-width: 1600px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (min-resolution: 192dpi) { 
+    .signUpUserDiv {
+        margin-top: 10%;
+    }
+}
+
+@media screen 
+  and (min-device-width: 1601px) 
+  and (max-device-width: 2000px) 
+  and (-webkit-min-device-pixel-ratio: 2) { 
+    .signUpUserDiv {
+        margin-top: 10%;
+    }
+}
+
+@media screen 
+  and (min-device-width: 2001px) 
+  and (max-device-width: 3000px) 
+  and (-webkit-min-device-pixel-ratio: 2) { 
+    .signUpUserDiv {
+        margin-top: 10%;
+    }
 }

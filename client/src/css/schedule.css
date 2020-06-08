@@ -1,9 +1,9 @@
-@font-face {
+/* @font-face {
   font-family: 'gfitfont';
   font-style: normal;
   font-weight: normal;
   src: local('gfitfont'), url('./gfitfont.ttf'), url('./gfitfont.woff') format('truetype');
-}
+} */
 
 .tableWorkouts {
   background-image: url('../css/images/gfitinsta/gym2.jpg');
@@ -33,7 +33,7 @@
 }
 .tableWorkouts th {
   color: #b1864f;
-  background-color: black;
+  background-color: #211C18;
   opacity: 0.85;
   font-size: 35px;
   text-decoration: underline;
@@ -62,7 +62,7 @@
   }
 .tableWorkouts th {
   color: #b1864f;
-  background-color: black;
+  background-color: #211C18;
   opacity: 0.85;
   font-size: 15px;
   text-decoration: underline;
@@ -81,7 +81,7 @@
   }
   .tableWorkouts th {
     color: #b1864f;
-    background-color: black;
+    background-color: #211C18;
     opacity: 0.85;
     font-size: 15px;
     text-decoration: underline;

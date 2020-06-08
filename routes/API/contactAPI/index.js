@@ -25,12 +25,14 @@ router.post('/send', (req, res, next) => {
   var name = req.body.name
   var email = req.body.email
   var message = req.body.message
-  var phone = req.body.phone
-  var content = `name: ${name} \n email: ${email} \n phone: ${phone} \n message: ${message} `
+  var checkbox1 = req.body.checkbox1
+  var checkbox2 = req.body.checkbox2
+  var content = `Name: ${name}\nEmail: ${email}\nWorked out with us before?: ${checkbox1}\nPlanning first visit to the gym?: ${checkbox2}\nMessage: ${message}`
 
   var mail = {
     from: name,
-    to: 'kgouveia@gfitwefit.com',  //Change to email address that you want to receive messages on
+    // to: 'kgouveia@gfitwefit.com',  //Change to email address that you want to receive messages on
+    to: 'trimbledevelops@gmail.com',
     subject: 'New Message from Contact Form',
     text: content
   }

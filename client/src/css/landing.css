@@ -1,9 +1,9 @@
-@font-face {
+/* @font-face {
   font-family: 'gfitfont';
   font-style: normal;
   font-weight: normal;
   src: local('gfitfont'), url('./gfitfont.ttf'), url('./gfitfont.woff') format('truetype');
-}
+} */
 
 .welcomePage {
   /* width: 60%; */
@@ -18,7 +18,7 @@
   opacity: 1;
   background-color: white !important;
   /* background-image: url('./images/gfitinsta/gfitwefitbanner.jpg'); */
-  /* background-color: black; */
+  /* background-color: #211C18; */
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -47,7 +47,7 @@
   align-items: center;
   justify-content: center;
   font-size: calc(12px + 2vmin);
-  color: black;
+  color: #211C18;
   text-shadow: 2px 1px #B1864F;
   /* font-weight: bolder !important; */
 }
@@ -58,13 +58,13 @@
   font-weight: 300;
   font-weight: bolder !important;
   padding: 10px;
-  color: black;
+  color: #211C18;
 }
 .landing-link:hover {
   color: #B1864F !important;
   background-color: transparent !important;
   cursor: pointer;
-  text-shadow: 2px 2px black;
+  text-shadow: 2px 2px #211C18;
 }
 
 /* @keyframes Landing-logo-spin {
@@ -111,7 +111,7 @@
     text-shadow: 1px 1px #B1864F;
   }
   .landing-link:hover {
-    text-shadow: 1px 1px black;
+    text-shadow: 1px 1px #211C18;
   }
 
   .Landing-header h1 {
@@ -136,7 +136,7 @@
     text-shadow: 1px 1px #B1864F;
   }
   .landing-link:hover {
-    text-shadow: 1px 1px black;
+    text-shadow: 1px 1px #211C18;
   }
 
   .Landing-header h1 {
@@ -164,7 +164,7 @@
     text-shadow: 1px 1px #B1864F;
   }
   .landing-link:hover {
-    text-shadow: 1px 1px black;
+    text-shadow: 1px 1px #211C18;
   }
   .landing-link {
     font-size: calc(10px + 2vmin) !important;
@@ -184,7 +184,7 @@
     text-shadow: 1px 1px #B1864F;
   }
   .landing-link:hover {
-    text-shadow: 1px 1px black;
+    text-shadow: 1px 1px #211C18;
   }
 
   .Landing-header h1 {
@@ -208,7 +208,7 @@
     text-shadow: 1px 1px #B1864F;
   }
   .landing-link:hover {
-    text-shadow: 1px 1px black;
+    text-shadow: 1px 1px #211C18;
   }
 
   .Landing-header h1 {
@@ -233,7 +233,7 @@
     text-shadow: 1px 1px #B1864F;
   }
   .landing-link:hover {
-    text-shadow: 1px 1px black;
+    text-shadow: 1px 1px #211C18;
   }
 
   .Landing-header h1 {
@@ -257,7 +257,7 @@
     text-shadow: 1px 1px #B1864F;
   }
   .landing-link:hover {
-    text-shadow: 1px 1px black;
+    text-shadow: 1px 1px #211C18;
   }
   .Landing-header h1 {
     font-size: calc(15px + 2vmin) !important;

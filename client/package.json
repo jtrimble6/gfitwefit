@@ -16,10 +16,14 @@
     "passport": "^0.4.0",
     "react": "^16.6.3",
     "react-bootstrap": "^1.0.1",
+    "react-bootstrap-date-picker": "^5.1.0",
     "react-dom": "^16.6.3",
+    "react-elastic-carousel": "^0.6.1",
     "react-router-dom": "^4.3.1",
     "react-scripts": "2.1.1",
-    "react-under-construction": "^0.3.0"
+    "react-under-construction": "^0.3.0",
+    "redux": "^4.0.5",
+    "video-react": "^0.14.1"
   },
   "scripts": {
     "start": "react-scripts start",

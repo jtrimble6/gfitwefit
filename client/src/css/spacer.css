@@ -5,7 +5,7 @@
 }
 
 hr.spacerLine {
-    border: 1px solid black;
+    border: 1px solid #211C18;
 }
 
 @media (min-width: 501px) {

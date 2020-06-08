@@ -1,0 +1,972 @@
+.footerLanding {
+    position: relative !important;
+    bottom: 0 !important;
+    width: 100%;
+    /* padding-bottom: 25%; */
+    background-color: #211C18;
+    background-size: cover; 
+}
+
+.footerRow {
+    font-family: 'Arial';
+    width: 99%;
+    margin: 0 auto;
+}
+
+.footerLogo {
+    margin-top: 2%;
+    max-width: 100%;
+    height: auto;
+}
+
+.footerTitle {
+    margin-top: 8%;
+    margin-left: 3%;
+    font-size: 1.5vw;
+    font-weight: bolder;
+    color: white;
+}
+
+.footerInfo p {
+    font-size: .9vw;
+    color: white;
+    line-height: 1;
+}
+
+.footerAddress {
+    padding: 0;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 1%;
+    justify-content: center;
+}
+
+.footerAddress p {
+    margin-top: 8%;
+    margin-bottom: 1%;
+}
+
+.footerDisclaimer {
+    padding: 0;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.footerSocial {
+    margin-top: 2%;
+    position: static;
+    right: 0px;
+    font-size: 2.7vw;
+    
+}
+
+.footerIcon {
+    float: right;
+    color: white !important;
+    padding: 1%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* ----------- iPhones ----------- */
+
+/* ----------- iPhone 4 and 4S ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+}
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) {
+
+}
+
+/* ----------- iPhone 5, 5S, 5C and 5SE ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+}
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+    .footerLanding {
+        height: 100%;
+        position: relative;
+        bottom: -10px;
+        padding-bottom: 0px;
+    }
+    
+    .footerRow {
+        width: 99%;
+        margin: 0 auto;
+    }
+
+    .footerLogoDiv {
+        width: 35px;
+        margin-top: 5%;
+        margin-left: 0;
+    }
+
+    .footerTitleDiv {
+        position: relative;
+        left: 55px;
+        bottom: 50px;
+    }
+    
+    .footerLogo {
+        margin-top: 2%;
+        max-width: 100%;
+        height: auto;
+    }
+    
+    .footerTitle {
+        position: relative;
+        top: 0;
+        font-size: 2.5vw;
+    }
+    
+    .footerInfo p {
+        line-height: 1.5;
+    }
+    
+    .footerAddress {
+        margin-top: 15%;
+        justify-content: center;
+        text-align: center;
+    }
+    
+    .footerAddress p {
+        margin-top: 15%;
+        margin-bottom: 1%;
+        font-size: 2vw;
+    }
+    
+    .footerDisclaimer {
+        font-size: 1.5vw;
+        padding: 0;
+        text-align: center;
+    }
+    
+    .footerSocial {
+        margin-top: 8%;
+        position: static;
+        right: 0px;
+        font-size: 7vw;
+        
+    }
+    
+    .footerIcon {
+        color: white;
+        padding-right: 7%;
+        float: right;
+    }
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) {
+
+}
+
+/* ----------- iPhone 6, 6S, 7 and 8 ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2) { 
+
+}
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) { 
+    .footerLanding {
+        height: 100%;
+        /* position: relative;
+        bottom: -10px; */
+        padding-bottom: 0px;
+    }
+    
+    .footerRow {
+        width: 99%;
+        margin: 0 auto;
+    }
+
+    .footerLogoDiv {
+        width: 35px;
+        margin-top: 5%;
+        margin-left: 0;
+    }
+
+    .footerTitleDiv {
+        position: relative;
+        left: 15px;
+        bottom: -30px;
+    }
+    
+    .footerLogo {
+        margin-top: 2%;
+        max-width: 100%;
+        height: auto;
+    }
+    
+    .footerTitle {
+        position: relative;
+        top: 0;
+        font-size: 2.5vw;
+    }
+    
+    .footerInfo p {
+        line-height: 1.5;
+    }
+    
+    .footerAddress {
+        margin-top: 15%;
+        justify-content: center;
+        text-align: center;
+    }
+    
+    .footerAddress p {
+        margin-top: 15%;
+        margin-bottom: 1%;
+        font-size: 2vw;
+    }
+    
+    .footerDisclaimer {
+        font-size: 1.5vw;
+        padding: 0;
+        text-align: center;
+    }
+    
+    .footerSocial {
+        margin-top: 8%;
+        position: static;
+        right: 0px;
+        font-size: 7vw;
+        
+    }
+    
+    .footerIcon {
+        color: white;
+        padding-right: 7%;
+        float: right;
+    }
+
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) { 
+
+}
+
+
+
+/* ----------- iPhone X ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3) { 
+
+}
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: portrait) { 
+    .footerLanding {
+        height: 100%;
+        /* position: relative;
+        bottom: -10px; */
+        padding-bottom: 0px;
+    }
+    
+    .footerRow {
+        width: 99%;
+        margin: 0 auto;
+    }
+
+    .footerLogoDiv {
+        width: 35px;
+        margin-top: 5%;
+        margin-left: 0;
+    }
+
+    .footerTitleDiv {
+        position: relative;
+        left: 15px;
+        bottom: -30px;
+    }
+    
+    .footerLogo {
+        margin-top: 2%;
+        max-width: 100%;
+        height: auto;
+    }
+    
+    .footerTitle {
+        position: relative;
+        top: 0;
+        font-size: 2.5vw;
+    }
+    
+    .footerInfo p {
+        line-height: 1.5;
+    }
+    
+    .footerAddress {
+        margin-top: 15%;
+        justify-content: center;
+        text-align: center;
+    }
+    
+    .footerAddress p {
+        margin-top: 15%;
+        margin-bottom: 1%;
+        font-size: 2vw;
+    }
+    
+    .footerDisclaimer {
+        font-size: 1.5vw;
+        padding: 0;
+        text-align: center;
+    }
+    
+    .footerSocial {
+        margin-top: 8%;
+        position: static;
+        right: 0px;
+        font-size: 7vw;
+        
+    }
+    
+    .footerIcon {
+        color: white;
+        padding-right: 7%;
+        float: right;
+    }
+
+    
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: landscape) { 
+
+}
+
+/* ----------- iPhone 6+, 7+ and 8+ ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 3) { 
+
+}
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: portrait) { 
+    .footerLanding {
+        height: 100%;
+        /* position: relative;
+        bottom: -10px; */
+        padding-bottom: 0px;
+    }
+    
+    .footerRow {
+        width: 99%;
+        margin: 0 auto;
+    }
+
+    .footerLogoDiv {
+        width: 35px;
+        margin-top: 5%;
+        margin-left: 0;
+    }
+
+    .footerTitleDiv {
+        position: relative;
+        left: 15px;
+        bottom: -30px;
+    }
+    
+    .footerLogo {
+        margin-top: 2%;
+        max-width: 100%;
+        height: auto;
+    }
+    
+    .footerTitle {
+        position: relative;
+        top: 0;
+        font-size: 2.5vw;
+    }
+    
+    .footerInfo p {
+        line-height: 1.5;
+    }
+    
+    .footerAddress {
+        margin-top: 15%;
+        justify-content: center;
+        text-align: center;
+    }
+    
+    .footerAddress p {
+        margin-top: 15%;
+        margin-bottom: 1%;
+        font-size: 2vw;
+    }
+    
+    .footerDisclaimer {
+        font-size: 1.5vw;
+        padding: 0;
+        text-align: center;
+    }
+    
+    .footerSocial {
+        margin-top: 8%;
+        position: static;
+        right: 0px;
+        font-size: 7vw;
+        
+    }
+    
+    .footerIcon {
+        color: white;
+        padding-right: 7%;
+        float: right;
+    }
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: landscape) { 
+
+}
+
+
+
+
+/* ----------- iPads ----------- */
+
+/* ----------- iPad 1, 2, Mini and Air ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+
+}
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+    
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: landscape) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+
+}
+
+/* ----------- iPad 3, 4 and Pro 9.7" ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+}
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+    .footerLanding {
+        height: 100%;
+        position: relative;
+        bottom: 160px;
+        padding-bottom: 0 !important;
+    }
+    
+    .footerRow {
+        width: 99%;
+        margin: 0 auto;
+        
+    }
+
+    .footerLogoDiv {
+        width: 35px;
+        margin-top: 5%;
+        margin-left: 0;
+    }
+
+    .footerTitleDiv {
+        position: relative;
+        left: 55px;
+        bottom: 50px;
+    }
+    
+    .footerLogo {
+        margin-top: 70%;
+        max-width: 150%;
+        height: auto;
+    }
+    
+    .footerTitle {
+        position: relative;
+        top: 85px;
+        font-size: 2.5vw;
+    }
+    
+    .footerInfo p {
+        line-height: 1.5;
+    }
+    
+    .footerAddress {
+        margin-top: 5%;
+        justify-content: center;
+        text-align: center;
+    }
+    
+    .footerAddress p {
+        margin-top: 10%;
+        margin-bottom: 1%;
+        font-size: 2vw;
+    }
+    
+    .footerDisclaimer {
+        font-size: 1.5vw;
+        padding: 0;
+        text-align: center;
+    }
+    
+    .footerSocial {
+        margin-top: 6%;
+        position: static;
+        right: 0px;
+        font-size: 5vw;
+        
+    }
+    
+    .footerIcon {
+        color: white;
+        padding-right: 7%;
+        float: right;
+    }
+    
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: landscape) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+}
+
+/* ----------- iPad Pro 10.5" ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 834px) 
+  and (max-device-width: 1112px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+}
+
+/* Portrait */
+/* Declare the same value for min- and max-width to avoid colliding with desktops */
+/* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
+@media only screen 
+  and (min-device-width: 834px) 
+  and (max-device-width: 834px) 
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+}
+
+/* Landscape */
+/* Declare the same value for min- and max-width to avoid colliding with desktops */
+/* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
+@media only screen 
+  and (min-device-width: 1112px) 
+  and (max-device-width: 1112px) 
+  and (orientation: landscape) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+}
+
+/* ----------- iPad Pro 12.9" ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 1024px) 
+  and (max-device-width: 1366px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    
+}
+
+/* Portrait */
+/* Declare the same value for min- and max-width to avoid colliding with desktops */
+/* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
+@media only screen 
+  and (min-device-width: 1024px) 
+  and (max-device-width: 1024px) 
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+    .footerLanding {
+        height: 100%;
+        position: relative;
+        bottom: 500px;
+        padding-bottom: 0 !important;
+    }
+    
+    .footerRow {
+        width: 99%;
+        margin: 0 auto;
+        
+    }
+
+    .footerLogoDiv {
+        width: 35px;
+        margin-top: 5%;
+        margin-left: 0;
+    }
+
+    .footerTitleDiv {
+        position: relative;
+        left: 55px;
+        bottom: 50px;
+    }
+    
+    .footerLogo {
+        margin-top: 70%;
+        max-width: 150%;
+        height: auto;
+    }
+    
+    .footerTitle {
+        position: relative;
+        top: 85px;
+        font-size: 2.5vw;
+    }
+    
+    .footerInfo p {
+        line-height: 1.5;
+    }
+    
+    .footerAddress {
+        margin-top: 5%;
+        justify-content: center;
+        text-align: center;
+    }
+    
+    .footerAddress p {
+        margin-top: 10%;
+        margin-bottom: 1%;
+        font-size: 2vw;
+    }
+    
+    .footerDisclaimer {
+        font-size: 1.5vw;
+        padding: 0;
+        text-align: center;
+    }
+    
+    .footerSocial {
+        margin-top: 6%;
+        position: static;
+        right: 0px;
+        font-size: 5vw;
+        
+    }
+    
+    .footerIcon {
+        color: white;
+        padding-right: 7%;
+        float: right;
+    }
+}
+
+/* Landscape */
+/* Declare the same value for min- and max-width to avoid colliding with desktops */
+/* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
+@media only screen 
+  and (min-device-width: 1366px) 
+  and (max-device-width: 1366px) 
+  and (orientation: landscape) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+}
+
+/* ----------- LAPTOPS ----------- */
+
+
+/* ----------- Non-Retina Screens ----------- */
+@media screen 
+  and (min-device-width: 1200px) 
+  and (max-device-width: 1600px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+    
+}
+
+@media screen 
+  and (min-device-width: 1600px) 
+  and (max-device-width: 2000px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+    
+}
+
+@media screen 
+  and (min-device-width: 2001px) 
+  and (max-device-width: 3000px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+    .navbar {
+      height: 15% !important;
+    }
+    .Navbar-logo {
+        height: 125px !important;
+    }  
+    
+}
+
+@media screen 
+  and (min-device-width: 2001px) 
+  and (max-device-width: 2100px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+    
+    
+}
+@media screen 
+  and (min-device-width: 2101px) 
+  and (max-device-width: 2200px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+   
+    
+}
+@media screen 
+  and (min-device-width: 2201px) 
+  and (max-device-width: 2300px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+   
+}
+@media screen 
+  and (min-device-width: 2301px) 
+  and (max-device-width: 2400px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+    
+}
+@media screen 
+  and (min-device-width: 2401px) 
+  and (max-device-width: 2500px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+    
+    
+}
+@media screen 
+  and (min-device-width: 2501px) 
+  and (max-device-width: 2600px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+
+}
+@media screen 
+  and (min-device-width: 2601px) 
+  and (max-device-width: 2700px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+
+    
+}
+@media screen 
+  and (min-device-width: 2701px) 
+  and (max-device-width: 2800px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+
+    
+}
+@media screen 
+  and (min-device-width: 2801px) 
+  and (max-device-width: 2900px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+ 
+    
+}
+@media screen 
+  and (min-device-width: 2901px) 
+  and (max-device-width: 3000px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+    
+}
+
+/* ----------- Retina Screens ----------- */
+@media screen 
+  and (min-device-width: 1200px) 
+  and (max-device-width: 1600px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (min-resolution: 192dpi) { 
+    
+}
+
+@media screen 
+  and (min-device-width: 1600px) 
+  and (max-device-width: 2000px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (min-resolution: 192dpi) { 
+    
+}
+@media screen 
+  and (min-device-width: 2001px) 
+  and (max-device-width: 3000px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (min-resolution: 192dpi) { 
+    
+}
+
+@media screen 
+  and (min-device-width: 2001px) 
+  and (max-device-width: 2100px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (min-resolution: 192dpi) { 
+    
+    
+}
+@media screen 
+  and (min-device-width: 2101px) 
+  and (max-device-width: 2200px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (min-resolution: 192dpi) { 
+   
+    
+}
+@media screen 
+  and (min-device-width: 2201px) 
+  and (max-device-width: 2300px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (min-resolution: 192dpi) { 
+   
+}
+@media screen 
+  and (min-device-width: 2301px) 
+  and (max-device-width: 2400px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (min-resolution: 192dpi) { 
+    
+}
+@media screen 
+  and (min-device-width: 2401px) 
+  and (max-device-width: 2500px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (min-resolution: 192dpi) { 
+    
+    
+}
+@media screen 
+  and (min-device-width: 2501px) 
+  and (max-device-width: 2600px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (min-resolution: 192dpi) { 
+
+}
+@media screen 
+  and (min-device-width: 2601px) 
+  and (max-device-width: 2700px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (min-resolution: 192dpi) {
+
+    
+}
+@media screen 
+  and (min-device-width: 2701px) 
+  and (max-device-width: 2800px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (min-resolution: 192dpi) { 
+
+    
+}
+@media screen 
+  and (min-device-width: 2801px) 
+  and (max-device-width: 2900px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (min-resolution: 192dpi) { 
+ 
+    
+}
+@media screen 
+  and (min-device-width: 2901px) 
+  and (max-device-width: 3000px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (min-resolution: 192dpi) { 
+    
+}

@@ -1,0 +1,591 @@
+@font-face {
+  font-family: 'gfitfont';
+  font-style: normal;
+  font-weight: bolder;
+  src: local('gfitfont'), url('./fonts/gfitfont.ttf'), url('./fonts/gfitfont.woff'), format('truetype');
+}
+@font-face {
+    font-family: 'gfitfont-bold';
+    font-style: normal;
+    font-weight: bolder;
+    src: local('gfitfontBold'), url('./fonts/gfitfontBold.ttf'), url('./fonts/gfitfontBold.woff') format('truetype');
+  }
+
+.pricingInfo {
+    height: 675px;
+    background-color: #4D5254;
+}
+
+.pricingInfoSection {
+    width: 95%;
+    margin: 0 auto;
+    margin-bottom: 10%;
+    padding: 5%;
+    background-color: transparent;
+}
+
+.pricingInfoHeaderLeft {
+    font-family: 'gfitfont-bold', Times, serif;
+    font-size: 2vw;
+    letter-spacing: 3px;
+    color: white;
+    font-weight: bolder; 
+}
+
+.pricingInfoHeaderRight {
+    font-family: 'gfitfont-bold', Times, serif;
+    font-size: 2vw;
+    letter-spacing: 3px;
+    color: #FAC04E;
+    font-weight: bolder; 
+}
+
+.pricingInfoBodyRow {
+    font-family: 'Arial';
+    font-size: 1.1vw;
+    line-height: 1.5;
+    color: white;
+    margin-top: 5%;
+    margin-bottom: 10%;
+}
+
+.pricingMembershipHeaderLeftMain {
+    font-family: 'gfitfont-bold', Times, serif;
+    font-size: 2vw;
+    letter-spacing: 3px;
+    color: white;
+    font-weight: bolder; 
+}
+
+.pricingMembershipHeaderLeft {
+    font-family: 'gfitfont-bold', Times, serif;
+    font-size: 1.5vw;
+    letter-spacing: 3px;
+    color: white;
+    font-weight: bolder; 
+}
+
+.pricingMembershipHeaderRight {
+    font-family: 'gfitfont-bold', Times, serif;
+    font-size: 1.5vw;
+    letter-spacing: 3px;
+    color: #FAC04E;
+    font-weight: bolder; 
+}
+
+.pricingMembershipLeftColumn {
+    border-right: 2px solid white;
+    margin-right: 5%;
+    padding-right: 5%;
+}
+
+.pricingMembershipBodyRow {
+    font-family: 'Arial';
+    font-size: 1.1vw;
+    color: white;
+}
+
+
+
+
+/* ----------- iPhones ----------- */
+
+/* ----------- iPhone 4 and 4S ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+}
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) {
+
+}
+
+/* ----------- iPhone 5, 5S, 5C and 5SE ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+}
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+    .pricingInfo {
+        height: 475px;
+        padding-top: 10%;
+    }
+    
+    .pricingInfoHeaderLeft {
+        font-size: 5vw;
+        letter-spacing: 3px;
+        color: white;
+        font-weight: bolder; 
+    }
+    
+    .pricingInfoHeaderRight {
+        font-size: 5vw;
+        letter-spacing: 3px;
+        color: #FAC04E;
+        font-weight: bolder; 
+    }
+    
+    .pricingInfoBodyRow {
+        font-size: 2.8vw;
+        line-height: 1.5;
+        color: white;
+        margin-top: 5%;
+        margin-bottom: 10%;
+    }
+    
+    .pricingMembershipHeaderLeftMain {
+        font-size: 4.5vw;
+        letter-spacing: 3px;
+        color: white;
+        font-weight: bolder; 
+    }
+    
+    .pricingMembershipHeaderLeft {
+        font-size: 3.3vw;
+        letter-spacing: 3px;
+        color: white;
+        font-weight: bolder; 
+    }
+    
+    .pricingMembershipHeaderRight {
+        font-size: 3.3vw;
+        letter-spacing: 3px;
+        color: #FAC04E;
+        font-weight: bolder; 
+    }
+    
+    .pricingMembershipLeftColumn {
+        border-right: none;
+        margin-right: 5%;
+        padding-right: 5%;
+    }
+    
+    .pricingMembershipBodyRow {
+        font-size: 2.8vw;
+        color: white;
+    }
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) {
+
+}
+
+/* ----------- iPhone 6, 6S, 7 and 8 ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2) { 
+
+}
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) { 
+    .pricingInfo {
+        height: 575px;
+
+    }
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) { 
+
+}
+
+
+/* ----------- iPhone X ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3) { 
+
+}
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: portrait) { 
+    .pricingInfo {
+        height: 575px;
+
+    }
+    
+    .pricingInfoHeaderLeft {
+        font-size: 5vw;
+        letter-spacing: 3px;
+        color: white;
+        font-weight: bolder; 
+    }
+    
+    .pricingInfoHeaderRight {
+        font-size: 5vw;
+        letter-spacing: 3px;
+        color: #FAC04E;
+        font-weight: bolder; 
+    }
+    
+    .pricingInfoBodyRow {
+        font-size: 2.8vw;
+        line-height: 1.5;
+        color: white;
+        margin-top: 5%;
+        margin-bottom: 10%;
+    }
+    
+    .pricingMembershipHeaderLeftMain {
+        font-size: 4.5vw;
+        letter-spacing: 3px;
+        color: white;
+        font-weight: bolder; 
+    }
+    
+    .pricingMembershipHeaderLeft {
+        font-size: 3.3vw;
+        letter-spacing: 3px;
+        color: white;
+        font-weight: bolder; 
+    }
+    
+    .pricingMembershipHeaderRight {
+        font-size: 3.3vw;
+        letter-spacing: 3px;
+        color: #FAC04E;
+        font-weight: bolder; 
+    }
+    
+    .pricingMembershipLeftColumn {
+        border-right: none;
+        margin-right: 5%;
+        padding-right: 5%;
+    }
+    
+    .pricingMembershipBodyRow {
+        font-size: 2.8vw;
+        color: white;
+    }
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: landscape) { 
+
+}
+
+/* ----------- iPhone 6+, 7+ and 8+ ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 3) { 
+
+}
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: portrait) { 
+    .pricingInfo {
+        height: 650px;
+    }
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: landscape) { 
+
+}
+
+
+
+
+
+/* ----------- iPads ----------- */
+
+/* ----------- iPad 1, 2, Mini and Air ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+
+}
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+    
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: landscape) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+
+}
+
+/* ----------- iPad 3, 4 and Pro 9.7" ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+}
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+    .pricingInfo {
+        height: 875px;
+
+    }
+    
+    .pricingInfoHeaderLeft {
+        font-size: 3.2vw;
+        letter-spacing: 1px;
+        color: white;
+        font-weight: bolder; 
+    }
+    
+    .pricingInfoHeaderRight {
+        font-size: 3.2vw;
+        letter-spacing: 1px;
+        color: #FAC04E;
+        font-weight: bolder; 
+    }
+    
+    .pricingInfoBodyRow {
+        font-size: 2vw;
+        line-height: 1.5;
+        color: white;
+        margin-top: 5%;
+        margin-bottom: 10%;
+    }
+    
+    .pricingMembershipHeaderLeftMain {
+        font-size: 3.2vw;
+        letter-spacing: 1px;
+        color: white;
+        font-weight: bolder; 
+    }
+    
+    .pricingMembershipHeaderLeft {
+        font-size: 2.2vw;
+        letter-spacing: 0px;
+        color: white;
+        font-weight: bolder; 
+    }
+    
+    .pricingMembershipHeaderRight {
+        font-size: 2.2vw;
+        letter-spacing: 0px;
+        color: #FAC04E;
+        font-weight: bolder; 
+    }
+    
+    .pricingMembershipLeftColumn {
+        border-right: none;
+        margin-right: 5%;
+        padding-right: 5%;
+    }
+    
+    .pricingMembershipBodyRow {
+        font-size: 2vw;
+        color: white;
+    }
+    
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: landscape) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+}
+
+/* ----------- iPad Pro 10.5" ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 834px) 
+  and (max-device-width: 1112px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+}
+
+/* Portrait */
+/* Declare the same value for min- and max-width to avoid colliding with desktops */
+/* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
+@media only screen 
+  and (min-device-width: 834px) 
+  and (max-device-width: 834px) 
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+}
+
+/* Landscape */
+/* Declare the same value for min- and max-width to avoid colliding with desktops */
+/* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
+@media only screen 
+  and (min-device-width: 1112px) 
+  and (max-device-width: 1112px) 
+  and (orientation: landscape) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+}
+
+/* ----------- iPad Pro 12.9" ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 1024px) 
+  and (max-device-width: 1366px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    
+}
+
+/* Portrait */
+/* Declare the same value for min- and max-width to avoid colliding with desktops */
+/* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
+@media only screen 
+  and (min-device-width: 1024px) 
+  and (max-device-width: 1024px) 
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+    .pricingInfo {
+        height: 1324px;
+
+    }
+    
+    .pricingInfoHeaderLeft {
+        font-size: 3.2vw;
+        letter-spacing: 1px;
+        color: white;
+        font-weight: bolder; 
+    }
+    
+    .pricingInfoHeaderRight {
+        font-size: 3.2vw;
+        letter-spacing: 1px;
+        color: #FAC04E;
+        font-weight: bolder; 
+    }
+    
+    .pricingInfoBodyRow {
+        font-size: 2vw;
+        line-height: 1.5;
+        color: white;
+        margin-top: 5%;
+        margin-bottom: 10%;
+    }
+    
+    .pricingMembershipHeaderLeftMain {
+        font-size: 3.2vw;
+        letter-spacing: 1px;
+        color: white;
+        font-weight: bolder; 
+    }
+    
+    .pricingMembershipHeaderLeft {
+        font-size: 2.2vw;
+        letter-spacing: 0px;
+        color: white;
+        font-weight: bolder; 
+    }
+    
+    .pricingMembershipHeaderRight {
+        font-size: 2.2vw;
+        letter-spacing: 0px;
+        color: #FAC04E;
+        font-weight: bolder; 
+    }
+    
+    .pricingMembershipLeftColumn {
+        border-right: none;
+        margin-right: 5%;
+        padding-right: 5%;
+    }
+    
+    .pricingMembershipBodyRow {
+        font-size: 2vw;
+        color: white;
+    }
+}
+
+/* Landscape */
+/* Declare the same value for min- and max-width to avoid colliding with desktops */
+/* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
+@media only screen 
+  and (min-device-width: 1366px) 
+  and (max-device-width: 1366px) 
+  and (orientation: landscape) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+}

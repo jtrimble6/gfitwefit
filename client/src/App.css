@@ -1,8 +1,24 @@
-@font-face {
+/* @font-face {
     font-family: gfitfont;
     src: url("./css/gfitfont.woff") format("woff"), url("./css/gfitfont.ttf")  format("truetype");
-}
-
+} */
+@font-face {
+    font-family: 'gfitfont';
+    src: url("css/fonts/gfitfont.eot");
+    src:
+    url("css/fonts/gfitfont.woff") format("woff"),
+    url("css/fonts/gfitfont.otf") format("opentype"),
+    url("css/fonts/gfitfont.svg#filename") format("svg");
+    }
+@font-face {
+    font-family: 'gfitfontBold';
+    src: url("css/fonts/gfitfontBold.eot");
+    src:
+    url("css/fonts/gfitfontBold.woff") format("woff"),
+    url("css/fonts/gfitfontBold.otf") format("opentype"),
+    url("css/fonts/gfitfontBold.svg#filename") format("svg");
+    }
+    
 .App {
     font-family: 'gfitfont';
     font-style: normal;
