@@ -92,11 +92,11 @@ class Navbar extends Component {
                             offset={-150}
                             duration= {500}
                           > SCHEDULE </Link>
-                          <NavLink 
+                          {/* <NavLink 
                             className='iconBar nav-link' 
                             onClick={this.toggleNavbar}
                             href="/pricing"
-                          > PRICING</NavLink>
+                          > PRICING</NavLink> */}
                           <NavLink 
                             className='iconBar nav-link' 
                             onClick={this.toggleNavbar}
@@ -107,11 +107,11 @@ class Navbar extends Component {
                             onClick={this.toggleNavbar}
                             href="/tryitout"
                           > TRY IT OUT</NavLink>
-                          <NavLink 
+                          {/* <NavLink 
                             className='iconBar nav-link' 
                             onClick={this.toggleNavbar}
                             href="/admin"
-                          > ADMIN</NavLink>
+                          > ADMIN</NavLink> */}
                           {/* <a onClick={ this.showSettings } className="menu-item--small" href="">Settings</a> */}
                         </Menu>
                         </i>
@@ -133,11 +133,11 @@ class Navbar extends Component {
                               duration= {500}
                             > SCHEDULE </Link>
                           </li>
-                          <li className="nav-item" >
+                          {/* <li className="nav-item" >
                             <a className="nav-link js-scroll-trigger" href='/pricing'>
                               PRICING
                             </a>
-                          </li>
+                          </li> */}
                           <li className="nav-item" >
                             <a className="nav-link js-scroll-trigger" href='/contact'>
                               CONTACT

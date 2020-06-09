@@ -18,7 +18,7 @@ import Logout from './pages/admin/Logout'
 import UserSignUpPage from './pages/user/UserSignUpPage'
 import UserLoginPage from './pages/user/UserLoginPage'
 import LandingPage from './pages/LandingPage'
-import PricingPage from './pages/PricingPage'
+// import PricingPage from './pages/PricingPage'
 import ContactPage from './pages/ContactPage'
 import TryItOutPage from './pages/TryItOutPage'
 
@@ -100,13 +100,13 @@ class Landing extends Component {
                 </div>
               }
             />
-            <Route exact path='/pricing'
+            {/* <Route exact path='/pricing'
               render={() =>
                 <div>
                   <PricingPage />
                 </div>
               }
-            />
+            /> */}
             <Route exact path='/contact'
               render={() =>
                 <div>
