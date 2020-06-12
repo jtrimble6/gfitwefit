@@ -183,23 +183,79 @@ class SignUpUser extends Component {
 
         // Start the HTTPS server
 
-        var request = require('request');
-        // var cors = "https://cors-anywhere.herokuapp.com/"
-        var options = {
-            proxy: process.env.REACT_APP_QUOTAGUARD_URL,
-            url: 'https://api.github.com/repos/joyent/node',
-            headers: {
-                'User-Agent': 'node.js'
-            }
-        };
+        var axios = require('axios'); 
 
-        function callback(error, response, body) {
-            if (!error && response.statusCode === 200) {
-                console.log(body);
-            }
+        let httpsProxyAgent = require('https-proxy-agent');
+        var proxy = process.env.REACT_APP_QUOTAGUARD_URL;
+        var cors = "https://cors-anywhere.herokuapp.com/"
+        console.log(proxy)
+        var agent = new httpsProxyAgent(proxy);
+
+        var config = {
+          url: cors + 'https://www.convergepay.com/hosted-payments/myip',
+          httpsAgent: agent
         }
 
-        request(options, callback);
+        axios.request(config).then((res) => console.log(res)).catch(err => console.log(err))
+
+        // var HttpsProxyAgent = require('https-proxy-agent');
+        // var request = require('request');
+        // var proxy = process.env.REACT_URL_QUOTAGUARD_URL;
+        // var agent = new HttpsProxyAgent(proxy);
+       
+        // request({
+        //   uri: "http://ip.jsontest.com/",
+        //   method: "GET",
+        //   host: "localhost:8000",
+        //   port: 3000,
+        //   headers: {
+        //     'content-type': 'application/x-www-form-urlencoded'
+        //   },
+        //   agent: agent,
+        //   timeout: 10000,
+        //   followRedirect: true,
+        //   maxRedirects: 10
+        // }, function(error, response, body) {
+        //   console.log("Error" + error);
+        //   console.log("Response: " + response);
+        //   console.log("Body: " + body);
+        // });
+
+        // var request = require('request');
+        // var options = {
+        //   proxy: process.env.REACT_URL_QUOTAGUARD_URL,
+        //   url: 'http://ip.jsontest.com/',
+        //   headers: {
+        //   'User-Agent': 'node.js'
+        //   }
+        // };
+
+        // function callback(error, response, body) {
+        //   if (!error && response.statusCode == 200) {
+        //   console.log(body);
+        //   }
+        // }
+
+        // request(options, callback);
+
+        // var request = require('request');
+        // // var cors = "https://cors-anywhere.herokuapp.com/"
+        // var options = {
+        //     proxy: process.env.REACT_APP_QUOTAGUARD_URL,
+        //     url: 'https://api.github.com/repos/joyent/node',
+        //     // url: cors + 'https://www.convergepay.com/hosted-payments/myip',
+        //     headers: {
+        //         'User-Agent': 'node.js'
+        //     }
+        // };
+
+        // function callback(error, response, body) {
+        //     if (!error && response.statusCode === 200) {
+        //         console.log(body);
+        //     }
+        // }
+
+        // request(options, callback);
 
         // var request = require('request');
         // var cors = "https://cors-anywhere.herokuapp.com/"
