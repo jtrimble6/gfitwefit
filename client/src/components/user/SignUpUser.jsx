@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Redirect } from 'react-router-dom'
+import axios from 'axios'
 import '../../css/signup.css'
 // import ExistingAccount from "../../alerts/ExistingAccount";
 // import PasswordError from '../../alerts/PasswordError';
@@ -10,6 +11,7 @@ import SignUpUserHealthInfo from './SignUpUserHealthInfo'
 import SignUpUserFitnessInfo from './SignUpUserFitnessInfo'
 import SignUpUserPayment from './SignUpUserPayment'
 import SignUpUserAcknowledgement from './SignUpUserAcknowledgment'
+
 
 // import UnderConstructionPage from '../UnderConstructionPage.jsx'
 import { NavLink } from 'reactstrap';
@@ -183,26 +185,22 @@ class SignUpUser extends Component {
 
         // Start the HTTPS server
 
-        var axios = require('axios'); 
-
-        let httpsProxyAgent = require('https-proxy-agent');
-        // var proxy = process.env.REACT_APP_QUOTAGUARD_URL;
-        var proxy = process.env.QUOTAGUARDSTATIC_URL;
-        var cors = "https://cors-anywhere.herokuapp.com/"
-        console.log(process.env.REACT_APP_QUOTAGUARD_URL)
-        console.log(process.env.QUOTAGUARDSTATIC_URL)
-        console.log(proxy)
-        var agent = new httpsProxyAgent(proxy);
-
-        var config = {
-          url: cors + 'https://www.convergepay.com/hosted-payments/myip',
-          httpsAgent: agent
-        }
-
-        console.log(config.url)
-        console.log(agent)
-        axios.request(config).then((res) => console.log(res)).catch(err => console.log(err))
-
+        axios({
+          method: "GET", 
+          // url:"http://gfitwefit.com/send",
+          url:"http://localhost:3000/payment", 
+          data: {
+              
+          }
+        }).then((response)=> {
+            if (response.data.msg === 'success'){
+                console.log("Payment Sent."); 
+                
+            } else if(response.data.msg === 'fail'){
+              console.log("Payment failed to send.")
+            }
+        })
+        
         // var HttpsProxyAgent = require('https-proxy-agent');
         // var request = require('request');
         // var proxy = process.env.REACT_URL_QUOTAGUARD_URL;
