@@ -187,8 +187,8 @@ class SignUpUser extends Component {
 
         axios({
           method: "GET", 
-          // url:"http://gfitwefit.com/send",
-          url:"http://localhost:3000/payment", 
+          url:"http://gfitwefit.com/payment",
+          // url:"http://localhost:3000/payment", 
           data: {
               
           }
