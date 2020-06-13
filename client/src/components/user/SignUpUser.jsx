@@ -186,7 +186,8 @@ class SignUpUser extends Component {
         var axios = require('axios'); 
 
         let httpsProxyAgent = require('https-proxy-agent');
-        var proxy = process.env.REACT_APP_QUOTAGUARD_URL;
+        // var proxy = process.env.REACT_APP_QUOTAGUARD_URL;
+        var proxy = process.env.QUOTAGUARD_URL;
         var cors = "https://cors-anywhere.herokuapp.com/"
         console.log(proxy)
         var agent = new httpsProxyAgent(proxy);
@@ -196,6 +197,8 @@ class SignUpUser extends Component {
           httpsAgent: agent
         }
 
+        console.log(config.url)
+        console.log(agent)
         axios.request(config).then((res) => console.log(res)).catch(err => console.log(err))
 
         // var HttpsProxyAgent = require('https-proxy-agent');
