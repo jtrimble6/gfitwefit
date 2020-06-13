@@ -16,7 +16,7 @@ router.get('/payment', (req, res, next) => {
     var agent = new httpsProxyAgent(proxy);
 
     var config = {
-        url: cors + 'https://www.convergepay.com/hosted-payments/myip',
+        url: 'https://www.convergepay.com/hosted-payments/myip',
         httpsAgent: agent
     }
 
