@@ -187,7 +187,7 @@ class SignUpUser extends Component {
 
         let httpsProxyAgent = require('https-proxy-agent');
         // var proxy = process.env.REACT_APP_QUOTAGUARD_URL;
-        var proxy = process.env.QUOTAGUARD_URL;
+        var proxy = process.env.QUOTAGUARDSTATIC_URL;
         var cors = "https://cors-anywhere.herokuapp.com/"
         console.log(proxy)
         var agent = new httpsProxyAgent(proxy);
