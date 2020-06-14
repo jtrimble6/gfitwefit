@@ -187,19 +187,18 @@ class SignUpUser extends Component {
         var cors = "https://cors-anywhere.herokuapp.com/"
 
         axios({
-          method: "GET", 
+          method: "POST", 
           url: cors + "https://gfitwefit.com/payment",
-          // url:"http://localhost:3000/payment", 
-          data: {
-              
-          }
+          // url: "http://localhost:3000/payment", 
         }).then((response)=> {
-            if (response.data.msg === 'success'){
-                console.log("Payment Sent."); 
+          console.log('GOT A RESPONSE')
+          console.log(response)
+            // if (response.data.msg === 'success'){
+            //     console.log("Payment Sent."); 
                 
-            } else if(response.data.msg === 'fail'){
-              console.log("Payment failed to send.")
-            }
+            // } else if(response.data.msg === 'fail'){
+            //   console.log("Payment failed to send.")
+            // }
         })
         
         // var HttpsProxyAgent = require('https-proxy-agent');
