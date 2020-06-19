@@ -14,6 +14,9 @@ const passport = require('./server/passport');
 const app = express();
 const path = require("path");
 const PORT = process.env.PORT || 3001;
+const axios = require('axios'); 
+let httpsProxyAgent = require('https-proxy-agent');
+require('dotenv').config();
 
 // Define middleware here
 app.use(morgan('dev'))
@@ -94,6 +97,41 @@ app.use(function(req, res, next) { //allow cross origin requests
 // Connect to the Mongo DB
 mongoose.connect(process.env.MONGODB_URI || config.db);
 
+app.get('/converge_token_req', (request, response) => {
+  var proxy = process.env.REACT_APP_QUOTAGUARD_URL;
+  var agent = new httpsProxyAgent(proxy);
+  let url = 'https://api.demo.convergepay.com/hosted-payments/transaction_token'
+  var config = {
+    url: url,
+    httpsAgent: agent,
+    params: {
+      ssl_merchant_id: process.env.SSL_MERCHANT_ID,
+      ssl_user_id: process.env.SSL_USER_ID,
+      ssl_pin: process.env.SSL_PIN,
+      ssl_transaction_type: 'ccsale',
+      ssl_amount: '1.00'
+    }
+  }
+
+  axios({
+    method: 'post',
+    url: url,
+    httpsAgent: agent,
+    params: {
+      ssl_merchant_id: process.env.SSL_MERCHANT_ID,
+      ssl_user_id: process.env.SSL_USER_ID,
+      ssl_pin: process.env.SSL_PIN,
+      ssl_transaction_type: 'ccsale',
+      ssl_amount: '1.00'
+    }
+    }).then((res) => {
+        response.send(res.data)
+    }).catch((error) => {
+        console.log('there was an error getting transaction token: ', error)
+    })
+
+})
+
 app.get('/express_backend', (req, res) => {
   res.send({ express: 'YOUR EXPRESS BACKEND IS CONNECTED TO REACT' });
 });
@@ -106,36 +144,3 @@ app.get("*", (req, res) => {
 app.listen(PORT, function() {
   console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`);
 });
-
-
-// const express = require('express');
-// const path = require('path');
-// const bodyParser = require('body-parser');
-// const logger = require('morgan');
-// const config = require('./config');
-// const mongoose = require('mongoose');
-// const app = express();
-// // connect to mongoose
-// mongoose.connect(config.db);
-// /** Seting up server to accept cross-origin browser requests */
-// app.use(function(req, res, next) { //allow cross origin requests
-//   res.setHeader("Access-Control-Allow-Methods", "POST, PUT, OPTIONS, DELETE, GET");
-//   res.header("Access-Control-Allow-Origin", "http://localhost:3000");
-//   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-//   res.header("Access-Control-Allow-Credentials", true);
-//   next();
-// });
-// // Serve static files from the React app
-// app.use(express.static(path.join(__dirname, 'client/build')));
-// app.use(bodyParser.json());
-// app.use(logger('dev'));
-// // Put all API endpoints under '/api'
-// app.use('/api', require('./routes2/file'));
-// // The "catchall" handler: for any request that doesn't
-// // match one above, send back React's index.html file.
-// app.get('*', (req, res) => {
-//   res.sendFile(path.join(__dirname+'/client/build/index.html'));
-// });
-// const port = process.env.PORT || 3001;
-// app.listen(port);
-// console.log(`GridFS tutorial listening on ${port}`);

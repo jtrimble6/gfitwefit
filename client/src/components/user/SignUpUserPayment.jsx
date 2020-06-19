@@ -40,8 +40,8 @@ class SignUpUserHealth extends Component {
                     />
                 </Form.Group>
               </Form.Row>
-              <Button onClick={this.props.handleConvergePay} variant="warning" type="submit" className="payWithConverge">
-                Pay with Converge AutoPay
+              <Button onClick={this.props.handleConvergePay} className='payWithConverge'>
+                Pay With Converge
               </Button>
             </div>
         

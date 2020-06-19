@@ -36,6 +36,39 @@
     -->
     <title>Gouveia Fitness LLC</title>
   </head>
+  <script src="https://demo.convergepay.com/hosted-payments/PayWithConverge.js"></script>
+  <script>
+    function openLightbox (event) {
+    event.preventDefault()
+    console.log('OPENING LIGHTBOX NOW!!!!')
+    // debugger;
+    var paymentFields = {
+        ssl_txn_auth_token: document.getElementById("token").value
+    };
+    var callback = {
+      onError: function (error) {
+        showResult("error", error);
+      },
+      onCancelled: function () {
+        showResult("cancelled", "");
+      },
+      onDeclined: function (response) {
+        showResult("declined", JSON.stringify(response, null, '\t'));
+      },
+      onApproval: function (response) {
+        showResult("approval", JSON.stringify(response, null, '\t'));
+      }
+    };
+    console.log('PAYMENT FIELDS: ', paymentFields)
+    PayWithConverge.open(paymentFields, callback);
+    return false;
+    }
+
+    function showResult (status, msg) {
+      document.getElementById('txn_status').innerHTML = "<b>" + status + "</b>";
+      document.getElementById('txn_response').innerHTML = msg;
+    }
+  </script>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>

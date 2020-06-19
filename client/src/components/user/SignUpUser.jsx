@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+// import { Helmet } from "react-helmet";
 import { Redirect } from 'react-router-dom'
 import axios from 'axios'
 import '../../css/signup.css'
@@ -10,8 +11,8 @@ import SignUpUserBasicInfo from './SignUpUserBasicInfo'
 import SignUpUserHealthInfo from './SignUpUserHealthInfo'
 import SignUpUserFitnessInfo from './SignUpUserFitnessInfo'
 import SignUpUserPayment from './SignUpUserPayment'
+import SignUpUserConvergeLightbox from './SignUpUserConvergeLightbox'
 import SignUpUserAcknowledgement from './SignUpUserAcknowledgment'
-
 
 // import UnderConstructionPage from '../UnderConstructionPage.jsx'
 import { NavLink } from 'reactstrap';
@@ -67,6 +68,7 @@ class SignUpUser extends Component {
         cardiovascularRisk: false,
         paymentComplete: false,
         formChecked: false,
+        sessionID: '',
         redirect: false,
       }
         this.setRedirect = this.setRedirect.bind(this)
@@ -78,12 +80,20 @@ class SignUpUser extends Component {
         this.handlePrevStep = this.handlePrevStep.bind(this)
         this.handleStepTitleChange = this.handleStepTitleChange.bind(this)
         this.handleConvergePay = this.handleConvergePay.bind(this)
+        this.handleLightboxInit = this.handleLightboxInit.bind(this)
+        this.showResult = this.showResult.bind(this)
         this.scrollTop = this.scrollTop.bind(this)
         this.handleSignIn = this.handleSignIn.bind(this)
     }
 
     componentDidMount() {
         console.log('User Sign Up Ready')
+        const script = document.createElement("script");
+
+        script.src = "https://demo.convergepay.com/hosted-payments/PayWithConverge.js";
+        script.async = true;
+
+        document.body.appendChild(script);
       }
 
     scrollTop() {
@@ -125,9 +135,13 @@ class SignUpUser extends Component {
 
     handleStepTitleChange = () => {
       let currentStep = this.state.currentStep
-      if (currentStep === 6) { 
+      if (currentStep === 7) { 
         this.setState({
           currentStepTitle: 'Complete'
+        })
+      } else if (currentStep === 6) { 
+        this.setState({
+          currentStepTitle: 'Converge Payment'
         })
       } else if (currentStep === 5) {
         this.setState({
@@ -154,7 +168,7 @@ class SignUpUser extends Component {
         this.scrollTop()
         let currentStep = this.state.currentStep
         // If the current step is 1 or 2, then add one on "next" button click
-        currentStep = currentStep >= 5? 6: currentStep + 1
+        currentStep = currentStep >= 6? 7: currentStep + 1
         this.setState({
           currentStep: currentStep
         }, () => {
@@ -180,107 +194,46 @@ class SignUpUser extends Component {
 
     handleConvergePay = (event) => {
         event.preventDefault();
-        
         console.log('Handling converge payment')
 
         // Start the HTTPS server
-        var cors = "https://cors-anywhere.herokuapp.com/"
+        // var cors = "https://cors-anywhere.herokuapp.com/"
 
         axios({
-          method: "POST", 
-          url: cors + "https://gfitwefit.com/payment",
-          // url: "http://localhost:3000/payment", 
-        }).then((response)=> {
-          console.log('GOT A RESPONSE')
-          console.log(response)
-            // if (response.data.msg === 'success'){
-            //     console.log("Payment Sent."); 
-                
-            // } else if(response.data.msg === 'fail'){
-            //   console.log("Payment failed to send.")
-            // }
-        })
-        
-        // var HttpsProxyAgent = require('https-proxy-agent');
-        // var request = require('request');
-        // var proxy = process.env.REACT_URL_QUOTAGUARD_URL;
-        // var agent = new HttpsProxyAgent(proxy);
-       
-        // request({
-        //   uri: "http://ip.jsontest.com/",
-        //   method: "GET",
-        //   host: "localhost:8000",
-        //   port: 3000,
-        //   headers: {
-        //     'content-type': 'application/x-www-form-urlencoded'
-        //   },
-        //   agent: agent,
-        //   timeout: 10000,
-        //   followRedirect: true,
-        //   maxRedirects: 10
-        // }, function(error, response, body) {
-        //   console.log("Error" + error);
-        //   console.log("Response: " + response);
-        //   console.log("Body: " + body);
-        // });
-
-        // var request = require('request');
-        // var options = {
-        //   proxy: process.env.REACT_URL_QUOTAGUARD_URL,
-        //   url: 'http://ip.jsontest.com/',
-        //   headers: {
-        //   'User-Agent': 'node.js'
-        //   }
-        // };
-
-        // function callback(error, response, body) {
-        //   if (!error && response.statusCode == 200) {
-        //   console.log(body);
-        //   }
-        // }
-
-        // request(options, callback);
-
-        // var request = require('request');
-        // // var cors = "https://cors-anywhere.herokuapp.com/"
-        // var options = {
-        //     proxy: process.env.REACT_APP_QUOTAGUARD_URL,
-        //     url: 'https://api.github.com/repos/joyent/node',
-        //     // url: cors + 'https://www.convergepay.com/hosted-payments/myip',
-        //     headers: {
-        //         'User-Agent': 'node.js'
-        //     }
-        // };
-
-        // function callback(error, response, body) {
-        //     if (!error && response.statusCode === 200) {
-        //         console.log(body);
-        //     }
-        // }
-
-        // request(options, callback);
-
-        // var request = require('request');
-        // var cors = "https://cors-anywhere.herokuapp.com/"
-        // var options = {
-        //     proxy: process.env.REACT_APP_QUOTAGUARD_URL,
-        //     url: cors + 'https://www.convergepay.com/hosted-payments/myip',
-        //     // mode: 'no-cors',
-        //     headers: {
-        //         'User-Agent': 'node.js',
-        //     }
-        // };
-
-        // function callback(error, response, body) {
-        //     if (!error && response.statusCode === 200) {
-        //         // console.log(response)
-        //         console.log(body);
-        //     }
-        // }
-
-        // request(options, callback);
+          method: "GET", 
+          url: "https://gfitwefit.com/converge_token_req",
+          // url: "http://localhost:3000/converge_token_req", 
+          }).then((response)=> {
+            console.log('GOT A RESPONSE')
+            let ssl_txn_auth_token = response.data
+            console.log(ssl_txn_auth_token)
+            this.setState({
+              sessionID: ssl_txn_auth_token
+            })
+            this.handleLightboxInit(ssl_txn_auth_token)
+              // if (response.data.msg === 'success'){
+              //     console.log("Payment Sent."); 
+                  
+              // } else if(response.data.msg === 'fail'){
+              //   console.log("Payment failed to send.")
+              // }
+          })
         
 
+    }
+
+    handleLightboxInit = (authToken) => {
+      console.log('Handling lightbox init -- Auth Token: ', authToken)
+      this.setState({
+        currentStep: 6
+      }, () => {
+        this.handleStepTitleChange()
+      })
+    }
+
+    showResult = (status, msg) => {
+      document.getElementById('txn_status').innerHTML = "<b>" + status + "</b>";
+			document.getElementById('txn_response').innerHTML = msg;
     }
 
     checkWaiver = () => {
@@ -495,11 +448,19 @@ class SignUpUser extends Component {
                     formChecked={this.state.formChecked}
                     checkWaiver={this.checkWaiver}
                     handleConvergePay={this.handleConvergePay}
+                    sessionID={this.state.sessionID}
+                  />
+
+                  <SignUpUserConvergeLightbox 
+                    currentStep={this.state.currentStep}
+                    handleChange={this.handleChange}
+                    sessionID={this.state.sessionID}
                   />
                   
                   <SignUpUserAcknowledgement 
                     currentStep={this.state.currentStep}
                   />
+
 
                   <Form.Row className="formNav">
                     { 
@@ -525,7 +486,21 @@ class SignUpUser extends Component {
 
                       :
 
-                      (this.state.currentStep === 6) ?
+                      (this.state.currentStep < 7) ?
+                    
+                      <span className='stepButtonSpan'>
+                        <Button onClick={this.handlePrevStep} variant="warning" className="prevStep">
+                            Prev
+                        </Button> 
+
+                        <Button onClick={this.handleNextStep} variant="primary" className="nextStep" disabled={true}>
+                            Next
+                        </Button>
+                      </span>
+
+                      :
+
+                      (this.state.currentStep === 7) ?
 
                       <NavLink className='signInButton' href="/login">
                        Sign In

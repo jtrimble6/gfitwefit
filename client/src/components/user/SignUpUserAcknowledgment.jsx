@@ -11,7 +11,7 @@ class SignUpUserAcknowledgement extends Component {
 
     render() {
         // Verify this is current step
-        if (this.props.currentStep !== 6) {
+        if (this.props.currentStep !== 7) {
             return null
         }
 
