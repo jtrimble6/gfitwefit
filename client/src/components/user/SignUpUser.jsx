@@ -197,11 +197,11 @@ class SignUpUser extends Component {
         console.log('Handling converge payment')
 
         // Start the HTTPS server
-        // var cors = "https://cors-anywhere.herokuapp.com/"
+        var cors = "https://cors-anywhere.herokuapp.com/"
 
         axios({
           method: "GET", 
-          url: "https://gfitwefit.com/converge_token_req",
+          url: cors + "https://gfitwefit.com/converge_token_req",
           // url: "http://localhost:3000/converge_token_req", 
           }).then((response)=> {
             console.log('GOT A RESPONSE: ', response)
