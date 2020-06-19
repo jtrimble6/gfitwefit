@@ -201,7 +201,7 @@ class SignUpUser extends Component {
 
         axios({
           method: "GET", 
-          url: "https://gfitwefit.com/signup/converge_token_req",
+          url: "https://gfitwefit.com/converge_token_req",
           // url: "http://localhost:3000/converge_token_req", 
           }).then((response)=> {
             console.log('GOT A RESPONSE: ', response)
