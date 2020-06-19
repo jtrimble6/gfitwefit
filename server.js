@@ -98,7 +98,8 @@ app.use(function(req, res, next) { //allow cross origin requests
 mongoose.connect(process.env.MONGODB_URI || config.db);
 
 app.get('/converge_token_req', (request, response) => {
-  var proxy = process.env.REACT_APP_QUOTAGUARD_URL;
+  var proxy = process.env.QUOTAGUARDSTATIC_URL;
+  // var proxy = process.env.REACT_APP_QUOTAGUARD_URL;
   var agent = new httpsProxyAgent(proxy);
   let url = 'https://api.demo.convergepay.com/hosted-payments/transaction_token'
   var config = {
@@ -112,6 +113,7 @@ app.get('/converge_token_req', (request, response) => {
       ssl_amount: '1.00'
     }
   }
+  console.log('CONFIG: ', proxy, config.params)
 
   axios({
     method: 'post',
