@@ -204,7 +204,7 @@ class SignUpUser extends Component {
           url: cors + "https://gfitwefit.com/converge_token_req",
           // url: "http://localhost:3000/converge_token_req", 
           }).then((response)=> {
-            console.log('GOT A RESPONSE')
+            console.log('GOT A RESPONSE: ', response)
             let ssl_txn_auth_token = response.data
             console.log(ssl_txn_auth_token)
             this.setState({
