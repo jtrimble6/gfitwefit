@@ -19,7 +19,7 @@ class SignUpUserHealthInfo extends Component {
         }
 
         return (
-            <div className='userSignUpFormRow'>
+            <div className='userSignUpFormRow healthInfoStep'>
               <Form.Row>
                 <Form.Group as={Col} controlId="formGridMedicalConditions">
                     <Form.Label>Medical conditions or previous surgery history that would limit you from exercise?</Form.Label>

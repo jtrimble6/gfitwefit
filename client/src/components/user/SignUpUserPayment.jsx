@@ -25,7 +25,7 @@ class SignUpUserHealth extends Component {
         }
 
         return (
-            <div className='formWaiverDiv'>
+            <div className='formWaiverDiv waiverInfoStep'>
               <Form.Row className='formWaiverRow'>
                 <Form.Group as={Col} id="formGridCheckbox">
                     <p>

@@ -11,28 +11,42 @@
     src: local('gfitfontBold'), url('./fonts/gfitfontBold.ttf'), url('./fonts/gfitfontBold.woff') format('truetype');
   }
 
-#loginPage {
-    width: 80%;
-    margin: 0 auto;
-    margin-top: 10%;
-    /* margin-bottom: 80%; */
-    padding: 5%;
-    text-align: center;
-    background-color: white;
-    font-family: 'gfitfontbold';
-    margin-bottom: calc(100vh - 510px);
-}
-
 #adminPage {
     margin: 0 auto;
-    margin-top: 10%;
+    /* margin-top: 10%; */
     margin-bottom: 20%;
     color: white;
     text-align: center;
 }
 
+
+#loginPage {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 30%;
+    margin-bottom: calc(100vh - 510px);
+    padding: 5%;
+    text-align: center;
+    background-color: white;
+    
+}
+
+#signUpPage {
+    width: 100%;
+    margin: 0 auto;
+    /* margin-bottom: 80%; */
+    /* padding: 5%; */
+    text-align: center;
+    background-color: transparent;
+    margin-bottom: calc(100vh - 510px);
+}
+
+.signupWrap {
+    margin-top: 7%;
+}
+
 #adminPage hr {
-    border: solid 2px white;
+    border-bottom: 2px solid #FAC04E !important;
     width: 80%;
     margin-top: 5% !important;
     margin-bottom: 5% !important;
@@ -42,29 +56,73 @@
     color: #FAC04E
 }
 
+.makeStyles-root-1 {
+    position: relative;
+    top: 0;
+    height: 100px;
+    margin-top: 8vh !important;
+    background-color: black !important;
+}
+
+.MuiAppBar-root {
+    margin-top: 8vh !important;
+    background-color: black !important;
+}
+
+.Mui-selected {
+    color: #FAC04E !important;
+    text-decoration: none !important;
+}
+
+.MuiTab-root {
+    color: white !important;
+}
+
+.PrivateTabIndicator-colorSecondary-4 {
+    background-color: #FAC04E !important;
+
+}
+
 .formRow {
     width: 50%;
     margin-top: 5%;
     margin: 0 auto;
 }
 
-.formRow .formContainer {
-    width: 100%;
+.formContainer {
+    width: 80% !important;
+    margin: 0 auto;
 }
 
 .scheduleRow {
+    width: 100% !important;
+    margin: 0 auto !important;
+}
+
+.scheduleFormSelectors {
+    margin-top: 7% !important;
+}
+
+.scheduleFormContainer {
+    width: 80%;
     margin: 0 auto;
-    width: 100%;
+}
+
+.scheduleFormRow {
+    border-bottom: 2px solid #FAC04E !important;
+    padding-bottom: 8%;
+    margin-bottom: 8%;
 }
 
 .scheduleTable {
-    width: 80%;
+    width: 100% !important;
     text-align: center;
     color: #FAC04E;
     border-color: #FAC04E;
-    margin: 0 auto;
+    margin: 0 auto !important;
     border-bottom: 2px solid #FAC04E !important;
     padding-bottom: 10%;
+    align-content: center !important;
 }
 
 .scheduleTable .rt-td {
@@ -87,11 +145,662 @@
     color: #FAC04E
 }
 
-@media (max-width: 900px) {
+/* ----------- VIDEO UPLOADER ----------- */
+.videoUploadInput {
+    background-color: white;
+    width: 100% !important;
+}
+
+.videoUploadForm {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.videoUploadFormSelectors {
+    margin-top: 7%;
+}
+
+.fileSelectionLabel {
+    margin-top: 5%;
+}
+
+.fitnessLevelLabel, .workoutCategoryLabel {
+    margin-top: 5%;
+}
+
+.adminSubmitButton {
+    width: 60%;
+    margin-top: 10%;
+    background-color: white;
+    border: none;
+    color: black;
+    padding: 2%;
+    border-radius: 5%;
+}
+
+.videoUploadFormContainer {
+    width: 100%;
+}
+
+/* ----------- iPhones ----------- */
+
+/* ----------- iPhone 4 and 4S ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+}
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) {
+
+}
+
+/* ----------- iPhone 5, 5S, 5C and 5SE ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+}
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+    .makeStyles-root-1 {
+        margin-top: 12vh !important; 
+    }
+    .MuiBox-root {
+        padding-left: 1% !important;
+        padding-right: 1% !important;
+    }
+    #signUpPage {
+        width: 100%;
+        margin: 0 auto;
+        /* margin-bottom: 80%; */
+        /* padding: 5%; */
+        text-align: center;
+        background-color: transparent;
+        margin-bottom: calc(100vh - 510px);
+    }
+
+    .signupWrap {
+        margin-top: 7%;
+    }
+    
     #adminPage {
-        margin-top: 30%;
+        /* margin-top: 20%; */
+        margin-bottom: 40%;
     }
-    #loginPage {
-        margin-top: 30%;
+    .scheduleFormContainer {
+        width: 80%;
+        margin: 0 auto;
     }
+    
+    .scheduleTable {
+        width: 100% !important;
+        margin: 0 auto !important;
+        margin-left: 0 !important;
+        margin-right: 0;
+        border-bottom: 2px solid #FAC04E !important;
+        padding-bottom: 50px;
+    }
+
+    .scheduleTable .rt-table {
+        min-width: 100% !important;
+    }
+
+    .scheduleTable .rt-thead {
+        min-width: 100% !important;
+    }
+
+    .scheduleTable .rt-tbody {
+        min-width: 100% !important;
+    }
+    
+    .scheduleTable .rt-td {
+        white-space: pre-wrap !important;
+        color: white;
+        font-size: 3vw;
+        width: 50%;
+    }
+    
+    .scheduleHeaders {
+        font-size: 5vw;
+        color: #FAC04E
+    }
+    .scheduleFormSelectors {
+        margin-top: 7%;
+    }
+
+    
+    
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) {
+
+}
+
+/* ----------- iPhone 6, 6S, 7 and 8 ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2) { 
+
+}
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) { 
+    
+
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) { 
+
+}
+
+
+
+/* ----------- iPhone X ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3) { 
+
+}
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: portrait) { 
+    #adminPage {
+        /* margin-top: 25%; */
+        height: 500px;
+    }
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: landscape) { 
+
+}
+
+/* ----------- iPhone 6+, 7+ and 8+ ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 3) { 
+
+}
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: portrait) { 
+    #adminPage {
+        /* margin-top: 20%; */
+    }
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: landscape) { 
+
+}
+
+
+
+
+/* ----------- iPads ----------- */
+
+/* ----------- iPad 1, 2, Mini and Air ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+
+}
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+    
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: landscape) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+
+}
+
+/* ----------- iPad 3, 4 and Pro 9.7" ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+}
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+    #adminPage {
+        
+    }
+    .makeStyles-root-1 {
+        position: relative;
+        top: 0;
+        height: 100px;
+    }
+    .MuiBox-root {
+        padding-left: 1% !important;
+        padding-right: 1% !important;
+    }
+    #signUpPage {
+        width: 80%;
+        margin: 0 auto;
+        /* margin-bottom: 80%; */
+        /* padding: 5%; */
+        text-align: center;
+        background-color: transparent;
+        margin-bottom: calc(100vh - 510px);
+    }
+
+    .signupWrap {
+        margin-top: 7%;
+    }
+    
+    #adminPage {
+        /* margin-top: 20%; */
+        position: relative;
+        top: 0;
+        margin-bottom: 40%;
+    }
+    .scheduleFormContainer {
+        width: 80%;
+        margin: 0 auto;
+    }
+    
+    .scheduleTable {
+        width: 100% !important;
+        margin: 0 auto !important;
+        margin-left: 0 !important;
+        margin-right: 0;
+        border-bottom: 2px solid #FAC04E !important;
+        padding-bottom: 50px;
+    }
+
+    .scheduleTable .rt-table {
+        min-width: 100% !important;
+    }
+
+    .scheduleTable .rt-thead {
+        min-width: 100% !important;
+    }
+
+    .scheduleTable .rt-tbody {
+        min-width: 100% !important;
+    }
+    
+    .scheduleTable .rt-td {
+        white-space: pre-wrap !important;
+        color: white;
+        font-size: 3vw;
+        width: 50%;
+    }
+    
+    .scheduleHeaders {
+        font-size: 5vw;
+        color: #FAC04E
+    }
+    .scheduleFormSelectors {
+        margin-top: 7% !important;
+    }
+    
+    
+    
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: landscape) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+}
+
+/* ----------- iPad Pro 10.5" ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 834px) 
+  and (max-device-width: 1112px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+}
+
+/* Portrait */
+/* Declare the same value for min- and max-width to avoid colliding with desktops */
+/* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
+@media only screen 
+  and (min-device-width: 834px) 
+  and (max-device-width: 834px) 
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+}
+
+/* Landscape */
+/* Declare the same value for min- and max-width to avoid colliding with desktops */
+/* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
+@media only screen 
+  and (min-device-width: 1112px) 
+  and (max-device-width: 1112px) 
+  and (orientation: landscape) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+}
+
+/* ----------- iPad Pro 12.9" ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 1024px) 
+  and (max-device-width: 1366px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    
+}
+
+/* Portrait */
+/* Declare the same value for min- and max-width to avoid colliding with desktops */
+/* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
+@media only screen 
+  and (min-device-width: 1024px) 
+  and (max-device-width: 1024px) 
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+    
+}
+
+/* Landscape */
+/* Declare the same value for min- and max-width to avoid colliding with desktops */
+/* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
+@media only screen 
+  and (min-device-width: 1366px) 
+  and (max-device-width: 1366px) 
+  and (orientation: landscape) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+}
+
+/* ----------- LAPTOPS ----------- */
+
+
+/* ----------- Non-Retina Screens ----------- */
+@media screen 
+  and (min-device-width: 850px) 
+  and (max-device-width: 1600px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+    .makeStyles-root-1 {
+        margin-top: 12vh !important; 
+    }
+}
+
+@media screen 
+  and (min-device-width: 1600px) 
+  and (max-device-width: 2000px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+    .makeStyles-root-1 {
+        margin-top: 10vh !important; 
+    }
+}
+
+@media screen 
+  and (min-device-width: 2001px) 
+  and (max-device-width: 3000px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+    .makeStyles-root-1 {
+        margin-top: 15vh !important;
+       
+    }
+    
+}
+
+@media screen 
+  and (min-device-width: 2001px) 
+  and (max-device-width: 2100px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+    
+    
+}
+@media screen 
+  and (min-device-width: 2101px) 
+  and (max-device-width: 2200px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+   
+    
+}
+@media screen 
+  and (min-device-width: 2201px) 
+  and (max-device-width: 2300px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+   
+}
+@media screen 
+  and (min-device-width: 2301px) 
+  and (max-device-width: 2400px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+    
+}
+@media screen 
+  and (min-device-width: 2401px) 
+  and (max-device-width: 2500px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+    
+    
+}
+@media screen 
+  and (min-device-width: 2501px) 
+  and (max-device-width: 2600px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+
+}
+@media screen 
+  and (min-device-width: 2601px) 
+  and (max-device-width: 2700px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+
+    
+}
+@media screen 
+  and (min-device-width: 2701px) 
+  and (max-device-width: 2800px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+
+    
+}
+@media screen 
+  and (min-device-width: 2801px) 
+  and (max-device-width: 2900px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+ 
+    
+}
+@media screen 
+  and (min-device-width: 2901px) 
+  and (max-device-width: 3000px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+    
+}
+
+/* ----------- Retina Screens ----------- */
+@media screen 
+  and (min-device-width: 850px) 
+  and (max-device-width: 1600px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (min-resolution: 192dpi) { 
+    .makeStyles-root-1 {
+        margin-top: 12vh !important; 
+    }
+}
+
+@media screen 
+  and (min-device-width: 1600px) 
+  and (max-device-width: 2000px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (min-resolution: 192dpi) { 
+    .makeStyles-root-1 {
+        margin-top: 10vh !important; 
+    }
+}
+@media screen 
+  and (min-device-width: 2001px) 
+  and (max-device-width: 3000px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (min-resolution: 192dpi) { 
+    .makeStyles-root-1 {
+        margin-top: 15vh !important;
+       
+    }
+}
+
+@media screen 
+  and (min-device-width: 2001px) 
+  and (max-device-width: 2100px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (min-resolution: 192dpi) { 
+    
+    
+}
+@media screen 
+  and (min-device-width: 2101px) 
+  and (max-device-width: 2200px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (min-resolution: 192dpi) { 
+   
+    
+}
+@media screen 
+  and (min-device-width: 2201px) 
+  and (max-device-width: 2300px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (min-resolution: 192dpi) { 
+   
+}
+@media screen 
+  and (min-device-width: 2301px) 
+  and (max-device-width: 2400px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (min-resolution: 192dpi) { 
+    
+}
+@media screen 
+  and (min-device-width: 2401px) 
+  and (max-device-width: 2500px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (min-resolution: 192dpi) { 
+    
+    
+}
+@media screen 
+  and (min-device-width: 2501px) 
+  and (max-device-width: 2600px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (min-resolution: 192dpi) { 
+
+}
+@media screen 
+  and (min-device-width: 2601px) 
+  and (max-device-width: 2700px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (min-resolution: 192dpi) {
+
+    
+}
+@media screen 
+  and (min-device-width: 2701px) 
+  and (max-device-width: 2800px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (min-resolution: 192dpi) { 
+
+    
+}
+@media screen 
+  and (min-device-width: 2801px) 
+  and (max-device-width: 2900px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (min-resolution: 192dpi) { 
+ 
+    
+}
+@media screen 
+  and (min-device-width: 2901px) 
+  and (max-device-width: 3000px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (min-resolution: 192dpi) { 
+    
 }

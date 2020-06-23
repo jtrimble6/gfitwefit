@@ -153,7 +153,7 @@ class AdminSignUp extends Component {
     render() {
         return (
             <div id="signUpPage">
-              {this.renderRedirect()}
+              {/* {this.renderRedirect()} */}
                 <div className="formContainer">    
                   <form className="formSignup" action="index.html">
                     <h2 className="formSignup-heading">Admin Sign Up</h2>
@@ -228,10 +228,10 @@ class AdminSignUp extends Component {
                         />
                         <button
                             type="submit"
-                            className="btn btn-primary submit"
+                            className="adminSubmitButton"
                             onClick={this.handleFormSubmit}
                         >
-                        Submit
+                        Create Admin
                         </button>
                         </div>
                     </form>

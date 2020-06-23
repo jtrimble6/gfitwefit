@@ -19,7 +19,7 @@ class SignUpUserPersonalInfo extends Component {
         }
 
         return (
-            <div className='userSignUpFormRow'>
+            <div className='userSignUpFormRow personalInfoStep'>
               <Form.Row>
                 <Form.Group as={Col} controlId="formGridFirstName">
                     <Form.Label>First Name</Form.Label>

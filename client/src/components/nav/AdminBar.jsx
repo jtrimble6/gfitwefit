@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import { NavLink } from 'reactstrap';
 // import { Link, animateScroll as scroll } from "react-scroll";
 import { slide as Menu } from 'react-burger-menu'
-import logo from '../../css/images/GOUVEIA-FITNESS_Mark_Black.jpg';
+import logo from '../../css/images/GOUVEIA-FITNESS_Mark_Black.png';
 import classnames from "classnames";
 import '../../css/navbar.css'
 
@@ -49,7 +49,7 @@ class AdminBar extends Component {
                           // customCrossIcon={ <img src={require("../../css/images/cross.png")} alt='close' /> } 
                         >
                           <NavLink
-                            activeClass="active"
+                            activeclass="active"
                             className=' iconBar nav-link'
                             onClick={this.toggleNavbar}
                             href='/'
@@ -66,14 +66,14 @@ class AdminBar extends Component {
                         <ul className="navbar-nav ml-auto">
                           <li className="nav-item" >
                             <NavLink
-                              activeClass="active"
+                              activeclass="active"
                               className='nav-link js-scroll-trigger'
                               href='/'
                             > Home </NavLink>
                           </li>
                           <li className="nav-item" >
                             <NavLink
-                              activeClass="active"
+                              activeclass="active"
                               className='nav-link js-scroll-trigger'
                               href='/logout'
                             > Logout </NavLink>

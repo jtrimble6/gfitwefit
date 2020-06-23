@@ -19,7 +19,7 @@ class SignUpUserFitnessInfo extends Component {
         }
 
         return (
-            <div className='userSignUpFormRow'>
+            <div className='userSignUpFormRow fitnessInfoStep'>
               <Form.Row>
                 <Form.Group as={Col} controlid="formGridFitnessGoals">
                     <Form.Label>
@@ -83,9 +83,9 @@ class SignUpUserFitnessInfo extends Component {
                         placeholder=""
                     >
                         <option>Select One</option>
-                        <option>None</option>
-                        <option>Light (dumbbells, resistance bands, gliders, stability ball)</option>
-                        <option>Full (full gym access)</option>
+                        <option>None (bodyweight)</option>
+                        <option>Light (dumbbells, resistance bands, loop bands, jumprope, gliders, stability ball)</option>
+                        <option>Full (full gym access/most equipment)</option>
                     </Form.Control>
                 </Form.Group>
               </Form.Row>

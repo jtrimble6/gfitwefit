@@ -201,8 +201,8 @@ class SignUpUser extends Component {
 
         axios({
           method: "GET", 
-          url: "https://www.gfitwefit.com/converge_token_req",
-          // url: "http://localhost:3000/converge_token_req", 
+          // url: "https://www.gfitwefit.com/converge_token_req",
+          url: "http://localhost:3000/converge_token_req", 
           }).then((response)=> {
             console.log('GOT A RESPONSE: ', response)
             let ssl_txn_auth_token = response.data

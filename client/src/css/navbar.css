@@ -16,7 +16,7 @@
     .masterRow {
         height: 50px !important;
         max-width: 100% !important;
-        margin: 0 auto;
+        margin: 0 auto !important;
     }
 
     .navbar {
@@ -27,7 +27,7 @@
         background-color: #FAC04E;
         top: 0;
         transition: top 0.6s;
-        height: calc(100% - 90%) !important;
+        height: 8vh !important;
     }
 
     /* .navbar--hidden {
@@ -41,7 +41,7 @@
     .navbar-brand {
         height: 70px !important;
         position: relative !important;
-        left: 15px !important;
+        /* left: 15px; */
         top: 1px !important;
         /* font-family: 'gfitfont-bold'; */
         font-weight: 800;
@@ -117,11 +117,20 @@
     }
     .navbarTogglerButtonCustom {
         top: 10px !important;
+        color: black !important;
     }
     .bm-item {
         font-size: 3vw !important;
         font-weight: bolder !important;
-        color: white !important;
+        color: black !important;
+    }
+    .bm-cross {
+      background: black;
+      height: 3vh !important;
+      width: 1.5vw !important;
+    }
+    .bm-cross-button {
+      left: 10px;
     }
 
 @media only screen 
@@ -177,7 +186,7 @@
   and (-webkit-min-device-pixel-ratio: 2)
   and (orientation: portrait) {
     .navbar {
-        height: 12%;
+        height: 12vh !important;
     }
     .Navbar-logo {
         height: 50px !important;
@@ -277,7 +286,10 @@
   and (-webkit-min-device-pixel-ratio: 3)
   and (orientation: portrait) { 
     .navbar {
-        height: 8%;
+        /* height: 8%; */
+    }
+    .navbar-brand {
+      left: 0px;
     }
     .Navbar-logo {
         height: 50px !important;
@@ -293,6 +305,7 @@
         padding-right: 0;
         padding-left: 0;
     }
+    
 }
 
 /* Landscape */
@@ -310,17 +323,21 @@
 
 /* ----------- Non-Retina Screens ----------- */
 @media screen 
-  and (min-device-width: 1200px) 
+  and (min-device-width: 850px) 
   and (max-device-width: 1600px) 
   and (-webkit-min-device-pixel-ratio: 1) { 
-    
+    .navbar {
+      height: 12vh !important;
+    }
 }
 
 @media screen 
   and (min-device-width: 1600px) 
   and (max-device-width: 2000px) 
   and (-webkit-min-device-pixel-ratio: 1) { 
-    
+    .navbar {
+      height: 10vh !important;
+    }
 }
 
 @media screen 
@@ -328,7 +345,7 @@
   and (max-device-width: 3000px) 
   and (-webkit-min-device-pixel-ratio: 1) { 
     .navbar {
-      height: 15% !important;
+      height: 15vh !important;
     }
     .Navbar-logo {
         height: 125px !important;

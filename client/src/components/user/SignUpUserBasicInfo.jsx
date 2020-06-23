@@ -15,7 +15,7 @@ class SignUpUserBasicInfo extends Component {
         }
 
         return (
-            <div className='userSignUpFormRow'>
+            <div className='userSignUpFormRow basicInfoStep'>
               <Form.Row>
                 <Form.Group as={Col} controlid="formGridHeight">
                     <Form.Label>Height</Form.Label>

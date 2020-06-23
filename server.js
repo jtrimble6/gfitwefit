@@ -3,6 +3,11 @@ const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const morgan = require('morgan')
 const session = require('express-session');
+const crypto = require('crypto')
+const multer = require('multer')
+const GridFsStorage = require('multer-gridfs-storage')
+const Grid = require('gridfs-stream')
+const methodOverride = require('method-override')
 const config = require('./config');
 const scheduleRoutes = require("./routes/API/scheduleAPI")
 const userRoutes = require("./routes/API/userAPI");
@@ -22,6 +27,7 @@ require('dotenv').config();
 app.use(morgan('dev'))
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+app.use(methodOverride('_method'))
 app.use(bodyParser.json({limit: '50mb'}));
 app.use(bodyParser.urlencoded({limit: '50mb', extended: true}));
 
@@ -45,16 +51,6 @@ app.use(
     saveUninitialized: false
   })
 );
-
-//DUPLICATE CODE AS ABOVE W/ ONE ADDITIONAL LINE OF CODE
-// app.use(
-//   session({
-//     secret: 'fraggle-rock',
-//     store: new MongoStore({ mongooseConnection: dbConnection }),
-//     resave: false,
-//     saveUninitialized: false
-//   })
-// );
 
 passport.serializeUser(function(user, done) {
   done(null, user._id);
@@ -96,10 +92,53 @@ app.use(function(req, res, next) { //allow cross origin requests
 
 // Connect to the Mongo DB
 mongoose.connect(process.env.MONGODB_URI || config.db);
+const conn = mongoose.createConnection(process.env.MONGODB_URI || config.db);
+
+
+//Init gfs
+let gfs;
+
+conn.once('open', () => {
+  // Init stream
+  gfs = Grid(conn.db, mongoose.mongo)
+  gfs.collection('uploads')
+})
+
+// Create storage engine
+const storage = new GridFsStorage({
+  url: process.env.MONGODB_URI || config.db,
+  file: (req, file) => {
+    return new Promise((resolve, reject) => {
+      crypto.randomBytes(16, (err, buf) => {
+        if (err) {
+          return reject(err);
+        }
+        const filename = buf.toString('hex') + path.extname(file.originalname);
+        const fileInfo = {
+          filename: filename,
+          bucketName: 'uploads'
+        };
+        resolve(fileInfo);
+      });
+    });
+  }
+});
+const upload = multer({ storage });
+
+// @route POST /upload
+// @desc Uploads file to DB
+
+app.post('./upload', upload.single('file'), (req, res) => {
+  res.json({file: req.file})
+})
+
+// @route GET /converge_token_req
+// @desc Retrieves converge token for payment
 
 app.get('/converge_token_req', (request, response) => {
   if (process.env.NODE_ENV === "development") {
-    var proxy = process.env.QUOTAGUARD_URL;
+    console.log('DEV ENVIRONMENT')
+    var proxy = process.env.REACT_APP_QUOTAGUARD_URL;
   } else {
     var proxy = process.env.QUOTAGUARDSTATIC_URL;
   }
@@ -148,6 +187,6 @@ app.get("*", (req, res) => {
 });
 
 // Start the API server
-app.listen(PORT, function() {
+app.listen(PORT, () => {
   console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`);
 });
