@@ -115,20 +115,9 @@
   and (orientation: portrait) {
     .aboutLanding {
         height: 405px;
-        width: 100% !important;
-        background-image: url('./images/aboutLanding.jpg');
-        background-position: center; /* Center the image */
-        background-repeat: no-repeat; /* Do not repeat the image */
-        background-size: cover; 
     }
     .aboutJumbotron {
-        width: 90%;
-        min-height: 250px;
-        margin: 0 auto;
-        position: relative;
         bottom: -320px;
-        padding-top: 2.5%;
-        text-align: center;
     }
     .aboutJumbotronLogo {
         position: relative;
@@ -179,7 +168,57 @@
   and (max-device-width: 568px)
   and (-webkit-min-device-pixel-ratio: 2)
   and (orientation: landscape) {
-
+    .aboutLanding {
+      height: 705px;
+      width: 262vw !important;
+    }
+    .aboutJumbotron {
+        bottom: -520px;
+        width: 70%;
+    }
+    .aboutJumbotronLogo {
+        position: relative;
+        float: none;
+        left: 150px;
+        top: -150px;
+        width: 70%;
+    }
+    .aboutJumbotronLogoColumn {
+        width: 100%;
+        height: 50%;
+        margin: 0 auto !important;
+        
+    }
+    .aboutJumbotronBodyColumn {
+        position: relative;
+        width: 90%;
+        margin: 0 auto;
+    }
+    .aboutJumbotronHeaderRow {
+        position: relative;
+        top: -75px;
+        margin: 0 auto;
+    }
+    .aboutJumbotronHeaderLeft {
+        font-size: 7vw;
+        font-weight: bolder;
+        letter-spacing: .5px;
+        padding-left: 15px;
+    }
+    .aboutJumbotronHeaderRight {
+        font-size: 7vw;
+        font-weight: bolder;
+        letter-spacing: .5px;
+    }
+    .aboutJumbotronBody {
+        position: relative;
+        top: -30px;
+        float: left;
+        font-size: 4vw;
+        font-weight: bold;
+        line-height: 1.3;
+        text-align: left !important;
+    }
 }
 
 /* ----------- iPhone 6, 6S, 7 and 8 ----------- */
@@ -207,7 +246,67 @@
   and (max-device-width: 667px) 
   and (-webkit-min-device-pixel-ratio: 2)
   and (orientation: landscape) { 
-
+    .aboutLanding {
+      height: 705px;
+      width: 223vw !important;
+    }
+    .aboutJumbotron {
+        bottom: -520px;
+        width: 70%;
+        height: 250vh;
+    }
+    .aboutJumbotronLogo {
+        position: relative;
+        float: none;
+        left: 150px;
+        top: -150px;
+        width: 100vw;
+    }
+    .aboutJumbotronLogoColumn {
+        width: 100%;
+        height: 50%;
+        margin: 0 auto !important;
+        
+    }
+    .aboutJumbotronBodyColumn {
+        position: relative;
+        top: 240px;
+        left: -170px;
+        width: 250vh !important;
+        /* margin: 0 auto !important; */
+        /* align-content: center !important; */
+    }
+    .aboutJumbotronBody {
+      text-align: center !important;
+    }
+    .aboutJumbotronHeaderRow {
+        position: relative;
+        top: 35px;
+        margin: 0 auto;
+        margin-bottom: 15%;
+        width: 150%;
+        white-space: nowrap !important;
+    }
+    .aboutJumbotronHeaderLeft {
+        font-size: 5vw;
+        font-weight: bolder;
+        letter-spacing: .5px;
+        padding-left: 0px;
+    }
+    .aboutJumbotronHeaderRight {
+        font-size: 5vw;
+        font-weight: bolder;
+        letter-spacing: .5px;
+    }
+    .aboutJumbotronBody {
+        position: relative;
+        top: -30px;
+        float: left;
+        font-size: 4vw;
+        font-weight: bold;
+        line-height: 1.3;
+        text-align: left !important;
+    }
 }
 
 /* ----------- iPhone X ----------- */
@@ -228,20 +327,9 @@
   and (orientation: portrait) { 
     .aboutLanding {
         height: 500px;
-        width: 100% !important;
-        background-image: url('./images/aboutLanding.jpg');
-        background-position: center; /* Center the image */
-        background-repeat: no-repeat; /* Do not repeat the image */
-        background-size: cover; 
     }
     .aboutJumbotron {
-        width: 90%;
-        min-height: 250px;
-        margin: 0 auto;
-        position: relative;
-        bottom: -430px;
-        padding-top: 2.5%;
-        text-align: center;
+        bottom: -380px;
     }
     .aboutJumbotronLogo {
         position: relative;
@@ -267,19 +355,19 @@
     .aboutJumbotronHeaderLeft {
         font-size: 3vw;
         font-weight: bolder;
-        letter-spacing: .5px;
+        letter-spacing: .2vw;
         padding-left: 15px;
     }
     .aboutJumbotronHeaderRight {
         font-size: 3vw;
         font-weight: bolder;
-        letter-spacing: .5px;
+        letter-spacing: .2vw;
     }
     .aboutJumbotronBody {
         position: relative;
         top: -15px;
         float: left;
-        font-size: 2.5vw;
+        font-size: 2.8vw;
         font-weight: bold;
         line-height: 1.3;
         text-align: center;
@@ -293,7 +381,37 @@
   and (max-device-width: 812px) 
   and (-webkit-min-device-pixel-ratio: 3)
   and (orientation: landscape) { 
-
+    .aboutLanding {
+      height: 405px;
+      width: 103vw !important;
+    }
+    .aboutJumbotron {
+      bottom: -260px;
+      height: 70%;
+    }
+    .aboutJumbotronHeaderRow {
+      margin-bottom: 2%;
+    }
+    .aboutJumbotronHeaderLeft {
+      font-size: 2.5vw;
+      font-weight: bolder;
+      letter-spacing: .1vw;
+      padding-left: 15px;
+    }
+    .aboutJumbotronHeaderRight {
+        font-size: 2.5vw;
+        font-weight: bolder;
+        letter-spacing: .1vw;
+    }
+    .aboutJumbotronBody {
+      position: relative;
+      top: -15px;
+      float: left;
+      font-size: 1.5vw;
+      font-weight: bold;
+      line-height: 1.3;
+      text-align: left;
+  }
 }
 
 /* ----------- iPhone 6+, 7+ and 8+ ----------- */
@@ -313,16 +431,10 @@
   and (-webkit-min-device-pixel-ratio: 3)
   and (orientation: portrait) { 
     .aboutLanding {
-        height: 655px;
+        height: 455px;
     }
     .aboutJumbotron {
-        width: 90%;
-        min-height: 250px;
-        margin: 0 auto;
-        position: relative;
-        bottom: -450px;
-        padding-top: 2.5%;
-        text-align: center;
+        bottom: -350px;
     }
     .aboutJumbotronLogo {
         position: relative;
@@ -360,7 +472,35 @@
   and (max-device-width: 1024px) 
   and (orientation: portrait) 
   and (-webkit-min-device-pixel-ratio: 1) {
+    .aboutLanding {
+      height: 655px;
+    }
+    .aboutJumbotron {
+        bottom: -450px;
+    }
+    .aboutJumbotronHeaderLeft {
+        font-size: 2.5vw;
+        letter-spacing: 1px;
+    }
     
+    .aboutJumbotronHeaderRight {
+        font-size: 2.5vw;
+        letter-spacing: 1px;
+    }
+    
+    .aboutJumbotronBody {
+        float: left;
+        font-size: 1.5vw;
+        font-weight: bold;
+    }
+    .aboutJumbotronLogo {
+        position: relative;
+        float: none;
+        left: -75px;
+        top: 50px;
+        width: 145%;
+        height: auto;
+    }
 }
 
 /* Landscape */
@@ -392,14 +532,7 @@
         height: 655px;
     }
     .aboutJumbotron {
-        width: 90%;
-        min-height: 250px;
-        margin: 0 auto;
-        position: relative;
         bottom: -450px;
-        padding-top: 2.5%;
-        text-align: center;
-
     }
     .aboutJumbotronHeaderLeft {
         font-size: 2.5vw;
@@ -432,7 +565,7 @@
   and (max-device-width: 1024px) 
   and (orientation: landscape) 
   and (-webkit-min-device-pixel-ratio: 2) {
-
+    
 }
 
 /* ----------- iPad Pro 10.5" ----------- */
@@ -489,14 +622,7 @@
         height: 655px;
     }
     .aboutJumbotron {
-        width: 90%;
-        min-height: 250px;
-        margin: 0 auto;
-        position: relative;
         bottom: -450px;
-        padding-top: 2.5%;
-        text-align: center;
-
     }
     .aboutJumbotronHeaderLeft {
         font-size: 2.5vw;
@@ -531,7 +657,37 @@
   and (max-device-width: 1366px) 
   and (orientation: landscape) 
   and (-webkit-min-device-pixel-ratio: 2) {
-
+    .aboutLanding {
+      height: 405px;
+      width: 100vw !important;
+    }
+    .aboutJumbotron {
+      bottom: -260px;
+      height: 70%;
+    }
+    .aboutJumbotronHeaderRow {
+      margin-bottom: 2%;
+    }
+    .aboutJumbotronHeaderLeft {
+      font-size: 2.5vw;
+      font-weight: bolder;
+      letter-spacing: .1vw;
+      padding-left: 15px;
+    }
+    .aboutJumbotronHeaderRight {
+        font-size: 2.5vw;
+        font-weight: bolder;
+        letter-spacing: .1vw;
+    }
+    .aboutJumbotronBody {
+      position: relative;
+      top: -15px;
+      float: left;
+      font-size: 1.5vw;
+      font-weight: bold;
+      line-height: 1.3;
+      text-align: left;
+    }
 }
 
 
@@ -549,14 +705,7 @@
       height: 875px;
     }
     .aboutJumbotron {
-        width: 90%;
-        min-height: 250px;
-        margin: 0 auto;
-        position: relative;
         bottom: -580px;
-        padding-top: 2.5%;
-        text-align: center;
-
     }
     .aboutJumbotronHeaderLeft {
         font-size: 2.5vw;
@@ -591,14 +740,7 @@
       height: 775px;
     }
     .aboutJumbotron {
-        width: 90%;
-        min-height: 250px;
-        margin: 0 auto;
-        position: relative;
         bottom: -550px;
-        padding-top: 2.5%;
-        text-align: center;
-
     }
     .aboutJumbotronHeaderLeft {
         font-size: 2.5vw;
@@ -633,14 +775,7 @@
       height: 1475px;
     }
     .aboutJumbotron {
-        width: 90%;
-        min-height: 250px;
-        margin: 0 auto;
-        position: relative;
         bottom: -1050px;
-        padding-top: 2.5%;
-        text-align: center;
-
     }
     .aboutJumbotronHeaderLeft {
         font-size: 2.5vw;

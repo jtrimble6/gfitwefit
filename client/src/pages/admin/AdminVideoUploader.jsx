@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Button } from 'react-bootstrap'
 import '../../css/admin.css'
 
 
@@ -42,8 +43,13 @@ class AdminVideoUploader extends Component {
             <div className="row videoUploadFormRow">
               <div className="videoUploadFormContainer">    
                 <h2 className="videoUploadForm-heading">Video Uploader</h2>
-                  <form className="videoUploadForm" action="/upload" method="POST" encType="multipart/form-data">
+                  <form className="videoUploadForm" action={`/upload/${this.state.equipmentNeeded}/${this.state.fitnessLevel}/${this.state.workoutCategory}`} method="POST" encType="multipart/form-data">
                     <div className="videoUploadFormSelectors custom-file mb-3">
+
+                      {/* SELECT FILE */}
+                      {/* <label className='fileSelectionLabel' htmlFor="fileSelection">File Selection</label> */}
+                      <input type="file" name="file" id="file" className="custom-file-input"/>
+                      <label htmlFor='file' className='custom-file-label'>Choose File</label>
                     
                       {/* EQUIPMENT REQUIREMENTS */}
                       <label className='equipmentNeededLabel' htmlFor="equipmentNeeded">Equipment Needed</label>
@@ -93,13 +99,24 @@ class AdminVideoUploader extends Component {
                         <option value='abs/stretch'>Abs/stretch</option>
                       </select>
 
-                      {/* SELECT FILE */}
-                      <label className='fileSelectionLabel' htmlFor="fileSelection">File Selection</label>
-                      <input type="file" name="file" id="file" className="videoUploadInput"/>
-
                     </div>
-                    <input type="submit" value="Upload" className='adminSubmitButton submit' onClick={this.handleSubmit}/>
+                    
+                    {/* Upload Video */}
+                    <input 
+                      type="submit" 
+                      value="Upload" 
+                      className='adminSubmitButton submit' 
+                    />
+
                   </form>
+
+                    {/* View Video Library */}
+                    <Button
+                      href="/adminVideoLibrary"
+                      className="adminViewLibraryButton"
+                    >
+                      View Library
+                    </Button>
               </div>
             </div>
             {/* <h2 className="videoUploadForm-heading">Current Schedule</h2>

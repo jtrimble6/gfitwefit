@@ -1,9 +1,8 @@
 .footerLanding {
-    position: relative !important;
-    bottom: 0 !important;
-    width: 100%;
+    position: absolute !important;
+    bottom: -50px !important;
     /* padding-bottom: 25%; */
-    background-color: #211C18;
+    background-color: black;
     background-size: cover; 
 }
 
@@ -11,52 +10,64 @@
     font-family: 'Arial';
     width: 99%;
     margin: 0 auto;
+    height: 15vh;
+}
+
+.footerBrand {
+  max-width: 35vw;
 }
 
 .footerLogo {
-    margin-top: 2%;
-    max-width: 100%;
-    height: auto;
+  width: 80px;
+  height: auto; 
+  position: absolute;
+  bottom: 1vw;
 }
 
 .footerTitle {
-    margin-top: 8%;
-    margin-left: 3%;
     font-size: 1.5vw;
     font-weight: bolder;
     color: white;
+    position: absolute;
+    bottom: 1.7vw;
+    left: 3.5vw;
 }
 
 .footerInfo p {
     font-size: .9vw;
     color: white;
     line-height: 1;
+    
 }
 
 .footerAddress {
     padding: 0;
     width: 100%;
     margin: 0 auto;
-    margin-top: 1%;
-    justify-content: center;
+    position: absolute;
+    bottom: 2.5vw;
+    left: 0vw;
 }
 
-.footerAddress p {
+/* .footerAddress p {
     margin-top: 8%;
     margin-bottom: 1%;
-}
+} */
 
 .footerDisclaimer {
     padding: 0;
     width: 100%;
     margin: 0 auto;
     text-align: center;
+    position: absolute;
+    bottom: 1.5vw;
+    /* left: 0vw; */
 }
 
 .footerSocial {
     margin-top: 2%;
-    position: static;
-    right: 0px;
+    position: absolute;
+    bottom: 1vw;
     font-size: 2.7vw;
     
 }
@@ -124,17 +135,16 @@
   and (-webkit-min-device-pixel-ratio: 2)
   and (orientation: portrait) {
     .footerLanding {
-      height: 15%;
-      /* position: relative;
-      bottom: -10px; */
+      height: 12vh;
       padding-bottom: 0px;
-      position: fixed !important;
-      left: 0 !important;
-      bottom: 0 !important;
+      /* position: fixed !important; */
+      /* left: 0 !important;
+      bottom: 0 !important; */
     }
     
     .footerRow {
         width: 99%;
+        max-height: 100%;
         margin: 0 auto;
     }
 
@@ -143,59 +153,86 @@
         margin-top: 5%;
         margin-left: 0;
     }
-
-    .footerTitleDiv {
-        position: relative;
-        left: 55px;
-        bottom: 50px;
+    .footerBrand {
+      padding-right: 0px !important;
     }
-    
     .footerLogo {
-        margin-top: 2%;
-        max-width: 100%;
-        height: auto;
+      width: 30px;
+      height: auto; 
+      position: absolute;
+      bottom: 3vw;
     }
     
     .footerTitle {
-        position: relative;
-        top: 0;
-        font-size: 2.5vw;
+      font-size: 2.5vw;
+      font-weight: bolder;
+      color: white;
+      position: absolute;
+      bottom: 3vw;
+      left: 10.5vw;
+      white-space: pre-wrap;
+    }
+
+    .footerRow {
+      font-family: 'Arial';
+      width: 99%;
+      margin: 0 auto;
+      height: 15vh;
+    }
+    
+    .footerBrand {
+      max-width: 22vw;
+    }
+
+    .footerInfo {
+      margin-left: 15px;
     }
     
     .footerInfo p {
-        line-height: 1.5;
+        font-size: 2vw;
+        color: white;
+        line-height: 2.5vw;
+        
     }
     
     .footerAddress {
-        margin-top: 15%;
-        justify-content: center;
+        padding: 0;
+        width: 60%;
+        margin: 0 auto;
+        position: absolute;
+        bottom: 5vw;
+        left: 0vw;
         text-align: center;
     }
     
-    .footerAddress p {
-        margin-top: 15%;
+    /* .footerAddress p {
+        margin-top: 8%;
         margin-bottom: 1%;
-        font-size: 2vw;
-    }
+    } */
     
     .footerDisclaimer {
-        font-size: 1.5vw;
         padding: 0;
+        width: 60%;
+        margin: 0 auto;
         text-align: center;
+        position: absolute;
+        bottom: 0vw;
+        left: 0vw;
+        white-space: pre-wrap;
     }
     
     .footerSocial {
-        margin-top: 8%;
-        position: static;
-        right: 0px;
-        font-size: 7vw;
+        margin-top: 2%;
+        position: absolute;
+        bottom: 5vw;
+        font-size: 6vw;
         
     }
     
     .footerIcon {
-        color: white;
-        padding-right: 7%;
         float: right;
+        color: white !important;
+        padding: 1%;
     }
 }
 
@@ -205,7 +242,107 @@
   and (max-device-width: 568px)
   and (-webkit-min-device-pixel-ratio: 2)
   and (orientation: landscape) {
+    .footerLanding {
+      height: 32vh;
+      width: 223vw;
+      padding-bottom: 0px;
+      /* position: fixed !important; */
+      /* left: 0 !important;
+      bottom: 0 !important; */
+    }
+    
+    .footerRow {
+        width: 99%;
+        margin: 0 auto;
+        position: absolute;
+        bottom: 0;
+    }
 
+    .footerLogoDiv {
+        width: 35px;
+        margin-top: 5%;
+        margin-left: 0;
+    }
+    .footerBrand {
+      padding-right: 0px !important;
+    }
+    .footerLogo {
+      width: 60px;
+      height: auto; 
+      position: absolute;
+      bottom: 2vw;
+    }
+    
+    .footerTitle {
+      font-size: 3.5vw;
+      font-weight: bolder;
+      color: white;
+      position: absolute;
+      bottom: 2vw;
+      left: 10.5vw;
+      white-space: pre-wrap;
+    }
+
+    .footerRow {
+      font-family: 'Arial';
+      width: 99%;
+      margin: 0 auto;
+      height: 15vh;
+    }
+    
+    .footerBrand {
+      max-width: 40vw;
+    }
+
+    .footerInfo {
+      margin-left: 15px;
+    }
+    
+    .footerInfo p {
+      font-size: 3vw;
+      color: white;
+      line-height: 1vw;
+    }
+    
+    .footerAddress {
+        padding: 0;
+        width: 60%;
+        margin: 0 auto;
+        position: absolute;
+        bottom: 6vw;
+        left: 0vw;
+        text-align: center;
+        font-size: 2vw;
+    }
+    
+    /* .footerAddress p {
+        margin-top: 8%;
+        margin-bottom: 1%;
+    } */
+    
+    .footerDisclaimer {
+        padding: 0;
+        width: 60%;
+        margin: 0 auto;
+        text-align: center;
+        position: absolute;
+        bottom: 3vw;
+        /* left: 0vw; */
+        white-space: pre-wrap;
+    }
+    
+    .footerSocial {
+        margin-top: 2%;
+        position: absolute;
+        bottom: 2vw;
+        font-size: 8vw;
+    }
+    
+    .footerIcon {
+        float: right;
+        color: white !important;
+        padding: 1%;
+    }
 }
 
 /* ----------- iPhone 6, 6S, 7 and 8 ----------- */
@@ -225,17 +362,16 @@
   and (-webkit-min-device-pixel-ratio: 2)
   and (orientation: portrait) { 
     .footerLanding {
-        height: 15%;
-        /* position: relative;
-        bottom: -10px; */
-        padding-bottom: 0px;
-        position: fixed !important;
-        left: 0 !important;
-        bottom: 0 !important;
+      height: 12vh;
+      padding-bottom: 0px;
+      /* position: fixed !important; */
+      /* left: 0 !important;
+      bottom: 0 !important; */
     }
     
     .footerRow {
         width: 99%;
+        max-height: 100%;
         margin: 0 auto;
     }
 
@@ -244,59 +380,86 @@
         margin-top: 5%;
         margin-left: 0;
     }
-
-    .footerTitleDiv {
-        position: relative;
-        left: 15px;
-        bottom: -30px;
+    .footerBrand {
+      padding-right: 0px !important;
     }
-    
     .footerLogo {
-        margin-top: 2%;
-        max-width: 100%;
-        height: auto;
+      width: 40px;
+      height: auto; 
+      position: absolute;
+      bottom: 3vw;
     }
     
     .footerTitle {
-        position: relative;
-        top: 0;
-        font-size: 2.5vw;
+      font-size: 2.5vw;
+      font-weight: bolder;
+      color: white;
+      position: absolute;
+      bottom: 3vw;
+      left: 10.5vw;
+      white-space: pre-wrap;
+    }
+
+    .footerRow {
+      font-family: 'Arial';
+      width: 99%;
+      margin: 0 auto;
+      height: 15vh;
+    }
+    
+    .footerBrand {
+      max-width: 25vw;
+    }
+
+    .footerInfo {
+      margin-left: 15px;
     }
     
     .footerInfo p {
-        line-height: 1.5;
+        font-size: 2vw;
+        color: white;
+        line-height: 2.5vw;
+        
     }
     
     .footerAddress {
-        margin-top: 15%;
-        justify-content: center;
+        padding: 0;
+        width: 60%;
+        margin: 0 auto;
+        position: absolute;
+        bottom: 8vw;
+        left: 0vw;
         text-align: center;
     }
     
-    .footerAddress p {
-        margin-top: 15%;
+    /* .footerAddress p {
+        margin-top: 8%;
         margin-bottom: 1%;
-        font-size: 2vw;
-    }
+    } */
     
     .footerDisclaimer {
-        font-size: 1.5vw;
         padding: 0;
+        width: 60%;
+        margin: 0 auto;
         text-align: center;
+        position: absolute;
+        bottom: .1vw;
+        left: 0vw;
+        white-space: pre-wrap;
     }
     
     .footerSocial {
-        margin-top: 8%;
-        position: static;
-        right: 0px;
+        margin-top: 2%;
+        position: absolute;
+        bottom: 5vw;
         font-size: 7vw;
         
     }
     
     .footerIcon {
-        color: white;
-        padding-right: 7%;
         float: right;
+        color: white !important;
+        padding: 1%;
     }
 
 }
@@ -305,9 +468,110 @@
 @media only screen 
   and (min-device-width: 375px) 
   and (max-device-width: 667px) 
+  and (min-device-height: 365px)
   and (-webkit-min-device-pixel-ratio: 2)
   and (orientation: landscape) { 
+    .footerLanding {
+      height: 20vh;
+      width: 103vw;
+      padding-bottom: 0px;
+      /* position: fixed !important; */
+      /* left: 0 !important;
+      bottom: 0 !important; */
+    }
+    
+    .footerRow {
+        width: 99%;
+        margin: 0 auto;
+        position: absolute;
+        bottom: 0;
+    }
 
+    .footerLogoDiv {
+        width: 35px;
+        margin-top: 5%;
+        margin-left: 0;
+    }
+    .footerBrand {
+      padding-right: 0px !important;
+    }
+    .footerLogo {
+      width: 35px;
+      height: auto; 
+      position: absolute;
+      bottom: 2vw;
+    }
+    
+    .footerTitle {
+      font-size: 2vw;
+      font-weight: bolder;
+      color: white;
+      position: absolute;
+      bottom: 1vw;
+      left: 5.5vw;
+      white-space: pre-wrap;
+    }
+
+    .footerRow {
+      font-family: 'Arial';
+      width: 99%;
+      margin: 0 auto;
+      height: 15vh;
+    }
+    
+    .footerBrand {
+      max-width: 20vw;
+    }
+
+    .footerInfo {
+      margin-left: 15px;
+    }
+    
+    .footerInfo p {
+      font-size: 1.5vw;
+      color: white;
+      line-height: 1.5vw;
+    }
+    
+    .footerAddress {
+        width: 60%;
+        margin: 0 auto;
+        position: absolute;
+        bottom: 4vw;
+        left: 0vw;
+        text-align: center;
+        font-size: 2vw;
+        padding-left: 15px;
+    }
+    
+    /* .footerAddress p {
+        margin-top: 8%;
+        margin-bottom: 1%;
+    } */
+    
+    .footerDisclaimer {
+        padding: 0;
+        width: 60%;
+        margin: 0 auto !important;
+        text-align: center;
+        position: absolute;
+        bottom: .1vw;
+        /* left: 0vw; */
+        white-space: pre-wrap;
+    }
+    
+    .footerSocial {
+        margin-top: 2%;
+        position: absolute;
+        bottom: 2vw;
+        font-size: 5vw;
+    }
+    
+    .footerIcon {
+        float: right;
+        color: white !important;
+        padding: 1%;
+    }
 }
 
 
@@ -326,18 +590,20 @@
 @media only screen 
   and (min-device-width: 375px) 
   and (max-device-width: 812px) 
+  and (min-device-height: 800px)
   and (-webkit-min-device-pixel-ratio: 3)
   and (orientation: portrait) { 
     .footerLanding {
-      height: 10%;
+      height: 12vh;
       padding-bottom: 0px;
-      position: fixed !important;
-      left: 0 !important;
-      bottom: 0 !important;
+      /* position: fixed !important; */
+      /* left: 0 !important;
+      bottom: 0 !important; */
     }
     
     .footerRow {
         width: 99%;
+        max-height: 100%;
         margin: 0 auto;
     }
 
@@ -346,59 +612,86 @@
         margin-top: 5%;
         margin-left: 0;
     }
-
-    .footerTitleDiv {
-        position: relative;
-        left: 15px;
-        bottom: -30px;
+    .footerBrand {
+      padding-right: 0px !important;
     }
-    
     .footerLogo {
-        margin-top: 2%;
-        max-width: 100%;
-        height: auto;
+      width: 40px;
+      height: auto; 
+      position: absolute;
+      bottom: 7vw;
     }
     
     .footerTitle {
-        position: relative;
-        top: 0;
-        font-size: 2.5vw;
+      font-size: 2.5vw;
+      font-weight: bolder;
+      color: white;
+      position: absolute;
+      bottom: 7vw;
+      left: 10.5vw;
+      white-space: pre-wrap;
+    }
+
+    .footerRow {
+      font-family: 'Arial';
+      width: 99%;
+      margin: 0 auto;
+      height: 15vh;
+    }
+    
+    .footerBrand {
+      max-width: 25vw;
+    }
+
+    .footerInfo {
+      margin-left: 15px;
     }
     
     .footerInfo p {
-        line-height: 1.5;
+        font-size: 2vw;
+        color: white;
+        line-height: 2.5vw;
+        
     }
     
     .footerAddress {
-        margin-top: 15%;
-        justify-content: center;
+        padding: 0;
+        width: 60%;
+        margin: 0 auto;
+        position: absolute;
+        bottom: 10vw;
+        left: 0vw;
         text-align: center;
     }
     
-    .footerAddress p {
-        margin-top: 15%;
+    /* .footerAddress p {
+        margin-top: 8%;
         margin-bottom: 1%;
-        font-size: 2vw;
-    }
+    } */
     
     .footerDisclaimer {
-        font-size: 1.5vw;
         padding: 0;
+        width: 60%;
+        margin: 0 auto;
         text-align: center;
+        position: absolute;
+        bottom: 2.5vw;
+        left: 0vw;
+        white-space: pre-wrap;
     }
     
     .footerSocial {
-        margin-top: 8%;
-        position: static;
-        right: 0px;
-        font-size: 7vw;
+        margin-top: 2%;
+        position: absolute;
+        bottom: 8vw;
+        font-size: 6vw;
         
     }
     
     .footerIcon {
-        color: white;
-        padding-right: 7%;
         float: right;
+        color: white !important;
+        padding: 1%;
     }
 
     
@@ -410,7 +703,107 @@
   and (max-device-width: 812px) 
   and (-webkit-min-device-pixel-ratio: 3)
   and (orientation: landscape) { 
+    .footerLanding {
+      height: 20vh;
+      width: 103vw;
+      padding-bottom: 0px;
+      /* position: fixed !important; */
+      /* left: 0 !important;
+      bottom: 0 !important; */
+    }
+    
+    .footerRow {
+        width: 99%;
+        margin: 0 auto;
+        position: absolute;
+        bottom: 0;
+    }
 
+    .footerLogoDiv {
+        width: 35px;
+        margin-top: 5%;
+        margin-left: 0;
+    }
+    .footerBrand {
+      padding-right: 0px !important;
+    }
+    .footerLogo {
+      width: 40px;
+      height: auto; 
+      position: absolute;
+      bottom: 1vw;
+    }
+    
+    .footerTitle {
+      font-size: 1.8vw;
+      font-weight: bolder;
+      color: white;
+      position: absolute;
+      bottom: .7vw;
+      left: 5vw;
+      white-space: pre-wrap;
+    }
+
+    .footerRow {
+      font-family: 'Arial';
+      width: 99%;
+      margin: 0 auto;
+      max-height: 100%;
+    }
+    
+    .footerBrand {
+      max-width: 20vw;
+    }
+
+    .footerInfo {
+      margin-left: 15px;
+    }
+    
+    .footerInfo p {
+      font-size: 1.5vw;
+      color: white;
+      line-height: 1vw;
+    }
+    
+    .footerAddress {
+        width: 100%;
+        margin: 0 auto;
+        position: absolute;
+        bottom: 3vw;
+        /* left: 0vw; */
+        font-size: 2vw;
+        white-space: nowrap;
+        /* text-align: left !important;
+        font-size: 1.5vw !important; */
+    }
+    
+    /* .footerAddress p {
+        margin-top: 8%;
+        margin-bottom: 1%;
+    } */
+    
+    .footerDisclaimer {
+        padding: 0;
+        width: 100%;
+        margin: 0 auto;
+        text-align: left;
+        position: absolute;
+        bottom: .1vw;
+        left: 0vw;
+    }
+    
+    .footerSocial {
+        margin-top: 2%;
+        position: absolute;
+        bottom: 1vw;
+        font-size: 4vw;
+    }
+    
+    .footerIcon {
+        float: right;
+        color: white !important;
+        padding: 1%;
+    }
 }
 
 /* ----------- iPhone 6+, 7+ and 8+ ----------- */
@@ -430,11 +823,11 @@
   and (-webkit-min-device-pixel-ratio: 3)
   and (orientation: portrait) { 
     .footerLanding {
-      height: 15%;
+      height: 12vh;
       padding-bottom: 0px;
-      position: fixed !important;
-      left: 0 !important;
-      bottom: 0 !important;
+      /* position: fixed !important; */
+      /* left: 0 !important;
+      bottom: 0 !important; */
     }
     
     .footerRow {
@@ -448,32 +841,40 @@
         margin-left: 0;
     }
 
-    .footerTitleDiv {
-        position: relative;
-        left: 15px;
-        bottom: -30px;
+    .footerBrand {
+      padding-right: 0px !important;
     }
-    
     .footerLogo {
-        margin-top: 2%;
+        margin-top: 45%;
+        margin-right: 0px !important;
         max-width: 100%;
         height: auto;
     }
-    
+/*     
     .footerTitle {
-        position: relative;
-        top: 0;
-        font-size: 2.5vw;
+      position: relative;
+      top: 0;
+      left: -15px !important;
+      font-size: 2.5vw;
+      white-space: pre-wrap;
+    } */
+
+    .footerInfo {
+      padding: 0px !important;
+      position: relative;
+      /* left: -25px; */
     }
     
     .footerInfo p {
         line-height: 1.5;
+        font-size: 1.5vw;
     }
     
     .footerAddress {
-        margin-top: 15%;
+        margin-top: 5%;
         justify-content: center;
         text-align: center;
+        /* width: 100% !important; */
     }
     
     .footerAddress p {
@@ -483,7 +884,7 @@
     }
     
     .footerDisclaimer {
-        font-size: 1.5vw;
+        font-size: 2vw;
         padding: 0;
         text-align: center;
     }
@@ -495,7 +896,6 @@
         font-size: 7vw;
         
     }
-    
     .footerIcon {
         color: white;
         padding-right: 7%;
@@ -509,7 +909,106 @@
   and (max-device-width: 736px) 
   and (-webkit-min-device-pixel-ratio: 3)
   and (orientation: landscape) { 
+    .footerLanding {
+      height: 20vh;
+      width: 103vw;
+      padding-bottom: 0px;
+      /* position: fixed !important; */
+      /* left: 0 !important;
+      bottom: 0 !important; */
+    }
+    
+    .footerRow {
+        width: 99%;
+        margin: 0 auto;
+        position: absolute;
+        bottom: 0;
+    }
 
+    .footerLogoDiv {
+        width: 35px;
+        margin-top: 5%;
+        margin-left: 0;
+    }
+    .footerBrand {
+      padding-right: 0px !important;
+    }
+    .footerLogo {
+      width: 45px;
+      height: auto; 
+      position: absolute;
+      bottom: 2vw;
+    }
+    
+    .footerTitle {
+      font-size: 2vw;
+      font-weight: bolder;
+      color: white;
+      position: absolute;
+      bottom: 2vw;
+      left: 6vw;
+      white-space: pre-wrap;
+    }
+
+    .footerRow {
+      font-family: 'Arial';
+      width: 99%;
+      margin: 0 auto;
+      height: 15vh;
+    }
+    
+    .footerBrand {
+      max-width: 20vw;
+    }
+
+    .footerInfo {
+      margin-left: 15px;
+    }
+    
+    .footerInfo p {
+      font-size: 1.5vw;
+      color: white;
+      line-height: 1.5vw;
+    }
+    
+    .footerAddress {
+        width: 60%;
+        margin: 0 auto;
+        position: absolute;
+        bottom: 4vw;
+        left: 0vw;
+        text-align: left;
+        font-size: 2vw;
+    }
+    
+    /* .footerAddress p {
+        margin-top: 8%;
+        margin-bottom: 1%;
+    } */
+    
+    .footerDisclaimer {
+        padding: 0;
+        width: 60%;
+        margin: 0 auto !important;
+        text-align: left;
+        position: absolute;
+        bottom: .1vw;
+        /* left: 0vw; */
+        white-space: pre-wrap;
+    }
+    
+    .footerSocial {
+        margin-top: 2%;
+        position: absolute;
+        bottom: 2vw;
+        font-size: 5vw;
+    }
+    
+    .footerIcon {
+        float: right;
+        color: white !important;
+        padding: 1%;
+    }
 }
 
 
@@ -542,6 +1041,106 @@
   and (max-device-width: 1024px) 
   and (orientation: landscape) 
   and (-webkit-min-device-pixel-ratio: 1) {
+    .footerLanding {
+      height: 16vh;
+      padding-bottom: 0px;
+      /* position: fixed !important; */
+      /* left: 0 !important;
+      bottom: 0 !important; */
+    }
+    
+    .footerRow {
+        width: 99%;
+        max-height: 100%;
+        margin: 0 auto;
+    }
+
+    .footerLogoDiv {
+        width: 35px;
+        margin-top: 5%;
+        margin-left: 0;
+    }
+    .footerBrand {
+      padding-right: 0px !important;
+    }
+    .footerLogo {
+      width: 60px;
+      height: auto; 
+      position: absolute;
+      bottom: 1vw;
+    }
+    
+    .footerTitle {
+      font-size: 2.5vw;
+      font-weight: bolder;
+      color: white;
+      position: absolute;
+      bottom: 2vw;
+      left: 6vw;
+      white-space: pre-wrap;
+    }
+
+    .footerRow {
+      font-family: 'Arial';
+      width: 99%;
+      position: absolute;
+      bottom: 0;
+    }
+    
+    .footerBrand {
+      max-width: 35vw;
+    }
+
+    .footerInfo {
+      margin-left: 15px;
+    }
+    
+    .footerInfo p {
+        font-size: 1.5vw;
+        color: white;
+        line-height: 2.5vw;
+        
+    }
+    
+    .footerAddress {
+        padding: 0;
+        width: 60%;
+        margin: 0 auto;
+        position: absolute;
+        bottom: 3vw;
+        left: 0vw;
+        text-align: center;
+    }
+    
+    /* .footerAddress p {
+        margin-top: 8%;
+        margin-bottom: 1%;
+    } */
+    
+    .footerDisclaimer {
+        padding: 0;
+        width: 60%;
+        margin: 0 auto;
+        text-align: center;
+        position: absolute;
+        bottom: -3vw;
+        left: 0vw;
+        white-space: pre-wrap;
+    }
+    
+    .footerSocial {
+        margin-top: 2%;
+        position: absolute;
+        bottom: 1vw;
+        font-size: 4vw;
+        
+    }
+    
+    .footerIcon {
+        float: right;
+        color: white !important;
+        padding: 1%;
+    }
 
 }
 
@@ -562,17 +1161,17 @@
   and (orientation: portrait) 
   and (-webkit-min-device-pixel-ratio: 2) {
     .footerLanding {
-      height: 12%;
+      height: 12vh;
       padding-bottom: 0px;
-      position: fixed !important;
-      left: 0 !important;
-      bottom: 0 !important;
+      /* position: fixed !important; */
+      /* left: 0 !important;
+      bottom: 0 !important; */
     }
     
     .footerRow {
         width: 99%;
+        max-height: 100%;
         margin: 0 auto;
-        
     }
 
     .footerLogoDiv {
@@ -580,59 +1179,86 @@
         margin-top: 5%;
         margin-left: 0;
     }
-
-    .footerTitleDiv {
-        position: relative;
-        left: 55px;
-        bottom: 50px;
+    .footerBrand {
+      padding-right: 0px !important;
     }
-    
     .footerLogo {
-        margin-top: 70%;
-        max-width: 150%;
-        height: auto;
+      width: 70px;
+      height: auto; 
+      position: absolute;
+      bottom: 3vw;
     }
     
     .footerTitle {
-        position: relative;
-        top: 85px;
-        font-size: 2.5vw;
+      font-size: 2.5vw;
+      font-weight: bolder;
+      color: white;
+      position: absolute;
+      bottom: 4vw;
+      left: 8.5vw;
+      white-space: pre-wrap;
+    }
+
+    .footerRow {
+      font-family: 'Arial';
+      width: 99%;
+      margin: 0 auto;
+      height: 15vh;
+    }
+    
+    .footerBrand {
+      max-width: 25vw;
+    }
+
+    .footerInfo {
+      margin-left: 15px;
     }
     
     .footerInfo p {
-        line-height: 1.5;
+        font-size: 2vw;
+        color: white;
+        line-height: 2.5vw;
+        
     }
     
     .footerAddress {
-        margin-top: 5%;
-        justify-content: center;
+        padding: 0;
+        width: 60%;
+        margin: 0 auto;
+        position: absolute;
+        bottom: 6vw;
+        left: 0vw;
         text-align: center;
     }
     
-    .footerAddress p {
-        margin-top: 10%;
+    /* .footerAddress p {
+        margin-top: 8%;
         margin-bottom: 1%;
-        font-size: 2vw;
-    }
+    } */
     
     .footerDisclaimer {
-        font-size: 1.5vw;
         padding: 0;
+        width: 60%;
+        margin: 0 auto;
         text-align: center;
+        position: absolute;
+        bottom: 1vw;
+        left: 0vw;
+        white-space: pre-wrap;
     }
     
     .footerSocial {
-        margin-top: 6%;
-        position: static;
-        right: 0px;
-        font-size: 5vw;
+        margin-top: 2%;
+        position: absolute;
+        bottom: 4vw;
+        font-size: 6vw;
         
     }
     
     .footerIcon {
-        color: white;
-        padding-right: 7%;
         float: right;
+        color: white !important;
+        padding: 1%;
     }
     
 }
@@ -641,9 +1267,109 @@
 @media only screen 
   and (min-device-width: 768px) 
   and (max-device-width: 1024px) 
+  and (min-device-height: 813px)
   and (orientation: landscape) 
   and (-webkit-min-device-pixel-ratio: 2) {
+    .footerLanding {
+      height: 16vh;
+      padding-bottom: 0px;
+      /* position: fixed !important; */
+      /* left: 0 !important;
+      bottom: 0 !important; */
+    }
+    
+    .footerRow {
+        width: 99%;
+        max-height: 100%;
+        margin: 0 auto;
+    }
 
+    .footerLogoDiv {
+        width: 35px;
+        margin-top: 5%;
+        margin-left: 0;
+    }
+    .footerBrand {
+      padding-right: 0px !important;
+    }
+    .footerLogo {
+      width: 60px;
+      height: auto; 
+      position: absolute;
+      bottom: 1vw;
+    }
+    
+    .footerTitle {
+      font-size: 2vw;
+      font-weight: bolder;
+      color: white;
+      position: absolute;
+      bottom: 1vw;
+      left: 4vw;
+      white-space: pre-wrap;
+    }
+
+    .footerRow {
+      font-family: 'Arial';
+      width: 99%;
+      position: absolute;
+      bottom: 0;
+    }
+    
+    .footerBrand {
+      max-width: 30vw;
+    }
+
+    .footerInfo {
+      margin-left: 15px;
+    }
+    
+    .footerInfo p {
+        font-size: 1.5vw;
+        color: white;
+        line-height: 2.5vw;
+        
+    }
+    
+    .footerAddress {
+        padding: 0;
+        width: 60%;
+        margin: 0 auto;
+        position: absolute;
+        bottom: 2vw;
+        left: 0vw;
+        text-align: center;
+    }
+    
+    /* .footerAddress p {
+        margin-top: 8%;
+        margin-bottom: 1%;
+    } */
+    
+    .footerDisclaimer {
+        padding: 0;
+        width: 60%;
+        margin: 0 auto;
+        text-align: center;
+        position: absolute;
+        bottom: -3vw;
+        left: 0vw;
+        white-space: pre-wrap;
+    }
+    
+    .footerSocial {
+        margin-top: 2%;
+        position: absolute;
+        bottom: 1vw;
+        font-size: 4vw;
+        
+    }
+    
+    .footerIcon {
+        float: right;
+        color: white !important;
+        padding: 1%;
+    }
 }
 
 /* ----------- iPad Pro 10.5" ----------- */
@@ -697,17 +1423,17 @@
   and (orientation: portrait) 
   and (-webkit-min-device-pixel-ratio: 2) {
     .footerLanding {
-      height: 12%;
+      height: 12vh;
       padding-bottom: 0px;
-      position: fixed !important;
-      left: 0 !important;
-      bottom: 0 !important;
+      /* position: fixed !important; */
+      /* left: 0 !important;
+      bottom: 0 !important; */
     }
     
     .footerRow {
         width: 99%;
+        max-height: 100%;
         margin: 0 auto;
-        
     }
 
     .footerLogoDiv {
@@ -715,59 +1441,86 @@
         margin-top: 5%;
         margin-left: 0;
     }
-
-    .footerTitleDiv {
-        position: relative;
-        left: 55px;
-        bottom: 50px;
+    .footerBrand {
+      padding-right: 0px !important;
     }
-    
     .footerLogo {
-        margin-top: 70%;
-        max-width: 150%;
-        height: auto;
+      width: 70px;
+      height: auto; 
+      position: absolute;
+      bottom: 3vw;
     }
     
     .footerTitle {
-        position: relative;
-        top: 85px;
-        font-size: 2.5vw;
+      font-size: 2.5vw;
+      font-weight: bolder;
+      color: white;
+      position: absolute;
+      bottom: 3vw;
+      left: 7vw;
+      white-space: pre-wrap;
+    }
+
+    .footerRow {
+      font-family: 'Arial';
+      width: 99%;
+      margin: 0 auto;
+      height: 15vh;
+    }
+    
+    .footerBrand {
+      max-width: 25vw;
+    }
+
+    .footerInfo {
+      margin-left: 15px;
     }
     
     .footerInfo p {
-        line-height: 1.5;
+        font-size: 2vw;
+        color: white;
+        line-height: 2.5vw;
+        
     }
     
     .footerAddress {
-        margin-top: 5%;
-        justify-content: center;
+        padding: 0;
+        width: 60%;
+        margin: 0 auto;
+        position: absolute;
+        bottom: 6vw;
+        left: 0vw;
         text-align: center;
     }
     
-    .footerAddress p {
-        margin-top: 10%;
+    /* .footerAddress p {
+        margin-top: 8%;
         margin-bottom: 1%;
-        font-size: 2vw;
-    }
+    } */
     
     .footerDisclaimer {
-        font-size: 1.5vw;
         padding: 0;
+        width: 60%;
+        margin: 0 auto;
         text-align: center;
+        position: absolute;
+        bottom: 1vw;
+        left: 0vw;
+        white-space: pre-wrap;
     }
     
     .footerSocial {
-        margin-top: 6%;
-        position: static;
-        right: 0px;
-        font-size: 5vw;
+        margin-top: 2%;
+        position: absolute;
+        bottom: 4vw;
+        font-size: 6vw;
         
     }
     
     .footerIcon {
-        color: white;
-        padding-right: 7%;
         float: right;
+        color: white !important;
+        padding: 1%;
     }
 }
 
@@ -779,7 +1532,101 @@
   and (max-device-width: 1366px) 
   and (orientation: landscape) 
   and (-webkit-min-device-pixel-ratio: 2) {
+    .footerLanding {
+      height: 16vh;
+      padding-bottom: 0px;
+      /* position: fixed !important; */
+      /* left: 0 !important;
+      bottom: 0 !important; */
+    }
+    
+    .footerRow {
+        width: 99%;
+        max-height: 100%;
+        margin: 0 auto;
+    }
 
+    .footerLogoDiv {
+        width: 35px;
+        margin-top: 5%;
+        margin-left: 0;
+    }
+    .footerBrand {
+      padding-right: 0px !important;
+    }
+    .footerLogo {
+      width: 60px;
+      height: auto; 
+      position: absolute;
+      bottom: 1vw;
+    }
+    
+    .footerTitle {
+      font-size: 2vw;
+      font-weight: bolder;
+      color: white;
+      position: absolute;
+      bottom: 1vw;
+      left: 4vw;
+      white-space: pre-wrap;
+    }
+
+    .footerRow {
+      font-family: 'Arial';
+      width: 99%;
+      position: absolute;
+      bottom: 0;
+    }
+    
+    .footerBrand {
+      max-width: 30vw;
+    }
+
+    .footerInfo {
+      margin-left: 15px;
+    }
+    
+    .footerInfo p {
+        font-size: 1.5vw;
+        color: white;
+        line-height: 2.5vw;
+        
+    }
+    
+    .footerAddress {
+        padding: 0;
+        width: 60%;
+        margin: 0 auto;
+        position: absolute;
+        bottom: 2vw;
+        left: 0vw;
+        text-align: center;
+    }
+    
+    .footerDisclaimer {
+        padding: 0;
+        width: 60%;
+        margin: 0 auto;
+        text-align: center;
+        position: absolute;
+        bottom: -3vw;
+        left: 0vw;
+        white-space: pre-wrap;
+    }
+    
+    .footerSocial {
+        margin-top: 2%;
+        position: absolute;
+        bottom: 1vw;
+        font-size: 4vw;
+        
+    }
+    
+    .footerIcon {
+        float: right;
+        color: white !important;
+        padding: 1%;
+    }
 }
 
 /* ----------- LAPTOPS ----------- */
@@ -787,196 +1634,154 @@
 
 /* ----------- Non-Retina Screens ----------- */
 @media screen 
-  and (min-device-width: 1200px) 
+  and (min-device-width: 700px) 
   and (max-device-width: 1600px) 
   and (-webkit-min-device-pixel-ratio: 1) { 
-    
-}
-
-@media screen 
-  and (min-device-width: 1600px) 
-  and (max-device-width: 2000px) 
-  and (-webkit-min-device-pixel-ratio: 1) { 
-    
-}
-
-@media screen 
-  and (min-device-width: 2001px) 
-  and (max-device-width: 3000px) 
-  and (-webkit-min-device-pixel-ratio: 1) { 
-    .navbar {
-      height: 15% !important;
+    .footerRow {
+      height: 8vw;
+      width: 99%;
+      margin: 0 auto;
     }
-    .Navbar-logo {
-        height: 125px !important;
-    }  
-    
+    .footerLogo {
+      width: 3.5vw;
+      height: auto; 
+      position: absolute;
+      bottom: 1.5vw;
+    }
+    .footerBrand {
+      max-width: 30vw;
+    }
+    .footerDisclaimer {
+      position: absolute;
+      left: 0;
+    }
+    .footerTitle {
+      position: absolute;
+      bottom: 1.5vw;
+      left: 4vw;
+      font-size: 1.7vw;
+    }
+    .footerInfo p {
+      font-size: 1.5vw;
+      color: white;
+      line-height: .5vw;
+    }
+    .footerAddress {
+      bottom: 3.5vw; 
+    }
 }
 
 @media screen 
-  and (min-device-width: 2001px) 
-  and (max-device-width: 2100px) 
+  and (min-device-width: 1600px)  
   and (-webkit-min-device-pixel-ratio: 1) { 
-    
-    
-}
-@media screen 
-  and (min-device-width: 2101px) 
-  and (max-device-width: 2200px) 
-  and (-webkit-min-device-pixel-ratio: 1) { 
-   
-    
-}
-@media screen 
-  and (min-device-width: 2201px) 
-  and (max-device-width: 2300px) 
-  and (-webkit-min-device-pixel-ratio: 1) { 
-   
-}
-@media screen 
-  and (min-device-width: 2301px) 
-  and (max-device-width: 2400px) 
-  and (-webkit-min-device-pixel-ratio: 1) { 
-    
-}
-@media screen 
-  and (min-device-width: 2401px) 
-  and (max-device-width: 2500px) 
-  and (-webkit-min-device-pixel-ratio: 1) { 
-    
-    
-}
-@media screen 
-  and (min-device-width: 2501px) 
-  and (max-device-width: 2600px) 
-  and (-webkit-min-device-pixel-ratio: 1) { 
-
-}
-@media screen 
-  and (min-device-width: 2601px) 
-  and (max-device-width: 2700px) 
-  and (-webkit-min-device-pixel-ratio: 1) {
-
-    
-}
-@media screen 
-  and (min-device-width: 2701px) 
-  and (max-device-width: 2800px) 
-  and (-webkit-min-device-pixel-ratio: 1) { 
-
-    
-}
-@media screen 
-  and (min-device-width: 2801px) 
-  and (max-device-width: 2900px) 
-  and (-webkit-min-device-pixel-ratio: 1) { 
- 
-    
-}
-@media screen 
-  and (min-device-width: 2901px) 
-  and (max-device-width: 3000px) 
-  and (-webkit-min-device-pixel-ratio: 1) { 
-    
+    .footerRow {
+      height: 8vw;
+      width: 99%;
+      margin: 0 auto;
+    }
+    .footerLogo {
+      width: 3.5vw;
+      height: auto; 
+      position: absolute;
+      bottom: 1.5vw;
+    }
+    .footerBrand {
+      max-width: 30vw;
+    }
+    .footerDisclaimer {
+      position: absolute;
+      left: 0;
+    }
+    .footerTitle {
+      position: absolute;
+      bottom: 2vw;
+      left: 4vw;
+      font-size: 1.7vw;
+    }
+    .footerInfo p {
+      font-size: 1.2vw;
+      color: white;
+      line-height: .5vw;
+    }
+    .footerAddress {
+      bottom: 3.5vw; 
+    }
 }
 
 /* ----------- Retina Screens ----------- */
 @media screen 
-  and (min-device-width: 1200px) 
+  and (min-device-width: 700px) 
   and (max-device-width: 1600px) 
   and (-webkit-min-device-pixel-ratio: 2)
   and (min-resolution: 192dpi) { 
-    
+    .footerRow {
+      height: 8vw;
+      width: 99%;
+      margin: 0 auto;
+    }
+    .footerLogo {
+      width: 3.5vw;
+      height: auto; 
+      position: absolute;
+      bottom: 1.5vw;
+    }
+    .footerBrand {
+      max-width: 30vw;
+    }
+    .footerDisclaimer {
+      position: absolute;
+      left: 0;
+    }
+    .footerTitle {
+      position: absolute;
+      bottom: 1.5vw;
+      left: 4vw;
+      font-size: 1.7vw;
+    }
+    .footerInfo p {
+      font-size: 1.5vw;
+      color: white;
+      line-height: .5vw;
+    }
+    .footerAddress {
+      bottom: 3.5vw; 
+    }
 }
 
 @media screen 
   and (min-device-width: 1600px) 
-  and (max-device-width: 2000px) 
   and (-webkit-min-device-pixel-ratio: 2)
   and (min-resolution: 192dpi) { 
-    
-}
-@media screen 
-  and (min-device-width: 2001px) 
-  and (max-device-width: 3000px) 
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (min-resolution: 192dpi) { 
-    
-}
-
-@media screen 
-  and (min-device-width: 2001px) 
-  and (max-device-width: 2100px) 
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (min-resolution: 192dpi) { 
-    
-    
-}
-@media screen 
-  and (min-device-width: 2101px) 
-  and (max-device-width: 2200px) 
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (min-resolution: 192dpi) { 
-   
-    
-}
-@media screen 
-  and (min-device-width: 2201px) 
-  and (max-device-width: 2300px) 
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (min-resolution: 192dpi) { 
-   
-}
-@media screen 
-  and (min-device-width: 2301px) 
-  and (max-device-width: 2400px) 
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (min-resolution: 192dpi) { 
-    
-}
-@media screen 
-  and (min-device-width: 2401px) 
-  and (max-device-width: 2500px) 
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (min-resolution: 192dpi) { 
-    
-    
-}
-@media screen 
-  and (min-device-width: 2501px) 
-  and (max-device-width: 2600px) 
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (min-resolution: 192dpi) { 
-
-}
-@media screen 
-  and (min-device-width: 2601px) 
-  and (max-device-width: 2700px) 
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (min-resolution: 192dpi) {
-
-    
-}
-@media screen 
-  and (min-device-width: 2701px) 
-  and (max-device-width: 2800px) 
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (min-resolution: 192dpi) { 
-
-    
-}
-@media screen 
-  and (min-device-width: 2801px) 
-  and (max-device-width: 2900px) 
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (min-resolution: 192dpi) { 
- 
-    
-}
-@media screen 
-  and (min-device-width: 2901px) 
-  and (max-device-width: 3000px) 
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (min-resolution: 192dpi) { 
-    
+    .footerRow {
+      height: 8vw;
+      width: 99%;
+      margin: 0 auto;
+    }
+    .footerLogo {
+      width: 3.5vw;
+      height: auto; 
+      position: absolute;
+      bottom: 1.5vw;
+    }
+    .footerBrand {
+      max-width: 30vw;
+    }
+    .footerDisclaimer {
+      position: absolute;
+      left: 0;
+    }
+    .footerTitle {
+      position: absolute;
+      bottom: 2vw;
+      left: 4vw;
+      font-size: 1.7vw;
+    }
+    .footerInfo p {
+      font-size: 1.2vw;
+      color: white;
+      line-height: .5vw;
+    }
+    .footerAddress {
+      bottom: 3.5vw; 
+    }
 }

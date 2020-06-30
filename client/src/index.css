@@ -1,5 +1,6 @@
 body {
   min-height: 100vh;
+  width: 100% !important;
   position: relative;
   overflow: auto !important;
   /* overflow-x: hidden !important; */

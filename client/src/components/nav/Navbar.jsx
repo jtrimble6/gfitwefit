@@ -68,7 +68,14 @@ class Navbar extends Component {
                   <div className="row masterRow">
                     <div className="pages">
                       <div className="row">
-                        <i className="navbarTogglerButtonCustom fas fa-bars navbar-toggler collapsed navbar-toggler-right" data-toggle='collapse' data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation" onClick={this.toggleNavbar}>
+                        <i className="navbarTogglerButtonCustom fas fa-bars navbar-toggler collapsed navbar-toggler-right" 
+                          data-toggle='collapse' 
+                          data-target="#navbarResponsive" 
+                          aria-controls="navbarResponsive" 
+                          aria-expanded="false" 
+                          aria-label="Toggle navigation" 
+                          onClick={this.toggleNavbar}
+                        >
                         <Menu 
                           right 
                           disableAutoFocus               

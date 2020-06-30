@@ -17,7 +17,7 @@
     /* min-height: 100%; */
     width: 70%;
     margin: 0 auto;
-    margin-top: 20%;
+    margin-top: 25vh;
     /* margin-bottom: 20% !important; */
     color: white;
     white-space: nowrap;
@@ -34,9 +34,13 @@
 }
 
 .signUpUserStep {
-    font-size: 2vw;
     text-align: center;
     color: #FAC04E;
+    font-size: 2vw;
+}
+
+.signUpRequired {
+    text-align: center !important;
 }
 
 .userSignUp {
@@ -76,6 +80,7 @@
 
 .formWaiverRow {
     margin: 5%;
+    white-space: pre-wrap !important;
 }
 
 .waiver {
@@ -124,6 +129,13 @@
 
 .formNav .btn-primary {
     background-color: white !important;
+}
+
+.changeStepAlert {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 1vh;
+    text-align: center;
 }
 
 .nextStep {
@@ -766,27 +778,21 @@
   and (min-device-width: 1200px) 
   and (max-device-width: 1600px) 
   and (-webkit-min-device-pixel-ratio: 1) { 
-    .signUpUserDiv {
-        margin-top: 10%;
-    }
+  
 }
 
 @media screen 
   and (min-device-width: 1601px) 
   and (max-device-width: 2000px) 
   and (-webkit-min-device-pixel-ratio: 1) { 
-    .signUpUserDiv {
-        margin-top: 10%;
-    }
+  
 }
 
 @media screen 
   and (min-device-width: 2001px) 
   and (max-device-width: 3000px) 
   and (-webkit-min-device-pixel-ratio: 1) { 
-    .signUpUserDiv {
-        margin-top: 10%;
-    }
+    
 }
 
 /* ----------- Retina Screens ----------- */
@@ -795,25 +801,19 @@
   and (max-device-width: 1600px) 
   and (-webkit-min-device-pixel-ratio: 2)
   and (min-resolution: 192dpi) { 
-    .signUpUserDiv {
-        margin-top: 10%;
-    }
+    
 }
 
 @media screen 
   and (min-device-width: 1601px) 
   and (max-device-width: 2000px) 
   and (-webkit-min-device-pixel-ratio: 2) { 
-    .signUpUserDiv {
-        margin-top: 10%;
-    }
+   
 }
 
 @media screen 
   and (min-device-width: 2001px) 
   and (max-device-width: 3000px) 
   and (-webkit-min-device-pixel-ratio: 2) { 
-    .signUpUserDiv {
-        margin-top: 10%;
-    }
+   
 }

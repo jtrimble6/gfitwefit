@@ -15,7 +15,7 @@
 
     .masterRow {
         height: 50px !important;
-        max-width: 100% !important;
+        /* max-width: 100% !important; */
         margin: 0 auto !important;
     }
 
@@ -28,6 +28,7 @@
         top: 0;
         transition: top 0.6s;
         height: 8vh !important;
+
     }
 
     /* .navbar--hidden {
@@ -61,11 +62,165 @@
         color: #000000 !important;
     }
     .nav-item {
-        padding-bottom: 10px;
+        border-radius: 5%;
         color: #000000;
-        padding-left: 0 !important;
-        padding-right: 0 !important;
         letter-spacing: 2px;
+        margin: 0 auto;
+    }
+    .nav-item:hover {
+        /* text-shadow: 2px 2px #FAC04E; */
+        text-decoration: none !important;
+        background-color: transparent !important;
+        color: #000000 !important;
+        cursor: pointer !important;
+    }
+    
+    .nav-link {
+        font-family: 'gfitfont-bold';
+        font-weight: 900;
+        font-size: 1.7vw;
+        text-align: center !important;
+        color: #000000;
+        
+    }
+    .nav-link:hover {
+        text-shadow: 2px 2px white;
+        background-color: transparent !important;
+        color: #000000;
+        
+    }
+    .pages {
+        position: absolute;
+        right: 3%;
+    }
+    .iconBar {
+        color: #FAC04E !important;
+        background-color: transparent !important;
+    }
+
+    
+    
+/* BURGER MENU */
+    .burgerMenu {
+        height: 100% !important;
+        top: 5px;
+        background-color: #FAC04E;
+        padding-top: 15%;
+        width: 100%;
+    }
+    .navbarTogglerButtonCustom {
+        top: 10px !important;
+        /* color: black !important; */
+    }
+    .bm-item {
+        font-size: 3vw !important;
+        font-weight: bolder !important;
+        color: black !important;
+    }
+    .bm-cross {
+      background: transparent !important;
+      height: 3vh;
+      width: 1.5vw ;
+    }
+    .bm-cross-button {
+      left: 10px;
+    }
+
+    .signUp {
+      background-color: black !important;
+      color: #FAC04E !important;
+      padding: 5%;
+      border-radius: 5%;
+      white-space: nowrap;
+      font-size: 1.7vw;
+    }
+    .signUp:hover {
+        color: #FAC04E !important;
+        text-shadow: 1px 1px white;
+        background-color: black !important;
+        text-decoration: none !important;
+    }
+
+@media only screen 
+    and (min-device-width: 420px) 
+    and (max-device-width: 480px) {
+      .burgerMenu {
+        right: 50px;
+    }
+  }
+
+/* ----------- iPads ----------- */
+
+/* ----------- iPad 1, 2, Mini and Air ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+
+}
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+    
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: landscape) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+
+}
+
+/* ----------- iPad 3, 4 and Pro 9.7" ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+}
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+    .signUp {
+      background-color: black !important;
+      color: #FAC04E !important;
+      border-radius: 5%;
+      white-space: nowrap;
+      margin: 0 auto;
+      margin-top: 10% !important;
+      padding: 1rem 1rem;
+    }
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: landscape) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+    .navbar {
+      height: 20vh !important;
+    }
+    .nav-item {
+      padding-bottom: 10px;
+      color: #000000;
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+      letter-spacing: 2px;
     }
     .nav-item:hover {
         text-shadow: 2px 2px #FAC04E;
@@ -79,67 +234,219 @@
         font-weight: 900;
         font-size: 1.7vw;
         text-align: center !important;
-        color: #101010 !important;
+        color: #000000 !important;
     }
     .nav-link:hover {
         text-shadow: 2px 2px white;
         background-color: transparent !important;
-        color: #101010 !important;
+        color: #000000 !important;
     }
-    .pages {
-        position: absolute;
-        right: 3%;
-    }
-    .iconBar {
-        color: #FAC04E !important;
-        background-color: transparent !important;
-    }
-
-    .signUp {
-        background-color: #211C18 !important;
-        padding: 5%;
+      .navbar-brand {
+        top: 0px !important;
+      }
+      .Navbar-logo {
+          height: 60px !important;
+      }  
+      .burgerMenu {
+          height: 85% !important;
+          width: 50% !important;
+      }
+      .bm-item {
+          font-size: 8vw !important;
+      }
+      .signUp {
+        background-color: black !important;
         color: #FAC04E !important;
         border-radius: 5%;
+        white-space: nowrap;
+        margin: 0 auto;
+      }
+      .signUp:hover {
+          color: #FAC04E !important;
+          text-shadow: 1px 1px white;
+          background-color: black !important;
+      }
+
+    
+    
+}
+
+/* ----------- iPad Pro 10.5" ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 834px) 
+  and (max-device-width: 1112px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+}
+
+/* Portrait */
+/* Declare the same value for min- and max-width to avoid colliding with desktops */
+/* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
+@media only screen 
+  and (min-device-width: 834px) 
+  and (max-device-width: 834px) 
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+}
+
+/* Landscape */
+/* Declare the same value for min- and max-width to avoid colliding with desktops */
+/* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
+@media only screen 
+  and (min-device-width: 1112px) 
+  and (max-device-width: 1112px) 
+  and (orientation: landscape) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+    .navbar {
+      height: 20vh !important;
     }
-    .signUp:hover {
-        color: #FAC04E !important;
-        text-shadow: 1px 1px white;
-        background-color: #211C18 !important;
+    .nav-item {
+      padding-bottom: 10px;
+      color: #000000;
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+      letter-spacing: 2px;
+    }
+    .nav-item:hover {
+        text-shadow: 2px 2px #FAC04E;
+        background-color: transparent !important;
+        color: #000000 !important;
+        cursor: pointer !important;
     }
     
-/* BURGER MENU */
-    .burgerMenu {
-        height: 100% !important;
-        top: 5px;
-        background-color: #FAC04E;
-        padding-top: 15%;
-        width: 100%;
+    .nav-link {
+        font-family: 'gfitfont-bold';
+        font-weight: 900;
+        font-size: 1.7vw;
+        text-align: center !important;
+        color: #000000 !important;
     }
-    .navbarTogglerButtonCustom {
-        top: 10px !important;
-        color: black !important;
+    .nav-link:hover {
+        text-shadow: 2px 2px white;
+        background-color: transparent !important;
+        color: #000000 !important;
     }
-    .bm-item {
-        font-size: 3vw !important;
-        font-weight: bolder !important;
-        color: black !important;
-    }
-    .bm-cross {
-      background: black;
-      height: 3vh !important;
-      width: 1.5vw !important;
-    }
-    .bm-cross-button {
-      left: 10px;
-    }
-
-@media only screen 
-    and (min-device-width: 420px) 
-    and (max-device-width: 480px) {
+      .navbar-brand {
+        top: 0px !important;
+      }
+      .Navbar-logo {
+          height: 60px !important;
+      }  
       .burgerMenu {
-        right: 50px;
+          height: 85% !important;
+          width: 50% !important;
+      }
+      .bm-item {
+          font-size: 8vw !important;
+      }
+      .signUp {
+        background-color: black !important;
+        color: #FAC04E !important;
+        border-radius: 5%;
+        white-space: nowrap;
+        margin: 0 auto;
+      }
+      .signUp:hover {
+          color: #FAC04E !important;
+          text-shadow: 1px 1px white;
+          background-color: black !important;
+      }
+}
+
+/* ----------- iPad Pro 12.9" ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 1024px) 
+  and (max-device-width: 1366px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    
+}
+
+/* Portrait */
+/* Declare the same value for min- and max-width to avoid colliding with desktops */
+/* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
+@media only screen 
+  and (min-device-width: 1024px) 
+  and (max-device-width: 1024px) 
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+    .nav-link {
+      font-size: 2.7vw;
+    }
+    .signUp {
+      font-size: 2.7vw;
     }
   }
+
+/* Landscape */
+/* Declare the same value for min- and max-width to avoid colliding with desktops */
+/* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
+@media only screen 
+  and (min-device-width: 1366px) 
+  and (max-device-width: 1366px) 
+  and (orientation: landscape) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+    .navbar {
+      height: 20vh !important;
+    }
+    .nav-item {
+      padding-bottom: 10px;
+      color: #000000;
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+      letter-spacing: 2px;
+    }
+    .nav-item:hover {
+        text-shadow: 2px 2px #FAC04E;
+        background-color: transparent !important;
+        color: #000000 !important;
+        cursor: pointer !important;
+    }
+    
+    .nav-link {
+        font-family: 'gfitfont-bold';
+        font-weight: 900;
+        font-size: 1.7vw;
+        text-align: center !important;
+        color: #000000 !important;
+    }
+    .nav-link:hover {
+        text-shadow: 2px 2px white;
+        background-color: transparent !important;
+        color: #000000 !important;
+    }
+      .navbar-brand {
+        top: 0px !important;
+      }
+      .Navbar-logo {
+          height: 60px !important;
+      }  
+      .burgerMenu {
+          height: 85% !important;
+          width: 50% !important;
+      }
+      .bm-item {
+          font-size: 8vw !important;
+      }
+      .signUp {
+        background-color: black !important;
+        color: #FAC04E !important;
+        border-radius: 5%;
+        white-space: nowrap;
+        margin: 0 auto;
+      }
+      .signUp:hover {
+          color: #FAC04E !important;
+          text-shadow: 1px 1px white;
+          background-color: black !important;
+      }
+}
+
+/* ----------- iPhones ----------- */
 
 
 /* ----------- iPhone 4 and 4S ----------- */
@@ -202,6 +509,15 @@
         padding-right: 0;
         padding-left: 0;
     }
+    .bm-cross {
+      background: black;
+      width: 5vw !important;
+      height: auto !important;
+    }
+    .bm-cross-button {
+      left: 20px;
+      top: 15px !important;
+    }
 }
 
 /* Landscape */
@@ -210,7 +526,62 @@
   and (max-device-width: 568px)
   and (-webkit-min-device-pixel-ratio: 2)
   and (orientation: landscape) {
+    .navbar {
+      height: 30vh !important;
+      width: 223vw;
+    }
+    .navbar-brand {
+      top: 0px !important;
+    }
+    .Navbar-logo {
+        height: 80px !important;
+    }  
+    .burgerMenu {
+        height: 85% !important;
+        width: 50% !important;
+    }
+    .bm-item {
+        font-size: 8vw !important;
+    }
+    .signUp {
+        padding-right: 0;
+        padding-left: 0;
+    }
 
+    /* BURGER MENU */
+    .burgerMenu {
+      height: 100% !important;
+      top: 5px;
+      right: 0px !important;
+      background-color: #FAC04E;
+      padding-top: 15%;
+      width: 20% !important;
+    }
+    .navbarTogglerButtonCustom {
+        top: 3px !important;
+        color: black !important;
+        font-size: 6vw;
+    }
+    .bm-menu {
+      line-height: 12vw;
+    }
+    .bm-item-list {
+      height: 40% !important;
+    }
+    .bm-item {
+        font-size: 8vw !important;
+        font-weight: bolder !important;
+        /* color: black !important; */
+    }
+    .bm-cross {
+      background: black;
+      width: 8vw !important;
+      height: auto !important;
+    }
+    .bm-cross-button {
+      left: 20px;
+      top: 15px !important;
+    }
 }
 
 /* ----------- iPhone 6, 6S, 7 and 8 ----------- */
@@ -236,8 +607,64 @@
 @media only screen 
   and (min-device-width: 375px) 
   and (max-device-width: 667px) 
+  and (min-device-height: 365px)
   and (-webkit-min-device-pixel-ratio: 2)
   and (orientation: landscape) { 
+    .navbar {
+      height: 20vh !important;
+    }
+    .navbar-brand {
+      top: 0px !important;
+    }
+    .Navbar-logo {
+        height: 60px !important;
+    }  
+    .burgerMenu {
+        height: 85% !important;
+        width: 50% !important;
+    }
+    .bm-item {
+        font-size: 8vw !important;
+    }
+    .signUp {
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    /* BURGER MENU */
+    .burgerMenu {
+      height: 100% !important;
+      top: 5px;
+      right: 0px !important;
+      background-color: #FAC04E;
+      padding-top: 15%;
+      width: 40% !important;
+    }
+    .navbarTogglerButtonCustom {
+        top: 3px !important;
+        color: black !important;
+        font-size: 4vw;
+    }
+    .bm-menu {
+      line-height: 4vw;
+    }
+    .bm-item-list {
+      height: 40% !important;
+    }
+    .bm-item {
+        font-size: 4vw !important;
+        font-weight: bolder !important;
+        /* color: black !important; */
+    }
+    .bm-cross {
+      background: black;
+      width: 4vw !important;
+      height: auto !important;
+    }
+    .bm-cross-button {
+      left: 20px;
+      top: 15px !important;
+    }
 
 }
 
@@ -266,7 +693,61 @@
   and (max-device-width: 736px) 
   and (-webkit-min-device-pixel-ratio: 3)
   and (orientation: landscape) { 
+    .navbar {
+      height: 30vh !important;
+    }
+    .navbar-brand {
+      top: 0px !important;
+    }
+    .Navbar-logo {
+        height: 80px !important;
+    }  
+    .burgerMenu {
+        height: 85% !important;
+        width: 50% !important;
+    }
+    .bm-item {
+        font-size: 8vw !important;
+    }
+    .signUp {
+        padding-right: 0;
+        padding-left: 0;
+    }
 
+    /* BURGER MENU */
+    .burgerMenu {
+      height: 100% !important;
+      top: 5px;
+      right: 0px !important;
+      background-color: #FAC04E;
+      padding-top: 15%;
+      width: 20% !important;
+    }
+    .navbarTogglerButtonCustom {
+        top: 3px !important;
+        color: black !important;
+        font-size: 6vw;
+    }
+    .bm-menu {
+      line-height: 12vw;
+    }
+    .bm-item-list {
+      height: 40% !important;
+    }
+    .bm-item {
+        font-size: 6vw !important;
+        font-weight: bolder !important;
+        /* color: black !important; */
+    }
+    .bm-cross {
+      background: black;
+      width: 8vw !important;
+      height: auto !important;
+    }
+    .bm-cross-button {
+      left: 20px;
+      top: 15px !important;
+    }
 }
 
 /* ----------- iPhone X ----------- */
@@ -285,9 +766,9 @@
   and (max-device-width: 812px) 
   and (-webkit-min-device-pixel-ratio: 3)
   and (orientation: portrait) { 
-    .navbar {
-        /* height: 8%; */
-    }
+    /* .navbar {
+        height: 8%;
+    } */
     .navbar-brand {
       left: 0px;
     }
@@ -314,8 +795,68 @@
   and (max-device-width: 812px) 
   and (-webkit-min-device-pixel-ratio: 3)
   and (orientation: landscape) { 
+    .navbar {
+      height: 20vh !important;
+    }
+    .navbar-brand {
+      top: 0px !important;
+    }
+    .Navbar-logo {
+        height: 60px !important;
+    }  
+    .burgerMenu {
+        height: 85% !important;
+        width: 50% !important;
+    }
+    .bm-item {
+        font-size: 8vw !important;
+    }
+    .signUp {
+        padding-right: 0;
+        padding-left: 0;
+    }
 
+    /* BURGER MENU */
+    .burgerMenu {
+      height: 100% !important;
+      top: 5px;
+      right: 0px !important;
+      background-color: #FAC04E;
+      padding-top: 15%;
+      width: 20% !important;
+    }
+    .navbarTogglerButtonCustom {
+        top: 3px !important;
+        color: black !important;
+        font-size: 3vw;
+    }
+    .bm-menu {
+      line-height: 12vw;
+    }
+    .bm-item-list {
+      height: 40% !important;
+    }
+    .bm-item {
+        font-size: 2vw !important;
+        font-weight: bolder !important;
+        line-height: 3vw;
+        /* color: black !important; */
+    }
+    .bm-cross {
+      background: black;
+      width: 3vw !important;
+      height: auto !important;
+    }
+    .bm-cross-button {
+      left: 20px;
+      top: 15px !important;
+    }
 }
+
+
+
+
+
 
 
 /* ----------- LAPTOPS ----------- */
@@ -323,200 +864,83 @@
 
 /* ----------- Non-Retina Screens ----------- */
 @media screen 
-  and (min-device-width: 850px) 
-  and (max-device-width: 1600px) 
+  and (min-device-width: 700px) 
+  and (max-device-width: 1200px) 
   and (-webkit-min-device-pixel-ratio: 1) { 
     .navbar {
-      height: 12vh !important;
+      height: 10vw !important;
+    }
+
+    /* BURGER MENU */
+    .burgerMenu {
+      height: 100% !important;
+      top: 5px;
+      right: -40vw !important;
+      width: 70% !important;
+    }
+    .navbarTogglerButtonCustom {
+      top: 3px !important;
+      color: black !important;
+      font-size: 3vw;
+    }
+    .bm-menu {
+      line-height: 6vw;
+      max-width: 30vw;
+    }
+    .bm-item-list {
+      height: 40% !important;
+    }
+    .bm-item {
+        font-size: 2vw !important;
+        font-weight: bolder !important;
+        line-height: 3vw;
+        /* color: black !important; */
+    }
+    .bm-cross {
+      background: black;
+      width: 3vw !important;
+      height: auto !important;
+    }
+    .bm-cross-button {
+      left: 20px;
+      top: 15px !important;
     }
 }
 
 @media screen 
-  and (min-device-width: 1600px) 
+  and (min-device-width: 1201px) 
+  and (max-device-width: 1600px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+    .navbar {
+      height: 10vw !important;
+    }
+}
+
+@media screen 
+  and (min-device-width: 1601px) 
+  and (max-device-width: 1800px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+    .navbar {
+      height: 10vw !important;
+    }
+}
+
+@media screen 
+  and (min-device-width: 1800px) 
   and (max-device-width: 2000px) 
   and (-webkit-min-device-pixel-ratio: 1) { 
     .navbar {
-      height: 10vh !important;
+      height: 10vw !important;
     }
 }
 
 @media screen 
   and (min-device-width: 2001px) 
-  and (max-device-width: 3000px) 
   and (-webkit-min-device-pixel-ratio: 1) { 
     .navbar {
-      height: 15vh !important;
+      height: 40vw !important;
     }
     .Navbar-logo {
         height: 125px !important;
     }  
-    
-}
-
-@media screen 
-  and (min-device-width: 2001px) 
-  and (max-device-width: 2100px) 
-  and (-webkit-min-device-pixel-ratio: 1) { 
-    
-    
-}
-@media screen 
-  and (min-device-width: 2101px) 
-  and (max-device-width: 2200px) 
-  and (-webkit-min-device-pixel-ratio: 1) { 
-   
-    
-}
-@media screen 
-  and (min-device-width: 2201px) 
-  and (max-device-width: 2300px) 
-  and (-webkit-min-device-pixel-ratio: 1) { 
-   
-}
-@media screen 
-  and (min-device-width: 2301px) 
-  and (max-device-width: 2400px) 
-  and (-webkit-min-device-pixel-ratio: 1) { 
-    
-}
-@media screen 
-  and (min-device-width: 2401px) 
-  and (max-device-width: 2500px) 
-  and (-webkit-min-device-pixel-ratio: 1) { 
-    
-    
-}
-@media screen 
-  and (min-device-width: 2501px) 
-  and (max-device-width: 2600px) 
-  and (-webkit-min-device-pixel-ratio: 1) { 
-
-}
-@media screen 
-  and (min-device-width: 2601px) 
-  and (max-device-width: 2700px) 
-  and (-webkit-min-device-pixel-ratio: 1) {
-
-    
-}
-@media screen 
-  and (min-device-width: 2701px) 
-  and (max-device-width: 2800px) 
-  and (-webkit-min-device-pixel-ratio: 1) { 
-
-    
-}
-@media screen 
-  and (min-device-width: 2801px) 
-  and (max-device-width: 2900px) 
-  and (-webkit-min-device-pixel-ratio: 1) { 
- 
-    
-}
-@media screen 
-  and (min-device-width: 2901px) 
-  and (max-device-width: 3000px) 
-  and (-webkit-min-device-pixel-ratio: 1) { 
-    
-}
-
-/* ----------- Retina Screens ----------- */
-@media screen 
-  and (min-device-width: 1200px) 
-  and (max-device-width: 1600px) 
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (min-resolution: 192dpi) { 
-    
-}
-
-@media screen 
-  and (min-device-width: 1600px) 
-  and (max-device-width: 2000px) 
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (min-resolution: 192dpi) { 
-    
-}
-@media screen 
-  and (min-device-width: 2001px) 
-  and (max-device-width: 3000px) 
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (min-resolution: 192dpi) { 
-    
-}
-
-@media screen 
-  and (min-device-width: 2001px) 
-  and (max-device-width: 2100px) 
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (min-resolution: 192dpi) { 
-    
-    
-}
-@media screen 
-  and (min-device-width: 2101px) 
-  and (max-device-width: 2200px) 
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (min-resolution: 192dpi) { 
-   
-    
-}
-@media screen 
-  and (min-device-width: 2201px) 
-  and (max-device-width: 2300px) 
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (min-resolution: 192dpi) { 
-   
-}
-@media screen 
-  and (min-device-width: 2301px) 
-  and (max-device-width: 2400px) 
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (min-resolution: 192dpi) { 
-    
-}
-@media screen 
-  and (min-device-width: 2401px) 
-  and (max-device-width: 2500px) 
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (min-resolution: 192dpi) { 
-    
-    
-}
-@media screen 
-  and (min-device-width: 2501px) 
-  and (max-device-width: 2600px) 
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (min-resolution: 192dpi) { 
-
-}
-@media screen 
-  and (min-device-width: 2601px) 
-  and (max-device-width: 2700px) 
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (min-resolution: 192dpi) {
-
-    
-}
-@media screen 
-  and (min-device-width: 2701px) 
-  and (max-device-width: 2800px) 
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (min-resolution: 192dpi) { 
-
-    
-}
-@media screen 
-  and (min-device-width: 2801px) 
-  and (max-device-width: 2900px) 
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (min-resolution: 192dpi) { 
- 
-    
-}
-@media screen 
-  and (min-device-width: 2901px) 
-  and (max-device-width: 3000px) 
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (min-resolution: 192dpi) { 
-    
 }

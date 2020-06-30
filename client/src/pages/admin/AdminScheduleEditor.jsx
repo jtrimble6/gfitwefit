@@ -66,34 +66,29 @@ class AdminScheduleEditor extends Component {
             let day = ''
             let data = schedule[g]
             // console.log('THIS DAY: ', schedule[g].dayOfWeek)
+
+            // Set day of week for ordering
             switch (schedule[g].dayOfWeek) {
                 case 'Monday':
                   day = 1;
-                  // console.log('TODAY IS: ', day)
                   break;
                 case 'Tuesday':
                    day = 2;
-                  //  console.log('TODAY IS: ', day)
                   break;
                 case 'Wednesday':
                   day = 3;
-                  // console.log('TODAY IS: ', day)
                   break;
                 case 'Thursday':
                   day = 4;
-                  // console.log('TODAY IS: ', day)
                   break;
                 case 'Friday':
                   day = 5;
-                  // console.log('TODAY IS: ', day)
                   break;
                 case 'Saturday':
                   day = 6;
-                  // console.log('TODAY IS: ', day)
                   break;
                 default: 
                   day = "Monday";
-                  // console.log('TODAY IS: ', day)
               }
 
             let scheduleData = {
@@ -135,47 +130,49 @@ class AdminScheduleEditor extends Component {
             workout: this.state.workout,
             times: this.state.times,
         };
-        // console.log('THE DATA: ', scheduleData);
-          API.getSchedule(scheduleData.dayOfWeek)
+        console.log('THE DATA: ', scheduleData);
+        API.getSchedule(scheduleData.dayOfWeek)
           .then(res => {
             console.log(res)
             if (res.data[0]) {
 
-                // console.log("Day scheduled")
+                console.log("Day already scheduled")
 
                 // DELETE OLD DAY DATA
                 API.deleteSchedule(scheduleData.dayOfWeek)
                   .then(res => {
                       console.log('DAY DELETED: ', res)
+                      // SAVE NEW DAY DATA
+                      API.saveSchedule(scheduleData)
+                      .then(res => {
+                          if (res.data) {
+                              console.log("Successfully scheduled!")
+                              this.setState({
+                                  dayOfWeek: '',
+                                  workout: '',
+                                  times: '',
+                              })
+                          } else {
+                              console.log("schedule error")
+                          }
+                      })
+                      .catch(error => { console.log(error) })
                     })
                   .catch(err => console.log(err))
                 
-                // SAVE NEW DAY DATA
-                API.saveSchedule(scheduleData)
-                .then(res => {
-                    if (res.data) {
-                        // console.log("Successfully scheduled!")
-                        this.setState({
-                            dayOfWeek: '',
-                            workout: '',
-                            times: '',
-                        })
-                    } else {
-                        console.log("schedule error")
-                    }
-                })
-                .catch(error => { console.log(error) })
+                
                 
             } else {
                 API.saveSchedule(scheduleData)
                 .then(res => {
                     if (res.data) {
-                        // console.log("Successfully scheduled!")
+                        console.log("Successfully scheduled!", res.data)
                         this.setState({
                             dayOfWeek: '',
                             workout: '',
                             times: '',
                         })
+                        window.location.reload()
                     } else {
                         console.log("schedule error")
                     }
@@ -183,7 +180,8 @@ class AdminScheduleEditor extends Component {
                 .catch(error => { console.log(error) })
             }
         })
-        window.location.reload()
+        
+        
       }
         
 
@@ -219,19 +217,19 @@ class AdminScheduleEditor extends Component {
                             <label htmlFor="dayOfWeek">Day</label>
                               <select
                                     name="dayOfWeek"
-                                    value={this.state.sport}
+                                    value={this.state.dayOfWeek}
                                     onChange={this.handleInputChange}
                                     type="text"
                                     className="form-control"
                                     id="dayOfWeek"                                       
                                 >
                                 <option value=''>Select One</option>
-                                <option value='Monday'>Monday</option>
-                                <option value='Tuesday'>Tuesday</option>
-                                <option value='Wednesday'>Wednesday</option>
-                                <option value='Thursday'>Thursday</option>
-                                <option value='Friday'>Friday</option>
-                                <option value='Saturday'>Saturday</option>
+                                <option value='Monday'>MONDAYS</option>
+                                <option value='Tuesday'>TUESDAYS</option>
+                                <option value='Wednesday'>WEDNESDAYS</option>
+                                <option value='Thursday'>THURSDAYS</option>
+                                <option value='Friday'>FRIDAYS</option>
+                                <option value='Saturday'>SATURDAYS</option>
                               </select>
                         </div>
                         <div className="form-group">
@@ -245,11 +243,11 @@ class AdminScheduleEditor extends Component {
                                     id="workout"                                       
                                 >
                                 <option value=''>Select One</option>
-                                <option value='UPPER + BOXING'>UPPER + BOXING</option>
-                                <option value='LOWER STRENGTH'>LOWER STRENGTH</option>
-                                <option value='H.I.I.T + BOXING'>H.I.I.T + BOXING</option>
-                                <option value='UPPER STRENGTH'>UPPER STRENGTH</option>
-                                <option value='CARDIO + CORE'>CARDIO + CORE</option>
+                                <option value='UPPER BODY//BOXING'>UPPER BODY//BOXING</option>
+                                <option value='LOWER BODY//STRENGTH'>LOWER BODY//STRENGTH</option>
+                                <option value='H.I.I.T.//BOXING'>H.I.I.T.//BOXING</option>
+                                <option value='UPPER BODY//STRENGTH'>UPPER BODY//STRENGTH</option>
+                                <option value='CARDIO//CORE'>CARDIO//CORE</option>
                               </select>
                         </div>
                         <div className="form-group">

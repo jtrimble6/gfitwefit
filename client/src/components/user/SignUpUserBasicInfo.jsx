@@ -26,31 +26,32 @@ class SignUpUserBasicInfo extends Component {
                         name="height"
                         title="height"
                     >
-                        <option>under 5'0"</option>
-                        <option>5'1"</option>
-                        <option>5'2"</option>
-                        <option>5'3"</option>
-                        <option>5'4"</option>
-                        <option>5'5"</option>
-                        <option>5'6"</option>
-                        <option>5'7"</option>
-                        <option>5'8"</option>
-                        <option>5'9"</option>
-                        <option>5'10"</option>
-                        <option>5'11"</option>
-                        <option>6'0"</option>
-                        <option>6'1"</option>
-                        <option>6'2"</option>
-                        <option>6'3"</option>
-                        <option>6'4"</option>
-                        <option>6'5"</option>
-                        <option>6'6"</option>
-                        <option>6'7"</option>
-                        <option>6'8"</option>
-                        <option>6'9"</option>
-                        <option>6'10"</option>
-                        <option>6'11"</option>
-                        <option>over 7'0"</option>
+                      <option>Select One</option>
+                      <option>under 5'0"</option>
+                      <option>5'1"</option>
+                      <option>5'2"</option>
+                      <option>5'3"</option>
+                      <option>5'4"</option>
+                      <option>5'5"</option>
+                      <option>5'6"</option>
+                      <option>5'7"</option>
+                      <option>5'8"</option>
+                      <option>5'9"</option>
+                      <option>5'10"</option>
+                      <option>5'11"</option>
+                      <option>6'0"</option>
+                      <option>6'1"</option>
+                      <option>6'2"</option>
+                      <option>6'3"</option>
+                      <option>6'4"</option>
+                      <option>6'5"</option>
+                      <option>6'6"</option>
+                      <option>6'7"</option>
+                      <option>6'8"</option>
+                      <option>6'9"</option>
+                      <option>6'10"</option>
+                      <option>6'11"</option>
+                      <option>over 7'0"</option>
                     </Form.Control>
                 </Form.Group>
 
@@ -69,31 +70,6 @@ class SignUpUserBasicInfo extends Component {
                     </InputGroup.Append>
                   </InputGroup>
                 </Form.Group>
-
-                {/* <Form.Group as={Col} controlid="formGridWeight">
-                    <Form.Label>Weight</Form.Label>
-                    <Form.Control 
-                        value={this.props.weight}
-                        onChange={this.props.handleChange}
-                        name="weight"
-                        placeholder="Weight" 
-                    />
-                    <InputGroup.Append>
-                        <InputGroup.Text>lbs</InputGroup.Text>
-                    </InputGroup.Append>
-                    <Form.Control 
-                        as="select"
-                        value={this.props.weight}
-                        onChange={this.props.handleChange}
-                        name="weight"
-                    >
-                        <option>under 100lbs</option>
-                        <option>20lbs</option>
-                        <option>30lbs</option>
-                        <option>40lbs</option>
-                        <option>50lbs</option>
-                    </Form.Control>
-                </Form.Group> */}
 
               </Form.Row>
 

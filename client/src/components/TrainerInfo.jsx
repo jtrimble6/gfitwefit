@@ -1,8 +1,10 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 import '../css/trainerInfo.css'
 import { Row, Col, Card, Button } from 'react-bootstrap'
-import walt from '../css/images/Walt.jpg';
-import kyle from '../css/images/Kyle.jpg';
+import walt from '../css/images/headshots/Walt.jpg'
+import kyle from '../css/images/headshots/Kyle.jpg'
+import jenn from '../css/images/headshots/Jenn.jpeg'
+import jacob from '../css/images/headshots/Jacob.jpg'
 
 class TrainerInfo extends Component {
 
@@ -40,9 +42,21 @@ class TrainerInfo extends Component {
                     {/* TRAINER BIO 3 */}
                     <Col sm className='trainerBioCardColumn'>
                       <Card className='trainerBioCard'>
-                        <Card.Img className='trainerBioImage' variant="top" src={walt} />
+                        <Card.Img className='trainerBioImage' variant="top" src={jenn} />
                         <Card.Body>
-                            <Card.Title className='trainerBioTitle'>JENNIFER</Card.Title>
+                            <Card.Title className='trainerBioTitle'>JENNIFER COLEMAN</Card.Title>
+                            <Card.Subtitle className='trainerBioSubtitle'>TRAINER</Card.Subtitle>
+                            <Button className='trainerBioButton'>BIO //</Button>
+                        </Card.Body>
+                      </Card>
+                    </Col>
+
+                    {/* TRAINER BIO 4 */}
+                    <Col sm className='trainerBioCardColumn'>
+                      <Card className='trainerBioCard'>
+                        <Card.Img className='trainerBioImage' variant="top" src={jacob} />
+                        <Card.Body>
+                            <Card.Title className='trainerBioTitle'>JACOB ERDTMANN</Card.Title>
                             <Card.Subtitle className='trainerBioSubtitle'>TRAINER</Card.Subtitle>
                             <Button className='trainerBioButton'>BIO //</Button>
                         </Card.Body>

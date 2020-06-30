@@ -1,11 +1,13 @@
 import React, { Component } from 'react'
-// import { Helmet } from "react-helmet";
 import { Redirect } from 'react-router-dom'
 import axios from 'axios'
 import '../../css/signup.css'
-// import ExistingAccount from "../../alerts/ExistingAccount";
-// import PasswordError from '../../alerts/PasswordError';
 import API from '../../utils/API'
+// import UnderConstructionPage from '../UnderConstructionPage.jsx'
+import { NavLink } from 'reactstrap';
+import { Form, Button } from 'react-bootstrap'
+
+// SIGN UP PAGES
 import SignUpUserPersonalInfo from './SignUpUserPersonalInfo'
 import SignUpUserBasicInfo from './SignUpUserBasicInfo'
 import SignUpUserHealthInfo from './SignUpUserHealthInfo'
@@ -14,12 +16,15 @@ import SignUpUserPayment from './SignUpUserPayment'
 import SignUpUserConvergeLightbox from './SignUpUserConvergeLightbox'
 import SignUpUserAcknowledgement from './SignUpUserAcknowledgment'
 
-// import UnderConstructionPage from '../UnderConstructionPage.jsx'
-import { NavLink } from 'reactstrap';
-import { Form, Button } from 'react-bootstrap'
-require('dotenv').config();
+// ALERTS 
+import changeStepError from '../alerts/ChangeStepError'
+import ChangeStepError from '../alerts/ChangeStepError'
+
+// import ExistingAccount from "../../alerts/ExistingAccount";
+// import PasswordError from '../../alerts/PasswordError';
 
 const normalizeInput = (value, previousValue) => {
+  // console.log('normalizing input')
   if (!value) return value;
   const currentValue = value.replace(/[^\d]/g, '');
   const cvLength = currentValue.length;
@@ -31,14 +36,15 @@ const normalizeInput = (value, previousValue) => {
   }
 };
 
-const validateInput = value => {
-  let error = ""
+// const validateInput = value => {
+//   let error = ""
   
-  if (!value) error = "Required!"
-  else if (value.length !== 14) error = "Invalid phone format. ex: (555) 555-5555";
+//   if (!value) error = "Required!"
+//   else 
+//   }
   
-  return error;
-};
+//   return error;
+// };
 
 
 class SignUpUser extends Component {
@@ -50,11 +56,11 @@ class SignUpUser extends Component {
         firstName: '',
         lastName: '',
         email: '',
-        phoneNumber: '',
         phone: '',
         error: '',
         username: '',
         password: '',
+        confirmPassword: '',
         height: '',
         weight: '',
         gender: '',
@@ -68,6 +74,11 @@ class SignUpUser extends Component {
         cardiovascularRisk: false,
         paymentComplete: false,
         formChecked: false,
+        emailError: false,
+        passwordError: false,
+        phoneError: false,
+        changeStepError: false,
+        stepOneFieldError: false,
         sessionID: '',
         redirect: false,
       }
@@ -84,6 +95,7 @@ class SignUpUser extends Component {
         this.showResult = this.showResult.bind(this)
         this.scrollTop = this.scrollTop.bind(this)
         this.handleSignIn = this.handleSignIn.bind(this)
+        this.validStepOne = this.validStepOne.bind(this)
     }
 
     componentDidMount() {
@@ -101,36 +113,50 @@ class SignUpUser extends Component {
         top: 0,
         behavior: "smooth"
       });
-    }
+      }
 
     setRedirect = () => {
         console.log("Redirect");
         this.setState({
           redirect: true
         })
-      };
+      }
 
     renderRedirect = () => {
         if (this.state.redirect) {
           return <Redirect to='/signup' />
         }
-      };
+      }
 
     handleSignIn = () => {
       console.log('redirect to login')
       return <Redirect to='/login' />
-    }
+      }
 
     handleChange(event) {
         const {name, value} = event.target
         this.setState({
-          [name]: value
+          [name]: value,
+          stepOneFieldError: false,
+          changeStepError: false
         })    
       }
     
     handlePhoneChange({ target: { value } }) {
-        console.log('changing phone number')
+        this.setState({
+          stepOneFieldError: false,
+          changeStepError: false
+        })    
         this.setState(prevState=> ({ phone: normalizeInput(value, prevState.phone) }));
+        if (value.length !== 14) {
+          this.setState({
+            phoneError: true
+          })
+        } else {
+          this.setState({
+            phoneError: false
+          })
+        }
       }
 
     handleStepTitleChange = () => {
@@ -163,17 +189,51 @@ class SignUpUser extends Component {
 
       } 
 
+    validStepOne = () => {
+      let firstName = this.state.firstName
+      let lastName = this.state.lastName
+      let email = this.state.email
+      let phone = this.state.phone
+      let password = this.state.password
+      let confirmPassword = this.state.confirmPassword
+
+      let requiredFields = (firstName.length > 0 && lastName.length > 0 && email.length > 0 && phone.length > 0 && password.length > 0 && confirmPassword.length > 0) ? true : false
+
+      if (!requiredFields) {
+        this.setState({
+          stepOneFieldError: true
+        })
+        return false
+      } else if (this.state.phoneError || this.state.emailError || this.state.passwordError) {
+        this.setState({
+          changeStepError: true
+        })
+        return false
+      } else {
+        this.setState({
+          stepOneFieldError: false,
+          changeStepError: false
+        })
+        return true
+      }
+      }
+
     handleNextStep(event) {
         event.preventDefault()
-        this.scrollTop()
-        let currentStep = this.state.currentStep
-        // If the current step is 1 or 2, then add one on "next" button click
-        currentStep = currentStep >= 6? 7: currentStep + 1
-        this.setState({
-          currentStep: currentStep
-        }, () => {
-          this.handleStepTitleChange()
-        })
+        let stepOneComplete = this.validStepOne()
+
+        // CHECK FOR ERRORS
+        if (stepOneComplete) {
+          let currentStep = this.state.currentStep
+          // If the current step is 1 or 2, then add one on "next" button click
+          currentStep = currentStep >= 6? 7: currentStep + 1
+          this.setState({
+            currentStep: currentStep
+          }, () => {
+            this.handleStepTitleChange()
+          })
+          this.scrollTop()
+        } 
         
       }
         
@@ -219,7 +279,7 @@ class SignUpUser extends Component {
               // }
           })
         
-    }
+      }
 
     handleLightboxInit = (authToken) => {
       console.log('Handling lightbox init -- Auth Token: ', authToken)
@@ -228,12 +288,12 @@ class SignUpUser extends Component {
       }, () => {
         this.handleStepTitleChange()
       })
-    }
+      }
 
     showResult = (status, msg) => {
       document.getElementById('txn_status').innerHTML = "<b>" + status + "</b>";
 			document.getElementById('txn_response').innerHTML = msg;
-    }
+      }
 
     checkWaiver = () => {
         if (this.state.formChecked) {
@@ -254,19 +314,66 @@ class SignUpUser extends Component {
         
       }
 
-    checkPassword = event => {
-        const password = event.target.value
+    checkEmail = (event) => {
+      const {name, value} = event.target
+
+      this.setState({
+        stepOneFieldError: false,
+        changeStepError: false
+      })    
+
+      // Verify email address is valid
+      let re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+      if ( re.test(value) ) {
+        // VALID EMAIL
+        console.log('EMAIL VALUE: ', value)
         this.setState({
-         confirmPassword: password
+          emailError: false,
         })
-        if (this.state.password !== password) {
-            console.log('THE PASSWORDS DO NOT MATCH')
+      }
+      else {
+        // INVALID EMAIL
+        console.log('PLEASE ENTER A VALID EMAIL ADDRESS')
+        this.setState({
+          emailError: true
+        })
+      }
+
+      this.setState({
+        [name]: value
+      })    
+
+      }
+
+    handlePasswordChange = (event) => {
+      const {name, value} = event.target
+        this.setState({
+          [name]: value,
+          confirmPassword: '',
+          passwordError: false,
+          stepOneFieldError: false,
+          changeStepError: false
+        })    
+      }
+
+    checkPassword = (event) => {
+        const {name, value} = event.target
+        
+        this.setState({
+          [name]: value,
+          stepOneFieldError: false,
+          changeStepError: false
+        })    
+        if (this.state.password !== value) {
+            // console.log('THE PASSWORDS DO NOT MATCH')
             this.setState({
-                passwordError: 'PASSWORDS DO NOT MATCH'
+                passwordError: true
             })
         } else {
+            // console.log('PASSWORDS MATCH')
             this.setState({
-                passwordError: 'PASSWORDS MATCH'
+                passwordError: false
             })
         }
       }
@@ -311,15 +418,6 @@ class SignUpUser extends Component {
         this.scrollTop()
         console.log('User sending info')
 
-        const error = validateInput(this.state.phone);
-        this.setState({ error }, () => {
-          if(!error) {
-            setTimeout(() => {
-              alert(JSON.stringify(this.state, null, 4));
-            }, 300)
-          }
-        });
-
         this.setState({
             passwordError: false,
             nameTaken: false,
@@ -333,7 +431,7 @@ class SignUpUser extends Component {
             firstName: this.state.firstName,
             lastName: this.state.lastName,
             email: this.state.email,
-            phoneNumber: this.state.phoneNumber,
+            phone: this.state.phone,
             username: this.state.email,
             password: this.state.password,
             height: this.state.height,
@@ -351,65 +449,39 @@ class SignUpUser extends Component {
             formChecked: this.state.formChecked
         };
         console.log(userData);
-        // if (this.state.password !== this.state.confirmPassword) {
-        //     console.log('THE PASSWORDS DO NOT MATCH')
-        //     this.setState({
-        //         passwordError: true
-        //     })
-        // } else {
-        //   API.getUser(userData.username)
-        //   .then(res => {
-        //     console.log(res)
-        //     if (!res.data[0]) {
-        //         console.log("Username available");
-        //         API.saveUser(userData)
-        //         .then(res => {
-        //             console.log(res)
-        //             if (res.data) {
-        //                 console.log("Successful signup!")
-        //                 this.setRedirect();
-        //             } else {
-        //                 console.log("Signup error")
-        //             }
-        //         })
-        //         .catch(error => {
-        //             console.log(error)
-        //         })
-        //     } else {
-        //         console.log("Username taken");
-        //         this.setState({
-        //             nameTaken: true
-        //         })
-        //     }
-        // })
-        // .catch(error => {
-        //     console.log(error)
-        // })
-        // }
         
-    };
+      }
 
     render() {
         return (
             <div className="signUpUserDiv">
                 {/* {this.renderRedirect()} */}
                 <h1 className='signUpUserTitle'>User Sign Up</h1>
-                <p className='signUpUserStep'>Step {this.state.currentStep} - {this.state.currentStepTitle}</p>
-
+                <p className='signUpUserStep'>
+                  Step {this.state.currentStep} - {this.state.currentStepTitle}
+                </p>
+                <small className='signUpRequired'>*Required</small>
+                
                 <Form className='signUpUserForm'>
                 
                   <SignUpUserPersonalInfo 
                     currentStep={this.state.currentStep}
                     handleChange={this.handleChange}
-                    handlePhoneChange={this.handleChange}
+                    handlePhoneChange={this.handlePhoneChange}
                     firstName={this.state.firstName}
                     lastName={this.state.lastName}
                     email={this.state.email}
-                    phoneNumber={this.state.phone}
+                    phone={this.state.phone}
                     username={this.state.userName}
                     password={this.state.password}
+                    confirmPassword={this.state.confirmPassword}
+                    handlePasswordChange={this.handlePasswordChange}
                     checkPassword={this.checkPassword}
+                    passwordError={this.state.passwordError}
                     checkUserName={this.checkUserName}
+                    checkEmail={this.checkEmail}
+                    emailError={this.state.emailError}
+                    phoneError={this.state.phoneError}
                   />
 
                   <SignUpUserBasicInfo 
@@ -468,7 +540,7 @@ class SignUpUser extends Component {
                       <Button onClick={this.handleNextStep} variant="primary" className="nextStep">
                         Next
                       </Button>
-
+                      
                       :
 
                       (this.state.currentStep < 5) ?
@@ -518,6 +590,10 @@ class SignUpUser extends Component {
                       </span>
 
                     }
+                    <ChangeStepError 
+                      changeStepError={this.state.changeStepError}
+                      stepOneFieldError={this.state.stepOneFieldError}
+                    />
                   </Form.Row>
 
                 </Form>

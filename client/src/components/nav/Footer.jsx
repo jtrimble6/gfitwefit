@@ -51,7 +51,7 @@ class Footer extends Component {
                 <Col className='footerBrand'>
                   <Row>
                     <span className='footerLogoDiv'>
-                      <img src={logo} className="navbar-brand footerLogo" alt="logo" />
+                      <img src={logo} className="footerLogo" alt="logo" />
                     </span>
                     <span className='footerTitleDiv'>
                       <h2 className='footerTitle'>GOUVEIA FITNESS</h2>

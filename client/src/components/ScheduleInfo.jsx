@@ -1,10 +1,95 @@
 import React, { Component } from 'react';
-import '../css/scheduleInfo.css'
+import API from '../utils/API'
 import { Row, Col, Button } from 'react-bootstrap'
+import '../css/scheduleInfo.css'
 
 class ScheduleInfo extends Component {
+    constructor(props) {
+        super(props) 
+        this.state ={
+          currentSchedule: [],
+          sortedSchedule: [],
+        }
+        this.getSchedule = this.getSchedule.bind(this)
+        this.orderSchedule = this.orderSchedule.bind(this)
+      }
+    
+      componentDidMount() {
+        this.getSchedule()
+      }
+    
+      getSchedule = () => {
+        API.getSchedules()
+          .then(res => {
+              // console.log('SCHEDULE: ', res.data)
+              this.setState({
+                  currentSchedule: res.data
+              })
+              this.orderSchedule()
+              // console.log('THE CURRENT SCHEDULE: ',  this.state.currentSchedule)
+          })
+          .catch(err => console.log(err))
+    }
+    
+    orderSchedule = () => {
+        let schedule = this.state.currentSchedule
+        let newSchedule = []
+        for (var g=0; g<schedule.length; g++) {
+            let day = ''
+            let data = schedule[g]
+            // console.log('THIS DAY: ', schedule[g].dayOfWeek)
+            switch (schedule[g].dayOfWeek) {
+                case 'Monday':
+                  day = 1;
+                  // console.log('TODAY IS: ', day)
+                  break;
+                case 'Tuesday':
+                   day = 2;
+                  //  console.log('TODAY IS: ', day)
+                  break;
+                case 'Wednesday':
+                  day = 3;
+                  // console.log('TODAY IS: ', day)
+                  break;
+                case 'Thursday':
+                  day = 4;
+                  // console.log('TODAY IS: ', day)
+                  break;
+                case 'Friday':
+                  day = 5;
+                  // console.log('TODAY IS: ', day)
+                  break;
+                case 'Saturday':
+                  day = 6;
+                  // console.log('TODAY IS: ', day)
+                  break;
+                default: 
+                  day = "Monday";
+                  // console.log('TODAY IS: ', day)
+              }
+    
+            let scheduleData = {
+                day: day,
+                dayOfWeek: data.dayOfWeek,
+                workout: data.workout,
+                times: data.times
+            }
+            newSchedule.push(scheduleData)
+    
+        }
+    
+        // console.log('NEW SCHEDULE: ', newSchedule)
+    
+        let sortedSchedule = newSchedule.sort((a,b) => (a.day) - (b.day))
+    
+        console.log('ORDERED SCHEDULE: ', sortedSchedule)
+        this.setState({
+            sortedSchedule: sortedSchedule
+        })
+    }
 
-    render() {                                                                  
+    render() {                
+        let sortedSchedule = this.state.sortedSchedule                                                  
         return (
             <div className='scheduleInfo'>
               <div className='scheduleInfoSection'>
@@ -13,7 +98,9 @@ class ScheduleInfo extends Component {
                 </Row>
                 <Row className='scheduleInfoRow1'>
                     <Col sm={6}>
-                        <p>Hate not knowing what to do when you go to the gym? We’ve done all the work for you. Every day the workout changes, we target a specific area of the body and put together a high energy work out to keep you on your toes.</p>
+                        <p>
+                          Never expect to get the same workout twice here! Each class is uniquely designed in order to keep your body guessing and help you get closer to your goals. No prior sign ups are required. Come on in whenever your schedule allows you too!
+                        </p>
                     </Col>
                     <Col sm={6}>
                         
@@ -31,27 +118,77 @@ class ScheduleInfo extends Component {
                             <p>SATURDAYS</p>
                         </Col>
                         <Col sm={3} className='scheduleTypeOfWorkout'>
-                            <p>UPPER BODY//BOXING</p>
-                            <p>LOWER BODY//STRENGTH</p>
-                            <p>H.I.I.T.//BOXING</p>
-                            <p>UPPER BODY//STRENGTH</p>
-                            <p>CARDIO//CORE</p>
-                            <p>H.I.I.T.//BOXING</p>
+                            <p>
+                                {
+                                    sortedSchedule.length === 6 ? sortedSchedule[0].workout : 'TBD'
+                                }
+                            </p>
+                            <p>
+                                {
+                                    sortedSchedule.length === 6 ? sortedSchedule[1].workout : 'TBD'
+                                }
+                            </p>
+                            <p>
+                                {
+                                    sortedSchedule.length === 6 ? sortedSchedule[2].workout : 'TBD'
+                                }
+                            </p>
+                            <p>
+                                {
+                                    sortedSchedule.length === 6 ? sortedSchedule[3].workout : 'TBD'
+                                }
+                            </p>
+                            <p>
+                                {
+                                    sortedSchedule.length === 6 ? sortedSchedule[4].workout : 'TBD'
+                                }
+                            </p>
+                            <p>
+                                {
+                                    sortedSchedule.length === 6 ? sortedSchedule[5].workout : 'TBD'
+                                }
+                            </p>
                         </Col>
                         <Col sm={6} className='scheduleTimeOfWorkout'>
-                            <p>5:30am, 8am, 9:30am, 5:45pm</p>
-                            <p>5:30am, 8am, 9:30am, 5:45pm</p>
-                            <p>5:30am, 8am, 9:30am, 5:45pm</p>
-                            <p>5:30am, 8am, 9:30am, 5:45pm</p>
-                            <p>5:30am, 8am, 9:30am</p>
-                            <p>8am, 9:30am</p>
+                            <p>
+                                {
+                                    sortedSchedule.length === 6 ? sortedSchedule[0].times : 'TBD'
+                                }
+                            </p>
+                            <p>
+                                {
+                                    sortedSchedule.length === 6 ? sortedSchedule[1].times : 'TBD'
+                                }
+                            </p>
+                            <p>
+                                {
+                                    sortedSchedule.length === 6 ? sortedSchedule[2].times : 'TBD'
+                                }
+                            </p>
+                            <p>
+                                {
+                                    sortedSchedule.length === 6 ? sortedSchedule[3].times : 'TBD'
+                                }
+                            </p>
+                            <p>
+                                {
+                                    sortedSchedule.length === 6 ? sortedSchedule[4].times : 'TBD'
+                                }
+                            </p>
+                            <p id='saturdayTime'>
+                                {
+                                    sortedSchedule.length === 6 ? sortedSchedule[5].times : 'TBD'
+                                }
+                            </p>
                         </Col>
                       </Row>
                     </Col>
                 </Row>
                 <Row className='scheduleInfoRow3'>
                     <Col sm={6}>
-                      <p>Not quite ready to try the GFit experience? No worries, we’ve got you covered. Check out our digital workouts. They will walk you through some of our most common exercises so you’ll feel like a pro when you show up for class!</p>
+                      <p>
+                        Not quite ready to try the G FIT experience? Check out our digital workouts. They will walk you through some of our most common exercises so you’ll feel like you’re prepared when you show up for class!
+                      </p>
                     </Col>
                     <Col sm={6}>
                         

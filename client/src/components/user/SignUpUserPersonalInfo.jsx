@@ -1,10 +1,13 @@
 import React, { Component } from 'react'
-import '../../css/signup.css'
-// import ExistingAccount from "../../alerts/ExistingAccount";
-// import PasswordError from '../../alerts/PasswordError';
 import { Form, Col } from 'react-bootstrap'
 
+// ALERTS
+import EmailError from '../alerts/EmailError';
+import PasswordError from '../alerts/PasswordError';
+import PhoneError from '../alerts/PhoneError'
 
+// CSS
+import '../../css/signup.css'
 
 class SignUpUserPersonalInfo extends Component {
 
@@ -22,7 +25,7 @@ class SignUpUserPersonalInfo extends Component {
             <div className='userSignUpFormRow personalInfoStep'>
               <Form.Row>
                 <Form.Group as={Col} controlId="formGridFirstName">
-                    <Form.Label>First Name</Form.Label>
+                    <Form.Label>First Name*</Form.Label>
                     <Form.Control 
                         value={this.props.firstName}
                         onChange={this.props.handleChange}
@@ -32,7 +35,7 @@ class SignUpUserPersonalInfo extends Component {
                     </Form.Group>
 
                     <Form.Group as={Col} controlId="formGridLastName">
-                    <Form.Label>Last Name</Form.Label>
+                    <Form.Label>Last Name*</Form.Label>
                     <Form.Control 
                         value={this.props.lastName}
                         onChange={this.props.handleChange}
@@ -44,48 +47,56 @@ class SignUpUserPersonalInfo extends Component {
 
                 <Form.Row>
                 <Form.Group as={Col} controlId="formGridEmail">
-                    <Form.Label>Email</Form.Label>
+                    <Form.Label>Email*</Form.Label>
                     <Form.Control
                         value={this.props.email}
                         name="email"
-                        onChange={this.props.handleChange}
+                        onChange={this.props.checkEmail}
                         type="email" 
                         placeholder="Email" 
+                    />
+                    <EmailError 
+                        emailError={this.props.emailError}
                     />
                 </Form.Group>
 
                 <Form.Group as={Col} controlId="formGridPhoneNumber">
-                    <Form.Label>Phone Number</Form.Label>
+                    <Form.Label>Phone Number*</Form.Label>
                     <Form.Control 
                         value={this.props.phone}
-                        name="phoneNumber"
+                        name="phone"
                         onChange={this.props.handlePhoneChange}
-                        placeholder="Phone Number" 
+                        placeholder="(xxx) xxx-xxxx" 
                     />
-                    {this.props.error && <p className="error">{this.props.error}</p>}
+                    <PhoneError 
+                        phoneError={this.props.phoneError}
+                    />
                 </Form.Group>
                 </Form.Row>
 
                 <Form.Row>
                 <Form.Group as={Col} controlId="formGridPassword">
-                    <Form.Label>Password</Form.Label>
+                    <Form.Label>Password*</Form.Label>
                     <Form.Control 
                         value={this.props.password}
                         name="password"
-                        onChange={this.props.handleChange}
+                        onChange={this.props.handlePasswordChange}
                         type="password" 
                         placeholder="Password" 
                     />
                 </Form.Group>
 
                 <Form.Group as={Col} controlId="formGridConfirmPassword">
-                    <Form.Label>Confirm Password</Form.Label>
+                    <Form.Label>Confirm Password*</Form.Label>
                     <Form.Control
                         value={this.props.confirmPassword}
                         name="confirmPassword"
                         onChange={this.props.checkPassword}
                         type="password" 
                         placeholder="Confirm Password" 
+                    />
+                    <PasswordError 
+                        passwordError={this.props.passwordError}
                     />
                 </Form.Group>
               </Form.Row>

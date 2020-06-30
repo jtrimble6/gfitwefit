@@ -12,7 +12,8 @@ import API from './utils/API'
 // import Contact from './pages/Contact'
 import Admin from './pages/admin/Admin'
 import AdminSignUp from './pages/admin/AdminSignUp'
-import AdminPage from './pages/admin/AdminPage'
+import AdminHomePage from './pages/admin/AdminHomePage'
+import AdminVideoLibraryPage from './pages/admin/AdminVideoLibraryPage'
 import Logout from './pages/admin/Logout'
 
 import UserSignUpPage from './pages/user/UserSignUpPage'
@@ -159,10 +160,20 @@ class Landing extends Component {
                   null
                 )}
             />
-            <Route exact path='/adminPage'
+            <Route exact path='/adminHome'
               render={() =>
                 this.state.loggedIn === true ? (
-                  <AdminPage />
+                  <AdminHomePage />
+                ) : this.state.loggedIn === false ? (
+                  <Redirect to='/' />
+                ) : (
+                  null
+                )}
+            />
+            <Route exact path='/adminVideoLibrary'
+              render={() =>
+                this.state.loggedIn === true ? (
+                  <AdminVideoLibraryPage />
                 ) : this.state.loggedIn === false ? (
                   <Redirect to='/' />
                 ) : (

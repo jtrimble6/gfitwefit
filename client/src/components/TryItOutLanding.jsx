@@ -19,7 +19,7 @@ class TryItOutLanding extends Component {
                             We know that a new gym/exercise style can be confusing, so we created this part of our website to get you started without the pressure of walking through the door. Try out one of the workout videos below that you can do in the comfort of your own home. This will help you get the feel of what our classes are like.
                         </p>
                         <p>
-                        When you’re ready, come join us for one of our group classes and shake off the nerves of not knowing what to expect!
+                            When you’re ready, come join us for one of our group classes and shake off the nerves of not knowing what to expect!
                         </p>
                     </Col>
                     <Col sm={6}>

@@ -116,7 +116,7 @@ const storage = new GridFsStorage({
         const filename = buf.toString('hex') + path.extname(file.originalname);
         const fileInfo = {
           filename: filename,
-          bucketName: 'uploads'
+          bucketName: 'uploads',
         };
         resolve(fileInfo);
       });
@@ -128,9 +128,99 @@ const upload = multer({ storage });
 // @route POST /upload
 // @desc Uploads file to DB
 
-app.post('./upload', upload.single('file'), (req, res) => {
-  res.json({file: req.file})
+app.post('/upload/:equipmentNeeded/:fitnessLevel/:workoutCategory', upload.single('file'), (req, res) => {
+  // res.json({file: req.file})
+  gfs.files.update({'filename': req.file.filename}, 
+  {'$set': 
+    {
+      'equipmentNeeded': req.params.equipmentNeeded,
+      'fitnessLevel': req.params.fitnessLevel,
+      'workoutCategory': req.params.workoutCategory
+    },
+  })
+  res.redirect('/adminHome')
 })
+
+// @route GET /files
+// @desc Display all files in JSON
+
+app.get('/videos', (req, res) => {
+  gfs.files.find().toArray((err, files) => {
+    // Check if files exist
+    if(!files || files.length === 0) {
+      return res.status(404).json({
+        err: 'No videos exist'
+      })
+    } else {
+      files.map(file => {
+        if(file.contentType === 'video/mov') {
+          file.isVideo === true
+        } else {
+          file.isVideo === false
+        }
+      })
+    }
+
+    // Files exist
+    return res.json(files)
+  })
+})
+
+// @route GET /videos/:filename
+// @desc Display single file in JSON
+
+app.get('/videos/:filename', (req, res) => {
+  gfs.files.findOne({filename: req.params.filename}, (err, file) => {
+    // Check if files exist
+    if(!file || file.length === 0) {
+      return res.status(404).json({
+        err: 'No videos exist'
+      })
+    }
+
+    // File exists
+    return res.json(file)
+  })
+})
+
+// @route GET /video/:filename
+// @desc Display video
+
+app.get('/video/:filename', (req, res) => {
+  gfs.files.findOne({filename: req.params.filename}, (err, file) => {
+    // Check if files exist
+    if(!file || file.length === 0) {
+      return res.status(404).json({
+        err: 'No videos exist'
+      })
+    }
+
+    // Check if video
+    if(file.contentType === 'video/quicktime') {
+      // Read output to browser
+      var readstream = gfs.createReadStream(file.filename)
+      readstream.pipe(res)
+    } else {
+      res.status(404).json({
+        err: 'Not a video'
+      })
+    }
+    
+  })
+})
+
+// @route DELETE /videos/:id
+// @desc Delete video
+
+app.delete('/videos/:id', (req, res) => {
+  gfs.remove({ _id: req.params.id, root: 'uploads' }, (err, gridStore) => {
+    if(err) {
+      return res.status(404).json({ err: err })
+    }
+    res.redirect('/adminHome')
+  })
+})
+
 
 // @route GET /converge_token_req
 // @desc Retrieves converge token for payment

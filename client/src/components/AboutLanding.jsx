@@ -18,13 +18,10 @@ class AboutLanding extends Component {
                               <h1 className='aboutJumbotronHeaderLeft'>WELCOME TO GOUVEIA FITNESS/</h1> <h1 className='aboutJumbotronHeaderRight'>/G FIT</h1> 
                             </Row>
                             <p className='aboutJumbotronBody'>
-                              We’re a family-owned and operated fitness center in Cornelius, NC.
+                              Gouveia Fitness or G-Fit is a family owned gym run by two brothers who love fitness, family and community. Our training style incorporates creative interval workouts, boxing, games and community events that will help you lose weight, build muscle, boost your confidence and turn friends into family!
                             </p>
                             <p className='aboutJumbotronBody'>
-                              Here at G-FIT we bring community and fitness together in one place. If you’re looking to lose weight/body fat, gain muscular strength/endurance, or boost your confidence, G-FIT offers adult group classes that will help you reach your goals.
-                            </p>
-                            <p className='aboutJumbotronBody'>
-                              Our training foundation is based on creative interval workouts that provide a safe and upbeat envi- ronment. The G-fit team schedules monthly events, so we can all work toward a common goal, and strengthen our community outside of the gym.
+                              We strongly believe that “as iron sharpens iron, so one man sharpens another” - Proverbs 27:17 ...because fitness isn’t just about you, it’s about a lifestyle and that affects all of us. We are in this journey with you! Let’s go! <strong className='gymInfoStrongLeft'> G FIT/</strong><strong className='gymInfoStrongRight'>/WE FIT</strong>. 
                             </p>
                         </Col>
                     </Row>

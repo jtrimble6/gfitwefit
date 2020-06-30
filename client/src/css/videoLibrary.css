@@ -1,0 +1,92 @@
+.videoLibraryForm-heading {
+    margin-bottom: 10%;
+}
+
+.videoPlayerTitle {
+    font-family: 'gfitfont-bold', Times, serif;
+    margin: 0 auto;
+    margin-top: 10%;
+    justify-content: center;
+    /* margin-bottom: 2%; */
+}
+
+.videoPlayerTitleLeft {
+    font-size: 2.5vw;
+    letter-spacing: 3px;
+    color: white;
+    font-weight: bolder; 
+}
+
+.videoPlayerTitleRight {
+    font-size: 2.5vw;
+    letter-spacing: 3px;
+    color: #FAC04E;
+    font-weight: bolder; 
+}
+
+.MuiFormLabel-root {
+    color: black !important;
+    background-color: #FAC04E;
+    width: 60%;
+    margin: 0 auto;
+    padding: 2% !important;
+    border-radius: 5%;
+    font-size: 2vw !important;
+}
+
+.MuiFormGroup-root {
+    justify-content: center;
+}
+.videoLibraryForm-heading {
+    font-size: 6vw;
+}
+.videoLibraryPrefTitle {
+    font-size: 4vw !important;
+    color: white !important;
+    background-color: transparent;
+    width: 100%;
+    margin: 0 auto !important;
+    padding: 2% !important;
+}
+
+/* .MuiIconButton-label {
+    background-color: white !important;
+    border: #FAC04E 2px solid;
+} */
+
+.MuiSvgIcon-root {
+    color: #FAC04E;
+}
+
+.adminFilterLibraryButton {
+    width: 60%;
+    margin: 0 auto;
+}
+
+.videoLibraryCard {
+    background-color: transparent;
+    border: 2px solid #FAC04E;
+}
+
+.videoPlayerTitle {
+    margin-bottom: 5%;
+}
+
+.video-react {
+    padding-top: 70vh !important;
+}
+
+.videoDeleteForm {
+    margin-top: 5%;
+}
+
+.adminDeleteButton {
+    color: white;
+    background-color: red;
+    border: none;
+    padding: 2%;
+}
+
+/* .equipmentRadios, .fitnessLevelRadios, .workoutTypeRadios {
+    
+} */

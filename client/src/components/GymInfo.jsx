@@ -25,10 +25,10 @@ class GymInfo extends Component {
                         </Row>
                         <Row className='gymInfoBodyRow'>
                             <p className='gymInfoBody'>
-                              If you hate stuffy gyms and stuck up attitudes, we’re probably not for you. When you walk through the doors, you’re family, and families work together. Our workouts are designed to help you meet your goals, and we give you the support system to make it happen.
+                            Once you walk through our doors, you are considered family to us. Our top priority is to make sure you always have a safe and enjoyable experience with us at G-FIT.
                             </p>
                             <p className='gymInfoBody'>
-                              Think you’re ready for a workout? Fill out <a className='gymInfoLink' href='/signup'>this form</a> and let us know you’re coming! Your first week is on the house. You’ll discover quickly why we say <strong className='gymInfoStrongLeft'> G FIT/</strong><strong className='gymInfoStrongRight'>/WE FIT</strong>
+                              Think you’re ready for a workout? Fill out <a className='gymInfoLink' href='/signup'>this form</a> and let us know you’re coming! Your first week is FREE. 
                             </p>
                         </Row>
                     </Col>

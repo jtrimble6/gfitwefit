@@ -21,7 +21,7 @@ class PasswordError extends Component {
         // console.log(this.props.passwordError);
         if (this.props.passwordError === true) {
             return (
-                <Alert color='info' isOpen={this.state.visible} toggle={this.onDismiss}>
+                <Alert color='danger' isOpen={this.state.visible}>
                     The passwords do not match!
                 </Alert>
             )
