@@ -170,8 +170,18 @@
 
 @media screen 
   and (min-device-width: 1600px)  
+  and (max-device-width: 2000px) 
   and (-webkit-min-device-pixel-ratio: 1) { 
     
+}
+
+@media screen 
+  and (min-device-width: 2001px)  
+  and (-webkit-min-device-pixel-ratio: 1) { 
+    .tryItOutLanding {
+      height: 900px;
+      padding: 10%;
+    }
 }
 
 /* ----------- Retina Screens ----------- */
@@ -185,10 +195,19 @@
 
 @media screen 
   and (min-device-width: 1600px) 
+  and (max-device-width: 2000px) 
   and (-webkit-min-device-pixel-ratio: 2)
   and (min-resolution: 192dpi) { 
     .contactLanding {
-      height: 80vh;
-      
-  }
+      height: 700px;
+    }
+}
+
+@media screen 
+  and (min-device-width: 2001px)  
+  and (-webkit-min-device-pixel-ratio: 2) { 
+    .contactLanding {
+      height: 900px;
+      padding: 10%;
+    }
 }

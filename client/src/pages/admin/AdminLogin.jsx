@@ -6,7 +6,7 @@ import API from '../../utils/API'
 import SignInError from "../../components/alerts/SignInError";
 import '../../css/admin.css'
 
-class Login extends Component {
+class AdminLogin extends Component {
 
     state = {
         username: '',
@@ -27,7 +27,7 @@ class Login extends Component {
 
     renderRedirect = () => {
         if (this.state.redirect === true) {
-          return <Redirect to='/adminPage' />
+          return <Redirect to='/adminHome' />
         }
         else {}
     }
@@ -64,7 +64,7 @@ class Login extends Component {
                             sessionID: response.data._id
                         })
                     }).catch(error => {
-                        console.log('Login Error: ', error)
+                        console.log('Admin Login Error: ', error)
                         this.setState({
                             signInError: true
                         })
@@ -79,7 +79,7 @@ class Login extends Component {
               this.setState({
                   signInError: true
               })
-              console.log('Login Error: ', error)
+              console.log('Admin Login Error: ', error)
           })
     }
 
@@ -135,5 +135,5 @@ class Login extends Component {
     }
 }
 
-export default Login
+export default AdminLogin
        

@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import '../css/contact.css'
 import axios from 'axios'
 import { Button } from 'reactstrap'
-import ContactSuccess from '../components/alerts/contactSuccess'
-import ContactError from '../components/alerts/contactError'
+import ContactSuccess from '../../components/alerts/contactSuccess'
+import ContactError from '../../components/alerts/contactError'
 
 require('dotenv').config();
 

@@ -6,7 +6,7 @@ import '../../css/signup.css'
 class SignUpUserAcknowledgement extends Component {
 
     componentDidMount() {
-        console.log('Sign Up Acknowledgement Ready')
+        // console.log('Sign Up Acknowledgement Ready')
       }
 
     render() {

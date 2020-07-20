@@ -6,12 +6,18 @@ import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
+
+// ADMIN ICON
 import ScheduleIcon from '@material-ui/icons/Schedule';
 import VideocamIcon from '@material-ui/icons/Videocam';
 import PersonAddIcon from '@material-ui/icons/PersonAdd';
+import ChatIcon from '@material-ui/icons/Chat';
+
+// ADMIN PAGES
 import AdminScheduleEditor from './AdminScheduleEditor';
 import AdminVideoUploader from './AdminVideoUploader';
 import AdminSignUp from './AdminSignUp';
+import MessageBoard from '../../components/MessageBoard';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -82,9 +88,10 @@ export default function NavTabs() {
           onChange={handleChange}
           aria-label="nav tabs example"
         >
-          <LinkTab href="/drafts" icon={<ScheduleIcon />} {...a11yProps(0)} /> 
-          <LinkTab href="/trash" icon={<VideocamIcon />} {...a11yProps(1)} />
-          <LinkTab href="/spam" icon={<PersonAddIcon />} {...a11yProps(2)} />
+          <LinkTab icon={<ScheduleIcon />} {...a11yProps(0)} /> 
+          <LinkTab icon={<VideocamIcon />} {...a11yProps(1)} />
+          <LinkTab icon={<PersonAddIcon />} {...a11yProps(2)} />
+          <LinkTab icon={<ChatIcon />} {...a11yProps(3)} />
         </Tabs>
       </AppBar>
       <TabPanel value={value} index={0}>
@@ -95,6 +102,9 @@ export default function NavTabs() {
       </TabPanel>
       <TabPanel value={value} index={2}>
         <AdminSignUp />
+      </TabPanel>
+      <TabPanel value={value} index={3}>
+        <MessageBoard />
       </TabPanel>
     </div>
   );

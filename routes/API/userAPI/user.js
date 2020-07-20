@@ -43,11 +43,17 @@ router.route('/:id')
   .get(userController.findById)
   // .put(userController.findOneAndUpdate)
   // .post(userController.addWin)
+
+router.route('/info/:id')
+  .put(userController.updateUserPersonalInfo)
+
+router.route('/preferences/:id')
+  .put(userController.updateUserPreferences)
   
 //   .delete(userController.findOneAndDelete)
 
-// router.route('/:id/teams')
-//   .get(userController.getUserTeams)
+router.route('/updatePassword/:id')
+  .put(userController.updateUserPassword)
 
 // router.route('/:id/picks/:status')
 //   .put(userController.updatePick)

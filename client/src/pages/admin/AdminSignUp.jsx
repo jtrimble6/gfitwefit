@@ -15,6 +15,7 @@ class AdminSignUp extends Component {
         firstName: '',
         lastName: '',
         username: '',
+        email: '',
         password: '',
         confirmPassword: '',
         redirect: false,
@@ -28,7 +29,7 @@ class AdminSignUp extends Component {
         this.checkPassword = this.checkPassword.bind(this)
         this.checkUserName = this.checkUserName.bind(this)
       
-    }
+      }
 
     componentDidMount() {
         console.log('Ready')
@@ -39,13 +40,13 @@ class AdminSignUp extends Component {
         this.setState({
           redirect: true
         })
-      };
+      }
 
     renderRedirect = () => {
         if (this.state.redirect) {
           return <Redirect to='/admin' />
         }
-      };
+      }
 
     handleInputChange = event => {
         const { name, value } = event.target
@@ -70,7 +71,7 @@ class AdminSignUp extends Component {
             })
         }
 
-    }
+      }
 
     checkUserName = event => {
         const username = event.target.value;
@@ -106,10 +107,14 @@ class AdminSignUp extends Component {
         event.preventDefault();
         //console.log(this.state)
         let userData = {
+            admin: true,
             firstName: this.state.firstName,
             lastName: this.state.lastName,
+            email: this.state.email,
             username: this.state.username,
             password: this.state.password,
+            paymentComplete: false,
+            waiverSigned: false
         };
         console.log(userData);
         if (this.state.password !== this.state.confirmPassword) {
@@ -119,36 +124,35 @@ class AdminSignUp extends Component {
             })
         } else {
           API.getUser(userData.username)
-          .then(res => {
-            console.log(res)
-            if (!res.data[0]) {
-                console.log("Username available");
-                API.saveUser(userData)
-                .then(res => {
-                    console.log(res)
-                    if (res.data) {
-                        console.log("Successful signup!")
-                        this.setRedirect();
-                    } else {
-                        console.log("Signup error")
-                    }
-                })
+            .then(res => {
+                console.log(res)
+                if (!res.data[0]) {
+                    console.log("Username available");
+                    API.saveUser(userData)
+                    .then(res => {
+                        console.log(res)
+                        if (res.data) {
+                            console.log("Successful signup!")
+                            this.setRedirect();
+                        } else {
+                            console.log("Signup error")
+                        }
+                    })
+                    .catch(error => {
+                        console.log(error)
+                    })
+                } else {
+                    console.log("Username taken");
+                    this.setState({
+                        nameTaken: true
+                    })
+                }})
                 .catch(error => {
                     console.log(error)
                 })
-            } else {
-                console.log("Username taken");
-                this.setState({
-                    nameTaken: true
-                })
-            }
-        })
-        .catch(error => {
-            console.log(error)
-        })
         }
         
-    };
+      }
 
     render() {
         return (
@@ -180,6 +184,18 @@ class AdminSignUp extends Component {
                                     className="form-control"
                                     id="lastName"
                                     placeholder="Last name"                                        
+                                />
+                        </div>
+                        <div className="form-group">
+                            <label htmlFor="email">Email</label>
+                                <input
+                                    value={this.state.email}
+                                    name="email"
+                                    onChange={this.handleInputChange}
+                                    type="text"
+                                    className="form-control"
+                                    id="email"
+                                    placeholder="Email"                                        
                                 />
                         </div>
                         <div className="form-group">
@@ -239,8 +255,8 @@ class AdminSignUp extends Component {
             </div>
         
         )
-    };
-};
+    }
+}
 
 export default AdminSignUp;
        

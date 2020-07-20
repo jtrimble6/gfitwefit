@@ -12,13 +12,15 @@ import SignUpUserPersonalInfo from './SignUpUserPersonalInfo'
 import SignUpUserBasicInfo from './SignUpUserBasicInfo'
 import SignUpUserHealthInfo from './SignUpUserHealthInfo'
 import SignUpUserFitnessInfo from './SignUpUserFitnessInfo'
-import SignUpUserPayment from './SignUpUserPayment'
+import SignUpUserWaiver from './SignUpUserWaiver'
 import SignUpUserConvergeLightbox from './SignUpUserConvergeLightbox'
 import SignUpUserAcknowledgement from './SignUpUserAcknowledgment'
 
 // ALERTS 
-import changeStepError from '../alerts/ChangeStepError'
 import ChangeStepError from '../alerts/ChangeStepError'
+
+// SCRIPTS
+// import ScriptTag from 'react-script-tag';
 
 // import ExistingAccount from "../../alerts/ExistingAccount";
 // import PasswordError from '../../alerts/PasswordError';
@@ -56,7 +58,7 @@ class SignUpUser extends Component {
         firstName: '',
         lastName: '',
         email: '',
-        phone: '',
+        phoneNumber: '',
         error: '',
         username: '',
         password: '',
@@ -73,10 +75,14 @@ class SignUpUser extends Component {
         personalHistory: '',
         cardiovascularRisk: false,
         paymentComplete: false,
-        formChecked: false,
+        paymentRefNumber: '',
+        paymentTxnId: '',
+        paymentDate: '',
         emailError: false,
         passwordError: false,
         phoneError: false,
+        waiverSigned: false,
+        waiverError: false,
         changeStepError: false,
         stepOneFieldError: false,
         sessionID: '',
@@ -89,30 +95,30 @@ class SignUpUser extends Component {
         this.handleSubmit = this.handleSubmit.bind(this)
         this.handleNextStep = this.handleNextStep.bind(this)
         this.handlePrevStep = this.handlePrevStep.bind(this)
+        this.handleFinalStep = this.handleFinalStep.bind(this)
         this.handleStepTitleChange = this.handleStepTitleChange.bind(this)
         this.handleConvergePay = this.handleConvergePay.bind(this)
         this.handleLightboxInit = this.handleLightboxInit.bind(this)
-        this.showResult = this.showResult.bind(this)
         this.scrollTop = this.scrollTop.bind(this)
         this.handleSignIn = this.handleSignIn.bind(this)
         this.validStepOne = this.validStepOne.bind(this)
+        this.checkWaiver = this.checkWaiver.bind(this)
+        this.checkEmail = this.checkEmail.bind(this)
+        this.checkConvergePayment = this.checkConvergePayment.bind(this)
+        this.handlePasswordChange = this.handlePasswordChange.bind(this)
+        this.checkPassword = this.checkPassword.bind(this)
     }
 
     componentDidMount() {
-        console.log('User Sign Up Ready')
-        const script = document.createElement("script");
-
-        script.src = "https://demo.convergepay.com/hosted-payments/PayWithConverge.js";
-        script.async = true;
-
-        document.body.appendChild(script);
+        // console.log('User Sign Up Ready')
+        this.scrollTop()
       }
 
     scrollTop() {
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-      });
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth"
+        });
       }
 
     setRedirect = () => {
@@ -147,7 +153,7 @@ class SignUpUser extends Component {
           stepOneFieldError: false,
           changeStepError: false
         })    
-        this.setState(prevState=> ({ phone: normalizeInput(value, prevState.phone) }));
+        this.setState(prevState=> ({ phoneNumber: normalizeInput(value, prevState.phoneNumber) }));
         if (value.length !== 14) {
           this.setState({
             phoneError: true
@@ -193,11 +199,11 @@ class SignUpUser extends Component {
       let firstName = this.state.firstName
       let lastName = this.state.lastName
       let email = this.state.email
-      let phone = this.state.phone
+      let phoneNumber = this.state.phoneNumber
       let password = this.state.password
       let confirmPassword = this.state.confirmPassword
 
-      let requiredFields = (firstName.length > 0 && lastName.length > 0 && email.length > 0 && phone.length > 0 && password.length > 0 && confirmPassword.length > 0) ? true : false
+      let requiredFields = (firstName.length > 0 && lastName.length > 0 && email.length > 0 && phoneNumber.length > 0 && password.length > 0 && confirmPassword.length > 0) ? true : false
 
       if (!requiredFields) {
         this.setState({
@@ -220,7 +226,8 @@ class SignUpUser extends Component {
 
     handleNextStep(event) {
         event.preventDefault()
-        let stepOneComplete = this.validStepOne()
+        // let stepOneComplete = this.validStepOne()
+        let stepOneComplete = true
 
         // CHECK FOR ERRORS
         if (stepOneComplete) {
@@ -252,9 +259,31 @@ class SignUpUser extends Component {
 
       }
 
+    handleFinalStep = () => {
+      this.setState({
+        currentStep: 7
+      }, () => {
+        this.handleStepTitleChange()
+        this.scrollTop()
+      })
+      }
+
     handleConvergePay = (event) => {
         event.preventDefault();
         console.log('Handling converge payment')
+        console.log('WAIVER CHECKED? ', this.state.waiverSigned)
+
+        if (!this.state.waiverSigned) {
+          console.log('WAIVER ERROR HERE')
+          this.setState({
+            waiverError: true
+          })
+          return
+        } else {
+          this.setState({
+            waiverError: false
+          })
+        }
 
         // Start the HTTPS server
         // var cors = "https://cors-anywhere.herokuapp.com/"
@@ -264,9 +293,10 @@ class SignUpUser extends Component {
           // url: "https://www.gfitwefit.com/converge_token_req",
           url: "http://localhost:3000/converge_token_req", 
           }).then((response)=> {
-            console.log('GOT A RESPONSE: ', response)
+            // console.log('GOT A RESPONSE: ', response)
             let ssl_txn_auth_token = response.data
             console.log(ssl_txn_auth_token)
+            window.$convergeToken = ssl_txn_auth_token
             this.setState({
               sessionID: ssl_txn_auth_token
             })
@@ -282,32 +312,53 @@ class SignUpUser extends Component {
       }
 
     handleLightboxInit = (authToken) => {
-      console.log('Handling lightbox init -- Auth Token: ', authToken)
-      this.setState({
-        currentStep: 6
-      }, () => {
-        this.handleStepTitleChange()
-      })
+        // console.log('Handling lightbox init -- Auth Token: ', authToken)
+        this.scrollTop()
+        document.getElementById('signUpRequiredSmall').style.display = 'none'
+        this.setState({
+          currentStep: 6
+        }, () => {
+          this.handleStepTitleChange()
+        })
       }
 
-    showResult = (status, msg) => {
-      document.getElementById('txn_status').innerHTML = "<b>" + status + "</b>";
-			document.getElementById('txn_response').innerHTML = msg;
+    checkConvergePayment = (event) => {
+        event.preventDefault()
+        let status = window.$status
+        let msg = window.$msg
+        console.log('CHECKING CONVERGE PAYMENT: ', status, msg)
+        if(status === 'APPROVED') {
+          // document.getElementById('finalStep').disabled = false
+          this.setState({
+            paymentComplete: true,
+            paymentRefNumber: msg.ssl_transaction_reference_number,
+            paymentTxnId: msg.ssl_txn_id,
+            paymentDate: msg.ssl_txn_time
+          }, () => {
+            this.handleFormSubmit()
+          })
+        } else {
+          console.log('PAYMENT ERROR OCCURED')
+        }
       }
 
     checkWaiver = () => {
-        if (this.state.formChecked) {
+        if (this.state.waiverSigned) {
             this.setState({
-                formChecked: false
+                waiverSigned: false,
+                waiverError: true
             }, () => {
-                console.log(this.state.formChecked)
+                console.log('WAIVER IS CHECKED? ', this.state.waiverSigned)
+                console.log('WAIVER ERROR? ', this.state.waiverError)
             })
             
         } else {
             this.setState({
-                formChecked: true
+                waiverSigned: true,
+                waiverError: false
             }, () => {
-                console.log(this.state.formChecked)
+                console.log('WAIVER IS CHECKED? ', this.state.waiverSigned)
+                console.log('WAIVER ERROR? ', this.state.waiverError)
             })
             
         }
@@ -413,8 +464,7 @@ class SignUpUser extends Component {
           Password: ${password}`)
       }
 
-    handleFormSubmit = event => {
-        event.preventDefault()
+    handleFormSubmit = () => {
         this.scrollTop()
         console.log('User sending info')
 
@@ -431,7 +481,7 @@ class SignUpUser extends Component {
             firstName: this.state.firstName,
             lastName: this.state.lastName,
             email: this.state.email,
-            phone: this.state.phone,
+            phoneNumber: this.state.phoneNumber,
             username: this.state.email,
             password: this.state.password,
             height: this.state.height,
@@ -446,9 +496,27 @@ class SignUpUser extends Component {
             exercisePlan: this.state.exercisePlan,
             gymEquipment: this.state.gymEquipment,
             paymentComplete: this.state.paymentComplete,
-            formChecked: this.state.formChecked
+            paymentRefNumber: this.state.paymentRefNumber,
+            paymentTxnId: this.state.paymentTxnId,
+            paymentDate: this.state.paymentDate,
+            waiverSigned: this.state.waiverSigned
         };
         console.log(userData);
+
+        // SAVE NEW USER
+        API.saveUser(userData)
+          .then(res => {
+              console.log(res)
+              if (res.data) {
+                  console.log("Successful signup!")
+                  this.handleFinalStep()
+              } else {
+                  console.log("Signup error")
+              }
+          })
+          .catch(error => {
+              console.log(error)
+          })
         
       }
 
@@ -456,11 +524,13 @@ class SignUpUser extends Component {
         return (
             <div className="signUpUserDiv">
                 {/* {this.renderRedirect()} */}
-                <h1 className='signUpUserTitle'>User Sign Up</h1>
-                <p className='signUpUserStep'>
-                  Step {this.state.currentStep} - {this.state.currentStepTitle}
-                </p>
-                <small className='signUpRequired'>*Required</small>
+                <div className="headerDiv">
+                  <h1 className='signUpUserTitle'>User Sign Up</h1>
+                  <p className='signUpUserStep'>
+                    Step {this.state.currentStep} - {this.state.currentStepTitle}
+                  </p>
+                  <small id='signUpRequiredSmall' className='signUpRequired'>*Required</small>
+                </div>
                 
                 <Form className='signUpUserForm'>
                 
@@ -471,7 +541,7 @@ class SignUpUser extends Component {
                     firstName={this.state.firstName}
                     lastName={this.state.lastName}
                     email={this.state.email}
-                    phone={this.state.phone}
+                    phoneNumber={this.state.phoneNumber}
                     username={this.state.userName}
                     password={this.state.password}
                     confirmPassword={this.state.confirmPassword}
@@ -513,10 +583,11 @@ class SignUpUser extends Component {
                     gymEquipment={this.state.gymEquipment}
                   />
 
-                  <SignUpUserPayment 
+                  <SignUpUserWaiver 
                     currentStep={this.state.currentStep}
                     handleChange={this.handleChange}
-                    formChecked={this.state.formChecked}
+                    waiverSigned={this.state.waiverSigned}
+                    waiverError={this.state.waiverError}
                     checkWaiver={this.checkWaiver}
                     handleConvergePay={this.handleConvergePay}
                     sessionID={this.state.sessionID}
@@ -526,6 +597,8 @@ class SignUpUser extends Component {
                     currentStep={this.state.currentStep}
                     handleChange={this.handleChange}
                     sessionID={this.state.sessionID}
+                    openLightbox={this.openLightbox}
+                    checkConvergePayment={this.checkConvergePayment}
                   />
                   
                   <SignUpUserAcknowledgement 
@@ -558,16 +631,20 @@ class SignUpUser extends Component {
                       :
 
                       (this.state.currentStep < 7) ?
-                    
-                      <span className='stepButtonSpan'>
-                        <Button onClick={this.handlePrevStep} variant="warning" className="prevStep">
+
+                        <Button onClick={this.handlePrevStep} variant="warning" id='finalStepPrev' className="prevStep">
                             Prev
                         </Button> 
+                    
+                      // <span className='stepButtonSpan'>
+                      //   <Button onClick={this.handlePrevStep} variant="warning" className="prevStep">
+                      //       Prev
+                      //   </Button> 
 
-                        <Button onClick={this.handleNextStep} variant="primary" className="nextStep" disabled={true}>
-                            Next
-                        </Button>
-                      </span>
+                      //   <Button onClick={this.handleNextStep} variant="primary" className="nextStep" id="finalStep" disabled={true}>
+                      //       Next
+                      //   </Button>
+                      // </span>
 
                       :
 
@@ -600,7 +677,7 @@ class SignUpUser extends Component {
               </div>
         
         )
-    };
+      };
 };
 
 export default SignUpUser;

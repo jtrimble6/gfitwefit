@@ -974,7 +974,7 @@
   and (max-device-width: 2000px) 
   and (-webkit-min-device-pixel-ratio: 1) { 
     .goldOut {
-        height: 1075px;
+        height: 1475px;
     }
     .goldOutCarousel {
         height: 600px;
@@ -983,14 +983,14 @@
         height: 500px;
     }
     .goldOutCardText {
-        font-size: 1.2vw;
-        line-height: 1.4vw;
+        font-size: 1.5vw;
+        line-height: 2.2vw;
     }
     .goldOutCardTitle {
-        font-size: 1.3vw;
+        font-size: 1.8vw;
     }
     .goldOutCardSubTitle {
-        font-size: 1.1vw;
+        font-size: 1.4vw;
     }
 }
 
@@ -1073,7 +1073,7 @@
   and (max-device-width: 2200px) 
   and (-webkit-min-device-pixel-ratio: 1) { 
     .goldOutCardText {
-      font-size: 1.2vw;
+      font-size: 1.1vw;
       line-height: 1.9vw;
     }
     .goldOutCardTitle {

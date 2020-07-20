@@ -1,8 +1,7 @@
 import React, { Component } from 'react'
-import '../../css/signup.css'
-// import ExistingAccount from "../../alerts/ExistingAccount";
-// import PasswordError from '../../alerts/PasswordError';
 import { Form, Button, Col, FormCheck } from 'react-bootstrap'
+import WaiverError from '../alerts/WaiverError';
+import '../../css/signup.css'
 
 class SignUpUserHealth extends Component {
     constructor(props) {
@@ -15,7 +14,7 @@ class SignUpUserHealth extends Component {
     }
 
     componentDidMount() {
-        console.log('User Payment Ready')
+        // console.log('User Sign Up Waiver Ready')
       }
 
     render() {
@@ -34,7 +33,7 @@ class SignUpUserHealth extends Component {
                     <FormCheck
                         isInvalid
                         type="checkbox" 
-                        label="Sign Electronic Waiver" 
+                        label="Sign Electronic Waiver*" 
                         className="waiver"
                         onClick={this.props.checkWaiver}
                     />
@@ -43,6 +42,9 @@ class SignUpUserHealth extends Component {
               <Button onClick={this.props.handleConvergePay} className='payWithConverge'>
                 Pay With Converge
               </Button>
+              <WaiverError
+                waiverError={this.props.waiverError}
+              />
             </div>
         
         )

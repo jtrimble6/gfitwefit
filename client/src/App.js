@@ -1,36 +1,36 @@
 import React, { Component } from 'react'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 import { Switch, Redirect } from 'react-router-dom'
+
+// API CALLS
 import API from './utils/API'
-// import Navbar from './components/nav/Navbar'
-// import Welcome from './pages/Welcome'
-// import Instafeed from './components/socialmedia/Instafeed'
-// import Facebookfeed from './components/socialmedia/Facebookfeed'
-// import Video from './pages/Video'
-// import About from './pages/About'
-// import Schedule from './pages/Schedule'
-// import Contact from './pages/Contact'
-import Admin from './pages/admin/Admin'
+
+// WEB PAGES
+import LandingPage from './pages/LandingPage'
+import ContactPage from './pages/ContactPage'
+import TryItOutPage from './pages/TryItOutPage'
+// import PricingPage from './pages/PricingPage'
+
+// ADMIN PAGES
+import AdminLogin from './pages/admin/AdminLogin'
 import AdminSignUp from './pages/admin/AdminSignUp'
 import AdminHomePage from './pages/admin/AdminHomePage'
 import AdminVideoLibraryPage from './pages/admin/AdminVideoLibraryPage'
 import Logout from './pages/admin/Logout'
 
-import UserSignUpPage from './pages/user/UserSignUpPage'
-import UserLoginPage from './pages/user/UserLoginPage'
-import LandingPage from './pages/LandingPage'
-// import PricingPage from './pages/PricingPage'
-import ContactPage from './pages/ContactPage'
-import TryItOutPage from './pages/TryItOutPage'
+// USER PAGES
+import UserSignUpPage from './pages/oldPages/UserSignUpPage'
+import UserLogin from './pages/user/UserLogin'
+import UserHomePage from './pages/user/UserHomePage'
 
-// import $ from 'jquery'
-// import logo from './gfit.svg';
+// CSS
 import './css/main.css';
 
 class Landing extends Component {
 
   state = {
     loggedIn: '',
+    admin: false,
     username: null,
     sessionID: null,
     userObject: {}
@@ -66,18 +66,24 @@ class Landing extends Component {
           if (response.data._id === localSessionID) {
             // console.log("Login confirmed");
             this.setState({
-              loggedIn: true
+              loggedIn: true,
+              admin: response.data.admin
             })
             console.log('LOGGED IN? ', this.state.loggedIn)
           } else {
             // console.log("No matching sessions");
             this.setState({
-              loggedIn: false
+              loggedIn: false,
+              admin: false
             })
             // console.log(this.state.loggedIn)
           }
         }).catch(error => {
           console.log('Login Error: ', error)
+          this.setState({
+            loggedIn: false,
+            admin: false
+          })
         })
     }
   }
@@ -129,32 +135,39 @@ class Landing extends Component {
                 />
               }
             />
-            <Route exact path='/signup'
+            <Route exact path='/userSignup'
               render={() =>
                 <UserSignUpPage 
                   updateUser={this.updateUser}
                 />
               }
             />
-            <Route exact path='/login'
+            <Route exact path='/userLogin'
               render={() =>
-                <UserLoginPage 
+                <UserLogin 
                   updateUser={this.updateUser}
                 />
               }
             />
-            <Route exact path='/admin'
+            <Route exact path='/userHomePage'
               render={() =>
-                <Admin 
+                <UserHomePage
+                  updateUser={this.updateUser}
+                />
+              }
+            />
+            <Route exact path='/adminLogin'
+              render={() =>
+                <AdminLogin 
                   updateUser={this.updateUser}
                 />
               }
             />
             <Route exact path='/adminSignup'
               render={() =>
-                this.state.loggedIn === true ? (
+                this.state.admin === true ? (
                   <AdminSignUp />
-                ) : this.state.loggedIn === false ? (
+                ) : this.state.admin === false ? (
                   <Redirect to='/' />
                 ) : (
                   null
@@ -162,13 +175,15 @@ class Landing extends Component {
             />
             <Route exact path='/adminHome'
               render={() =>
-                this.state.loggedIn === true ? (
-                  <AdminHomePage />
-                ) : this.state.loggedIn === false ? (
-                  <Redirect to='/' />
-                ) : (
-                  null
-                )}
+                <AdminHomePage />
+                // this.state.admin === true ? (
+                //   <AdminHomePage />
+                // ) : this.state.admin === false ? (
+                //   <Redirect to='/' />
+                // ) : (
+                //   null
+                // )}
+              }
             />
             <Route exact path='/adminVideoLibrary'
               render={() =>

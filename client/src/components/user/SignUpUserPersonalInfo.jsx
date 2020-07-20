@@ -12,7 +12,7 @@ import '../../css/signup.css'
 class SignUpUserPersonalInfo extends Component {
 
     componentDidMount() {
-        console.log('User Info Ready')
+        // console.log('Personal Info Ready')
       }
 
     render() {
@@ -63,10 +63,10 @@ class SignUpUserPersonalInfo extends Component {
                 <Form.Group as={Col} controlId="formGridPhoneNumber">
                     <Form.Label>Phone Number*</Form.Label>
                     <Form.Control 
-                        value={this.props.phone}
-                        name="phone"
+                        value={this.props.phoneNumber}
+                        name="phoneNumber"
                         onChange={this.props.handlePhoneChange}
-                        placeholder="(xxx) xxx-xxxx" 
+                        placeholder="(___) ___-____" 
                     />
                     <PhoneError 
                         phoneError={this.props.phoneError}

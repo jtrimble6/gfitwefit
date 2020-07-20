@@ -14,6 +14,7 @@ const userRoutes = require("./routes/API/userAPI");
 const sessionRoutes = require("./routes/API/sessionAPI");
 const contactRoutes = require('./routes/API/contactAPI')
 const convergePayRoutes = require('./routes/API/convergePayAPI')
+const messageBoardRoutes = require('./routes/API/messageBoardAPI')
 // const videoRoutes = require('./routes/API/videoAPI/video')
 const passport = require('./server/passport');
 const app = express();
@@ -42,7 +43,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 // Add routes, both API and view
-app.use(userRoutes, sessionRoutes, scheduleRoutes, contactRoutes, convergePayRoutes);
+app.use(userRoutes, sessionRoutes, scheduleRoutes, contactRoutes, convergePayRoutes, messageBoardRoutes);
 
 app.use(
   session({

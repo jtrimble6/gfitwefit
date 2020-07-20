@@ -17,7 +17,7 @@
     /* min-height: 100%; */
     width: 70%;
     margin: 0 auto;
-    margin-top: 25vh;
+    margin-top: 31vh;
     /* margin-bottom: 20% !important; */
     color: white;
     white-space: nowrap;
@@ -25,6 +25,11 @@
 
 .signUpUserForm {
     margin-bottom: 5%;
+}
+
+.headerDiv {
+    text-align: center;
+    margin-bottom: 5vh;
 }
 
 .signUpUserTitle {
@@ -40,7 +45,7 @@
 }
 
 .signUpRequired {
-    text-align: center !important;
+
 }
 
 .userSignUp {
@@ -78,8 +83,9 @@
     justify-content: center;
 }
 
-.formWaiverRow {
+.formWaiverDiv {
     margin: 5%;
+    margin-bottom: 5%;
     white-space: pre-wrap !important;
 }
 
@@ -88,12 +94,12 @@
 }
 
 .payWithConverge {
-    background-color: #85bb65;
+    background-color: #85bb65 !important;
     color: white;
     border: none;
     width: 90%;
     margin-left: 5%;
-    margin-bottom: 10%;
+    margin-bottom: 1%;
     text-align: center;
 }
 
@@ -155,6 +161,11 @@
 }
 
 .prevStep {
+    width: 90% !important;
+    margin: 0 auto !important;
+}
+
+.stepButtonSpan .prevStep {
     color: white;
     width: 45% !important;
     height: 100% !important;
@@ -174,13 +185,68 @@
     margin-right: 2.5% !important;
 }
 
-.formWaiverRow {
-    margin-bottom: 1%;
-}
-
 .userSignUpAcknowledgementTitle {
     color: white;
     text-align: center;
+    font-size: 2vw;
+    white-space: pre-wrap;
+}
+
+/* CONVERGE LIGHTBOX */
+
+#txnReferenceNumber {
+    white-space: pre-wrap;
+}
+
+#convergeLightboxForm {
+    width: 50%;
+    margin: 0 auto;
+    margin-bottom: 5vh;
+}
+
+.convergeLightboxButton {
+    background-color: #85bb65;
+    width: 100%;
+}
+
+.txnCompleteButton {
+    display: none;
+    width: 100%;
+}
+
+#convergeLightboxDiv {
+    width: 40%;
+    margin: 0 auto;
+    margin-bottom: 5vh;
+}
+
+#convergeCompleteDiv {
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 5vh;
+}
+
+#txnDetails {
+    display: none;
+    width: 100%;
+    text-align: center;
+}
+
+.convergeSuccessButton {
+    background-color: #85bb65 !important;
+}
+
+.convergeErrorButton {
+    background-color: #d9534f !important;
+}
+
+.txnDetailsTitle {
+    text-align: center;
+    margin-bottom: 2vw;
+}
+
+.txnDetailsInfoTitle {
+    color: #FAC04E;
 }
 
 /* ----------- iPhones ----------- */

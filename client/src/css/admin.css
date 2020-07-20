@@ -23,12 +23,23 @@
 #loginPage {
     width: 80%;
     margin: 0 auto;
-    margin-top: 30%;
-    margin-bottom: calc(100vh - 510px);
+    margin-top: 15vw;
+    margin-bottom: 15vw;
     padding: 5%;
+    border-radius: 4%;
     text-align: center;
-    background-color: white;
+    background-color: #FAC04E;
+    font-family: 'gfitfont-bold';
     
+}
+
+.formLoginHeading {
+  color: white;
+  font-family: 'gfitfont-bold';
+}
+
+.loginButton {
+  background-color: white;
 }
 
 #signUpPage {
@@ -145,25 +156,6 @@
     color: #FAC04E
 }
 
-/* VIDEO LIBRARY PAGE */
-#videoLibraryPage {
-    max-width: 80% !important;
-    margin: 0 auto !important;
-    margin-top: 15vh !important;
-}
-
-.videoLibraryFormRow {
-    width: 100% !important;
-    margin: 0 auto !important;
-    justify-content: center;
-}
-
-.videoLibraryDiv {
-    /* width: 60%;
-    height: auto;
-    margin: 0 auto; */
-}
-
 /* ----------- VIDEO UPLOADER ----------- */
 .videoUploadInput {
     background-color: white;
@@ -195,7 +187,7 @@
 .adminSubmitButton {
     width: 60%;
     margin-top: 10%;
-    background-color: white;
+    background-color: #FAC04E;
     border: none;
     color: black;
     padding: 2%;
@@ -209,8 +201,8 @@
 .adminViewLibraryButton {
     width: 60%;
     margin-top: 5%;
-    background-color: #FAC04E !important;
-    border: none;
+    background-color: rgb(165, 164, 164) !important;
+    border: 1px solid black;
     color: black;
     padding: 2%;
     border-radius: 5%;
@@ -224,6 +216,10 @@
     color: black;
     padding: 2%;
     border-radius: 5%;
+}
+
+#adminPage #videoLibraryPage {
+  padding-top: 10vh !important;
 }
 
 /* ----------- iPhones ----------- */

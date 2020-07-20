@@ -80,12 +80,12 @@
     font-weight: bold;
 }
 
-.gymInfoStrongLeft {
+.gFitStrongLeft {
   font-family: 'gfitfont-bold', Times, serif;
   font-size: 1.5vw;
 }
 
-.gymInfoStrongRight {
+.gFitStrongRight {
   font-family: 'gfitfont-bold', Times, serif;
   font-size: 1.5vw;
   color: #FAC04E;
@@ -181,10 +181,10 @@
     .gymInfoBody {
         font-size: 2.8vw;
     }
-    .gymInfoStrongLeft {
+    .gFitStrongLeft {
       font-size: 3.5vw;
     }
-    .gymInfoStrongRight {
+    .gFitStrongRight {
       font-size: 3.5vw;
     }
 }
@@ -232,11 +232,11 @@
     .gymInfoBody {
         font-size: 4.5vw;
     }
-    .gymInfoStrongLeft {
+    .gFitStrongLeft {
       font-size: 6vw;
       white-space: nowrap;
     }
-    .gymInfoStrongRight {
+    .gFitStrongRight {
       font-size: 6vw;
     }
     .gymInfoLogo {
@@ -310,11 +310,11 @@
     .gymInfoBody {
         font-size: 3.5vw;
     }
-    .gymInfoStrongLeft {
+    .gFitStrongLeft {
       font-size: 4vw;
       white-space: nowrap;
     }
-    .gymInfoStrongRight {
+    .gFitStrongRight {
       font-size: 4vw;
     }
     
@@ -373,11 +373,11 @@
         font-size: 2.8vw;
     }
 
-    .gymInfoStrongLeft {
+    .gFitStrongLeft {
       font-size: 2.5vw;
     }
     
-    .gymInfoStrongRight {
+    .gFitStrongRight {
       font-size: 2.5vw;
     }
     
@@ -416,10 +416,10 @@
     .gymInfoAddressRow2 {
       margin-bottom: 0px !important;
     }
-    .gymInfoStrongLeft {
+    .gFitStrongLeft {
       white-space: nowrap;
     }
-    .gymInfoStrongRight {
+    .gFitStrongRight {
       white-space: nowrap;
     }
 
@@ -469,11 +469,11 @@
   .gymInfoBody {
       font-size: 3.5vw;
   }
-  .gymInfoStrongLeft {
+  .gFitStrongLeft {
     font-size: 4vw;
   }
   
-  .gymInfoStrongRight {
+  .gFitStrongRight {
     font-size: 4vw;
   }
 }
@@ -697,12 +697,12 @@
       width: 130%;
       height: auto;
     }
-    .gymInfoStrongLeft {
+    .gFitStrongLeft {
       font-family: 'gfitfont-bold', Times, serif;
       font-size: 2vw;
     }
     
-    .gymInfoStrongRight {
+    .gFitStrongRight {
       font-family: 'gfitfont-bold', Times, serif;
       font-size: 2vw;
       color: #FAC04E;
@@ -751,12 +751,12 @@
       width: 130%;
       height: auto;
     }
-    .gymInfoStrongLeft {
+    .gFitStrongLeft {
       font-family: 'gfitfont-bold', Times, serif;
       font-size: 2vw;
     }
     
-    .gymInfoStrongRight {
+    .gFitStrongRight {
       font-family: 'gfitfont-bold', Times, serif;
       font-size: 2vw;
       color: #FAC04E;
@@ -805,12 +805,12 @@
       width: 130%;
       height: auto;
     }
-    .gymInfoStrongLeft {
+    .gFitStrongLeft {
       font-family: 'gfitfont-bold', Times, serif;
       font-size: 2vw;
     }
     
-    .gymInfoStrongRight {
+    .gFitStrongRight {
       font-family: 'gfitfont-bold', Times, serif;
       font-size: 2vw;
       color: #FAC04E;
@@ -926,11 +926,11 @@
       width: 130%;
       height: auto;
     }
-    .gymInfoStrongLeft {
+    .gFitStrongLeft {
       font-family: 'gfitfont-bold', Times, serif;
       font-size: 2vw;
     }
-    .gymInfoStrongRight {
+    .gFitStrongRight {
       font-family: 'gfitfont-bold', Times, serif;
       font-size: 2vw;
       color: #FAC04E;
@@ -980,12 +980,12 @@
       width: 130%;
       height: auto;
     }
-    .gymInfoStrongLeft {
+    .gFitStrongLeft {
       font-family: 'gfitfont-bold', Times, serif;
       font-size: 2vw;
     }
     
-    .gymInfoStrongRight {
+    .gFitStrongRight {
       font-family: 'gfitfont-bold', Times, serif;
       font-size: 2vw;
       color: #FAC04E;
@@ -1035,15 +1035,17 @@
       width: 130%;
       height: auto;
     }
-    .gymInfoStrongLeft {
+    .gFitStrongLeft {
       font-family: 'gfitfont-bold', Times, serif;
       font-size: 2vw;
+      white-space: nowrap !important;
     }
     
-    .gymInfoStrongRight {
+    .gFitStrongRight {
       font-family: 'gfitfont-bold', Times, serif;
       font-size: 2vw;
       color: #FAC04E;
+      white-space: nowrap !important;
     }
 
 }

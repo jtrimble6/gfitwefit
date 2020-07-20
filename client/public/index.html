@@ -55,25 +55,26 @@
     <script src="https://demo.convergepay.com/hosted-payments/PayWithConverge.js"></script>
     <script>
       function openLightbox (event) {
-      event.preventDefault()
-      console.log('OPENING LIGHTBOX NOW!!!!')
-      // debugger;
-      var paymentFields = {
-          ssl_txn_auth_token: document.getElementById("token").value
-      };
-      var callback = {
-        onError: function (error) {
-          showResult("error", error);
-        },
-        onCancelled: function () {
-          showResult("cancelled", "");
-        },
-        onDeclined: function (response) {
-          showResult("declined", JSON.stringify(response, null, '\t'));
-        },
-        onApproval: function (response) {
-          showResult("approval", JSON.stringify(response, null, '\t'));
-        }
+        event.preventDefault()
+        console.log('OPENING LIGHTBOX NOW!!!!')
+        // debugger;
+        var paymentFields = {
+            // ssl_txn_auth_token: document.getElementById("token").value
+            ssl_txn_auth_token: window.$convergeToken
+        };
+        var callback = {
+          onError: function (error) {
+            showResult("ERROR", error);
+          },
+          onCancelled: function () {
+            showResult("CANCELLED", "The transaction has been cancelled");
+          },
+          onDeclined: function (response) {
+            showResult("DECLINED", JSON.stringify(response, null, '\t'));
+          },
+          onApproval: function (response) {
+            showResult("APPROVED", JSON.stringify(response, null, '\t'));
+          }
       };
       console.log('PAYMENT FIELDS: ', paymentFields)
       PayWithConverge.open(paymentFields, callback);
@@ -81,8 +82,36 @@
       }
 
       function showResult (status, msg) {
-        document.getElementById('txn_status').innerHTML = "<b>" + status + "</b>";
-        document.getElementById('txn_response').innerHTML = msg;
+        let msgObj = status === 'APPROVED' ? JSON.parse(msg) : msg
+        console.log('STATUS: ', status, 'MESSAGE: ', msgObj)
+        window.$status = status
+        window.$msg = msgObj
+        document.getElementById('txnStatus').innerHTML = "<b>" + status + "</b>";
+        document.getElementById('txnReferenceNumber').innerHTML = status === 'APPROVED' ? msgObj.ssl_transaction_reference_number : msgObj;
+        document.getElementById('txnPaymentType').innerHTML = status === 'APPROVED' ? msgObj.ssl_card_type : 'N/A';
+        document.getElementById('txnPaymentAmount').innerHTML = status === 'APPROVED' ? msgObj.ssl_amount : 'N/A';
+        document.getElementById('txnDetails').style.display = 'block'
+        document.getElementById('convergeLightboxDiv').style.display = 'none'
+
+        if (status === "APPROVED") {
+          console.log('GOT APPROVAL!!!')
+          var btn = document.getElementById('txn_complete');
+          var t = document.createTextNode('CLICK TO FINISH!');
+          btn.appendChild(t)
+          btn.setAttribute('class', 'txnCompleteButton convergeSuccessButton')
+          btn.style.display = 'block'
+          document.getElementById('finalStepPrev').style.display = 'none'
+          // document.getElementById('txn_complete').appendChild(btn)
+        } else {
+          console.log('ERROR OR DECLINED')
+          var btn = document.getElementById('txn_complete');
+          var t = document.createTextNode('TRY AGAIN');
+          btn.appendChild(t)
+          btn.setAttribute('class', 'txnCompleteButton convergeErrorButton')
+          btn.style.display = 'block'
+          
+        }
+
       }
     </script>
   </body>

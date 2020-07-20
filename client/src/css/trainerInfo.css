@@ -73,13 +73,13 @@
     font-weight: bolder;
 }
 
-.btn-primary {
+.trainerBioButton {
   background-color: #484543 !important;
   border-color: #484543 !important;
   color: white;
 }
 
-.btn-primary:hover {
+.trainerBioButton:hover {
     background-color: white !important;
     border-color: #484543 !important;
     color: #484543;

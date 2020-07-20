@@ -96,7 +96,7 @@ class AdminVideoUploader extends Component {
                         <option value='strength'>Strength</option>
                         <option value='hiit'>H.I.I.T.</option>
                         <option value='boxing'>Boxing</option>
-                        <option value='abs/stretch'>Abs/stretch</option>
+                        <option value='abs#stretch'>Abs/stretch</option>
                       </select>
 
                     </div>

@@ -1,6 +1,7 @@
 .footerLanding {
-    position: absolute !important;
+    position: absolute;
     bottom: -50px !important;
+    width: 100%;
     /* padding-bottom: 25%; */
     background-color: black;
     background-size: cover; 
@@ -47,6 +48,7 @@
     position: absolute;
     bottom: 2.5vw;
     left: 0vw;
+    font-size: 2vw;
 }
 
 /* .footerAddress p {

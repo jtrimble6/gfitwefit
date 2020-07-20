@@ -9,7 +9,7 @@ import { Form, Col } from 'react-bootstrap'
 class SignUpUserHealthInfo extends Component {
 
     componentDidMount() {
-        console.log('Health Info Ready')
+        // console.log('Health Info Ready')
       }
 
     render() {

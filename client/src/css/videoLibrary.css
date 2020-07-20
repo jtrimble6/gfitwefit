@@ -1,5 +1,60 @@
+
+#videoLibraryPage {
+    max-width: 100% !important;
+    margin: 0 auto !important;
+    margin-top: 15vh !important;
+    padding-bottom: 15vh !important;
+    background-color: white;
+}
+
+.videoLibraryRow {
+    display: inline-flex;
+}
+
+.videoLibraryFormRow {
+    width: 100% !important;
+    margin: 0 auto !important;
+    justify-content: center;
+}
+
+.videoLibraryFormContainer {
+    width: 100%;
+}
+
+.videoLibraryDiv {
+    width: 100% !important;
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3;
+    /* align-items: center !important; */
+}
+
+.videoLibraryCardDiv {
+    height: 100% !important;
+    padding: 1vw !important;
+    padding-top: 0 !important;
+    display: inline-block;
+    width: 25vw !important; 
+}
+
+.videoLibraryCard {
+    background-color: black !important;
+    border: 8px solid transparent;
+    margin: 2vw;
+    margin-top: 0;
+}
+
+.videoLibraryCardTitle {
+    color: #FAC04E
+}
+
+.videoLibraryCardText {
+    color: #FAC04E
+}
+
 .videoLibraryForm-heading {
-    margin-bottom: 10%;
+    margin-bottom: 2vw;
+    font-size: 4vw;
 }
 
 .videoPlayerTitle {
@@ -7,7 +62,7 @@
     margin: 0 auto;
     margin-top: 10%;
     justify-content: center;
-    /* margin-bottom: 2%; */
+    margin-bottom: 5%;
 }
 
 .videoPlayerTitleLeft {
@@ -24,7 +79,7 @@
     font-weight: bolder; 
 }
 
-.MuiFormLabel-root {
+/* .videoLibraryPrefTitle {
     color: black !important;
     background-color: #FAC04E;
     width: 60%;
@@ -32,17 +87,15 @@
     padding: 2% !important;
     border-radius: 5%;
     font-size: 2vw !important;
-}
+} */
 
 .MuiFormGroup-root {
     justify-content: center;
 }
-.videoLibraryForm-heading {
-    font-size: 6vw;
-}
+
 .videoLibraryPrefTitle {
     font-size: 4vw !important;
-    color: white !important;
+    color: black !important;
     background-color: transparent;
     width: 100%;
     margin: 0 auto !important;
@@ -63,15 +116,6 @@
     margin: 0 auto;
 }
 
-.videoLibraryCard {
-    background-color: transparent;
-    border: 2px solid #FAC04E;
-}
-
-.videoPlayerTitle {
-    margin-bottom: 5%;
-}
-
 .video-react {
     padding-top: 70vh !important;
 }
@@ -87,6 +131,99 @@
     padding: 2%;
 }
 
-/* .equipmentRadios, .fitnessLevelRadios, .workoutTypeRadios {
+.userRadios {
+    color: black;    
+    font-size: 2vw;
+}
+
+.MuiFormControlLabel-label {
+    /* font-size: 1vw !important; */
+}
+
+.filterColumn {
+    background-color: rgb(165, 164, 164);
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; 
+    max-height: 100vh;
+    margin-left: 3vw;
+    border-radius: 1%;
+}
+
+.noVideosTitle {
+    color: #FAC04E;
     
-} */
+}
+
+.video-react-video {
+
+}
+
+.video-react-poster {
+    /* width: 110% !important; */
+    margin: 0 auto !important;
+}
+
+@media screen 
+  and (max-device-width: 849px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+    .videoLibraryDiv {
+        -webkit-column-count: 1 !important;
+        -moz-column-count: 1 !important;
+        column-count: 1 !important;
+        /* align-items: center !important; */
+    }
+    .videoLibraryCardDiv {
+        width: 55vw !important; 
+    }
+    .filterColumn {
+        min-width: 20vw;
+    }
+    .filterTitle {
+        font-size: 1.5vw;
+    }
+}
+
+@media screen 
+  and (min-device-width: 850px)
+  and (max-device-width: 999px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+    .videoLibraryDiv {
+        -webkit-column-count: 1;
+        -moz-column-count: 1;
+        column-count: 1;
+        /* align-items: center !important; */
+    }
+    .videoLibraryCardDiv {
+        width: 55vw !important; 
+    }
+}
+
+@media screen 
+  and (min-device-width: 1000px) 
+  and (max-device-width: 1200px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+    .videoLibraryDiv {
+        -webkit-column-count: 2;
+        -moz-column-count: 2;
+        column-count: 2;
+        /* align-items: center !important; */
+    }
+    .videoLibraryCardDiv {
+        width: 30vw !important; 
+    }
+}
+
+@media screen 
+  and (min-device-width: 1201px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+    .videoLibraryDiv {
+        -webkit-column-count: 2;
+        -moz-column-count: 2;
+        column-count: 2;
+        /* align-items: center !important; */
+    }
+    .videoLibraryCardDiv {
+        width: 30vw !important; 
+    }
+}

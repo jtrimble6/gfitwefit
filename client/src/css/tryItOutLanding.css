@@ -13,8 +13,9 @@
 
 .tryItOutLanding {
     height: 575px;
-    background-color: #211C18;
+    background-color: black;
     padding: 10%;
+    margin-top: 8vh;
 }
 
 .tryItOutInfoTitle {
@@ -240,4 +241,68 @@
   and (-webkit-min-device-pixel-ratio: 3)
   and (orientation: landscape) { 
 
+}
+
+
+
+/* ----------- LAPTOPS ----------- */
+
+
+/* ----------- Non-Retina Screens ----------- */
+@media screen 
+  and (min-device-width: 1200px) 
+  and (max-device-width: 1600px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+    
+}
+
+@media screen 
+  and (min-device-width: 1600px)  
+  and (max-device-width: 2000px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+    .tryItOutLanding {
+      height: 700px;
+      padding: 10%;
+    }
+}
+
+@media screen 
+  and (min-device-width: 2001px)  
+  and (-webkit-min-device-pixel-ratio: 1) { 
+    .tryItOutLanding {
+      height: 900px;
+      padding: 10%;
+    }
+}
+
+/* ----------- Retina Screens ----------- */
+@media screen 
+  and (min-device-width: 1200px) 
+  and (max-device-width: 1600px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (min-resolution: 192dpi) { 
+    
+}
+
+@media screen 
+  and (min-device-width: 1600px) 
+  and (max-device-width: 2000px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (min-resolution: 192dpi) { 
+    .contactLanding {
+      height: 80vh;
+    }
+    .tryItOutLanding {
+      height: 700px;
+      padding: 10%;
+    }
+}
+
+@media screen 
+  and (min-device-width: 2001px)  
+  and (-webkit-min-device-pixel-ratio: 2) { 
+    .tryItOutLanding {
+      height: 900px;
+      padding: 10%;
+    }
 }

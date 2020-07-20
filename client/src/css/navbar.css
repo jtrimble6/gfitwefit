@@ -493,7 +493,7 @@
   and (-webkit-min-device-pixel-ratio: 2)
   and (orientation: portrait) {
     .navbar {
-        height: 12vh !important;
+        height: 14vh !important;
     }
     .Navbar-logo {
         height: 50px !important;
@@ -868,7 +868,7 @@
   and (max-device-width: 1200px) 
   and (-webkit-min-device-pixel-ratio: 1) { 
     .navbar {
-      height: 10vw !important;
+      height: 14vh !important;
     }
 
     /* BURGER MENU */
@@ -921,7 +921,7 @@
   and (max-device-width: 1800px) 
   and (-webkit-min-device-pixel-ratio: 1) { 
     .navbar {
-      height: 10vw !important;
+      height: 14vh !important;
     }
 }
 
@@ -930,7 +930,7 @@
   and (max-device-width: 2000px) 
   and (-webkit-min-device-pixel-ratio: 1) { 
     .navbar {
-      height: 10vw !important;
+      height: 14vh !important;
     }
 }
 
@@ -938,7 +938,7 @@
   and (min-device-width: 2001px) 
   and (-webkit-min-device-pixel-ratio: 1) { 
     .navbar {
-      height: 40vw !important;
+      height: 15vh !important;
     }
     .Navbar-logo {
         height: 125px !important;
