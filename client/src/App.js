@@ -149,7 +149,7 @@ class Landing extends Component {
                 />
               }
             />
-            <Route exact path='/userHomePage'
+            <Route exact path='/userHome'
               render={() =>
                 <UserHomePage
                   updateUser={this.updateUser}

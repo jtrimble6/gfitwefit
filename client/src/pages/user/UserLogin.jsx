@@ -27,7 +27,7 @@ class UserLogin extends Component {
 
     renderRedirect = () => {
         if (this.state.redirect === true) {
-          return <Redirect to='/userHomePage' />
+          return <Redirect to='/userHome' />
         }
         else {}
     }
