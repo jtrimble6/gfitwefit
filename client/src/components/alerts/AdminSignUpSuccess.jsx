@@ -21,7 +21,7 @@ class AdminSignUpSuccess extends Component {
         // console.log(this.props.AdminSignUpSuccess);
         if (this.props.adminSignUpSuccess === true) {
             return (
-                <Alert color='danger' isOpen={this.state.visible}>
+                <Alert color='success' isOpen={this.state.visible}>
                     New admin was successfully signed up!
                 </Alert>
             )
