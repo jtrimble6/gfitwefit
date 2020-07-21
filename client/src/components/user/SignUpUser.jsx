@@ -85,6 +85,7 @@ class SignUpUser extends Component {
         waiverError: false,
         changeStepError: false,
         stepOneFieldError: false,
+        convergeTokenError: false,
         sessionID: '',
         redirect: false,
       }
@@ -307,6 +308,11 @@ class SignUpUser extends Component {
               // } else if(response.data.msg === 'fail'){
               //   console.log("Payment failed to send.")
               // }
+          }).catch((err) => {
+            console.log('ERROR RETRIEVING CONVERGE TOKEN')
+            this.setState({
+              convergeTokenError: true
+            })
           })
         
       }
@@ -591,6 +597,7 @@ class SignUpUser extends Component {
                     checkWaiver={this.checkWaiver}
                     handleConvergePay={this.handleConvergePay}
                     sessionID={this.state.sessionID}
+                    convergeTokenError={this.state.convergeTokenError}
                   />
 
                   <SignUpUserConvergeLightbox 
@@ -650,7 +657,7 @@ class SignUpUser extends Component {
 
                       (this.state.currentStep === 7) ?
 
-                      <NavLink className='signInButton' href="/login">
+                      <NavLink className='signInButton' href="/userLogin">
                        Sign In
                       </NavLink>
 

@@ -54,7 +54,7 @@ userSchema.pre('save', function (next) {
     }
 });
 
-userSchema.pre('findOneAndUpdate', function (next) {
+userSchema.pre('updateOne', function (next) {
 
     // HASH PASSWORD IF MODIFIED
     const password = this.getUpdate().$set.password;

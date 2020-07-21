@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Form, Button, Col, FormCheck } from 'react-bootstrap'
 import WaiverError from '../alerts/WaiverError';
 import '../../css/signup.css'
+import ConvergeTokenError from '../alerts/ConvergeTokenError'
 
 class SignUpUserHealth extends Component {
     constructor(props) {
@@ -42,6 +43,9 @@ class SignUpUserHealth extends Component {
               <Button onClick={this.props.handleConvergePay} className='payWithConverge'>
                 Pay With Converge
               </Button>
+              <ConvergeTokenError
+                convergeTokenError={this.props.convergeTokenError}
+              />
               <WaiverError
                 waiverError={this.props.waiverError}
               />

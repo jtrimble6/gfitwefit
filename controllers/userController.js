@@ -110,7 +110,7 @@ module.exports = {
       //   });
       // })
       let password = req.body.newPassword
-      let hashedPassword = bcrypt.hash(password);
+      // let hashedPassword = bcrypt.hash(password);
 
       // update it with hash
       // bcrypt.hash(password, (hash) => {
@@ -120,7 +120,7 @@ module.exports = {
         db.User.updateOne(
           { username: req.params.id },
           { $set: { 
-            'password': hashedPassword
+            'password': password
           }},
          )
         .then(dbModel => res.json(dbModel))
@@ -128,14 +128,14 @@ module.exports = {
       // });     
       
     },
-    findByDate: function(req, res) {
-      db.Game
-        .find(
-            { username: req.params.id, gameDate: req.params.date }
-          )
-        .then(dbModel => res.json(dbModel))
-        .catch(err => res.status(422).json(err))
-    },
+    // findByDate: function(req, res) {
+    //   db.Game
+    //     .find(
+    //         { username: req.params.id, gameDate: req.params.date }
+    //       )
+    //     .then(dbModel => res.json(dbModel))
+    //     .catch(err => res.status(422).json(err))
+    // },
     create: function(req, res) {
         db.User
           .create(req.body)
