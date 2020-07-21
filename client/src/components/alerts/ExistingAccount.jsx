@@ -21,7 +21,7 @@ class ExistingAccount extends Component {
         // console.log(this.props.nameTaken);
         if (this.props.nameTaken === true) {
             return (
-                <Alert color='info' isOpen={this.state.visible} toggle={this.onDismiss}>
+                <Alert color='info' isOpen={this.state.visible}>
                     Sorry, that username is taken already!
                 </Alert>
             )

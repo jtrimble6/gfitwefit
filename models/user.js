@@ -42,30 +42,61 @@ userSchema.methods = {
 };
 
 userSchema.pre('save', function (next) {
-    var user = this;
-    var SALT_FACTOR = 5;
 
-    if (!user.isModified('password')) return next();
-
-    bcrypt.genSalt(SALT_FACTOR, function(err, salt) {
-        if (err) return next(err);
-
-        bcrypt.hash(user.password, salt, null, function(err, hash) {
-        if (err) return next(err);
-        user.password = hash;
-        next();
-        });
-    });
-    
-    // if (!this.password) {
-    //     console.log('models/user.js ***NO PASSWORD PROVIDED***')
-    //     next()
-    // } else {
-    //     console.log('models/user.js hashPassword in pre-save')
-    //     this.password = this.hashPassword(this.password)
-    //     next()
-    // }
+    // HASH PASSWORD WHEN NEW USER CREATED
+    if (!this.password) {
+        console.log('models/user.js ***NO PASSWORD PROVIDED***')
+        next()
+    } else {
+        console.log('models/user.js hashPassword in pre-save')
+        this.password = this.hashPassword(this.password)
+        next()
+    }
 });
+
+userSchema.pre('findOneAndUpdate', function (next) {
+
+    // HASH PASSWORD IF MODIFIED
+    const password = this.getUpdate().$set.password;
+        if (!password) {
+            return next();
+        }
+        try {
+            const salt = bcrypt.genSaltSync();
+            const hash = bcrypt.hashSync(password, salt);
+            this.getUpdate().$set.password = hash;
+            next();
+        } catch (error) {
+            return next(error);
+        }
+
+});
+
+// userSchema.pre('save', function (next) {
+//     var user = this;
+//     var SALT_FACTOR = 5;
+
+//     if (!user.isModified('password')) return next();
+
+//     bcrypt.genSalt(SALT_FACTOR, function(err, salt) {
+//         if (err) return next(err);
+
+//         bcrypt.hash(user.password, salt, null, function(err, hash) {
+//         if (err) return next(err);
+//         user.password = hash;
+//         next();
+//         });
+//     });
+    
+//     // if (!this.password) {
+//     //     console.log('models/user.js ***NO PASSWORD PROVIDED***')
+//     //     next()
+//     // } else {
+//     //     console.log('models/user.js hashPassword in pre-save')
+//     //     this.password = this.hashPassword(this.password)
+//     //     next()
+//     // }
+// });
 
 const User = mongoose.model('User', userSchema)
 

@@ -58,7 +58,9 @@ class AdminSignUp extends Component {
         this.setState({
             [name]: value,
             adminSignUpError: false,
-            adminSignUpSuccess: false
+            adminSignUpSuccess: false,
+            nameTaken: false,
+            passwordError: false,
         })
       }
 
@@ -267,6 +269,9 @@ class AdminSignUp extends Component {
                         />
                         <AdminSignUpError 
                           adminSignUpError={this.state.adminSignUpError}
+                        />
+                        <AdminSignUpSuccess 
+                          adminSignUpSuccess={this.state.adminSignUpSuccess}
                         />
                         <button
                             type="submit"
