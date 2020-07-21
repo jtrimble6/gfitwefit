@@ -5,6 +5,8 @@ import API from '../../utils/API'
 import '../../css/signup.css'
 import ExistingAccount from "../../components/alerts/ExistingAccount";
 import PasswordError from '../../components/alerts/PasswordError';
+import AdminSignUpSuccess from '../../components/alerts/AdminSignUpSuccess'
+import AdminSignUpError from '../../components/alerts/AdminSignUpError'
 
 
 
@@ -16,11 +18,14 @@ class AdminSignUp extends Component {
         lastName: '',
         username: '',
         email: '',
+        phoneNumber: 'n/a',
         password: '',
         confirmPassword: '',
         redirect: false,
         nameTaken: false,
-        passwordError: false
+        passwordError: false,
+        adminSignUpError: false,
+        adminSignUpSuccess: false
       }
         this.setRedirect = this.setRedirect.bind(this)
         this.renderRedirect = this.renderRedirect.bind(this)
@@ -51,7 +56,9 @@ class AdminSignUp extends Component {
     handleInputChange = event => {
         const { name, value } = event.target
         this.setState({
-            [name]: value
+            [name]: value,
+            adminSignUpError: false,
+            adminSignUpSuccess: false
         })
       }
 
@@ -106,11 +113,12 @@ class AdminSignUp extends Component {
         })
         event.preventDefault();
         //console.log(this.state)
-        let userData = {
+        let userData = { 
             admin: true,
             firstName: this.state.firstName,
             lastName: this.state.lastName,
             email: this.state.email,
+            phoneNumber: this.state.phoneNumber,
             username: this.state.username,
             password: this.state.password,
             paymentComplete: false,
@@ -129,18 +137,33 @@ class AdminSignUp extends Component {
                 if (!res.data[0]) {
                     console.log("Username available");
                     API.saveUser(userData)
-                    .then(res => {
-                        console.log(res)
-                        if (res.data) {
-                            console.log("Successful signup!")
-                            this.setRedirect();
-                        } else {
-                            console.log("Signup error")
-                        }
-                    })
-                    .catch(error => {
-                        console.log(error)
-                    })
+                        .then(res => {
+                            console.log(res)
+                            if (res.data) {
+                                console.log("Successful signup!")
+                                this.setState({
+                                    adminSignUpSuccess: true,
+                                    firstName: '',
+                                    lastName: '',
+                                    username: '',
+                                    email: '',
+                                    password: '',
+                                    confirmPassword: '',
+                                })
+                                // this.setRedirect();
+                            } else {
+                                console.log("Signup error")
+                                this.setState({
+                                    adminSignUpError: true
+                                })
+                            }
+                        })
+                        .catch(error => {
+                            console.log('Backend error: ', error)
+                            this.setState({
+                                adminSignUpError: true
+                            })
+                        })
                 } else {
                     console.log("Username taken");
                     this.setState({
@@ -241,6 +264,9 @@ class AdminSignUp extends Component {
                         />
                         <PasswordError
                           passwordError={this.state.passwordError}
+                        />
+                        <AdminSignUpError 
+                          adminSignUpError={this.state.adminSignUpError}
                         />
                         <button
                             type="submit"
