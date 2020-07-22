@@ -200,6 +200,10 @@
     white-space: pre-wrap;
 }
 
+.alert {
+    text-align: center;
+}
+
 /* CONVERGE LIGHTBOX */
 
 #txnReferenceNumber {

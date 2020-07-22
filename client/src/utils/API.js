@@ -36,6 +36,14 @@ export default {
         return axios.get('/api/sessions/' + id, localSessionID)
     },
 
+    // PASSWORD RESET API CALLS
+    updatePassToken: function(username, passInfo) {
+        return axios.put('/api/passwordReset/' + username, passInfo)
+    },
+    updatePassword: function(username, newPassword) {
+        return axios.put('/api/updatePassword/' + username, newPassword)
+    },
+
     // SCHEDULE API
     getSchedules: function() {
         return axios.get('/api/schedules')

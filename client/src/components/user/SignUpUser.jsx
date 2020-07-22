@@ -3,6 +3,7 @@ import { Redirect } from 'react-router-dom'
 import axios from 'axios'
 import '../../css/signup.css'
 import API from '../../utils/API'
+// import $ from 'jquery'
 // import UnderConstructionPage from '../UnderConstructionPage.jsx'
 import { NavLink } from 'reactstrap';
 import { Form, Button } from 'react-bootstrap'
@@ -281,6 +282,8 @@ class SignUpUser extends Component {
           })
           return
         } else {
+          document.getElementById('convergeButton').style.disabled = true
+          document.getElementById('convergeButton').innerHTML = `<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Loading...`
           this.setState({
             waiverError: false
           })
@@ -289,6 +292,21 @@ class SignUpUser extends Component {
         // Start the HTTPS server
         // var cors = "https://cors-anywhere.herokuapp.com/"
 
+        //DISABLE BUTTON AND SHOW LOADING SPINNER
+        
+        // <Button id='convergeButton' className='payWithConverge' disabled>
+        //   <Spinner
+        //     as="span"
+        //     animation="grow"
+        //     size="sm"
+        //     role="status"
+        //     aria-hidden="true"
+        //   />
+        //   Loading...
+        // </Button>
+        
+
+        axios.defaults.timeout = 1000 * 10;
         axios({
           method: "GET", 
           // url: "https://www.gfitwefit.com/converge_token_req",
@@ -309,11 +327,15 @@ class SignUpUser extends Component {
               //   console.log("Payment failed to send.")
               // }
           }).catch((err) => {
-            console.log('ERROR RETRIEVING CONVERGE TOKEN')
+            console.log('ERROR RETRIEVING CONVERGE TOKEN: ', err)
+            document.getElementById('convergeButton').style.disabled = false
+            document.getElementById('convergeButton').innerHTML = `Pay With Converge`
             this.setState({
               convergeTokenError: true
             })
           })
+
+
         
       }
 

@@ -152,10 +152,10 @@ class MessageBoard extends Component {
                                 
                 <button
                     type="submit"
-                    className="btn btn-primary submit"
+                    className="btn chatRoomSendButton"
                     onClick={this.handleSubmit}
                     >
-                    Submit
+                    Send
                 </button>
               </div>
                 

@@ -78,6 +78,7 @@ class UserVideoLibrary extends Component {
       }
 
     getVideos = () => {
+        document.getElementById('noVideosTitle').innerHTML = `<span class="spinner-border spinner-border-lg" role="status" aria-hidden="true"></span> Loading videos...`
         axios.get('/videos').then(res => {
             let files = res.data
             let videoLibrary = files.filter(file => {
@@ -87,6 +88,12 @@ class UserVideoLibrary extends Component {
                 videoLibrary: videoLibrary,
                 videoLibraryFiltered: videoLibrary
             }, () => {
+              if (videoLibrary.length < 1) {
+                document.getElementById('noVideosTitle').innerHTML = `There are no videos to display.`
+                document.getElementById('noVideosTitle').style.display = 'block'
+              } else {
+                document.getElementById('noVideosTitle').style.display = 'none'
+              }
               console.log(this.state.videoLibrary);
             })
           });
@@ -255,6 +262,8 @@ class UserVideoLibrary extends Component {
                     <div className="col-sm-8 videoColumn">
                         {/* VIDEO PLAYER */}
 
+                        <h2 className='noVideosTitle' id='noVideosTitle'> </h2>
+
                         {
                             (this.state.videoLibraryFiltered.length > 0) ? 
                             
@@ -305,7 +314,7 @@ class UserVideoLibrary extends Component {
 
                             : 
 
-                            <h2 className='noVideosTitle'>There are no videos to display.</h2>
+                            <div></div>
                         }
 
                         {/* BACK TO HOME */}

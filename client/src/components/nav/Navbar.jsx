@@ -125,10 +125,11 @@ class Navbar extends Component {
                         <div className="collapse navbar-collapse" id="navbarResponsive">
                         <ul className="navbar-nav ml-auto">
                           <li className="nav-item" >
-                            <a className="nav-link js-scroll-trigger" href='/'>
-                              HOME
+                            <a className="nav-link js-scroll-trigger" href='/contact'>
+                              CONTACT US  |
                             </a>
                           </li>
+                          
                           <li className="nav-item">
                             <Link
                               activeClass="active"
@@ -138,18 +139,21 @@ class Navbar extends Component {
                               smooth={true}
                               offset={-150}
                               duration= {500}
-                            > SCHEDULE </Link>
+                            > SEE SCHEDULE |</Link>
                           </li>
+
+                          <li className="nav-item" >
+                            <a className="nav-link js-scroll-trigger" href='/userLogin'>
+                              G-FIT GOLD  |
+                            </a>
+                          </li>
+
                           {/* <li className="nav-item" >
                             <a className="nav-link js-scroll-trigger" href='/pricing'>
                               PRICING
                             </a>
                           </li> */}
-                          <li className="nav-item" >
-                            <a className="nav-link js-scroll-trigger" href='/contact'>
-                              CONTACT
-                            </a>
-                          </li>
+                          
                           <li className="nav-item" >
                             <a className="nav-link js-scroll-trigger signUp" href='/tryitout'>
                               TRY IT OUT

@@ -22,6 +22,8 @@ import Logout from './pages/admin/Logout'
 import UserSignUpPage from './pages/oldPages/UserSignUpPage'
 import UserLogin from './pages/user/UserLogin'
 import UserHomePage from './pages/user/UserHomePage'
+import PasswordReset from './pages/user/PasswordReset'
+import UpdatePassword from './pages/user/UpdatePassword'
 
 // CSS
 import './css/main.css';
@@ -147,6 +149,16 @@ class Landing extends Component {
                 <UserLogin 
                   updateUser={this.updateUser}
                 />
+              }
+            />
+            <Route exact path='/passwordReset'
+              render={() =>
+                <PasswordReset />
+              }
+            />
+            <Route exact path='/updatePassword'
+              render={() =>
+                <UpdatePassword />
               }
             />
             <Route exact path='/userHome'

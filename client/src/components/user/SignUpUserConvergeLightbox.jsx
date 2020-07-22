@@ -42,7 +42,7 @@ class SignUpUserConvergeLightbox extends Component {
                 </div>
               </Form.Row>
                 <div id="convergeLightboxDiv">
-                  <button className='convergeLightboxButton' onClick={window["openLightbox"]}>Secure Payment</button> 
+                  <button id='convergeLightboxInitButton' className='convergeLightboxButton' onClick={window["openLightbox"]}>Secure Payment</button> 
                 </div>
                 
                 <div id="convergeCompleteDiv">

@@ -7,13 +7,18 @@
     font-family: 'gfitfont-bold';
     max-width: 80% !important;
     margin: 0 auto !important;
-    margin-top: 15vh !important;
+    margin-top: 5vh !important;
     text-align: center;
     margin-bottom: 5% !important;
+    background-color: #494848;
+    padding: 10%;
+    border-radius: 3%;
 }
 
 .recentMessagesButton {
     margin: 0 auto;
+    background-color: white !important;
+    color: black !important;
 }
 
 .messageList {
@@ -72,4 +77,11 @@
 
 .challengeCard .card-subtitle {
     font-size: 18px;
+}
+
+.chatRoomSendButton {
+    background-color: #FAC04E;
+    width: 30%;
+    margin: 0 auto;
+    margin-top: 2%;
 }

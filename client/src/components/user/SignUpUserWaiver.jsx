@@ -40,7 +40,7 @@ class SignUpUserHealth extends Component {
                     />
                 </Form.Group>
               </Form.Row>
-              <Button onClick={this.props.handleConvergePay} className='payWithConverge'>
+              <Button onClick={this.props.handleConvergePay} id='convergeButton' className='payWithConverge'>
                 Pay With Converge
               </Button>
               <ConvergeTokenError

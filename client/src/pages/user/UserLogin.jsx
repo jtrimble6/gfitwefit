@@ -5,6 +5,7 @@ import Footer from '../../components/nav/Footer'
 import API from '../../utils/API'
 import SignInError from "../../components/alerts/SignInError";
 import '../../css/admin.css'
+import '../../css/userLogin.css'
 
 class UserLogin extends Component {
 
@@ -89,45 +90,66 @@ class UserLogin extends Component {
         <div>
             <LoginBar />
             <div id="loginPage">
-            
               {this.renderRedirect()}
-                <div className="formContainer">    
-                    <form className="formLogin" action="index.html">
-                        <h2 className="formLoginHeading">User Login</h2> <br />
-                        <div className="loginWrap">
-                            <input
-                                value={this.state.username}
-                                name="username"
-                                onChange={this.handleInputChange}
-                                type="text"
-                                className="form-control"
-                                placeholder="Username (case sensitive)"
-                                autoFocus
-                            />
-                            <br/>
-                            <input
-                                value={this.state.password}
-                                name="password"
-                                onChange={this.handleInputChange}
-                                type="password"
-                                className="form-control"
-                                placeholder="Password (case sensitive)"
-                            />
-                            <br />
-                            <SignInError
-                                signInError={this.state.signInError}
-                            />
-                            <button
-                                className="loginButton btn btn-block"
-                                href="index.html"
-                                type="submit"
-                                onClick={this.handleFormSubmit}
-                                >
-                                <i className="fa fa-lock"></i> SIGN IN
-                            </button>  
-                        </div> 
-                    </form>	  	
-                </div>
+              <div className="row">
+                  <div className="col-sm-6 loginInfoColumn">
+                    <h2 className='loginInfoHeader'>G-FIT GOLD</h2>
+                    <div className="loginInfoDetails">
+                        <h4 className='membershipDetailsTitle'>Membership Includes: </h4>
+                        <div className="membershipDetails">
+                            <p>*Unlimited access to complete at-home workouts created by your favorite trainers!</p>
+                            <p>*Chat feature built-in to encourage and meet new G-Fit members!</p>
+                            <p>*Custom preferences to enjoy YOUR workouts YOUR WAY!</p>
+                            <p>Only $5/month gets instant access to our collection of at-home workout videos and much more!</p>                        
+                        </div>
+                    </div>
+                    <a href='/userSignUp' className='userSignUpLink'>Sign Up Today</a>
+                  </div>
+                  <div className="col-sm-6">
+                    <div className="formContainer">    
+                        <form className="formLogin" action="index.html">
+                            <h2 className="formLoginHeading">LOGIN</h2> <br />
+                            <div className="loginWrap">
+                                <input
+                                    value={this.state.username}
+                                    name="username"
+                                    onChange={this.handleInputChange}
+                                    type="text"
+                                    className="form-control"
+                                    placeholder="Username (case sensitive)"
+                                    autoFocus
+                                />
+                                <br/>
+                                <input
+                                    value={this.state.password}
+                                    name="password"
+                                    onChange={this.handleInputChange}
+                                    type="password"
+                                    className="form-control"
+                                    placeholder="Password (case sensitive)"
+                                />
+                                <br />
+                                <SignInError
+                                    signInError={this.state.signInError}
+                                />
+                                <button
+                                    className="loginButton btn btn-block"
+                                    href="index.html"
+                                    type="submit"
+                                    onClick={this.handleFormSubmit}
+                                    >
+                                    <i className="fa fa-lock"></i> SIGN IN
+                                </button>  
+                                <label className="checkbox passwordResetLink">
+                                    <span className="pull-right">
+                                        <a href="/passwordReset">Forgot Password?</a>               
+                                    </span>
+                                </label>
+                            </div> 
+                        </form>	  	
+                    </div>
+                  </div>
+              </div>
             </div>
             <Footer />
             </div>

@@ -57,6 +57,8 @@
       function openLightbox (event) {
         event.preventDefault()
         console.log('OPENING LIGHTBOX NOW!!!!')
+        document.getElementById('convergeLightboxInitButton').style.disabled = true
+        document.getElementById('convergeLightboxInitButton').innerHTML = `<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Loading...`
         // debugger;
         var paymentFields = {
             // ssl_txn_auth_token: document.getElementById("token").value

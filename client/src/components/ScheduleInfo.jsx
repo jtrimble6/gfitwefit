@@ -82,7 +82,7 @@ class ScheduleInfo extends Component {
     
         let sortedSchedule = newSchedule.sort((a,b) => (a.day) - (b.day))
     
-        console.log('ORDERED SCHEDULE: ', sortedSchedule)
+        // console.log('ORDERED SCHEDULE: ', sortedSchedule)
         this.setState({
             sortedSchedule: sortedSchedule
         })
