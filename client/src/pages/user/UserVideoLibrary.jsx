@@ -3,7 +3,7 @@ import axios from 'axios'
 import API from '../../utils/API'
 import { Player, BigPlayButton } from 'video-react';
 // import { Row, Button } from 'react-bootstrap'
-import { Card, CardBody, CardTitle, CardText } from 'reactstrap';
+import { Card, CardBody, CardTitle, CardText, Button } from 'reactstrap';
 import backgroundImg from "../../css/images/GOUVEIA-FITNESS_Mark_White.png";
 
 // CSS
@@ -240,13 +240,13 @@ class UserVideoLibrary extends Component {
                 <h2 className="videoLibraryForm-heading">Video Library</h2>
                   <div className="row videoLibraryRow">
                     <div className="col-sm-3 filterColumn">
-                        {/* <Button
+                        <Button
                             id="showHideFilterButton"
                             className="userFilterLibraryButton"
                             onClick={this.toggleFilter}
                         >
                             Show Filters
-                        </Button> */}
+                        </Button>
 
                         {/* FILTER FORM */}
                         <UserVideoPreferences 

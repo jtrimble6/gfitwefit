@@ -63,7 +63,7 @@ export default function ControlledAccordions(props) {
         <AccordionDetails className='userProfileAccordionDetails'>
           <Form className='editUserForm'>
               <Form.Row>
-                <Form.Group as={Col} controlId="formGridFirstName">
+                <Form.Group className='userEditProfileFormCol' as={Col} sm='12' controlId="formGridFirstName">
                   <Form.Label className='userEditProfileLabel'>First Name</Form.Label>
                   <Form.Control 
                       value={props.firstName || ''}
@@ -73,7 +73,7 @@ export default function ControlledAccordions(props) {
                   />
                 </Form.Group>
 
-                <Form.Group as={Col} controlId="formGridLastName">
+                <Form.Group className='userEditProfileFormCol' as={Col} sm='12' controlId="formGridLastName">
                   <Form.Label className='userEditProfileLabel'>Last Name</Form.Label>
                   <Form.Control 
                       value={props.lastName || ''}
@@ -85,7 +85,7 @@ export default function ControlledAccordions(props) {
               {/* </Form.Row> */}
 
               {/* <Form.Row> */}
-                <Form.Group as={Col} controlId="formGridEmail">
+                <Form.Group className='userEditProfileFormCol' as={Col} sm='12' controlId="formGridEmail">
                     <Form.Label className='userEditProfileLabel'>Email</Form.Label>
                     <Form.Control
                         value={props.email || ''}
@@ -99,7 +99,7 @@ export default function ControlledAccordions(props) {
                     />
                 </Form.Group>
 
-                <Form.Group as={Col} controlId="formGridPhoneNumber">
+                <Form.Group className='userEditProfileFormCol' as={Col} sm='12' controlId="formGridPhoneNumber">
                     <Form.Label className='userEditProfileLabel'>Phone Number</Form.Label>
                     <Form.Control 
                         value={props.phoneNumber || ''}
@@ -294,7 +294,7 @@ export default function ControlledAccordions(props) {
                         />
                     </RadioGroup>
                     <Button
-                      className="userFilterLibraryButton"
+                      className="userSetFilterLibraryButton"
                       onClick={props.handleSetPreferences}
                     >
                       Set Preferences
@@ -328,7 +328,7 @@ export default function ControlledAccordions(props) {
         <AccordionDetails className='userProfileAccordionDetails'>
         <Form className='editUserForm'>
               <Form.Row>
-                <Form.Group as={Col} controlId="formGridOldPassword">
+                <Form.Group as={Col} sm='12' controlId="formGridOldPassword">
                     <Form.Label className='userEditProfileLabel'>Old Password</Form.Label>
                     <Form.Control 
                         value={props.oldPassword}
@@ -339,7 +339,7 @@ export default function ControlledAccordions(props) {
                     />
                 </Form.Group>
 
-                <Form.Group as={Col} controlId="formGridNewPassword">
+                <Form.Group as={Col} sm='12' controlId="formGridNewPassword">
                     <Form.Label className='userEditProfileLabel'>New Password</Form.Label>
                     <Form.Control 
                         value={props.newPassword}
@@ -350,7 +350,7 @@ export default function ControlledAccordions(props) {
                     />
                 </Form.Group>
 
-                <Form.Group as={Col} controlId="formGridConfirmPassword">
+                <Form.Group as={Col} sm='12' controlId="formGridConfirmPassword">
                     <Form.Label className='userEditProfileLabel'>Confirm New Password</Form.Label>
                     <Form.Control
                         value={props.confirmNewPassword}

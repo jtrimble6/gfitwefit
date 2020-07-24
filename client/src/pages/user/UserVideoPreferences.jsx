@@ -21,7 +21,7 @@ class UserVideoPreferences extends Component {
         return (
           <div id="userVideoPreferences">
             <FormControl component="fieldset">
-                {/* <FormLabel className='videoLibraryPrefTitle' component="legend">Filter</FormLabel> */}
+                {/* <FormLabel className='videoLibraryPrefTitle' display='none' component="legend">Filter</FormLabel> */}
                 
                 {/* Equipment Preference */}
                     <FormLabel 

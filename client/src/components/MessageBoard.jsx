@@ -55,9 +55,13 @@ class MessageBoard extends Component {
     }
 
     getMessageBoard = () => {
+        document.getElementById('recentMessagesButton').innerHTML = `<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Loading messages...`
         API.getMessageBoard()
           .then(res => {
               // console.log('MESSAGE BOARD: ', res.data)
+              if (res.data.length > 1) {
+                document.getElementById('recentMessagesButton').innerHTML = `No Recent Messages`
+              }
               this.setState({
                   messageBoardData: res.data
               })
@@ -135,7 +139,7 @@ class MessageBoard extends Component {
                 />
 
                 {
-                    this.state.recentMessageData[0] ? '' : <Button disabled={true} className='recentMessagesButton'>No Recent Messages</Button>
+                    this.state.recentMessageData[0] ? '' : <Button disabled={true} className='recentMessagesButton' id="recentMessagesButton">No Recent Messages</Button>
                 }
               
               <div className="row form-group messageBox">

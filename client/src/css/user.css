@@ -15,7 +15,7 @@
     margin: 0 auto;
     /* margin-top: 10%; */
     margin-bottom: 20%;
-    color: white;
+    /* color: white; */
     text-align: center;
 }
 
@@ -70,13 +70,14 @@
     position: relative;
     top: 0;
     height: 100px;
-    margin-top: 8vh !important;
+    margin-top: 10vw;
     background-color: black !important;
 }
 
 .MuiAppBar-root {
-    margin-top: 14vh !important;
+    margin-top: 10vw !important;
     background-color: white !important;
+    padding-top: 0.5rem;
 }
 
 .MuiBox-root {
@@ -171,8 +172,10 @@
 .messageBoardTitle {
   font-family: 'gfitfont-bold';
   font-size: 4vw;
-  margin-bottom: 2vw;
-  margin-top: 15vh;
+  padding-top: 2vw;
+  padding-bottom: 5vw;
+  margin-bottom: 1vw;
+  margin-top: 2vw;
 }
 
 
@@ -184,7 +187,7 @@
     font-family: 'gfitfont-bold';
     /* max-width: 80% !important; */
     margin: 0 auto !important;
-    margin-top: 5vh !important;
+    margin-top: 5vh;
 }
 
 .videoLibraryFormRow {
@@ -205,8 +208,16 @@
     border-bottom: 1px solid #FAC04E;
 }
 
+.userSetFilterLibraryButton {
+    background-color: #FAC04E !important;
+    border-color: black !important;
+    width: 100%;
+    margin-bottom: 1vw;
+    margin-top: 1vw;
+}
+
 .userFilterLibraryButton {
-    font-size: 1.5vw;
+    display: none;
     background-color: #FAC04E !important;
     border-color: black !important;
     width: 100%;
@@ -268,7 +279,7 @@
 #userProfilePage {
     max-width: 80% !important;
     margin: 0 auto !important;
-    margin-top: 15vh !important;
+    margin-top: 15vh;
 }
 
 .userProfileHeading {
@@ -318,14 +329,14 @@
     margin-bottom: 2vw;
     padding: 2% !important;
     border-radius: 5%;
-    font-size: 2vw !important;
+    /* font-size: 2vw !important; */
     font-family: 'gfitfont-bold' !important;
 }
 
 .filterTitle {
     color: #FAC04E !important;
     font-weight: 900 !important;
-    font-size: 1.5vw !important;
+    /* font-size: 1.5vw !important; */
 }
 
 #formGridSubscriptionStatus, #formGridLastPaymentDate {
@@ -345,12 +356,12 @@
 .userProfileAccordionDetails {
   margin-left: 5vw;
   margin-bottom: 3vw;
-  font-size: 1vw;
+  /* font-size: 1vw; */
 }
 
 .MuiAccordionSummary-content .MuiTypography-body1 {
-font-size: 1vw !important;
-font-family: 'gfitfont-bold' !important;
+/* font-size: 1vw; */
+font-family: 'gfitfont-bold';
 }
 
 
@@ -400,7 +411,7 @@ font-family: 'gfitfont-bold' !important;
   and (-webkit-min-device-pixel-ratio: 2)
   and (orientation: portrait) {
     .makeStyles-root-1 {
-        margin-top: 14vh !important; 
+        margin-top: 10vw ; 
     }
     .MuiBox-root {
         padding-left: 1% !important;
@@ -465,6 +476,41 @@ font-family: 'gfitfont-bold' !important;
         margin-top: 7%;
     }
 
+    #userProfilePage, #videoLibraryPage {
+      margin-top: 0;
+    }
+
+    .userProfileHeading, .videoLibraryForm-heading, .messageBoardTitle {
+      font-size: 10vw;
+      padding-top: 2vw;
+      padding-bottom: 5vw;
+      margin-bottom: 1vw;
+      margin-top: 2vw;
+    }
+
+    .MuiAccordionSummary-content .MuiTypography-body1 {
+      font-size: 3.1vw;
+    }
+
+    #showHideFilterButton {
+      display: block;
+      margin-bottom: 1vw;
+    }
+
+    #userVideoPreferences {
+      display: none;
+      margin-top: 5vw;      
+    }
+
+    .filterColumn {
+      width: 100%;
+      margin: 0 auto;
+      margin-bottom: 5vw;
+    }
+
+    .videoLibraryCardDiv {
+      width: 100%;
+    }
     
     
 }
@@ -529,6 +575,42 @@ font-family: 'gfitfont-bold' !important;
         /* margin-top: 25%; */
         height: 500px;
     }
+
+    #userProfilePage, #videoLibraryPage {
+      margin-top: 0;
+    }
+
+    .userProfileHeading, .videoLibraryForm-heading, .messageBoardTitle {
+      font-size: 10vw;
+      padding-top: 2vw;
+      padding-bottom: 5vw;
+      margin-bottom: 1vw;
+      margin-top: 2vw;
+    }
+
+    .MuiAccordionSummary-content .MuiTypography-body1 {
+      font-size: 3.1vw;
+    }
+
+    #showHideFilterButton {
+      display: block;
+      margin-bottom: 1vw;
+    }
+
+    #userVideoPreferences {
+      display: none;
+      margin-top: 5vw;      
+    }
+
+    .filterColumn {
+      width: 100%;
+      margin: 0 auto;
+      margin-bottom: 5vw;
+    }
+
+    .videoLibraryCardDiv {
+      width: 100%;
+    }
 }
 
 /* Landscape */
@@ -591,6 +673,30 @@ font-family: 'gfitfont-bold' !important;
   and (max-device-width: 1024px) 
   and (orientation: portrait) 
   and (-webkit-min-device-pixel-ratio: 1) {
+    .userProfileAccordionSummary {
+      height: 20vw;
+    }
+
+    .MuiAccordionSummary-content .MuiTypography-body1 {
+      font-size: 3vw;
+    }
+
+    .MuiAccordionSummary-content .makeStyles-secondaryHeading-9 {
+      margin: 0 auto;
+    }
+
+    #userProfilePage, #videoLibraryPage {
+      margin-top: 0;
+    }
+
+    .userProfileHeading, .videoLibraryForm-heading, .messageBoardTitle {
+      font-size: 10vw;
+      padding-top: 2vw;
+      padding-bottom: 5vw;
+      margin-bottom: 1vw;
+      margin-top: 2vw;
+    }
+
     
 }
 
@@ -774,10 +880,19 @@ font-family: 'gfitfont-bold' !important;
 
 /* ----------- Non-Retina Screens ----------- */
 @media screen  
+  and (max-device-width: 699px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+    .makeStyles-root-1 {
+        margin-top: 15vw ; 
+    }
+}
+
+@media screen  
+  and (min-device-width: 700px)
   and (max-device-width: 1600px) 
   and (-webkit-min-device-pixel-ratio: 1) { 
     .makeStyles-root-1 {
-        margin-top: 14vh !important; 
+        margin-top: 10vw; 
     }
 }
 
@@ -786,7 +901,7 @@ font-family: 'gfitfont-bold' !important;
   and (max-device-width: 2000px) 
   and (-webkit-min-device-pixel-ratio: 1) { 
     .makeStyles-root-1 {
-        margin-top: 14vh !important; 
+        margin-top: 10vw; 
     }
 }
 
@@ -795,7 +910,7 @@ font-family: 'gfitfont-bold' !important;
   and (max-device-width: 3000px) 
   and (-webkit-min-device-pixel-ratio: 1) { 
     .makeStyles-root-1 {
-        margin-top: 14vh !important;
+        margin-top: 10vw;
        
     }
     
@@ -870,12 +985,12 @@ font-family: 'gfitfont-bold' !important;
 
 /* ----------- Retina Screens ----------- */
 @media screen 
-  and (min-device-width: 850px) 
+  and (min-device-width: 700px) 
   and (max-device-width: 1600px) 
   and (-webkit-min-device-pixel-ratio: 2)
   and (min-resolution: 192dpi) { 
     .makeStyles-root-1 {
-        margin-top: 14vh !important; 
+        margin-top: 10vw; 
     }
 }
 
@@ -885,7 +1000,7 @@ font-family: 'gfitfont-bold' !important;
   and (-webkit-min-device-pixel-ratio: 2)
   and (min-resolution: 192dpi) { 
     .makeStyles-root-1 {
-        margin-top: 14vh !important; 
+        margin-top: 10vw; 
     }
 }
 @media screen 
@@ -894,7 +1009,7 @@ font-family: 'gfitfont-bold' !important;
   and (-webkit-min-device-pixel-ratio: 2)
   and (min-resolution: 192dpi) { 
     .makeStyles-root-1 {
-        margin-top: 14vh !important;
+        margin-top: 10vw;
        
     }
 }

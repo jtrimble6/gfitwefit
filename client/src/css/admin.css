@@ -71,7 +71,7 @@
     position: relative;
     top: 0;
     height: 100px;
-    margin-top: 8vh !important;
+    /* margin-top: 8vh; */
     background-color: black !important;
 }
 
@@ -271,9 +271,9 @@
   and (max-device-width: 568px)
   and (-webkit-min-device-pixel-ratio: 2)
   and (orientation: portrait) {
-    .makeStyles-root-1 {
+    /* .makeStyles-root-1 {
         margin-top: 12vh !important; 
-    }
+    } */
     .MuiBox-root {
         padding-left: 1% !important;
         padding-right: 1% !important;
@@ -494,11 +494,11 @@
     #adminPage {
         
     }
-    .makeStyles-root-1 {
+    /* .makeStyles-root-1 {
         position: relative;
         top: 0;
         height: 100px;
-    }
+    } */
     .MuiBox-root {
         padding-left: 1% !important;
         padding-right: 1% !important;
@@ -649,28 +649,28 @@
   and (min-device-width: 850px) 
   and (max-device-width: 1600px) 
   and (-webkit-min-device-pixel-ratio: 1) { 
-    .makeStyles-root-1 {
+    /* .makeStyles-root-1 {
         margin-top: 12vh !important; 
-    }
+    } */
 }
 
 @media screen 
   and (min-device-width: 1600px) 
   and (max-device-width: 2000px) 
   and (-webkit-min-device-pixel-ratio: 1) { 
-    .makeStyles-root-1 {
+    /* .makeStyles-root-1 {
         margin-top: 10vh !important; 
-    }
+    } */
 }
 
 @media screen 
   and (min-device-width: 2001px) 
   and (max-device-width: 3000px) 
   and (-webkit-min-device-pixel-ratio: 1) { 
-    .makeStyles-root-1 {
+    /* .makeStyles-root-1 {
         margin-top: 15vh !important;
        
-    }
+    } */
     
 }
 
@@ -747,9 +747,9 @@
   and (max-device-width: 1600px) 
   and (-webkit-min-device-pixel-ratio: 2)
   and (min-resolution: 192dpi) { 
-    .makeStyles-root-1 {
-        margin-top: 10vw !important; 
-    }
+    /* .makeStyles-root-1 {
+        margin-top: 10vw; 
+    } */
 }
 
 @media screen 
@@ -757,19 +757,19 @@
   and (max-device-width: 2000px) 
   and (-webkit-min-device-pixel-ratio: 2)
   and (min-resolution: 192dpi) { 
-    .makeStyles-root-1 {
+    /* .makeStyles-root-1 {
         margin-top: 10vw !important; 
-    }
+    } */
 }
 @media screen 
   and (min-device-width: 2001px) 
   and (max-device-width: 3000px) 
   and (-webkit-min-device-pixel-ratio: 2)
   and (min-resolution: 192dpi) { 
-    .makeStyles-root-1 {
+    /* .makeStyles-root-1 {
         margin-top: 10vw !important;
        
-    }
+    } */
 }
 
 @media screen 

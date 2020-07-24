@@ -27,7 +27,7 @@
         background-color: #FAC04E;
         top: 0;
         transition: top 0.6s;
-        height: 8vh !important;
+        height: 10vw;
 
     }
 
@@ -105,6 +105,7 @@
         height: 100% !important;
         top: 5px;
         background-color: #FAC04E;
+        color: black !important;
         padding-top: 15%;
         width: 100%;
     }
@@ -123,6 +124,7 @@
       width: 1.5vw ;
     }
     .bm-cross-button {
+      color: black !important;
       left: 10px;
     }
 
@@ -213,7 +215,7 @@
   and (orientation: landscape) 
   and (-webkit-min-device-pixel-ratio: 2) {
     .navbar {
-      height: 20vh !important;
+      height: 10vw;
     }
     .nav-item {
       padding-bottom: 10px;
@@ -301,7 +303,7 @@
   and (orientation: landscape) 
   and (-webkit-min-device-pixel-ratio: 2) {
     .navbar {
-      height: 20vh !important;
+      height: 10vw;
     }
     .nav-item {
       padding-bottom: 10px;
@@ -391,7 +393,7 @@
   and (orientation: landscape) 
   and (-webkit-min-device-pixel-ratio: 2) {
     .navbar {
-      height: 20vh !important;
+      height: 10vw;
     }
     .nav-item {
       padding-bottom: 10px;
@@ -493,7 +495,10 @@
   and (-webkit-min-device-pixel-ratio: 2)
   and (orientation: portrait) {
     .navbar {
-        height: 14vh !important;
+      height: 20vw;
+    }
+    .navbar-brand {
+      left: 0px;
     }
     .Navbar-logo {
         height: 50px !important;
@@ -509,15 +514,6 @@
         padding-right: 0;
         padding-left: 0;
     }
-    .bm-cross {
-      background: black;
-      width: 5vw !important;
-      height: auto !important;
-    }
-    .bm-cross-button {
-      left: 20px;
-      top: 15px !important;
-    }
 }
 
 /* Landscape */
@@ -527,7 +523,7 @@
   and (-webkit-min-device-pixel-ratio: 2)
   and (orientation: landscape) {
     .navbar {
-      height: 30vh !important;
+      height: 10vw;
       width: 223vw;
     }
     .navbar-brand {
@@ -611,7 +607,7 @@
   and (-webkit-min-device-pixel-ratio: 2)
   and (orientation: landscape) { 
     .navbar {
-      height: 20vh !important;
+      height: 10vw;
     }
     .navbar-brand {
       top: 0px !important;
@@ -694,7 +690,7 @@
   and (-webkit-min-device-pixel-ratio: 3)
   and (orientation: landscape) { 
     .navbar {
-      height: 30vh !important;
+      height: 10vw;
     }
     .navbar-brand {
       top: 0px !important;
@@ -766,9 +762,9 @@
   and (max-device-width: 812px) 
   and (-webkit-min-device-pixel-ratio: 3)
   and (orientation: portrait) { 
-    /* .navbar {
-        height: 8%;
-    } */
+    .navbar {
+        height: 20vw;
+    }
     .navbar-brand {
       left: 0px;
     }
@@ -796,7 +792,7 @@
   and (-webkit-min-device-pixel-ratio: 3)
   and (orientation: landscape) { 
     .navbar {
-      height: 20vh !important;
+      height: 10vw;
     }
     .navbar-brand {
       top: 0px !important;
@@ -863,12 +859,57 @@
 
 
 /* ----------- Non-Retina Screens ----------- */
+
+@media screen 
+  and (min-device-height: 1000px)
+  and (max-device-width: 699px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+    .navbar {
+      height: 15vw;
+    }
+
+    /* BURGER MENU */
+    .burgerMenu {
+      height: 100% !important;
+      top: 5px;
+      right: -40vw !important;
+      width: 70% !important;
+    }
+    .navbarTogglerButtonCustom {
+      top: 1vw !important;
+      color: black !important;
+      font-size: 5vw;
+    }
+    .bm-menu {
+      line-height: 6vw;
+      max-width: 30vw;
+    }
+    .bm-item-list {
+      height: 40% !important;
+    }
+    .bm-item {
+        font-size: 2vw !important;
+        font-weight: bolder !important;
+        line-height: 3vw;
+        /* color: black !important; */
+    }
+    .bm-cross {
+      background: black;
+      width: 3vw !important;
+      height: auto !important;
+    }
+    .bm-cross-button {
+      left: 20px;
+      top: 15px !important;
+    }
+}
+
 @media screen 
   and (min-device-width: 700px) 
   and (max-device-width: 1200px) 
   and (-webkit-min-device-pixel-ratio: 1) { 
     .navbar {
-      height: 14vh !important;
+      height: 10vw;
     }
 
     /* BURGER MENU */
@@ -912,7 +953,7 @@
   and (max-device-width: 1600px) 
   and (-webkit-min-device-pixel-ratio: 1) { 
     .navbar {
-      height: 10vw !important;
+      height: 10vw;
     }
 }
 
@@ -921,7 +962,7 @@
   and (max-device-width: 1800px) 
   and (-webkit-min-device-pixel-ratio: 1) { 
     .navbar {
-      height: 14vh !important;
+      height: 10vw;
     }
 }
 
@@ -930,7 +971,7 @@
   and (max-device-width: 2000px) 
   and (-webkit-min-device-pixel-ratio: 1) { 
     .navbar {
-      height: 14vh !important;
+      height: 10vw;
     }
 }
 
@@ -938,7 +979,7 @@
   and (min-device-width: 2001px) 
   and (-webkit-min-device-pixel-ratio: 1) { 
     .navbar {
-      height: 15vh !important;
+      height: 10vw;
     }
     .Navbar-logo {
         height: 125px !important;

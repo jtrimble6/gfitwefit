@@ -3,6 +3,7 @@ import { NavLink } from 'reactstrap';
 import { slide as Menu } from 'react-burger-menu'
 import logo from '../../css/images/GOUVEIA-FITNESS_Mark_Black.png';
 import classnames from "classnames";
+import CloseIcon from '@material-ui/icons/Close';
 import '../../css/navbar.css'
 
 class UserBar extends Component {
@@ -44,7 +45,7 @@ class UserBar extends Component {
                           className='burgerMenu'
                           // noOverlay
                           // customBurgerIcon={ bars }
-                          // customCrossIcon={ <img src={require("../../css/images/cross.png")} alt='close' /> } 
+                          customCrossIcon={ <img src={require("../../css/images/cross.png")} alt='close' /> } 
                         >
                           <NavLink
                             activeclass="active"
