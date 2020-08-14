@@ -18,7 +18,7 @@ class TrainerInfo extends Component {
                 </Row>
                   <Row className='trainerBioRow'>
                       {/* TRAINER BIO 1 */}
-                      <Col sm-6 className='trainerBioCardColumn'>
+                      <Col sm-6='true' className='trainerBioCardColumn'>
                         <Card className='trainerBioCard'>
                           <Card.Img className='trainerBioImage' variant="top" src={walt} />
                           <Card.Body>
@@ -30,7 +30,7 @@ class TrainerInfo extends Component {
                       </Col>
 
                       {/* TRAINER BIO 2 */}
-                      <Col sm-6 className='trainerBioCardColumn'>
+                      <Col sm-6='true' className='trainerBioCardColumn'>
                         <Card className='trainerBioCard'>
                           <Card.Img className='trainerBioImage' variant="top" src={kyle} />
                           <Card.Body>
@@ -44,7 +44,7 @@ class TrainerInfo extends Component {
 
                     <Row className='trainerBioRow'>
                     {/* TRAINER BIO 3 */}
-                    <Col sm-6 className='trainerBioCardColumn'>
+                    <Col sm-6='true' className='trainerBioCardColumn'>
                       <Card className='trainerBioCard'>
                         <Card.Img className='trainerBioImage' variant="top" src={jenn} />
                         <Card.Body>
@@ -56,7 +56,7 @@ class TrainerInfo extends Component {
                     </Col>
 
                     {/* TRAINER BIO 4 */}
-                    <Col sm-6 className='trainerBioCardColumn'>
+                    <Col sm-6='true' className='trainerBioCardColumn'>
                       <Card className='trainerBioCard'>
                         <Card.Img className='trainerBioImage' variant="top" src={jacob} />
                         <Card.Body>

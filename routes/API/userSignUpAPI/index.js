@@ -27,7 +27,7 @@ router.post('/sendUserInfo', (req, res, next) => {
   var email = req.body.email
   var subscriptionStatus = req.body.subscriptionStatus
 
-  var content = `\nFirst Name: ${firstName}\nLast Name: ${lastName}\nEmail: ${email}\nSubscription status: ${subscriptionStatus}\n`
+  var content = `Let's go! A new user has signed up through the GFit website.\nPlease see below regarding the new user's subscription status. If the user shows an ACTIVE subscription, an admin will need to set the user up in Converge for recurring payments.\nFirst Name: ${firstName}\nLast Name: ${lastName}\nEmail: ${email}\nSubscription status: ${subscriptionStatus}\n`
 
   var mail = {
     from: firstName + lastName,
