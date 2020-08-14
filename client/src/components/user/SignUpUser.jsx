@@ -356,8 +356,8 @@ class SignUpUser extends Component {
         axios.defaults.timeout = 1000 * 15;
         axios({
           method: "GET", 
-          // url: "https://www.gfitwefit.com/converge_token_req",
-          url: "http://localhost:3000/converge_token_req" || "http://localhost:3001/converge_token_req", 
+          url: "https://www.gfitwefit.com/converge_token_req",
+          // url: "http://localhost:3000/converge_token_req" || "http://localhost:3001/converge_token_req", 
           }).then((response)=> {
             console.log('GOT A RESPONSE: ', response)
             let ssl_txn_auth_token = response.data
@@ -413,8 +413,8 @@ class SignUpUser extends Component {
         axios.defaults.timeout = 1000 * 10;
         axios({
           method: "GET", 
-          // url: "https://www.gfitwefit.com/converge_token_req",
-          url: "http://localhost:3000/converge_token_req" || "http://localhost:3001/converge_token_req",
+          url: "https://www.gfitwefit.com/converge_token_req",
+          // url: "http://localhost:3000/converge_token_req" || "http://localhost:3001/converge_token_req",
           }).then((response)=> {
             console.log('GOT A RESPONSE: ', response)
             let ssl_txn_auth_token = response.data
@@ -768,8 +768,8 @@ class SignUpUser extends Component {
         console.log(firstName, lastName, email, subscriptionStatus)
         axios({
             method: "POST", 
-            // url:"http://gfitwefit.com/send",
-            url:"http://localhost:3000/sendUserInfo", 
+            url:"http://gfitwefit.com/sendUserInfo",
+            // url:"http://localhost:3000/sendUserInfo", 
             data: {
                 firstName: firstName,   
                 lastName: lastName,
