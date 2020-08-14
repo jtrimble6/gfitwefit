@@ -106,7 +106,7 @@
 
 /* ----------- Non-Retina Screens ----------- */
 @media screen 
-  and (min-device-width: 1200px) 
+  and (min-device-width: 800px) 
   and (max-device-width: 1600px) 
   and (-webkit-min-device-pixel-ratio: 1) { 
     .gymInfo {
@@ -158,7 +158,7 @@
 }
 
 @media screen 
-  and (min-device-width: 1600px) 
+  and (min-device-width: 1601px) 
   and (max-device-width: 2000px) 
   and (-webkit-min-device-pixel-ratio: 1) { 
     .gymInfo {
@@ -195,7 +195,7 @@
     }
 
     .gymInfoLogo {
-      margin-top: 35%;
+      margin-top: 6vw;
       width: 130%;
       height: auto;
     }

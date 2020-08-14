@@ -100,17 +100,17 @@ class Navbar extends Component {
                             smooth={true}
                             offset={-150}
                             duration= {500}
-                          > SCHEDULE </Link>
-                          {/* <NavLink 
+                          > SEE SCHEDULE </Link>
+                          <NavLink 
                             className='iconBar nav-link' 
                             onClick={this.toggleNavbar}
-                            href="/pricing"
-                          > PRICING</NavLink> */}
+                            href="/userLogin"
+                          > G-FIT GOLD</NavLink>
                           <NavLink 
                             className='iconBar nav-link' 
                             onClick={this.toggleNavbar}
                             href="/contact"
-                          > CONTACT</NavLink>
+                          > CONTACT US</NavLink>
                           <NavLink 
                             className='iconBar nav-link signUp' 
                             onClick={this.toggleNavbar}
@@ -126,11 +126,12 @@ class Navbar extends Component {
                         </i>
                         <div className="collapse navbar-collapse" id="navbarResponsive">
                         <ul className="navbar-nav ml-auto">
-                          <li className="nav-item" >
-                            <a className="nav-link js-scroll-trigger" href='/contact'>
-                              CONTACT US  |
+
+                          {/* <li className="nav-item" >
+                            <a className="nav-link js-scroll-trigger" href='/'>
+                              HOME  |
                             </a>
-                          </li>
+                          </li> */}
                           
                           <li className="nav-item">
                             <Link
@@ -150,11 +151,11 @@ class Navbar extends Component {
                             </a>
                           </li>
 
-                          {/* <li className="nav-item" >
-                            <a className="nav-link js-scroll-trigger" href='/pricing'>
-                              PRICING
+                          <li className="nav-item" >
+                            <a className="nav-link js-scroll-trigger" href='/contact'>
+                              CONTACT US  |
                             </a>
-                          </li> */}
+                          </li>
                           
                           <li className="nav-item" >
                             <a className="nav-link js-scroll-trigger signUp" href='/tryitout'>

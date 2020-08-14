@@ -176,7 +176,7 @@
   and (-webkit-min-device-pixel-ratio: 1) { 
     .trainerInfo {
       height: 150vw !important;
-      padding-bottom: 25%;
+      padding-bottom: 25vw;
     }
 
     .trainerBioCardColumn {
@@ -208,7 +208,7 @@
     .trainerBioRow {
         width: 90%;
         margin: 0 auto;
-        margin-top: 15%;
+        margin-top: 3vw;
         
     }
     

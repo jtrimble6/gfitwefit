@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import $ from 'jquery'
 import { Button, FormCheck } from 'react-bootstrap'
 
 // CSS

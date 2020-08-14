@@ -114,7 +114,7 @@
     .footerTitle {
       position: absolute;
       bottom: 1.5vw;
-      left: 4vw;
+      left: 5vw;
       font-size: 1.7vw;
     }
     .footerInfo p {
@@ -128,7 +128,8 @@
 }
 
 @media screen 
-  and (min-device-width: 1600px)  
+  and (min-device-width: 1600px) 
+  and (max-device-width: 2000px) 
   and (-webkit-min-device-pixel-ratio: 1) { 
     .footerRow {
       height: 8vw;
@@ -151,7 +152,44 @@
     .footerTitle {
       position: absolute;
       bottom: 2vw;
-      left: 4vw;
+      left: 5vw;
+      font-size: 1.7vw;
+    }
+    .footerInfo p {
+      font-size: 1.2vw;
+      color: white;
+      line-height: .5vw;
+    }
+    .footerAddress {
+      bottom: 3.5vw; 
+    }
+}
+
+@media screen 
+  and (min-device-width: 2001px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+    .footerRow {
+      height: 8vw;
+      width: 99%;
+      margin: 0 auto;
+    }
+    .footerLogo {
+      width: 3.5vw;
+      height: auto; 
+      position: absolute;
+      bottom: 1.5vw;
+    }
+    .footerBrand {
+      max-width: 30vw;
+    }
+    .footerDisclaimer {
+      position: absolute;
+      left: 0;
+    }
+    .footerTitle {
+      position: absolute;
+      bottom: 2vw;
+      left: 5vw;
       font-size: 1.7vw;
     }
     .footerInfo p {
@@ -191,7 +229,7 @@
     .footerTitle {
       position: absolute;
       bottom: 1.5vw;
-      left: 4vw;
+      left: 5vw;
       font-size: 1.7vw;
     }
     .footerInfo p {
@@ -206,6 +244,7 @@
 
 @media screen 
   and (min-device-width: 1600px) 
+  and (max-device-width: 2000px)
   and (-webkit-min-device-pixel-ratio: 2)
   and (min-resolution: 192dpi) { 
     .footerRow {
@@ -229,7 +268,45 @@
     .footerTitle {
       position: absolute;
       bottom: 2vw;
-      left: 4vw;
+      left: 5vw;
+      font-size: 1.7vw;
+    }
+    .footerInfo p {
+      font-size: 1.2vw;
+      color: white;
+      line-height: .5vw;
+    }
+    .footerAddress {
+      bottom: 3.5vw; 
+    }
+}
+
+@media screen 
+  and (min-device-width: 2001px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (min-resolution: 192dpi) { 
+    .footerRow {
+      height: 8vw;
+      width: 99%;
+      margin: 0 auto;
+    }
+    .footerLogo {
+      width: 3.5vw;
+      height: auto; 
+      position: absolute;
+      bottom: 1.5vw;
+    }
+    .footerBrand {
+      max-width: 30vw;
+    }
+    .footerDisclaimer {
+      position: absolute;
+      left: 0;
+    }
+    .footerTitle {
+      position: absolute;
+      bottom: 2vw;
+      left: 5vw;
       font-size: 1.7vw;
     }
     .footerInfo p {

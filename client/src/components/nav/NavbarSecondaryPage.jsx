@@ -83,16 +83,16 @@ class NavbarSecondaryPage extends Component {
                             onClick={this.toggleNavbar}
                             href="/"
                           > HOME</NavLink>
-                          {/* <NavLink 
+                          <NavLink 
                             className=' iconBar nav-link' 
                             onClick={this.toggleNavbar}
-                            href="/pricing"
-                          > PRICING</NavLink> */}
+                            href="/userLogin"
+                          > G-FIT GOLD</NavLink>
                           <NavLink 
                             className=' iconBar nav-link' 
                             onClick={this.toggleNavbar}
                             href="/contact"
-                          > CONTACT</NavLink>
+                          > CONTACT US</NavLink>
                           <NavLink 
                             className=' iconBar nav-link signUp' 
                             onClick={this.toggleNavbar}
@@ -110,17 +110,17 @@ class NavbarSecondaryPage extends Component {
                         <ul className="navbar-nav ml-auto">
                           <li className="nav-item" >
                             <a className="nav-link js-scroll-trigger" href='/'>
-                              HOME
+                              HOME  |
                             </a>
                           </li>
-                          {/* <li className="nav-item" >
-                            <a className="nav-link js-scroll-trigger" href='/pricing'>
-                              PRICING
+                          <li className="nav-item" >
+                            <a className="nav-link js-scroll-trigger" href='/userLogin'>
+                              G-FIT GOLD  |
                             </a>
-                          </li> */}
+                          </li>
                           <li className="nav-item" >
                             <a className="nav-link js-scroll-trigger" href='/contact'>
-                              CONTACT
+                              CONTACT US  |
                             </a>
                           </li>
                           <li className="nav-item" >
