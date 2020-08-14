@@ -3,8 +3,10 @@ import { NavLink } from 'reactstrap';
 import { slide as Menu } from 'react-burger-menu'
 import logo from '../../css/images/GOUVEIA-FITNESS_Mark_Black.png';
 import classnames from "classnames";
-import CloseIcon from '@material-ui/icons/Close';
-import '../../css/navbar.css'
+// import CloseIcon from '@material-ui/icons/Close';
+
+// CSS
+import '../../css/general/navbar.css'
 
 class UserBar extends Component {
     constructor(props) {

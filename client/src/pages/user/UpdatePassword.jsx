@@ -1,17 +1,17 @@
 import React, { Component } from 'react'
 import { Redirect } from 'react-router-dom'
-// import API from '../../utils/API'
+import API from '../../utils/API';
+import moment from 'moment-timezone'
+
+// CSS
+import '../../css/general/login.css'
+
+// COMPONENTS
 import LoginBar from '../../components/nav/LoginBar'
 import UpdateUserPasswordError from "../../components/alerts/UpdateUserPasswordError";
 import UpdateUserPasswordSuccess from "../../components/alerts/UpdateUserPasswordSuccess";
-// import crypto from 'crypto'
-// import nodemailer from 'nodemailer'
 import EmailNotFound from "../../components/alerts/EmailNotFound";
 import EmailFound from "../../components/alerts/EmailFound";
-import '../../css/login.css'
-import API from '../../utils/API';
-import moment from 'moment-timezone'
-// require('nodemailer')
 
 require('dotenv').config();
 

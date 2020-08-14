@@ -1,15 +1,20 @@
 import React, { Component } from 'react'
-import '../../css/signup.css'
-// import ExistingAccount from "../../alerts/ExistingAccount";
-// import PasswordError from '../../alerts/PasswordError';
 import { Form, Button } from 'react-bootstrap'
+import Countdown from 'react-countdown';
+
+// CSS
+import '../../css/general/signup.css'
+
+// ALERTS
+import ConvergeTokenError from '../alerts/ConvergeTokenError'
 
 
 
 class SignUpUserConvergeLightbox extends Component {
-
+  
     componentDidMount() {
         // console.log('Converge Lightbox Ready')
+       
       }
 
     render() {
@@ -18,11 +23,12 @@ class SignUpUserConvergeLightbox extends Component {
             return null
         }
 
+        // Set timer length
+        // const { refCallback, time } = this.props;
+
         return (
             <div className='userSignUpConvergeLightbox'>
               <Form.Row id="convergeLightboxForm">
-		  		{/* <input readOnly id="token" value={this.props.sessionID} type="text" name="token" />  */}
-                {/* <button onClick={this.props.openLightbox}>Open Lightbox</button> */}
                 <div id='txnDetails'>
                     
                     <h4 className='txnDetailsTitle'>Transaction Details</h4>
@@ -41,8 +47,50 @@ class SignUpUserConvergeLightbox extends Component {
 
                 </div>
               </Form.Row>
+                <div className="convergeInfo" id='convergeInfo'>
+                  <p className='convergeDisclaimer'>Our Partners at Converge take it from here. They offer a secure payment gateway that will process payment on a monthly subscription basis. Your subscription can be managed at any time through the user profile tab once logged in.</p>
+                  <p className='subscriptionDetails'>$5/month will be charged to your credit card starting today.</p>
+                  <small className='convergeTimer' id='convergeTimer'>
+                    *Secure payment token expires: <span id="time">
+                      <Countdown 
+                        ref={this.props.refCallback} 
+                        date={Date.now() + 60000 * 10}
+                        intervalDelay={0}
+                        zeroPadTime={2}
+                        precision={1}
+                        autoStart={false}
+                        onComplete={this.props.convergeCountdownComplete}
+                        daysInHours
+                        id='convergeCountdown'
+                      />
+                    </span>
+                  *</small>
+                </div>
                 <div id="convergeLightboxDiv">
-                  <button id='convergeLightboxInitButton' className='convergeLightboxButton' onClick={window["openLightbox"]}>Secure Payment</button> 
+                  <Button 
+                    id='convergeLightboxInitButton' 
+                    className='convergeLightboxButton' 
+                    onClick={window["openLightbox"]}
+                  >
+                    Secure Payment
+                  </Button> 
+                  <Button 
+                    onClick={this.props.handleConvergePayRetry} 
+                    id='convergeButtonRetry' 
+                    className='payWithConvergeRetry'
+                  >
+                    Request new payment token
+                  </Button>
+                  <Button 
+                    onClick={this.props.handleContinueWithoutPayment} 
+                    id='continueWithoutPaymentButton' 
+                    className='continueWithoutPaymentButton'
+                  >
+                    Finish signup without payment.
+                  </Button>
+                  <ConvergeTokenError
+                    convergeTokenError={this.props.convergeTokenError}
+                  />
                 </div>
                 
                 <div id="convergeCompleteDiv">

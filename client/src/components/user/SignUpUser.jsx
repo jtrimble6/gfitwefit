@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
 import { Redirect } from 'react-router-dom'
 import axios from 'axios'
-import '../../css/signup.css'
 import API from '../../utils/API'
-// import $ from 'jquery'
-// import UnderConstructionPage from '../UnderConstructionPage.jsx'
 import { NavLink } from 'reactstrap';
-import { Form, Button } from 'react-bootstrap'
+import { Form, Button, ProgressBar } from 'react-bootstrap'
+
+// CSS
+import '../../css/general/signup.css'
 
 // SIGN UP PAGES
 import SignUpUserPersonalInfo from './SignUpUserPersonalInfo'
@@ -51,11 +51,14 @@ const normalizeInput = (value, previousValue) => {
 
 
 class SignUpUser extends Component {
+    clockRef = null;
+    
     constructor(props) {
         super(props)
         this.state = {
         currentStep: 1, // Default is Step 1
         currentStepTitle: 'Basic Information',
+        progressPct: 10,
         firstName: '',
         lastName: '',
         email: '',
@@ -87,8 +90,19 @@ class SignUpUser extends Component {
         changeStepError: false,
         stepOneFieldError: false,
         convergeTokenError: false,
+        convergeSecondAttempt: false,
         sessionID: '',
         redirect: false,
+        divStyle: {
+          backgroundColor: '#85bb65 !important',
+          color: 'white',
+          border: 'none',
+          width: '90%',
+          marginLeft: '5%',
+          marginBottom: '1%',
+          textAlign: 'center',
+          alignContent: 'center'
+        }
       }
         this.setRedirect = this.setRedirect.bind(this)
         this.renderRedirect = this.renderRedirect.bind(this)
@@ -98,6 +112,7 @@ class SignUpUser extends Component {
         this.handleNextStep = this.handleNextStep.bind(this)
         this.handlePrevStep = this.handlePrevStep.bind(this)
         this.handleFinalStep = this.handleFinalStep.bind(this)
+        // this.handleFinalStepNoPay = this.handleFinalStepNoPay.bind(this)
         this.handleStepTitleChange = this.handleStepTitleChange.bind(this)
         this.handleConvergePay = this.handleConvergePay.bind(this)
         this.handleLightboxInit = this.handleLightboxInit.bind(this)
@@ -109,11 +124,22 @@ class SignUpUser extends Component {
         this.checkConvergePayment = this.checkConvergePayment.bind(this)
         this.handlePasswordChange = this.handlePasswordChange.bind(this)
         this.checkPassword = this.checkPassword.bind(this)
+        // this.startTimer = this.startTimer.bind(this)
+        this.setClockRef = this.setClockRef.bind(this);
+        this.startTimer = this.startTimer.bind(this);
+        this.pauseTimer = this.pauseTimer.bind(this);
+        this.convergeCountdownComplete = this.convergeCountdownComplete.bind(this)
+        this.handleConvergePayRetry = this.handleConvergePayRetry.bind(this)
+        this.handleLightboxInitRetry = this.handleLightboxInitRetry.bind(this)
+        this.handleContinueWithoutPayment = this.handleContinueWithoutPayment.bind(this)
+        this.handleFormSubmitNoPay = this.handleFormSubmitNoPay.bind(this)
+        this.handleSendUserInfo = this.handleSendUserInfo.bind(this)
     }
 
     componentDidMount() {
         // console.log('User Sign Up Ready')
         this.scrollTop()
+        this.setClockRef()
       }
 
     scrollTop() {
@@ -171,27 +197,43 @@ class SignUpUser extends Component {
       let currentStep = this.state.currentStep
       if (currentStep === 7) { 
         this.setState({
+          progressPct: 100,
           currentStepTitle: 'Complete'
         })
       } else if (currentStep === 6) { 
         this.setState({
+          progressPct: 90,
           currentStepTitle: 'Converge Payment'
         })
       } else if (currentStep === 5) {
         this.setState({
+          progressPct: 75,
           currentStepTitle: 'Waiver & Payment'
         })
       } else if (currentStep === 4) {
         this.setState({
+          progressPct: 60,
           currentStepTitle: 'Fitness Questionnaire'
         })
       } else if (currentStep === 3) {
         this.setState({
+          progressPct: 40,
           currentStepTitle: 'Health Questionnaire'
+        })
+      } else if (currentStep === 2) {
+        this.setState({
+          progressPct: 20,
+          currentStepTitle: 'Personal Information'
+        })
+      } else if (currentStep === 1) {
+        this.setState({
+          progressPct: 10,
+          currentStepTitle: 'Basic Information'
         })
       } else {
         this.setState({
-          currentStepTitle: 'Basic Information'
+          progressPct: 0,
+          currentStepTitle: 'Error'
         })
       }
 
@@ -263,15 +305,37 @@ class SignUpUser extends Component {
 
     handleFinalStep = () => {
       this.setState({
-        currentStep: 7
-      }, () => {
-        this.handleStepTitleChange()
-        this.scrollTop()
-      })
+          currentStep: 7
+        }, () => {
+          this.handleStepTitleChange()
+          this.scrollTop()
+        })
       }
+
+    // handleFinalStepNoPay = () => {
+    //     this.setState({
+    //       currentStep: 7
+    //     }, () => {
+    //       this.handleStepTitleChange()
+    //       this.scrollTop()
+    //     })
+    //     var btn = document.getElementById('txn_complete');
+    //     var t = document.createTextNode('CLICK TO FINISH!');
+    //     btn.appendChild(t)
+    //     btn.setAttribute('class', 'txnCompleteButton convergeSuccessButton')
+    //     btn.style.display = 'block'
+    //     document.getElementById('finalStepPrev').style.display = 'none'
+    //     document.getElementById('convergeButtonRetry').style.display = 'none'
+    //     document.getElementById('convergeLightboxInitButton').style.display = 'none'
+    //     this.scrollTop()
+    //   }
 
     handleConvergePay = (event) => {
         event.preventDefault();
+        this.setState({
+          convergeTokenError: false,
+          convergeSecondAttempt: false
+        })
         console.log('Handling converge payment')
         console.log('WAIVER CHECKED? ', this.state.waiverSigned)
 
@@ -289,30 +353,13 @@ class SignUpUser extends Component {
           })
         }
 
-        // Start the HTTPS server
-        // var cors = "https://cors-anywhere.herokuapp.com/"
-
-        //DISABLE BUTTON AND SHOW LOADING SPINNER
-        
-        // <Button id='convergeButton' className='payWithConverge' disabled>
-        //   <Spinner
-        //     as="span"
-        //     animation="grow"
-        //     size="sm"
-        //     role="status"
-        //     aria-hidden="true"
-        //   />
-        //   Loading...
-        // </Button>
-        
-
-        axios.defaults.timeout = 1000 * 10;
+        axios.defaults.timeout = 1000 * 15;
         axios({
           method: "GET", 
           // url: "https://www.gfitwefit.com/converge_token_req",
-          url: "http://localhost:3000/converge_token_req", 
+          url: "http://localhost:3000/converge_token_req" || "http://localhost:3001/converge_token_req", 
           }).then((response)=> {
-            // console.log('GOT A RESPONSE: ', response)
+            console.log('GOT A RESPONSE: ', response)
             let ssl_txn_auth_token = response.data
             console.log(ssl_txn_auth_token)
             window.$convergeToken = ssl_txn_auth_token
@@ -329,29 +376,144 @@ class SignUpUser extends Component {
           }).catch((err) => {
             console.log('ERROR RETRIEVING CONVERGE TOKEN: ', err)
             document.getElementById('convergeButton').style.disabled = false
-            document.getElementById('convergeButton').innerHTML = `Pay With Converge`
+            document.getElementById('convergeButton').innerHTML = `Pay With Converge (try again)`
             this.setState({
               convergeTokenError: true
             })
           })
+      }
 
-
+    handleConvergePayRetry = (event) => {
+        event.preventDefault();
+        console.log('Handling converge payment retry')
+        this.setState({
+          convergeSecondAttempt: true
+        })
         
+        // debugger
+        // console.log('WAIVER CHECKED? ', this.state.waiverSigned)
+
+        // if (!this.state.waiverSigned) {
+        //   console.log('WAIVER ERROR HERE')
+        //   this.setState({
+        //     waiverError: true
+        //   })
+        //   return
+        // } else {
+        //   document.getElementById('convergeButton').style.disabled = true
+        //   document.getElementById('convergeButton').innerHTML = `<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Loading...`
+        //   this.setState({
+        //     waiverError: false
+        //   })
+        // }
+
+        document.getElementById('convergeButtonRetry').style.disabled = true
+        document.getElementById('convergeButtonRetry').innerHTML = `<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Loading...`
+
+        axios.defaults.timeout = 1000 * 10;
+        axios({
+          method: "GET", 
+          // url: "https://www.gfitwefit.com/converge_token_req",
+          url: "http://localhost:3000/converge_token_req" || "http://localhost:3001/converge_token_req",
+          }).then((response)=> {
+            console.log('GOT A RESPONSE: ', response)
+            let ssl_txn_auth_token = response.data
+            console.log(ssl_txn_auth_token)
+            window.$convergeToken = ssl_txn_auth_token
+            this.setState({
+              sessionID: ssl_txn_auth_token
+            })
+            this.handleLightboxInitRetry(ssl_txn_auth_token)
+              // if (response.data.msg === 'success'){
+              //     console.log("Payment Sent."); 
+                  
+              // } else if(response.data.msg === 'fail'){
+              //   console.log("Payment failed to send.")
+              // }
+          }).catch((err) => {
+            console.log('ERROR RETRIEVING CONVERGE TOKEN: ', err)
+            document.getElementById('convergeButtonRetry').style.disabled = false
+            document.getElementById('convergeButtonRetry').innerHTML = `Request new payment token`
+            // document.getElementById('convergeButtonRetry').style.display = 'none'
+            document.getElementById('continueWithoutPaymentButton').style.display = 'block'
+            // document.getElementById('convergeLightboxDiv').innerHTML = `<Button id='convergeButton' className='payWithConverge'>Request new payment token</Button>`
+            // let newConvergeButton = document.getElementById('convergeButton')
+            // newConvergeButton.onclick = this.handleConvergePayRetry
+            this.setState({
+              convergeTokenError: true
+            })
+          })
       }
 
     handleLightboxInit = (authToken) => {
-        // console.log('Handling lightbox init -- Auth Token: ', authToken)
+        console.log('Handling lightbox init -- Auth Token: ', authToken)
         this.scrollTop()
         document.getElementById('signUpRequiredSmall').style.display = 'none'
         this.setState({
           currentStep: 6
         }, () => {
           this.handleStepTitleChange()
+          this.startTimer()
+          // let tenMinutes = 60 * 1;
+          // let display = document.querySelector('#time');
+          // this.startTimer(tenMinutes, display)
         })
+      }
+    
+    handleLightboxInitRetry = (authToken) => {
+      // console.log('Handling lightbox init -- Auth Token: ', authToken)
+      this.scrollTop()
+      document.getElementById('convergeButtonRetry').innerHTML = `Request new payment token`
+      document.getElementById('convergeButtonRetry').style.display = 'none'
+      document.getElementById('convergeLightboxInitButton').style.display = 'block'
+      // document.getElementById('convergeLightboxDiv').innerHTML = `<button id='convergeLightboxInitButton' style={this.props.divStyle} className='convergeLightboxButton' onClick={window["openLightbox"]}>Secure Payment</button> ` 
+      // document.getElementById('signUpRequiredSmall').style.display = 'none'
+      this.startTimer()
+      }
+
+    handleContinueWithoutPayment = (event) => {
+      console.log('CONTINUING WITHOUT PAYMENT')
+      document.getElementById('continueWithoutPaymentButton').style.display = 'none'
+      this.handleFormSubmitNoPay()
+      // this.handleFinalStepNoPay()
+      }
+
+    startTimer() {
+        this.clockRef.start();
+      }
+
+    pauseTimer() {
+        this.clockRef.pause();
+      }
+
+    setClockRef(ref) {
+        // When the `Clock` (and subsequently `Countdown` mounts
+        // this will give us access to the API
+        this.clockRef = ref;
+      }
+
+    convergeCountdownComplete = () => {
+      let txnStatus = document.getElementById('txnStatus').value
+      console.log('TXN STATUS: ', txnStatus)
+      if (this.state.convergeSecondAttempt) {
+        console.log('USERS SECOND ATTEMPT FAILED')
+        document.getElementById('convergeButtonRetry').style.display = 'block'
+        document.getElementById('continueWithoutPaymentButton').style.display = 'block'
+        document.getElementById('convergeLightboxInitButton').style.display = 'none'
+        return
+      } else if (txnStatus === undefined) {
+          document.getElementById('convergeButtonRetry').style.display = 'block'
+          document.getElementById('convergeLightboxInitButton').style.display = 'none'
+          // document.getElementById('convergeLightboxDiv').innerHTML = `<Button id='convergeButton' className='payWithConverge'>Request new payment token</Button>` 
+          // let newConvergeButton = document.getElementById('convergeButton')
+          // newConvergeButton.onclick = this.props.handleConvergePayRetry
+          // console.log('new converge button: ', newConvergeButton)
+        }
       }
 
     checkConvergePayment = (event) => {
         event.preventDefault()
+        document.getElementById('convergeInfo').style.display = 'none'
         let status = window.$status
         let msg = window.$msg
         console.log('CHECKING CONVERGE PAYMENT: ', status, msg)
@@ -495,7 +657,6 @@ class SignUpUser extends Component {
     handleFormSubmit = () => {
         this.scrollTop()
         console.log('User sending info')
-
         this.setState({
             passwordError: false,
             nameTaken: false,
@@ -519,10 +680,10 @@ class SignUpUser extends Component {
             medicalConditions: this.state.medicalConditions,
             familyHistory: this.state.familyHistory,
             personalHistory: this.state.personalHistory,
-            fitnessGoals: this.state.fitnessGoals,
-            activityLevel: this.state.activityLevel,
-            exercisePlan: this.state.exercisePlan,
-            gymEquipment: this.state.gymEquipment,
+            fitnessGoals: this.state.fitnessGoals ? this.state.fitnessGoals : 'n/a',
+            activityLevel: this.state.activityLevel ? this.state.activityLevel : 'n/a',
+            exercisePlan: this.state.exercisePlan ? this.state.exercisePlan : 'n/a',
+            gymEquipment: this.state.gymEquipment ? this.state.gymEquipment : 'n/a',
             paymentComplete: this.state.paymentComplete,
             paymentRefNumber: this.state.paymentRefNumber,
             paymentTxnId: this.state.paymentTxnId,
@@ -537,7 +698,7 @@ class SignUpUser extends Component {
               console.log(res)
               if (res.data) {
                   console.log("Successful signup!")
-                  this.handleFinalStep()
+                  this.handleSendUserInfo(userData.firstName, userData.lastName, userData.email, userData.paymentComplete)
               } else {
                   console.log("Signup error")
               }
@@ -546,6 +707,89 @@ class SignUpUser extends Component {
               console.log(error)
           })
         
+      }
+
+    handleFormSubmitNoPay = () => {
+        this.scrollTop()
+        console.log('User sending info')
+        this.setState({
+            passwordError: false,
+            nameTaken: false,
+            currentStep: 7
+        }, () => {
+          this.handleStepTitleChange()
+        })
+        let dob = this.state.day + '/' + this.state.month + '/' + this.state.year
+        //console.log(this.state)
+        let userData = {
+            firstName: this.state.firstName.trim(),
+            lastName: this.state.lastName.trim(),
+            email: this.state.email.trim(),
+            phoneNumber: this.state.phoneNumber,
+            username: this.state.email,
+            password: this.state.password,
+            height: this.state.height,
+            weight: this.state.weight,
+            gender: this.state.gender,
+            dob: dob,
+            medicalConditions: this.state.medicalConditions,
+            familyHistory: this.state.familyHistory,
+            personalHistory: this.state.personalHistory,
+            fitnessGoals: this.state.fitnessGoals ? this.state.fitnessGoals : 'n/a',
+            activityLevel: this.state.activityLevel ? this.state.activityLevel : 'n/a',
+            exercisePlan: this.state.exercisePlan ? this.state.exercisePlan : 'n/a',
+            gymEquipment: this.state.gymEquipment ? this.state.gymEquipment : 'n/a',
+            paymentComplete: this.state.paymentComplete,
+            paymentRefNumber: this.state.paymentRefNumber,
+            paymentTxnId: this.state.paymentTxnId,
+            paymentDate: this.state.paymentDate,
+            waiverSigned: this.state.waiverSigned
+        };
+        console.log(userData);
+
+        // SAVE NEW USER
+        API.saveUser(userData)
+          .then(res => {
+              console.log(res)
+              if (res.data) {
+                console.log("Successful signup!")
+                this.handleSendUserInfo(userData.firstName, userData.lastName, userData.email, userData.paymentComplete)
+              } else {
+                console.log("Signup error")
+              }
+          })
+          .catch(error => {
+              console.log(error)
+          })
+        
+      }
+
+    handleSendUserInfo = (firstName, lastName, email, subscriptionStatus) => {
+        console.log(firstName, lastName, email, subscriptionStatus)
+        axios({
+            method: "POST", 
+            // url:"http://gfitwefit.com/send",
+            url:"http://localhost:3000/sendUserInfo", 
+            data: {
+                firstName: firstName,   
+                lastName: lastName,
+                email: email,  
+                subscriptionStatus: subscriptionStatus === true ? 'active' : 'inactive'
+            }
+        }).then((response)=> {
+            if (response.data.msg === 'success'){
+                console.log("Message Sent."); 
+                this.setState({
+                  contactSuccess: true
+                })
+                this.handleFinalStep()
+            } else if(response.data.msg === 'fail'){
+              console.log("Message failed to send.")
+              this.setState({
+                contactError: true
+              })
+            }
+        })
       }
 
     render() {
@@ -557,6 +801,9 @@ class SignUpUser extends Component {
                   <p className='signUpUserStep'>
                     Step {this.state.currentStep} - {this.state.currentStepTitle}
                   </p>
+                  <ProgressBar 
+                    now={this.state.progressPct}
+                  />
                   <small id='signUpRequiredSmall' className='signUpRequired'>*Required</small>
                 </div>
                 
@@ -628,6 +875,12 @@ class SignUpUser extends Component {
                     sessionID={this.state.sessionID}
                     openLightbox={this.openLightbox}
                     checkConvergePayment={this.checkConvergePayment}
+                    refCallback={this.setClockRef}
+                    convergeCountdownComplete={this.convergeCountdownComplete}
+                    handleConvergePayRetry={this.handleConvergePayRetry}
+                    divStyle={this.state.divStyle}
+                    convergeTokenError={this.state.convergeTokenError}
+                    handleContinueWithoutPayment={this.handleContinueWithoutPayment}
                   />
                   
                   <SignUpUserAcknowledgement 
@@ -664,16 +917,6 @@ class SignUpUser extends Component {
                         <Button onClick={this.handlePrevStep} variant="warning" id='finalStepPrev' className="prevStep">
                             Prev
                         </Button> 
-                    
-                      // <span className='stepButtonSpan'>
-                      //   <Button onClick={this.handlePrevStep} variant="warning" className="prevStep">
-                      //       Prev
-                      //   </Button> 
-
-                      //   <Button onClick={this.handleNextStep} variant="primary" className="nextStep" id="finalStep" disabled={true}>
-                      //       Next
-                      //   </Button>
-                      // </span>
 
                       :
 

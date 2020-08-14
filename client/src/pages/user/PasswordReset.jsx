@@ -1,14 +1,18 @@
 import React, { Component } from 'react'
 import { Redirect } from 'react-router-dom'
-import LoginBar from '../../components/nav/LoginBar'
-import Footer from '../../components/nav/Footer'
 import API from '../../utils/API'
-import EmailNotFound from "../../components/alerts/EmailNotFound";
-import EmailFound from "../../components/alerts/EmailFound";
 import crypto from 'crypto'
 import moment from 'moment-timezone'
-import '../../css/admin.css'
-import '../../css/userLogin.css'
+
+// CSS
+import '../../css/admin/admin.css'
+import '../../css/user/userLogin.css'
+
+// COMPONENTS
+import EmailNotFound from "../../components/alerts/EmailNotFound";
+import EmailFound from "../../components/alerts/EmailFound";
+import LoginBar from '../../components/nav/LoginBar'
+import Footer from '../../components/nav/Footer'
 
 class PasswordReset extends Component {
 

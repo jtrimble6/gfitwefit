@@ -1,8 +1,12 @@
 import React, { Component } from 'react'
-import AdminBar from '../../components/nav/AdminBar'
 import AdminVideoLibrary from './AdminVideoLibrary'
-import '../../css/admin.css'
+
+// CSS
+import '../../css/admin/admin.css'
 import 'react-table/react-table.css'
+
+// COMPONENTS
+import AdminBar from '../../components/nav/AdminBar'
 
 class AdminVideoLibraryPage extends Component {
   

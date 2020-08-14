@@ -1,13 +1,14 @@
 import React, { Component } from 'react'
 import { Form, Col } from 'react-bootstrap'
 
+// CSS
+import '../../css/general/signup.css'
+
 // ALERTS
 import EmailError from '../alerts/EmailError';
 import PasswordError from '../alerts/PasswordError';
 import PhoneError from '../alerts/PhoneError'
 
-// CSS
-import '../../css/signup.css'
 
 class SignUpUserPersonalInfo extends Component {
 

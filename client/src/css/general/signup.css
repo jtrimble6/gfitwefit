@@ -1,0 +1,961 @@
+@font-face {
+    font-family: 'gfitfont';
+    font-style: normal;
+    font-weight: bolder;
+    src: local('gfitfont'), url('../fonts/gfitfont.ttf'), url('../fonts/gfitfont.woff'), format('truetype');
+  }
+@font-face {
+    font-family: 'gfitfont-bold';
+    font-style: normal;
+    font-weight: bolder;
+    src: local('gfitfontBold'), url('../fonts/gfitfontBold.ttf'), url('../fonts/gfitfontBold.woff') format('truetype');
+  }
+
+.contentsDivUserSignUp {
+    height: 100%;
+}
+
+.signUpUserDiv {
+    font-family: 'gfitfont-bold';
+    width: 70%;
+    /* height: 100% !important; */
+    overflow-y: hidden !important;
+    margin: 0 auto;
+    margin-top: 15vw;
+    padding: 5%;
+    color: black;
+    background-color: #DFE0DF;
+    white-space: nowrap;
+    border-radius: 1rem
+}
+
+.signUpUserForm {
+    margin-bottom: 5%;
+}
+
+.headerDiv {
+    text-align: center;
+    margin-bottom: 5vh;
+}
+
+.signUpUserTitle {
+    text-align: center;
+    color: #FAC04E;
+    font-size: 3vw;
+}
+
+.signUpUserStep {
+    text-align: center;
+    color: #FAC04E;
+    font-size: 2vw;
+}
+
+.progress {
+    margin-bottom: 2%;
+}
+
+.userSignUp {
+    font-family: 'gfitfont-bold';
+    color: black;
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 10%;
+}
+
+.userSignUpFormRow {
+    margin-bottom: 3%;
+}
+
+.formGridDOBRow {
+    max-width: 100% !important;
+    margin: 0 auto;
+}
+
+.formGridDOBDayInput {
+    display: inline-flex;
+    width: 100%;
+    height: 100%;
+    /* display: inline-block !important; */
+}
+.formGridDOBMonthInput {
+    /* margin-left: 5% !important;
+    margin-right: 5% !important;
+    width: 25% !important; */
+    display: inline-flex;
+    width: 100%;
+    height: 100%;
+}
+.formGridDOBYearInput {
+    /* width: 40% !important; */
+    /* display: inline-block !important; */
+    display: inline-flex;
+    width: 100%;
+    height: 100%;
+}
+
+.formWaiverDiv {
+    justify-content: center;
+}
+
+.formWaiverDiv {
+    margin: 5%;
+    margin-bottom: 5%;
+    white-space: pre-wrap !important;
+}
+
+.waiver {
+    text-align: center;
+}
+
+.formGridWaiverText {
+    max-height: 50vw;
+    overflow-y: auto !important;
+    padding: 2%;
+}
+
+.payWithConverge {
+    background-color: #85bb65 !important;
+    color: white;
+    border: none;
+    width: 90%;
+    margin-left: 5%;
+    margin-bottom: 1%;
+    text-align: center;
+    align-content: center;
+}
+
+.payWithConvergeRetry {
+    background-color: #85bb65 !important;
+    color: white;
+    border: none;
+    width: 90%;
+    margin-left: 5%;
+    margin-bottom: 1%;
+    text-align: center;
+    align-content: center;
+    display: none;
+}
+
+.continueWithoutPaymentButton {
+    background-color: darkgray !important;
+    color: white;
+    border: none;
+    width: 90%;
+    margin-left: 5%;
+    margin-bottom: 1%;
+    margin-top: 2%;
+    text-align: center;
+    align-content: center;
+    display: none;
+}
+
+.submitSignUp {
+    width: 25%;
+}
+
+.signInButton {
+    text-align: center !important;
+    width: 25%;
+    margin: 0 auto;
+    margin-top: 5%;
+    background-color: #FAC04E !important;
+    color: black !important;
+}
+
+.signInButton:hover {
+    text-align: center !important;
+    width: 25%;
+    margin: 0 auto;
+    margin-top: 5%;
+    background-color: white !important;
+    color: black !important;
+}
+
+.stepButtonSpan {
+    width: 100%;
+}
+
+.formNav {
+    height: 40%;
+}
+
+.formNav .btn-primary {
+    background-color: white !important;
+}
+
+.formDropdown option {
+    overflow-y: scroll;
+    width: 50% !important;
+}
+
+.changeStepAlert {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 1vh;
+    text-align: center;
+}
+
+.nextStep {
+    width: 90% !important;
+    height: 100% !important;
+    margin: 0 auto !important;
+    color: #211C18 !important;
+    border: 2px solid #FAC04E !important;
+}
+
+.stepButtonSpan .nextStep {
+    width: 45% !important;
+    height: 100% !important;
+    margin: 0 auto !important;
+    margin-left: 2.5% !important;
+    margin-right: 2.5% !important;
+}
+
+.prevStep {
+    width: 90% !important;
+    margin: 0 auto !important;
+}
+
+.stepButtonSpan .prevStep {
+    color: white;
+    width: 45% !important;
+    height: 100% !important;
+    margin: 0 auto !important;
+    margin-left: 2.5% !important;
+    margin-right: 2.5% !important;
+}
+
+.stepButtonSpan .submitSignUp {
+    background-color: #211C18;
+    color: white;
+    border: 2px solid #FAC04E;
+    width: 45% !important;
+    height: 100% !important;
+    margin: 0 auto !important;
+    margin-left: 2.5% !important;
+    margin-right: 2.5% !important;
+}
+
+.userSignUpAcknowledgementTitle {
+    color: black;
+    text-align: center;
+    font-size: 2vw;
+    white-space: pre-wrap;
+}
+
+.alert {
+    text-align: center;
+    width: 100%;
+    white-space: pre-wrap;
+}
+
+/* CONVERGE LIGHTBOX */
+
+.convergeInfo {
+    text-align: center;
+    white-space: pre-wrap;
+    margin-bottom: 1vw;
+}
+
+.convergeTimer {
+    color: #d9534f
+}
+
+#txnReferenceNumber {
+    white-space: pre-wrap;
+}
+
+#convergeLightboxForm {
+    width: 50%;
+    margin: 0 auto;
+    margin-bottom: 5vh;
+}
+
+.convergeLightboxButton {
+    background-color: #85bb65;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.txnCompleteButton {
+    display: none;
+    width: 100%;
+}
+
+#convergeLightboxDiv {
+    width: 40%;
+    margin: 0 auto;
+    margin-bottom: 5vh;
+}
+
+#convergeCompleteDiv {
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 5vh;
+}
+
+#txnDetails {
+    display: none;
+    width: 100%;
+    text-align: center;
+}
+
+.convergeSuccessButton {
+    background-color: #85bb65 !important;
+}
+
+.convergeErrorButton {
+    background-color: #d9534f !important;
+}
+
+.txnDetailsTitle {
+    text-align: center;
+    margin-bottom: 2vw;
+}
+
+.txnDetailsInfoTitle {
+    color: #FAC04E;
+}
+
+
+
+/* ----------- Laptops ----------- */
+
+/* ----------- Non-Retina Screens ----------- */
+@media screen 
+  and (min-device-width: 1200px) 
+  and (max-device-width: 1600px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+  
+}
+
+@media screen 
+  and (min-device-width: 1601px) 
+  and (max-device-width: 2000px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+  
+}
+
+@media screen 
+  and (min-device-width: 1001px) 
+  and (max-device-width: 3000px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+    .contentsDivUserSignUp {
+        height: 100%;
+        margin-bottom: 20%;
+    }
+}
+
+/* ----------- Retina Screens ----------- */
+@media screen 
+  and (min-device-width: 1200px) 
+  and (max-device-width: 1600px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (min-resolution: 192dpi) { 
+    
+}
+
+@media screen 
+  and (min-device-width: 1601px) 
+  and (max-device-width: 2000px) 
+  and (-webkit-min-device-pixel-ratio: 2) { 
+   
+}
+
+@media screen 
+  and (min-device-width: 2001px) 
+  and (max-device-width: 3000px) 
+  and (-webkit-min-device-pixel-ratio: 2) { 
+    
+}
+
+
+
+/* ----------- iPhones ----------- */
+
+/* ----------- iPhone 4 and 4S ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+      
+}
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) {
+
+}
+
+/* ----------- iPhone 5, 5S, 5C and 5SE ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+}
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+    .personalInfoStep .form-control {
+        font-size: 3vw;
+    }
+
+    .basicInfoStep .form-control {
+        font-size: 3vw;
+    }
+
+    .basicInfoStep .input-group-text {
+        font-size: 2.8vw;
+    }
+
+    .healthInfoStep .form-row {
+        white-space: pre-wrap;
+    }
+
+    .healthInfoStep .form-group {
+        font-size: 3.3vw !important;
+    }
+
+    .healthInfoStep .form-control {
+        font-size: 3.3vw !important;
+    }
+
+    .fitnessInfoStep .form-row {
+        white-space: pre-wrap;
+    }
+
+    .fitnessInfoStep .form-group {
+        font-size: 3.3vw !important;
+    }
+
+    .fitnessInfoStep .form-control {
+        font-size: 3.3vw !important;
+    }
+
+
+    .waiverInfoStep .formWaiverRow {
+        white-space: pre-wrap !important;
+        text-align: left !important;
+    }
+
+    .waiverInfoStep p {
+        font-size: 2.3vw;
+    }
+
+    .signUpUserDiv {
+        margin-top: 30%;
+        margin-bottom: 150%;
+        white-space: nowrap;
+    }
+    
+    .signUpUserTitle {
+        font-size: 7vw;
+    }
+    
+    .signUpUserStep {
+        font-size: 5vw;
+    }
+    
+
+    .formGridWeightInput {
+        height: 100% !important;
+    }
+
+    .formGridDOBRow {
+        width: 100%;
+    }
+    
+    /* .formGridDOBDayInput {
+        width: 100% !important;
+    } */
+    .formGridDOBMonthInput {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        width: 100% !important;
+    }
+    .formGridDOBYearInput {
+        width: 100% !important;
+    }
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) {
+
+}
+
+/* ----------- iPhone 6, 6S, 7 and 8 ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2) { 
+
+}
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) { 
+    .personalInfoStep .form-control {
+        font-size: 3vw;
+    }
+
+    .basicInfoStep .form-control {
+        font-size: 3vw;
+    }
+
+    .basicInfoStep .input-group-text {
+        font-size: 2.8vw;
+    }
+
+    .healthInfoStep .form-row {
+        white-space: pre-wrap;
+    }
+
+    .healthInfoStep .form-group {
+        font-size: 3.3vw !important;
+    }
+
+    .healthInfoStep .form-control {
+        font-size: 3.3vw !important;
+    }
+
+    .fitnessInfoStep .form-row {
+        white-space: pre-wrap;
+    }
+
+    .fitnessInfoStep .form-group {
+        font-size: 3.3vw !important;
+    }
+
+    .fitnessInfoStep .form-control {
+        font-size: 3.3vw !important;
+    }
+
+
+    .waiverInfoStep .formWaiverRow {
+        white-space: pre-wrap !important;
+    }
+
+    .waiverInfoStep p {
+        font-size: 2.3vw;
+    }
+
+    .signUpUserDiv {
+        margin-top: 30%;
+        margin-bottom: 90%;
+        white-space: nowrap;
+    }
+    
+    .signUpUserTitle {
+        font-size: 7vw;
+    }
+    
+    .signUpUserStep {
+        font-size: 5vw;
+    }
+    
+
+    .formGridWeightInput {
+        height: 100% !important;
+    }
+
+    .formGridDOBRow {
+        width: 100%;
+    }
+    
+    /* .formGridDOBDayInput {
+        width: 100% !important;
+    } */
+    .formGridDOBMonthInput {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        width: 100% !important;
+    }
+    .formGridDOBYearInput {
+        width: 100% !important;
+    }
+
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) { 
+
+}
+
+/* ----------- iPhone 6+, 7+ and 8+ ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 3) { 
+
+}
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: portrait) { 
+    .personalInfoStep .form-control {
+        font-size: 3vw;
+    }
+
+    .basicInfoStep .form-control {
+        font-size: 3vw;
+    }
+
+    .basicInfoStep .input-group-text {
+        font-size: 2.8vw;
+    }
+
+    .healthInfoStep .form-row {
+        white-space: pre-wrap;
+    }
+
+    .healthInfoStep .form-group {
+        font-size: 3.3vw !important;
+    }
+
+    .healthInfoStep .form-control {
+        font-size: 3.3vw !important;
+    }
+
+    .fitnessInfoStep .form-row {
+        white-space: pre-wrap;
+    }
+
+    .fitnessInfoStep .form-group {
+        font-size: 3.3vw !important;
+    }
+
+    .fitnessInfoStep .form-control {
+        font-size: 3.3vw !important;
+    }
+
+
+    .waiverInfoStep .formWaiverRow {
+        white-space: pre-wrap !important;
+    }
+
+    .waiverInfoStep p {
+        font-size: 2.3vw;
+    }
+
+    .signUpUserDiv {
+        margin-top: 30%;
+        margin-bottom: 90%;
+        white-space: nowrap;
+    }
+    
+    .signUpUserTitle {
+        font-size: 7vw;
+    }
+    
+    .signUpUserStep {
+        font-size: 5vw;
+    }
+    
+
+    .formGridWeightInput {
+        height: 100% !important;
+    }
+
+    .formGridDOBRow {
+        width: 100%;
+    }
+    
+    /* .formGridDOBDayInput {
+        width: 100% !important;
+    } */
+    .formGridDOBMonthInput {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        width: 100% !important;
+    }
+    .formGridDOBYearInput {
+        width: 100% !important;
+    }
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: landscape) { 
+
+}
+
+/* ----------- iPhone X ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3) { 
+
+}
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: portrait) { 
+    .signUpUserDiv {
+        margin-top: 40%;
+        margin-bottom: 90%;
+        white-space: nowrap;
+    }
+    
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: landscape) { 
+
+}
+
+
+
+
+/* ----------- iPads ----------- */
+
+/* ----------- iPad 1, 2, Mini and Air ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+
+}
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+    
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: landscape) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+
+}
+
+/* ----------- iPad 3, 4 and Pro 9.7" ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+}
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+   
+    .personalInfoStep .form-control {
+        font-size: 3vw;
+    }
+
+    .basicInfoStep .form-control {
+        font-size: 3vw;
+    }
+
+    .basicInfoStep .input-group-text {
+        font-size: 2.8vw;
+    }
+
+    .healthInfoStep .form-row {
+        white-space: pre-wrap;
+    }
+
+    .healthInfoStep .form-group {
+        font-size: 3.3vw !important;
+    }
+
+    .healthInfoStep .form-control {
+        font-size: 3.3vw !important;
+    }
+
+    .fitnessInfoStep .form-row {
+        white-space: pre-wrap;
+    }
+
+    .fitnessInfoStep .form-group {
+        font-size: 3.3vw !important;
+    }
+
+    .fitnessInfoStep .form-control {
+        font-size: 3.3vw !important;
+    }
+
+
+    .waiverInfoStep .formWaiverRow {
+        white-space: pre-wrap !important;
+    }
+
+    .waiverInfoStep p {
+        font-size: 2.3vw;
+    }
+
+    .signUpUserDiv {
+        margin-top: 30%;
+        margin-bottom: 70%;
+        white-space: nowrap;
+    }
+    
+    .signUpUserTitle {
+        font-size: 7vw;
+    }
+    
+    .signUpUserStep {
+        font-size: 5vw;
+    }
+    
+
+    .formGridWeightInput {
+        height: 100% !important;
+    }
+
+    .formGridDOBRow {
+        width: 100%;
+    }
+    
+    /* .formGridDOBDayInput {
+        width: 100% !important;
+    } */
+    .formGridDOBMonthInput {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        width: 100% !important;
+    }
+    .formGridDOBYearInput {
+        width: 100% !important;
+    }
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: landscape) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+}
+
+/* ----------- iPad Pro 10.5" ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 834px) 
+  and (max-device-width: 1112px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+}
+
+/* Portrait */
+/* Declare the same value for min- and max-width to avoid colliding with desktops */
+/* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
+@media only screen 
+  and (min-device-width: 834px) 
+  and (max-device-width: 834px) 
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+}
+
+/* Landscape */
+/* Declare the same value for min- and max-width to avoid colliding with desktops */
+/* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
+@media only screen 
+  and (min-device-width: 1112px) 
+  and (max-device-width: 1112px) 
+  and (orientation: landscape) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+}
+
+/* ----------- iPad Pro 12.9" ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 1024px) 
+  and (max-device-width: 1366px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    
+}
+
+/* Portrait */
+/* Declare the same value for min- and max-width to avoid colliding with desktops */
+/* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
+@media only screen 
+  and (min-device-width: 1024px) 
+  and (max-device-width: 1024px) 
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+  
+}
+
+/* Landscape */
+/* Declare the same value for min- and max-width to avoid colliding with desktops */
+/* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
+@media only screen 
+  and (min-device-width: 1366px) 
+  and (max-device-width: 1366px) 
+  and (orientation: landscape) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+}
+
+
+

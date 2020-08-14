@@ -1,10 +1,8 @@
 import React, { Component } from 'react'
-import '../../css/signup.css'
-// import ExistingAccount from "../../alerts/ExistingAccount";
-// import PasswordError from '../../alerts/PasswordError';
 import { Form, Col, Row, InputGroup, FormControl } from 'react-bootstrap'
-// import { DatePicker } from 'react-bootstrap-date-picker'
 
+// CSS
+import '../../css/general/signup.css'
 
 class SignUpUserBasicInfo extends Component {
 
@@ -25,6 +23,7 @@ class SignUpUserBasicInfo extends Component {
                         onChange={this.props.handleChange}
                         name="height"
                         title="height"
+                        className='formDropdown'
                     >
                       <option>Select One</option>
                       <option>under 5'0"</option>
@@ -82,6 +81,7 @@ class SignUpUserBasicInfo extends Component {
                         onChange={this.props.handleChange}
                         name="gender"
                         placeholder="Gender"
+                        className='formDropdown'
                     >
                         <option>Select One</option>
                         <option>Male</option>

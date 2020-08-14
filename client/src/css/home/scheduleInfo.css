@@ -1,0 +1,1576 @@
+@font-face {
+  font-family: 'gfitfont';
+  font-style: normal;
+  font-weight: bolder;
+  src: local('gfitfont'), url('../fonts/gfitfont.ttf'), url('../fonts/gfitfont.woff'), format('truetype');
+}
+@font-face {
+    font-family: 'gfitfont-bold';
+    font-style: normal;
+    font-weight: bolder;
+    src: local('gfitfontBold'), url('../fonts/gfitfontBold.ttf'), url('../fonts/gfitfontBold.woff') format('truetype');
+  }
+
+.scheduleInfo {
+    height: 675px;
+    background-image: url('../images/scheduleBackground.jpg');
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; 
+}
+
+.scheduleInfoSection {
+    width: 90%;
+    margin: 0 auto;
+    background-color: white;
+    padding: 3%;
+    margin-top: 5%;
+}
+
+.scheduleInfoTitleLeft {
+    font-family: 'gfitfont-bold', Times, serif;
+    font-size: 1.8vw;
+    letter-spacing: 3px;
+    color: #000000;
+    font-weight: bolder; 
+    padding-left: 15px;
+}
+
+.scheduleInfoTitleRight {
+    font-family: 'gfitfont-bold', Times, serif;
+    font-size: 1.8vw;
+    letter-spacing: 3px;
+    color: #FAC04E;
+    font-weight: bolder; 
+}
+
+.scheduleInfoRow1 {
+    font-family: 'Arial';
+    font-size: 1vw;
+    margin-top: 2%;
+    font-weight: bold
+}
+
+.scheduleInfoRow2 {
+    font-family: 'Arial';
+    margin-top: 3%;
+    margin-bottom: 3%;
+    font-weight: bolder;
+    line-height: 1.0;
+}
+
+.scheduleInfoColumn {
+    font-family: 'Arial';
+    width: 150%;
+}
+
+.scheduleTimeOfWorkout p {
+    font-family: 'Arial';
+    color: #FAC04E;
+    font-weight: bolder;
+    text-align: right;
+}
+
+.scheduleInfoRow3 {
+    margin-bottom: 3%;
+    font-weight: bolder;
+    font-size: 1vw;
+}
+
+.scheduleInfoButton {
+    font-family: 'gfitfont-bold', Times, serif;
+    background-color: #322824;
+    padding: 1%;
+    margin-left: 15px;
+    color: white !important;
+    border: 0px;
+    
+}
+
+.scheduleInfoButton:hover {
+    color: white !important;
+    background-color: #FAC04E !important;
+}
+
+/* ----------- LAPTOPS ----------- */
+
+
+/* ----------- Non-Retina Screens ----------- */
+@media screen 
+  and (min-device-width: 1200px) 
+  and (max-device-width: 2000px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+    .scheduleInfo {
+      height: 1075px;
+      margin-top: 15%;
+    }
+    .scheduleInfoTitleLeft {
+      font-size: 3vw;
+      letter-spacing: 0.5px;
+      padding-left: 15px;
+    }
+    .scheduleInfoTitleRight {
+        font-size: 3vw;
+        letter-spacing: 0.5px;
+    }
+    .scheduleInfoRow1 {
+        font-size: 1.3vw;
+        margin-top: 2%;
+    }
+    .scheduleInfoRow2 {
+        white-space: nowrap;
+        font-size: 1.7vw;
+        margin-top: 3%;
+        margin-bottom: 3%;
+    }
+    .scheduleInfoRow3 {
+      font-size: 1.3vw;
+      margin-top: 2%;
+    }
+    .scheduleInfoButton {
+      width: 30%;
+    }
+}
+
+@media screen 
+  and (min-device-width: 1000px) 
+  and (max-device-width: 1600px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+    .scheduleInfo {
+      height: 120vw;
+      padding-top: 15%;
+    }
+   
+    .scheduleInfoTitleLeft {
+      font-size: 3vw;
+      letter-spacing: 0.5px;
+      padding-left: 15px;
+    }
+    .scheduleInfoTitleRight {
+        font-size: 3vw;
+        letter-spacing: 0.5px;
+    }
+    .scheduleInfoRow1 {
+        font-size: 1.3vw;
+        margin-top: 2%;
+    }
+    .scheduleInfoRow2 {
+        white-space: nowrap;
+        font-size: 1.7vw;
+        margin-top: 3%;
+        margin-bottom: 3%;
+    }
+    .scheduleInfoRow3 {
+      font-size: 1.3vw;
+      margin-top: 2%;
+    }
+    .scheduleInfoButton {
+      width: 30%;
+    }
+}
+
+@media screen 
+  and (min-device-width: 1301px) 
+  and (max-device-width: 1400px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+   
+}
+
+
+@media screen 
+  and (min-device-width: 1401px) 
+  and (max-device-width: 1500px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+   
+
+}
+
+@media screen 
+  and (min-device-width: 1501px) 
+  and (max-device-width: 1600px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+    
+
+}
+
+@media screen 
+  and (min-device-width: 1601px) 
+  and (max-device-width: 1700px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+    .scheduleInfo {
+      height: 1275px;
+    }
+    .scheduleInfoButton {
+      font-size: 1.5vw;
+    }
+}
+
+@media screen 
+  and (min-device-width: 1701px) 
+  and (max-device-width: 1800px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+    .scheduleInfo {
+      height: 1275px;
+    }
+    .scheduleInfoButton {
+      font-size: 1.5vw;
+    }
+}
+
+@media screen 
+  and (min-device-width: 1801px) 
+  and (max-device-width: 2000px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+    .scheduleInfo {
+      height: 1275px;
+    }
+    .scheduleInfoButton {
+      font-size: 1.5vw;
+    }
+}
+
+@media screen 
+  and (min-device-width: 2001px) 
+  and (max-device-width: 3000px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+    .scheduleInfo {
+      height: 1475px;
+      margin-top: 15%;
+    }
+    .scheduleInfoTitleLeft {
+      font-size: 3vw;
+      letter-spacing: 0.5px;
+      padding-left: 15px;
+    }
+    .scheduleInfoTitleRight {
+        font-size: 3vw;
+        letter-spacing: 0.5px;
+    }
+    .scheduleInfoRow1 {
+        font-size: 1.3vw;
+        margin-top: 2%;
+    }
+    .scheduleInfoRow2 {
+        white-space: nowrap;
+        font-size: 1.7vw;
+        margin-top: 3%;
+        margin-bottom: 3%;
+    }
+    .scheduleInfoRow3 {
+      font-size: 1.3vw;
+      margin-top: 2%;
+    }
+    .scheduleInfoButton {
+      font-size: 2vw;
+      width: 30%;
+    }
+}
+
+@media screen 
+  and (min-device-width: 2001px) 
+  and (max-device-width: 2100px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+    
+    
+}
+@media screen 
+  and (min-device-width: 2101px) 
+  and (max-device-width: 2200px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+   
+    
+}
+@media screen 
+  and (min-device-width: 2201px) 
+  and (max-device-width: 2300px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+   
+}
+@media screen 
+  and (min-device-width: 2301px) 
+  and (max-device-width: 2400px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+    
+}
+@media screen 
+  and (min-device-width: 2401px) 
+  and (max-device-width: 2500px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+    .scheduleInfo {
+      height: 1775px;
+    }
+    
+}
+@media screen 
+  and (min-device-width: 2501px) 
+  and (max-device-width: 2600px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+    .scheduleInfo {
+      height: 1775px;
+    }
+    
+}
+@media screen 
+  and (min-device-width: 2601px) 
+  and (max-device-width: 2700px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+    .scheduleInfo {
+      height: 1775px;
+    }
+    
+}
+@media screen 
+  and (min-device-width: 2701px) 
+  and (max-device-width: 2800px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+    .scheduleInfo {
+      height: 1775px;
+    }
+    
+}
+@media screen 
+  and (min-device-width: 2801px) 
+  and (max-device-width: 2900px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+    .scheduleInfo {
+      height: 1775px;
+    }
+    
+}
+@media screen 
+  and (min-device-width: 2901px) 
+  and (max-device-width: 3000px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+    .scheduleInfo {
+      height: 1975px;
+    }
+}
+
+/* ----------- Retina Screens ----------- */
+@media screen 
+  and (min-device-width: 1200px) 
+  and (max-device-width: 2000px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (min-resolution: 192dpi) { 
+    .scheduleInfo {
+      height: 1075px;
+      margin-top: 15%;
+    }
+    .scheduleInfoTitleLeft {
+      font-size: 3vw;
+      letter-spacing: 0.5px;
+      padding-left: 15px;
+    }
+    .scheduleInfoTitleRight {
+        font-size: 3vw;
+        letter-spacing: 0.5px;
+    }
+    .scheduleInfoRow1 {
+        font-size: 1.3vw;
+        margin-top: 2%;
+    }
+    .scheduleInfoRow2 {
+        white-space: nowrap;
+        font-size: 1.7vw;
+        margin-top: 3%;
+        margin-bottom: 3%;
+    }
+    .scheduleInfoRow3 {
+      font-size: 1.3vw;
+      margin-top: 2%;
+    }
+    .scheduleInfoButton {
+      width: 30%;
+    }
+}
+
+@media screen 
+  and (min-device-width: 1000px) 
+  and (max-device-width: 1600px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (min-resolution: 192dpi) { 
+    .scheduleInfo {
+      height: 120vw;
+      padding-top: 15%;
+    }
+   
+    .scheduleInfoTitleLeft {
+      font-size: 3vw;
+      letter-spacing: 0.5px;
+      padding-left: 15px;
+    }
+    .scheduleInfoTitleRight {
+        font-size: 3vw;
+        letter-spacing: 0.5px;
+    }
+    .scheduleInfoRow1 {
+        font-size: 1.3vw;
+        margin-top: 2%;
+    }
+    .scheduleInfoRow2 {
+        white-space: nowrap;
+        font-size: 1.7vw;
+        margin-top: 3%;
+        margin-bottom: 3%;
+    }
+    .scheduleInfoRow3 {
+      font-size: 1.3vw;
+      margin-top: 2%;
+    }
+    .scheduleInfoButton {
+      width: 30%;
+    }
+}
+
+
+@media screen 
+  and (min-device-width: 1601px) 
+  and (max-device-width: 2000px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (min-resolution: 192dpi) { 
+    .scheduleInfo {
+      height: 100vw;
+      padding-top: 15%;
+    }
+    .scheduleInfoButton {
+      font-size: 1.5vw;
+    }
+}
+
+@media screen 
+  and (min-device-width: 2001px) 
+  and (max-device-width: 3000px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (min-resolution: 192dpi) { 
+    .scheduleInfo {
+      height: 1475px;
+      margin-top: 15%;
+    }
+    .scheduleInfoTitleLeft {
+      font-size: 3vw;
+      letter-spacing: 0.5px;
+      padding-left: 15px;
+    }
+    .scheduleInfoTitleRight {
+        font-size: 3vw;
+        letter-spacing: 0.5px;
+    }
+    .scheduleInfoRow1 {
+        font-size: 1.3vw;
+        margin-top: 2%;
+    }
+    .scheduleInfoRow2 {
+        white-space: nowrap;
+        font-size: 1.7vw;
+        margin-top: 3%;
+        margin-bottom: 3%;
+    }
+    .scheduleInfoRow3 {
+      font-size: 1.3vw;
+      margin-top: 2%;
+    }
+    .scheduleInfoButton {
+      font-size: 2vw;
+      width: 30%;
+    }
+}
+
+@media screen 
+  and (min-device-width: 2001px) 
+  and (max-device-width: 2100px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (min-resolution: 192dpi) { 
+    
+    
+}
+@media screen 
+  and (min-device-width: 2101px) 
+  and (max-device-width: 2200px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (min-resolution: 192dpi) { 
+   
+    
+}
+@media screen 
+  and (min-device-width: 2201px) 
+  and (max-device-width: 2300px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (min-resolution: 192dpi) { 
+   
+}
+@media screen 
+  and (min-device-width: 2301px) 
+  and (max-device-width: 2400px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (min-resolution: 192dpi) { 
+    
+}
+@media screen 
+  and (min-device-width: 2401px) 
+  and (max-device-width: 2500px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (min-resolution: 192dpi) { 
+    .scheduleInfo {
+      height: 1775px;
+    }
+    
+}
+@media screen 
+  and (min-device-width: 2501px) 
+  and (max-device-width: 2600px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (min-resolution: 192dpi) { 
+    .scheduleInfo {
+      height: 1775px;
+    }
+    
+}
+@media screen 
+  and (min-device-width: 2601px) 
+  and (max-device-width: 2700px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (min-resolution: 192dpi) {
+    .scheduleInfo {
+      height: 1775px;
+    }
+    
+}
+@media screen 
+  and (min-device-width: 2701px) 
+  and (max-device-width: 2800px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (min-resolution: 192dpi) { 
+    .scheduleInfo {
+      height: 1775px;
+    }
+    
+}
+@media screen 
+  and (min-device-width: 2801px) 
+  and (max-device-width: 2900px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (min-resolution: 192dpi) { 
+    .scheduleInfo {
+      height: 1775px;
+    }
+    
+}
+@media screen 
+  and (min-device-width: 2901px) 
+  and (max-device-width: 3000px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (min-resolution: 192dpi) { 
+    .scheduleInfo {
+      height: 1975px;
+    }
+}
+
+
+/* ----------- iPads ----------- */
+
+/* ----------- iPad 1, 2, Mini and Air ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+
+}
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+    
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: landscape) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+    .scheduleInfo {
+      height: 100%;
+      width: 100vw !important;
+      padding-bottom: 25%;
+      padding-top: 15%;
+    }
+    
+    .scheduleInfoSection {
+      width: 90%;
+      margin: 0 auto;
+      padding: 3%;
+      margin-top: 5%;
+    }
+    
+    .scheduleInfoTitleLeft {
+      font-size: 3.5vw;
+      letter-spacing: 1px;
+      padding-left: 15px;
+    }
+    
+    .scheduleInfoTitleRight {
+      font-size: 3.5vw;
+      letter-spacing: 1px;
+    }
+    .scheduleInfoRow1 {
+      font-size: 2vw;
+    }
+    
+    .scheduleInfoRow2 {
+      font-size: 1.8vw;
+    }
+    .scheduleTypeOfWorkout {
+      white-space: nowrap;
+    }
+
+    .scheduleTimeOfWorkout {
+      white-space: pre-wrap !important;
+    }
+    
+    .scheduleTimeOfWorkout p {
+      text-align: right;
+      margin-bottom: 2.5vw;
+    }
+
+    #saturdayTime {
+      margin-top: 3vh;
+    }
+    
+    .scheduleInfoRow3 {
+      margin-bottom: 3%;
+      font-weight: bolder;
+      font-size: 1.8vw;
+    }
+    
+    .scheduleInfoButton {
+      padding: 2.5%;
+      margin-left: 15px;
+      font-size: 1.8vw;
+    }
+}
+
+/* ----------- iPad 3, 4 and Pro 9.7" ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+}
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+    .scheduleInfo {
+        height: 100%;
+        padding-bottom: 25%;
+        padding-top: 15%;
+    }
+    
+    .scheduleInfoSection {
+        width: 90%;
+        margin: 0 auto;
+        padding: 3%;
+        margin-top: 5%;
+    }
+    
+    .scheduleInfoTitleLeft {
+        font-size: 4vw;
+        letter-spacing: 1px;
+        padding-left: 15px;
+    }
+    
+    .scheduleInfoTitleRight {
+        font-size: 4vw;
+        letter-spacing: 1px;
+    }
+    
+    .scheduleInfoRow1 {
+        font-size: 2vw;
+        margin-top: 2%;
+    }
+    
+    .scheduleInfoRow2 {
+        font-size: 1.5vw;
+        margin-top: 3%;
+        margin-bottom: 3%;
+
+    }
+
+    .scheduleDaysOfWeek {
+        width: 20%;
+    }
+
+    .scheduleTypeOfWorkout {
+        width: 35%;
+        padding-left: 0;
+        padding-right: 0;
+        margin-left: 0;
+    }
+
+    .scheduleTimeOfWorkout {
+        width: 35%;
+        padding-left: 0;
+        margin-right: 0;
+        
+    }
+    
+    .scheduleTimeOfWorkout p {
+        text-align: left;
+    }
+    
+    .scheduleInfoRow3 {
+        margin-bottom: 3%;
+        font-weight: bolder;
+        font-size: 2vw;
+    }
+    
+    .scheduleInfoButton {
+        padding: 2.5%;
+        margin-left: 15px;
+    }
+    
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: landscape) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+}
+
+/* ----------- iPad Pro 10.5" ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 834px) 
+  and (max-device-width: 1112px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+}
+
+/* Portrait */
+/* Declare the same value for min- and max-width to avoid colliding with desktops */
+/* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
+@media only screen 
+  and (min-device-width: 834px) 
+  and (max-device-width: 834px) 
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+}
+
+/* Landscape */
+/* Declare the same value for min- and max-width to avoid colliding with desktops */
+/* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
+@media only screen 
+  and (min-device-width: 1112px) 
+  and (max-device-width: 1112px) 
+  and (orientation: landscape) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+}
+
+/* ----------- iPad Pro 12.9" ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 1024px) 
+  and (max-device-width: 1366px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    
+}
+
+/* Portrait */
+/* Declare the same value for min- and max-width to avoid colliding with desktops */
+/* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
+@media only screen 
+  and (min-device-width: 1024px) 
+  and (max-device-width: 1024px) 
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+    .scheduleInfo {
+      height: 100%;
+      padding-bottom: 25%;
+      padding-top: 15%;
+    }
+    
+    .scheduleInfoSection {
+        width: 90%;
+        margin: 0 auto;
+        padding: 3%;
+        margin-top: 5%;
+    }
+    
+    .scheduleInfoTitleLeft {
+        font-size: 4vw;
+        letter-spacing: 1px;
+        padding-left: 15px;
+    }
+    
+    .scheduleInfoTitleRight {
+        font-size: 4vw;
+        letter-spacing: 1px;
+    }
+    
+    .scheduleInfoRow1 {
+      font-size: 2vw;
+      margin-top: 2%;
+    }
+    
+    .scheduleInfoRow2 {
+      white-space: nowrap;
+      font-size: 2.2vw;
+      margin-top: 3%;
+      margin-bottom: 3%;
+
+    }
+
+    .scheduleDaysOfWeek {
+        width: 20%;
+    }
+
+    .scheduleTypeOfWorkout {
+        width: 35%;
+        padding-left: 0;
+        padding-right: 0;
+        margin-left: 0;
+    }
+
+    .scheduleTimeOfWorkout {
+        width: 35%;
+        padding-left: 0;
+        margin-right: 0;
+    }
+    
+    .scheduleTimeOfWorkout p {
+        text-align: right;
+    }
+    
+    .scheduleInfoRow3 {
+        margin-bottom: 3%;
+        font-weight: bolder;
+        font-size: 2vw;
+    }
+    
+    .scheduleInfoButton {
+        padding: 2.5%;
+        margin-left: 15px;
+    }
+}
+
+/* Landscape */
+/* Declare the same value for min- and max-width to avoid colliding with desktops */
+/* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
+@media only screen 
+  and (min-device-width: 1366px) 
+  and (max-device-width: 1366px) 
+  and (orientation: landscape) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+    .scheduleInfo {
+      height: 100%;
+      padding-bottom: 25%;
+      padding-top: 15%;
+    }
+    
+}
+
+
+/* ----------- iPhones ----------- */
+
+/* ----------- iPhone 4 and 4S ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+}
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) {
+
+}
+
+/* ----------- iPhone 5, 5S, 5C and 5SE ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+}
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+    .scheduleInfo {
+        height: 100%;
+        padding-bottom: 25%;
+        padding-top: 15%;
+    }
+    
+    .scheduleInfoSection {
+        width: 90%;
+        margin: 0 auto;
+        padding: 3%;
+        margin-top: 5%;
+    }
+    
+    .scheduleInfoTitleLeft {
+        font-size: 5vw;
+        letter-spacing: 1px;
+        padding-left: 15px;
+    }
+    
+    .scheduleInfoTitleRight {
+        font-size: 5vw;
+        letter-spacing: 1px;
+    }
+    
+    .scheduleInfoRow1 {
+        font-size: 3vw;
+        margin-top: 2%;
+    }
+    
+    .scheduleInfoRow2 {
+      font-size: 2.3vw;
+      margin-top: 3%;
+      margin-bottom: 3%;
+      line-height: 2vh;
+    }
+
+    .scheduleDaysOfWeek {
+        width: 28%;
+    }
+
+    .scheduleTypeOfWorkout {
+        width: 33%;
+        padding-left: 0;
+        padding-right: 0;
+        margin-left: 8px;
+        margin-right: 0;
+    }
+
+    .scheduleTimeOfWorkout {
+        width: 35%;
+        margin: 0 auto;
+        padding-left: 0;
+        padding-right: 6px;
+        white-space: pre-wrap !important;
+    }
+    
+    .scheduleTimeOfWorkout p {
+        text-align: left;
+        margin-bottom: .8vh;
+    }
+
+    #saturdayTime {
+      margin-top: 3vh;
+    }
+    
+    .scheduleInfoRow3 {
+        margin-bottom: 3%;
+        font-weight: bolder;
+        font-size: 3vw;
+    }
+    
+    .scheduleInfoButton {
+        padding: 2.5%;
+        margin-left: 15px;
+    }
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) {
+    .scheduleInfo {
+      height: 100%;
+      width: 100vw !important;
+      padding-bottom: 25%;
+      padding-top: 15%;
+    }
+    
+    .scheduleInfoSection {
+        width: 90%;
+        margin: 0 auto;
+        padding: 3%;
+        margin-top: 5%;
+    }
+    
+    .scheduleInfoTitleLeft {
+        font-size: 3.5vw;
+        letter-spacing: 1px;
+        padding-left: 15px;
+    }
+    
+    .scheduleInfoTitleRight {
+        font-size: 3.5vw;
+        letter-spacing: 1px;
+    }
+    
+    .scheduleInfoRow1 {
+        font-size: 2.5vw;
+        line-height: 3.5vw;
+        margin-top: 2%;
+    }
+    
+    .scheduleInfoRow2 {
+      font-size: 2vw;
+      margin-top: 3%;
+      margin-bottom: 3%;
+      line-height: 1vw;
+    }
+
+    .scheduleDaysOfWeek {
+        width: 28%;
+    }
+
+    .scheduleTypeOfWorkout {
+        width: 33%;
+        padding-left: 0;
+        padding-right: 0;
+        margin-left: 8px;
+        margin-right: 0;
+    }
+
+    .scheduleTimeOfWorkout {
+        width: 35%;
+        margin: 0 auto;
+        padding-left: 0;
+        padding-right: 6px;
+        white-space: pre-wrap !important;
+    }
+    
+    .scheduleTimeOfWorkout p {
+        text-align: left;
+        margin-bottom: 2.8vw;
+    }
+
+    #saturdayTime {
+      margin-top: 3vh;
+    }
+    
+    .scheduleInfoRow3 {
+        margin-bottom: 3%;
+        font-weight: bolder;
+        font-size: 2.5vw;
+    }
+    
+    .scheduleInfoButton {
+        padding: 2.5%;
+        margin-left: 15px;
+        font-size: 2vw;
+    }
+}
+
+/* ----------- iPhone 6, 6S, 7 and 8 ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2) { 
+
+}
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+  .scheduleInfoRow2 {
+      font-size: 2.3vw;
+      margin-top: 3%;
+      margin-bottom: 3%;
+      line-height: 1.5vh;
+  }
+
+  .scheduleDaysOfWeek {
+      width: 23%;
+  }
+
+  .scheduleTypeOfWorkout {
+      width: 33%;
+      padding-left: 0;
+      padding-right: 0;
+      margin-left: 8px;
+      margin-right: 0;
+  }
+
+  .scheduleTimeOfWorkout {
+      width: 35%;
+      margin: 0 auto;
+      padding-left: 0;
+      padding-right: 6px;
+      white-space: pre-wrap !important;
+  }
+  
+  .scheduleTimeOfWorkout p {
+      text-align: left;
+      margin-bottom: .9vh;
+  }
+
+  #saturdayTime {
+    margin-top: 2.4vh;
+  }
+
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) { 
+    .scheduleInfo {
+      height: 100%;
+      width: 100vw !important;
+      padding-bottom: 25%;
+      padding-top: 15%;
+    }
+    
+    .scheduleInfoSection {
+      width: 90%;
+      margin: 0 auto;
+      padding: 3%;
+      margin-top: 5%;
+    }
+    
+    .scheduleInfoTitleLeft {
+      font-size: 3.5vw;
+      letter-spacing: 1px;
+      padding-left: 15px;
+    }
+    
+    .scheduleInfoTitleRight {
+      font-size: 3.5vw;
+      letter-spacing: 1px;
+    }
+    .scheduleInfoRow1 {
+      font-size: 2vw;
+    }
+    
+    .scheduleInfoRow2 {
+      font-size: 1.8vw;
+    }
+    .scheduleTypeOfWorkout {
+      white-space: nowrap;
+    }
+
+    .scheduleTimeOfWorkout {
+      white-space: pre-wrap !important;
+    }
+    
+    .scheduleTimeOfWorkout p {
+      text-align: right;
+      margin-bottom: 2.5vw;
+    }
+
+    #saturdayTime {
+      margin-top: 3vh;
+    }
+    
+    .scheduleInfoRow3 {
+      margin-bottom: 3%;
+      font-weight: bolder;
+      font-size: 1.8vw;
+    }
+    
+    .scheduleInfoButton {
+      padding: 2.5%;
+      margin-left: 15px;
+      font-size: 1.8vw;
+    }
+  
+}
+
+/* ----------- iPhone X ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3) { 
+
+}
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: portrait) { 
+    .scheduleInfo {
+        height: 100%;
+        padding-bottom: 25%;
+        padding-top: 15%;
+    }
+    
+    .scheduleInfoSection {
+        width: 90%;
+        margin: 0 auto;
+        padding: 3%;
+        margin-top: 5%;
+    }
+    
+    .scheduleInfoTitleLeft {
+        font-size: 5vw;
+        letter-spacing: 1px;
+        padding-left: 15px;
+    }
+    
+    .scheduleInfoTitleRight {
+        font-size: 5vw;
+        letter-spacing: 1px;
+    }
+    
+    .scheduleInfoRow1 {
+        font-size: 3vw;
+        margin-top: 2%;
+    }
+    
+    .scheduleInfoRow2 {
+        font-size: 2.3vw;
+        margin-top: 3%;
+        margin-bottom: 3%;
+        line-height: 1.3vh;
+    }
+
+    .scheduleDaysOfWeek {
+        width: 23%;
+    }
+
+    .scheduleTypeOfWorkout {
+        width: 33%;
+        padding-left: 0;
+        padding-right: 0;
+        margin-left: 8px;
+        margin-right: 0;
+    }
+
+    .scheduleTimeOfWorkout {
+        width: 35%;
+        margin: 0 auto;
+        padding-left: 0;
+        padding-right: 6px;
+        white-space: pre-wrap !important;
+    }
+    
+    .scheduleTimeOfWorkout p {
+        text-align: left;
+        margin-bottom: .75vh;
+    }
+
+    #saturdayTime {
+      margin-top: 1.8vh;
+    }
+    
+    .scheduleInfoRow3 {
+        margin-bottom: 3%;
+        font-weight: bolder;
+        font-size: 3vw;
+    }
+    
+    .scheduleInfoButton {
+        padding: 2.5%;
+        margin-left: 15px;
+    }
+
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: landscape) { 
+    .scheduleInfo {
+      height: 100%;
+      width: 100vw !important;
+      padding-bottom: 25%;
+      padding-top: 15%;
+    }
+    
+    .scheduleInfoSection {
+      width: 90%;
+      margin: 0 auto;
+      padding: 3%;
+      margin-top: 5%;
+    }
+    
+    .scheduleInfoTitleLeft {
+      font-size: 3.5vw;
+      letter-spacing: 1px;
+      padding-left: 15px;
+    }
+    
+    .scheduleInfoTitleRight {
+      font-size: 3.5vw;
+      letter-spacing: 1px;
+    }
+    .scheduleInfoRow1 {
+      font-size: 2vw;
+    }
+    
+    .scheduleInfoRow2 {
+      font-size: 1.8vw;
+    }
+    .scheduleTypeOfWorkout {
+      white-space: nowrap;
+    }
+
+    .scheduleTimeOfWorkout {
+      white-space: pre-wrap !important;
+    }
+    
+    .scheduleTimeOfWorkout p {
+      text-align: right;
+      margin-bottom: 2.5vw;
+    }
+
+    #saturdayTime {
+      margin-top: 3vh;
+    }
+    
+    .scheduleInfoRow3 {
+      margin-bottom: 3%;
+      font-weight: bolder;
+      font-size: 1.8vw;
+    }
+    
+    .scheduleInfoButton {
+      padding: 2.5%;
+      margin-left: 15px;
+      font-size: 1.8vw;
+    }
+    /* .scheduleInfo {
+      height: 100%;
+      width: 103vw !important;
+      padding-bottom: 25%;
+      padding-top: 15%;
+    }
+    .scheduleInfoTitleLeft {
+      font-size: 3vw;
+      letter-spacing: 1px;
+      padding-left: 15px;
+    }
+    
+    .scheduleInfoTitleRight {
+        font-size: 3vw;
+        letter-spacing: 1px;
+    }
+    
+    .scheduleInfoRow1 {
+        font-size: 1.8vw;
+        line-height: 2.5vw;
+        margin-top: 2%;
+    }
+    
+    .scheduleInfoRow2 {
+      font-size: 2vw;
+      margin-top: 3%;
+      margin-bottom: 3%;
+      line-height: 2.5vw;
+      width: 100% !important;
+      display: inline-block !important;
+    }
+    .scheduleTypeOfWorkout {
+      padding-left: 0;
+      padding-right: 0;
+      margin-left: 8px;
+      margin-right: 75px;
+      white-space: nowrap;
+  }
+
+  .scheduleTimeOfWorkout {
+      max-width: 30% !important;
+      padding-left: 0;
+      padding-right: 6px;
+      white-space: nowrap !important;
+  }
+  
+  .scheduleTimeOfWorkout p {
+      text-align: left;
+      margin-bottom: 2vw;
+  }
+  
+  .scheduleInfoRow3 {
+      margin-bottom: 3%;
+      font-weight: bolder;
+      font-size: 1.8vw;
+      line-height: 2.5vw;
+  }
+  
+  .scheduleInfoButton {
+      padding: 2.5%;
+      margin-left: 15px;
+      font-size: 2vw;
+  } */
+}
+
+/* ----------- iPhone 6+, 7+ and 8+ ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 3) { 
+
+}
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: portrait) { 
+  .scheduleInfoRow2 {
+      font-size: 2.3vw;
+      margin-top: 3%;
+      margin-bottom: 3%;
+      line-height: 1.5vh;
+  }
+
+  .scheduleDaysOfWeek {
+      width: 23%;
+  }
+
+  .scheduleTypeOfWorkout {
+      width: 33%;
+      padding-left: 0;
+      padding-right: 0;
+      margin-left: 8px;
+      margin-right: 0;
+  }
+
+  .scheduleTimeOfWorkout {
+      width: 35%;
+      margin: 0 auto;
+      padding-left: 0;
+      padding-right: 6px;
+      white-space: pre-wrap !important;
+  }
+  
+  .scheduleTimeOfWorkout p {
+      text-align: left;
+      margin-bottom: .8vh;
+  }
+
+  #saturdayTime {
+    margin-top: 1.8vh;
+  }
+
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: landscape) { 
+
+}
+
+/* ----------- Pixel 2 ----------- */
+
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) { 
+    .scheduleInfo {
+      height: 100%;
+      width: 100vw !important;
+      padding-bottom: 25%;
+      padding-top: 15%;
+    }
+    
+    .scheduleInfoSection {
+      width: 90%;
+      margin: 0 auto;
+      padding: 3%;
+      margin-top: 5%;
+    }
+    
+    .scheduleInfoTitleLeft {
+      font-size: 3.5vw;
+      letter-spacing: 1px;
+      padding-left: 15px;
+    }
+    
+    .scheduleInfoTitleRight {
+      font-size: 3.5vw;
+      letter-spacing: 1px;
+    }
+    .scheduleInfoRow1 {
+      font-size: 2vw;
+    }
+    
+    .scheduleInfoRow2 {
+      font-size: 1.8vw;
+    }
+    .scheduleTypeOfWorkout {
+      white-space: nowrap;
+    }
+
+    .scheduleTimeOfWorkout {
+      white-space: pre-wrap !important;
+    }
+    
+    .scheduleTimeOfWorkout p {
+      text-align: right;
+      margin-bottom: 2.5vw;
+    }
+
+    #saturdayTime {
+      margin-top: 3vh;
+    }
+    
+    .scheduleInfoRow3 {
+      margin-bottom: 3%;
+      font-weight: bolder;
+      font-size: 1.8vw;
+    }
+    
+    .scheduleInfoButton {
+      padding: 2.5%;
+      margin-left: 15px;
+      font-size: 1.8vw;
+    }
+}
+
+
+

@@ -4,7 +4,9 @@ import LoginBar from '../../components/nav/LoginBar'
 import Footer from '../../components/nav/Footer'
 import API from '../../utils/API'
 import SignInError from "../../components/alerts/SignInError";
-import '../../css/admin.css'
+
+// CSS
+import '../../css/admin/admin.css'
 
 class AdminLogin extends Component {
 

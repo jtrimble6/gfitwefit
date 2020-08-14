@@ -6,9 +6,10 @@ import { Switch, Redirect } from 'react-router-dom'
 import API from './utils/API'
 
 // WEB PAGES
-import LandingPage from './pages/LandingPage'
-import ContactPage from './pages/ContactPage'
-import TryItOutPage from './pages/TryItOutPage'
+import LandingPage from './pages/home/LandingPage'
+import ContactPage from './pages/home/ContactPage'
+import TryItOutPage from './pages/home/TryItOutPage'
+import BioPage from './pages/home/BioPage'
 // import PricingPage from './pages/PricingPage'
 
 // ADMIN PAGES
@@ -19,14 +20,14 @@ import AdminVideoLibraryPage from './pages/admin/AdminVideoLibraryPage'
 import Logout from './pages/admin/Logout'
 
 // USER PAGES
-import UserSignUpPage from './pages/oldPages/UserSignUpPage'
+import UserSignUpPage from './pages/user/UserSignUpPage'
 import UserLogin from './pages/user/UserLogin'
 import UserHomePage from './pages/user/UserHomePage'
 import PasswordReset from './pages/user/PasswordReset'
 import UpdatePassword from './pages/user/UpdatePassword'
 
 // CSS
-import './css/main.css';
+import './css/general/main.css';
 
 class Landing extends Component {
 
@@ -104,30 +105,22 @@ class Landing extends Component {
           <Switch>
             <Route exact path='/'
               render={() =>
-                <div>
-                  <LandingPage />
-                </div>
+                <LandingPage />
               }
             />
-            {/* <Route exact path='/pricing'
-              render={() =>
-                <div>
-                  <PricingPage />
-                </div>
-              }
-            /> */}
             <Route exact path='/contact'
               render={() =>
-                <div>
-                  <ContactPage />
-                </div>
+                <ContactPage />
               }
             />
             <Route exact path='/tryitout'
               render={() =>
-                <div>
-                  <TryItOutPage />
-                </div>
+                <TryItOutPage />
+              }
+            />
+            <Route exact path='/bioPage'
+              render={() =>
+                <BioPage />
               }
             />
             <Route exact path='/logout'

@@ -1,0 +1,933 @@
+/* MESSAGE BOARD */
+.messageBoardPage {
+    height: 600px;
+    text-align: center;
+}
+.messageBoard {
+    font-family: 'gfitfont-bold';
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 5vh;
+    text-align: center;
+    margin-bottom: 5%;
+    background-color: #494848;
+    padding: 10%;
+    border-radius: 3%;
+}
+
+.recentMessagesButton {
+    margin: 0 auto;
+    background-color: white !important;
+    color: black !important;
+}
+
+.messageList {
+    max-height: 400px !important;
+    min-width: 100%;
+    overflow-y: scroll !important;
+    text-align: center !important;
+}
+
+.messageBox {
+    width: 90%;
+    position: relative;
+    bottom: 0;
+    color: white;
+    margin: 0 auto;
+    margin-top: 10%;
+    /* margin-top: 10%; */
+    padding-top: 5%;
+    border-top: solid 3px gold;
+    text-align: center !important;
+}
+
+.messageBox label {
+    margin: 0 auto !important;
+    margin-bottom: 2% !important;
+}
+
+#messageType {
+    margin-bottom: 1%;
+}
+
+.messageBox .submit {
+    margin: 0 auto;
+    margin-top: 2%;
+}
+
+.rce-mbox {
+    width: 50%;
+}
+
+.rce-mbox-title {
+    font-family: 'gfitfont-bold';
+    font-size: .8vw;
+}
+
+.rce-mbox-text {
+    color: black !important;
+    font-size: 1vw;
+    margin: 2%;
+    text-align: left !important;
+}
+
+.rce-mbox-time {
+    font-size: .8vw;
+}
+
+.challengeCard .card-subtitle {
+    font-size: 18px;
+}
+
+.chatRoomSendButton {
+    background-color: #FAC04E;
+    width: 30%;
+    margin: 0 auto;
+    margin-top: 2%;
+}
+
+
+
+/* ----------- iPhones ----------- */
+
+/* ----------- iPhone 4 and 4S ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+}
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) {
+
+}
+
+/* ----------- iPhone 5, 5S, 5C and 5SE ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+}
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+    .messageBoard {
+        width: 95%;
+        height: 90vh;
+    }
+
+    .chatRoomSendButton {
+        height: 7vh;
+    }
+
+    .messageBox {
+        height: 5vh;
+        margin-top: 70%;
+    }
+
+    .rce-mbox {
+        width: 80%;
+    }
+    
+    .rce-mbox-title {
+        font-family: 'gfitfont-bold';
+        font-size: 2.7vw;
+    }
+    
+    .rce-mbox-text {
+        color: black !important;
+        font-size: 2.7vw;
+        margin: 2%;
+        text-align: left !important;
+    }
+    
+    .rce-mbox-time {
+        font-size: 2.5vw;
+    }
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) {
+    .messageBoard {
+      width: 95%;
+      height: 100vw;
+    }
+
+    .chatRoomSendButton {
+        height: 7vw;
+    }
+
+    .messageBox {
+        height: 5vh;
+        margin-top: 30%;
+    }
+
+    .rce-mbox {
+        width: 80%;
+    }
+    
+    .rce-mbox-title {
+        font-family: 'gfitfont-bold';
+        font-size: 2.7vw;
+    }
+    
+    .rce-mbox-text {
+        color: black !important;
+        font-size: 2.7vw;
+        margin: 2%;
+        text-align: left !important;
+    }
+    
+    .rce-mbox-time {
+        font-size: 2.5vw;
+    }
+}
+
+/* ----------- iPhone 6, 6S, 7 and 8 ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2) { 
+
+}
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) { 
+    .messageBoard {
+        width: 95%;
+        height: 90vh;
+    }
+
+    .chatRoomSendButton {
+        height: 5vh;
+    }
+
+    .messageBox {
+        height: 5vh;
+        margin-top: 70%;
+    }
+
+    .rce-mbox {
+        width: 80%;
+    }
+    
+    .rce-mbox-title {
+        font-family: 'gfitfont-bold';
+        font-size: 2.7vw;
+    }
+    
+    .rce-mbox-text {
+        color: black !important;
+        font-size: 2.7vw;
+        margin: 2%;
+        text-align: left !important;
+    }
+    
+    .rce-mbox-time {
+        font-size: 2.5vw;
+    }
+    
+
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) { 
+    .messageBoard {
+      width: 95%;
+      height: 100vw;
+    }
+
+    .chatRoomSendButton {
+        height: 7vw;
+    }
+
+    .messageBox {
+        height: 5vh;
+        margin-top: 30%;
+    }
+
+    .rce-mbox {
+        width: 80%;
+    }
+    
+    .rce-mbox-title {
+        font-family: 'gfitfont-bold';
+        font-size: 2.7vw;
+    }
+    
+    .rce-mbox-text {
+        color: black !important;
+        font-size: 2.7vw;
+        margin: 2%;
+        text-align: left !important;
+    }
+    
+    .rce-mbox-time {
+        font-size: 2.5vw;
+    }
+}
+
+
+
+/* ----------- iPhone X ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3) { 
+
+}
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: portrait) { 
+    .messageBoard {
+        width: 95%;
+        height: 70vh;
+    }
+
+    .chatRoomSendButton {
+        height: 5vh;
+    }
+
+    .messageBox {
+        height: 5vh;
+        margin-top: 70%;
+    }
+
+    .rce-mbox {
+        width: 80%;
+    }
+    
+    .rce-mbox-title {
+        font-family: 'gfitfont-bold';
+        font-size: 2.7vw;
+    }
+    
+    .rce-mbox-text {
+        color: black !important;
+        font-size: 2.7vw;
+        margin: 2%;
+        text-align: left !important;
+    }
+    
+    .rce-mbox-time {
+        font-size: 2.5vw;
+    }
+    
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: landscape) { 
+    .messageBoard {
+      width: 95%;
+      height: 100vw;
+    }
+
+    .chatRoomSendButton {
+        height: 7vw;
+    }
+
+    .messageBox {
+        height: 5vh;
+        margin-top: 30%;
+    }
+
+    .rce-mbox {
+        width: 80%;
+    }
+    
+    .rce-mbox-title {
+        font-family: 'gfitfont-bold';
+        font-size: 2.7vw;
+    }
+    
+    .rce-mbox-text {
+        color: black !important;
+        font-size: 2.2vw;
+        margin: 2%;
+        text-align: left !important;
+    }
+    
+    .rce-mbox-time {
+        font-size: 2vw;
+    }
+}
+
+/* ----------- iPhone 6+, 7+ and 8+ ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 3) { 
+
+}
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: portrait) { 
+    .messageBoard {
+        width: 95%;
+        height: 90vh;
+    }
+    
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: landscape) { 
+    .messageBoard {
+      width: 95%;
+      height: 100vw;
+    }
+
+    .chatRoomSendButton {
+        height: 7vw;
+    }
+
+    .messageBox {
+        height: 5vh;
+        margin-top: 30%;
+    }
+
+    .rce-mbox {
+        width: 80%;
+    }
+    
+    .rce-mbox-title {
+        font-family: 'gfitfont-bold';
+        font-size: 2.7vw;
+    }
+    
+    .rce-mbox-text {
+        color: black !important;
+        font-size: 2.7vw;
+        margin: 2%;
+        text-align: left !important;
+    }
+    
+    .rce-mbox-time {
+        font-size: 2.5vw;
+    }
+}
+
+
+
+
+/* ----------- iPads ----------- */
+
+/* ----------- iPad 1, 2, Mini and Air ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+
+}
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+    .messageBoard {
+        width: 95%;
+        height: 120vw;
+    }
+
+    .chatRoomSendButton {
+        height: 5vh;
+    }
+
+    .messageBox {
+        height: 5vh;
+        margin-top: 70%;
+    }
+
+    .rce-mbox {
+        width: 80%;
+    }
+    
+    .rce-mbox-title {
+        font-family: 'gfitfont-bold';
+        font-size: 2.7vw;
+    }
+    
+    .rce-mbox-text {
+        color: black !important;
+        font-size: 2.7vw;
+        margin: 2%;
+        text-align: left !important;
+    }
+    
+    .rce-mbox-time {
+        font-size: 2.5vw;
+    }
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: landscape) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+    .messageBoard {
+      width: 95%;
+      height: 120vw;
+    }
+
+    .chatRoomSendButton {
+        font-size: 3vw;
+        height: 7vw;
+    }
+
+    .messageBox {
+        height: 5vw;
+        margin-top: 30%;
+        font-size: 2.5vw;
+    }
+
+    .rce-mbox {
+        width: 80%;
+    }
+    
+    .rce-mbox-title {
+        font-family: 'gfitfont-bold';
+        font-size: 2.7vw;
+    }
+    
+    .rce-mbox-text {
+        color: black !important;
+        font-size: 2.2vw;
+        margin: 2%;
+        text-align: left !important;
+    }
+    
+    .rce-mbox-time {
+        font-size: 2vw;
+    }
+
+    #messageText {
+      height: 15vw;
+    }
+}
+
+/* ----------- iPad 3, 4 and Pro 9.7" ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+}
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+    .messageBoard {
+      width: 95%;
+      height: 120vw;
+    }
+
+    .chatRoomSendButton {
+        font-size: 3vw;
+        height: 7vw;
+    }
+
+    .messageBox {
+        height: 5vw;
+        margin-top: 30%;
+        font-size: 2.5vw;
+    }
+
+    .rce-mbox {
+        width: 80%;
+    }
+    
+    .rce-mbox-title {
+        font-family: 'gfitfont-bold';
+        font-size: 2.7vw;
+    }
+    
+    .rce-mbox-text {
+        color: black !important;
+        font-size: 2.2vw;
+        margin: 2%;
+        text-align: left !important;
+    }
+    
+    .rce-mbox-time {
+        font-size: 2vw;
+    }
+
+    #messageText {
+      height: 15vw;
+    }
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: landscape) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+}
+
+/* ----------- iPad Pro 10.5" ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 834px) 
+  and (max-device-width: 1112px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+}
+
+/* Portrait */
+/* Declare the same value for min- and max-width to avoid colliding with desktops */
+/* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
+@media only screen 
+  and (min-device-width: 834px) 
+  and (max-device-width: 834px) 
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+}
+
+/* Landscape */
+/* Declare the same value for min- and max-width to avoid colliding with desktops */
+/* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
+@media only screen 
+  and (min-device-width: 1112px) 
+  and (max-device-width: 1112px) 
+  and (orientation: landscape) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+}
+
+/* ----------- iPad Pro 12.9" ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 1024px) 
+  and (max-device-width: 1366px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    
+}
+
+/* Portrait */
+/* Declare the same value for min- and max-width to avoid colliding with desktops */
+/* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
+@media only screen 
+  and (min-device-width: 1024px) 
+  and (max-device-width: 1024px) 
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+    
+}
+
+/* Landscape */
+/* Declare the same value for min- and max-width to avoid colliding with desktops */
+/* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
+@media only screen 
+  and (min-device-width: 1366px) 
+  and (max-device-width: 1366px) 
+  and (orientation: landscape) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+    .messageBoard {
+      width: 95%;
+      height: 100vw;
+    }
+
+    .chatRoomSendButton {
+        font-size: 3vw;
+        height: 7vw;
+    }
+
+    .messageBox {
+        height: 5vw;
+        margin-top: 30%;
+        font-size: 2.5vw;
+    }
+
+    .rce-mbox {
+        width: 80%;
+    }
+    
+    .rce-mbox-title {
+        font-family: 'gfitfont-bold';
+        font-size: 2.7vw;
+    }
+    
+    .rce-mbox-text {
+        color: black !important;
+        font-size: 2.2vw;
+        margin: 2%;
+        text-align: left !important;
+    }
+    
+    .rce-mbox-time {
+        font-size: 2vw;
+    }
+
+    #messageText {
+      height: 15vw;
+    }
+}
+
+/* ----------- LAPTOPS ----------- */
+
+
+/* ----------- Non-Retina Screens ----------- */
+@media screen  
+  and (max-device-width: 699px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+ 
+}
+
+@media screen  
+  and (min-device-width: 700px)
+  and (max-device-width: 1600px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+
+}
+
+@media screen 
+  and (min-device-width: 1600px) 
+  and (max-device-width: 2000px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+
+}
+
+@media screen 
+  and (min-device-width: 2001px) 
+  and (max-device-width: 3000px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+  
+}
+
+@media screen 
+  and (min-device-width: 2001px) 
+  and (max-device-width: 2100px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+    
+    
+}
+@media screen 
+  and (min-device-width: 2101px) 
+  and (max-device-width: 2200px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+   
+    
+}
+@media screen 
+  and (min-device-width: 2201px) 
+  and (max-device-width: 2300px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+   
+}
+@media screen 
+  and (min-device-width: 2301px) 
+  and (max-device-width: 2400px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+    
+}
+@media screen 
+  and (min-device-width: 2401px) 
+  and (max-device-width: 2500px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+    
+    
+}
+@media screen 
+  and (min-device-width: 2501px) 
+  and (max-device-width: 2600px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+
+}
+@media screen 
+  and (min-device-width: 2601px) 
+  and (max-device-width: 2700px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+
+    
+}
+@media screen 
+  and (min-device-width: 2701px) 
+  and (max-device-width: 2800px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+
+    
+}
+@media screen 
+  and (min-device-width: 2801px) 
+  and (max-device-width: 2900px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+ 
+    
+}
+@media screen 
+  and (min-device-width: 2901px) 
+  and (max-device-width: 3000px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+    
+}
+
+/* ----------- Retina Screens ----------- */
+@media screen 
+  and (min-device-width: 700px) 
+  and (max-device-width: 1600px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (min-resolution: 192dpi) { 
+   
+}
+
+@media screen 
+  and (min-device-width: 1600px) 
+  and (max-device-width: 2000px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (min-resolution: 192dpi) { 
+    
+}
+@media screen 
+  and (min-device-width: 2001px) 
+  and (max-device-width: 3000px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (min-resolution: 192dpi) { 
+ 
+}
+
+@media screen 
+  and (min-device-width: 2001px) 
+  and (max-device-width: 2100px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (min-resolution: 192dpi) { 
+    
+    
+}
+@media screen 
+  and (min-device-width: 2101px) 
+  and (max-device-width: 2200px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (min-resolution: 192dpi) { 
+   
+    
+}
+@media screen 
+  and (min-device-width: 2201px) 
+  and (max-device-width: 2300px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (min-resolution: 192dpi) { 
+   
+}
+@media screen 
+  and (min-device-width: 2301px) 
+  and (max-device-width: 2400px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (min-resolution: 192dpi) { 
+    
+}
+@media screen 
+  and (min-device-width: 2401px) 
+  and (max-device-width: 2500px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (min-resolution: 192dpi) { 
+    
+    
+}
+@media screen 
+  and (min-device-width: 2501px) 
+  and (max-device-width: 2600px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (min-resolution: 192dpi) { 
+
+}
+@media screen 
+  and (min-device-width: 2601px) 
+  and (max-device-width: 2700px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (min-resolution: 192dpi) {
+
+    
+}
+@media screen 
+  and (min-device-width: 2701px) 
+  and (max-device-width: 2800px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (min-resolution: 192dpi) { 
+
+    
+}
+@media screen 
+  and (min-device-width: 2801px) 
+  and (max-device-width: 2900px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (min-resolution: 192dpi) { 
+ 
+    
+}
+@media screen 
+  and (min-device-width: 2901px) 
+  and (max-device-width: 3000px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (min-resolution: 192dpi) { 
+    
+}

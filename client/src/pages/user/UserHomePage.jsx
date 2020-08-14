@@ -1,8 +1,12 @@
 import React, { Component } from 'react'
+
+// CSS
+import '../../css/user/user.css'
+import 'react-table/react-table.css'
+
+// COMPONENTS
 import UserBar from '../../components/nav/UserBar'
 import UserNavTabs from './UserNavTabs'
-import '../../css/user.css'
-import 'react-table/react-table.css'
 
 class UserHomePage extends Component {
     constructor(props) {

@@ -8,8 +8,8 @@ import backgroundImg from "../../css/images/GOUVEIA-FITNESS_Mark_White.png";
 
 // CSS
 import '../../../../node_modules/video-react/dist/video-react.css'; // import video-react css
-import '../../css/videoLibrary.css'
-import '../../css/user.css'
+import '../../css/general/videoLibrary.css'
+import '../../css/user/user.css'
 
 // COMPONENTS
 import UserVideoPreferences from './UserVideoPreferences.jsx'
@@ -268,20 +268,8 @@ class UserVideoLibrary extends Component {
                             (this.state.videoLibraryFiltered.length > 0) ? 
                             
                             <div className='videoLibraryDiv'>
-                                {this.state.videoLibraryFiltered.map((video, index) => (
+                              {this.state.videoLibraryFiltered.map((video, index) => (
                                 <div key={video._id} className='videoLibraryCardDiv'>
-                                    {/* <Row className='videoPlayerTitle'>
-                                    <h2 className='videoPlayerTitleLeft'>WORKOUT ONE/</h2><h2 className='videoPlayerTitleRight'>/WORK OUT NAME</h2>
-                                    </Row>
-                                    <Row className='videoPlayerRow'>
-                                    <Player
-                                        playsInline
-                                        poster={backgroundImg}
-                                        src={`video/${video.filename}`}
-                                    > 
-                                        <BigPlayButton position='center' />
-                                    </Player>
-                                    </Row> */}
                                     <Card className="card card-body mb-3 mx-auto videoLibraryCard">
                                         <Player
                                             playsInline

@@ -1,8 +1,11 @@
 import React, { Component } from 'react'
-// import UserBar from '../../components/nav/UserBar'
-import MessageBoard from '../../components/MessageBoard'
-import '../../css/user.css'
+
+// CSS
+import '../../css/user/user.css'
 import 'react-table/react-table.css'
+
+// COMPONENTS
+import MessageBoard from '../../components/general/MessageBoard'
 
 class UserChatPage extends Component {
   

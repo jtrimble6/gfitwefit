@@ -2,16 +2,13 @@ import React, { Component } from 'react'
 import axios from 'axios'
 import { Player, BigPlayButton } from 'video-react';
 import { Card, CardBody, Button, CardTitle, CardText } from 'reactstrap';
-// import Radio from '@material-ui/core/Radio';
-// import RadioGroup from '@material-ui/core/RadioGroup';
-// import FormControlLabel from '@material-ui/core/FormControlLabel';
-// import FormControl from '@material-ui/core/FormControl';
-// import FormLabel from '@material-ui/core/FormLabel';
 import API from '../../utils/API'
+
+// CSS
 import backgroundImg from "../../css/images/GOUVEIA-FITNESS_Mark_White.png";
 import '../../../../node_modules/video-react/dist/video-react.css'; // import video-react css
-import '../../css/videoLibrary.css'
-import '../../css/admin.css'
+import '../../css/general/videoLibrary.css'
+import '../../css/admin/admin.css'
 
 // COMPONENTS
 import AdminVideoPreferences from './AdminVideoPreferences.jsx'
@@ -92,7 +89,7 @@ class AdminVideoLibrary extends Component {
           console.log(this.state.videoLibrary);
         })
       });
-  }
+    }
 
   toggleFilter = (event) => {
     event.preventDefault()
@@ -236,13 +233,13 @@ class AdminVideoLibrary extends Component {
                     
                     <div className="row videoLibraryRow">
                       <div className="col-sm-3 filterColumn">
-                          {/* <Button
+                          <Button
                               id="showHideFilterButton"
                               className="userFilterLibraryButton"
                               onClick={this.toggleFilter}
                           >
                               Show Filters
-                          </Button> */}
+                          </Button>
 
                           {/* FILTER FORM */}
                           <AdminVideoPreferences 
@@ -261,48 +258,34 @@ class AdminVideoLibrary extends Component {
                           (this.state.videoLibraryFiltered.length > 0) ? 
                           
                           <div className='videoLibraryDiv'>
-                              {this.state.videoLibraryFiltered.map((video, index) => (
-                                
-                                // <div key={video.filename} className="card card-body mb-3 videoLibraryCard">
-                                //   <Row className='videoPlayerTitle'>
-                                //     <h2 className='videoPlayerTitleLeft'>WORKOUT ONE/</h2><h2 className='videoPlayerTitleRight'>/WORK OUT NAME</h2>
-                                //   </Row>
-                                //   <Row className='videoPlayerRow'>
-                                //     <Player
-                                //       playsInline
-                                //       poster={backgroundImg}
-                                //       src={`video/${video.filename}`}
-                                //     > 
-                                //       <BigPlayButton position='center' />
-                                //     </Player>
-                                //   </Row>
-                                <div key={video._id} className='videoLibraryCardDiv'>
-                                    <Card className="card card-body mb-3 mx-auto videoLibraryCard">
-                                      <Player
-                                          playsInline
-                                          poster={backgroundImg}
-                                          src={`video/${video.filename}`}
-                                      > 
-                                        <BigPlayButton position='center' />
-                                      </Player>
-                                      <CardBody>
-                                        <CardTitle className='videoLibraryCardTitle'>Video Title</CardTitle>
-                                        <CardText className='videoLibraryCardText'>This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</CardText>
-                                        <CardText>
-                                            <small className="text-muted videoLibraryCardSubtitle">Last updated 3 mins ago</small>
-                                        </CardText>
-                                      </CardBody>
-                                    </Card> 
-                                  <form method="POST" className="videoDeleteForm" action={`/videos/${video._id}?_method=DELETE`}> 
-                                    {/* Delete Video */}
-                                    <input 
-                                      type="submit" 
-                                      value="Delete Video" 
-                                      className='adminDeleteButton delete' 
-                                    />
-                                  </form>
-                                </div> 
-                              ))}
+                            {this.state.videoLibraryFiltered.map((video, index) => (
+                              <div key={video._id} className='videoLibraryCardDiv'>
+                                  <Card className="card card-body mb-3 mx-auto videoLibraryCard">
+                                    <Player
+                                        playsInline
+                                        poster={backgroundImg}
+                                        src={`video/${video.filename}`}
+                                    > 
+                                      <BigPlayButton position='center' />
+                                    </Player>
+                                    <CardBody>
+                                      <CardTitle className='videoLibraryCardTitle'>Video Title</CardTitle>
+                                      <CardText className='videoLibraryCardText'>This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</CardText>
+                                      <CardText>
+                                          <small className="text-muted videoLibraryCardSubtitle">Last updated 3 mins ago</small>
+                                      </CardText>
+                                    </CardBody>
+                                  </Card> 
+                                <form method="POST" className="videoDeleteForm" action={`/videos/${video._id}?_method=DELETE`}> 
+                                  {/* Delete Video */}
+                                  <input 
+                                    type="submit" 
+                                    value="Delete Video" 
+                                    className='adminDeleteButton delete' 
+                                  />
+                                </form>
+                              </div> 
+                            ))}
                           </div>
 
                           : 

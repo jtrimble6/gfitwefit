@@ -9,7 +9,9 @@ import Box from '@material-ui/core/Box';
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import VideocamIcon from '@material-ui/icons/Videocam';
 import ChatIcon from '@material-ui/icons/Chat';
-import '../../css/navTabs.css'
+
+// CSS
+import '../../css/general/navTabs.css'
 
 // USER PAGES
 import UserProfilePage from './UserProfilePage'

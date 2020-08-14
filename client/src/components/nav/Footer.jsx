@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
-// import classnames from "classnames";
-import '../../css/footer.css'
 import { Row, Col } from 'react-bootstrap'
+
+// CSS
+import '../../css/general/footer.css'
 import logo from '../../css/images/GOUVEIA-FITNESS_Mark_White.png';
+
 
 class Footer extends Component {
     constructor(props) {
@@ -49,14 +51,14 @@ class Footer extends Component {
           <div className="footerLanding">
             <Row className='footerRow'>
                 <Col className='footerBrand'>
-                  <Row>
+                  {/* <Row> */}
                     <span className='footerLogoDiv'>
                       <img src={logo} className="footerLogo" alt="logo" />
                     </span>
                     <span className='footerTitleDiv'>
                       <h2 className='footerTitle'>GOUVEIA FITNESS</h2>
                     </span>
-                  </Row>
+                  {/* </Row> */}
                 </Col>
                 <Col className='footerInfo'>
                   <Row className='footerAddress'>

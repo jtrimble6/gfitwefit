@@ -2,8 +2,11 @@ import React, { Component } from 'react'
 // import UserBar from '../../components/nav/UserBar'
 import moment from 'moment'
 import API from '../../utils/API'
-import '../../css/user.css'
 import UserEditProfile from './UserEditProfile.jsx'
+
+// CSS
+import '../../css/user/user.css'
+
 
 const normalizeInput = (value, previousValue) => {
   // console.log('normalizing input')

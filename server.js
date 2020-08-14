@@ -13,6 +13,7 @@ const scheduleRoutes = require("./routes/API/scheduleAPI")
 const userRoutes = require("./routes/API/userAPI");
 const sessionRoutes = require("./routes/API/sessionAPI");
 const contactRoutes = require('./routes/API/contactAPI')
+const userSignUpRoutes = require('./routes/API/userSignUpAPI')
 const convergePayRoutes = require('./routes/API/convergePayAPI')
 const messageBoardRoutes = require('./routes/API/messageBoardAPI')
 const passwordResetRoutes = require('./routes/API/passwordResetAPI')
@@ -49,6 +50,7 @@ app.use(
   sessionRoutes, 
   scheduleRoutes, 
   contactRoutes, 
+  userSignUpRoutes,
   convergePayRoutes,
   messageBoardRoutes, 
   passwordResetRoutes
@@ -138,14 +140,15 @@ const upload = multer({ storage });
 // @route POST /upload
 // @desc Uploads file to DB
 
-app.post('/upload/:equipmentNeeded/:fitnessLevel/:workoutCategory', upload.single('file'), (req, res) => {
+app.post('/upload/:equipmentNeeded/:fitnessLevel/:workoutCategory/:sampleVideo', upload.single('file'), (req, res) => {
   // res.json({file: req.file})
   gfs.files.update({'filename': req.file.filename}, 
   {'$set': 
     {
       'equipmentNeeded': req.params.equipmentNeeded,
       'fitnessLevel': req.params.fitnessLevel,
-      'workoutCategory': req.params.workoutCategory
+      'workoutCategory': req.params.workoutCategory,
+      'sampleVideo': req.params.sampleVideo
     },
   })
   res.redirect('/adminHome')
@@ -164,6 +167,28 @@ app.get('/videos', (req, res) => {
     } else {
       files.map(file => {
         if(file.contentType === 'video/mov') {
+          file.isVideo === true
+        } else {
+          file.isVideo === false
+        }
+      })
+    }
+
+    // Files exist
+    return res.json(files)
+  })
+})
+
+app.get('/sampleVideos', (req, res) => {
+  gfs.files.find().toArray((err, files) => {
+    // Check if files exist
+    if(!files || files.length === 0) {
+      return res.status(404).json({
+        err: 'No videos exist'
+      })
+    } else {
+      files.map(file => {
+        if(file.contentType === 'video/mov' && file.sampleVideo === true) {
           file.isVideo === true
         } else {
           file.isVideo === false

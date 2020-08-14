@@ -1,6 +1,9 @@
 import React, { Component } from 'react'
-import { Button } from 'react-bootstrap'
-import '../../css/admin.css'
+import $ from 'jquery'
+import { Button, FormCheck } from 'react-bootstrap'
+
+// CSS
+import '../../css/admin/admin.css'
 
 
 class AdminVideoUploader extends Component {
@@ -9,18 +12,20 @@ class AdminVideoUploader extends Component {
         this.state = {
           equipmentNeeded: '',
           fitnessLevel: '',
-          workoutCategory: ''
+          workoutCategory: '',
+          sampleVideo: false
           }
 
         this.handleInputChange = this.handleInputChange.bind(this)
         this.handleSubmit = this.handleSubmit.bind(this)
-  
+        this.handleFileSelection = this.handleFileSelection.bind(this)
+        this.checkSampleVideo = this.checkSampleVideo.bind(this)
     }
 
     
 
     componentDidMount() {
-
+      document.getElementById('fileUploadName').innerHTML = 'Choose File'
       }
 
     handleInputChange = event => {
@@ -31,25 +36,55 @@ class AdminVideoUploader extends Component {
       }
         
     handleSubmit = event => {
+        event.preventDefault()
+        console.log("Equipment needed: ", this.state.equipmentNeeded)
+        console.log("Fitness level: ", this.state.fitnessLevel)
+        console.log("Workout category: ", this.state.workoutCategory)
+      }
+
+    handleFileSelection = event => {
       event.preventDefault()
-      console.log("Equipment needed: ", this.state.equipmentNeeded)
-      console.log("Fitness level: ", this.state.fitnessLevel)
-      console.log("Workout category: ", this.state.workoutCategory)
-    }
+      console.log('HANDLING FILE SELECTION')
+      let filename = event.target.files[0].name
+      console.log('FILENAME: ', filename)
+      document.getElementById('fileUploadName').innerHTML = filename
+      }
+
+    checkSampleVideo = () => {
+      if (this.state.sampleVideo) {
+          this.setState({
+              sampleVideo: false
+          }, () => {
+              console.log('SAMPLE VIDEO? ', this.state.sampleVideo)
+          })
+          
+      } else {
+          this.setState({
+              sampleVideo: true,
+          }, () => {
+              console.log('SAMPLE VIDEO? ', this.state.sampleVideo)
+          })
+          
+      }
+      
+      }
 
     render() {
         return (
           <div id="videoUploadPage">
             <div className="row videoUploadFormRow">
               <div className="videoUploadFormContainer">    
-                <h2 className="videoUploadForm-heading">Video Uploader</h2>
-                  <form className="videoUploadForm" action={`/upload/${this.state.equipmentNeeded}/${this.state.fitnessLevel}/${this.state.workoutCategory}`} method="POST" encType="multipart/form-data">
+                <h2 className="adminVideoUploadFormHeading">Video Uploader</h2>
+                  <form className="videoUploadForm" action={`/upload/${this.state.equipmentNeeded}/${this.state.fitnessLevel}/${this.state.workoutCategory}/${this.state.sampleVideo}`} method="POST" encType="multipart/form-data">
                     <div className="videoUploadFormSelectors custom-file mb-3">
 
                       {/* SELECT FILE */}
                       {/* <label className='fileSelectionLabel' htmlFor="fileSelection">File Selection</label> */}
-                      <input type="file" name="file" id="file" className="custom-file-input"/>
-                      <label htmlFor='file' className='custom-file-label'>Choose File</label>
+                      <div className="fileUploadSelection">
+                        <input type="file" name="file" id="file" className="custom-file-input" onChange={this.handleFileSelection}/>
+                        <label htmlFor='file' id='fileUploadName' className='custom-file-label'>Choose File</label>
+                      </div>
+                      
                     
                       {/* EQUIPMENT REQUIREMENTS */}
                       <label className='equipmentNeededLabel' htmlFor="equipmentNeeded">Equipment Needed</label>
@@ -99,6 +134,15 @@ class AdminVideoUploader extends Component {
                         <option value='abs#stretch'>Abs/stretch</option>
                       </select>
 
+                      {/* SAMPLE VIDEO CHECKBOX */}
+                      <FormCheck
+                        // isInvalid
+                        type="checkbox" 
+                        label="Try It Out Video?" 
+                        className="sampleVideo"
+                        onClick={this.checkSampleVideo}
+                      />
+
                     </div>
                     
                     {/* Upload Video */}
@@ -119,11 +163,6 @@ class AdminVideoUploader extends Component {
                     </Button>
               </div>
             </div>
-            {/* <h2 className="videoUploadForm-heading">Current Schedule</h2>
-            <div className="row videoUploadRow">
-              
-            </div>
-         */}
           </div>
         )
     };

@@ -1,10 +1,8 @@
 import React, { Component } from 'react'
-import '../../css/signup.css'
-// import ExistingAccount from "../../alerts/ExistingAccount";
-// import PasswordError from '../../alerts/PasswordError';
 import { Form, Col } from 'react-bootstrap'
 
-
+// CSS
+import '../../css/general/signup.css'
 
 class SignUpUserFitnessInfo extends Component {
 

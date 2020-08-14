@@ -2,7 +2,11 @@ import React, { Component } from 'react'
 import { Redirect } from 'react-router-dom'
 import API from '../../utils/API'
 // import Navbar from '../../nav/Navbar'
-import '../../css/signup.css'
+
+// CSS
+import '../../css/general/signup.css'
+
+// COMPONENTS
 import ExistingAccount from "../../components/alerts/ExistingAccount";
 import PasswordError from '../../components/alerts/PasswordError';
 import AdminSignUpSuccess from '../../components/alerts/AdminSignUpSuccess'
@@ -185,77 +189,77 @@ class AdminSignUp extends Component {
               {/* {this.renderRedirect()} */}
                 <div className="formContainer">    
                   <form className="formSignup" action="index.html">
-                    <h2 className="formSignup-heading">Admin Sign Up</h2>
+                    <h2 className="adminSignUpFormHeading">Admin Sign Up</h2>
                       <div className="signupWrap">
                         <div className="form-group">
-                            <label htmlFor="firstName">First Name</label>
-                                <input 
+                            <label className='adminSignUpFormLabel' htmlFor="firstName">First Name</label>
+                            <input 
                                 value={this.state.firstName}
                                 name="firstName"
                                 onChange={this.handleInputChange}
                                 type="text"
-                                className="form-control"
+                                className="form-control adminSignUpFormEntry"
                                 id="firstName"
                                 placeholder="First name"
                             />
                         </div>
                         <div className="form-group">
-                            <label htmlFor="lastName">Last Name</label>
-                                <input
-                                    value={this.state.lastName}
-                                    name="lastName"
-                                    onChange={this.handleInputChange}
-                                    type="text"
-                                    className="form-control"
-                                    id="lastName"
-                                    placeholder="Last name"                                        
-                                />
+                            <label className='adminSignUpFormLabel' htmlFor="lastName">Last Name</label>
+                            <input
+                                value={this.state.lastName}
+                                name="lastName"
+                                onChange={this.handleInputChange}
+                                type="text"
+                                className="form-control adminSignUpFormEntry"
+                                id="lastName"
+                                placeholder="Last name"                                        
+                            />
                         </div>
                         <div className="form-group">
-                            <label htmlFor="email">Email</label>
-                                <input
-                                    value={this.state.email}
-                                    name="email"
-                                    onChange={this.handleInputChange}
-                                    type="text"
-                                    className="form-control"
-                                    id="email"
-                                    placeholder="Email"                                        
-                                />
+                            <label className='adminSignUpFormLabel' htmlFor="email">Email</label>
+                            <input
+                                value={this.state.email}
+                                name="email"
+                                onChange={this.handleInputChange}
+                                type="text"
+                                className="form-control adminSignUpFormEntry"
+                                id="email"
+                                placeholder="Email"                                        
+                            />
                         </div>
                         <div className="form-group">
-                            <label htmlFor="username">Username</label>
+                            <label className='adminSignUpFormLabel' htmlFor="username">Username</label>
                             <input
                                 value={this.state.username}
                                 name="username"
                                 onChange={this.checkUserName}
                                 type="text"
-                                className="form-control"
+                                className="form-control adminSignUpFormEntry"
                                 id="username"
                                 placeholder="Username"                                        
                             />
                             <small id="usernameError" className="form-text text-muted">{this.state.nameTaken}</small>
                         </div>
                         <div className="form-group">
-                            <label htmlFor="exampleInputPassword1">Create Password</label>
+                            <label className='adminSignUpFormLabel' htmlFor="exampleInputPassword1">Create Password</label>
                             <input
                                 value={this.state.password}
                                 name="password"
                                 onChange={this.handleInputChange}
                                 type="password"
-                                className="form-control"
+                                className="form-control adminSignUpFormEntry"
                                 id="password"
                                 placeholder="Password"
                             />
                         </div>
                         <div className="form-group">
-                            <label htmlFor="exampleInputPassword1">Confirm Password</label>
+                            <label className='adminSignUpFormLabel' htmlFor="exampleInputPassword1">Confirm Password</label>
                             <input
                                 value={this.state.confirmPassword}
                                 name="confirmPassword"
                                 onChange={this.checkPassword}
                                 type="password"
-                                className="form-control"
+                                className="form-control adminSignUpFormEntry"
                                 id="confirmPassword"
                                 placeholder="Confirm Password"
                             />

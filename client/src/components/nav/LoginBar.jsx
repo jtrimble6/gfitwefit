@@ -5,7 +5,9 @@ import { NavLink } from 'reactstrap';
 import { slide as Menu } from 'react-burger-menu'
 import classnames from "classnames";
 import logo from '../../css/images/GOUVEIA-FITNESS_Mark_Black.png';
-import '../../css/navbar.css'
+
+// CSS
+import '../../css/general/navbar.css'
 
 class LoginBar extends Component {
     constructor(props) {
@@ -45,7 +47,7 @@ class LoginBar extends Component {
                   className='burgerMenu'
                   // noOverlay
                   // customBurgerIcon={ bars }
-                  // customCrossIcon={ <img src={require("../../css/images/cross.png")} alt='close' /> } 
+                  customCrossIcon={ <img src={require("../../css/images/cross.png")} alt='close' /> } 
                 >
                   <NavLink
                     activeclass="active"

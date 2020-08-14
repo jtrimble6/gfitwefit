@@ -1,7 +1,9 @@
 import React, { Component } from 'react'
 import API from '../../utils/API'
 import ReactTable from "react-table";
-import '../../css/admin.css'
+
+//CSS
+import '../../css/admin/admin.css'
 import 'react-table/react-table.css'
 
 class AdminScheduleEditor extends Component {
@@ -18,13 +20,15 @@ class AdminScheduleEditor extends Component {
             confirmPassword: '',
             redirect: false,
             nameTaken: false,
-            passwordError: false
+            passwordError: false,
+            currentScheduleShowing: false
           }
 
         this.getSchedule = this.getSchedule.bind(this)
         this.handleFormSubmit = this.handleFormSubmit.bind(this)
         this.handleInputChange = this.handleInputChange.bind(this)
         this.orderSchedule = this.orderSchedule.bind(this)
+        this.handleCurrentScheduleShowHide = this.handleCurrentScheduleShowHide.bind(this)
     }
 
     
@@ -57,7 +61,7 @@ class AdminScheduleEditor extends Component {
               // console.log('THE CURRENT SCHEDULE: ',  this.state.currentSchedule)
           })
           .catch(err => console.log(err))
-    }
+      }  
 
     orderSchedule = () => {
         let schedule = this.state.currentSchedule
@@ -109,7 +113,7 @@ class AdminScheduleEditor extends Component {
         this.setState({
             sortedSchedule: sortedSchedule
         })
-    }
+      }
 
     handleInputChange = event => {
         const { name, value } = event.target
@@ -184,6 +188,26 @@ class AdminScheduleEditor extends Component {
         
       }
         
+    handleCurrentScheduleShowHide = (event) => {
+        event.preventDefault()
+        let currentScheduleShowing = this.state.currentScheduleShowing
+        if (currentScheduleShowing) {
+            // console.log('HIDING FILTER')
+            document.getElementById('scheduleRow').style.display = 'none'    
+            document.getElementById('adminShowHideCurrentScheduleButton').innerHTML = 'Show Current Schedule'     
+            this.setState({
+              currentScheduleShowing: false
+            })
+        } else {
+            // console.log('SHOWING FILTER')
+            document.getElementById('scheduleRow').style.display = 'block'   
+            document.getElementById('adminShowHideCurrentScheduleButton').innerHTML = 'Hide Current Schedule' 
+            this.setState({
+              currentScheduleShowing: true
+            })
+        }
+            
+      }
 
     render() {
       const schedule = this.state.sortedSchedule
@@ -211,7 +235,7 @@ class AdminScheduleEditor extends Component {
             <div className="row scheduleFormRow">
               <div className="scheduleFormContainer">    
                   <form className="scheduleForm" action="index.html">
-                    <h2 className="scheduleForm-heading">Adjust Schedule</h2>
+                    <h2 className="adminScheduleFormHeading">Adjust Schedule</h2>
                       <div className="scheduleFormSelectors">
                         <div className="form-group">
                             <label htmlFor="dayOfWeek">Day</label>
@@ -272,14 +296,22 @@ class AdminScheduleEditor extends Component {
                           className="adminSubmitButton"
                           onClick={this.handleFormSubmit}
                         >
-                        Change Schedule
+                          Change Schedule
+                        </button> <br />
+                        <button
+                          type="submit"
+                          id="adminShowHideCurrentScheduleButton"
+                          className="adminShowHideCurrentScheduleButton"
+                          onClick={this.handleCurrentScheduleShowHide}
+                        >
+                          Show Current Schedule
                         </button>
                         </div>
                     </form>
                 </div>
             </div>
-            <h2 className="scheduleForm-heading">Current Schedule</h2>
-            <div className="row scheduleRow">
+            <div id="scheduleRow" className="row scheduleRow">
+              <h2 className="adminScheduleFormHeading">Current Schedule</h2>
               <ReactTable
                 // filterable
                 // defaultFilterMethod={(filter, row) =>

@@ -1,0 +1,59 @@
+@font-face {
+    font-family: 'gfitfont';
+    font-style: normal;
+    font-weight: bolder;
+    src: local('gfitfont'), url('../fonts/gfitfont.ttf'), url('../fonts/gfitfont.woff'), format('truetype');
+  }
+@font-face {
+    font-family: 'gfitfont-bold';
+    font-style: normal;
+    font-weight: bolder;
+    src: local('gfitfontBold'), url('../fonts/gfitfontBold.ttf'), url('../fonts/gfitfontBold.woff') format('truetype');
+  }
+
+#loginPage {
+    font-family: 'gfitfont-bold';
+}
+
+.loginInfoHeader {
+    color: white;
+    background-color: black;
+    border-radius: 3%;
+}
+
+.formLoginHeading {
+    background-color: black;
+    border-radius: 3%;
+}
+
+.loginInfoDetails {
+    text-align: left;
+    color: white;
+}
+
+.loginInfoColumn {
+    border-right: 4px solid white;
+}
+
+.loginInfoHeader {
+    text-align: center;
+}
+
+.membershipDetailsTitle {
+    text-align: center;
+}
+
+.userSignUpLink {
+    color: black;
+    text-decoration: underline;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.passwordResetLink {
+    margin-top: 1vw !important;
+}
+
+.passwordResetLink a {
+    color: white !important;
+}

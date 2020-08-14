@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
-import '../../css/admin.css'
+
+// CSS
+import '../../css/admin/admin.css'
 
 class Logout extends Component {
   constructor(props) {

@@ -12,12 +12,16 @@ import ScheduleIcon from '@material-ui/icons/Schedule';
 import VideocamIcon from '@material-ui/icons/Videocam';
 import PersonAddIcon from '@material-ui/icons/PersonAdd';
 import ChatIcon from '@material-ui/icons/Chat';
+import PeopleIcon from '@material-ui/icons/People';
 
 // ADMIN PAGES
 import AdminScheduleEditor from './AdminScheduleEditor';
 import AdminVideoUploader from './AdminVideoUploader';
 import AdminSignUp from './AdminSignUp';
-import MessageBoard from '../../components/MessageBoard';
+import AdminEditUsers from './AdminEditUsers'
+
+// COMPONENTS
+import MessageBoard from '../../components/general/MessageBoard';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -92,6 +96,7 @@ export default function NavTabs() {
           <LinkTab icon={<VideocamIcon />} {...a11yProps(1)} />
           <LinkTab icon={<PersonAddIcon />} {...a11yProps(2)} />
           <LinkTab icon={<ChatIcon />} {...a11yProps(3)} />
+          <LinkTab icon={<PeopleIcon />} {...a11yProps(4)} />
         </Tabs>
       </AppBar>
       <TabPanel value={value} index={0}>
@@ -105,6 +110,9 @@ export default function NavTabs() {
       </TabPanel>
       <TabPanel value={value} index={3}>
         <MessageBoard />
+      </TabPanel>
+      <TabPanel value={value} index={4}>
+        <AdminEditUsers />
       </TabPanel>
     </div>
   );

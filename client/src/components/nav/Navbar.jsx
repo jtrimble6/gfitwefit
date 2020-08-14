@@ -4,7 +4,9 @@ import { NavLink } from 'reactstrap';
 import { Link } from "react-scroll";
 import { stack as Menu } from 'react-burger-menu'
 import classnames from "classnames";
-import '../../css/navbar.css'
+
+// CSS
+import '../../css/general/navbar.css'
 import logo from '../../css/images/GOUVEIA-FITNESS_Mark_Black.png';
 
 class Navbar extends Component {
