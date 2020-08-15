@@ -17,7 +17,7 @@ class BioInfo extends Component {
                 </Row>
                 <Row className='bioInfoRow'>
                     
-                    <Col sm={6}>
+                    <Col sm={12} xl={6}>
                         <Row className='bioInfoHeaderRow'>
                             <h2 className='bioInfoHeaderLeft'>BIO/</h2> <h2 className='bioInfoHeaderRight'>/MEET THE STAFF</h2> 
                         </Row>
@@ -30,7 +30,7 @@ class BioInfo extends Component {
                             </p>
                         </Row>
                     </Col>
-                    <Col sm={6}>
+                    <Col sm={0} xl={6}>
                         
                     </Col>
                 </Row>

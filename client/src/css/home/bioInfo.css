@@ -356,63 +356,58 @@ and (min-resolution: 192dpi) {
   and (-webkit-min-device-pixel-ratio: 2)
   and (orientation: portrait) {
     .bioInfo {
-        height: 475px;
-        padding-top: 10%;
+      height: 100%;
+    }
+  
+    .bioInfoRow {
+      position: relative;
+      top: -25vw;
+      margin-top: 1vw;
+      /* overflow: hidden; */
+    }
+  
+    .bioInfoImgRow {
+      position: relative;
+      top: -35vw;
+      width: 100% !important;
+      margin: 0 auto !important; 
     }
     
+    .bioInfoSection {
+      width: 100%;
+      margin: 0 auto;
+      margin-bottom: 0;
+      margin-top: 70vw;
+      padding: 10%;
+      padding-bottom: 10%;
+      background-color: #FAC04E;
+      height: 100%;
+    }
+    .trainerBioCircleImg {
+      position: relative;
+      width: 50vw;
+      height: 50vw;
+      border-radius: 50%;
+      margin: 0 auto;
+    }
+    .trainerBioCircleImg img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
     .bioInfoHeaderLeft {
-        font-size: 5vw;
-        letter-spacing: 3px;
-        color: white;
-        font-weight: bolder; 
+      font-size: 1.1rem;
     }
-    
     .bioInfoHeaderRight {
-        font-size: 5vw;
-        letter-spacing: 3px;
-        /* color: #FAC04E; */
-        font-weight: bolder; 
+      font-size: 1.1rem; 
     }
-    
+    .bioInfoName {
+      font-size: 1.3rem; 
+    }
     .bioInfoBodyRow {
-        font-size: 2.8vw;
-        line-height: 1.5;
-        color: white;
-        margin-top: 5%;
-        margin-bottom: 10%;
+      font-size: 1rem;
     }
     
-    .bioMembershipHeaderLeftMain {
-        font-size: 4.5vw;
-        letter-spacing: 3px;
-        color: white;
-        font-weight: bolder; 
-    }
-    
-    .bioMembershipHeaderLeft {
-        font-size: 3.3vw;
-        letter-spacing: 3px;
-        color: white;
-        font-weight: bolder; 
-    }
-    
-    .bioMembershipHeaderRight {
-        font-size: 3.3vw;
-        letter-spacing: 3px;
-        color: #FAC04E;
-        font-weight: bolder; 
-    }
-    
-    .bioMembershipLeftColumn {
-        border-right: none;
-        margin-right: 5%;
-        padding-right: 5%;
-    }
-    
-    .bioMembershipBodyRow {
-        font-size: 2.8vw;
-        color: white;
-    }
 }
 
 /* Landscape */
@@ -440,48 +435,7 @@ and (min-resolution: 192dpi) {
   and (max-device-width: 667px) 
   and (-webkit-min-device-pixel-ratio: 2)
   and (orientation: portrait) { 
-      .bioInfo {
-          height: 575px;
-          background-color: #FAC04E;
-      }
-  
-      .bioInfoRow {
-          margin-top: 40vw;
-      }
-  
-      .bioInfoImgRow {
-          position: absolute;
-          top: 60vw;
-          width: 100% !important;
-          margin: 0 auto !important; 
-      }
       
-      .bioInfoSection {
-          width: 95%;
-          margin: 0 auto;
-          margin-bottom: 10%;
-          padding: 5%;
-          background-color: transparent;
-      }
-  
-      .trainerBioCircleImg {
-          position: relative;
-          width: 70vw;
-          height: 70vw;
-          overflow: hidden;
-          border-radius: 50%;
-          margin: 0 auto;
-      }
-  
-      .trainerBioCircleImg img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-      }
-
-      .bioInfoBodyRow {
-          font-size: 4vw;
-      }
 }
 
 /* Landscape */
@@ -510,63 +464,7 @@ and (min-resolution: 192dpi) {
   and (max-device-width: 812px) 
   and (-webkit-min-device-pixel-ratio: 3)
   and (orientation: portrait) { 
-    .bioInfo {
-        height: 575px;
-
-    }
     
-    .bioInfoHeaderLeft {
-        font-size: 5vw;
-        letter-spacing: 3px;
-        color: white;
-        font-weight: bolder; 
-    }
-    
-    .bioInfoHeaderRight {
-        font-size: 5vw;
-        letter-spacing: 3px;
-        font-weight: bolder; 
-    }
-    
-    .bioInfoBodyRow {
-        font-size: 2.8vw;
-        line-height: 1.5;
-        color: white;
-        margin-top: 5%;
-        margin-bottom: 10%;
-    }
-    
-    .bioMembershipHeaderLeftMain {
-        font-size: 4.5vw;
-        letter-spacing: 3px;
-        color: white;
-        font-weight: bolder; 
-    }
-    
-    .bioMembershipHeaderLeft {
-        font-size: 3.3vw;
-        letter-spacing: 3px;
-        color: white;
-        font-weight: bolder; 
-    }
-    
-    .bioMembershipHeaderRight {
-        font-size: 3.3vw;
-        letter-spacing: 3px;
-        color: #FAC04E;
-        font-weight: bolder; 
-    }
-    
-    .bioMembershipLeftColumn {
-        border-right: none;
-        margin-right: 5%;
-        padding-right: 5%;
-    }
-    
-    .bioMembershipBodyRow {
-        font-size: 2.8vw;
-        color: white;
-    }
 }
 
 /* Landscape */
@@ -594,9 +492,7 @@ and (min-resolution: 192dpi) {
   and (max-device-width: 736px) 
   and (-webkit-min-device-pixel-ratio: 3)
   and (orientation: portrait) { 
-    .bioInfo {
-        height: 650px;
-    }
+  
 }
 
 /* Landscape */
@@ -630,7 +526,61 @@ and (min-resolution: 192dpi) {
   and (max-device-width: 1024px) 
   and (orientation: portrait) 
   and (-webkit-min-device-pixel-ratio: 1) {
+    .bioInfo {
+      height: 100%;
+    }
+  
+    .bioInfoRow {
+      position: relative;
+      top: -25vw;
+      margin-top: 1vw;
+      /* overflow: hidden; */
+    }
+  
+    .bioInfoImgRow {
+      position: relative;
+      top: -35vw;
+      width: 100% !important;
+      margin: 0 auto !important; 
+    }
     
+    .bioInfoSection {
+      width: 100%;
+      margin: 0 auto;
+      margin-bottom: 0;
+      margin-top: 70vw;
+      padding: 10%;
+      padding-bottom: 10%;
+      background-color: #FAC04E;
+      height: 100%;
+    }
+    .trainerBioCircleImg {
+      position: relative;
+      width: 50vw;
+      height: 50vw;
+      border-radius: 50%;
+      margin: 0 auto;
+    }
+    .trainerBioCircleImg img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .bioInfoHeaderRow {
+      white-space: nowrap;
+    }
+    .bioInfoHeaderLeft {
+      font-size: 2rem;
+    }
+    .bioInfoHeaderRight {
+      font-size: 2rem; 
+    }
+    .bioInfoName {
+      font-size: 1.8rem; 
+    }
+    .bioInfoBodyRow {
+      font-size: 1.5rem;
+    }
 }
 
 /* Landscape */
@@ -658,56 +608,8 @@ and (min-resolution: 192dpi) {
   and (max-device-width: 1024px) 
   and (orientation: portrait) 
   and (-webkit-min-device-pixel-ratio: 2) {
-    .bioInfo {
-        height: 875px;
-
-    }
-    
-    .bioInfoHeaderLeft {
-        font-size: 3.2vw;
-        letter-spacing: 1px;
-        color: white;
-        font-weight: bolder; 
-    }
-    
     .bioInfoBodyRow {
-        font-size: 2vw;
-        line-height: 1.5;
-        color: white;
-        margin-top: 5%;
-        margin-bottom: 10%;
-    }
-    
-    .bioMembershipHeaderLeftMain {
-        font-size: 3.2vw;
-        letter-spacing: 1px;
-        color: white;
-        font-weight: bolder; 
-    }
-    
-    .bioMembershipHeaderLeft {
-        font-size: 2.2vw;
-        letter-spacing: 0px;
-        color: white;
-        font-weight: bolder; 
-    }
-    
-    .bioMembershipHeaderRight {
-        font-size: 2.2vw;
-        letter-spacing: 0px;
-        color: #FAC04E;
-        font-weight: bolder; 
-    }
-    
-    .bioMembershipLeftColumn {
-        border-right: none;
-        margin-right: 5%;
-        padding-right: 5%;
-    }
-    
-    .bioMembershipBodyRow {
-        font-size: 2vw;
-        color: white;
+      font-size: 2rem;
     }
     
 }
@@ -771,62 +673,7 @@ and (min-resolution: 192dpi) {
   and (max-device-width: 1024px) 
   and (orientation: portrait) 
   and (-webkit-min-device-pixel-ratio: 2) {
-    .bioInfo {
-        height: 1324px;
-
-    }
     
-    .bioInfoHeaderLeft {
-        font-size: 3.2vw;
-        letter-spacing: 1px;
-        color: white;
-        font-weight: bolder; 
-    }
-    
-    .bioInfoHeaderRight {
-        font-size: 3.2vw;
-        letter-spacing: 1px;
-    }
-    
-    .bioInfoBodyRow {
-        font-size: 2vw;
-        line-height: 1.5;
-        color: white;
-        margin-top: 5%;
-        margin-bottom: 10%;
-    }
-    
-    .bioMembershipHeaderLeftMain {
-        font-size: 3.2vw;
-        letter-spacing: 1px;
-        color: white;
-        font-weight: bolder; 
-    }
-    
-    .bioMembershipHeaderLeft {
-        font-size: 2.2vw;
-        letter-spacing: 0px;
-        color: white;
-        font-weight: bolder; 
-    }
-    
-    .bioMembershipHeaderRight {
-        font-size: 2.2vw;
-        letter-spacing: 0px;
-        color: #FAC04E;
-        font-weight: bolder; 
-    }
-    
-    .bioMembershipLeftColumn {
-        border-right: none;
-        margin-right: 5%;
-        padding-right: 5%;
-    }
-    
-    .bioMembershipBodyRow {
-        font-size: 2vw;
-        color: white;
-    }
 }
 
 /* Landscape */
