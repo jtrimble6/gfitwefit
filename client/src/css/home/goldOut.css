@@ -115,7 +115,7 @@
 
 /* ----------- Non-Retina Screens ----------- */
 @media screen 
-  and (min-device-width: 1000px) 
+  and (min-device-width: 800px) 
   and (max-device-width: 2000px) 
   and (-webkit-min-device-pixel-ratio: 1) { 
     .gjyOHz {
@@ -154,9 +154,9 @@
     }
     
     .goldOutRow1 {
-        font-size: 2vw;
-        margin-top: 2%;
-        text-align: left;
+      font-size: 1rem;
+      margin-top: 2%;
+      text-align: left;
     }
     
     .goldOutRow2 {
@@ -167,12 +167,17 @@
     }
     
     .goldOutCardText {
-      font-size: 2vw;
-      line-height: 2.5vw;
+      font-size: 1.3rem;
+      line-height: 2.3rem;
+    }
+
+    .goldOutCardTitle {
+      font-size: 1.2rem;
     }
     
     .goldOutCardSubTitle {
       font-weight: bold;
+      font-size: 1rem;
     }
 }
 
@@ -221,7 +226,7 @@
         height: 700px;
     }
     .goldOutCardText {
-      font-size: 1.1vw;
+      font-size: 1.5rem;
       line-height: 1.8vw;
     }
     .goldOutCardTitle {
@@ -354,6 +359,10 @@
         font-size: 1.1vw;
     }
 }
+
+
+
+
 
 /* ----------- iPads ----------- */
 

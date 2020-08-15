@@ -28,7 +28,7 @@ class TryItOutPage extends Component {
         axios.get('/sampleVideos').then(res => {
             let files = res.data
             let videoLibrary = files.filter(file => {
-                return file.contentType === 'video/quicktime' && file.sampleVideo === true
+              return file.contentType === 'video/quicktime' && file.sampleVideo === "true"
             })
             this.setState({
                 videoLibrary: videoLibrary,
@@ -41,14 +41,20 @@ class TryItOutPage extends Component {
 
     render() {                                                                  
         return (
-            <div>
+          <div className='appPageMainDiv'>
+              <div className="navbarDiv">
                 <NavbarSecondaryPage />
+              </div>
+              <div className="contentsDiv">
                 <TryItOutLanding />
                 <TryItOutInfo 
                     videoLibraryFiltered={this.state.videoLibraryFiltered}
                 />
+              </div>
+              <div className="footerDiv">
                 <Footer />
-            </div>
+              </div>
+          </div>
         )
     }
 }

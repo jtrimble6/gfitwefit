@@ -13,8 +13,8 @@ class Navbar extends Component {
     constructor(props) {
         super(props);
 
-        this.toggleNavbar = this.toggleNavbar.bind(this);
-        this.handleScroll = this.handleScroll.bind(this);
+        this.toggleNavbar = this.toggleNavbar.bind(this)
+        this.handleScroll = this.handleScroll.bind(this)
 
         this.state = {
           collapsed: true,
@@ -24,12 +24,12 @@ class Navbar extends Component {
     }
 
     componentDidMount() {
-      window.addEventListener("scroll", this.handleScroll);
-    }
+        window.addEventListener("scroll", this.handleScroll);
+      }
     
     componentWillUnmount() {
-      window.removeEventListener("scroll", this.handleScroll);
-    }
+        window.removeEventListener("scroll", this.handleScroll);
+      }
 
     handleScroll = () => {
       const { prevScrollPos } = this.state;
@@ -41,7 +41,7 @@ class Navbar extends Component {
         prevScrollPos: currentScrollPos,
         visible
       });
-    };
+      }
 
     toggleNavbar() {
         this.setState({
@@ -54,8 +54,9 @@ class Navbar extends Component {
         }
         
       }
+    
 
-    render() {                                                          
+    render() {                                                       
         return (
             <nav 
               className={classnames("navbar navbar-expand-lg navbar fixed-top", {"navbar--hidden": !this.state.visible})} 

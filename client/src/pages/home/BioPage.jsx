@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 // COMPONENTS
 import NavbarSecondaryPage from '../../components/nav/NavbarSecondaryPage'
 import Footer from '../../components/nav/Footer'
-import BioLanding from '../../components/home/BioLanding'
+// import BioLanding from '../../components/home/BioLanding'
 import BioInfo from '../../components/home/BioInfo'
 
 // CSS
@@ -16,6 +16,7 @@ class BioPage extends Component {
     constructor(props) {
         super(props)
         this.state = {
+            trainerName: '',
             trainerImg: '',
             trainerBio: 'This is where the trainer bio will appear. Fitness bio can be confusing, that’s why we have simplified our bio down to make it easy to understand. But the financial cost of your fitness goals are only half of the real cost. Time and commitment are possibly the most expensive part of your journey. But we promise that if you stick with it, you’ll thank yourself later.'
         }
@@ -35,22 +36,26 @@ class BioPage extends Component {
         switch(trainer) {
             case 'walt':
                 this.setState({
-                    trainerImg: walt
+                  trainerImg: walt,
+                  trainerName: 'Walt Gouveia'
                 });
                 break;
             case 'kyle':
                 this.setState({
-                    trainerImg: kyle
+                  trainerImg: kyle,
+                  trainerName: 'Kyle Gouveia'
                 });
                 break;
             case 'jenn':
                 this.setState({
-                    trainerImg: jenn
+                  trainerImg: jenn,
+                  trainerName: 'Jennifer Coleman'
                 })
                 break;
             case 'jacob':
                 this.setState({
-                    trainerImg: jacob
+                  trainerImg: jacob,
+                  trainerName: 'Jacob Erdtmann'
                 })
                 break;
             default:
@@ -61,15 +66,20 @@ class BioPage extends Component {
 
     render() {                                                                  
         return (
-            <div>
-                <NavbarSecondaryPage />
-                <BioLanding 
+            <div className='appPageMainDiv'>
+                <div className="navbarDiv">
+                  <NavbarSecondaryPage />
+                </div>
+                <div className="contentsDiv">
+                  <BioInfo 
                     trainerImg={this.state.trainerImg}
-                />
-                <BioInfo 
                     trainerBio={this.state.trainerBio}
-                />
-                <Footer />
+                    trainerName={this.state.trainerName}
+                  />
+                </div>
+                <div className="footerDiv">
+                  <Footer />
+                </div>
             </div>
         )
     }

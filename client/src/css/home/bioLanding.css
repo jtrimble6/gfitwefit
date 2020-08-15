@@ -2,11 +2,57 @@
     height: 275px;
     width: 100% !important;
     background-color: white;
+    overflow: hidden;
     /* background-image: url('../images/bioBackground.jpg'); */
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Do not repeat the image */
     background-size: cover; 
 }
+
+
+/* ----------- LAPTOPS ----------- */
+
+
+/* ----------- Non-Retina Screens ----------- */
+@media screen 
+and (min-device-width: 800px) 
+and (max-device-width: 1600px) 
+and (-webkit-min-device-pixel-ratio: 1) { 
+  .bioLanding {
+    height: 30vw;
+    overflow: hidden !important;
+  }
+
+  
+}
+
+@media screen 
+and (min-device-width: 1601px) 
+and (max-device-width: 4000px) 
+and (-webkit-min-device-pixel-ratio: 1) { 
+  .bioLanding {
+    height: 30vw;
+    overflow: hidden !important;
+  }
+}
+
+/* ----------- Retina Screens ----------- */
+@media screen 
+and (min-device-width: 1000px) 
+and (max-device-width: 2000px) 
+and (-webkit-min-device-pixel-ratio: 2)
+and (min-resolution: 192dpi) { 
+  
+}
+
+@media screen 
+and (min-device-width: 2001px) 
+and (max-device-width: 3000px) 
+and (-webkit-min-device-pixel-ratio: 2)
+and (min-resolution: 192dpi) { 
+  
+}
+  
 
 
 

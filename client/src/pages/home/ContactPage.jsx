@@ -10,11 +10,17 @@ class ContactPage extends Component {
 
     render() {                                                                  
         return (
-            <div>
-                <NavbarSecondaryPage />
-                <ContactLanding />
-                <ContactInfo />
-                <Footer />
+            <div className='appPageMainDiv'>
+                <div className="navbarDiv">
+                  <NavbarSecondaryPage />
+                </div>
+                <div className="contentsDiv">
+                  <ContactLanding />
+                  <ContactInfo />
+                </div>
+                <div className="footerDiv">
+                  <Footer />
+                </div>
             </div>
         )
     }

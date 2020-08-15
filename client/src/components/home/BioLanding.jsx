@@ -9,11 +9,7 @@ class BioLanding extends Component {
     render() {                                                                  
         return (
             <div className='bioLanding'>
-                <Row className='bioInfoImgRow'>
-                  <div className="trainerBioCircleImg">
-                    <img src={this.props.trainerImg} alt='' />
-                  </div>
-                </Row>
+                
             </div>
         )
     }

@@ -89,10 +89,14 @@
 
 
 /* ----------- Non-Retina Screens ----------- */
-@media screen 
-  and (min-device-width: 900px) 
+@media screen  
   and (max-device-width: 1600px) 
   and (-webkit-min-device-pixel-ratio: 1) { 
+    .footerLanding {
+      position: relative;
+      bottom: 0px !important;
+      width: 100%;
+    }
     .footerRow {
       height: 8vw;
       width: 99%;
@@ -131,6 +135,7 @@
   and (min-device-width: 1600px) 
   and (max-device-width: 2000px) 
   and (-webkit-min-device-pixel-ratio: 1) { 
+
     .footerRow {
       height: 8vw;
       width: 99%;
@@ -584,8 +589,8 @@
       min-height: 100%;
       width: 100%;
       /* padding-bottom: 5vw; */
-      position: absolute !important;
-      left: 0 !important;
+      position: relative;
+      left: 0;
       top: 0;
     }
     
