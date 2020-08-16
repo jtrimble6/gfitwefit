@@ -8,7 +8,7 @@ import '../../css/home/scheduleInfo.css'
 class ScheduleInfo extends Component {
     constructor(props) {
         super(props) 
-        this.state ={
+        this.state = {
           currentSchedule: [],
           sortedSchedule: [],
         }
@@ -93,7 +93,7 @@ class ScheduleInfo extends Component {
     render() {                
         let sortedSchedule = this.state.sortedSchedule                                                  
         return (
-            <div className='scheduleInfo' id='scheduleInfo'>
+            <div className='scheduleInfo' id='scheduleInfo' name='scheduleInfo'>
               <div className='scheduleInfoSection'>
                 <Row className='scheduleInfoTitle'>
                     <h2 className='scheduleInfoTitleLeft'>SCHEDULE/</h2><h2 className='scheduleInfoTitleRight'>/GO</h2>

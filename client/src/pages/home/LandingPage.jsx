@@ -17,19 +17,19 @@ class LandingPage extends Component {
     render() {                                                                  
         return (
             <div className='appPageMainDiv'>
-                <div className="navbarDiv">
-                  <Navbar />
-                </div>
-                <div className="contentsDiv">
-                  <AboutLanding />
-                  <GymInfo />
-                  <TrainerInfo />
-                  <ScheduleInfo />
-                  <GoldOut />
-                </div>
-                <div className="footerDiv">
-                  <Footer />
-                </div>
+              <div className="navbarDiv">
+                <Navbar />
+              </div>
+              <div className="contentsDiv">
+                <AboutLanding />
+                <GymInfo />
+                <TrainerInfo />
+                <ScheduleInfo />
+                <GoldOut />
+              </div>
+              <div className="footerDiv">
+                <Footer />
+              </div>
             </div>
         )
     }

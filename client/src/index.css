@@ -3,7 +3,7 @@ body {
   width: 100% !important;
   position: relative;
   /* overflow-y: auto !important; */
-  overflow: hidden;
+  overflow-x: hidden;
   background-color: white;
   background-repeat: no-repeat;
   background-position: center;
@@ -24,7 +24,6 @@ code {
 html, body, #root, .App {
   width: 100% !important;
   height: 100% !important;
-  overflow-x: hidden;
 }
 
 /* ----------- iPhone 5, 5S, 5C and 5SE ----------- */

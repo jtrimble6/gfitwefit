@@ -13,45 +13,57 @@ class Navbar extends Component {
     constructor(props) {
         super(props);
 
-        this.toggleNavbar = this.toggleNavbar.bind(this)
-        this.handleScroll = this.handleScroll.bind(this)
-
         this.state = {
           collapsed: true,
           prevScrollPos: window.pageYOffset,
           visible: true
         }
+
+        this.toggleNavbar = this.toggleNavbar.bind(this)
+        // this.handleScroll = this.handleScroll.bind(this)
     }
 
     componentDidMount() {
-        window.addEventListener("scroll", this.handleScroll);
+        // window.addEventListener("scroll", this.handleScroll);
       }
     
     componentWillUnmount() {
-        window.removeEventListener("scroll", this.handleScroll);
+        // window.removeEventListener("scroll", this.handleScroll);
       }
 
-    handleScroll = () => {
-      const { prevScrollPos } = this.state;
+    // handleScroll = () => {
+    //   const { prevScrollPos } = this.state;
     
-      const currentScrollPos = window.pageYOffset;
-      const visible = prevScrollPos > currentScrollPos;
+    //   const currentScrollPos = window.pageYOffset;
+    //   const visible = prevScrollPos > currentScrollPos;
     
-      this.setState({
-        prevScrollPos: currentScrollPos,
-        visible
-      });
-      }
+    //   this.setState({
+    //     prevScrollPos: currentScrollPos,
+    //     visible
+    //   });
+    //   }
 
-    toggleNavbar() {
+    toggleNavbar = (event) => {
+      event.preventDefault()
+      console.log('TOGGLE NAVBAR')
+
+      if (!this.state.collapsed) {
         this.setState({
-            collapsed: !this.state.collapsed
+          collapsed: true
         })
-        if (this.state.collapsed) {
-          // document.getElementById('appRoot').style.filter = 'blur(5px)'
-        } else {
-          // document.getElementById('appRoot').style.filter = 'blur(0px)'
-        }
+      } else {
+        this.setState({
+          collapsed: false
+        })
+      }
+        // this.setState({
+        //   collapsed: !this.state.collapsed
+        // })
+        // if (this.state.collapsed) {
+        //   // document.getElementById('appRoot').style.filter = 'blur(5px)'
+        // } else {
+        //   // document.getElementById('appRoot').style.filter = 'blur(0px)'
+        // }
         
       }
     
@@ -59,7 +71,7 @@ class Navbar extends Component {
     render() {                                                       
         return (
             <nav 
-              className={classnames("navbar navbar-expand-lg navbar fixed-top", {"navbar--hidden": !this.state.visible})} 
+              className={classnames("navbar navbar-expand-lg navbar fixed-top", {"navbar--hidden": !this.state.collapsed})} 
               role='navigation' 
               id="mainNav"
             >
@@ -83,15 +95,15 @@ class Navbar extends Component {
                           right 
                           disableAutoFocus               
                           className='burgerMenu'
-                          // noOverlay
+                          noOverlay
                           // customBurgerIcon={ bars }
                           customCrossIcon={ <img src={require("../../css/images/cross.png")} alt='close' /> } 
                         >
-                          <NavLink 
+                          {/* <NavLink 
                             className='iconBar nav-link' 
                             onClick={this.toggleNavbar}
                             href="/"
-                          > HOME</NavLink>
+                          > HOME</NavLink> */}
                           <Link
                             activeClass="active"
                             className='iconBar nav-link'
@@ -146,19 +158,19 @@ class Navbar extends Component {
                             > SEE SCHEDULE |</Link>
                           </li>
 
-                          <li className="nav-item" >
+                          <li className="nav-item">
                             <a className="nav-link js-scroll-trigger" href='/userLogin'>
                               G-FIT GOLD  |
                             </a>
                           </li>
 
-                          <li className="nav-item" >
+                          <li className="nav-item">
                             <a className="nav-link js-scroll-trigger" href='/contact'>
                               CONTACT US  |
                             </a>
                           </li>
                           
-                          <li className="nav-item" >
+                          <li className="nav-item">
                             <a className="nav-link js-scroll-trigger signUp" href='/tryitout'>
                               TRY IT OUT
                             </a>

@@ -1479,7 +1479,7 @@
       width: 100vw;
     }
     .footerLanding {
-      height: 100%;
+      /* height: 100%; */
       width: 100%;
       /* padding-bottom: 5vw; */
       position: absolute !important;
@@ -1507,7 +1507,7 @@
       width: 5vw;
       height: auto; 
       position: absolute;
-      bottom: 2vw;
+      bottom: 3vw;
     }
     
     .footerTitle {
@@ -1714,11 +1714,11 @@
     }
     
     .footerRow {
-        width: 100%;
-        height: 100%;
-        margin: 0 auto !important;
-        position: absolute;
-        bottom: 0;
+      width: 100%;
+      height: 100%;
+      margin: 0 auto !important;
+      position: absolute;
+      bottom: 0;
     }
 
     .footerLogoDiv {
@@ -1733,7 +1733,7 @@
       width: 5vw;
       height: auto; 
       position: absolute;
-      bottom: 1vw;
+      bottom: 2vw;
     }
     
     .footerTitle {
@@ -1741,7 +1741,7 @@
       font-weight: bolder;
       color: white;
       position: absolute;
-      top: 2vw;
+      top: 2.7vw;
       left: 7.1vw;
       white-space: pre-wrap;
     }
@@ -2167,7 +2167,7 @@
       width: 5vw;
       height: auto; 
       position: absolute;
-      bottom: 1vw;
+      bottom: 1.8vw;
     }
     
     .footerTitle {
