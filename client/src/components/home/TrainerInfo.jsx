@@ -24,7 +24,8 @@ class TrainerInfo extends Component {
                           <Card.Body>
                               <Card.Title className='trainerBioTitle'>WALT GOUVEIA</Card.Title>
                               <Card.Subtitle className='trainerBioSubtitle'>OWNER + TRAINER</Card.Subtitle>
-                              <Button href='/bioPage?trainer=walt' className='trainerBioButton'>BIO //</Button>
+                              <Button href='/' className='trainerBioButton'>BIO //</Button>
+                              {/* <Button href='/bioPage?trainer=walt' className='trainerBioButton'>BIO //</Button> */}
                           </Card.Body>
                         </Card>
                       </Col>
@@ -36,7 +37,8 @@ class TrainerInfo extends Component {
                           <Card.Body>
                               <Card.Title className='trainerBioTitle'>KYLE GOUVEIA</Card.Title>
                               <Card.Subtitle className='trainerBioSubtitle'>OWNER + TRAINER</Card.Subtitle>
-                              <Button href='/bioPage?trainer=kyle' className='trainerBioButton'>BIO //</Button>
+                              <Button href='/' className='trainerBioButton'>BIO //</Button>
+                              {/* <Button href='/bioPage?trainer=kyle' className='trainerBioButton'>BIO //</Button> */}
                           </Card.Body>
                         </Card>
                       </Col>
@@ -50,7 +52,8 @@ class TrainerInfo extends Component {
                         <Card.Body>
                             <Card.Title className='trainerBioTitle'>JENNIFER COLEMAN</Card.Title>
                             <Card.Subtitle className='trainerBioSubtitle'>TRAINER</Card.Subtitle>
-                            <Button href='/bioPage?trainer=jenn' className='trainerBioButton'>BIO //</Button>
+                            <Button href='/' className='trainerBioButton'>BIO //</Button>
+                            {/* <Button href='/bioPage?trainer=jenn' className='trainerBioButton'>BIO //</Button> */}
                         </Card.Body>
                       </Card>
                     </Col>
@@ -62,7 +65,8 @@ class TrainerInfo extends Component {
                         <Card.Body>
                             <Card.Title className='trainerBioTitle'>JACOB ERDTMANN</Card.Title>
                             <Card.Subtitle className='trainerBioSubtitle'>TRAINER</Card.Subtitle>
-                            <Button href='/bioPage?trainer=jacob' className='trainerBioButton'>BIO //</Button>
+                            <Button href='/' className='trainerBioButton'>BIO //</Button>
+                            {/* <Button href='/bioPage?trainer=jacob' className='trainerBioButton'>BIO //</Button> */}
                         </Card.Body>
                       </Card>
                     </Col>
