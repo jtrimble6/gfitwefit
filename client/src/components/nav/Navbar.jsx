@@ -155,18 +155,18 @@ class Navbar extends Component {
                               smooth={true}
                               offset={-150}
                               duration= {500}
-                            > SEE SCHEDULE |</Link>
+                            > SEE SCHEDULE</Link>
                           </li>
 
                           <li className="nav-item">
                             <a className="nav-link js-scroll-trigger" href='/userLogin'>
-                              G-FIT GOLD  |
+                              G-FIT GOLD
                             </a>
                           </li>
 
                           <li className="nav-item">
                             <a className="nav-link js-scroll-trigger" href='/contact'>
-                              CONTACT US  |
+                              CONTACT US
                             </a>
                           </li>
                           

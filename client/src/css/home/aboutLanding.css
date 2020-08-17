@@ -807,7 +807,8 @@
         float: none;
         left: 0;
         top: -50px;
-        width: 100%;
+        width: 72vw;
+        margin: 0 auto;
     }
     .aboutJumbotronLogoColumn {
         width: 90%;
@@ -853,61 +854,37 @@
   and (orientation: landscape) {
     .aboutLanding {
       height: 48vw;
-      min-width: 100vw !important;
     }
     .aboutJumbotron {
-        bottom: -45vw;
-        width: 75%;
-        height: 60vw;
-    }
-    .aboutJumbotronLogo {
-        /* position: relative; */
-        /* float: none; */
-        /* left: 150px;
-        top: -150px; */
-        position: absolute;
-        left: 12vw;
-        top: -20vw;
-        width: 70%;
-        margin: 0 auto;
+      bottom: -33vw;
+      width: 75%;
+      height: 38vw;
     }
     .aboutJumbotronLogoColumn {
-        width: 100%;
-        height: 50%;
-        margin: 0 auto !important;
-        
+      width: 30%;
     }
-    .aboutJumbotronBodyColumn {
-        position: relative;
-        width: 90%;
-        margin: 0 auto;
-    }
-    .aboutJumbotronHeaderRow {
-        position: relative;
-        top: 15vw;
-        margin: 0 auto;
-        
+    .aboutJumbotronLogo {
+      width: 33vw;
+      left: -80px;
+      top: 6vw;
     }
     .aboutJumbotronHeaderLeft {
-        font-size: 2.5vw;
-        font-weight: bolder;
-        letter-spacing: .1vw;
-        padding-left: 15px;
-        padding-left: 0;
+      font-size: 2vw;
+      font-weight: bolder;
+      letter-spacing: .1vw;
+      padding-left: 15px;
+      padding-left: 0;
     }
     .aboutJumbotronHeaderRight {
-        font-size: 2.5vw;
-        font-weight: bolder;
-        letter-spacing: .1vw;
+      font-size: 2vw;
+      font-weight: bolder;
+      letter-spacing: .1vw;
+    }
+    .aboutJumbotronBodyColumn {
+      max-width: 66.67%;
     }
     .aboutJumbotronBody {
-        position: relative;
-        top: 15vw;
-        float: left;
-        font-size: 2vw;
-        font-weight: bold;
-        line-height: 1.3;
-        text-align: left !important;
+      font-size: 1.5vw;
     }
     
 }
@@ -933,7 +910,7 @@
 
 /* Landscape */
 @media only screen 
-  and (min-device-width: 375px) 
+  and (min-device-width: 569px) 
   and (max-device-width: 667px) 
   and (-webkit-min-device-pixel-ratio: 2)
   and (orientation: landscape) { 
@@ -941,13 +918,15 @@
       height: 48vw;
     }
     .aboutJumbotron {
-      bottom: -33vw;
+      bottom: -30vw;
       width: 75%;
       height: 38vw;
     }
     .aboutJumbotronLogo {
-      width: 30vw;
+      width: 35vw;
       margin: 0 auto;
+      left: -100px;
+      top: 6vw;
     }
     .aboutJumbotronHeaderLeft {
       font-size: 2vw;
@@ -962,7 +941,7 @@
       letter-spacing: .1vw;
     }
     .aboutJumbotronBody {
-      font-size: 1.5vw;
+      font-size: .62rem;
     }
 
 }
@@ -1112,7 +1091,7 @@
 /* ----------- Pixel 2 ----------- */
 
 @media only screen 
-  and (min-device-width: 375px) 
+  and (min-device-width: 675px) 
   and (max-device-width: 812px) 
   and (-webkit-min-device-pixel-ratio: 2)
   and (orientation: landscape) { 

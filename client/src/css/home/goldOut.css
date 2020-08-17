@@ -115,70 +115,10 @@
 
 /* ----------- Non-Retina Screens ----------- */
 @media screen 
-  and (min-device-width: 800px) 
+  and (min-device-width: 825px) 
   and (max-device-width: 2000px) 
   and (-webkit-min-device-pixel-ratio: 1) { 
-    .gjyOHz {
-      height: 50vw !important;
-    }
-    .goldOutCarousel {
-      height: 50vw;
-    }
-    .goldOutCard {
-      height: 50vw;
-    }
-    .goldOut {
-      width: 100%;
-      height: 150vw;
-      padding-bottom: 85%;
-      padding-top: 15%;
-      /* margin-bottom: 15%; */
-    }
-    .goldOutSection {
-      text-align: center;
-      height: 100vw;
-    }
-    .goldOutCarousel, .rec-carousel {
-      height: 60vw !important;
-    }
     
-    .goldOutTitleLeft {
-      font-size: 3.5vw;
-      letter-spacing: 1px;
-      padding-left: 15px;
-    }
-    
-    .goldOutTitleRight {
-      font-size: 3.5vw;
-      letter-spacing: 1px;
-    }
-    
-    .goldOutRow1 {
-      font-size: 1rem;
-      margin-top: 2%;
-      text-align: left;
-    }
-    
-    .goldOutRow2 {
-      margin-top: 3%;
-      margin-bottom: 3%;
-      line-height: 1.0;
-      height: 80vw;
-    }
-    
-    .goldOutCardText {
-      font-size: 1.3rem;
-      line-height: 2.3rem;
-    }
-
-    .goldOutCardTitle {
-      font-size: 1.2rem;
-    }
-    
-    .goldOutCardSubTitle {
-      font-weight: bold;
-      font-size: 1rem;
-    }
 }
 
 @media screen 
@@ -240,66 +180,11 @@
 
 /* ----------- Retina Screens ----------- */
 @media screen 
-  and (min-device-width: 1000px) 
+  and (min-device-width: 825px) 
   and (max-device-width: 2000px) 
   and (-webkit-min-device-pixel-ratio: 2)
   and (min-resolution: 192dpi) { 
-    .gjyOHz {
-      height: 50vw !important;
-    }
-    .goldOutCarousel {
-      height: 50vw;
-    }
-    .goldOutCard {
-      height: 50vw;
-    }
-    .goldOut {
-      width: 100%;
-      height: 150vw;
-      padding-bottom: 85%;
-      padding-top: 15%;
-      /* margin-bottom: 15%; */
-    }
-    .goldOutSection {
-      text-align: center;
-      height: 100vw;
-    }
-    .goldOutCarousel, .rec-carousel {
-      height: 60vw !important;
-    }
     
-    .goldOutTitleLeft {
-      font-size: 3.5vw;
-      letter-spacing: 1px;
-      padding-left: 15px;
-    }
-    
-    .goldOutTitleRight {
-      font-size: 3.5vw;
-      letter-spacing: 1px;
-    }
-    
-    .goldOutRow1 {
-        font-size: 2vw;
-        margin-top: 2%;
-        text-align: left;
-    }
-    
-    .goldOutRow2 {
-      margin-top: 3%;
-      margin-bottom: 3%;
-      line-height: 1.0;
-      height: 80vw;
-    }
-    
-    .goldOutCardText {
-      font-size: 2vw;
-      line-height: 2.5vw;
-    }
-    
-    .goldOutCardSubTitle {
-      font-weight: bold;
-    }
 }
 
 @media screen 
@@ -391,40 +276,7 @@
   and (max-device-width: 1024px) 
   and (orientation: landscape) 
   and (-webkit-min-device-pixel-ratio: 1) {
-    .goldOut {
-      height: 100vw;
-    }
-    .gjyOHz {
-      height: 40vw !important;
-    }
-
-    .goldOutSection {
-      height: 80vw;
-    }
-    .goldOutTitleLeft {
-      font-size: 3.5vw;
-      letter-spacing: .5vw;
-      padding-left: 15px;
-    }
     
-    .goldOutTitleRight {
-        font-size: 3.5vw;
-        letter-spacing: .5vw;
-    }
-    .goldOutCard {
-      height: 40vw;
-    }
-    
-    .goldOutCardText {
-      font-size: 2vw;
-      line-height: 2vw;
-    }
-
-    .goldOutRow1 {
-      font-size: 1.8vw;
-      margin-top: 2%;
-      text-align: left;
-    }
 
 }
 
@@ -504,11 +356,38 @@
 
 /* Landscape */
 @media only screen 
-  and (min-device-width: 768px) 
+  and (min-device-width: 968px) 
   and (max-device-width: 1024px) 
   and (orientation: landscape) 
   and (-webkit-min-device-pixel-ratio: 2) {
-
+    .gjyOHz {
+      height: 55vw;
+    }
+    .goldOut {
+      height: 120vw;
+    }
+    .goldOutCarousel {
+      max-height: 100%;
+    }
+    .goldOutRow1 {
+      font-size: 1.3rem;
+    }
+    .goldOutRow2 {
+      height: 80vw;
+    }
+    .goldOutTitleLeft, .goldOutTitleRight {
+      font-size: 3.5vw;
+    }
+    .goldOutCardText {
+      font-size: 1.1rem;
+      line-height: 2rem;
+    }
+    .goldOutCardTitle {
+      font-size: 1.5rem
+    }
+    .goldOutCardSubTitle {
+      font-size: 1.1rem;
+    }
 }
 
 /* ----------- iPad Pro 10.5" ----------- */
@@ -618,7 +497,31 @@
   and (max-device-width: 1366px) 
   and (orientation: landscape) 
   and (-webkit-min-device-pixel-ratio: 2) {
-
+    .gjyOHz {
+      height: 45vw;
+    }
+    .goldOut {
+      height: 100vw;
+    }
+    .goldOutRow1 {
+      font-size: 1.8rem;
+    }
+    .goldOutRow2 {
+      height: 60vw;
+    }
+    .goldOutTitleLeft, .goldOutTitleRight {
+      font-size: 3.5vw;
+    }
+    .goldOutCardText {
+      font-size: 1.5rem;
+      line-height: 2rem;
+    }
+    .goldOutCardTitle {
+      font-size: 1.5rem
+    }
+    .goldOutCardSubTitle {
+      font-size: 1.1rem;
+    }
 }
 
 
@@ -725,46 +628,15 @@
     .goldOut {
       height: 100vw;
     }
-    .goldOutSection {
-      height: 90vw;
-    }
-    .goldOutCarousel {
-      height: 80vw;
-    }
-    .goldOutTitleLeft {
-      font-size: 3.5vw;
-      letter-spacing: .5vw;
-      padding-left: 15px;
-    }
-    
-    .goldOutTitleRight {
-        font-size: 3.5vw;
-        letter-spacing: .5vw;
-    }
-    
     .goldOutRow1 {
-        font-size: 1.8vw;
-        margin-top: 2%;
-        text-align: left;
+      font-size: 1rem;
     }
-    
-    .goldOutRow2 {
-        margin-top: 3%;
-        margin-bottom: 3%;
-        line-height: 1.0;
+    .goldOutTitleLeft, .goldOutTitleRight {
+      font-size: 3.5vw;
     }
     .goldOutCardText {
-      font-size: 1.8vw;
-      line-height: 2.3vw;
-    }
-
-    .goldOutCardTitle {
-        font-size: 2vw;
-    }
-    
-    .goldOutCardSubTitle {
-        font-size: 1.8vw;
-        font-weight: bold;
+      font-size: .8rem;
+      line-height: 1rem;
     }
 }
 
@@ -789,55 +661,29 @@
 
 /* Landscape */
 @media only screen 
-  and (min-device-width: 375px) 
+  and (min-device-height: 375px) 
   and (max-device-width: 667px) 
   and (-webkit-min-device-pixel-ratio: 2)
   and (orientation: landscape) { 
     .goldOut {
-      height: 100vw;
+      height: 120vw;
     }
     .goldOutSection {
-      height: 80vw;
+      max-height: 100%;
     }
-    .goldOutCarousel {
-      height: 60vw;
-    }
-    .goldOutTitleLeft {
-      font-size: 3.5vw;
-      letter-spacing: .5vw;
-      padding-left: 15px;
-    }
-    
-    .goldOutTitleRight {
-        font-size: 3.5vw;
-        letter-spacing: .5vw;
-    }
-    
     .goldOutRow1 {
-        font-size: 1.8vw;
-        margin-top: 2%;
-        text-align: left;
+      font-size: 1rem;
     }
-    
     .goldOutRow2 {
-        margin-top: 3%;
-        margin-bottom: 3%;
-        line-height: 1.0;
+      height: 40vw;
+    }
+    .goldOutTitleLeft, .goldOutTitleRight {
+      font-size: 3.5vw;
     }
     .goldOutCardText {
-      font-size: 1.8vw;
-      line-height: 2.3vw;
+      font-size: .8rem;
+      line-height: 1rem;
     }
-
-    .goldOutCardTitle {
-        font-size: 2vw;
-    }
-    
-    .goldOutCardSubTitle {
-        font-size: 1.8vw;
-        font-weight: bold;
-    }
-   
 }
 
 /* ----------- iPhone X ----------- */
@@ -922,7 +768,7 @@
       height: 100vw;
     }
     .goldOutSection {
-      max-height: 80vw;
+      max-height: 85vw;
     }
     .goldOutTitleLeft {
       font-size: 3.5vw;
@@ -986,74 +832,13 @@
   and (max-device-width: 736px) 
   and (-webkit-min-device-pixel-ratio: 3)
   and (orientation: landscape) { 
-    /* .goldOut {
-      height: 100%;
-      width: 103vw !important;
-      padding-bottom: 15% !important;
-      padding-top: 15% !important;
-    }
-    .goldOutSection {
-      text-align: center;
-      height: 90vw;
-    }
-    
-    .goldOutTitleLeft {
-        font-size: 3vw;
-        letter-spacing: 1px;
-        padding-left: 15px;
-    }
-    
-    .goldOutTitleRight {
-        font-size: 3vw;
-        letter-spacing: 1px;
-    }
-    
-    .goldOutRow1 {
-        font-size: 2vw;
-        margin-top: 2%;
-        text-align: left;
-    }
-    
-    .goldOutRow2 {
-        margin-top: 3%;
-        margin-bottom: 3%;
-        line-height: 1.0;
-        height: 40vw
-    }
-    .goldOutCarousel {
-      max-height: 100%;
-    }
-    .rec-carousel {
-      max-height: 100% !important;
-    }
-    .rec-item-wrapper {
-      max-height: 100% !important;
-    }
-    .gjyOHz {
-      max-height: 100% !important;
-    }
-    .goldOutCard {
-      width: 100% !important;
-    }
-    .goldOutCardText {
-        font-size: 1.8vw !important;
-        line-height: 3.5vw !important;
-    }
 
-    .goldOutCardTitle {
-        font-size: 2.5vw !important;
-    }
-    
-    .goldOutCardSubTitle {
-        font-size: 2vw !important;
-        font-weight: bold !important;
-    } */
 }
 
 /* ----------- Pixel 2 ----------- */
 
 @media only screen 
-  and (min-device-width: 375px) 
+  and (min-device-width: 675px) 
   and (max-device-width: 812px) 
   and (-webkit-min-device-pixel-ratio: 2)
   and (orientation: landscape) { 
@@ -1062,6 +847,9 @@
     }
     .goldOutSection {
       max-height: 85vw;
+    }
+    .goldOutCarousel {
+      max-height: 100%;
     }
     .goldOutTitleLeft {
       font-size: 3.5vw;

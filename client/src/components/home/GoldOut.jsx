@@ -22,10 +22,10 @@ class GoldOut extends Component {
                     <h2 className='goldOutTitleLeft'>GOLD OUT/</h2><h2 className='goldOutTitleRight'>/GO FOR THE GOLD</h2>
                 </Row>
                 <Row className='goldOutRow1'>
-                    <Col sm={6}>
+                    <Col sm={8}>
                         <p>You can’t achieve greatness without setting a goal first. At the gym, we write our fitness goals down to hold ourselves accountable. Once we achieve that gold, we write over it in gold to celebrate how far we’ve come. Check out some golden stories from our family of members:</p>
                     </Col>
-                    <Col sm={6}>
+                    <Col sm={4}>
                       
                     </Col>
                 </Row>

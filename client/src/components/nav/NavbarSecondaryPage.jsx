@@ -110,17 +110,17 @@ class NavbarSecondaryPage extends Component {
                         <ul className="navbar-nav ml-auto">
                           <li className="nav-item" >
                             <a className="nav-link js-scroll-trigger" href='/'>
-                              HOME  |
+                              HOME
                             </a>
                           </li>
                           <li className="nav-item" >
                             <a className="nav-link js-scroll-trigger" href='/userLogin'>
-                              G-FIT GOLD  |
+                              G-FIT GOLD
                             </a>
                           </li>
                           <li className="nav-item" >
                             <a className="nav-link js-scroll-trigger" href='/contact'>
-                              CONTACT US  |
+                              CONTACT US
                             </a>
                           </li>
                           <li className="nav-item" >
