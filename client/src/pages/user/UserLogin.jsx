@@ -109,7 +109,7 @@ class UserLogin extends Component {
                                     <p>Only $5/month gets instant access to our collection of at-home workout videos and much more!</p>                        
                                 </div>
                             </div>
-                            <a href='/userSignUp' className='userSignUpLink'>Sign Up Today</a>
+                            {/* <a href='/userSignUp' className='userSignUpLink'>Sign Up Today</a> */}
                         </div>
                         <div className="col-sm-6">
                             <div className="formContainer">    

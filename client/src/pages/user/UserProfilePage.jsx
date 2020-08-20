@@ -1,11 +1,22 @@
 import React, { Component } from 'react'
 // import UserBar from '../../components/nav/UserBar'
+import axios from 'axios'
 import moment from 'moment'
 import API from '../../utils/API'
+import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap'
+
+// COMPONENTS
 import UserEditProfile from './UserEditProfile.jsx'
+import ManageUserConvergeLightbox from '../../components/user/ManageUserConvergeLightbox'
 
 // CSS
 import '../../css/user/user.css'
+
+// ALERTS
+import UserCancelMembershipError from "../../components/alerts/UserCancelMembershipError";
+import UserCancelMembershipSuccess from "../../components/alerts/UserCancelMembershipSuccess";
+import UserUpdateMembershipError from '../../components/alerts/UserUpdateMembershipError';
+import UserUpdateMembershipSuccess from '../../components/alerts/UserUpdateMembershipSuccess';
 
 
 const normalizeInput = (value, previousValue) => {
@@ -25,6 +36,8 @@ class UserProfilePage extends Component {
     constructor(props) {
         super(props)
         this.state = {
+            env: 'PRODUCTION',
+            userSubscriptionModal: false,
             firstName: '',
             lastName: '',
             email: '',
@@ -42,6 +55,7 @@ class UserProfilePage extends Component {
             paymentRefNumber: '',
             paymentTxnId: '',
             paymentDate: '',
+            paymentCard: '',
             subscriptionStatus: '',
             lastPaymentDate: '',
             autoRenewDate: '',
@@ -59,8 +73,9 @@ class UserProfilePage extends Component {
             updateUserPreferencesError: false,
             updateUserPasswordSuccess: false,
             updateUserPasswordError: false,
-            updateUserPasswordServerError: false
-
+            updateUserPasswordServerError: false,
+            userCancelMembershipError: false,
+            userCancelMembershipSuccess: false
 
         }
         this.scrollTop = this.scrollTop.bind(this)
@@ -78,13 +93,26 @@ class UserProfilePage extends Component {
         this.checkOldPassword = this.checkOldPassword.bind(this)
         this.handleUpdatePassword = this.handleUpdatePassword.bind(this)
         this.handleUserManageSubscription = this.handleUserManageSubscription.bind(this)
-       
+        this.handleUserCancellation = this.handleUserCancellation.bind(this)
+        this.toggleUserSubscriptionModal = this.toggleUserSubscriptionModal.bind(this)
+        this.closeUserSubscriptionModal = this.closeUserSubscriptionModal.bind(this)
+        this.handleUserSubscribe = this.handleUserSubscribe.bind(this)
+        this.handleConvergePay = this.handleConvergePay.bind(this)
+        this.handleLightboxInit = this.handleLightboxInit.bind(this)
+        this.setClockRef = this.setClockRef.bind(this);
+        this.startTimer = this.startTimer.bind(this);
+        this.pauseTimer = this.pauseTimer.bind(this);
+        this.convergeCountdownComplete = this.convergeCountdownComplete.bind(this)
+        this.handleConvergePayRetry = this.handleConvergePayRetry.bind(this)
+        this.handleLightboxInitRetry = this.handleLightboxInitRetry.bind(this)
+        this.handleSubscriptionSubmit = this.handleSubscriptionSubmit.bind(this)
     }
 
     componentDidMount() {
         // console.log('User Sign Up Ready')
         this.scrollTop()
         this.getUserData()
+        this.setClockRef()
       }
 
     scrollTop() {
@@ -103,7 +131,7 @@ class UserProfilePage extends Component {
                 let user = res.data[0]
 
                 // CHECK LAST PAYMENT DATE IS CURRENT
-                let subscriptionStatus = 'INACTIVE'
+                let subscriptionStatus = false
                 let lastPaymentDate = 'N/A'
                 let lastPaymentDateLife = ''
                 if(user.paymentComplete) {
@@ -111,7 +139,7 @@ class UserProfilePage extends Component {
                   lastPaymentDateLife = moment(lastPaymentDateConverted).add(1, 'months').calendar()
                   let todaysDate = moment().format('MM/DD/YYYY')
                   let lastPaymentDateCurrent = lastPaymentDateLife >= todaysDate
-                  subscriptionStatus = lastPaymentDateCurrent ? 'ACTIVE' : 'INACTIVE'
+                  subscriptionStatus = lastPaymentDateCurrent ? true : false
                   lastPaymentDate = lastPaymentDateCurrent ? lastPaymentDateConverted : 'N/A'
                   // console.log('Today: ', todaysDate, 'Payment life ends: ', lastPaymentDateLife, 'Payment current? ', lastPaymentDateCurrent)
                 }
@@ -149,6 +177,7 @@ class UserProfilePage extends Component {
                   workoutCategory: workoutCategory,
                   fitnessLevel: fitnessLevel,
                   equipmentNeeded: equipmentNeeded,
+                  paymentCard: user.paymentCard
                 })
             })
             .catch(err => {
@@ -204,7 +233,7 @@ class UserProfilePage extends Component {
         })
       }
     
-    handlePhoneChange({ target: { value } }) {
+    handlePhoneChange ({ target: { value } }) {
         this.setState({
           stepOneFieldError: false,
           changeStepError: false
@@ -478,13 +507,408 @@ class UserProfilePage extends Component {
       }
   
     handleUserManageSubscription = (event) => {
+        event.preventDefault()
+        console.log('USER IS MANAGING SUBSCRIPTION - STATUS: ', this.state.subscriptionStatus)
+        this.toggleUserSubscriptionModal()
+      }
+
+    handleUserCancellation = (event) => {
       event.preventDefault()
-      console.log('USER IS MANAGING SUBSCRIPTION')
+      console.log('USER IS CANCELLING SUBSCRIPTION')
+      document.getElementById('cancelSubscriptionButton').style.disabled = true
+      document.getElementById('cancelSubscriptionButton').innerHTML = `<span className="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Loading...`
+      let firstName = this.state.firstName
+      let lastName = this.state.lastName
+      let email = this.state.email
+      let username = this.state.username
+      let subscriptionUpdate = {
+        paymentComplete: false,
+        paymentRefNumber: 'n/a',
+        paymentTxnId: 'n/a',
+        paymentDate: 'n/a',
+        paymentCard: 'n/a'
+      }
+      axios({
+        method: "POST", 
+        url: this.state.env === 'DEVELOPMENT' ? "http://localhost:3000/sendUserCancellation" : "http://gfitwefit.com/sendUserCancellation",
+        data: {
+            firstName: firstName,   
+            lastName: lastName,
+            email: email,  
+            paymentCard: this.state.paymentCard
+        }
+        }).then((response)=> {
+            if (response.data.msg === 'success') {
+                console.log("Message Sent.")
+                API.userCancelSubscription(username, subscriptionUpdate)
+                  .then(res => {
+                      console.log('USER SUBSCRIPTION UPDATED SUCCESSFULLY: ', res)
+                      this.setState({
+                        userCancelMembershipSuccess: true,
+                        subscriptionStatus: false,
+                        lastPaymentDate: 'n/a'
+                      })
+                      document.getElementById('subscriptionModalBody').innerHTML = `<span className='userCancelledModalBody'>We are very sorry to see you go.. hope to see you back soon!</span>`
+                  })
+                  .catch(err => {
+                    console.log('USER SUBSCRIPTION UPDATE ERROR: ', err)
+                    document.getElementById('cancelSubscriptionButton').style.disabled = false
+                    document.getElementById('cancelSubscriptionButton').innerHTML = `Cancel Membership (try again)`
+                    this.setState({
+                      userCancelMembershipError: true
+                    })
+                  })
+            } else if (response.data.msg === 'fail') {
+              console.log("Message failed to send.")
+              document.getElementById('cancelSubscriptionButton').style.disabled = false
+              document.getElementById('cancelSubscriptionButton').innerHTML = `Cancel Membership (try again)`
+              this.setState({
+                userCancelMembershipError: true
+              })
+            }
+        })
+      }
+
+    toggleUserSubscriptionModal = () => {
+        this.setState({
+          userSubscriptionModal: !this.state.userSubscriptionModal,
+          userCancelMembershipSuccess: false,
+          userCancelMembershipError: false
+        });
+      }
+
+    closeUserSubscriptionModal = () => {
+        this.setState({
+          userSubscriptionModal: !this.state.userSubscriptionModal,
+          userCancelMembershipSuccess: false,
+          userCancelMembershipError: false,
+          userUpdateMembershipError: false,
+          UserUpdateMembershipSuccess: false
+        }, () => {
+          window.location.reload()
+        });
+      }
+
+    handleUserSubscribe = (event) => {
+      event.preventDefault()
+      document.getElementById('manageUserConvergeLightbox').style.display = 'block'
+      }
+
+    handleConvergePay = (event) => {
+        event.preventDefault();
+        
+        this.setState({
+          convergeTokenError: false,
+          convergeSecondAttempt: false
+        })
+
+        console.log('Handling converge payment')
+        // document.getElementById('userSubscriptionButton').style.disabled = true
+        // document.getElementById('userSubscriptionButton').innerHTML = `<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Loading...`
+
+        axios.defaults.timeout = 1000 * 15;
+        axios({
+          method: "GET", 
+          url: this.state.env === 'DEVELOPMENT' ? "http://localhost:3000/converge_token_req" || "http://localhost:3001/converge_token_req" : "https://www.gfitwefit.com/converge_token_req",
+          }).then((response)=> {
+            console.log('GOT A RESPONSE: ', response)
+            let ssl_txn_auth_token = response.data
+            console.log(ssl_txn_auth_token)
+            window.$convergeToken = ssl_txn_auth_token
+            this.setState({
+              sessionID: ssl_txn_auth_token
+            })
+            this.handleLightboxInit(ssl_txn_auth_token)
+              // if (response.data.msg === 'success'){
+              //     console.log("Payment Sent."); 
+                  
+              // } else if(response.data.msg === 'fail'){
+              //   console.log("Payment failed to send.")
+              // }
+          }).catch((err) => {
+            console.log('ERROR RETRIEVING CONVERGE TOKEN: ', err)
+            document.getElementById('convergeButton').style.disabled = false
+            document.getElementById('convergeButton').innerHTML = `Pay With Converge (try again)`
+            this.setState({
+              convergeTokenError: true
+            })
+          })
+      }
+
+    handleConvergePayRetry = (event) => {
+        event.preventDefault();
+        console.log('Handling converge payment retry')
+        // this.setState({
+        //   convergeSecondAttempt: true
+        // })
+        
+        // debugger
+        // console.log('WAIVER CHECKED? ', this.state.waiverSigned)
+
+        // if (!this.state.waiverSigned) {
+        //   console.log('WAIVER ERROR HERE')
+        //   this.setState({
+        //     waiverError: true
+        //   })
+        //   return
+        // } else {
+        //   document.getElementById('convergeButton').style.disabled = true
+        //   document.getElementById('convergeButton').innerHTML = `<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Loading...`
+        //   this.setState({
+        //     waiverError: false
+        //   })
+        // }
+
+        document.getElementById('convergeButtonRetry').style.disabled = true
+        document.getElementById('convergeButtonRetry').innerHTML = `<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Loading...`
+
+        axios.defaults.timeout = 1000 * 10;
+        axios({
+          method: "GET", 
+          url: this.state.env === 'DEVELOPMENT' ? "http://localhost:3000/converge_token_req" || "http://localhost:3001/converge_token_req" : "https://www.gfitwefit.com/converge_token_req",
+          }).then((response)=> {
+            console.log('GOT A RESPONSE: ', response)
+            let ssl_txn_auth_token = response.data
+            console.log(ssl_txn_auth_token)
+            window.$convergeToken = ssl_txn_auth_token
+            this.setState({
+              sessionID: ssl_txn_auth_token
+            })
+            this.handleLightboxInitRetry(ssl_txn_auth_token)
+              // if (response.data.msg === 'success'){
+              //     console.log("Payment Sent."); 
+                  
+              // } else if(response.data.msg === 'fail'){
+              //   console.log("Payment failed to send.")
+              // }
+          }).catch((err) => {
+            console.log('ERROR RETRIEVING CONVERGE TOKEN: ', err)
+            document.getElementById('convergeButtonRetry').style.disabled = false
+            document.getElementById('convergeButtonRetry').innerHTML = `Request new payment token`
+            // document.getElementById('convergeButtonRetry').style.display = 'none'
+            document.getElementById('continueWithoutPaymentButton').style.display = 'block'
+            // document.getElementById('convergeLightboxDiv').innerHTML = `<Button id='convergeButton' className='payWithConverge'>Request new payment token</Button>`
+            // let newConvergeButton = document.getElementById('convergeButton')
+            // newConvergeButton.onclick = this.handleConvergePayRetry
+            this.setState({
+              convergeTokenError: true
+            })
+          })
+      }
+
+    handleLightboxInit = (authToken) => {
+        console.log('Handling lightbox init -- Auth Token: ', authToken)
+        document.getElementById('subscriptionModalBodyDetails').style.display = 'none'
+        document.getElementById('manageUserConvergeLightbox').style.display = 'block'
+        this.scrollTop()
+        this.startTimer()
+      }
+    
+    handleLightboxInitRetry = (authToken) => {
+      // console.log('Handling lightbox init -- Auth Token: ', authToken)
+      document.getElementById('subscriptionModalBodyDetails').style.display = 'none'
+      document.getElementById('manageUserConvergeLightbox').style.display = 'block'
+      document.getElementById('convergeButtonRetry').innerHTML = `Request new payment token`
+      document.getElementById('convergeButtonRetry').style.display = 'none'
+      document.getElementById('convergeLightboxInitButton').style.display = 'block'
+      this.scrollTop()
+      this.startTimer()
       }
   
+    startTimer() {
+        this.clockRef.start();
+      }
+
+    pauseTimer() {
+        this.clockRef.pause();
+      }
+
+    setClockRef(ref) {
+        // When the `Clock` (and subsequently `Countdown` mounts
+        // this will give us access to the API
+        this.clockRef = ref;
+      }
+
+    convergeCountdownComplete = () => {
+      let txnStatus = document.getElementById('txnStatus').value
+      console.log('TXN STATUS: ', txnStatus)
+      if (this.state.convergeSecondAttempt) {
+        console.log('USERS SECOND ATTEMPT FAILED')
+        document.getElementById('convergeButtonRetry').style.display = 'block'
+        document.getElementById('continueWithoutPaymentButton').style.display = 'block'
+        document.getElementById('convergeLightboxInitButton').style.display = 'none'
+        return
+      } else if (txnStatus === undefined) {
+          document.getElementById('convergeButtonRetry').style.display = 'block'
+          document.getElementById('convergeLightboxInitButton').style.display = 'none'
+          // document.getElementById('convergeLightboxDiv').innerHTML = `<Button id='convergeButton' className='payWithConverge'>Request new payment token</Button>` 
+          // let newConvergeButton = document.getElementById('convergeButton')
+          // newConvergeButton.onclick = this.props.handleConvergePayRetry
+          // console.log('new converge button: ', newConvergeButton)
+        }
+      }
+
+    checkConvergePayment = (event) => {
+        event.preventDefault()
+        document.getElementById('convergeInfo').style.display = 'none'
+        let status = window.$status
+        let msg = window.$msg
+        console.log('CHECKING CONVERGE PAYMENT: ', status, msg)
+        if(status === 'APPROVED') {
+          // document.getElementById('finalStep').disabled = false
+          this.setState({
+            paymentComplete: true,
+            paymentRefNumber: msg.ssl_transaction_reference_number,
+            paymentTxnId: msg.ssl_txn_id,
+            paymentDate: msg.ssl_txn_time,
+            paymentCard: msg.ssl_card_number
+          }, () => {
+            this.handleSubscriptionSubmit()
+          })
+        } else {
+          console.log('PAYMENT ERROR OCCURED')
+          this.setState({
+            paymentComplete: false,
+            paymentRefNumber: 'n/a',
+            paymentTxnId: 'n/a',
+            paymentDate: 'n/a',
+            paymentCard: 'n/a'
+          }, () => {
+            this.handleSubscriptionSubmit()
+          })
+        }
+      }
+
+    handleSubscriptionSubmit = () => {
+      // event.preventDefault()
+      console.log('HANDLING USER SUBSCRIPTION UPDATE')
+      document.getElementById('txnDetailsButton').style.disabled = true
+      document.getElementById('txnDetailsButton').innerHTML = `<span className="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Loading...`
+      let firstName = this.state.firstName
+      let lastName = this.state.lastName
+      let email = this.state.email
+      let username = this.state.username
+      let subscriptionUpdate = {
+        paymentComplete: this.state.paymentComplete,
+        paymentRefNumber: this.state.paymentRefNumber,
+        paymentTxnId: this.state.paymentTxnId,
+        paymentDate: this.state.paymentDate,
+        paymentCard: this.state.paymentCard
+      }
+      axios({
+        method: "POST", 
+        url: this.state.env === 'DEVELOPMENT' ? "http://localhost:3000/sendUserSubscriptionUpdate" : "http://gfitwefit.com/sendUserSubscriptionUpdate",
+        data: {
+            firstName: firstName,   
+            lastName: lastName,
+            email: email,  
+            paymentCard: subscriptionUpdate.paymentCard
+        }
+        }).then((response)=> {
+            if (response.data.msg === 'success') {
+                console.log("Message Sent.")
+                API.userUpdateSubscription(username, subscriptionUpdate)
+                  .then(res => {
+                      console.log('USER SUBSCRIPTION UPDATED SUCCESSFULLY: ', res)
+                      document.getElementById('userManageMembershipCloseButton').style.display = 'block'
+                      this.setState({
+                        userUpdateMembershipSuccess: true
+                      })
+                      document.getElementById('subscriptionModalBody').innerHTML = `<span className='userUpdateSubscriptionModalBody'>Glad to have you join the team! Head over to the videos tab to get started!</span>`
+                  })
+                  .catch(err => {
+                    console.log('USER SUBSCRIPTION UPDATE ERROR: ', err)
+                    document.getElementById('userManageMembershipCloseButton').style.display = 'block'
+                    document.getElementById('txnDetailsButton').style.disabled = false
+                    document.getElementById('txnDetailsButton').innerHTML = `Update Subscription (try again)`
+                    this.setState({
+                      userUpdateMembershipError: true
+                    })
+                  })
+            } else if (response.data.msg === 'fail') {
+              console.log("Message failed to send.")
+              document.getElementById('txnDetailsButton').style.disabled = false
+              document.getElementById('txnDetailsButton').innerHTML = `Update Subscription (try again)`
+              this.setState({
+                userUpdateMembershipError: true
+              })
+            }
+        })
+      }
+
     render() {
         return (
           <div id="userProfilePage">
+            <Modal 
+              isOpen={this.state.userSubscriptionModal} 
+              autoFocus={true}
+              centered={true}
+              size='lg'
+              className='subscriptionModal'
+            >
+                <ModalHeader id='modalTitle'>
+                  Manage Subscription
+                </ModalHeader>
+                <ModalBody id='subscriptionModalBody' className='subscriptionModalBody'>
+                    {
+                      this.state.subscriptionStatus ? 
+
+                      <div className="row subscriptionModalBodyInfo">
+                        <div className='col-12 subscriptionModalBodyColumn1'>
+                          <p>Your subscription is currently active. Would you like to cancel?</p>
+                        </div>
+                        <div className='col-12 subscriptionModalBodyColumn2'> 
+                          <Button id='cancelSubscriptionButton' className='cancelSubscriptionButton' onClick={this.handleUserCancellation} color='danger'>
+                            Cancel Subscription
+                          </Button>
+                        </div>
+                      </div>
+
+                      :
+
+                      <div className="row subscriptionModalBodyInfo">
+                        <div id="subscriptionModalBodyDetails" className='row'>
+                          <div className='col-12 subscriptionModalBodyColumn1'>
+                            <p>Getting started with G-Fit Gold is just a few clicks away!</p>
+                          </div>
+                          <div className='col-12 subscriptionModalBodyColumn2'> 
+                            <Button className='userSubscriptionButton' onClick={this.handleConvergePay}>
+                              Subscribe with Converge
+                            </Button>
+                          </div>
+                        </div>
+                        <ManageUserConvergeLightbox 
+                          handleChange={this.handleChange}
+                          sessionID={this.state.sessionID}
+                          checkConvergePayment={this.checkConvergePayment}
+                          refCallback={this.setClockRef}
+                          convergeCountdownComplete={this.convergeCountdownComplete}
+                          handleConvergePay={this.handleConvergePay}
+                          handleConvergePayRetry={this.handleConvergePayRetry}
+                          divStyle={this.state.divStyle}
+                          convergeTokenError={this.state.convergeTokenError}
+                          handleSubscriptionSubmit={this.handleSubscriptionSubmit}
+                        />
+                      </div>
+                    }
+                </ModalBody>
+                <UserCancelMembershipError
+                  userCancelMembershipError={this.state.userCancelMembershipError}
+                />
+                <UserCancelMembershipSuccess
+                  userCancelMembershipSuccess={this.state.userCancelMembershipSuccess}
+                />
+                <UserUpdateMembershipError
+                  userUpdateMembershipError={this.state.userUpdateMembershipError}
+                />
+                <UserUpdateMembershipSuccess
+                  userUpdateMembershipSuccess={this.state.userUpdateMembershipSuccess}
+                />
+                <ModalFooter>
+                  <Button id='userManageMembershipCloseButton' color="secondary" onClick={this.closeUserSubscriptionModal}>Close</Button>
+                </ModalFooter>
+              </Modal>
+
             <h2 className="userProfileHeading">User Profile</h2>
             <UserEditProfile 
               firstName={this.state.firstName}

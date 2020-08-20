@@ -26,6 +26,7 @@ const userSchema = new Schema({
     paymentRefNumber: { type: String, required: false, default: 'n/a'},
     paymentTxnId: { type: String, required: false, default: 'n/a'},
     paymentDate: { type: String, required: false, default: 'n/a' },
+    paymentCard: { type: String, required: false, default: 'n/a' },
     waiverSigned: { type: Boolean, required: true, default: false },
     signUpDate: {type: Date, required: true, default: Date.now },
     resetPasswordToken: String,

@@ -316,8 +316,49 @@
 }
 
 .MuiAccordionSummary-content .MuiTypography-body1 {
-/* font-size: 1vw; */
-font-family: 'gfitfont-bold';
+  /* font-size: 1vw; */
+  font-family: 'gfitfont-bold';
+}
+
+.subscriptionModalBody {
+  text-align: center;
+}
+
+#subscriptionModalBodyDetails {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.subscriptionModalBodyInfo {
+  margin: 0 auto;
+}
+
+.subscriptionModalBodyColumn1 {
+  text-align: center
+}
+
+.userSubscriptionButton {
+  width: 100%;
+  background-color: #FAC04E;
+}
+
+.cancelSubscriptionButton {
+  width: 100%;
+}
+
+#manageUserConvergeLightbox {
+  display: none;
+  width: 100%;
+  margin: auto;
+}
+
+#txnDetailsButton {
+  margin: 0 auto;
+  margin-top: 5%;
+}
+
+.inactiveSubscriptionDetails {
+  color: black;
 }
 
 

@@ -50,6 +50,46 @@ module.exports = {
         .then(dbModel => res.json(dbModel))
         .catch(err => res.status(422).json(err))
     },
+    userCancelSubscription: function(req, res) {
+      let paymentComplete = req.body.paymentComplete
+      let paymentRefNumber = req.body.paymentRefNumber
+      let paymentTxnId = req.body.paymentTxnId
+      let paymentDate = req.body.paymentDate
+      let paymentCard = req.body.paymentCard
+        db.User
+          .updateOne(
+            { username: req.params.id },
+            { $set: { 
+              'paymentComplete': paymentComplete,
+              'paymentRefNumber': paymentRefNumber,
+              'paymentTxnId': paymentTxnId,
+              'paymentDate': paymentDate,
+              'paymentCard': paymentCard
+            }},
+         )
+        .then(dbModel => res.json(dbModel))
+        .catch(err => res.status(422).json(err))
+    },
+    userUpdateSubscription: function(req, res) {
+      let paymentComplete = req.body.paymentComplete
+      let paymentRefNumber = req.body.paymentRefNumber
+      let paymentTxnId = req.body.paymentTxnId
+      let paymentDate = req.body.paymentDate
+      let paymentCard = req.body.paymentCard
+        db.User
+          .updateOne(
+            { username: req.params.id },
+            { $set: { 
+              'paymentComplete': paymentComplete,
+              'paymentRefNumber': paymentRefNumber,
+              'paymentTxnId': paymentTxnId,
+              'paymentDate': paymentDate,
+              'paymentCard': paymentCard
+            }},
+         )
+        .then(dbModel => res.json(dbModel))
+        .catch(err => res.status(422).json(err))
+    },
     updateUserPassword: function(req, res) {
       let password = req.body.newPassword
         db.User
@@ -61,8 +101,6 @@ module.exports = {
          )
         .then(dbModel => res.json(dbModel))
         .catch(err => res.status(422).json(err))
-      // });     
-      
     },
     // findByDate: function(req, res) {
     //   db.Game

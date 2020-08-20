@@ -52,6 +52,12 @@ router.route('/preferences/:id')
   
 //   .delete(userController.findOneAndDelete)
 
+router.route('/userUpdateSubscription/:id')
+  .put(userController.userUpdateSubscription)
+
+router.route('/userCancelSubscription/:id')
+  .put(userController.userCancelSubscription)  
+
 router.route('/updatePassword/:id')
   .put(userController.updateUserPassword)
 

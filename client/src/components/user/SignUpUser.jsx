@@ -56,6 +56,7 @@ class SignUpUser extends Component {
     constructor(props) {
         super(props)
         this.state = {
+        env: 'PRODUCTION',
         currentStep: 1, // Default is Step 1
         currentStepTitle: 'Basic Information',
         progressPct: 10,
@@ -82,6 +83,7 @@ class SignUpUser extends Component {
         paymentRefNumber: '',
         paymentTxnId: '',
         paymentDate: '',
+        paymentCard: '',
         emailError: false,
         passwordError: false,
         phoneError: false,
@@ -124,7 +126,6 @@ class SignUpUser extends Component {
         this.checkConvergePayment = this.checkConvergePayment.bind(this)
         this.handlePasswordChange = this.handlePasswordChange.bind(this)
         this.checkPassword = this.checkPassword.bind(this)
-        // this.startTimer = this.startTimer.bind(this)
         this.setClockRef = this.setClockRef.bind(this);
         this.startTimer = this.startTimer.bind(this);
         this.pauseTimer = this.pauseTimer.bind(this);
@@ -134,12 +135,14 @@ class SignUpUser extends Component {
         this.handleContinueWithoutPayment = this.handleContinueWithoutPayment.bind(this)
         this.handleFormSubmitNoPay = this.handleFormSubmitNoPay.bind(this)
         this.handleSendUserInfo = this.handleSendUserInfo.bind(this)
+        this.openLightbox = this.openLightbox.bind(this)
     }
 
     componentDidMount() {
         // console.log('User Sign Up Ready')
         this.scrollTop()
         this.setClockRef()
+        
       }
 
     scrollTop() {
@@ -296,7 +299,9 @@ class SignUpUser extends Component {
         // If the current step is 2 or 3, then subtract one on "previous" button click
         currentStep = currentStep <= 1? 1: currentStep - 1
         this.setState({
-          currentStep: currentStep
+          currentStep: currentStep,
+          waiverSigned: false,
+          waiverError: false
         }, () => {
           this.handleStepTitleChange()
         })
@@ -356,8 +361,7 @@ class SignUpUser extends Component {
         axios.defaults.timeout = 1000 * 15;
         axios({
           method: "GET", 
-          url: "https://www.gfitwefit.com/converge_token_req",
-          // url: "http://localhost:3000/converge_token_req" || "http://localhost:3001/converge_token_req", 
+          url: this.state.env === 'DEVELOPMENT' ? "http://localhost:3000/converge_token_req" || "http://localhost:3001/converge_token_req" : "https://www.gfitwefit.com/converge_token_req",
           }).then((response)=> {
             console.log('GOT A RESPONSE: ', response)
             let ssl_txn_auth_token = response.data
@@ -413,8 +417,7 @@ class SignUpUser extends Component {
         axios.defaults.timeout = 1000 * 10;
         axios({
           method: "GET", 
-          url: "https://www.gfitwefit.com/converge_token_req",
-          // url: "http://localhost:3000/converge_token_req" || "http://localhost:3001/converge_token_req",
+          url: this.state.env === 'DEVELOPMENT' ? "http://localhost:3000/converge_token_req" || "http://localhost:3001/converge_token_req" : "https://www.gfitwefit.com/converge_token_req",
           }).then((response)=> {
             console.log('GOT A RESPONSE: ', response)
             let ssl_txn_auth_token = response.data
@@ -523,12 +526,22 @@ class SignUpUser extends Component {
             paymentComplete: true,
             paymentRefNumber: msg.ssl_transaction_reference_number,
             paymentTxnId: msg.ssl_txn_id,
-            paymentDate: msg.ssl_txn_time
+            paymentDate: msg.ssl_txn_time,
+            paymentCard: msg.ssl_card_number
           }, () => {
             this.handleFormSubmit()
           })
         } else {
           console.log('PAYMENT ERROR OCCURED')
+          this.setState({
+            paymentComplete: false,
+            paymentRefNumber: 'n/a',
+            paymentTxnId: 'n/a',
+            paymentDate: 'n/a',
+            paymentCard: 'n/a'
+          }, () => {
+            this.handleFormSubmit()
+          })
         }
       }
 
@@ -685,9 +698,10 @@ class SignUpUser extends Component {
             exercisePlan: this.state.exercisePlan ? this.state.exercisePlan : 'n/a',
             gymEquipment: this.state.gymEquipment ? this.state.gymEquipment : 'n/a',
             paymentComplete: this.state.paymentComplete,
-            paymentRefNumber: this.state.paymentRefNumber,
-            paymentTxnId: this.state.paymentTxnId,
-            paymentDate: this.state.paymentDate,
+            paymentRefNumber: this.state.paymentComplete ? this.state.paymentRefNumber : 'n/a',
+            paymentTxnId: this.state.paymentComplete ? this.state.paymentTxnId : 'n/a',
+            paymentDate: this.state.paymentComplete ? this.state.paymentDate : 'n/a',
+            paymentCard: this.state.paymentComplete ? this.state.paymentCard : 'n/a',
             waiverSigned: this.state.waiverSigned
         };
         console.log(userData);
@@ -739,10 +753,11 @@ class SignUpUser extends Component {
             activityLevel: this.state.activityLevel ? this.state.activityLevel : 'n/a',
             exercisePlan: this.state.exercisePlan ? this.state.exercisePlan : 'n/a',
             gymEquipment: this.state.gymEquipment ? this.state.gymEquipment : 'n/a',
-            paymentComplete: this.state.paymentComplete,
-            paymentRefNumber: this.state.paymentRefNumber,
-            paymentTxnId: this.state.paymentTxnId,
-            paymentDate: this.state.paymentDate,
+            paymentComplete: false,
+            paymentRefNumber: 'n/a',
+            paymentTxnId: 'n/a',
+            paymentDate: 'n/a',
+            paymentCard: 'n/a',
             waiverSigned: this.state.waiverSigned
         };
         console.log(userData);
@@ -768,8 +783,7 @@ class SignUpUser extends Component {
         console.log(firstName, lastName, email, subscriptionStatus)
         axios({
             method: "POST", 
-            url:"http://gfitwefit.com/sendUserInfo",
-            // url:"http://localhost:3000/sendUserInfo", 
+            url: this.state.env === 'DEVELOPMENT' ? "http://localhost:3000/sendUserInfo" : "http://gfitwefit.com/sendUserInfo",
             data: {
                 firstName: firstName,   
                 lastName: lastName,
@@ -791,6 +805,11 @@ class SignUpUser extends Component {
             }
         })
       }
+
+    openLightbox = (event) => {
+      event.preventDefault()
+      // window.["openLightbox"]
+    }
 
     render() {
         return (
@@ -912,7 +931,7 @@ class SignUpUser extends Component {
 
                       :
 
-                      (this.state.currentStep < 7) ?
+                      (this.state.currentStep < 6) ?
 
                         <Button onClick={this.handlePrevStep} variant="warning" id='finalStepPrev' className="prevStep">
                             Prev
@@ -928,15 +947,17 @@ class SignUpUser extends Component {
 
                       :
 
-                      <span className='stepButtonSpan'>
-                        <Button onClick={this.handlePrevStep} variant="warning" className="prevStep">
-                            Prev
-                        </Button> 
+                      <span></span>
 
-                        <Button onClick={this.handleFormSubmit} variant="success" type="submit" className="submitSignUp">
-                            Submit
-                        </Button>
-                      </span>
+                      // <span className='stepButtonSpan'>
+                      //   <Button onClick={this.handlePrevStep} variant="warning" className="prevStep">
+                      //       Prev
+                      //   </Button> 
+
+                      //   <Button onClick={this.handleFormSubmit} variant="success" type="submit" className="submitSignUp">
+                      //       Submit
+                      //   </Button>
+                      // </span>
 
                     }
                     <ChangeStepError 

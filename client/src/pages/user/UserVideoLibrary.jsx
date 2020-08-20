@@ -13,12 +13,14 @@ import '../../css/user/user.css'
 
 // COMPONENTS
 import UserVideoPreferences from './UserVideoPreferences.jsx'
+// import { useRadioGroup } from '@material-ui/core';
 
 
 class UserVideoLibrary extends Component {
     constructor(props) {
         super(props)
         this.state = {
+          subscriptionStatus: '',
           equipmentNeeded: null,
           fitnessLevel: null,
           workoutCategory: null,
@@ -39,7 +41,7 @@ class UserVideoLibrary extends Component {
 
     componentDidMount() {
         this.getUserData()
-        this.getVideos()
+        // this.getVideos()
       }
 
     getUserData = () => {
@@ -49,7 +51,7 @@ class UserVideoLibrary extends Component {
             .then(res => {
                 // console.log(res.data[0])
                 let user = res.data[0]
-
+                // console.log('USER: ', user)
                 //CHECK USER PREFERENCES
                 let userPreferences = user.videoFilterPreferences
                 let workoutCategory = null
@@ -70,33 +72,44 @@ class UserVideoLibrary extends Component {
                   workoutCategory: workoutCategory,
                   fitnessLevel: fitnessLevel,
                   equipmentNeeded: equipmentNeeded,
+                  subscriptionStatus: user.paymentComplete
+                }, () => {
+                    this.getVideos(this.state.subscriptionStatus)
                 })
+
+                
             })
             .catch(err => {
                 console.log(err)
             })
       }
 
-    getVideos = () => {
-        document.getElementById('noVideosTitle').innerHTML = `<span class="spinner-border spinner-border-lg" role="status" aria-hidden="true"></span> Loading videos...`
-        axios.get('/videos').then(res => {
-            let files = res.data
-            let videoLibrary = files.filter(file => {
-                return file.contentType === 'video/quicktime'
-            })
-            this.setState({
-                videoLibrary: videoLibrary,
-                videoLibraryFiltered: videoLibrary
-            }, () => {
-              if (videoLibrary.length < 1) {
-                document.getElementById('noVideosTitle').innerHTML = `There are no videos to display.`
-                document.getElementById('noVideosTitle').style.display = 'block'
-              } else {
-                document.getElementById('noVideosTitle').style.display = 'none'
-              }
-              console.log(this.state.videoLibrary);
-            })
-          });
+    getVideos = (subscriptionStatus) => {
+        console.log('SUBSCRIPTION STATUS: ', subscriptionStatus)
+        if (subscriptionStatus) {
+            document.getElementById('noVideosTitle').innerHTML = `<span class="spinner-border spinner-border-lg" role="status" aria-hidden="true"></span> Loading videos...`
+            axios.get('/videos').then(res => {
+                let files = res.data
+                let videoLibrary = files.filter(file => {
+                    return file.contentType === 'video/quicktime'
+                })
+                this.setState({
+                    videoLibrary: videoLibrary,
+                    videoLibraryFiltered: videoLibrary
+                }, () => {
+                  if (videoLibrary.length < 1) {
+                    document.getElementById('noVideosTitle').innerHTML = `There are no videos to display.`
+                    document.getElementById('noVideosTitle').style.display = 'block'
+                  } else {
+                    document.getElementById('noVideosTitle').style.display = 'none'
+                  }
+                  console.log(this.state.videoLibrary);
+                })
+              });
+        } else {
+            document.getElementById('noVideosTitle').innerHTML = `<span class='inactiveSubscriptionDetails'>Your subscription is currently INACTIVE. To manage your subscription navigate to profile tab.</span>`
+        }
+        
       }
 
     toggleFilter = (event) => {

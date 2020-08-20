@@ -17,6 +17,12 @@ export default {
     updateUserPassword: function(id, passwordData) {
         return axios.put('/api/users/updatePassword/' + id, passwordData)
     },
+    userCancelSubscription: function(id, subscriptionData) {
+        return axios.put('/api/users/userCancelSubscription/' + id, subscriptionData)
+    },
+    userUpdateSubscription: function(id, subscriptionData) {
+        return axios.put('/api/users/userUpdateSubscription/' + id, subscriptionData)
+    },
     deleteUser: function(id) {
         return axios.delete('/api/users/' + id)
     },

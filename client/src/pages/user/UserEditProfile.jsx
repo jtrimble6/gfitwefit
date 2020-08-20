@@ -144,7 +144,7 @@ export default function ControlledAccordions(props) {
                 <Form.Group as={Col} controlId="formGridSubscriptionStatus">
                   <Form.Label className='subscriptionDetails'>Subscription status:</Form.Label>
                   <Form.Control 
-                      value={props.subscriptionStatus}
+                      value={props.subscriptionStatus ? 'ACTIVE' : 'INACTIVE'}
                       name="subscriptionStatus"
                       disabled={true}
                   />
@@ -162,7 +162,7 @@ export default function ControlledAccordions(props) {
               </Form.Row>
               <Form.Row className='subscriptionSubmitRow'>
                 {
-                  props.subscriptionStatus === 'ACTIVE' ? 
+                  props.subscriptionStatus ? 
                   
                   <small className='subscriptionRenewDetails'>Subscription will auto-renew on {props.autoRenewDate}</small> :
 

@@ -8,6 +8,8 @@ import '../../css/general/login.css'
 
 // COMPONENTS
 import LoginBar from '../../components/nav/LoginBar'
+
+// ALERTS
 import UpdateUserPasswordError from "../../components/alerts/UpdateUserPasswordError";
 import UpdateUserPasswordSuccess from "../../components/alerts/UpdateUserPasswordSuccess";
 import EmailNotFound from "../../components/alerts/EmailNotFound";

@@ -12,12 +12,13 @@
   }
 
 .contentsDivUserSignUp {
-    height: 100%;
+    height: auto;
 }
 
 .signUpUserDiv {
     font-family: 'gfitfont-bold';
     width: 70%;
+    height: auto;
     /* height: 100% !important; */
     overflow-y: hidden !important;
     margin: 0 auto;
@@ -341,7 +342,7 @@
   and (max-device-width: 3000px) 
   and (-webkit-min-device-pixel-ratio: 1) { 
     .contentsDivUserSignUp {
-        height: 100%;
+        height: auto;
         margin-bottom: 20%;
     }
 }

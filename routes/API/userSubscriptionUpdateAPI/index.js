@@ -17,23 +17,23 @@ transporter.verify((error, success) => {
   if (error) {
     console.log(error);
   } else {
-    console.log('User sign up server is ready to take messages');
+    console.log('User subscription updating server is ready to take messages');
   }
 });
 
-router.post('/sendUserInfo', (req, res, next) => {
+router.post('/sendUserSubscriptionUpdate', (req, res, next) => {
   var firstName = req.body.firstName
   var lastName= req.body.lastName
   var email = req.body.email
-  var subscriptionStatus = req.body.subscriptionStatus.toUpperCase()
+  var paymentCard = req.body.paymentCard
 
-  var content = `Let's go! A new user has signed up through the GFit website.\n\nPlease see below regarding the new user's subscription status. If the user shows an ACTIVE subscription, an admin will need to set the user up in Converge for recurring payments.\n\nFirst Name: ${firstName}\nLast Name: ${lastName}\nEmail: ${email}\nSubscription status: ${subscriptionStatus}\n`
+  var content = `Woo Hoo! A GFit user has decided to activate their membership.\n\nPlease see below regarding the users information to set up the users monthly payment plan with Converge.\n\nFirst Name: ${firstName}\nLast Name: ${lastName}\nEmail: ${email}\n Credit Card: ${paymentCard}`
 
   var mail = {
     from: firstName + lastName,
     // to: 'kgouveia@gfitwefit.com',  //Change to email address that you want to receive messages on
     to: 'trimbledevelops@gmail.com',
-    subject: 'New User Sign Up!',
+    subject: 'User Subscription Activated!',
     text: content
   }
 

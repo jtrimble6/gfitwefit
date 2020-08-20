@@ -10,41 +10,24 @@ import ConvergeTokenError from '../alerts/ConvergeTokenError'
 
 
 
-class SignUpUserConvergeLightbox extends Component {
+class ManageUserConvergeLightbox extends Component {
   
     componentDidMount() {
-        // console.log('Converge Lightbox Ready')
        
       }
 
     render() {
-        // Verify this is current step
-        if (this.props.currentStep !== 6) {
-            return null
-        }
-
-        // Set timer length
-        // const { refCallback, time } = this.props;
-
+        
         return (
-            <div className='userSignUpConvergeLightbox'>
+            <div className='userSignUpConvergeLightbox' id='manageUserConvergeLightbox'>
               <Form.Row id="convergeLightboxForm">
-                <div id='txnDetails'>
-                    
-                    <h4 className='txnDetailsTitle'>Transaction Details</h4>
-
-                    <p className='txnDetailsInfoTitle'>Transaction Status:</p>
-                    <div id="txnStatus"></div><br />
-
-                    <p className='txnDetailsInfoTitle'>Transaction Reference Number:</p>
-                    <div id="txnReferenceNumber"></div><br />
-
-                    <p className='txnDetailsInfoTitle'>Payment Type:</p>
-                    <div id="txnPaymentType"></div><br />
-                    
-                    <p className='txnDetailsInfoTitle'>Payment Amount:</p>
-                    <div id="txnPaymentAmount"></div>
-
+                <div id='txnDetails' className='col-12'>
+                  <h4 className='txnDetailsTitle'>Transaction Details</h4>
+                  <p className='txnDetailsInfoTitle'>Transaction Status:</p><div id="txnStatus"></div><br />
+                  <p className='txnDetailsInfoTitle'>Transaction Reference Number:</p><div id="txnReferenceNumber"></div><br />
+                  <p className='txnDetailsInfoTitle'>Payment Type:</p><div id="txnPaymentType"></div><br />
+                  <p className='txnDetailsInfoTitle'>Payment Amount:</p><div id="txnPaymentAmount"></div>
+                  <Button id='txnDetailsButton' onClick={this.props.checkConvergePayment}></Button>
                 </div>
               </Form.Row>
                 <div className="convergeInfo" id='convergeInfo'>
@@ -70,7 +53,7 @@ class SignUpUserConvergeLightbox extends Component {
                   <Button 
                     id='convergeLightboxInitButton' 
                     className='convergeLightboxButton' 
-                    onClick={window["openLightbox"]}
+                    onClick={window["openLightboxUserManageSubscription"]}
                   >
                     Secure Payment
                   </Button> 
@@ -80,13 +63,6 @@ class SignUpUserConvergeLightbox extends Component {
                     className='payWithConvergeRetry'
                   >
                     Request new payment token
-                  </Button>
-                  <Button 
-                    onClick={this.props.handleContinueWithoutPayment} 
-                    id='continueWithoutPaymentButton' 
-                    className='continueWithoutPaymentButton'
-                  >
-                    Finish signup without payment.
                   </Button>
                   <ConvergeTokenError
                     convergeTokenError={this.props.convergeTokenError}
@@ -104,5 +80,5 @@ class SignUpUserConvergeLightbox extends Component {
     };
 };
 
-export default SignUpUserConvergeLightbox;
+export default ManageUserConvergeLightbox;
        

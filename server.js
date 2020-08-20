@@ -14,6 +14,8 @@ const userRoutes = require("./routes/API/userAPI");
 const sessionRoutes = require("./routes/API/sessionAPI");
 const contactRoutes = require('./routes/API/contactAPI')
 const userSignUpRoutes = require('./routes/API/userSignUpAPI')
+const userSubscriptionCancellationRoutes = require('./routes/API/userSubscriptionCancellationAPI')
+const userSubscriptionUpdateRoutes = require('./routes/API/userSubscriptionUpdateAPI')
 const convergePayRoutes = require('./routes/API/convergePayAPI')
 const messageBoardRoutes = require('./routes/API/messageBoardAPI')
 const passwordResetRoutes = require('./routes/API/passwordResetAPI')
@@ -51,6 +53,8 @@ app.use(
   scheduleRoutes, 
   contactRoutes, 
   userSignUpRoutes,
+  userSubscriptionCancellationRoutes,
+  userSubscriptionUpdateRoutes,
   convergePayRoutes,
   messageBoardRoutes, 
   passwordResetRoutes
@@ -82,30 +86,9 @@ app.use(function(req, res, next) { //allow cross origin requests
   next();
 });
 
-// app.use( (req, res, next) => {
-//   res.header("Access-Control-Allow-Origin", "*");
-//   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-//   // console.log('req.session', req.session);
-//   return next();
-// });
-
-// app.get('/signup', (req, res) => {
-//   request(
-//     { url: 'https://localhost:3000/signup' },
-//     (error, response, body) => {
-//       if (error || response.statusCode !== 200) {
-//         return res.status(500).json({ type: 'error', message: err.message });
-//       }
-
-//       res.json(JSON.parse(body));
-//     }
-//   )
-// });
-
 // Connect to the Mongo DB
 mongoose.connect(process.env.MONGODB_URI || config.db);
 const conn = mongoose.createConnection(process.env.MONGODB_URI || config.db);
-
 
 //Init gfs
 let gfs;
@@ -279,7 +262,7 @@ app.get('/converge_token_req', (request, response) => {
       ssl_user_id: process.env.SSL_USER_ID,
       ssl_pin: process.env.SSL_PIN,
       ssl_transaction_type: 'ccsale',
-      ssl_amount: '1.00'
+      ssl_amount: '5.00'
     }
   }
   console.log('CONFIG: ', proxy, config.params)
@@ -293,7 +276,7 @@ app.get('/converge_token_req', (request, response) => {
       ssl_user_id: process.env.SSL_USER_ID,
       ssl_pin: process.env.SSL_PIN,
       ssl_transaction_type: 'ccsale',
-      ssl_amount: '1.00'
+      ssl_amount: '5.00'
     }
     }).then((res) => {
         response.send(res.data)
