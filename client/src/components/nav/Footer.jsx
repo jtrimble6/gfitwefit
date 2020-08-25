@@ -69,33 +69,18 @@ class Footer extends Component {
                   </Row>
                 </Col>
                 <Col className='footerSocial'>
-                  <a href='https://goo.gl/maps/C1jpxUZfzX1wt42D8' target='_blank' rel='noopener noreferrer'>
+                  <a href='https://goo.gl/maps/C1jpxUZfzX1wt42D8' target='_blank' rel='noopener noreferrer' aria-label="Google Maps">
                     <i className="fas fa-map-marker-alt footerIcon"></i>
                   </a>
-                  <a href='https://www.instagram.com/gfitwefit/?hl=en' target='_blank' rel='noopener noreferrer'>
+                  <a href='https://www.instagram.com/gfitwefit/?hl=en' target='_blank' rel='noopener noreferrer' aria-label="Instagram">
                     <i className="fab fa-instagram footerIcon"></i>
                   </a>
-                  <a href='https://www.facebook.com/gfitwefit/' target='_blank' rel='noopener noreferrer'>
+                  <a href='https://www.facebook.com/gfitwefit/' target='_blank' rel='noopener noreferrer' aria-label="Facebook">
                     <i className="fab fa-facebook-square footerIcon"></i>
                   </a>
                 </Col>
             </Row>
           </div>
-            // <span 
-            //   className={classnames("row connectIcons", {"connectIcons--hidden": !this.state.visible})} 
-            // >
-            
-            //         <a href='https://www.instagram.com/gfitwefit/?hl=en' target='_blank' rel='noopener noreferrer'>
-            //             <i className="fab fa-instagram"></i>
-            //         </a>
-            //         <a href='https://www.facebook.com/gfitwefit/' target='_blank' rel='noopener noreferrer'>
-            //             <i className="fab fa-facebook-square"></i>
-            //         </a>
-            //         <a href='https://goo.gl/maps/C1jpxUZfzX1wt42D8' target='_blank' rel='noopener noreferrer'>
-            //         <i className="fas fa-map-marker-alt"></i>
-            //         </a>
-
-            // </span>
         )
     }
 }

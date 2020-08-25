@@ -288,7 +288,7 @@
     .scheduleFormSelectors, .equipmentNeededLabel, .fitnessLevelLabel, .workoutCategoryLabel, .adminSubmitButton, .adminViewLibraryButton, .adminSignUpFormLabel, .userHeaders {
       font-size: 2rem;
     }
-    #dayOfWeek, #workout, #times, #fileUploadName, #equipmentNeeded, #fitnessLevel, #workoutCategory, .adminSignUpFormEntry, .adminEditUsersFullName, .adminEditUsersEmail, .adminEditUsersSubscriptionStatus {
+    #dayOfWeek, #workout, #times, #fileUploadName, #equipmentNeeded, #fitnessLevel, #workoutCategory, .adminSignUpFormEntry, .adminEditUsersFullName, .adminEditUsersUsername, .adminEditUsersEmail, .adminEditUsersSubscriptionStatus {
       font-size: 1.2rem;
     }
 }
@@ -304,7 +304,7 @@
     .scheduleFormSelectors, .equipmentNeededLabel, .fitnessLevelLabel, .workoutCategoryLabel, .adminSubmitButton, .adminViewLibraryButton, .adminSignUpFormLabel, .userHeaders {
       font-size: 2rem;
     }
-    #dayOfWeek, #workout, #times, #fileUploadName, #equipmentNeeded, #fitnessLevel, #workoutCategory, .adminSignUpFormEntry, .adminEditUsersFullName, .adminEditUsersEmail, .adminEditUsersSubscriptionStatus {
+    #dayOfWeek, #workout, #times, #fileUploadName, #equipmentNeeded, #fitnessLevel, #workoutCategory, .adminSignUpFormEntry, .adminEditUsersFullName, .adminEditUsersUsername, .adminEditUsersEmail, .adminEditUsersSubscriptionStatus {
       font-size: 1.2rem;
     }
 }
@@ -319,7 +319,7 @@
     .scheduleFormSelectors, .equipmentNeededLabel, .fitnessLevelLabel, .workoutCategoryLabel, .adminSubmitButton, .adminViewLibraryButton, .adminSignUpFormLabel, .userHeaders {
       font-size: 2rem;
     }
-    #dayOfWeek, #workout, #times, #fileUploadName, #equipmentNeeded, #fitnessLevel, #workoutCategory, .adminSignUpFormEntry, .adminEditUsersFullName, .adminEditUsersEmail, .adminEditUsersSubscriptionStatus {
+    #dayOfWeek, #workout, #times, #fileUploadName, #equipmentNeeded, #fitnessLevel, #workoutCategory, .adminSignUpFormEntry, .adminEditUsersFullName, .adminEditUsersUsername, .adminEditUsersEmail, .adminEditUsersSubscriptionStatus {
       font-size: 1.2rem;
     }
     
@@ -452,7 +452,7 @@
     .userHeaders {
       white-space: pre-wrap !important;
     }
-    .adminEditUsersFullName, .adminEditUsersEmail, .adminEditUsersSubscriptionStatus {
+    .adminEditUsersFullName, .adminEditUsersUsername, .adminEditUsersEmail, .adminEditUsersSubscriptionStatus {
       font-size: .8rem;
       white-space: pre-wrap;
     }

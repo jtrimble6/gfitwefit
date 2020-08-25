@@ -5,6 +5,7 @@ import API from '../../utils/API'
 import { NavLink } from 'reactstrap';
 import { Form, Button, ProgressBar } from 'react-bootstrap'
 
+
 // CSS
 import '../../css/general/signup.css'
 

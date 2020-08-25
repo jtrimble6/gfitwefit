@@ -13,7 +13,7 @@ class AboutLanding extends Component {
                 <Jumbotron className='aboutJumbotron'>
                     <Row>
                         <Col sm={4} className='aboutJumbotronLogoColumn'>
-                            <img src={logo} className="aboutJumbotronLogo" alt="logo" />
+                            <img src={logo} className="aboutJumbotronLogo" alt="Gouveia Fitness Logo" />
                         </Col>
                         <Col sm={8} className='aboutJumbotronBodyColumn'>
                             <Row className='aboutJumbotronHeaderRow'>

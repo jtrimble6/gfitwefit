@@ -35,7 +35,7 @@ class GymInfo extends Component {
                         </Row>
                     </Col>
                     <Col sm={6}>
-                        <img src={logo} className="gymInfoLogo" alt="logo" />
+                        <img src={logo} className="gymInfoLogo" alt="Gym Info Logo" />
                     </Col>
                 </Row>
             </div>

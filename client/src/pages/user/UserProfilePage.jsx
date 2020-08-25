@@ -75,7 +75,9 @@ class UserProfilePage extends Component {
             updateUserPasswordError: false,
             updateUserPasswordServerError: false,
             userCancelMembershipError: false,
-            userCancelMembershipSuccess: false
+            userCancelMembershipSuccess: false,
+            userUpdateMembershipError: false,
+            userUpdateMembershipSuccess: false
 
         }
         this.scrollTop = this.scrollTop.bind(this)

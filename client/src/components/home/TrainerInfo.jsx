@@ -20,7 +20,7 @@ class TrainerInfo extends Component {
                       {/* TRAINER BIO 1 */}
                       <Col sm-6='true' className='trainerBioCardColumn'>
                         <Card className='trainerBioCard'>
-                          <Card.Img className='trainerBioImage' variant="top" src={walt} />
+                          <Card.Img className='trainerBioImage' variant="top" src={walt} alt="Walt Gouveia" />
                           <Card.Body>
                               <Card.Title className='trainerBioTitle'>WALT GOUVEIA</Card.Title>
                               <Card.Subtitle className='trainerBioSubtitle'>OWNER + TRAINER</Card.Subtitle>
@@ -33,7 +33,7 @@ class TrainerInfo extends Component {
                       {/* TRAINER BIO 2 */}
                       <Col sm-6='true' className='trainerBioCardColumn'>
                         <Card className='trainerBioCard'>
-                          <Card.Img className='trainerBioImage' variant="top" src={kyle} />
+                          <Card.Img className='trainerBioImage' variant="top" src={kyle} alt="Kyle Gouveia" />
                           <Card.Body>
                               <Card.Title className='trainerBioTitle'>KYLE GOUVEIA</Card.Title>
                               <Card.Subtitle className='trainerBioSubtitle'>OWNER + TRAINER</Card.Subtitle>
@@ -48,7 +48,7 @@ class TrainerInfo extends Component {
                     {/* TRAINER BIO 3 */}
                     <Col sm-6='true' className='trainerBioCardColumn'>
                       <Card className='trainerBioCard'>
-                        <Card.Img className='trainerBioImage' variant="top" src={jenn} />
+                        <Card.Img className='trainerBioImage' variant="top" src={jenn} alt="Jennifer Coleman"/>
                         <Card.Body>
                             <Card.Title className='trainerBioTitle'>JENNIFER COLEMAN</Card.Title>
                             <Card.Subtitle className='trainerBioSubtitle'>TRAINER</Card.Subtitle>
@@ -61,7 +61,7 @@ class TrainerInfo extends Component {
                     {/* TRAINER BIO 4 */}
                     <Col sm-6='true' className='trainerBioCardColumn'>
                       <Card className='trainerBioCard'>
-                        <Card.Img className='trainerBioImage' variant="top" src={jacob} />
+                        <Card.Img className='trainerBioImage' variant="top" src={jacob} alt="Jacob Erdtmann" />
                         <Card.Body>
                             <Card.Title className='trainerBioTitle'>JACOB ERDTMANN</Card.Title>
                             <Card.Subtitle className='trainerBioSubtitle'>TRAINER</Card.Subtitle>
