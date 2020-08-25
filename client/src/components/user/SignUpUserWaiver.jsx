@@ -45,7 +45,7 @@ class SignUpUserHealth extends Component {
                     />
                 </Form.Group>
               </Form.Row>
-              <Button onClick={this.props.handleConvergePay} id='convergeButton' className='payWithConverge'>
+              <Button onClick={this.props.handleConvergePay} id='convergeButton' className='payWithConverge' aria-label='Subscribe With Converge'>
                 Subscribe With Converge
               </Button>
               <ConvergeTokenError

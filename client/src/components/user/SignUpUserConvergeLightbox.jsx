@@ -71,6 +71,7 @@ class SignUpUserConvergeLightbox extends Component {
                     id='convergeLightboxInitButton' 
                     className='convergeLightboxButton' 
                     onClick={window["openLightbox"]}
+                    aria-label='Secure Payment'
                   >
                     Secure Payment
                   </Button> 
@@ -78,15 +79,17 @@ class SignUpUserConvergeLightbox extends Component {
                     onClick={this.props.handleConvergePayRetry} 
                     id='convergeButtonRetry' 
                     className='payWithConvergeRetry'
+                    aria-label='Request New Payment Token'
                   >
-                    Request new payment token
+                    Request New Payment Token
                   </Button>
                   <Button 
                     onClick={this.props.handleContinueWithoutPayment} 
                     id='continueWithoutPaymentButton' 
                     className='continueWithoutPaymentButton'
+                    aria-label='Continue Without Payment'
                   >
-                    Finish signup without payment.
+                    Finish Sign-Up Without Payment.
                   </Button>
                   <ConvergeTokenError
                     convergeTokenError={this.props.convergeTokenError}
@@ -94,7 +97,13 @@ class SignUpUserConvergeLightbox extends Component {
                 </div>
                 
                 <div id="convergeCompleteDiv">
-                  <Button id="txn_complete" className="txnCompleteButton" onClick={this.props.checkConvergePayment} type="submit">
+                  <Button 
+                    id="txn_complete" 
+                    className="txnCompleteButton" 
+                    onClick={this.props.checkConvergePayment} 
+                    type="submit"
+                    aria-label='Submit Form'
+                  >
                     
                   </Button>
                 </div>

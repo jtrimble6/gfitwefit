@@ -27,7 +27,7 @@ class ManageUserConvergeLightbox extends Component {
                   <p className='txnDetailsInfoTitle'>Transaction Reference Number:</p><div id="txnReferenceNumber"></div><br />
                   <p className='txnDetailsInfoTitle'>Payment Type:</p><div id="txnPaymentType"></div><br />
                   <p className='txnDetailsInfoTitle'>Payment Amount:</p><div id="txnPaymentAmount"></div>
-                  <Button id='txnDetailsButton' onClick={this.props.checkConvergePayment}></Button>
+                  <Button id='txnDetailsButton' onClick={this.props.checkConvergePayment} aria-label='Txn Details'></Button>
                 </div>
               </Form.Row>
                 <div className="convergeInfo" id='convergeInfo'>
@@ -54,6 +54,7 @@ class ManageUserConvergeLightbox extends Component {
                     id='convergeLightboxInitButton' 
                     className='convergeLightboxButton' 
                     onClick={window["openLightboxUserManageSubscription"]}
+                    aria-label='Secure Payment'
                   >
                     Secure Payment
                   </Button> 
@@ -61,8 +62,9 @@ class ManageUserConvergeLightbox extends Component {
                     onClick={this.props.handleConvergePayRetry} 
                     id='convergeButtonRetry' 
                     className='payWithConvergeRetry'
+                    aria-label='Request New Payment token'
                   >
-                    Request new payment token
+                    Request New Payment Token
                   </Button>
                   <ConvergeTokenError
                     convergeTokenError={this.props.convergeTokenError}
@@ -70,7 +72,13 @@ class ManageUserConvergeLightbox extends Component {
                 </div>
                 
                 <div id="convergeCompleteDiv">
-                  <Button id="txn_complete" className="txnCompleteButton" onClick={this.props.checkConvergePayment} type="submit">
+                  <Button 
+                    id="txn_complete" 
+                    className="txnCompleteButton" 
+                    onClick={this.props.checkConvergePayment} 
+                    type="submit"
+                    aria-label='Submit Form'
+                  >
                     
                   </Button>
                 </div>

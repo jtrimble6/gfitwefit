@@ -27,6 +27,7 @@ class SignUpUserHealthInfo extends Component {
                         onChange={this.props.handleChange}
                         name="medicalConditions"
                         placeholder="Ex. asthma, knee surgery" 
+                        aria-label='Medical Conditions'
                     />
                 </Form.Group>
               </Form.Row>
@@ -40,6 +41,7 @@ class SignUpUserHealthInfo extends Component {
                         onChange={this.props.handleChange}
                         name="familyHistory"
                         placeholder=""
+                        aria-label='Family History'
                     >
                         <option>Select One</option>
                         <option>Yes</option>
@@ -57,6 +59,7 @@ class SignUpUserHealthInfo extends Component {
                         onChange={this.props.handleChange}
                         name="personalHistory"
                         placeholder="" 
+                        aria-label='Personal History'
                     >
                         <option>Select One</option>
                         <option>Yes</option>

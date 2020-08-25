@@ -28,6 +28,7 @@ class SignUpUserFitnessInfo extends Component {
                         onChange={this.props.handleChange}
                         name="fitnessGoals"
                         placeholder="Ex. Lose weight, get toned, overall health, gain strength, improve endurance, etc." 
+                        aria-label='Fitness Goals'
                     />
                 </Form.Group>
               </Form.Row>
@@ -41,6 +42,7 @@ class SignUpUserFitnessInfo extends Component {
                         onChange={this.props.handleChange}
                         name="activityLevel"
                         placeholder=""
+                        aria-label='Activity Level'
                     >
                         <option>Select One</option>
                         <option>Sedentary (0 hours per week)</option>
@@ -60,6 +62,7 @@ class SignUpUserFitnessInfo extends Component {
                         onChange={this.props.handleChange}
                         name="exercisePlan"
                         placeholder=""
+                        aria-label='Exercise Plan'
                     >
                         <option>Select One</option>
                         <option>Sedentary (0 hours per week)</option>
@@ -79,6 +82,7 @@ class SignUpUserFitnessInfo extends Component {
                         onChange={this.props.handleChange}
                         name="gymEquipment"
                         placeholder=""
+                        aria-label='Gym Equipment'
                     >
                         <option>Select One</option>
                         <option>None (bodyweight)</option>

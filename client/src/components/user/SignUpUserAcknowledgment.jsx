@@ -22,7 +22,6 @@ class SignUpUserAcknowledgement extends Component {
               <h1 className='userSignUpAcknowledgementTitle'>
                   Thank you for signing up with GFit, head over to the sign in page and let't get after it!
               </h1>
-              
             </div>
         )
     };

@@ -921,11 +921,11 @@ class SignUpUser extends Component {
                       (this.state.currentStep < 5) ?
                     
                       <span className='stepButtonSpan'>
-                        <Button onClick={this.handlePrevStep} variant="warning" className="prevStep">
+                        <Button onClick={this.handlePrevStep} variant="warning" className="prevStep" aria-label='Previous Step'>
                             Prev
                         </Button> 
 
-                        <Button onClick={this.handleNextStep} variant="primary" className="nextStep">
+                        <Button onClick={this.handleNextStep} variant="primary" className="nextStep" aria-label='Next Step'>
                             Next
                         </Button>
                       </span>
@@ -934,7 +934,7 @@ class SignUpUser extends Component {
 
                       (this.state.currentStep < 6) ?
 
-                        <Button onClick={this.handlePrevStep} variant="warning" id='finalStepPrev' className="prevStep">
+                        <Button onClick={this.handlePrevStep} variant="warning" id='finalStepPrev' className="prevStep" aria-label='Previous Step'>
                             Prev
                         </Button> 
 
@@ -942,7 +942,7 @@ class SignUpUser extends Component {
 
                       (this.state.currentStep === 7) ?
 
-                      <NavLink className='signInButton' href="/userLogin">
+                      <NavLink className='signInButton' href="/userLogin" aria-label='Sign In'>
                        Sign In
                       </NavLink>
 

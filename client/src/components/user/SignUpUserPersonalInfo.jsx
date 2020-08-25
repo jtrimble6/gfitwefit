@@ -32,6 +32,7 @@ class SignUpUserPersonalInfo extends Component {
                         onChange={this.props.handleChange}
                         name="firstName"
                         placeholder="First Name" 
+                        aria-label='First Name'
                     />
                     </Form.Group>
 
@@ -42,6 +43,7 @@ class SignUpUserPersonalInfo extends Component {
                         onChange={this.props.handleChange}
                         name="lastName"
                         placeholder="Last Name" 
+                        aria-label='Last Name'
                     />
                 </Form.Group>
                 </Form.Row>
@@ -55,6 +57,7 @@ class SignUpUserPersonalInfo extends Component {
                         onChange={this.props.checkEmail}
                         type="email" 
                         placeholder="Email" 
+                        aria-label='Email'
                     />
                     <EmailError 
                         emailError={this.props.emailError}
@@ -68,6 +71,7 @@ class SignUpUserPersonalInfo extends Component {
                         name="phoneNumber"
                         onChange={this.props.handlePhoneChange}
                         placeholder="(___) ___-____" 
+                        aria-label='Phone Number'
                     />
                     <PhoneError 
                         phoneError={this.props.phoneError}
@@ -84,6 +88,7 @@ class SignUpUserPersonalInfo extends Component {
                         onChange={this.props.handlePasswordChange}
                         type="password" 
                         placeholder="Password" 
+                        aria-label='Password'
                     />
                 </Form.Group>
 
@@ -95,6 +100,7 @@ class SignUpUserPersonalInfo extends Component {
                         onChange={this.props.checkPassword}
                         type="password" 
                         placeholder="Confirm Password" 
+                        aria-label='Confirm Password'
                     />
                     <PasswordError 
                         passwordError={this.props.passwordError}

@@ -24,6 +24,7 @@ class SignUpUserBasicInfo extends Component {
                         name="height"
                         title="height"
                         className='formDropdown'
+                        aria-label='Height'
                     >
                       <option>Select One</option>
                       <option>under 5'0"</option>
@@ -82,6 +83,7 @@ class SignUpUserBasicInfo extends Component {
                         name="gender"
                         placeholder="Gender"
                         className='formDropdown'
+                        aria-label='Gender'
                     >
                         <option>Select One</option>
                         <option>Male</option>
@@ -130,24 +132,7 @@ class SignUpUserBasicInfo extends Component {
                     </InputGroup.Append>
                   </InputGroup>
                   </Form.Group>
-                  
                 </Form.Group>
-
-                {/* <Form.Group as={Col} controlid="formGridDOB">
-                    <Form.Label>Date of Birth</Form.Label>
-                    <DatePicker 
-                        id="example-datepicker" 
-                        value={this.state.dateValue} 
-                        onChange={this.handleChange} 
-                    />
-                    <Form.Control 
-                        value={this.props.dob}
-                        onChange={this.props.handleChange}
-                        name="dob"
-                        placeholder="Date of Birth" 
-                    //   type="date" 
-                    />
-                </Form.Group> */}
               </Form.Row>
             </div>
         )
