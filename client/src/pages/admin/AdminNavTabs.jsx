@@ -92,11 +92,11 @@ export default function NavTabs() {
           onChange={handleChange}
           aria-label="nav tabs example"
         >
-          <LinkTab icon={<ScheduleIcon />} {...a11yProps(0)} /> 
-          <LinkTab icon={<VideocamIcon />} {...a11yProps(1)} />
-          <LinkTab icon={<PersonAddIcon />} {...a11yProps(2)} />
-          <LinkTab icon={<ChatIcon />} {...a11yProps(3)} />
-          <LinkTab icon={<PeopleIcon />} {...a11yProps(4)} />
+          <LinkTab alt='Schedule' icon={<ScheduleIcon />} {...a11yProps(0)} /> 
+          <LinkTab alt='Video Library' icon={<VideocamIcon />} {...a11yProps(1)} />
+          <LinkTab alt='Add Admin' icon={<PersonAddIcon />} {...a11yProps(2)} />
+          <LinkTab alt='Chat Room' icon={<ChatIcon />} {...a11yProps(3)} />
+          <LinkTab alt='G-Fit Users' icon={<PeopleIcon />} {...a11yProps(4)} />
         </Tabs>
       </AppBar>
       <TabPanel value={value} index={0}>

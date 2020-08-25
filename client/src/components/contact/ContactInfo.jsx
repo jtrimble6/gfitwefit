@@ -118,7 +118,7 @@ class ContactInfo extends Component {
                                   NAME*
                                 </Form.Label>
                                 <Col sm="10">
-                                  <Form.Control id="name" placeholder="" />
+                                  <Form.Control id="name" placeholder="" aria-label='Name' />
                                 </Col>
                             </Form.Group>
 
@@ -128,7 +128,7 @@ class ContactInfo extends Component {
                                   EMAIL*
                                 </Form.Label>
                                 <Col sm="10">
-                                  <Form.Control id="email" type="email" placeholder="" />
+                                  <Form.Control id="email" type="email" placeholder="" aria-label='Email' />
                                 </Col>
                             </Form.Group>
 
@@ -201,7 +201,7 @@ class ContactInfo extends Component {
                             {/* TEXT INPUT */}
                             <Form.Group className='contactFormMessage'>
                                 <Form.Label>HOW CAN WE HELP?*</Form.Label>
-                                <Form.Control id="message" as="textarea" rows="10" />
+                                <Form.Control id="message" as="textarea" rows="10" aria-label='Message' />
                             </Form.Group>
 
                           </Form>
@@ -223,7 +223,7 @@ class ContactInfo extends Component {
                     </Col>
                 </Row>
                 <Row>
-                  <Button className='contactFormSubmit' type="submit" onClick={this.handleSubmit}>SUBMIT</Button>
+                  <Button className='contactFormSubmit' type="submit" aria-label='Submit' onClick={this.handleSubmit}>SUBMIT</Button>
                 </Row>
                 
               </div>

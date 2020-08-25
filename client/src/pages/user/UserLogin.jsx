@@ -119,6 +119,7 @@ class UserLogin extends Component {
                                         <input
                                             value={this.state.username}
                                             name="username"
+                                            aria-label='Username'
                                             onChange={this.handleInputChange}
                                             type="text"
                                             className="form-control"
@@ -129,6 +130,7 @@ class UserLogin extends Component {
                                         <input
                                             value={this.state.password}
                                             name="password"
+                                            aria-label='Password'
                                             onChange={this.handleInputChange}
                                             type="password"
                                             className="form-control"
