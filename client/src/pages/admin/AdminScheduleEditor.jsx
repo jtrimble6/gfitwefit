@@ -245,7 +245,8 @@ class AdminScheduleEditor extends Component {
                                     onChange={this.handleInputChange}
                                     type="text"
                                     className="form-control"
-                                    id="dayOfWeek"                                       
+                                    id="dayOfWeek"   
+                                    aria-label='Day of Week'                                    
                                 >
                                 <option value=''>Select One</option>
                                 <option value='Monday'>MONDAYS</option>
@@ -264,7 +265,8 @@ class AdminScheduleEditor extends Component {
                                     onChange={this.handleInputChange}
                                     type="text"
                                     className="form-control"
-                                    id="workout"                                       
+                                    id="workout"           
+                                    aria-label='Type of Workout'                            
                                 >
                                 <option value=''>Select One</option>
                                 <option value='UPPER BODY//BOXING'>UPPER BODY//BOXING</option>
@@ -282,7 +284,8 @@ class AdminScheduleEditor extends Component {
                                 onChange={this.handleInputChange}
                                 type="text"
                                 className="form-control"
-                                id="times"                                       
+                                id="times"         
+                                aria-label='Workout Times'                              
                               >
                                 <option value=''>Select One</option>
                                 <option value='5:30am, 8am, 9:30am, 5:45pm'>5:30am, 8am, 9:30am, 5:45pm</option>
