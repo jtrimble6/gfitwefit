@@ -11,6 +11,7 @@ class ContactInfo extends Component {
     constructor(props) {
         super(props);
         this.state = {
+          env: 'PRODUCTION',
           toggleForm: false,
           contactSuccess: false,
           contactError: false,
@@ -62,8 +63,7 @@ class ContactInfo extends Component {
         console.log(name, email, message, checkbox1, checkbox2)
         axios({
             method: "POST", 
-            url:"http://gfitwefit.com/send",
-            // url:"http://localhost:3000/send", 
+            url: this.state.env === 'DEVELOPMENT' ? "http://localhost:3000/send" : "http://gfitwefit.com/send",
             data: {
                 name: name,   
                 email: email,  

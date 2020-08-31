@@ -32,7 +32,7 @@ router.post('/send', (req, res, next) => {
   var mail = {
     from: name,
     // to: 'kgouveia@gfitwefit.com',  //Change to email address that you want to receive messages on
-    to: 'trimbledevelops@gmail.com',
+    to: process.env.NODE_ENV === 'DEVELOPMENT' ? "trimbledevelops@gmail.com" : "kgouveia@gfitwefit.com",
     subject: 'New Message from Contact Form',
     text: content
   }
