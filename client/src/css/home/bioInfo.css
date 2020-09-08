@@ -131,7 +131,7 @@ and (min-device-width: 800px)
 and (max-device-width: 1600px) 
 and (-webkit-min-device-pixel-ratio: 1) { 
   .bioInfo {
-    height: 100vw;
+    height: 150vw;
   }
 
   .bioInfoRow {
@@ -235,8 +235,7 @@ and (min-device-width: 1601px)
 and (max-device-width: 3000px) 
 and (-webkit-min-device-pixel-ratio: 1) { 
   .bioInfo {
-    height: 100vw;
-    background-color: white;
+    height: 150vw;
   }
 
   .bioInfoRow {
@@ -260,7 +259,6 @@ and (-webkit-min-device-pixel-ratio: 1) {
     margin-top: 30vw;
     padding: 5%;
     padding-bottom: 100%;
-    background-color: #FAC04E;
     height: 70vw;
   }
   .trainerBioCircleImg {
@@ -285,7 +283,7 @@ and (-webkit-min-device-pixel-ratio: 1) {
     font-size: 2.3rem; 
   }
   .bioInfoBodyRow {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 }
 
