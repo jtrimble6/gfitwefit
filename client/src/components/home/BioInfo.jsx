@@ -12,7 +12,7 @@ class BioInfo extends Component {
               <div className="bioInfoSection">
                 <Row className='bioInfoImgRow'>
                   <div className="trainerBioCircleImg">
-                    <img src={this.props.trainerImg} alt='' />
+                    <img src={this.props.trainerImg} alt={this.props.trainerName} />
                   </div>
                 </Row>
                 <Row className='bioInfoRow'>
@@ -26,7 +26,13 @@ class BioInfo extends Component {
                         </Row>
                         <Row className='bioInfoBodyRow'>
                             <p>
-                              {this.props.trainerBio}
+                              {this.props.trainerBio1}
+                            </p>
+                            <p>
+                              {this.props.trainerBio2}
+                            </p>
+                            <p>
+                              {this.props.trainerBio3}
                             </p>
                         </Row>
                     </Col>

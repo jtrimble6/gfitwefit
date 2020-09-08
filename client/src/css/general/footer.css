@@ -1732,7 +1732,7 @@
       width: 5vw;
       height: auto; 
       position: absolute;
-      bottom: 2vw;
+      bottom: 1vw;
     }
     
     .footerTitle {
@@ -1740,7 +1740,7 @@
       font-weight: bolder;
       color: white;
       position: absolute;
-      top: 2.7vw;
+      top: 2vw;
       left: 7.1vw;
       white-space: pre-wrap;
     }
@@ -2130,7 +2130,7 @@
 }
 @media only screen 
   and (min-device-width: 675px) 
-  and (max-device-width: 825px) 
+  and (max-device-width: 735px) 
   and (-webkit-min-device-pixel-ratio: 2)
   and (orientation: landscape) { 
     .footerDiv {

@@ -13,7 +13,7 @@
   
   .bioInfo {
     height: 675px;
-    background-color: white;
+    background-color: #FAC04E;
   }
 
   .bioInfoRow {
@@ -132,7 +132,6 @@ and (max-device-width: 1600px)
 and (-webkit-min-device-pixel-ratio: 1) { 
   .bioInfo {
     height: 100vw;
-    background-color: white;
   }
 
   .bioInfoRow {
@@ -154,12 +153,11 @@ and (-webkit-min-device-pixel-ratio: 1) {
   
   .bioInfoSection {
     width: 100%;
+    height: 100%;
     margin: 0 auto;
     margin-bottom: 0;
     margin-top: 40vw;
     padding: 5%;
-    padding-bottom: 100%;
-    background-color: #FAC04E;
     height: 70vw;
   }
 
@@ -416,7 +414,58 @@ and (min-resolution: 192dpi) {
   and (max-device-width: 568px)
   and (-webkit-min-device-pixel-ratio: 2)
   and (orientation: landscape) {
-
+    .bioInfo {
+      height: 100%;
+    }
+  
+    .bioInfoRow {
+      position: relative;
+      top: -25vw;
+      margin-top: 1vw;
+      /* overflow: hidden; */
+    }
+  
+    .bioInfoImgRow {
+      position: relative;
+      top: -35vw;
+      width: 100% !important;
+      margin: 0 auto !important; 
+    }
+    
+    .bioInfoSection {
+      width: 100%;
+      margin: 0 auto;
+      margin-bottom: 0;
+      margin-top: 40vw;
+      padding: 10%;
+      padding-bottom: 10%;
+      background-color: #FAC04E;
+      height: 100%;
+    }
+    .trainerBioCircleImg {
+      position: relative;
+      width: 50vw;
+      height: 50vw;
+      border-radius: 50%;
+      margin: 0 auto;
+    }
+    .trainerBioCircleImg img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .bioInfoHeaderLeft {
+      font-size: 1.1rem;
+    }
+    .bioInfoHeaderRight {
+      font-size: 1.1rem; 
+    }
+    .bioInfoName {
+      font-size: 1.3rem; 
+    }
+    .bioInfoBodyRow {
+      font-size: 1rem;
+    }
 }
 
 /* ----------- iPhone 6, 6S, 7 and 8 ----------- */
@@ -444,7 +493,58 @@ and (min-resolution: 192dpi) {
   and (max-device-width: 667px) 
   and (-webkit-min-device-pixel-ratio: 2)
   and (orientation: landscape) { 
-
+    .bioInfo {
+      height: 100%;
+    }
+  
+    .bioInfoRow {
+      position: relative;
+      top: -25vw;
+      margin-top: 1vw;
+      /* overflow: hidden; */
+    }
+  
+    .bioInfoImgRow {
+      position: relative;
+      top: -35vw;
+      width: 100% !important;
+      margin: 0 auto !important; 
+    }
+    
+    .bioInfoSection {
+      width: 100%;
+      margin: 0 auto;
+      margin-bottom: 0;
+      margin-top: 45vw;
+      padding: 10%;
+      padding-bottom: 10%;
+      background-color: #FAC04E;
+      height: 100%;
+    }
+    .trainerBioCircleImg {
+      position: relative;
+      width: 50vw;
+      height: 50vw;
+      border-radius: 50%;
+      margin: 0 auto;
+    }
+    .trainerBioCircleImg img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .bioInfoHeaderLeft {
+      font-size: 1.1rem;
+    }
+    .bioInfoHeaderRight {
+      font-size: 1.1rem; 
+    }
+    .bioInfoName {
+      font-size: 1.3rem; 
+    }
+    .bioInfoBodyRow {
+      font-size: 1rem;
+    }
 }
 
 
@@ -473,7 +573,57 @@ and (min-resolution: 192dpi) {
   and (max-device-width: 812px) 
   and (-webkit-min-device-pixel-ratio: 3)
   and (orientation: landscape) { 
-
+    .bioInfo {
+      height: 130vw;
+    }
+    .bioInfoRow {
+      position: relative;
+      top: -25vw;
+      margin-top: 1vw;
+      /* overflow: hidden; */
+    }
+  
+    .bioInfoImgRow {
+      position: relative;
+      top: -35vw;
+      width: 100% !important;
+      margin: 0 auto !important; 
+    }
+    
+    .bioInfoSection {
+      width: 100%;
+      margin: 0 auto;
+      margin-bottom: 0;
+      margin-top: 45vw;
+      padding: 10%;
+      padding-bottom: 10%;
+      background-color: #FAC04E;
+      height: 100%;
+    }
+    .trainerBioCircleImg {
+      position: relative;
+      width: 50vw;
+      height: 50vw;
+      border-radius: 50%;
+      margin: 0 auto;
+    }
+    .trainerBioCircleImg img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .bioInfoHeaderLeft {
+      font-size: 1.1rem;
+    }
+    .bioInfoHeaderRight {
+      font-size: 1.1rem; 
+    }
+    .bioInfoName {
+      font-size: 1.3rem; 
+    }
+    .bioInfoBodyRow {
+      font-size: 1rem;
+    }
 }
 
 /* ----------- iPhone 6+, 7+ and 8+ ----------- */
@@ -492,7 +642,58 @@ and (min-resolution: 192dpi) {
   and (max-device-width: 736px) 
   and (-webkit-min-device-pixel-ratio: 3)
   and (orientation: portrait) { 
+    .bioInfo {
+      height: 100%;
+    }
   
+    .bioInfoRow {
+      position: relative;
+      top: -25vw;
+      margin-top: 1vw;
+      /* overflow: hidden; */
+    }
+  
+    .bioInfoImgRow {
+      position: relative;
+      top: -35vw;
+      width: 100% !important;
+      margin: 0 auto !important; 
+    }
+    
+    .bioInfoSection {
+      width: 100%;
+      margin: 0 auto;
+      margin-bottom: 0;
+      margin-top: 75vw;
+      padding: 10%;
+      padding-bottom: 10%;
+      background-color: #FAC04E;
+      height: 100%;
+    }
+    .trainerBioCircleImg {
+      position: relative;
+      width: 50vw;
+      height: 50vw;
+      border-radius: 50%;
+      margin: 0 auto;
+    }
+    .trainerBioCircleImg img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .bioInfoHeaderLeft {
+      font-size: 1.1rem;
+    }
+    .bioInfoHeaderRight {
+      font-size: 1.1rem; 
+    }
+    .bioInfoName {
+      font-size: 1.3rem; 
+    }
+    .bioInfoBodyRow {
+      font-size: 1rem;
+    }
 }
 
 /* Landscape */
@@ -501,10 +702,197 @@ and (min-resolution: 192dpi) {
   and (max-device-width: 736px) 
   and (-webkit-min-device-pixel-ratio: 3)
   and (orientation: landscape) { 
-
+    .bioInfo {
+      height: 100%;
+    }
+  
+    .bioInfoRow {
+      position: relative;
+      top: -25vw;
+      margin-top: 1vw;
+      /* overflow: hidden; */
+    }
+  
+    .bioInfoImgRow {
+      position: relative;
+      top: -35vw;
+      width: 100% !important;
+      margin: 0 auto !important; 
+    }
+    
+    .bioInfoSection {
+      width: 100%;
+      margin: 0 auto;
+      margin-bottom: 0;
+      margin-top: 45vw;
+      padding: 10%;
+      padding-bottom: 10%;
+      background-color: #FAC04E;
+      height: 100%;
+    }
+    .trainerBioCircleImg {
+      position: relative;
+      width: 50vw;
+      height: 50vw;
+      border-radius: 50%;
+      margin: 0 auto;
+    }
+    .trainerBioCircleImg img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .bioInfoHeaderLeft {
+      font-size: 1.1rem;
+    }
+    .bioInfoHeaderRight {
+      font-size: 1.1rem; 
+    }
+    .bioInfoName {
+      font-size: 1.3rem; 
+    }
+    .bioInfoBodyRow {
+      font-size: 1rem;
+    }
 }
 
+/* ----------- Pixel 2 ----------- */
+/* Portrait */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 760px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) { 
+    
+}
 
+/* Landscape */
+@media only screen 
+  and (min-device-width: 675px) 
+  and (max-device-width: 735px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) { 
+    .bioInfo {
+      height: 130vw;
+    }
+    .bioInfoRow {
+      position: relative;
+      top: -25vw;
+      margin-top: 1vw;
+      /* overflow: hidden; */
+    }
+  
+    .bioInfoImgRow {
+      position: relative;
+      top: -35vw;
+      width: 100% !important;
+      margin: 0 auto !important; 
+    }
+    
+    .bioInfoSection {
+      width: 100%;
+      margin: 0 auto;
+      margin-bottom: 0;
+      margin-top: 45vw;
+      padding: 10%;
+      padding-bottom: 10%;
+      background-color: #FAC04E;
+      height: 100%;
+    }
+    .trainerBioCircleImg {
+      position: relative;
+      width: 50vw;
+      height: 50vw;
+      border-radius: 50%;
+      margin: 0 auto;
+    }
+    .trainerBioCircleImg img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .bioInfoHeaderLeft {
+      font-size: 1.1rem;
+    }
+    .bioInfoHeaderRight {
+      font-size: 1.1rem; 
+    }
+    .bioInfoName {
+      font-size: 1.3rem; 
+    }
+    .bioInfoBodyRow {
+      font-size: 1rem;
+    }
+}
+
+/* ----------- Pixel 2 XL ----------- */
+/* Portrait */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 760px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) { 
+    
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 820px) 
+  and (max-device-width: 825px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) { 
+    .bioInfo {
+      height: 130vw;
+    }
+    .bioInfoRow {
+      position: relative;
+      top: -25vw;
+      margin-top: 1vw;
+      /* overflow: hidden; */
+    }
+  
+    .bioInfoImgRow {
+      position: relative;
+      top: -35vw;
+      width: 100% !important;
+      margin: 0 auto !important; 
+    }
+    
+    .bioInfoSection {
+      width: 100%;
+      margin: 0 auto;
+      margin-bottom: 0;
+      margin-top: 45vw;
+      padding: 10%;
+      padding-bottom: 10%;
+      background-color: #FAC04E;
+      height: 100%;
+    }
+    .trainerBioCircleImg {
+      position: relative;
+      width: 50vw;
+      height: 50vw;
+      border-radius: 50%;
+      margin: 0 auto;
+    }
+    .trainerBioCircleImg img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .bioInfoHeaderLeft {
+      font-size: 1.1rem;
+    }
+    .bioInfoHeaderRight {
+      font-size: 1.1rem; 
+    }
+    .bioInfoName {
+      font-size: 1.3rem; 
+    }
+    .bioInfoBodyRow {
+      font-size: 1rem;
+    }
+}
 
 
 
