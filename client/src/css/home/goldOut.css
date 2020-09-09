@@ -118,12 +118,43 @@
   and (min-device-width: 825px) 
   and (max-device-width: 2000px) 
   and (-webkit-min-device-pixel-ratio: 1) { 
-    
+    .goldOut {
+      width: 100%;
+      height: 100vw;
+      
+      padding-top: 15%;
+      /* margin-bottom: 15%; */
+    }
+    .goldOutSection {
+      text-align: left;
+      height: 100vw;
+    }
+    .gjyOHz {
+      height: 45vw;
+    }
+    .goldOutRow1 {
+      font-size: 1.8rem;
+    }
+    .goldOutRow2 {
+      height: 60vw;
+    }
+    .goldOutTitleLeft, .goldOutTitleRight {
+      font-size: 3.5vw;
+    }
+    .goldOutCardText {
+      font-size: 1.5rem;
+      line-height: 2rem;
+    }
+    .goldOutCardTitle {
+      font-size: 1.5rem
+    }
+    .goldOutCardSubTitle {
+      font-size: 1.1rem;
+    }
 }
 
 @media screen 
   and (min-device-width: 2001px) 
-  and (max-device-width: 3000px) 
   and (-webkit-min-device-pixel-ratio: 1) { 
     .goldOutCard {
       width: 25rem !important;
@@ -189,7 +220,6 @@
 
 @media screen 
   and (min-device-width: 2001px) 
-  and (max-device-width: 3000px) 
   and (-webkit-min-device-pixel-ratio: 2)
   and (min-resolution: 192dpi) { 
     .goldOutCard {

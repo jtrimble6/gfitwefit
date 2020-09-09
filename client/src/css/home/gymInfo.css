@@ -213,7 +213,6 @@
 
 @media screen 
   and (min-device-width: 2001px) 
-  and (max-device-width: 3000px) 
   and (-webkit-min-device-pixel-ratio: 1) { 
     .gymInfo {
       min-height: 1075px;
@@ -265,75 +264,6 @@
     }
 
 }
-
-@media screen 
-  and (min-device-width: 2001px) 
-  and (max-device-width: 2100px) 
-  and (-webkit-min-device-pixel-ratio: 1) { 
-    
-    
-}
-@media screen 
-  and (min-device-width: 2101px) 
-  and (max-device-width: 2200px) 
-  and (-webkit-min-device-pixel-ratio: 1) { 
-   
-    
-}
-@media screen 
-  and (min-device-width: 2201px) 
-  and (max-device-width: 2300px) 
-  and (-webkit-min-device-pixel-ratio: 1) { 
-   
-}
-@media screen 
-  and (min-device-width: 2301px) 
-  and (max-device-width: 2400px) 
-  and (-webkit-min-device-pixel-ratio: 1) { 
-    
-}
-@media screen 
-  and (min-device-width: 2401px) 
-  and (max-device-width: 2500px) 
-  and (-webkit-min-device-pixel-ratio: 1) { 
-    
-    
-}
-@media screen 
-  and (min-device-width: 2501px) 
-  and (max-device-width: 2600px) 
-  and (-webkit-min-device-pixel-ratio: 1) { 
-
-}
-@media screen 
-  and (min-device-width: 2601px) 
-  and (max-device-width: 2700px) 
-  and (-webkit-min-device-pixel-ratio: 1) {
-
-    
-}
-@media screen 
-  and (min-device-width: 2701px) 
-  and (max-device-width: 2800px) 
-  and (-webkit-min-device-pixel-ratio: 1) { 
-
-    
-}
-@media screen 
-  and (min-device-width: 2801px) 
-  and (max-device-width: 2900px) 
-  and (-webkit-min-device-pixel-ratio: 1) { 
- 
-    
-}
-@media screen 
-  and (min-device-width: 2901px) 
-  and (max-device-width: 3000px) 
-  and (-webkit-min-device-pixel-ratio: 1) { 
-    
-}
-
-
 
 
 /* ----------- Retina Screens ----------- */

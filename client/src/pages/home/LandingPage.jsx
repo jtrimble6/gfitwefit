@@ -25,7 +25,7 @@ class LandingPage extends Component {
                 <GymInfo />
                 <TrainerInfo />
                 <ScheduleInfo />
-                <GoldOut />
+                {/* <GoldOut /> */}
               </div>
               <div className="footerDiv">
                 <Footer />

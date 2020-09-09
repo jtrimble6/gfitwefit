@@ -7,6 +7,64 @@
     background-size: cover; 
 }
 
+/* ----------- LAPTOPS ----------- */
+
+
+/* ----------- Non-Retina Screens ----------- */
+@media screen 
+  and (min-device-width: 1200px) 
+  and (max-device-width: 1600px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+    .contactLanding {
+      height: 43vw;
+      padding: 10%;
+    }
+}
+
+@media screen 
+  and (min-device-width: 1600px)  
+  and (max-device-width: 2000px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+    .contactLanding {
+      height: 45vw;
+      padding: 10%;
+    }
+}
+
+@media screen 
+  and (min-device-width: 2001px)  
+  and (-webkit-min-device-pixel-ratio: 1) { 
+    .contactLanding {
+      height: 45vw;
+      padding: 10%;
+    }
+}
+
+/* ----------- Retina Screens ----------- */
+@media screen 
+  and (min-device-width: 1200px) 
+  and (max-device-width: 1600px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (min-resolution: 192dpi) { 
+    
+}
+
+@media screen 
+  and (min-device-width: 1600px) 
+  and (max-device-width: 2000px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (min-resolution: 192dpi) { 
+    
+}
+
+@media screen 
+  and (min-device-width: 2001px)  
+  and (-webkit-min-device-pixel-ratio: 2) { 
+    
+}
+
+
+
 /* ----------- iPhone 4 and 4S ----------- */
 
 /* Portrait and Landscape */
@@ -161,57 +219,3 @@
 
 }
 
-/* ----------- LAPTOPS ----------- */
-
-
-/* ----------- Non-Retina Screens ----------- */
-@media screen 
-  and (min-device-width: 1200px) 
-  and (max-device-width: 1600px) 
-  and (-webkit-min-device-pixel-ratio: 1) { 
-    
-}
-
-@media screen 
-  and (min-device-width: 1600px)  
-  and (max-device-width: 2000px) 
-  and (-webkit-min-device-pixel-ratio: 1) { 
-    
-}
-
-@media screen 
-  and (min-device-width: 2001px)  
-  and (-webkit-min-device-pixel-ratio: 1) { 
-    .tryItOutLanding {
-      height: 900px;
-      padding: 10%;
-    }
-}
-
-/* ----------- Retina Screens ----------- */
-@media screen 
-  and (min-device-width: 1200px) 
-  and (max-device-width: 1600px) 
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (min-resolution: 192dpi) { 
-    
-}
-
-@media screen 
-  and (min-device-width: 1600px) 
-  and (max-device-width: 2000px) 
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (min-resolution: 192dpi) { 
-    .contactLanding {
-      height: 700px;
-    }
-}
-
-@media screen 
-  and (min-device-width: 2001px)  
-  and (-webkit-min-device-pixel-ratio: 2) { 
-    .contactLanding {
-      height: 900px;
-      padding: 10%;
-    }
-}
