@@ -254,7 +254,7 @@ class UserVideoLibrary extends Component {
               <div className="videoLibraryFormContainer">    
                 <h2 className="videoLibraryForm-heading">Video Library</h2>
                   <div className="row videoLibraryRow">
-                    <div className="col-3 filterColumn">
+                    <div className="col-sm-12 col-lg-3 filterColumn">
                         <Button
                             id="showHideFilterButton"
                             className="userFilterLibraryButton"
@@ -274,7 +274,7 @@ class UserVideoLibrary extends Component {
                         />
                     </div>
 
-                    <div className="col-8 videoColumn">
+                    <div className="col-sm-12 col-lg-8 videoColumn">
                         {/* VIDEO PLAYER */}
 
                         <h2 className='noVideosTitle' id='noVideosTitle'> </h2>
