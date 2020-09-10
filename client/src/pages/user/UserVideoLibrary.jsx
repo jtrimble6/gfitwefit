@@ -20,7 +20,7 @@ class UserVideoLibrary extends Component {
     constructor(props) {
         super(props)
         this.state = {
-          subscriptionStatus: '',
+          subscriptionStatus: true,
           equipmentNeeded: null,
           fitnessLevel: null,
           workoutCategory: null,
@@ -51,28 +51,30 @@ class UserVideoLibrary extends Component {
             .then(res => {
                 // console.log(res.data[0])
                 let user = res.data[0]
-                // console.log('USER: ', user)
+                console.log('USER: ', user)
                 //CHECK USER PREFERENCES
                 let userPreferences = user.videoFilterPreferences
                 let workoutCategory = null
                 let fitnessLevel = null
                 let equipmentNeeded = null
-
-                if (userPreferences.workoutCategory.length) {
-                  workoutCategory = userPreferences.workoutCategory
+                if (userPreferences) {
+                    if (userPreferences.workoutCategory.length) {
+                        workoutCategory = userPreferences.workoutCategory
+                    }
+                    if (userPreferences.fitnessLevel.length) {
+                        fitnessLevel = userPreferences.fitnessLevel
+                    }
+                    if (userPreferences.equipmentNeeded.length) {
+                        equipmentNeeded = userPreferences.equipmentNeeded
+                    }
                 }
-                if (userPreferences.fitnessLevel.length) {
-                  fitnessLevel = userPreferences.fitnessLevel
-                }
-                if (userPreferences.equipmentNeeded.length) {
-                  equipmentNeeded = userPreferences.equipmentNeeded
-                }
+                
 
                 this.setState({
                   workoutCategory: workoutCategory,
                   fitnessLevel: fitnessLevel,
                   equipmentNeeded: equipmentNeeded,
-                  subscriptionStatus: user.paymentComplete
+                //   subscriptionStatus: user.paymentComplete
                 }, () => {
                     this.getVideos(this.state.subscriptionStatus)
                 })
@@ -252,7 +254,7 @@ class UserVideoLibrary extends Component {
               <div className="videoLibraryFormContainer">    
                 <h2 className="videoLibraryForm-heading">Video Library</h2>
                   <div className="row videoLibraryRow">
-                    <div className="col-sm-3 filterColumn">
+                    <div className="col-3 filterColumn">
                         <Button
                             id="showHideFilterButton"
                             className="userFilterLibraryButton"
@@ -272,7 +274,7 @@ class UserVideoLibrary extends Component {
                         />
                     </div>
 
-                    <div className="col-sm-8 videoColumn">
+                    <div className="col-8 videoColumn">
                         {/* VIDEO PLAYER */}
 
                         <h2 className='noVideosTitle' id='noVideosTitle'> </h2>

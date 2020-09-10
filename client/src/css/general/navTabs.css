@@ -1,5 +1,5 @@
 .userNavTabIcon {
-  font-size: 2vw;
+  width: 2rem !important;
   margin: 1vw;
 }
 
@@ -61,8 +61,8 @@ background-color: white;
     .PrivateTabIndicator-colorSecondary-4 {
       border-bottom: 0.5vw solid #FAC04E;
     }
-    .MuiSvgIcon-root {
-      font-size: 4vw !important;
+    .userNavTabIcon {
+      width: 2rem !important;
     }
 }
 
@@ -76,8 +76,8 @@ background-color: white;
     .PrivateTabIndicator-colorSecondary-4 {
       border-bottom: 0.5vw solid #FAC04E;
     }
-    .MuiSvgIcon-root {
-      font-size: 4vw !important;
+    .userNavTabIcon {
+      width: 2rem !important;
     }
 }
 
@@ -90,7 +90,7 @@ background-color: white;
     .PrivateTabIndicator-colorSecondary-4 {
       border-bottom: 0.5vw solid #FAC04E;
     }
-    .MuiSvgIcon-root {
+    .userNavTabIcon {
       font-size: 4vw !important;
     }
 }
@@ -107,8 +107,8 @@ background-color: white;
     .PrivateTabIndicator-colorSecondary-4 {
       border-bottom: 0.5vw solid #FAC04E;
     }
-    .MuiSvgIcon-root {
-      font-size: 4vw !important;
+    .userNavTabIcon {
+      width: 2rem !important;
     }
 }
 
@@ -123,8 +123,8 @@ background-color: white;
     .PrivateTabIndicator-colorSecondary-4 {
       border-bottom: 0.5vw solid #FAC04E;
     }
-    .MuiSvgIcon-root {
-      font-size: 3vw !important;
+    .userNavTabIcon {
+      width: 3rem !important;
     }
 }
 @media screen 
@@ -137,8 +137,8 @@ background-color: white;
     .PrivateTabIndicator-colorSecondary-4 {
       border-bottom: 0.5vw solid #FAC04E;
     }
-    .MuiSvgIcon-root {
-      font-size: 3vw !important;
+    .userNavTabIcon {
+      width: 2rem !important;
     }
 }
 
@@ -314,19 +314,19 @@ background-color: white;
   and (-webkit-min-device-pixel-ratio: 2)
   and (orientation: portrait) {
     .userNavTabIcon {
-        font-size: 6vw !important;
-        margin: 1vw;
+      width: 2rem !important;
+      margin: 1vw;
     }
     .MuiBox-root {
       padding-left: 1% !important;
       padding-right: 1% !important;
     }
     .makeStyles-root-1 {
-        margin-top: 20vw;
+      margin-top: 20vw;
     }
-    .MuiTabs-scroller {
-      overflow: scroll !important;
-    }
+    /* .makeStyles-root-1 {
+      margin-top: 10vw ; 
+    } */
 }
 
 /* Landscape */
@@ -336,7 +336,7 @@ background-color: white;
   and (-webkit-min-device-pixel-ratio: 2)
   and (orientation: landscape) {
     .userNavTabIcon {
-      font-size: 4vw !important;
+      width: 2rem !important;
       margin: 1vw;
     }
     .makeStyles-root-1 {
@@ -421,11 +421,11 @@ background-color: white;
   and (-webkit-min-device-pixel-ratio: 3)
   and (orientation: portrait) { 
     .userNavTabIcon {
-        font-size: 6vw !important;
-        margin: 1vw;
+      width: 2rem !important;
+      margin: 1vw;
     }
     .makeStyles-root-1 {
-        margin-top: 20vw;
+      margin-top: 20vw;
     }
     
 }
@@ -493,12 +493,12 @@ background-color: white;
       height: 100px;
     }
     .MuiBox-root {
-        padding-left: 1% !important;
-        padding-right: 1% !important;
+      padding-left: 1% !important;
+      padding-right: 1% !important;
     }
     .userNavTabIcon {
-        font-size: 6vw !important;
-        margin: 1vw;
+      width: 2rem !important;
+      margin: 1vw;
     }
     
 }
@@ -574,8 +574,8 @@ background-color: white;
   and (orientation: landscape) 
   and (-webkit-min-device-pixel-ratio: 2) {
     .userNavTabIcon {
-      font-size: 4vw !important;
-      margin: 1vw;
+    width: 2rem !important;
+    margin: 1vw;
   }
 }
 

@@ -44,16 +44,21 @@ class UserVideoPreferences extends Component {
                             className="videoControlLabel"
                             control={<Radio />} 
                             label="Bodyweight" 
+                            aria-label="Bodyweight"
                         />
                         <FormControlLabel 
                             value="light" 
+                            className="videoControlLabel"
                             control={<Radio />} 
                             label="Light" 
+                            aria-label="Light"
                         />
                         <FormControlLabel 
                             value="full" 
+                            className="videoControlLabel"
                             control={<Radio />} 
                             label="Full" 
+                            aria-label="Full"
                         />
                     </RadioGroup>
 
@@ -79,11 +84,14 @@ class UserVideoPreferences extends Component {
                         className="videoControlLabel"
                         control={<Radio />} 
                         label="Beginner" 
+                        aria-label="Beginner"
                         />
                         <FormControlLabel 
                         value="advanced" 
-                        control={<Radio   />} 
+                        className="videoControlLabel"
+                        control={<Radio />} 
                         label="Advanced" 
+                        aria-label="Advanced"
                         />
                     </RadioGroup>
 
@@ -108,21 +116,28 @@ class UserVideoPreferences extends Component {
                         className="videoControlLabel"
                         control={<Radio />} 
                         label="Strength" 
+                        aria-label="Strength"
                         />
                         <FormControlLabel 
                         value="hiit" 
+                        className="videoControlLabel"
                         control={<Radio />} 
                         label="H.I.I.T." 
+                        aria-label="H.I.I.T."
                         />
                         <FormControlLabel 
                         value="boxing" 
+                        className="videoControlLabel"
                         control={<Radio />} 
                         label="Boxing" 
+                        aria-label="Boxing"
                         />
                         <FormControlLabel 
                         value="abs/stretch" 
+                        className="videoControlLabel"
                         control={<Radio />} 
                         label="Abs/Stretch" 
+                        aria-label="Abs/Stretch"
                         />
                     </RadioGroup>
 

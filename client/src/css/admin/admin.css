@@ -196,7 +196,7 @@
     text-align: left;
 }
 
-.equipmentNeededLabel, .fitnessLevelLabel, .workoutCategoryLabel {
+.videoTitleLabel, .videoDescLabel, .equipmentNeededLabel, .fitnessLevelLabel, .workoutCategoryLabel {
     margin-top: 5%;
 }
 
@@ -285,7 +285,7 @@
       margin-top: 3vw;
       font-size: 4rem;
     }
-    .scheduleFormSelectors, .equipmentNeededLabel, .fitnessLevelLabel, .workoutCategoryLabel, .adminSubmitButton, .adminViewLibraryButton, .adminSignUpFormLabel, .userHeaders {
+    .scheduleFormSelectors, .videoTitleLabel, .videoDescLabel, .equipmentNeededLabel, .fitnessLevelLabel, .workoutCategoryLabel, .adminSubmitButton, .adminViewLibraryButton, .adminSignUpFormLabel, .userHeaders {
       font-size: 2rem;
     }
     #dayOfWeek, #workout, #times, #fileUploadName, #equipmentNeeded, #fitnessLevel, #workoutCategory, .adminSignUpFormEntry, .adminEditUsersFullName, .adminEditUsersUsername, .adminEditUsersEmail, .adminEditUsersSubscriptionStatus {
@@ -301,7 +301,7 @@
       margin-top: 3vw;
       font-size: 4rem;
     }
-    .scheduleFormSelectors, .equipmentNeededLabel, .fitnessLevelLabel, .workoutCategoryLabel, .adminSubmitButton, .adminViewLibraryButton, .adminSignUpFormLabel, .userHeaders {
+    .scheduleFormSelectors, .videoTitleLabel, .videoDescLabel, .equipmentNeededLabel, .fitnessLevelLabel, .workoutCategoryLabel, .adminSubmitButton, .adminViewLibraryButton, .adminSignUpFormLabel, .userHeaders {
       font-size: 2rem;
     }
     #dayOfWeek, #workout, #times, #fileUploadName, #equipmentNeeded, #fitnessLevel, #workoutCategory, .adminSignUpFormEntry, .adminEditUsersFullName, .adminEditUsersUsername, .adminEditUsersEmail, .adminEditUsersSubscriptionStatus {
@@ -316,7 +316,7 @@
       margin-top: 3vw;
       font-size: 4rem;
     }
-    .scheduleFormSelectors, .equipmentNeededLabel, .fitnessLevelLabel, .workoutCategoryLabel, .adminSubmitButton, .adminViewLibraryButton, .adminSignUpFormLabel, .userHeaders {
+    .scheduleFormSelectors, .videoTitleLabel, .videoDescLabel, .equipmentNeededLabel, .fitnessLevelLabel, .workoutCategoryLabel, .adminSubmitButton, .adminViewLibraryButton, .adminSignUpFormLabel, .userHeaders {
       font-size: 2rem;
     }
     #dayOfWeek, #workout, #times, #fileUploadName, #equipmentNeeded, #fitnessLevel, #workoutCategory, .adminSignUpFormEntry, .adminEditUsersFullName, .adminEditUsersUsername, .adminEditUsersEmail, .adminEditUsersSubscriptionStatus {

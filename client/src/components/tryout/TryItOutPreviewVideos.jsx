@@ -27,10 +27,12 @@ class TryItOutPreviewVideos extends Component {
                                 <BigPlayButton position='center' />
                             </Player>
                             <CardBody>
-                            <CardTitle className='videoLibraryCardTitle'>Video Title</CardTitle>
-                            <CardText className='videoLibraryCardText'>This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</CardText>
+                            <CardTitle className='videoLibraryCardTitle'>{video.videoTitle}</CardTitle>
+                            <CardText className='videoLibraryCardText'>{video.videoDesc}</CardText>
                             <CardText>
-                                <small className="text-muted videoLibraryCardSubtitle">Last updated 3 mins ago</small>
+                                <small className="text-muted videoLibraryCardSubtitle">
+                                  Last updated 3 mins ago
+                                </small>
                             </CardText>
                             </CardBody>
                         </Card> 

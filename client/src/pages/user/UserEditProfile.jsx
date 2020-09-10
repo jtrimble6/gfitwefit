@@ -194,65 +194,70 @@ export default function ControlledAccordions(props) {
             <FormLabel className='userEditPreferencesTitle' component="legend">Set Filter Preferences</FormLabel>
                 
                 {/* Equipment Preference */}
-                    <FormLabel 
-                        className='filterTitle' 
-                        component="legend">Equipment
-                    </FormLabel>
-                        <RadioGroup 
-                            row 
-                            onChange={props.handleRadioChange} 
-                            aria-label="position" 
-                            name="equipmentNeeded" 
-                            value={props.equipmentNeeded}
-                            defaultValue="top" 
-                            className="userRadios equipmentRadios"
-                        >
+                  <FormLabel className='filterTitle' component="legend">
+                    Equipment
+                  </FormLabel>
+                    <RadioGroup 
+                      row 
+                      onChange={props.handleRadioChange} 
+                      aria-label="position" 
+                      name="equipmentNeeded" 
+                      value={props.equipmentNeeded}
+                      defaultValue="top" 
+                      className="userRadios equipmentRadios"
+                    >
                         <FormControlLabel 
-                            value="bodyweight" 
-                            className="videoControlLabel"
-                            control={<Radio />} 
-                            label="Bodyweight" 
+                          value="bodyweight" 
+                          className="videoControlLabel"
+                          control={<Radio />} 
+                          label="Bodyweight" 
+                          aria-label="Bodyweight"
                         />
                         <FormControlLabel 
-                            value="light" 
-                            control={<Radio />} 
-                            label="Light" 
+                          value="light" 
+                          className="videoControlLabel"
+                          control={<Radio />} 
+                          label="Light" 
+                          aria-label="Light"
                         />
                         <FormControlLabel 
-                            value="full" 
-                            control={<Radio />} 
-                            label="Full" 
+                          value="full" 
+                          className="videoControlLabel"
+                          control={<Radio />} 
+                          label="Full" 
+                          aria-label="Full"
                         />
+                    
                     </RadioGroup>
 
                 {/* Fitness Level Preference */}
-                    <FormLabel 
-                        className='filterTitle' 
-                        component="legend"
-                    >
-                    Fitness Level
+                    <FormLabel className='filterTitle' component="legend">
+                      Fitness Level
                     </FormLabel>
 
                     <RadioGroup 
-                        row 
-                        onChange={props.handleRadioChange} 
-                        aria-label="position" 
-                        name="fitnessLevel" 
-                        value={props.fitnessLevel}
-                        defaultValue="top" 
-                        className=" userRadiosfitnessLevelRadios"
-                        >
-                        <FormControlLabel 
+                      row 
+                      onChange={props.handleRadioChange} 
+                      aria-label="position" 
+                      name="fitnessLevel" 
+                      value={props.fitnessLevel}
+                      defaultValue="top" 
+                      className=" userRadiosfitnessLevelRadios"
+                    >
+                      <FormControlLabel 
                         value="beginner" 
                         className="videoControlLabel"
                         control={<Radio />} 
                         label="Beginner" 
-                        />
-                        <FormControlLabel 
+                        aria-label="Beginner"
+                      />
+                      <FormControlLabel 
                         value="advanced" 
+                        className="videoControlLabel"
                         control={<Radio   />} 
                         label="Advanced" 
-                        />
+                        aria-label="Advanced"
+                      />
                     </RadioGroup>
 
                 {/* Workout Preference */}
@@ -276,21 +281,28 @@ export default function ControlledAccordions(props) {
                         className="videoControlLabel"
                         control={<Radio />} 
                         label="Strength" 
+                        aria-label="Strength"
                         />
                         <FormControlLabel 
                         value="hiit" 
+                        className="videoControlLabel"
                         control={<Radio />} 
                         label="H.I.I.T." 
+                        aria-label="H.I.I.T"
                         />
                         <FormControlLabel 
                         value="boxing" 
+                        className="videoControlLabel"
                         control={<Radio />} 
                         label="Boxing" 
+                        aria-label="Boxing"
                         />
                         <FormControlLabel 
                         value="abs/stretch" 
+                        className="videoControlLabel"
                         control={<Radio />} 
                         label="Abs/Stretch" 
+                        aria-label="Abs/Stretch"
                         />
                     </RadioGroup>
                     <Button

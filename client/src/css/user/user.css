@@ -129,7 +129,7 @@
 /* MESSAGE BOARD PAGE */
 /* ------------------------------------------------------------------ */
 
-.messageBoardTitle {
+.messageBoardTitle, .videoLibraryForm-heading, .userProfileHeading {
   font-family: 'gfitfont-bold';
   font-size: 4vw;
   padding-top: 2vw;
@@ -158,14 +158,6 @@
 
 .videoLibraryPrefTitle {
     margin-bottom: 3vw !important;
-}
-
-.filterTitle {
-    margin-bottom: 1vw;
-    margin-top: 1vw;
-    line-height: 2vw;
-    border-top: 1px solid #FAC04E;
-    border-bottom: 1px solid #FAC04E;
 }
 
 .userSetFilterLibraryButton {
@@ -295,11 +287,7 @@
     font-family: 'gfitfont-bold' !important;
 }
 
-.filterTitle {
-    color: #FAC04E !important;
-    font-weight: 900 !important;
-    /* font-size: 1.5vw !important; */
-}
+
 
 #formGridSubscriptionStatus, #formGridLastPaymentDate {
   text-align: center;

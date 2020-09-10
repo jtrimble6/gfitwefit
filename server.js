@@ -123,11 +123,13 @@ const upload = multer({ storage });
 // @route POST /upload
 // @desc Uploads file to DB
 
-app.post('/upload/:equipmentNeeded/:fitnessLevel/:workoutCategory/:sampleVideo', upload.single('file'), (req, res) => {
+app.post('/upload/:videoTitle/:videoDesc/:equipmentNeeded/:fitnessLevel/:workoutCategory/:sampleVideo', upload.single('file'), (req, res) => {
   // res.json({file: req.file})
   gfs.files.update({'filename': req.file.filename}, 
   {'$set': 
     {
+      'videoTitle': req.params.videoTitle,
+      'videoDesc': req.params.videoDesc,
       'equipmentNeeded': req.params.equipmentNeeded,
       'fitnessLevel': req.params.fitnessLevel,
       'workoutCategory': req.params.workoutCategory,
