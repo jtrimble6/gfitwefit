@@ -323,7 +323,6 @@
   and (orientation: portrait) { 
     .messageBoard {
         width: 95%;
-        height: 70vh;
     }
 
     .chatRoomSendButton {
