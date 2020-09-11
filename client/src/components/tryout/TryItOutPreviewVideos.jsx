@@ -15,7 +15,7 @@ class TryItOutPreviewVideos extends Component {
             <div className='tryItOutPreviewVideosSection'>
               
               { (this.props.videoLibraryFiltered.length > 0) ? 
-                <div className='videoLibraryDiv'>
+                <div className='videoLibraryPreviewDiv'>
                   {this.props.videoLibraryFiltered.map((video, index) => (
                     <div key={video._id} className='videoLibraryCardDiv'>
                         <Card className="card card-body mb-3 mx-auto videoLibraryCard">
