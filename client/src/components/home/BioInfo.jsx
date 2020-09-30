@@ -34,6 +34,9 @@ class BioInfo extends Component {
                             <p>
                               {this.props.trainerBio3}
                             </p>
+                            <p>
+                              {this.props.trainerBio4}
+                            </p>
                         </Row>
                     </Col>
                     <Col sm={0} xl={4}>

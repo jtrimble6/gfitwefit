@@ -78,6 +78,7 @@
   .bioInfoBodyRow {
     font-family: 'Arial';
     font-size: 1.1vw;
+    font-weight: bolder;
     line-height: 1.5;
     color: white;
     margin-top: 5%;

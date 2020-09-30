@@ -99,11 +99,14 @@ class Navbar extends Component {
                           // customBurgerIcon={ bars }
                           customCrossIcon={ <img src={require("../../css/images/cross.png")} alt='close' /> } 
                         >
-                          {/* <NavLink 
+                          <NavLink 
                             className='iconBar nav-link' 
                             onClick={this.toggleNavbar}
                             href="/"
-                          > HOME</NavLink> */}
+                          > 
+                            HOME
+                          </NavLink>
+
                           <Link
                             activeClass="active"
                             className='iconBar nav-link'
@@ -113,22 +116,34 @@ class Navbar extends Component {
                             smooth={true}
                             offset={-150}
                             duration= {500}
-                          > SEE SCHEDULE </Link>
-                          <NavLink 
-                            className='iconBar nav-link' 
-                            onClick={this.toggleNavbar}
-                            href="/userLogin"
-                          > G-FIT GOLD</NavLink>
+                          > 
+                            SEE SCHEDULE 
+                          </Link>
+                          
                           <NavLink 
                             className='iconBar nav-link' 
                             onClick={this.toggleNavbar}
                             href="/contact"
-                          > CONTACT US</NavLink>
+                          > 
+                            CONTACT US
+                          </NavLink>
+
+                          <NavLink 
+                            className='iconBar nav-link' 
+                            onClick={this.toggleNavbar}
+                            href="/userLogin"
+                          > 
+                            G-FIT GOLD
+                          </NavLink>
+
                           <NavLink 
                             className='iconBar nav-link signUp' 
                             onClick={this.toggleNavbar}
                             href="/tryitout"
-                          > TRY IT OUT</NavLink>
+                          > 
+                            TRY IT OUT
+                          </NavLink>
+
                           {/* <NavLink 
                             className='iconBar nav-link' 
                             onClick={this.toggleNavbar}
@@ -140,11 +155,11 @@ class Navbar extends Component {
                         <div className="collapse navbar-collapse" id="navbarResponsive">
                         <ul className="navbar-nav ml-auto">
 
-                          {/* <li className="nav-item" >
+                          <li className="nav-item" >
                             <a className="nav-link js-scroll-trigger" href='/'>
-                              HOME  |
+                              HOME
                             </a>
-                          </li> */}
+                          </li>
                           
                           <li className="nav-item">
                             <Link
@@ -155,18 +170,20 @@ class Navbar extends Component {
                               smooth={true}
                               offset={-150}
                               duration= {500}
-                            > SEE SCHEDULE</Link>
-                          </li>
-
-                          <li className="nav-item">
-                            <a className="nav-link js-scroll-trigger" href='/userLogin'>
-                              G-FIT GOLD
-                            </a>
+                            > 
+                              SEE SCHEDULE
+                            </Link>
                           </li>
 
                           <li className="nav-item">
                             <a className="nav-link js-scroll-trigger" href='/contact'>
                               CONTACT US
+                            </a>
+                          </li>
+
+                          <li className="nav-item">
+                            <a className="nav-link js-scroll-trigger" href='/userLogin'>
+                              G-FIT GOLD
                             </a>
                           </li>
                           
