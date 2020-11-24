@@ -121,66 +121,78 @@ class ScheduleInfo extends Component {
                         </Col>
                         <Col sm={3} className='scheduleTypeOfWorkout'>
                             <p>
-                                {
+                                UPPERBODY//BOXING
+                                {/* {
                                     sortedSchedule.length === 6 ? sortedSchedule[0].workout : 'TBD'
-                                }
+                                } */}
                             </p>
                             <p>
-                                {
+                                LOWERBODY//STRENGTH
+                                {/* {
                                     sortedSchedule.length === 6 ? sortedSchedule[1].workout : 'TBD'
-                                }
+                                } */}
                             </p>
                             <p>
-                                {
+                                H.I.I.T//BOXING
+                                {/* {
                                     sortedSchedule.length === 6 ? sortedSchedule[2].workout : 'TBD'
-                                }
+                                } */}
                             </p>
                             <p>
-                                {
+                                UPPER STRENGTH
+                                {/* {
                                     sortedSchedule.length === 6 ? sortedSchedule[3].workout : 'TBD'
-                                }
+                                } */}
                             </p>
                             <p>
-                                {
+                                CARDIO//CORE
+                                {/* {
                                     sortedSchedule.length === 6 ? sortedSchedule[4].workout : 'TBD'
-                                }
+                                } */}
                             </p>
                             <p>
-                                {
+                                H.I.I.T BOXING
+                                {/* {
                                     sortedSchedule.length === 6 ? sortedSchedule[5].workout : 'TBD'
-                                }
+                                } */}
                             </p>
                         </Col>
                         <Col sm={6} className='scheduleTimeOfWorkout'>
                             <p>
-                                {
+                                5:30AM, 8AM, 9:30AM, 5:45PM
+                                {/* {
                                     sortedSchedule.length === 6 ? sortedSchedule[0].times : 'TBD'
-                                }
+                                } */}
                             </p>
                             <p>
-                                {
+                                5:30AM, 8AM, 9:30AM, 5:45PM
+                                {/* {
                                     sortedSchedule.length === 6 ? sortedSchedule[1].times : 'TBD'
-                                }
+                                } */}
                             </p>
                             <p>
-                                {
+                                5:30AM, 8AM, 9:30AM, 5:45PM
+                                {/* {
                                     sortedSchedule.length === 6 ? sortedSchedule[2].times : 'TBD'
-                                }
+                                } */}
                             </p>
                             <p>
-                                {
+                                5:30AM, 8AM, 9:30AM, 5:45PM
+                                {/* {
                                     sortedSchedule.length === 6 ? sortedSchedule[3].times : 'TBD'
-                                }
+                                } */}
                             </p>
                             <p>
-                                {
+                                8AM
+                                {/* {
                                     sortedSchedule.length === 6 ? sortedSchedule[4].times : 'TBD'
-                                }
+                                } */}
                             </p>
                             <p id='saturdayTime'>
-                                {
+                                8AM, 9:30AM
+                                {/* {
                                     sortedSchedule.length === 6 ? sortedSchedule[5].times : 'TBD'
-                                }
+                                } */}
                             </p>
                         </Col>
                       </Row>
