@@ -360,7 +360,9 @@ background-color: white;
   and (max-device-width: 667px) 
   and (-webkit-min-device-pixel-ratio: 2)
   and (orientation: portrait) { 
-
+    .makeStyles-root-1 {
+      margin-top: 20vw;
+    }
 }
 
 /* Landscape */
