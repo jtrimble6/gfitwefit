@@ -170,15 +170,15 @@ class Landing extends Component {
             />
             <Route exact path='/adminSignup'
               render={() =>
-                <AdminSignUp />
-                // this.state.admin === true ? (
-                //   <AdminSignUp />
-                // ) : this.state.admin === false ? (
-                //   <Redirect to='/' />
-                // ) : (
-                //   null
-                // )}
-              }
+                // <AdminSignUp />
+                this.state.admin === true ? (
+                  <AdminSignUp />
+                ) : this.state.admin === false ? (
+                  <Redirect to='/' />
+                ) : (
+                  null
+                )}
+              // }
             />
             <Route exact path='/adminHome'
               render={() =>
