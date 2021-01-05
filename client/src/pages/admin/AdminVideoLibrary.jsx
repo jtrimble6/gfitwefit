@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import axios from 'axios'
 import { Player, BigPlayButton } from 'video-react';
 import { Card, CardBody, Button, CardTitle, CardText } from 'reactstrap';
+import {isMobile} from 'react-device-detect';
 import API from '../../utils/API'
 
 // CSS
@@ -262,9 +263,10 @@ class AdminVideoLibrary extends Component {
                               <div key={video._id} className='videoLibraryCardDiv'>
                                   <Card className="card card-body mb-3 mx-auto videoLibraryCard">
                                     <Player
-                                        playsInline
-                                        poster={backgroundImg}
-                                        src={`video/${video.filename}`}
+                                      playsInline
+                                      poster={backgroundImg}
+                                      muted={isMobile}
+                                      src={`video/${video.filename}`}
                                     > 
                                       <BigPlayButton position='center' />
                                     </Player>
