@@ -722,7 +722,7 @@
   and (orientation: portrait) {
     .gymInfo {
         min-height: 605px;
-        padding-top: 40%;
+        padding-top: 90vw;
         padding-bottom: 20%;
     }
     
@@ -748,7 +748,7 @@
     }
     
     .gymInfoBody {
-        font-size: 2.8vw;
+      font-size: 4vw;
     }
     .gFitStrongLeft {
       font-size: 2vw;

@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Redirect } from 'react-router-dom'
 import LoginBar from '../../components/nav/LoginBar'
-import Footer from '../../components/nav/Footer'
+// import Footer from '../../components/nav/Footer'
 import API from '../../utils/API'
 import SignInError from "../../components/alerts/SignInError";
 
@@ -132,7 +132,7 @@ class AdminLogin extends Component {
                     </form>	  	
                 </div>
             </div>
-            <Footer />
+            {/* <Footer /> */}
             </div>
         )
     }

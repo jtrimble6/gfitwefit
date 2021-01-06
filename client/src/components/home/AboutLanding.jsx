@@ -24,9 +24,13 @@ class AboutLanding extends Component {
                             </p>
                             <p className='aboutJumbotronBody'>
                               We strongly believe that “as iron sharpens iron, so one man sharpens another” - Proverbs 27:17 ...because fitness isn’t just about you, it’s about a lifestyle and that affects all of us. We are in this journey with you! Let’s go! 
-                              <br /> 
-                              <strong className='gFitStrongLeft'>G FIT/</strong><strong className='gFitStrongRight'>/WE FIT</strong>. 
                             </p>
+                            {/* <br className='tagLineBreak' />  */}
+                            <Row>
+                              <div id='tagLineDiv'>
+                                <strong className='gFitStrongLeft'>G FIT/</strong><strong className='gFitStrongRight'>/WE FIT</strong> 
+                              </div>
+                            </Row>
                         </Col>
                     </Row>
                 </Jumbotron>

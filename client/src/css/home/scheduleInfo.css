@@ -666,6 +666,7 @@
 
     .scheduleDaysOfWeek {
         width: 28%;
+        padding-right: 0px;
     }
 
     .scheduleTypeOfWorkout {

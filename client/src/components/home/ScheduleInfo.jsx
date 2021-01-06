@@ -91,7 +91,7 @@ class ScheduleInfo extends Component {
     }
 
     render() {                
-        let sortedSchedule = this.state.sortedSchedule                                                  
+        // let sortedSchedule = this.state.sortedSchedule                                                  
         return (
             <div className='scheduleInfo' id='scheduleInfo' name='scheduleInfo'>
               <div className='scheduleInfoSection'>

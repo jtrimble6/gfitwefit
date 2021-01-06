@@ -7,7 +7,7 @@ import AboutLanding from '../../components/home/AboutLanding'
 import GymInfo from '../../components/home/GymInfo'
 import TrainerInfo from '../../components/home/TrainerInfo'
 import ScheduleInfo from '../../components/home/ScheduleInfo'
-import GoldOut from '../../components/home/GoldOut'
+// import GoldOut from '../../components/home/GoldOut'
 
 // CSS
 import '../../css/general/mainDiv.css'
