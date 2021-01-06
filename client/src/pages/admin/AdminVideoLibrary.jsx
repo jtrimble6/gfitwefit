@@ -263,20 +263,20 @@ class AdminVideoLibrary extends Component {
                             {this.state.videoLibraryFiltered.map((video, index) => (
                               <div key={video._id} className='videoLibraryCardDiv'>
                                   <Card className="card card-body mb-3 mx-auto videoLibraryCard">
-                                    {/* <Player
-                                      playsInline
+                                    <Player
+                                      playsInline={true}
                                       poster={backgroundImg}
                                       muted={isMobile}
                                       src={`video/${video.filename}`}
                                     > 
                                       <BigPlayButton position='center' />
-                                    </Player> */}
-                                    <ReactPlayer
+                                    </Player>
+                                    {/* <ReactPlayer
                                       playsinline
                                       muted={isMobile}
                                       url={`video/${video.filename}`}
                                     > 
-                                    </ReactPlayer>
+                                    </ReactPlayer> */}
                                     <CardBody>
                                       <CardTitle className='videoLibraryCardTitle'>Video Title</CardTitle>
                                       <CardText className='videoLibraryCardText'>This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</CardText>
