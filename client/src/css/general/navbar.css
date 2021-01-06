@@ -22,7 +22,7 @@
     .navbar {
         /* font-family: 'gfitfont-bold'; */
         font-weight: 900;
-        position: fixed;
+        position: relative;
         margin-bottom: 0;
         background-color: #FAC04E;
         top: 0;

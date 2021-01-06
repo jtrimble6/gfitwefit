@@ -1,5 +1,5 @@
 body {
-  min-height: 100vh;
+  height: 100vh;
   width: 100% !important;
   position: relative;
   /* overflow-y: auto !important; */
@@ -22,8 +22,8 @@ code {
 }
 
 html, body, #root, .App {
-  width: 100% !important;
-  height: 100% !important;
+  width: 100vw !important;
+  height: 100vh !important;
 }
 
 /* ----------- iPhone 5, 5S, 5C and 5SE ----------- */

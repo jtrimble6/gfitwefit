@@ -13,8 +13,9 @@
 
 #adminPage {
     margin: 0 auto;
+    height: 100%;
     /* margin-top: 10%; */
-    margin-bottom: 20%;
+    /* margin-bottom: 20%; */
     color: black;
     text-align: center;
 }

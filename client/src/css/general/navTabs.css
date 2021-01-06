@@ -7,13 +7,14 @@
   position: relative;
   top: 0;
   height: 100px;
-  margin-top: 10vw;
+  width: 100%;
+  margin-top: 0;
   background-color: black !important;
 }
 
 
 .MuiAppBar-root {
-  margin-top: 10vw !important;
+  margin-top: 0vw !important;
   /* background-color: white !important; */
   padding-top: 0.5rem;
 }
@@ -56,7 +57,7 @@ background-color: white;
   and (max-device-width: 1600px) 
   and (-webkit-min-device-pixel-ratio: 1) { 
     .makeStyles-root-1 {
-      margin-top: 10vw; 
+      /* margin-top: 10vw;  */
     }
     .PrivateTabIndicator-colorSecondary-4 {
       border-bottom: 0.5vw solid #FAC04E;
@@ -71,7 +72,7 @@ background-color: white;
   and (max-device-width: 2000px) 
   and (-webkit-min-device-pixel-ratio: 1) { 
     .makeStyles-root-1 {
-      margin-top: 10vw; 
+      /* margin-top: 10vw;  */
     }
     .PrivateTabIndicator-colorSecondary-4 {
       border-bottom: 0.5vw solid #FAC04E;
@@ -85,7 +86,7 @@ background-color: white;
   and (min-device-width: 2001px) 
   and (-webkit-min-device-pixel-ratio: 1) { 
     .makeStyles-root-1 {
-      margin-top: 10vw; 
+      /* margin-top: 10vw;  */
     }
     .PrivateTabIndicator-colorSecondary-4 {
       border-bottom: 0.5vw solid #FAC04E;
@@ -102,7 +103,7 @@ background-color: white;
   and (-webkit-min-device-pixel-ratio: 2)
   and (min-resolution: 192dpi) { 
     .makeStyles-root-1 {
-      margin-top: 10vw; 
+      /* margin-top: 10vw;  */
     }
     .PrivateTabIndicator-colorSecondary-4 {
       border-bottom: 0.5vw solid #FAC04E;
@@ -118,7 +119,7 @@ background-color: white;
   and (-webkit-min-device-pixel-ratio: 2)
   and (min-resolution: 192dpi) { 
     .makeStyles-root-1 {
-      margin-top: 10vw; 
+      /* margin-top: 10vw;  */
     }
     .PrivateTabIndicator-colorSecondary-4 {
       border-bottom: 0.5vw solid #FAC04E;
@@ -132,7 +133,7 @@ background-color: white;
   and (-webkit-min-device-pixel-ratio: 2)
   and (min-resolution: 192dpi) { 
     .makeStyles-root-1 {
-      margin-top: 10vw;
+      /* margin-top: 10vw; */
     }
     .PrivateTabIndicator-colorSecondary-4 {
       border-bottom: 0.5vw solid #FAC04E;
@@ -322,7 +323,7 @@ background-color: white;
       padding-right: 1% !important;
     }
     .makeStyles-root-1 {
-      margin-top: 20vw;
+      /* margin-top: 0vw; */
     }
     /* .makeStyles-root-1 {
       margin-top: 10vw ; 
@@ -340,7 +341,7 @@ background-color: white;
       margin: 1vw;
     }
     .makeStyles-root-1 {
-      margin-top: 15vw;
+      /* margin-top: 15vw; */
     }
 }
 
@@ -361,7 +362,7 @@ background-color: white;
   and (-webkit-min-device-pixel-ratio: 2)
   and (orientation: portrait) { 
     .makeStyles-root-1 {
-      margin-top: 20vw;
+      margin-top: 0vw;
     }
 }
 
@@ -427,7 +428,7 @@ background-color: white;
       margin: 1vw;
     }
     .makeStyles-root-1 {
-      margin-top: 20vw;
+      /* margin-top: 20vw; */
     }
     
 }
