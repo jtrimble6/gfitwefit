@@ -22,8 +22,8 @@ code {
 }
 
 html, body, #root, .App {
-  width: 100vw !important;
-  height: 100vh !important;
+  width: 100% !important;
+  height: 100% !important;
 }
 
 /* ----------- iPhone 5, 5S, 5C and 5SE ----------- */

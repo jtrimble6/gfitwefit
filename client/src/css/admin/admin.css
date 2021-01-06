@@ -237,7 +237,7 @@
 }
 
 #adminPage #videoLibraryPage {
-  padding-top: 25vw !important;
+  padding-top: 25vw;
 }
 
 .sampleVideo {
@@ -441,6 +441,9 @@
   and (min-device-width: 320px) 
   and (max-device-width: 568px)
   and (-webkit-min-device-pixel-ratio: 2) {
+    #videoLibraryPage {
+      margin-top: 0vw;
+    }
     .sampleVideo {
       font-size: 1.5rem;
     }

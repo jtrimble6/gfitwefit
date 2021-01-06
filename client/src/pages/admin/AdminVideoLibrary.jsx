@@ -268,6 +268,7 @@ class AdminVideoLibrary extends Component {
                                       poster={backgroundImg}
                                       muted={isMobile}
                                       src={`video/${video.filename}`}
+                                      
                                     > 
                                       <BigPlayButton position='center' />
                                     </Player>
