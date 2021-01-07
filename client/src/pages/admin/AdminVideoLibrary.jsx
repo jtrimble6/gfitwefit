@@ -274,7 +274,7 @@ class AdminVideoLibrary extends Component {
                                         this.player = player;
                                       }}
                                       autoplay
-                                      playsinline
+                                      playsInline
                                       muted
                                       controls
                                       src={`video/${video.filename}`}
