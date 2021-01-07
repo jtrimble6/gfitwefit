@@ -1,7 +1,5 @@
 import React, { Component } from 'react'
 import axios from 'axios'
-import ReactPlayer from 'react-player'
-import $ from 'jquery'
 import { Player, BigPlayButton } from 'video-react';
 import { Card, CardBody, Button, CardTitle, CardText } from 'reactstrap';
 import {isMobile} from 'react-device-detect';
@@ -97,10 +95,8 @@ class AdminVideoLibrary extends Component {
 
   playVideo = (e) => {
     e.preventDefault()
-    $(".videoLibraryPlayer")(function()
-      {
-        this.start()
-      });
+    console.log('PLAY VIDEO')
+    this.player.play()
   }
 
   toggleFilter = (event) => {
@@ -274,14 +270,19 @@ class AdminVideoLibrary extends Component {
                               <div key={video._id} className='videoLibraryCardDiv'>
                                   <Card className="card card-body mb-3 mx-auto videoLibraryCard">
                                     <Player
+                                      ref={player => {
+                                        this.player = player;
+                                      }}
                                       playsInline={true}
                                       poster={backgroundImg}
                                       muted={isMobile}
                                       src={`video/${video.filename}`}
                                       className='videoLibraryPlayer'
+                                      onClick={this.playVideo}
                                     > 
                                       <BigPlayButton position='center' onClick={this.playVideo} />
                                     </Player>
+                                    <Button onClick={this.playVideo}>Play Video</Button>
                                     {/* <ReactPlayer
                                       playsinline
                                       muted={isMobile}
