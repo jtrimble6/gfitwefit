@@ -269,7 +269,7 @@ class AdminVideoLibrary extends Component {
                             {this.state.videoLibraryFiltered.map((video, index) => (
                               <div key={video._id} className='videoLibraryCardDiv'>
                                   <Card className="card card-body mb-3 mx-auto videoLibraryCard">
-                                    <video loop autoplay controls width='100%' height='100%' src={`video/${video.filename}`} type='video/quicktime'></video>
+                                    <video loop autoPlay controls width='100%' height='100%' src={`video/${video.filename}`} type={video.contentType}></video>
                                     {/* <Player
                                       ref={player => {
                                         this.player = player;
