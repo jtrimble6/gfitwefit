@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import ReactPlayer from 'react-player'
+import $ from 'jquery'
 import { Player, BigPlayButton } from 'video-react';
 import { Card, CardBody, Button, CardTitle, CardText } from 'reactstrap';
 import {isMobile} from 'react-device-detect';
@@ -34,6 +35,7 @@ class AdminVideoLibrary extends Component {
     this.toggleFilter = this.toggleFilter.bind(this)
     this.getUserData = this.getUserData.bind(this)
     this.getVideos = this.getVideos.bind(this)
+    this.playVideo = this.playVideo.bind(this)
   }
 
 
@@ -41,7 +43,7 @@ class AdminVideoLibrary extends Component {
   componentDidMount() {
     this.getUserData()
     this.getVideos()
-  }
+    }
 
   getUserData = () => {
     let userId = localStorage.getItem('user');
@@ -76,7 +78,7 @@ class AdminVideoLibrary extends Component {
         .catch(err => {
             console.log(err)
         })
-  }
+    }
 
   getVideos = () => {
     axios.get('/videos').then(res => {
@@ -92,6 +94,14 @@ class AdminVideoLibrary extends Component {
         })
       });
     }
+
+  playVideo = (e) => {
+    e.preventDefault()
+    $(".videoLibraryPlayer")(function()
+      {
+        this.start()
+      });
+  }
 
   toggleFilter = (event) => {
     event.preventDefault()
@@ -112,14 +122,14 @@ class AdminVideoLibrary extends Component {
         })
     }
         
-  }
+    }
 
   handleChange = ev => {
     const { name, value } = ev.target
     this.setState({
         [name]: value
     })
-  };
+    }
 
   handleFilter = () => {
     console.log('Equipment needed: ', this.state.equipmentNeeded)
@@ -215,16 +225,16 @@ class AdminVideoLibrary extends Component {
     //     console.log(this.state.videoLibraryFiltered);
     // })
      
-  }
+    }
 
   handleFilterReset = (event) => {
-    event.preventDefault()
-    this.setState({
-        equipmentNeeded: null,
-        fitnessLevel: null, 
-        workoutCategory: null
-    })
-  }
+      event.preventDefault()
+      this.setState({
+          equipmentNeeded: null,
+          fitnessLevel: null, 
+          workoutCategory: null
+      })
+    }
 
     render() {
         return (
@@ -268,9 +278,9 @@ class AdminVideoLibrary extends Component {
                                       poster={backgroundImg}
                                       muted={isMobile}
                                       src={`video/${video.filename}`}
-                                      
+                                      className='videoLibraryPlayer'
                                     > 
-                                      <BigPlayButton position='center' />
+                                      <BigPlayButton position='center' onClick={this.playVideo} />
                                     </Player>
                                     {/* <ReactPlayer
                                       playsinline
