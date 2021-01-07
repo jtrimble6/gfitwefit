@@ -151,7 +151,7 @@ app.get('/videos', (req, res) => {
       })
     } else {
       files.map(file => {
-        if(file.contentType === 'video/mov' || 'video/mp4') {
+        if(file.contentType === 'video/mov' || file.contentType === 'video/mp4') {
           file.isVideo === true
         } else {
           file.isVideo === false

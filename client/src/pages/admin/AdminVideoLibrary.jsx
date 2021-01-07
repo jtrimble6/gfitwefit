@@ -269,7 +269,8 @@ class AdminVideoLibrary extends Component {
                             {this.state.videoLibraryFiltered.map((video, index) => (
                               <div key={video._id} className='videoLibraryCardDiv'>
                                   <Card className="card card-body mb-3 mx-auto videoLibraryCard">
-                                    <Player
+                                    <video loop autoplay controls width='100%' height='100%' src={`video/${video.filename}`} type='video/mp4'></video>
+                                    {/* <Player
                                       ref={player => {
                                         this.player = player;
                                       }}
@@ -282,7 +283,7 @@ class AdminVideoLibrary extends Component {
                                     > 
                                       <BigPlayButton position='center' />
                                     </Player>
-                                    <Button onClick={this.playVideo}>Play Video</Button>
+                                    <Button onClick={this.playVideo}>Play Video</Button> */}
                                     {/* <ReactPlayer
                                       playsinline
                                       muted={isMobile}
