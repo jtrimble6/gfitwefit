@@ -273,11 +273,11 @@ class AdminVideoLibrary extends Component {
                                       ref={player => {
                                         this.player = player;
                                       }}
-                                      playsInline={true}
-                                      poster={backgroundImg}
-                                      muted={isMobile}
+                                      playsInline
+                                      muted
+                                      controls
                                       src={`video/${video.filename}`}
-                                      controls={true}
+                                      poster={backgroundImg}
                                     > 
                                       <BigPlayButton position='center' />
                                     </Player>
@@ -289,8 +289,8 @@ class AdminVideoLibrary extends Component {
                                     > 
                                     </ReactPlayer> */}
                                     <CardBody>
-                                      <CardTitle className='videoLibraryCardTitle'>Video Title</CardTitle>
-                                      <CardText className='videoLibraryCardText'>This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</CardText>
+                                      <CardTitle className='videoLibraryCardTitle'>{video.videoTitle}</CardTitle>
+                                      <CardText className='videoLibraryCardText'>{video.videoDesc}</CardText>
                                       <CardText>
                                           <small className="text-muted videoLibraryCardSubtitle">Last updated 3 mins ago</small>
                                       </CardText>
