@@ -82,7 +82,7 @@ class AdminVideoLibrary extends Component {
     axios.get('/videos').then(res => {
         let files = res.data
         let videoLibrary = files.filter(file => {
-            return file.contentType === 'video/quicktime'
+            return file.contentType === 'video/quicktime' || file.contentType === 'video/mp4'
         })
         this.setState({
             videoLibrary: videoLibrary,

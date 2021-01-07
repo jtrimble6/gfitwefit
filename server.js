@@ -151,7 +151,7 @@ app.get('/videos', (req, res) => {
       })
     } else {
       files.map(file => {
-        if(file.contentType === 'video/mov') {
+        if(file.contentType === 'video/mov' || 'video/mp4') {
           file.isVideo === true
         } else {
           file.isVideo === false
@@ -173,7 +173,7 @@ app.get('/sampleVideos', (req, res) => {
       })
     } else {
       files.map(file => {
-        if(file.contentType === 'video/mov' && file.sampleVideo === true) {
+        if(file.sampleVideo === true) {
           file.isVideo === true
         } else {
           file.isVideo === false
