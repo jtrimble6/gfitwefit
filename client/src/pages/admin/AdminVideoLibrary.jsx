@@ -277,10 +277,9 @@ class AdminVideoLibrary extends Component {
                                       poster={backgroundImg}
                                       muted={isMobile}
                                       src={`video/${video.filename}`}
-                                      className='videoLibraryPlayer'
-                                      onClick={this.playVideo}
+                                      controls={true}
                                     > 
-                                      <BigPlayButton position='center' onClick={this.playVideo} />
+                                      <BigPlayButton position='center' />
                                     </Player>
                                     <Button onClick={this.playVideo}>Play Video</Button>
                                     {/* <ReactPlayer
