@@ -273,7 +273,8 @@ class AdminVideoLibrary extends Component {
                                       ref={player => {
                                         this.player = player;
                                       }}
-                                      playsInline
+                                      autoplay
+                                      playsinline
                                       muted
                                       controls
                                       src={`video/${video.filename}`}
