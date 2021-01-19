@@ -59,14 +59,16 @@ class AdminVideoLibrary extends Component {
 
             console.log("PREFERENCES: ", userPreferences)
 
-            if (userPreferences.workoutCategory.length) {
-              workoutCategory = userPreferences.workoutCategory
-            }
-            if (userPreferences.fitnessLevel.length) {
-              fitnessLevel = userPreferences.fitnessLevel
-            }
-            if (userPreferences.equipmentNeeded.length) {
-              equipmentNeeded = userPreferences.equipmentNeeded
+            if (userPreferences !== undefined ) {
+              if (userPreferences.workoutCategory.length) {
+                workoutCategory = userPreferences.workoutCategory
+              }
+              if (userPreferences.fitnessLevel.length) {
+                fitnessLevel = userPreferences.fitnessLevel
+              }
+              if (userPreferences.equipmentNeeded.length) {
+                equipmentNeeded = userPreferences.equipmentNeeded
+              }
             }
 
             this.setState({

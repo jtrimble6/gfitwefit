@@ -120,6 +120,60 @@ const storage = new GridFsStorage({
 });
 const upload = multer({ storage });
 
+function StreamGridFile(req, res, GridFile) {
+  if(req.headers['range']) {
+
+    // Range request, partialle stream the file
+    console.log('Range Reuqest');
+    var parts = req.headers['range'].replace(/bytes=/, "").split("-");
+    var partialstart = parts[0];
+    var partialend = parts[1];
+
+    var start = parseInt(partialstart, 10);
+    var end = partialend ? parseInt(partialend, 10) : GridFile.length -1;
+    var chunksize = (end-start)+1;
+
+    console.log('Range ',start,'-',end);
+
+    res.writeHead(206, {
+      'Content-Range': 'bytes ' + start + '-' + end + '/' + GridFile.length,
+      'Accept-Ranges': 'bytes',
+      'Content-Length': chunksize,
+      'Content-Type': GridFile.contentType
+    });
+
+    // Set filepointer
+    GridFile.seek(start, function() {
+      // get GridFile stream
+      var stream = GridFile.stream(true);
+
+      // write to response
+      stream.on('data', function(buff) {
+        // count data to abort streaming if range-end is reached
+        // perhaps theres a better way?
+        start += buff.length;
+        if(start >= end) {
+          // enough data send, abort
+          GridFile.close();
+          res.end();
+        } else {
+          res.write(buff);
+        }
+      });
+    });
+
+  } else {
+
+    // stream back whole file
+    console.log('No Range Request');
+    res.header('Content-Type', GridFile.contentType);
+    res.header('Content-Length', GridFile.length);
+    var stream = GridFile.stream(true);
+    stream.pipe(res);
+  }
+}
+
+
 // @route POST /upload
 // @desc Uploads file to DB
 
@@ -151,7 +205,7 @@ app.get('/videos', (req, res) => {
       })
     } else {
       files.map(file => {
-        if(file.contentType === 'video/mov' || file.contentType === 'video/mp4') {
+        if(file.contentType === 'video/quicktime' || file.contentType === 'video/mp4') {
           file.isVideo === true
         } else {
           file.isVideo === false
@@ -218,8 +272,9 @@ app.get('/video/:filename', (req, res) => {
     // Check if video
     if(file.contentType === 'video/quicktime') {
       // Read output to browser
-      var readstream = gfs.createReadStream(file.filename)
-      readstream.pipe(res)
+      StreamGridFile(req, res, file)
+      // var readstream = gfs.createReadStream(file.filename)
+      // readstream.pipe(res)
     } else {
       res.status(404).json({
         err: 'Not a video'
