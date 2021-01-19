@@ -84,6 +84,7 @@ class AdminVideoLibrary extends Component {
         let videoLibrary = files.filter(file => {
             return file.contentType === 'video/quicktime' || file.contentType === 'video/mp4'
         })
+        console.log('ADMIN VIDEOS: ', videoLibrary)
         this.setState({
             videoLibrary: videoLibrary,
             videoLibraryFiltered: videoLibrary
@@ -242,21 +243,21 @@ class AdminVideoLibrary extends Component {
                     <div className="row videoLibraryRow">
                       <div className="col-sm-3 filterColumn">
                           <Button
-                              id="showHideFilterButton"
-                              className="userFilterLibraryButton"
-                              onClick={this.toggleFilter}
+                            id="showHideFilterButton"
+                            className="userFilterLibraryButton"
+                            onClick={this.toggleFilter}
                           >
-                              Show Filters
+                            Show Filters
                           </Button>
 
                           {/* FILTER FORM */}
                           <AdminVideoPreferences 
-                              handleChange={this.handleChange}
-                              handleFilter={this.handleFilter}
-                              handleFilterReset={this.handleFilterReset}
-                              equipmentNeeded={this.state.equipmentNeeded}
-                              fitnessLevel={this.state.fitnessLevel}
-                              workoutCategory={this.state.workoutCategory}
+                            handleChange={this.handleChange}
+                            handleFilter={this.handleFilter}
+                            handleFilterReset={this.handleFilterReset}
+                            equipmentNeeded={this.state.equipmentNeeded}
+                            fitnessLevel={this.state.fitnessLevel}
+                            workoutCategory={this.state.workoutCategory}
                           />
                       </div>
 
