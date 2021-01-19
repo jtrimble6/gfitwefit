@@ -1,18 +1,18 @@
-import React, { Component } from 'react'
-import axios from 'axios'
-import { Player, BigPlayButton } from 'video-react';
-import { Card, CardBody, Button, CardTitle, CardText } from 'reactstrap';
-import {isMobile} from 'react-device-detect';
-import API from '../../utils/API'
+import React, { Component } from "react"
+import axios from "axios"
+import { Player, BigPlayButton } from "video-react";
+import { Card, CardBody, Button, CardTitle, CardText } from "reactstrap";
+import {isMobile} from "react-device-detect";
+import API from "../../utils/API"
 
 // CSS
 import backgroundImg from "../../css/images/GOUVEIA-FITNESS_Mark_White.png";
-import '../../../../node_modules/video-react/dist/video-react.css'; // import video-react css
-import '../../css/general/videoLibrary.css'
-import '../../css/admin/admin.css'
+import "../../../../node_modules/video-react/dist/video-react.css"; // import video-react css
+import "../../css/general/videoLibrary.css"
+import "../../css/admin/admin.css"
 
 // COMPONENTS
-import AdminVideoPreferences from './AdminVideoPreferences.jsx'
+import AdminVideoPreferences from "./AdminVideoPreferences.jsx"
 
 
 class AdminVideoLibrary extends Component {
@@ -44,8 +44,8 @@ class AdminVideoLibrary extends Component {
     }
 
   getUserData = () => {
-    let userId = localStorage.getItem('user');
-    console.log('USER ID: ', userId)
+    let userId = localStorage.getItem("user");
+    console.log("USER ID: ", userId)
     API.getUser(userId)
         .then(res => {
             // console.log(res.data[0])
@@ -56,6 +56,8 @@ class AdminVideoLibrary extends Component {
             let workoutCategory = null
             let fitnessLevel = null
             let equipmentNeeded = null
+
+            console.log("PREFERENCES: ", userPreferences)
 
             if (userPreferences.workoutCategory.length) {
               workoutCategory = userPreferences.workoutCategory
@@ -79,12 +81,12 @@ class AdminVideoLibrary extends Component {
     }
 
   getVideos = () => {
-    axios.get('/videos').then(res => {
+    axios.get("/videos").then(res => {
         let files = res.data
         let videoLibrary = files.filter(file => {
-            return file.contentType === 'video/quicktime' || file.contentType === 'video/mp4'
+            return file.contentType === "video/quicktime" || file.contentType === "video/mp4"
         })
-        console.log('ADMIN VIDEOS: ', videoLibrary)
+        console.log("ADMIN VIDEOS: ", videoLibrary)
         this.setState({
             videoLibrary: videoLibrary,
             videoLibraryFiltered: videoLibrary
@@ -96,7 +98,7 @@ class AdminVideoLibrary extends Component {
 
   playVideo = (e) => {
     e.preventDefault()
-    console.log('PLAY VIDEO')
+    console.log("PLAY VIDEO")
     this.player.play()
   }
 
@@ -104,16 +106,16 @@ class AdminVideoLibrary extends Component {
     event.preventDefault()
     let filterShowing = this.state.filterShowing
     if(filterShowing) {
-        // console.log('HIDING FILTER')
-        document.getElementById('userVideoPreferences').style.display = 'none'    
-        document.getElementById('showHideFilterButton').innerHTML = 'Show Filters'     
+        // console.log("HIDING FILTER")
+        document.getElementById("userVideoPreferences").style.display = "none"    
+        document.getElementById("showHideFilterButton").innerHTML = "Show Filters"     
         this.setState({
             filterShowing: false
         })
     } else {
-        // console.log('SHOWING FILTER')
-        document.getElementById('userVideoPreferences').style.display = 'block'   
-        document.getElementById('showHideFilterButton').innerHTML = 'Hide Filters' 
+        // console.log("SHOWING FILTER")
+        document.getElementById("userVideoPreferences").style.display = "block"   
+        document.getElementById("showHideFilterButton").innerHTML = "Hide Filters" 
         this.setState({
             filterShowing: true
         })
@@ -129,9 +131,9 @@ class AdminVideoLibrary extends Component {
     }
 
   handleFilter = () => {
-    console.log('Equipment needed: ', this.state.equipmentNeeded)
-    console.log('Fitness level: ', this.state.fitnessLevel)
-    console.log('Workout category: ', this.state.workoutCategory)
+    console.log("Equipment needed: ", this.state.equipmentNeeded)
+    console.log("Fitness level: ", this.state.fitnessLevel)
+    console.log("Workout category: ", this.state.workoutCategory)
     
     let files = this.state.videoLibrary
     let equipmentNeeded = this.state.equipmentNeeded
@@ -140,7 +142,7 @@ class AdminVideoLibrary extends Component {
 
     if (equipmentNeeded && fitnessLevel && workoutCategory) {
         let videoLibraryFiltered = files.filter(file => {
-            return file.contentType === 'video/quicktime' 
+            return file.contentType === "video/quicktime" 
             && file.equipmentNeeded === this.state.equipmentNeeded 
             && file.fitnessLevel === this.state.fitnessLevel
             && file.workoutCategory === this.state.workoutCategory
@@ -152,7 +154,7 @@ class AdminVideoLibrary extends Component {
         })
     } else if (equipmentNeeded && !fitnessLevel && !workoutCategory) {
         let videoLibraryFiltered = files.filter(file => {
-            return file.contentType === 'video/quicktime' 
+            return file.contentType === "video/quicktime" 
             && file.equipmentNeeded === this.state.equipmentNeeded 
         })
         this.setState({
@@ -162,7 +164,7 @@ class AdminVideoLibrary extends Component {
         })
     } else if (equipmentNeeded && fitnessLevel && !workoutCategory) {
         let videoLibraryFiltered = files.filter(file => {
-            return file.contentType === 'video/quicktime' 
+            return file.contentType === "video/quicktime" 
             && file.equipmentNeeded === this.state.equipmentNeeded 
             && file.fitnessLevel === this.state.fitnessLevel
         })
@@ -173,7 +175,7 @@ class AdminVideoLibrary extends Component {
         })
     } else if (!equipmentNeeded && fitnessLevel && workoutCategory) {
         let videoLibraryFiltered = files.filter(file => {
-            return file.contentType === 'video/quicktime' 
+            return file.contentType === "video/quicktime" 
             && file.fitnessLevel === this.state.fitnessLevel
             && file.workoutCategory === this.state.workoutCategory
         })
@@ -184,7 +186,7 @@ class AdminVideoLibrary extends Component {
         })
     } else if (!equipmentNeeded && !fitnessLevel && workoutCategory) {
         let videoLibraryFiltered = files.filter(file => {
-            return file.contentType === 'video/quicktime' 
+            return file.contentType === "video/quicktime" 
             && file.workoutCategory === this.state.workoutCategory
         })
         this.setState({
@@ -194,7 +196,7 @@ class AdminVideoLibrary extends Component {
         })
     } else if (!equipmentNeeded && fitnessLevel && !workoutCategory) {
         let videoLibraryFiltered = files.filter(file => {
-            return file.contentType === 'video/quicktime' 
+            return file.contentType === "video/quicktime" 
             && file.fitnessLevel === this.state.fitnessLevel
         })
         this.setState({
@@ -211,7 +213,7 @@ class AdminVideoLibrary extends Component {
     }
 
     // let videoLibraryFiltered = files.filter(file => {
-    //     return file.contentType === 'video/quicktime' 
+    //     return file.contentType === "video/quicktime" 
     //     && file.equipmentNeeded === this.state.equipmentNeeded 
     //     && file.fitnessLevel === this.state.fitnessLevel
     //     && file.workoutCategory === this.state.workoutCategory
@@ -266,9 +268,9 @@ class AdminVideoLibrary extends Component {
                         {
                           (this.state.videoLibraryFiltered.length > 0) ? 
                           
-                          <div className='videoLibraryDiv'>
+                          <div className="videoLibraryDiv">
                             {this.state.videoLibraryFiltered.map((video, index) => (
-                              <div key={video._id} className='videoLibraryCardDiv'>
+                              <div key={video._id} className="videoLibraryCardDiv">
                                   <Card className="card card-body mb-3 mx-auto videoLibraryCard">
                                     <video 
                                       ref={player => {
@@ -278,8 +280,8 @@ class AdminVideoLibrary extends Component {
                                       autoPlay 
                                       muted 
                                       controls 
-                                      width='100%' 
-                                      height='100%' 
+                                      width="100%" 
+                                      height="100%" 
                                       src={`video/${video.filename}`} 
                                       type={video.contentType}>
                                         
@@ -295,7 +297,7 @@ class AdminVideoLibrary extends Component {
                                       src={`video/${video.filename}`}
                                       poster={backgroundImg}
                                     > 
-                                      <BigPlayButton position='center' />
+                                      <BigPlayButton position="center" />
                                     </Player>
                                     */}
                                     <Button onClick={this.playVideo}>Play Video</Button> 
@@ -306,8 +308,8 @@ class AdminVideoLibrary extends Component {
                                     > 
                                     </ReactPlayer> */}
                                     <CardBody>
-                                      <CardTitle className='videoLibraryCardTitle'>{video.videoTitle}</CardTitle>
-                                      <CardText className='videoLibraryCardText'>{video.videoDesc}</CardText>
+                                      <CardTitle className="videoLibraryCardTitle">{video.videoTitle}</CardTitle>
+                                      <CardText className="videoLibraryCardText">{video.videoDesc}</CardText>
                                       <CardText>
                                           <small className="text-muted videoLibraryCardSubtitle">Last updated 3 mins ago</small>
                                       </CardText>
@@ -318,7 +320,7 @@ class AdminVideoLibrary extends Component {
                                   <input 
                                     type="submit" 
                                     value="Delete Video" 
-                                    className='adminDeleteButton delete' 
+                                    className="adminDeleteButton delete" 
                                   />
                                 </form>
                               </div> 
@@ -327,7 +329,7 @@ class AdminVideoLibrary extends Component {
 
                           : 
 
-                          <h2 className='noVideosTitle'>There are no videos to display.</h2>
+                          <h2 className="noVideosTitle">There are no videos to display.</h2>
                       }
 
                       {/* View Video Library */}
