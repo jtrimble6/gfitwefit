@@ -282,8 +282,8 @@ class AdminVideoLibrary extends Component {
                                       controls 
                                       width="100%" 
                                       height="100%"
-                                      src="http://media.w3.org/2010/05/bunny/movie.mp4" 
-                                      // src={`video/${video.filename}`} 
+                                      // src="http://media.w3.org/2010/05/bunny/movie.mp4" 
+                                      src={`video/${video.filename}`} 
                                       type={video.contentType}>
                                         
                                       </video>
