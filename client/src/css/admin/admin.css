@@ -157,7 +157,13 @@
   background-color: black;
   color: white;
   text-align: center;
-  margin-top: 10%;
+  /* margin-top: 10%; */
+  height: 100vh;
+  width: 100vw;
+}
+
+#logoutPage h1 {
+  padding-top: 10%;
 }
 
 #logoutPage a {

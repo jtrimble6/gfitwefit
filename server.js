@@ -93,10 +93,13 @@ const conn = mongoose.createConnection(process.env.MONGODB_URI || config.db);
 //Init gfs
 let gfs;
 
-conn.once('open', () => {
+conn.once('open', function(err, database) {
   // Init stream
+  if(err) throw err;
+  
   gfs = Grid(conn.db, mongoose.mongo)
   gfs.collection('uploads')
+  db = database
 })
 
 // Create storage engine
@@ -120,47 +123,60 @@ const storage = new GridFsStorage({
 });
 const upload = multer({ storage });
 
+var mongo = require('mongodb');
+// var MongoClient = require('mongodb').MongoClient;
+var GridFSBucket = mongo.GridFSBucket;
+var ObjectID = require('mongodb').ObjectID;
+
 function StreamGridFile(req, res, GridFile) {
   if(req.headers['range']) {
-
     // Range request, partialle stream the file
-    console.log('Range Reuqest');
+    console.log('Range Request', GridFile);
     var parts = req.headers['range'].replace(/bytes=/, "").split("-");
     var partialstart = parts[0];
     var partialend = parts[1];
 
+
     var start = parseInt(partialstart, 10);
+
     var end = partialend ? parseInt(partialend, 10) : GridFile.length -1;
     var chunksize = (end-start)+1;
-
-    console.log('Range ',start,'-',end);
-
+  
     res.writeHead(206, {
-      'Content-Range': 'bytes ' + start + '-' + end + '/' + GridFile.length,
+      'Content-disposition': 'filename=xyz',
       'Accept-Ranges': 'bytes',
-      'Content-Length': chunksize,
-      'Content-Type': GridFile.contentType
+      'Content-Type': GridFile.contentType,
+      'Content-Range': 'bytes ' + start + '-' + end + '/' + GridFile.length,
+      'Content-Length': chunksize
     });
+
+    var readstream = gfs.createReadStream({
+      _id: GridFile._id,
+      range: {
+        startPos: start,
+        endPos: end
+      }
+    });
+    readstream.pipe(res)
 
     // Set filepointer
-    GridFile.seek(start, function() {
-      // get GridFile stream
-      var stream = GridFile.stream(true);
+    // GridFile.seek(start, function() {
+    //   // get GridFile stream
+    //   var stream = GridFile.stream(true);
 
-      // write to response
-      stream.on('data', function(buff) {
-        // count data to abort streaming if range-end is reached
-        // perhaps theres a better way?
-        start += buff.length;
-        if(start >= end) {
-          // enough data send, abort
-          GridFile.close();
-          res.end();
-        } else {
-          res.write(buff);
-        }
-      });
-    });
+    //   // write to response
+    //   stream.on('data', function(buff) {
+    //     // count data to abort streaming if range-end is reached
+    //     // perhaps theres a better way?
+    //     if(start >= end) {
+    //       // enough data send, abort
+    //       GridFile.close();
+    //       res.end();
+    //     } else {
+    //       res.write(buff);
+    //     }
+    //   });
+    // });
 
   } else {
 
@@ -168,9 +184,60 @@ function StreamGridFile(req, res, GridFile) {
     console.log('No Range Request');
     res.header('Content-Type', GridFile.contentType);
     res.header('Content-Length', GridFile.length);
-    var stream = GridFile.stream(true);
-    stream.pipe(res);
+    var readstream = gfs.createReadStream(GridFile.filename)
+    readstream.pipe(res)
+    // var stream = GridFile.stream(true);
+    // stream.pipe(res);
   }
+}
+
+app.get('/video/:filename', function(req, res) {
+  gfs.files.findOne({filename: req.params.filename}, (err, file) => {
+    // Check if files exist
+    if(!file || file.length === 0) {
+      return res.status(404).json({
+        err: 'No videos exist'
+      })
+    }
+
+    // Check if video
+    if(file.contentType === 'video/quicktime' || file.contentType === 'video/mp4') {
+      // let newFileId = 
+      //   crypto.randomBytes(24, (err, buf) => {
+      //     if (err) {
+      //       return reject(err);
+      //     }
+      //     const fileId = buf.toString('hex');
+      //     return(fileId);
+      //   });
+      console.log('NEW FILE ID: ', file._id)
+      // Read output to browser
+      // new GridFSBucket(db, new ObjectID(file._id), null, 'r').open(function(err, GridFile) {
+      //   if(!GridFile) {
+      //     res.send(404,'Not Found');
+      //     return;
+      //   }
+        
+      //   StreamGridFile(req, res, GridFile);
+      // });
+      StreamGridFile(req, res, file)
+      // var readstream = gfs.createReadStream(file.filename)
+      // readstream.pipe(res)
+    } else {
+      res.status(404).json({
+        err: 'Not a video'
+      })
+    }
+    
+  })
+  
+});
+
+function isInvalidRange (start, end, maxIdx) {
+  return start !== start  // NaN
+      || start < 0
+      || end < start
+      || start > maxIdx
 }
 
 
@@ -260,35 +327,38 @@ app.get('/videos/:filename', (req, res) => {
 // @route GET /video/:filename
 // @desc Display video
 
-app.get('/video/:filename', (req, res) => {
-  gfs.files.findOne({filename: req.params.filename}, (err, file) => {
-    // Check if files exist
-    if(!file || file.length === 0) {
-      return res.status(404).json({
-        err: 'No videos exist'
-      })
-    }
 
-    // Check if video
-    if(file.contentType === 'video/quicktime') {
-      // Read output to browser
-      StreamGridFile(req, res, file)
-      // var readstream = gfs.createReadStream(file.filename)
-      // readstream.pipe(res)
-    } else {
-      res.status(404).json({
-        err: 'Not a video'
-      })
-    }
+// ORIGINAL GET VIDEO FILE 
+
+// app.get('/video/:filename', (req, res) => {
+//   gfs.files.findOne({filename: req.params.filename}, (err, file) => {
+//     // Check if files exist
+//     if(!file || file.length === 0) {
+//       return res.status(404).json({
+//         err: 'No videos exist'
+//       })
+//     }
+
+//     // Check if video
+//     if(file.contentType === 'video/quicktime' || file.contentType === 'video/mp4') {
+//       // Read output to browser
+//       StreamGridFile(req, res, file)
+//       // var readstream = gfs.createReadStream(file.filename)
+//       // readstream.pipe(res)
+//     } else {
+//       res.status(404).json({
+//         err: 'Not a video'
+//       })
+//     }
     
-  })
-})
+//   })
+// })
 
 // @route DELETE /videos/:id
 // @desc Delete video
 
 app.delete('/videos/:id', (req, res) => {
-  gfs.remove({ _id: req.params.id, root: 'uploads' }, (err, gridStore) => {
+  gfs.remove({ _id: req.params.id, root: 'uploads' }, (err, GridFSBucket) => {
     if(err) {
       return res.status(404).json({ err: err })
     }

@@ -279,8 +279,8 @@ class AdminVideoLibrary extends Component {
                                         this.player = player;
                                       }} 
                                       loop 
-                                      autoPlay 
-                                      muted 
+                                      // autoPlay 
+                                      // muted 
                                       controls 
                                       width="100%" 
                                       height="100%"
@@ -303,7 +303,7 @@ class AdminVideoLibrary extends Component {
                                       <BigPlayButton position="center" />
                                     </Player>
                                     */}
-                                    <Button onClick={this.playVideo}>Play Video</Button> 
+                                    {/* <Button onClick={this.playVideo}>Play Video</Button>  */}
                                     {/* <ReactPlayer
                                       playsinline
                                       muted={isMobile}
