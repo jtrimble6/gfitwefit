@@ -822,7 +822,7 @@
     .aboutJumbotronHeaderRow {
         position: relative;
         top: -25px;
-        margin: 0 auto;
+        left: 10px;
         white-space: nowrap !important;
         /* display: block; */
     }
@@ -999,7 +999,7 @@
     .aboutJumbotronHeaderRow {
         position: relative;
         top: -25px;
-        margin: 0 auto;
+        left: 10px;
     }
     .aboutJumbotronHeaderLeft {
         font-size: 3vw;
