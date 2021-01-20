@@ -5,6 +5,7 @@
     margin-top: 0vh;
     padding-bottom: 15vh !important;
     background-color: white;
+    overflow-x: hidden !important;
 }
 
 .videoLibraryRow {
@@ -24,10 +25,15 @@
 
 .videoLibraryDiv {
     width: 100% !important;
+    margin: 0 auto;
     -webkit-column-count: 3;
     -moz-column-count: 3;
     column-count: 3;
     /* align-items: center !important; */
+}
+
+.videoColumn {
+  margin: 0 auto;
 }
 
 .videoLibraryCardDiv {
@@ -235,7 +241,6 @@
     .videoLibraryCardDiv {
       width: 30vw; 
       /* float: left; */
-      margin-left: 5vw;
     }
     .videoLibraryRow {
       width: 95%;
@@ -251,7 +256,7 @@
       font-size: 1.5rem;
     }
     .filterTitle {
-      font-size: 2rem !important;
+      font-size: 1rem !important;
       border: 2px solid #FAC04E;
     }
     .MuiSvgIcon-root {

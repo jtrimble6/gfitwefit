@@ -234,12 +234,24 @@
 
 .adminExitLibraryButton {
     width: 60%;
-    margin-top: 5%;
+    margin-top: 5vw !important;
+    margin: 0 auto;
     background-color: #FAC04E !important;
     border: none;
     color: black;
     padding: 2%;
-    border-radius: 5%;
+    border-radius: 1rem;
+}
+
+.adminDeleteButton {
+  width: 60%;
+    margin-top: 0vw !important;
+    margin: 0 auto;
+    background-color: red !important;
+    border: none;
+    color: white;
+    padding: 2%;
+    border-radius: 1rem;
 }
 
 #adminPage #videoLibraryPage {

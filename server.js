@@ -131,7 +131,7 @@ var ObjectID = require('mongodb').ObjectID;
 function StreamGridFile(req, res, GridFile) {
   if(req.headers['range']) {
     // Range request, partialle stream the file
-    console.log('Range Request', GridFile);
+    // console.log('Range Request', GridFile);
     var parts = req.headers['range'].replace(/bytes=/, "").split("-");
     var partialstart = parts[0];
     var partialend = parts[1];
@@ -210,7 +210,7 @@ app.get('/video/:filename', function(req, res) {
       //     const fileId = buf.toString('hex');
       //     return(fileId);
       //   });
-      console.log('NEW FILE ID: ', file._id)
+      // console.log('NEW FILE ID: ', file._id)
       // Read output to browser
       // new GridFSBucket(db, new ObjectID(file._id), null, 'r').open(function(err, GridFile) {
       //   if(!GridFile) {

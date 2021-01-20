@@ -47,11 +47,13 @@ class AdminVideoPreferences extends Component {
                         />
                         <FormControlLabel 
                             value="light" 
+                            className="videoControlLabel"
                             control={<Radio />} 
                             label="Light" 
                         />
                         <FormControlLabel 
                             value="full" 
+                            className="videoControlLabel"
                             control={<Radio />} 
                             label="Full" 
                         />
@@ -82,6 +84,7 @@ class AdminVideoPreferences extends Component {
                         />
                         <FormControlLabel 
                         value="advanced" 
+                        className="videoControlLabel"
                         control={<Radio   />} 
                         label="Advanced" 
                         />
@@ -111,16 +114,19 @@ class AdminVideoPreferences extends Component {
                         />
                         <FormControlLabel 
                         value="hiit" 
+                        className="videoControlLabel"
                         control={<Radio />} 
                         label="H.I.I.T." 
                         />
                         <FormControlLabel 
                         value="boxing" 
+                        className="videoControlLabel"
                         control={<Radio />} 
                         label="Boxing" 
                         />
                         <FormControlLabel 
                         value="abs/stretch" 
+                        className="videoControlLabel"
                         control={<Radio />} 
                         label="Abs/Stretch" 
                         />
