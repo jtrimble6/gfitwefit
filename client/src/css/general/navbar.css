@@ -167,9 +167,11 @@
     /* BURGER MENU */
     .burgerMenu {
       height: 100% !important;
-      top: 5px;
-      right: -40vw !important;
+      top: 0px;
       width: 70% !important;
+    }
+    .navbarElementHidden {
+      right: -40vw !important;
     }
     .navbarTogglerButtonCustom {
       top: 1vw !important;
@@ -210,10 +212,13 @@
 
     /* BURGER MENU */
     .burgerMenu {
-      height: 100% !important;
-      top: 5px;
-      right: -40vw !important;
-      width: 70% !important;
+      height: 60vw !important;
+      top: 0px;
+      max-width: 40% !important;
+      /* right: -5vw !important; */
+    }
+    .navbarElementHidden {
+      right: -70vw !important;
     }
     .navbarTogglerButtonCustom {
       top: 3px !important;
@@ -221,11 +226,11 @@
       font-size: 3vw;
     }
     .bm-menu {
-      line-height: 6vw;
-      max-width: 30vw;
+      line-height: 1vw;
+      max-width: 100%;
     }
     .bm-item-list {
-      height: 40% !important;
+      height: 100vw !important;
     }
     .bm-item {
         font-size: 2vw !important;
@@ -382,11 +387,11 @@
           height: 60px !important;
       }  
       .burgerMenu {
-          height: 85% !important;
-          width: 50% !important;
+          height: 100% !important;
+          width: 100% !important;
       }
       .bm-item {
-          font-size: 8vw !important;
+          font-size: 2vw !important;
       }
       .signUp {
         background-color: black !important;

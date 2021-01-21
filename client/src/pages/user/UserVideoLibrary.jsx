@@ -93,7 +93,7 @@ class UserVideoLibrary extends Component {
             axios.get('/videos').then(res => {
                 let files = res.data
                 let videoLibrary = files.filter(file => {
-                    return file.contentType === 'video/quicktime'
+                    return file.contentType === "video/quicktime" || file.contentType === "video/mp4"
                 })
                 this.setState({
                     videoLibrary: videoLibrary,
@@ -154,7 +154,7 @@ class UserVideoLibrary extends Component {
 
         if (equipmentNeeded && fitnessLevel && workoutCategory) {
             let videoLibraryFiltered = files.filter(file => {
-                return file.contentType === 'video/quicktime' 
+                return file.contentType === "video/quicktime" || file.contentType === "video/mp4" 
                 && file.equipmentNeeded === this.state.equipmentNeeded 
                 && file.fitnessLevel === this.state.fitnessLevel
                 && file.workoutCategory === this.state.workoutCategory
@@ -166,7 +166,7 @@ class UserVideoLibrary extends Component {
             })
         } else if (equipmentNeeded && !fitnessLevel && !workoutCategory) {
             let videoLibraryFiltered = files.filter(file => {
-                return file.contentType === 'video/quicktime' 
+                return file.contentType === "video/quicktime" || file.contentType === "video/mp4" 
                 && file.equipmentNeeded === this.state.equipmentNeeded 
             })
             this.setState({
@@ -176,7 +176,7 @@ class UserVideoLibrary extends Component {
             })
         } else if (equipmentNeeded && fitnessLevel && !workoutCategory) {
             let videoLibraryFiltered = files.filter(file => {
-                return file.contentType === 'video/quicktime' 
+                return file.contentType === "video/quicktime" || file.contentType === "video/mp4" 
                 && file.equipmentNeeded === this.state.equipmentNeeded 
                 && file.fitnessLevel === this.state.fitnessLevel
             })
@@ -187,7 +187,7 @@ class UserVideoLibrary extends Component {
             })
         } else if (!equipmentNeeded && fitnessLevel && workoutCategory) {
             let videoLibraryFiltered = files.filter(file => {
-                return file.contentType === 'video/quicktime' 
+                return file.contentType === "video/quicktime" || file.contentType === "video/mp4" 
                 && file.fitnessLevel === this.state.fitnessLevel
                 && file.workoutCategory === this.state.workoutCategory
             })
@@ -198,7 +198,7 @@ class UserVideoLibrary extends Component {
             })
         } else if (!equipmentNeeded && !fitnessLevel && workoutCategory) {
             let videoLibraryFiltered = files.filter(file => {
-                return file.contentType === 'video/quicktime' 
+                return file.contentType === "video/quicktime" || file.contentType === "video/mp4" 
                 && file.workoutCategory === this.state.workoutCategory
             })
             this.setState({
@@ -208,7 +208,7 @@ class UserVideoLibrary extends Component {
             })
         } else if (!equipmentNeeded && fitnessLevel && !workoutCategory) {
             let videoLibraryFiltered = files.filter(file => {
-                return file.contentType === 'video/quicktime' 
+                return file.contentType === "video/quicktime" || file.contentType === "video/mp4" 
                 && file.fitnessLevel === this.state.fitnessLevel
             })
             this.setState({
@@ -225,7 +225,7 @@ class UserVideoLibrary extends Component {
         }
 
         // let videoLibraryFiltered = files.filter(file => {
-        //     return file.contentType === 'video/quicktime' 
+        //     return file.contentType === "video/quicktime" || file.contentType === "video/mp4" 
         //     && file.equipmentNeeded === this.state.equipmentNeeded 
         //     && file.fitnessLevel === this.state.fitnessLevel
         //     && file.workoutCategory === this.state.workoutCategory
@@ -243,7 +243,8 @@ class UserVideoLibrary extends Component {
         this.setState({
             equipmentNeeded: null,
             fitnessLevel: null, 
-            workoutCategory: null
+            workoutCategory: null,
+            videoLibraryFiltered: this.state.videoLibrary
         })
       }
 

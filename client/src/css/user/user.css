@@ -138,91 +138,7 @@
 }
 
 
-/* ------------------------------------------------------------------ */
-/* VIDEO LIBRARY PAGE */
-/* ------------------------------------------------------------------ */
 
-#videoLibraryPage {
-    font-family: 'gfitfont-bold';
-    /* max-width: 80% !important; */
-    margin: 0 auto !important;
-    margin-top: 5vh;
-}
-
-.videoLibraryFormRow {
-    width: 100% !important;
-    margin: 0 auto !important;
-    justify-content: center;
-}
-
-.videoLibraryPrefTitle {
-    margin-bottom: 3vw !important;
-}
-
-.userSetFilterLibraryButton {
-    background-color: #FAC04E !important;
-    border-color: black !important;
-    width: 100%;
-    margin-bottom: 1vw;
-    margin-top: 1vw;
-}
-
-.userFilterLibraryButton {
-    display: none;
-    background-color: #FAC04E !important;
-    border-color: black !important;
-    width: 100%;
-    margin-bottom: 1vw;
-    margin-top: 1vw;
-}
-
-.userFilterLibraryButton:active {
-    background-color: white !important;
-    color: #FAC04E !important;
-    border-color: black !important;
-    
-}
-
-.userFilterLibraryButton:focus {
-    box-shadow: none !important;
-}
-
-.userFilterLibraryButton:active:focus {
-    box-shadow: 0 0 0 0.2rem white !important;
-}
-
-.userResetLibraryButton {
-    background-color: gray !important;
-    border-color: black !important;
-    width: 100%;    
-}
-
-.videoLibraryResetButton {
-    margin-bottom: 5vw;
-}
-
-.userResetLibraryButton:active {
-    background-color: white !important;
-    color: gray !important;
-    border-color: black !important;
-}
-
-.userResetLibraryButton:focus {
-    box-shadow: none !important;
-}
-
-.userResetLibraryButton:active:focus {
-    box-shadow: 0 0 0 0.2rem white !important;
-}
-
-#userVideoPreferences {
-    /* display: none; */
-    margin-top: 10vh;
-}
-
-/* #showHideFilterButton {
-    margin-bottom: 5vw;
-} */
 
 /* ------------------------------------------------------------------ */
 /* ----------- USER PROFILE PAGE ----------- */
@@ -496,7 +412,7 @@
 
     #showHideFilterButton {
       margin-bottom: 1vw;
-  }
+    }
     
 }
 

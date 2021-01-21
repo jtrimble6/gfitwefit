@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 // import { Collapse, Nav, NavItem } from 'reactstrap';
 import { NavLink } from 'reactstrap';
-import { Link } from "react-scroll";
+import * as Scroll from 'react-scroll';
+import { Link, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
 import { stack as Menu } from 'react-burger-menu'
 import classnames from "classnames";
+
 
 // CSS
 import '../../css/general/navbar.css'
@@ -12,7 +14,6 @@ import logo from '../../css/images/GOUVEIA-FITNESS_Mark_Black.png';
 class Navbar extends Component {
     constructor(props) {
         super(props);
-
         this.state = {
           collapsed: true,
           prevScrollPos: window.pageYOffset,
@@ -20,41 +21,62 @@ class Navbar extends Component {
         }
 
         this.toggleNavbar = this.toggleNavbar.bind(this)
-        // this.handleScroll = this.handleScroll.bind(this)
+        this.handleScroll = this.handleScroll.bind(this)
     }
 
     componentDidMount() {
+        Events.scrollEvent.register('begin', function(to, element) {
+          console.log('begin', arguments);
+        });
+    
+        Events.scrollEvent.register('end', function(to, element) {
+          console.log('end', arguments);
+        });
+    
+        scrollSpy.update();
         // window.addEventListener("scroll", this.handleScroll);
       }
     
     componentWillUnmount() {
+        // Events.scrollEvent.remove('begin');
+        // Events.scrollEvent.remove('end');
         // window.removeEventListener("scroll", this.handleScroll);
       }
 
-    // handleScroll = () => {
-    //   const { prevScrollPos } = this.state;
+    handleScroll = () => {
+      this.toggleNavbar()
+      let scheduleInfo = document.getElementById('scheduleInfo')
+      console.log('got element: ', scheduleInfo)
+      scheduleInfo.scrollIntoView({behavior: "smooth"}); // Boolean parameter
+      // let scroll = Scroll.animateScroll;
+      // scroll.scrollTo(400);
+      // const { prevScrollPos } = this.state;
     
-    //   const currentScrollPos = window.pageYOffset;
-    //   const visible = prevScrollPos > currentScrollPos;
+      // const currentScrollPos = window.pageYOffset;
+      // const visible = prevScrollPos > currentScrollPos;
     
-    //   this.setState({
-    //     prevScrollPos: currentScrollPos,
-    //     visible
-    //   });
-    //   }
+      // this.setState({
+      //   prevScrollPos: currentScrollPos,
+      //   visible
+      // });
+      }
 
     toggleNavbar = (event) => {
-      event.preventDefault()
+      if (event) {
+        event.preventDefault()
+      }
       console.log('TOGGLE NAVBAR')
-
+      let navbarElement = document.getElementById('burgerMenuElement')
       if (!this.state.collapsed) {
         this.setState({
           collapsed: true
         })
+        navbarElement.classList.add("navbarElementHidden");
       } else {
         this.setState({
           collapsed: false
         })
+        navbarElement.classList.remove("navbarElementHidden");
       }
         // this.setState({
         //   collapsed: !this.state.collapsed
@@ -68,7 +90,7 @@ class Navbar extends Component {
       }
     
 
-    render() {                                                       
+    render() {             
         return (
             <nav 
               className={classnames("navbar navbar-expand-lg navbar fixed-top", {"navbar--hidden": !this.state.collapsed})} 
@@ -94,10 +116,12 @@ class Navbar extends Component {
                         <Menu 
                           right 
                           disableAutoFocus               
-                          className='burgerMenu'
+                          className='burgerMenu navbarElementHidden'
+                          id='burgerMenuElement'
                           noOverlay
+                          isOpen={!this.state.collapsed}
                           // customBurgerIcon={ bars }
-                          customCrossIcon={ <img src={require("../../css/images/cross.png")} alt='close' /> } 
+                          customCrossIcon={ <img src={require("../../css/images/cross.png")} alt='close' onClick={this.toggleNavbar} /> } 
                         >
                           <NavLink 
                             className='iconBar nav-link' 
@@ -110,12 +134,12 @@ class Navbar extends Component {
                           <Link
                             activeClass="active"
                             className='iconBar nav-link'
-                            onClick={this.toggleNavbar}
-                            to="scheduleInfo"
-                            spy={true}
-                            smooth={true}
-                            offset={-150}
-                            duration= {500}
+                            onClick={this.handleScroll}
+                            // to="scheduleInfo"
+                            // spy={true}
+                            // smooth={true}
+                            // offset={-150}
+                            // duration={500}
                           > 
                             SEE SCHEDULE 
                           </Link>
@@ -165,11 +189,12 @@ class Navbar extends Component {
                             <Link
                               activeClass="active"
                               className='nav-link js-scroll-trigger'
-                              to="scheduleInfo"
-                              spy={true}
-                              smooth={true}
-                              offset={-150}
-                              duration= {500}
+                              // to="scheduleInfo"
+                              // spy={true}
+                              // smooth={true}
+                              // offset={-150}
+                              // duration={500}
+                              onClick={this.handleScroll}
                             > 
                               SEE SCHEDULE
                             </Link>

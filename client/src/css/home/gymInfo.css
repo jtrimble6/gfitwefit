@@ -80,12 +80,12 @@
     font-weight: bold;
 }
 
-.gFitStrongLeft {
+.gFitStrongLeftLanding {
   font-family: 'gfitfont-bold', Times, serif;
   font-size: 1.5vw;
 }
 
-.gFitStrongRight {
+.gFitStrongRightLanding {
   font-family: 'gfitfont-bold', Times, serif;
   font-size: 1.5vw;
   color: #FAC04E;
@@ -107,6 +107,58 @@
 /* ----------- Non-Retina Screens ----------- */
 @media screen 
   and (min-device-width: 800px) 
+  and (max-device-width: 1200px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+    .gymInfo {
+      min-height: 875px;
+      padding-bottom: 15%;
+    }
+    
+    .gymInfoRow {
+        height: 100%;
+        width: 80%;
+        margin: 0 auto !important;
+        margin-left: 5% !important;
+        margin-top: 30% !important;
+        padding-bottom: 10% !important;
+    }
+    
+    .gymInfoHeaderLeft {
+        font-size: 3vw;
+        letter-spacing: .5px;
+    }
+    
+    .gymInfoHeaderRight {
+        font-size: 3vw;
+        letter-spacing: .5px;
+    }
+    .gymInfoAddress {
+        font-size: 2.3vw;
+    }
+    
+    .gymInfoBody {
+        font-size: 1.8vw;
+    }
+
+    .gymInfoLogo {
+      margin-top: 2vw;
+      width: 130%;
+      height: auto;
+    }
+    .gFitStrongLeftLanding {
+      font-family: 'gfitfont-bold', Times, serif;
+      font-size: 2vw;
+    }
+    
+    .gFitStrongRightLanding {
+      font-family: 'gfitfont-bold', Times, serif;
+      font-size: 2vw;
+      color: #FAC04E;
+    }
+}
+
+@media screen 
+  and (min-device-width: 1201px) 
   and (max-device-width: 1600px) 
   and (-webkit-min-device-pixel-ratio: 1) { 
     .gymInfo {
@@ -141,16 +193,16 @@
     }
 
     .gymInfoLogo {
-      margin-top: 35%;
+      margin-top: 6vw;
       width: 130%;
       height: auto;
     }
-    .gFitStrongLeft {
+    .gFitStrongLeftLanding {
       font-family: 'gfitfont-bold', Times, serif;
       font-size: 2vw;
     }
     
-    .gFitStrongRight {
+    .gFitStrongRightLanding {
       font-family: 'gfitfont-bold', Times, serif;
       font-size: 2vw;
       color: #FAC04E;
@@ -167,6 +219,7 @@
     }
     .gymInfoHeaderRow {
       width: 150%;
+      margin-bottom: 3vw;
     }
     .gymInfoRow {
         height: 100%;
@@ -195,16 +248,17 @@
     }
 
     .gymInfoLogo {
-      margin-top: 6vw;
-      width: 130%;
+      margin-top: 7vw;
+      margin-left: 3vw;
+      width: 120%;
       height: auto;
     }
-    .gFitStrongLeft {
+    .gFitStrongLeftLanding {
       font-family: 'gfitfont-bold', Times, serif;
       font-size: 2vw;
     }
     
-    .gFitStrongRight {
+    .gFitStrongRightLanding {
       font-family: 'gfitfont-bold', Times, serif;
       font-size: 2vw;
       color: #FAC04E;
@@ -248,16 +302,16 @@
     }
 
     .gymInfoLogo {
-      margin-top: 35%;
+      margin-top: 2vw;
       width: 130%;
       height: auto;
     }
-    .gFitStrongLeft {
+    .gFitStrongLeftLanding {
       font-family: 'gfitfont-bold', Times, serif;
       font-size: 2vw;
     }
     
-    .gFitStrongRight {
+    .gFitStrongRightLanding {
       font-family: 'gfitfont-bold', Times, serif;
       font-size: 2vw;
       color: #FAC04E;
@@ -300,15 +354,15 @@
         font-size: 1.8vw;
     }
     .gymInfoLogo {
-      margin-top: 35%;
+      margin-top: 2vw;
       width: 130%;
       height: auto;
     }
-    .gFitStrongLeft {
+    .gFitStrongLeftLanding {
       font-family: 'gfitfont-bold', Times, serif;
       font-size: 2vw;
     }
-    .gFitStrongRight {
+    .gFitStrongRightLanding {
       font-family: 'gfitfont-bold', Times, serif;
       font-size: 2vw;
       color: #FAC04E;
@@ -354,16 +408,17 @@
     }
 
     .gymInfoLogo {
-      margin-top: 35%;
-      width: 130%;
+      margin-top: 2vw;
+      margin-left: 3vw;
+      width: 120%;
       height: auto;
     }
-    .gFitStrongLeft {
+    .gFitStrongLeftLanding {
       font-family: 'gfitfont-bold', Times, serif;
       font-size: 2vw;
     }
     
-    .gFitStrongRight {
+    .gFitStrongRightLanding {
       font-family: 'gfitfont-bold', Times, serif;
       font-size: 2vw;
       color: #FAC04E;
@@ -372,7 +427,7 @@
 
 @media screen 
   and (min-device-width: 2001px) 
-  and (max-device-width: 3000px) 
+  and (max-device-width: 4000px) 
   and (-webkit-min-device-pixel-ratio: 2)
   and (min-resolution: 192dpi) { 
     .gymInfo {
@@ -409,17 +464,17 @@
     }
 
     .gymInfoLogo {
-      margin-top: 35%;
+      margin-top: 2vw;
       width: 130%;
       height: auto;
     }
-    .gFitStrongLeft {
+    .gFitStrongLeftLanding {
       font-family: 'gfitfont-bold', Times, serif;
       font-size: 2vw;
       white-space: nowrap !important;
     }
     
-    .gFitStrongRight {
+    .gFitStrongRightLanding {
       font-family: 'gfitfont-bold', Times, serif;
       font-size: 2vw;
       color: #FAC04E;
@@ -584,7 +639,7 @@
     }
 
     .gymInfoLogo {
-      margin-top: 5%;
+      margin-top: 2vw;
       width: 130%;
       height: auto;
     }
@@ -666,7 +721,7 @@
       padding-bottom: 20%;
     }
     .gymInfoLogo {
-      margin-top: 5%;
+      margin-top: 2vw;
       width: 130%;
       height: auto;
     }
@@ -750,10 +805,10 @@
     .gymInfoBody {
       font-size: 4vw;
     }
-    .gFitStrongLeft {
+    .gFitStrongLeftLanding {
       font-size: 2vw;
     }
-    .gFitStrongRight {
+    .gFitStrongRightLanding {
       font-size: 2vw;
     }
 }
@@ -804,17 +859,17 @@
     .gymInfoBody {
       font-size: 2vw;
     }
-    .gFitStrongLeft {
+    .gFitStrongLeftLanding {
       font-size: 2.5vw;
       white-space: nowrap;
     }
-    .gFitStrongRight {
+    .gFitStrongRightLanding {
       font-size: 2.5vw;
     }
     .gymInfoLogo {
       position: absolute;
       left: 37vw;
-      top: -60vw;
+      top: -56vw;
       width: 60%;
     }
 }
@@ -901,7 +956,7 @@
         height: 100%;
         width: 80%;
         margin: 0 auto !important;
-        margin-top: 50% !important;
+        margin-top: 20vw !important;
         padding-bottom: 10% !important;
     }
     
@@ -922,11 +977,11 @@
         font-size: 2.8vw;
     }
 
-    .gFitStrongLeft {
+    .gFitStrongLeftLanding {
       font-size: 2.5vw;
     }
     
-    .gFitStrongRight {
+    .gFitStrongRightLanding {
       font-size: 2.5vw;
     }
     
@@ -993,7 +1048,7 @@
         height: 100%;
         width: 80%;
         margin: 0 auto !important;
-        margin-top: 60% !important;
+        margin-top: 20vw !important;
         padding-bottom: 10% !important;
     }
     
@@ -1013,11 +1068,11 @@
     .gymInfoBody {
         font-size: 3.5vw;
     }
-    .gFitStrongLeft {
+    .gFitStrongLeftLanding {
       font-size: 4vw;
     }
     
-    .gFitStrongRight {
+    .gFitStrongRightLanding {
       font-size: 4vw;
     }
 }

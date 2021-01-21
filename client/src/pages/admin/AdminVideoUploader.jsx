@@ -127,7 +127,7 @@ class AdminVideoUploader extends Component {
                             aria-label="Equipment Needed"                                   
                         >
                         <option value=''>Select One</option>
-                        <option value='none'>None (bodyweight)</option>
+                        <option value='bodyweight'>None (bodyweight)</option>
                         <option value='light'>Light (dumbbells, resistance bands, loop bands, jumprope, gliders, stability ball)</option>
                         <option value='full'>Full (full gym access/most equipment)</option>
                       </select>

@@ -28,7 +28,7 @@ class AboutLanding extends Component {
                             {/* <br className='tagLineBreak' />  */}
                             <Row>
                               <div id='tagLineDiv'>
-                                <strong className='gFitStrongLeft'>G FIT/</strong><strong className='gFitStrongRight'>/WE FIT</strong> 
+                                <strong className='gFitStrongLeftLanding'>G FIT/</strong><strong className='gFitStrongRightLanding'>/WE FIT</strong> 
                               </div>
                             </Row>
                         </Col>

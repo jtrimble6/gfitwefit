@@ -18,6 +18,7 @@
     /* margin-bottom: 20%; */
     color: black;
     text-align: center;
+    overflow-x: hidden;
 }
 
 
@@ -244,14 +245,15 @@
 }
 
 .adminDeleteButton {
-  width: 60%;
-    margin-top: 0vw !important;
-    margin: 0 auto;
-    background-color: red !important;
-    border: none;
-    color: white;
-    padding: 2%;
-    border-radius: 1rem;
+  width: 40%;
+  margin-top: 0vw !important;
+  margin: 0 auto;
+  margin-bottom: 5vw;
+  background-color: red !important;
+  border: none;
+  color: white;
+  padding: 2%;
+  border-radius: 1rem;
 }
 
 #adminPage #videoLibraryPage {

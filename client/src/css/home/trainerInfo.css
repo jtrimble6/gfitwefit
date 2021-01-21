@@ -188,7 +188,7 @@
     }
     
     .trainerInfoRow {
-        height: 20%;
+        height: 20vw;
         width: 80%;
         margin: 0 auto;
     }
@@ -208,7 +208,7 @@
     .trainerBioRow {
         width: 90%;
         margin: 0 auto;
-        margin-top: 3vw;
+        margin-top: 1vw;
         
     }
     

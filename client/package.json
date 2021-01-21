@@ -32,6 +32,7 @@
     "react-router-dom": "^4.3.1",
     "react-script-tag": "^1.1.2",
     "react-scripts": "2.1.1",
+    "react-scroll": "^1.8.1",
     "react-under-construction": "^0.3.0",
     "redux": "^4.0.5",
     "video-react": "^0.14.1"
