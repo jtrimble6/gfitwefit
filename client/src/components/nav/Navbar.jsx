@@ -22,6 +22,7 @@ class Navbar extends Component {
 
         this.toggleNavbar = this.toggleNavbar.bind(this)
         this.handleScroll = this.handleScroll.bind(this)
+        this.openNavbar = this.openNavbar.bind(this)
     }
 
     componentDidMount() {
@@ -61,23 +62,56 @@ class Navbar extends Component {
       // });
       }
 
+    openNavbar = (event) => {
+      event.preventDefault()
+      console.log('OPEN NAV')
+      this.setState({
+        collapsed: false
+      })
+      console.log('EVENT: ', event.target.href)
+      let targetRef = event.target.href
+      if (targetRef) {
+        window.location = targetRef
+      }
+      
+    }
+
     toggleNavbar = (event) => {
-      if (event) {
+      // if (event) {
+      //   event.preventDefault()
+      //   console.log('TOGGLE NAVBAR')
+      //   let navbarElement = document.getElementById('burgerMenuElement')
+      //   if (!this.state.collapsed) {
+      //     this.setState({
+      //       collapsed: true
+      //     })
+      //     navbarElement.classList.add("navbarElementHidden");
+      //   } else {
+      //     this.setState({
+      //       collapsed: false
+      //     })
+      //     navbarElement.classList.remove("navbarElementHidden");
+      //   }
+      // } else {
         event.preventDefault()
-      }
-      console.log('TOGGLE NAVBAR')
-      let navbarElement = document.getElementById('burgerMenuElement')
-      if (!this.state.collapsed) {
-        this.setState({
-          collapsed: true
-        })
-        navbarElement.classList.add("navbarElementHidden");
-      } else {
-        this.setState({
-          collapsed: false
-        })
-        navbarElement.classList.remove("navbarElementHidden");
-      }
+        let scheduleInfo = document.getElementById('scheduleInfo')
+        console.log('got element: ', scheduleInfo)
+        scheduleInfo.scrollIntoView({behavior: "smooth"}); // Boolean parameter
+        console.log('TOGGLE NAVBAR SCROLL')
+        let navbarElement = document.getElementById('burgerMenuElement')
+        if (!this.state.collapsed) {
+          this.setState({
+            collapsed: true
+          })
+          navbarElement.classList.add("navbarElementHidden");
+        } else {
+          this.setState({
+            collapsed: false
+          })
+          navbarElement.classList.remove("navbarElementHidden");
+        }
+      // }
+      
         // this.setState({
         //   collapsed: !this.state.collapsed
         // })
@@ -105,119 +139,123 @@ class Navbar extends Component {
                   <div className="row masterRow">
                     <div className="pages">
                       <div className="row">
+
+                        {/* COLLAPSED NAVBAR */}
                         <i className="navbarTogglerButtonCustom fas fa-bars navbar-toggler collapsed navbar-toggler-right" 
                           data-toggle='collapse' 
                           data-target="#navbarResponsive" 
                           aria-controls="navbarResponsive" 
                           aria-expanded="false" 
                           aria-label="Toggle navigation" 
-                          onClick={this.toggleNavbar}
+                          onClick={this.openNavbar}
                         >
-                        <Menu 
-                          right 
-                          disableAutoFocus               
-                          className='burgerMenu navbarElementHidden'
-                          id='burgerMenuElement'
-                          noOverlay
-                          isOpen={!this.state.collapsed}
-                          // customBurgerIcon={ bars }
-                          customCrossIcon={ <img src={require("../../css/images/cross.png")} alt='close' onClick={this.toggleNavbar} /> } 
-                        >
-                          <NavLink 
-                            className='iconBar nav-link' 
-                            onClick={this.toggleNavbar}
-                            href="/"
-                          > 
-                            HOME
-                          </NavLink>
-
-                          <Link
-                            activeClass="active"
-                            className='iconBar nav-link'
-                            onClick={this.handleScroll}
-                            // to="scheduleInfo"
-                            // spy={true}
-                            // smooth={true}
-                            // offset={-150}
-                            // duration={500}
-                          > 
-                            SEE SCHEDULE 
-                          </Link>
-                          
-                          <NavLink 
-                            className='iconBar nav-link' 
-                            onClick={this.toggleNavbar}
-                            href="/contact"
-                          > 
-                            CONTACT US
-                          </NavLink>
-
-                          <NavLink 
-                            className='iconBar nav-link' 
-                            onClick={this.toggleNavbar}
-                            href="/userLogin"
-                          > 
-                            G-FIT GOLD
-                          </NavLink>
-
-                          <NavLink 
-                            className='iconBar nav-link signUp' 
-                            onClick={this.toggleNavbar}
-                            href="/tryitout"
-                          > 
-                            TRY IT OUT
-                          </NavLink>
-
-                          {/* <NavLink 
-                            className='iconBar nav-link' 
-                            onClick={this.toggleNavbar}
-                            href="/admin"
-                          > ADMIN</NavLink> */}
-                          {/* <a onClick={ this.showSettings } className="menu-item--small" href="">Settings</a> */}
-                        </Menu>
-                        </i>
-                        <div className="collapse navbar-collapse" id="navbarResponsive">
-                        <ul className="navbar-nav ml-auto">
-
-                          <li className="nav-item" >
-                            <a className="nav-link js-scroll-trigger" href='/'>
+                          <Menu 
+                            right 
+                            disableAutoFocus               
+                            className='burgerMenu navbarElementHidden'
+                            id='burgerMenuElement'
+                            noOverlay
+                            isOpen={!this.state.collapsed}
+                            // customBurgerIcon={ bars }
+                            customCrossIcon={ <img src={require("../../css/images/cross.png")} alt='close' onClick={this.toggleNavbar} /> } 
+                          >
+                            <NavLink 
+                              className='iconBar nav-link' 
+                              // onClick={this.toggleNavbar}
+                              href="/"
+                            > 
                               HOME
-                            </a>
-                          </li>
-                          
-                          <li className="nav-item">
+                            </NavLink>
+
                             <Link
                               activeClass="active"
-                              className='nav-link js-scroll-trigger'
+                              className='iconBar nav-link'
+                              onClick={this.toggleNavbar}
                               // to="scheduleInfo"
                               // spy={true}
                               // smooth={true}
                               // offset={-150}
                               // duration={500}
-                              onClick={this.handleScroll}
                             > 
-                              SEE SCHEDULE
+                              SEE SCHEDULE 
                             </Link>
-                          </li>
-
-                          <li className="nav-item">
-                            <a className="nav-link js-scroll-trigger" href='/contact'>
+                            
+                            <NavLink 
+                              className='iconBar nav-link' 
+                              // onClick={this.toggleNavbar}
+                              href="/contact"
+                            > 
                               CONTACT US
-                            </a>
-                          </li>
+                            </NavLink>
 
-                          <li className="nav-item">
-                            <a className="nav-link js-scroll-trigger" href='/userLogin'>
+                            <NavLink 
+                              className='iconBar nav-link' 
+                              // onClick={this.toggleNavbar}
+                              href="/userLogin"
+                            > 
                               G-FIT GOLD
-                            </a>
-                          </li>
-                          
-                          <li className="nav-item">
-                            <a className="nav-link js-scroll-trigger signUp" href='/tryitout'>
+                            </NavLink>
+
+                            <NavLink 
+                              className='iconBar nav-link signUp' 
+                              // onClick={this.toggleNavbar}
+                              href="/tryitout"
+                            > 
                               TRY IT OUT
-                            </a>
-                          </li>
-                        </ul>
+                            </NavLink>
+
+                            {/* <NavLink 
+                              className='iconBar nav-link' 
+                              onClick={this.toggleNavbar}
+                              href="/admin"
+                            > ADMIN</NavLink> */}
+                            {/* <a onClick={ this.showSettings } className="menu-item--small" href="">Settings</a> */}
+                          </Menu>
+                        </i>
+
+                        {/* EXPANDED NAVBAR */}
+                        <div className="collapse navbar-collapse" id="navbarResponsive">
+                          <ul className="navbar-nav ml-auto">
+
+                            <li className="nav-item" >
+                              <a className="nav-link js-scroll-trigger" href='/'>
+                                HOME
+                              </a>
+                            </li>
+                            
+                            <li className="nav-item">
+                              <Link
+                                activeClass="active"
+                                className='nav-link js-scroll-trigger'
+                                // to="scheduleInfo"
+                                // spy={true}
+                                // smooth={true}
+                                // offset={-150}
+                                // duration={500}
+                                onClick={this.handleScroll}
+                              > 
+                                SEE SCHEDULE
+                              </Link>
+                            </li>
+
+                            <li className="nav-item">
+                              <a className="nav-link js-scroll-trigger" href='/contact'>
+                                CONTACT US
+                              </a>
+                            </li>
+
+                            <li className="nav-item">
+                              <a className="nav-link js-scroll-trigger" href='/userLogin'>
+                                G-FIT GOLD
+                              </a>
+                            </li>
+                            
+                            <li className="nav-item">
+                              <a className="nav-link js-scroll-trigger signUp" href='/tryitout'>
+                                TRY IT OUT
+                              </a>
+                            </li>
+                          </ul>
                         </div>
                       </div>
                       

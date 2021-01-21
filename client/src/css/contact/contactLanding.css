@@ -110,7 +110,7 @@
   and (orientation: portrait) {
     .contactLanding {
       height: 100vw;
-      margin-top: 10%;
+      /* margin-top: 10%; */
     }
 }
 
@@ -144,7 +144,7 @@
   and (orientation: portrait) { 
     .contactLanding {
       height: 100vw;
-      margin-top: 10%;
+      /* margin-top: 10%; */
     }
 }
 

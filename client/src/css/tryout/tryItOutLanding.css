@@ -15,7 +15,7 @@
     height: 575px;
     background-color: black;
     padding: 10%;
-    margin-top: 8vh;
+    /* margin-top: 8vh; */
 }
 
 .tryItOutInfoTitle {
@@ -43,6 +43,10 @@
     font-size: 1.3vw;
     font-weight: bold;
     color: white;
+}
+
+.noVideosTitle {
+  text-align: center;
 }
 
 /* ----------- iPhone 4 and 4S ----------- */
