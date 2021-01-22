@@ -244,20 +244,28 @@ function isInvalidRange (start, end, maxIdx) {
 // @route POST /upload
 // @desc Uploads file to DB
 
-app.post('/upload/:videoTitle/:videoDesc/:equipmentNeeded/:fitnessLevel/:workoutCategory/:sampleVideo', upload.single('file'), (req, res) => {
+app.post('/upload/:videoTitle/:videoDesc/:equipmentNeeded/:fitnessLevel/:workoutCategory/:sampleVideo', upload.single('file'), (err, req, res) => {
   // res.json({file: req.file})
-  gfs.files.update({'filename': req.file.filename}, 
-  {'$set': 
-    {
-      'videoTitle': req.params.videoTitle,
-      'videoDesc': req.params.videoDesc,
-      'equipmentNeeded': req.params.equipmentNeeded,
-      'fitnessLevel': req.params.fitnessLevel,
-      'workoutCategory': req.params.workoutCategory,
-      'sampleVideo': req.params.sampleVideo
-    },
-  })
-  res.redirect('/adminHome')
+  // console.log('Response: ')
+  if (!err) {
+    gfs.files.update({'filename': req.file.filename}, 
+    {'$set': 
+      {
+        'videoTitle': req.params.videoTitle,
+        'videoDesc': req.params.videoDesc,
+        'equipmentNeeded': req.params.equipmentNeeded,
+        'fitnessLevel': req.params.fitnessLevel,
+        'workoutCategory': req.params.workoutCategory,
+        'sampleVideo': req.params.sampleVideo
+      },
+    })
+    res.redirect('/adminHome')
+  } else {
+   // err is the error received from MongoDb
+   res.status(500).send('Something broke!', err)
+   console.log('HUGE ERROR: ', err)
+  }
+  
 })
 
 // @route GET /files
