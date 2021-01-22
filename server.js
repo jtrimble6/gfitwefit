@@ -244,10 +244,10 @@ function isInvalidRange (start, end, maxIdx) {
 // @route POST /upload
 // @desc Uploads file to DB
 
-app.post('/upload/:videoTitle/:videoDesc/:equipmentNeeded/:fitnessLevel/:workoutCategory/:sampleVideo', upload.single('file'), (err, req, res) => {
+app.post('/upload/:videoTitle/:videoDesc/:equipmentNeeded/:fitnessLevel/:workoutCategory/:sampleVideo', upload.single('file'), (req, res) => {
   // res.json({file: req.file})
   // console.log('Response: ')
-  if (!err) {
+  // if (!err) {
     gfs.files.update({'filename': req.file.filename}, 
     {'$set': 
       {
@@ -260,11 +260,11 @@ app.post('/upload/:videoTitle/:videoDesc/:equipmentNeeded/:fitnessLevel/:workout
       },
     })
     res.redirect('/adminHome')
-  } else {
-   // err is the error received from MongoDb
-   res.status(500).send('Something broke!', err)
-   console.log('HUGE ERROR: ', err)
-  }
+  // } else {
+  //  // err is the error received from MongoDb
+  //  res.status(500).send('Something broke!', err)
+  //  console.log('HUGE ERROR: ', err)
+  // }
   
 })
 
