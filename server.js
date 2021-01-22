@@ -266,7 +266,7 @@ app.post('/upload/:videoTitle/:videoDesc/:equipmentNeeded/:fitnessLevel/:workout
    console.log('HUGE ERROR: ', err)
   }
   
-})
+}))
 
 // @route GET /files
 // @desc Display all files in JSON
