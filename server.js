@@ -247,7 +247,7 @@ function isInvalidRange (start, end, maxIdx) {
 app.post('/upload/:videoTitle/:videoDesc/:equipmentNeeded/:fitnessLevel/:workoutCategory/:sampleVideo', upload.single('file'), (req, res) => {
   res.json({file: req.file})
   console.log('File sending: ', req.file)
-  // if (!err) {
+  try {
     gfs.files.update({'filename': req.file.filename}, 
     {'$set': 
       {
@@ -260,6 +260,9 @@ app.post('/upload/:videoTitle/:videoDesc/:equipmentNeeded/:fitnessLevel/:workout
       },
     })
     res.redirect('/adminHome')
+  } catch (error) {
+    console.log('BIG ERROR: ', error)
+  }
   // } else {
   //  // err is the error received from MongoDb
   //  res.status(500).send('Something broke!', err)
