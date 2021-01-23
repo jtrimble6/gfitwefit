@@ -245,7 +245,7 @@ function isInvalidRange (start, end, maxIdx) {
 // @desc Uploads file to DB
 
 app.post('/upload/:videoTitle/:videoDesc/:equipmentNeeded/:fitnessLevel/:workoutCategory/:sampleVideo', upload.single('file'), (req, res) => {
-  res.json({file: req.file})
+  // res.json({file: req.file})
   console.log('File sending: ', req.file)
   try {
     gfs.files.update({'filename': req.file.filename}, 
