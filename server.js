@@ -256,8 +256,7 @@ function isInvalidRange (start, end, maxIdx) {
 app.post('/upload/:videoTitle/:videoDesc/:equipmentNeeded/:fitnessLevel/:workoutCategory/:sampleVideo', upload.single('file'), (req, res) => {
   // res.json({file: req.file})
   console.log('File sending: ', req.file)
-  try {
-    gfs.files.update({'filename': req.file.filename}, 
+  gfs.files.update({'filename': req.file.filename}, 
     {'$set': 
       {
         'videoTitle': req.params.videoTitle,
@@ -269,6 +268,10 @@ app.post('/upload/:videoTitle/:videoDesc/:equipmentNeeded/:fitnessLevel/:workout
       },
     })
     res.redirect('/adminHome')
+  try {
+      return res.status(201).json({
+        message: 'File uploded successfully'
+    });
   } catch (error) {
     console.log('BIG ERROR: ', error)
   }
