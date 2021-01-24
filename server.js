@@ -93,6 +93,15 @@ const conn = mongoose.createConnection(process.env.MONGODB_URI || config.db);
 //Init gfs
 let gfs;
 
+//HANDLE DISCONNECTIONS
+function handleDisconnect(mongoError) {
+  // check error reason, increment counters, check if errors limit reached
+  console.log('DISCONNECTION ERROR: ', mongoError)
+  debugger;
+}
+
+mongoose.connection.on('error', handleDisconnect);
+
 conn.once('open', function(err, database) {
   // Init stream
   if(err) throw err;
