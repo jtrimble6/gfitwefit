@@ -94,13 +94,39 @@ const conn = mongoose.createConnection(process.env.MONGODB_URI || config.db);
 let gfs;
 
 //HANDLE DISCONNECTIONS
-function handleDisconnect(mongoError) {
-  // check error reason, increment counters, check if errors limit reached
-  console.log('DISCONNECTION ERROR: ', mongoError)
+conn.on('error', function(e){
+  console.log("db: mongodb error " + e);
   debugger;
-}
+  // reconnect here
+});
 
-mongoose.connection.on('error', handleDisconnect);
+conn.on('connected', function(e){
+  console.log('db: mongodb is connected');
+});
+
+conn.on('disconnecting', function(){
+  console.log('db: mongodb is disconnecting!!!');
+  debugger;
+});
+
+conn.on('disconnected', function(){
+  console.log('db: mongodb is disconnected!!!');
+  debugger;
+});
+
+conn.on('reconnected', function(){
+  console.log('db: mongodb is reconnected');
+});
+
+conn.on('timeout', function(e) {
+  console.log("db: mongodb timeout " + e);
+  debugger;
+  // reconnect here
+});
+
+conn.on('close', function() { 
+  console.log('db: mongodb connection closed');
+});
 
 conn.once('open', function(err, database) {
   // Init stream
@@ -269,13 +295,13 @@ app.post('/upload/:videoTitle/:videoDesc/:equipmentNeeded/:fitnessLevel/:workout
       },
     })
     res.redirect('/adminHome')
-  try {
-      return res.status(201).json({
-        message: 'File uploded successfully'
-    });
-  } catch (error) {
-    console.log('BIG ERROR: ', error)
-  }
+  // try {
+  //     return res.status(201).json({
+  //       message: 'File uploded successfully'
+  //   });
+  // } catch (error) {
+  //   console.log('BIG ERROR: ', error)
+  // }
   // } else {
   //  // err is the error received from MongoDb
   //  res.status(500).send('Something broke!', err)
