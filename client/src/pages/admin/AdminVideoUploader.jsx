@@ -76,7 +76,7 @@ class AdminVideoUploader extends Component {
             <div className="row videoUploadFormRow">
               <div className="videoUploadFormContainer">    
                 <h2 className="adminVideoUploadFormHeading">Video Uploader</h2>
-                  <form className="videoUploadForm" action={`/upload/${this.state.videoTitle}/${this.state.videoDesc}/${this.state.equipmentNeeded}/${this.state.fitnessLevel}/${this.state.workoutCategory}/${this.state.sampleVideo}`} method="POST" encType="multipart/form-data">
+                  <form className="videoUploadForm" action={`/upload/${this.state.videoTitle}/${this.state.videoDesc}/${this.state.equipmentNeeded}/${this.state.fitnessLevel}/${this.state.workoutCategory}/${this.state.sampleVideo}`} method="POST" enctype="multipart/form-data">
                     <div className="videoUploadFormSelectors custom-file mb-3">
 
                       {/* SELECT FILE */}

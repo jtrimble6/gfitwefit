@@ -78,14 +78,6 @@ passport.deserializeUser(function(id, done) {
   });
 });
 
-app.use(function(req, res, next) { //allow cross origin requests
-  res.setHeader("Access-Control-Allow-Methods", "POST, PUT, OPTIONS, DELETE, GET");
-  res.header("Access-Control-Allow-Origin", "*");
-  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-  res.header("Access-Control-Allow-Credentials", true);
-  next();
-});
-
 // Connect to the Mongo DB
 mongoose.connect(process.env.MONGODB_URI || config.db);
 const conn = mongoose.createConnection(process.env.MONGODB_URI || config.db);
@@ -136,6 +128,14 @@ conn.once('open', function(err, database) {
   gfs.collection('uploads')
   db = database
 })
+
+app.use(function(req, res, next) { //allow cross origin requests
+  res.setHeader("Access-Control-Allow-Methods", "POST, PUT, OPTIONS, DELETE, GET");
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  res.header("Access-Control-Allow-Credentials", true);
+  next();
+});
 
 // Create storage engine
 const storage = new GridFsStorage({
@@ -283,6 +283,7 @@ function isInvalidRange (start, end, maxIdx) {
 app.post('/upload/:videoTitle/:videoDesc/:equipmentNeeded/:fitnessLevel/:workoutCategory/:sampleVideo', upload.single('file'), (req, res) => {
   // res.json({file: req.file})
   console.log('File sending: ', req.file)
+  debugger;
   gfs.files.update({'filename': req.file.filename}, 
     {'$set': 
       {
