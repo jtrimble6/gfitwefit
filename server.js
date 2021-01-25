@@ -130,7 +130,8 @@ const storage = new GridFsStorage({
     });
   }
 });
-const upload = multer({ storage });
+const upload = multer({ storage: storage,
+  limits: { fileSize: '50mb' } });
 
 var mongo = require('mongodb');
 // var MongoClient = require('mongodb').MongoClient;
