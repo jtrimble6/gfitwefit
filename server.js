@@ -30,11 +30,12 @@ require('dotenv').config();
 
 // Define middleware here
 app.use(morgan('dev'))
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json());
+// app.use(bodyParser.urlencoded({ extended: true }));
+// app.use(bodyParser.json());
 app.use(methodOverride('_method'))
-app.use(bodyParser.json({limit: '500mb'}));
-app.use(bodyParser.urlencoded({limit: '500mb', extended: true}));
+app.use(express.json({limit: '50mb'}));
+app.use(express.urlencoded({limit: '50mb', extended: true}));
+// console.log('Limit file size: '+limit);
 app.use(express.json());
 
 // Serve up static assets (usually on heroku)
