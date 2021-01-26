@@ -33,10 +33,11 @@ app.use(morgan('dev'))
 // app.use(bodyParser.urlencoded({ extended: true }));
 // app.use(bodyParser.json());
 app.use(methodOverride('_method'))
-app.use(express.json({limit: '50mb', type:'application/json'}));
-app.use(express.urlencoded({limit: '50mb', extended: true, parameterLimit:50000, type:'application/x-www-form-urlencoded'}));
+app.use(express.json());
+app.use(express.json({limit: '50mb'}));
+app.use(express.urlencoded({limit: '50mb', extended: true}));
 // console.log('Limit file size: '+limit);
-// app.use(express.json());
+
 
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {
