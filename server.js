@@ -21,7 +21,7 @@ const messageBoardRoutes = require('./routes/API/messageBoardAPI')
 const passwordResetRoutes = require('./routes/API/passwordResetAPI')
 // const videoRoutes = require('./routes/API/videoAPI/video')
 const passport = require('./server/passport');
-const app = express();
+// const app = express();
 const path = require("path");
 const PORT = process.env.PORT || 3001;
 const axios = require('axios'); 
@@ -34,7 +34,7 @@ app.use(morgan('dev'))
 // app.use(bodyParser.json());
 app.use(methodOverride('_method'))
 app.use(express.json({limit: '50mb'}));
-app.use(express.urlencoded({limit: '50mb', extended: true}));
+app.use(express.urlencoded({limit: '50mb', extended: true, parameterLimit:50000}));
 // console.log('Limit file size: '+limit);
 app.use(express.json());
 
