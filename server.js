@@ -300,13 +300,14 @@ app.post('/upload/:videoTitle/:videoDesc/:equipmentNeeded/:fitnessLevel/:workout
             status: MARankings.Enums.Status.FILE_TOO_LARGE
             // status: -6
         });
+        debugger;
 
     }
 
   });
 
   handler(req, res, next);
-  
+
   gfs.files.update({'filename': req.file.filename}, 
     {'$set': 
       {
