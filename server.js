@@ -28,15 +28,7 @@ const axios = require('axios');
 let httpsProxyAgent = require('https-proxy-agent');
 require('dotenv').config();
 
-// Define middleware here
-app.use(morgan('dev'))
-// app.use(bodyParser.urlencoded({ extended: true }));
-// app.use(bodyParser.json());;
-app.use(methodOverride('_method'))
-app.use(bodyParser.json());
-app.use(bodyParser.json({limit: '50mb'}));
-app.use(bodyParser.urlencoded({limit: '50mb', extended: true}));
-// console.log('Limit file size: '+limit);
+
 
 
 // Serve up static assets (usually on heroku)
@@ -80,6 +72,24 @@ passport.deserializeUser(function(id, done) {
     done(err, user);
   });
 });
+
+app.use(function(req, res, next) { //allow cross origin requests
+  res.setHeader("Access-Control-Allow-Methods", "POST, PUT, OPTIONS, DELETE, GET");
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  res.header("Access-Control-Allow-Credentials", true);
+  next();
+});
+
+// Define middleware here
+app.use(morgan('dev'))
+// app.use(bodyParser.urlencoded({ extended: true }));
+// app.use(bodyParser.json());;
+app.use(methodOverride('_method'))
+app.use(bodyParser.json());
+app.use(bodyParser.json({limit: '500mb'}));
+app.use(bodyParser.urlencoded({limit: '500mb', extended: true}));
+// console.log('Limit file size: '+limit);
 
 // Connect to the Mongo DB
 mongoose.connect(process.env.MONGODB_URI || config.db);
@@ -131,14 +141,6 @@ conn.once('open', function(err, database) {
   gfs.collection('uploads')
   db = database
 })
-
-app.use(function(req, res, next) { //allow cross origin requests
-  res.setHeader("Access-Control-Allow-Methods", "POST, PUT, OPTIONS, DELETE, GET");
-  res.header("Access-Control-Allow-Origin", "*");
-  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-  res.header("Access-Control-Allow-Credentials", true);
-  next();
-});
 
 // Create storage engine
 const storage = new GridFsStorage({
