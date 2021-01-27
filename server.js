@@ -285,10 +285,28 @@ function isInvalidRange (start, end, maxIdx) {
 // @route POST /upload
 // @desc Uploads file to DB
 
-app.post('/upload/:videoTitle/:videoDesc/:equipmentNeeded/:fitnessLevel/:workoutCategory/:sampleVideo', upload.single('file'), (req, res) => {
+app.post('/upload/:videoTitle/:videoDesc/:equipmentNeeded/:fitnessLevel/:workoutCategory/:sampleVideo', upload.single('file'), (req, res, next) => {
   // res.json({file: req.file})
   console.log('File sending: ', req.file)
   // debugger;
+  var handler = multer({
+
+    // other settings here then:
+    onFileSizeLimit: function (file) {
+
+        // res does exist here now :)
+        res.json({
+            message: "Upload failed",
+            status: MARankings.Enums.Status.FILE_TOO_LARGE
+            // status: -6
+        });
+
+    }
+
+  });
+
+  handler(req, res, next);
+  
   gfs.files.update({'filename': req.file.filename}, 
     {'$set': 
       {
