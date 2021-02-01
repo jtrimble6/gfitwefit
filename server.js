@@ -354,24 +354,24 @@ app.post('/upload/:videoTitle/:videoDesc/:equipmentNeeded/:fitnessLevel/:workout
   // res.json({file: req.file})
   console.log('File sending: ', req.file)
   // debugger;
-  // var handler = multer({
+  var handler = multer({
 
-  //   // other settings here then:
-  //   onFileSizeLimit: function (file) {
+    // other settings here then:
+    onFileSizeLimit: function (file) {
 
-  //       // res does exist here now :)
-  //       res.json({
-  //           message: "Upload failed",
-  //           status: MARankings.Enums.Status.FILE_TOO_LARGE
-  //           // status: -6
-  //       });
-  //       debugger;
+        // res does exist here now :)
+        res.json({
+            message: "Upload failed",
+            status: MARankings.Enums.Status.FILE_TOO_LARGE
+            // status: -6
+        });
+        debugger;
 
-  //   }
+    }
 
-  // });
+  });
 
-  // handler(req, res, next);
+  handler(req, res, next);
 
   gfs.files.update({'filename': req.file.filename}, 
     {'$set': 
