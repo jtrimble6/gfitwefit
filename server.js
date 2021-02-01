@@ -150,6 +150,7 @@ conn.once('open', function(err, database) {
   gfs = Grid(conn.db, mongoose.mongo)
   gfs.collection('uploads')
   db = database
+  console.log('database is connected: ', gfs)
 
   // bucket = new GridFSBucket(db, {
   //   chunkSizeBytes: 1024,
@@ -183,8 +184,8 @@ const storage = new GridFsStorage({
 
 const upload = multer({ 
   storage: storage,
-  limits: { fileSize: '50mb' } 
- });
+  limits: { fileSize: '100mb' } 
+ }).single('bestand');
 
 var mongo = require('mongodb');
 // var MongoClient = require('mongodb').MongoClient;
