@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Button, FormCheck } from 'react-bootstrap'
+import uploader from 'huge-uploader';
 
 // CSS
 import '../../css/admin/admin.css'
@@ -14,7 +15,8 @@ class AdminVideoUploader extends Component {
           equipmentNeeded: '',
           fitnessLevel: '',
           workoutCategory: '',
-          sampleVideo: false
+          sampleVideo: false,
+          fileObject: {}
           }
 
         this.handleInputChange = this.handleInputChange.bind(this)
@@ -48,6 +50,9 @@ class AdminVideoUploader extends Component {
         event.preventDefault()
         console.log('HANDLING FILE SELECTION')
         let filename = event.target.files[0].name
+        this.setState({
+          fileObject: event.target.files[0]
+        })
         console.log('FILENAME: ', filename)
         document.getElementById('fileUploadName').innerHTML = filename
       }
@@ -76,7 +81,7 @@ class AdminVideoUploader extends Component {
             <div className="row videoUploadFormRow">
               <div className="videoUploadFormContainer">    
                 <h2 className="adminVideoUploadFormHeading">Video Uploader</h2>
-                  <form className="videoUploadForm" action={`/upload/${this.state.videoTitle}/${this.state.videoDesc}/${this.state.equipmentNeeded}/${this.state.fitnessLevel}/${this.state.workoutCategory}/${this.state.sampleVideo}`} method="POST" enctype="multipart/form-data">
+                  <form className="videoUploadForm" action={`/upload/${this.state.videoTitle}/${this.state.videoDesc}/${this.state.equipmentNeeded}/${this.state.fitnessLevel}/${this.state.workoutCategory}/${this.state.sampleVideo}`} method="POST" encType="multipart/form-data">
                     <div className="videoUploadFormSelectors custom-file mb-3">
 
                       {/* SELECT FILE */}
