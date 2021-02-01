@@ -185,7 +185,7 @@ const storage = new GridFsStorage({
 const upload = multer({ 
   storage: storage,
   limits: { fileSize: '100mb' } 
- }).single('bestand');
+ }).single('file');
 
 var mongo = require('mongodb');
 // var MongoClient = require('mongodb').MongoClient;
@@ -351,41 +351,49 @@ function isInvalidRange (start, end, maxIdx) {
 // @route POST /upload
 // @desc Uploads file to DB
 
-app.post('/upload/:videoTitle/:videoDesc/:equipmentNeeded/:fitnessLevel/:workoutCategory/:sampleVideo', upload.single('file'), (req, res, next) => {
+app.post('/upload/:videoTitle/:videoDesc/:equipmentNeeded/:fitnessLevel/:workoutCategory/:sampleVideo', (req, res, next) => {
   // res.json({file: req.file})
   console.log('File sending: ', req.file)
-  // debugger;
-  var handler = multer({
-
-    // other settings here then:
-    onFileSizeLimit: function (file) {
-
-        // res does exist here now :)
-        res.json({
-            message: "Upload failed",
-            status: MARankings.Enums.Status.FILE_TOO_LARGE
-            // status: -6
-        });
-        debugger;
-
-    }
-
+  upload(req,res,function(err) {
+      if(err) {
+          return res.end("Error uploading file.");
+      }
+      console.log(req.file);
+      gfs.files.update({'filename': req.file.filename}, 
+      {'$set': 
+        {
+          'videoTitle': req.params.videoTitle,
+          'videoDesc': req.params.videoDesc,
+          'equipmentNeeded': req.params.equipmentNeeded,
+          'fitnessLevel': req.params.fitnessLevel,
+          'workoutCategory': req.params.workoutCategory,
+          'sampleVideo': req.params.sampleVideo
+        },
+      })
+      res.redirect('/adminHome')
+      // res.redirect(req.baseUrl);
   });
+  // debugger;
+  // var handler = multer({
 
-  handler(req, res, next);
+  //   // other settings here then:
+  //   onFileSizeLimit: function (file) {
 
-  gfs.files.update({'filename': req.file.filename}, 
-    {'$set': 
-      {
-        'videoTitle': req.params.videoTitle,
-        'videoDesc': req.params.videoDesc,
-        'equipmentNeeded': req.params.equipmentNeeded,
-        'fitnessLevel': req.params.fitnessLevel,
-        'workoutCategory': req.params.workoutCategory,
-        'sampleVideo': req.params.sampleVideo
-      },
-    })
-    res.redirect('/adminHome')
+  //       // res does exist here now :)
+  //       res.json({
+  //           message: "Upload failed",
+  //           status: MARankings.Enums.Status.FILE_TOO_LARGE
+  //           // status: -6
+  //       });
+  //       debugger;
+
+  //   }
+
+  // });
+
+  // handler(req, res, next);
+
+  
   // try {
   //     return res.status(201).json({
   //       message: 'File uploded successfully'
