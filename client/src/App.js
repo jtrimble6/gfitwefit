@@ -194,13 +194,15 @@ class Landing extends Component {
             />
             <Route exact path='/adminVideoLibrary'
               render={() =>
-                this.state.loggedIn === true ? (
-                  <AdminVideoLibraryPage />
-                ) : this.state.loggedIn === false ? (
-                  <Redirect to='/' />
-                ) : (
-                  null
-                )}
+                <AdminVideoLibraryPage />
+                // this.state.loggedIn === true ? (
+                //   <AdminVideoLibraryPage />
+                // ) : this.state.loggedIn === false ? (
+                //   <Redirect to='/' />
+                // ) : (
+                //   null
+                // )}
+              }
             />
           </Switch>
         </div>
