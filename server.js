@@ -25,8 +25,6 @@ const app = express();
 const path = require("path");
 const PORT = process.env.PORT || 3001;
 const axios = require('axios'); 
-const busboy = require('connect-busboy');
-const fs = require('fs-extra');
 let httpsProxyAgent = require('https-proxy-agent');
 require('dotenv').config();
 
@@ -46,13 +44,6 @@ app.use(methodOverride('_method'))
 app.use(bodyParser.json());
 app.use(bodyParser.json({limit: '500mb'}));
 app.use(bodyParser.urlencoded({limit: '500mb', extended: true}));
-app.use(busboy({
-  highWaterMark: 2 * 1024 * 1024, // Set 2MiB buffer
-})); // Insert the busboy middle-ware
-const uploadPath = path.join(__dirname, 'uploads'); // Register the upload path
-fs.ensureDir(uploadPath); // Make sure that the upload path exits
-
-
 // console.log('Limit file size: '+limit);
 
 
@@ -106,7 +97,6 @@ const conn = mongoose.createConnection(process.env.MONGODB_URI || config.db);
 
 //Init gfs
 let gfs;
-const bucket = '';
 
 //HANDLE DISCONNECTIONS
 conn.on('error', function(e){
@@ -150,16 +140,7 @@ conn.once('open', function(err, database) {
   gfs = Grid(conn.db, mongoose.mongo)
   gfs.collection('uploads')
   db = database
-  console.log('database is connected: ', gfs)
-
-  // bucket = new GridFSBucket(db, {
-  //   chunkSizeBytes: 1024,
-  //   bucketName: 'uploads'
-  // });
-  
-
 })
-
 
 // Create storage engine
 const storage = new GridFsStorage({
@@ -173,19 +154,15 @@ const storage = new GridFsStorage({
         const filename = buf.toString('hex') + path.extname(file.originalname);
         const fileInfo = {
           filename: filename,
-          chunkSizeBytes: 100000 * 1024,
           bucketName: 'uploads',
         };
         resolve(fileInfo);
       });
     });
   }
-  });
-
-const upload = multer({ 
-  storage: storage,
-  limits: { fileSize: '100mb' } 
- }).single('file');
+});
+const upload = multer({ storage: storage,
+  limits: { fileSize: '50mb' } });
 
 var mongo = require('mongodb');
 // var MongoClient = require('mongodb').MongoClient;
@@ -305,95 +282,25 @@ function isInvalidRange (start, end, maxIdx) {
 }
 
 
-// Handle the upload post request
-// app.route('/upload/:videoTitle/:videoDesc/:equipmentNeeded/:fitnessLevel/:workoutCategory/:sampleVideo').post((req, res, next) => {
- 
-//   req.pipe(req.busboy); // Pipe it through busboy
-
-//   req.busboy.on('file', (fieldname, file, filename) => {
-//       console.log(`Upload of '${filename}' started`);
-//       fs.createReadStream(`./${filename}`).
-//         pipe(bucket.openUploadStream(`${filename}`)).
-//         on('error', function(error) {
-//           assert.ifError(error);
-//         }).
-//         on('finish', function() {
-//           console.log('done!');
-//           process.exit(0);
-//         });
-//       // upload.single('file')
-//       // gfs.files.update({'filename': filename}, 
-//       // {'$set': 
-//       //   {
-//       //     'videoTitle': req.params.videoTitle,
-//       //     'videoDesc': req.params.videoDesc,
-//       //     'equipmentNeeded': req.params.equipmentNeeded,
-//       //     'fitnessLevel': req.params.fitnessLevel,
-//       //     'workoutCategory': req.params.workoutCategory,
-//       //     'sampleVideo': req.params.sampleVideo
-//       //   },
-//       // })
-//       // Create a write stream of the new file
-//       // const fstream = fs.createWriteStream(path.join(uploadPath, filename));
-//       // // Pipe it through
-//       // file.pipe(fstream);
-
-//       // On finish of the upload
-//       fstream.on('close', () => {
-//           console.log(`Upload of '${filename}' finished`);
-//           console.log('Upload file: ', file)
-//           // debugger;
-//           res.redirect('back');
-//       });
-//   });
-// });
-
 // @route POST /upload
 // @desc Uploads file to DB
 
-app.post('/upload/:videoTitle/:videoDesc/:equipmentNeeded/:fitnessLevel/:workoutCategory/:sampleVideo', (req, res, next) => {
+app.post('/upload/:videoTitle/:videoDesc/:equipmentNeeded/:fitnessLevel/:workoutCategory/:sampleVideo', upload.single('file'), (req, res) => {
   // res.json({file: req.file})
   console.log('File sending: ', req.file)
-  upload(req,res,function(err) {
-      if(err) {
-          return res.end("Error uploading file.");
-      }
-      console.log(req.file);
-      gfs.files.update({'filename': req.file.filename}, 
-      {'$set': 
-        {
-          'videoTitle': req.params.videoTitle,
-          'videoDesc': req.params.videoDesc,
-          'equipmentNeeded': req.params.equipmentNeeded,
-          'fitnessLevel': req.params.fitnessLevel,
-          'workoutCategory': req.params.workoutCategory,
-          'sampleVideo': req.params.sampleVideo
-        },
-      })
-      res.redirect('/adminHome')
-      // res.redirect(req.baseUrl);
-  });
   // debugger;
-  // var handler = multer({
-
-  //   // other settings here then:
-  //   onFileSizeLimit: function (file) {
-
-  //       // res does exist here now :)
-  //       res.json({
-  //           message: "Upload failed",
-  //           status: MARankings.Enums.Status.FILE_TOO_LARGE
-  //           // status: -6
-  //       });
-  //       debugger;
-
-  //   }
-
-  // });
-
-  // handler(req, res, next);
-
-  
+  gfs.files.update({'filename': req.file.filename}, 
+    {'$set': 
+      {
+        'videoTitle': req.params.videoTitle,
+        'videoDesc': req.params.videoDesc,
+        'equipmentNeeded': req.params.equipmentNeeded,
+        'fitnessLevel': req.params.fitnessLevel,
+        'workoutCategory': req.params.workoutCategory,
+        'sampleVideo': req.params.sampleVideo
+      },
+    })
+    res.redirect('/adminHome')
   // try {
   //     return res.status(201).json({
   //       message: 'File uploded successfully'
@@ -405,7 +312,7 @@ app.post('/upload/:videoTitle/:videoDesc/:equipmentNeeded/:fitnessLevel/:workout
   //  // err is the error received from MongoDb
   //  res.status(500).send('Something broke!', err)
   //  console.log('HUGE ERROR: ', err)
-  // }
+  // }f
   
 })
 

@@ -34,6 +34,7 @@ class UserVideoLibrary extends Component {
         this.handleChange = this.handleChange.bind(this)
         this.toggleFilter = this.toggleFilter.bind(this)
         this.getUserData = this.getUserData.bind(this)
+        this.getCollections = this.getCollections.bind(this)
         this.getVideos = this.getVideos.bind(this)
     }
 
@@ -41,6 +42,7 @@ class UserVideoLibrary extends Component {
 
     componentDidMount() {
         this.getUserData()
+        this.getCollections()
         // this.getVideos()
       }
 
@@ -86,28 +88,65 @@ class UserVideoLibrary extends Component {
             })
       }
 
+    getCollections = () => {
+        axios.get("/collections").then(res => {
+          let files = JSON.parse(res.data)
+          console.log('VIDEO COLLECTIONS: ', files)
+          this.setState({
+            videoLibraryCollections: files
+          })
+        //   let videoLibrary = files.filter(file => {
+        //       return file.contentType === "video/quicktime" || file.contentType === "video/mp4"
+        //   })
+        //   console.log("ADMIN VIDEOS: ", videoLibrary)
+        //   this.setState({
+        //       videoLibrary: videoLibrary,
+        //       videoLibraryFiltered: videoLibrary
+        //   }, () => {
+        //     console.log(this.state.videoLibrary);
+        //   })
+        });
+      }
+
     getVideos = (subscriptionStatus) => {
         console.log('SUBSCRIPTION STATUS: ', subscriptionStatus)
         if (subscriptionStatus) {
             document.getElementById('noVideosTitle').innerHTML = `<span class="spinner-border spinner-border-lg" role="status" aria-hidden="true"></span> Loading videos...`
-            axios.get('/videos').then(res => {
-                let files = res.data
-                let videoLibrary = files.filter(file => {
-                    return file.contentType === "video/quicktime" || file.contentType === "video/mp4"
-                })
+            axios.get("/videos").then(res => {
+                let files = JSON.parse(res.data)
+                console.log('VIDEO FILES: ', files)
                 this.setState({
-                    videoLibrary: videoLibrary,
-                    videoLibraryFiltered: videoLibrary
+                  videoLibrary: files,
+                  videoLibraryFiltered: files
                 }, () => {
-                  if (videoLibrary.length < 1) {
-                    document.getElementById('noVideosTitle').innerHTML = `There are no videos to display.`
-                    document.getElementById('noVideosTitle').style.display = 'block'
-                  } else {
-                    document.getElementById('noVideosTitle').style.display = 'none'
-                  }
-                  console.log(this.state.videoLibrary);
-                })
-              });
+                    if (files.length < 1) {
+                        document.getElementById('noVideosTitle').innerHTML = `There are no videos to display.`
+                        document.getElementById('noVideosTitle').style.display = 'block'
+                    } else {
+                        document.getElementById('noVideosTitle').style.display = 'none'
+                      }
+                        console.log(this.state.videoLibrary);
+                    })
+                });
+            
+            // axios.get('/videos').then(res => {
+            //     let files = res.data
+            //     let videoLibrary = files.filter(file => {
+            //         return file.contentType === "video/quicktime" || file.contentType === "video/mp4"
+            //     })
+            //     this.setState({
+            //         videoLibrary: videoLibrary,
+            //         videoLibraryFiltered: videoLibrary
+            //     }, () => {
+            //       if (videoLibrary.length < 1) {
+            //         document.getElementById('noVideosTitle').innerHTML = `There are no videos to display.`
+            //         document.getElementById('noVideosTitle').style.display = 'block'
+            //       } else {
+            //         document.getElementById('noVideosTitle').style.display = 'none'
+            //       }
+            //       console.log(this.state.videoLibrary);
+            //     })
+            //   });
         } else {
             document.getElementById('noVideosTitle').innerHTML = `<span class='inactiveSubscriptionDetails'>Your subscription is currently INACTIVE. To manage your subscription navigate to profile tab.</span>`
         }
@@ -255,7 +294,8 @@ class UserVideoLibrary extends Component {
               <div className="videoLibraryFormContainer">    
                 <h2 className="videoLibraryForm-heading">Video Library</h2>
                   <div className="row videoLibraryRow">
-                    <div className="col-sm-12 col-lg-3 filterColumn">
+                    {/* FILTER FORM */}
+                    {/* <div className="col-sm-12 col-lg-3 filterColumn">
                         <Button
                             id="showHideFilterButton"
                             className="userFilterLibraryButton"
@@ -264,7 +304,7 @@ class UserVideoLibrary extends Component {
                             Show Filters
                         </Button>
 
-                        {/* FILTER FORM */}
+                        
                         <UserVideoPreferences 
                             handleChange={this.handleChange}
                             handleFilter={this.handleFilter}
@@ -273,7 +313,7 @@ class UserVideoLibrary extends Component {
                             fitnessLevel={this.state.fitnessLevel}
                             workoutCategory={this.state.workoutCategory}
                         />
-                    </div>
+                    </div> */}
 
                     <div className="col-sm-12 col-lg-8 videoColumn">
                         {/* VIDEO PLAYER */}
@@ -281,44 +321,36 @@ class UserVideoLibrary extends Component {
                         <h2 className='noVideosTitle' id='noVideosTitle'> </h2>
 
                         {
-                            (this.state.videoLibraryFiltered.length > 0) ? 
-                            
-                            <div className='videoLibraryDiv'>
-                              {this.state.videoLibraryFiltered.map((video, index) => (
-                                <div key={video._id} className='videoLibraryCardDiv'>
-                                    <Card className="card card-body mb-3 mx-auto videoLibraryCard">
-                                        <Player
-                                            playsInline
-                                            poster={backgroundImg}
-                                            src={`video/${video.filename}`}
-                                        > 
-                                            <BigPlayButton position='center' />
-                                        </Player>
-                                        <CardBody>
-                                        <CardTitle className='videoLibraryCardTitle'>Video Title</CardTitle>
-                                        <CardText className='videoLibraryCardText'>This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</CardText>
-                                        <CardText>
-                                            <small className="text-muted videoLibraryCardSubtitle">Last updated 3 mins ago</small>
-                                        </CardText>
-                                        </CardBody>
-                                    </Card> 
-                                    {/* <form method="POST" className="videoLikeForm" action={`/videos/${video._id}?_method=POST`}> 
-                                    
-                                        <input 
-                                        type="submit" 
-                                        value="Like Video" 
-                                        className='userLikeButton like' 
-                                        />
-                                    </form> */}
-                                </div> 
-                                ))}
-                            </div>
+                          (this.state.videoLibraryFiltered.length > 0) ? 
+                          
+                          <div className="videoLibraryDiv">
+                            {this.state.videoLibraryFiltered.map((video, index) => (
+                              <div key={video.fid} className="videoLibraryCardDiv">
+                                  <Card className="card card-body mb-3 mx-auto videoLibraryCard">
+                                    <iframe 
+                                      src={"https://muse.ai/embed/" + video.svid + "?search=0&links=0&logo=0"} 
+                                      width="100%" 
+                                      height="324" 
+                                      frameBorder="0" 
+                                      allowFullScreen
+                                    >
+                                    </iframe>
+                                    <CardBody>
+                                      <CardTitle className="videoLibraryCardTitle">{video.title}</CardTitle>
+                                      <CardText className="videoLibraryCardText">{video.description}</CardText>
+                                      <CardText>
+                                          {/* <small className="text-muted videoLibraryCardSubtitle">Last updated 3 mins ago</small> */}
+                                      </CardText>
+                                    </CardBody>
+                                  </Card> 
+                                
+                              </div> 
+                            ))}
+                          </div>
 
-                            
+                          : 
 
-                            : 
-
-                            <div></div>
+                          <h2 className="noVideosTitle">There are no videos to display.</h2>
                         }
 
                         {/* BACK TO HOME */}

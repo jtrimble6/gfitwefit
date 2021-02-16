@@ -33,6 +33,7 @@ class AdminVideoLibrary extends Component {
     this.toggleFilter = this.toggleFilter.bind(this)
     this.getUserData = this.getUserData.bind(this)
     this.getVideos = this.getVideos.bind(this)
+    this.getCollections = this.getCollections.bind(this)
     this.playVideo = this.playVideo.bind(this)
   }
 
@@ -41,6 +42,7 @@ class AdminVideoLibrary extends Component {
   componentDidMount() {
     this.getUserData()
     this.getVideos()
+    this.getCollections()
     }
 
   getUserData = () => {
@@ -82,19 +84,44 @@ class AdminVideoLibrary extends Component {
         })
     }
 
+  getCollections = () => {
+    axios.get("/collections").then(res => {
+      let files = JSON.parse(res.data)
+      console.log('VIDEO COLLECTIONS: ', files)
+      this.setState({
+        videoLibraryCollections: files
+      })
+    //   let videoLibrary = files.filter(file => {
+    //       return file.contentType === "video/quicktime" || file.contentType === "video/mp4"
+    //   })
+    //   console.log("ADMIN VIDEOS: ", videoLibrary)
+    //   this.setState({
+    //       videoLibrary: videoLibrary,
+    //       videoLibraryFiltered: videoLibrary
+    //   }, () => {
+    //     console.log(this.state.videoLibrary);
+    //   })
+    });
+  }
+
   getVideos = () => {
     axios.get("/videos").then(res => {
-        let files = res.data
-        let videoLibrary = files.filter(file => {
-            return file.contentType === "video/quicktime" || file.contentType === "video/mp4"
-        })
-        console.log("ADMIN VIDEOS: ", videoLibrary)
+        let files = JSON.parse(res.data)
+        console.log('VIDEO FILES: ', files)
         this.setState({
-            videoLibrary: videoLibrary,
-            videoLibraryFiltered: videoLibrary
-        }, () => {
-          console.log(this.state.videoLibrary);
+          videoLibrary: files,
+          videoLibraryFiltered: files
         })
+      //   let videoLibrary = files.filter(file => {
+      //       return file.contentType === "video/quicktime" || file.contentType === "video/mp4"
+      //   })
+      //   console.log("ADMIN VIDEOS: ", videoLibrary)
+      //   this.setState({
+      //       videoLibrary: videoLibrary,
+      //       videoLibraryFiltered: videoLibrary
+      //   }, () => {
+      //     console.log(this.state.videoLibrary);
+      //   })
       });
     }
 
@@ -247,7 +274,8 @@ class AdminVideoLibrary extends Component {
                 <h2 className="videoLibraryForm-heading">Video Library</h2>
                     
                     <div className="row videoLibraryRow">
-                      <div className="col-sm-3 filterColumn">
+                      {/* FILTER FORM */}
+                      {/* <div className="col-sm-3 filterColumn">
                           <Button
                             id="showHideFilterButton"
                             className="userFilterLibraryButton"
@@ -255,8 +283,6 @@ class AdminVideoLibrary extends Component {
                           >
                             Show Filters
                           </Button>
-
-                          {/* FILTER FORM */}
                           <AdminVideoPreferences 
                             handleChange={this.handleChange}
                             handleFilter={this.handleFilter}
@@ -265,58 +291,32 @@ class AdminVideoLibrary extends Component {
                             fitnessLevel={this.state.fitnessLevel}
                             workoutCategory={this.state.workoutCategory}
                           />
-                      </div>
+                      </div> */}
 
                       <div className="col-sm-8 videoColumn">
                           
-                        {
+                      <div className="videoLibraryDiv">
+
+                      {
                           (this.state.videoLibraryFiltered.length > 0) ? 
                           
                           <div className="videoLibraryDiv">
                             {this.state.videoLibraryFiltered.map((video, index) => (
-                              <div key={video._id} className="videoLibraryCardDiv">
+                              <div key={video.fid} className="videoLibraryCardDiv">
                                   <Card className="card card-body mb-3 mx-auto videoLibraryCard">
-                                    <video 
-                                      ref={player => {
-                                        this.player = player;
-                                      }} 
-                                      // loop 
-                                      // autoPlay 
-                                      // muted 
-                                      controls 
+                                    <iframe 
+                                      src={"https://muse.ai/embed/" + video.svid + "?search=0&links=0&logo=0"} 
                                       width="100%" 
-                                      height="100%"
-                                      // src="http://media.w3.org/2010/05/bunny/movie.mp4" 
-                                      src={`video/${video.filename}`} 
-                                      type={video.contentType}>
-                                        
-                                    </video>
-                                    {/* <Player
-                                      ref={player => {
-                                        this.player = player;
-                                      }}
-                                      // autoplay
-                                      playsInline
-                                      muted
-                                      controls
-                                      src={`video/${video.filename}`}
-                                      poster={backgroundImg}
-                                    > 
-                                      <BigPlayButton position="center" />
-                                    </Player> */}
-                                   
-                                    {/* <Button onClick={this.playVideo}>Play Video</Button>  */}
-                                    {/* <ReactPlayer
-                                      playsinline
-                                      muted={isMobile}
-                                      url={`video/${video.filename}`}
-                                    > 
-                                    </ReactPlayer> */}
+                                      height="324" 
+                                      frameBorder="0" 
+                                      allowFullScreen
+                                    >
+                                    </iframe>
                                     <CardBody>
-                                      <CardTitle className="videoLibraryCardTitle">{video.videoTitle}</CardTitle>
-                                      <CardText className="videoLibraryCardText">{video.videoDesc}</CardText>
+                                      <CardTitle className="videoLibraryCardTitle">{video.title}</CardTitle>
+                                      <CardText className="videoLibraryCardText">{video.description}</CardText>
                                       <CardText>
-                                          <small className="text-muted videoLibraryCardSubtitle">Last updated 3 mins ago</small>
+                                          {/* <small className="text-muted videoLibraryCardSubtitle">Last updated 3 mins ago</small> */}
                                       </CardText>
                                     </CardBody>
                                   </Card> 
@@ -336,6 +336,8 @@ class AdminVideoLibrary extends Component {
 
                           <h2 className="noVideosTitle">There are no videos to display.</h2>
                       }
+
+                      </div>
 
                       {/* View Video Library */}
                       <Button
