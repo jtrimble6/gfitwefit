@@ -40,17 +40,10 @@ app.use(function(req, res, next) { //allow cross origin requests
 app.use(morgan('dev'))
 // app.use(bodyParser.urlencoded({ extended: true }));
 // app.use(bodyParser.json());;
-// app.use(methodOverride('_method'))
+app.use(methodOverride('_method'))
 app.use(bodyParser.json());
 app.use(bodyParser.json({limit: '500mb'}));
 app.use(bodyParser.urlencoded({limit: '500mb', extended: true}));
-// app.use(busboy({
-//   highWaterMark: 2 * 1024 * 1024, // Set 2MiB buffer
-// })); // Insert the busboy middle-ware
-// const uploadPath = path.join(__dirname, 'uploads'); // Register the upload path
-// fs.ensureDir(uploadPath); // Make sure that the upload path exits
-
-
 // console.log('Limit file size: '+limit);
 
 
@@ -59,7 +52,7 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static(path.join(__dirname, "client", "build")));
 }
 
-app.use('/gfitwefitadmin/', express.static(path.join(__dirname, "client/build")));
+app.use('/gfitwefit/', express.static(path.join(__dirname, "client/build")));
 
 app.use(passport.initialize());
 app.use(passport.session());
@@ -73,6 +66,7 @@ app.use(
   userSignUpRoutes,
   userSubscriptionCancellationRoutes,
   userSubscriptionUpdateRoutes,
+  convergePayRoutes,
   messageBoardRoutes, 
   passwordResetRoutes
 );
@@ -103,7 +97,6 @@ const conn = mongoose.createConnection(process.env.MONGODB_URI || config.db);
 
 //Init gfs
 let gfs;
-const bucket = '';
 
 //HANDLE DISCONNECTIONS
 conn.on('error', function(e){
@@ -147,16 +140,7 @@ conn.once('open', function(err, database) {
   gfs = Grid(conn.db, mongoose.mongo)
   gfs.collection('uploads')
   db = database
-  // console.log('database is connected: ', gfs)
-
-  // bucket = new GridFSBucket(db, {
-  //   chunkSizeBytes: 1024,
-  //   bucketName: 'uploads'
-  // });
-  
-
 })
-
 
 // Create storage engine
 const storage = new GridFsStorage({
@@ -170,15 +154,13 @@ const storage = new GridFsStorage({
         const filename = buf.toString('hex') + path.extname(file.originalname);
         const fileInfo = {
           filename: filename,
-          chunkSizeBytes: 100000 * 1024,
           bucketName: 'uploads',
         };
         resolve(fileInfo);
       });
     });
   }
-  });
-
+});
 const upload = multer({ storage: storage,
   limits: { fileSize: '50mb' } });
 
@@ -300,52 +282,8 @@ function isInvalidRange (start, end, maxIdx) {
 }
 
 
-// Handle the upload post request
-// app.route('/upload/:videoTitle/:videoDesc/:equipmentNeeded/:fitnessLevel/:workoutCategory/:sampleVideo').post((req, res, next) => {
- 
-//   req.pipe(req.busboy); // Pipe it through busboy
-
-//   req.busboy.on('file', (fieldname, file, filename) => {
-//       console.log(`Upload of '${filename}' started`);
-//       fs.createReadStream(`./${filename}`).
-//         pipe(bucket.openUploadStream(`${filename}`)).
-//         on('error', function(error) {
-//           assert.ifError(error);
-//         }).
-//         on('finish', function() {
-//           console.log('done!');
-//           process.exit(0);
-//         });
-//       // upload.single('file')
-//       // gfs.files.update({'filename': filename}, 
-//       // {'$set': 
-//       //   {
-//       //     'videoTitle': req.params.videoTitle,
-//       //     'videoDesc': req.params.videoDesc,
-//       //     'equipmentNeeded': req.params.equipmentNeeded,
-//       //     'fitnessLevel': req.params.fitnessLevel,
-//       //     'workoutCategory': req.params.workoutCategory,
-//       //     'sampleVideo': req.params.sampleVideo
-//       //   },
-//       // })
-//       // Create a write stream of the new file
-//       // const fstream = fs.createWriteStream(path.join(uploadPath, filename));
-//       // // Pipe it through
-//       // file.pipe(fstream);
-
-//       // On finish of the upload
-//       fstream.on('close', () => {
-//           console.log(`Upload of '${filename}' finished`);
-//           console.log('Upload file: ', file)
-//           // debugger;
-//           res.redirect('back');
-//       });
-//   });
-// });
-
 // @route POST /upload
 // @desc Uploads file to DB
-
 
 app.post('/upload/:videoTitle/:videoDesc/:equipmentNeeded/:fitnessLevel/:workoutCategory/:sampleVideo', upload.single('file'), (req, res, next) => {
   // res.json({file: req.file})
@@ -547,48 +485,48 @@ app.delete('/videos/:id', (req, res) => {
 // @route GET /converge_token_req
 // @desc Retrieves converge token for payment
 
-// app.get('/converge_token_req', (request, response) => {
-//   if (process.env.NODE_ENV === "development") {
-//     console.log('DEV ENVIRONMENT')
-//     var proxy = process.env.REACT_APP_QUOTAGUARD_URL;
-//   } else {
-//     var proxy = process.env.QUOTAGUARDSTATIC_URL;
-//   }
+app.get('/converge_token_req', (request, response) => {
+  if (process.env.NODE_ENV === "development") {
+    console.log('DEV ENVIRONMENT')
+    var proxy = process.env.REACT_APP_QUOTAGUARD_URL;
+  } else {
+    var proxy = process.env.QUOTAGUARDSTATIC_URL;
+  }
   
-//   // var proxy = process.env.REACT_APP_QUOTAGUARD_URL;
-//   var agent = new httpsProxyAgent(proxy);
-//   let url = 'https://api.demo.convergepay.com/hosted-payments/transaction_token'
-//   var config = {
-//     url: url,
-//     httpsAgent: agent,
-//     params: {
-//       ssl_merchant_id: process.env.SSL_MERCHANT_ID,
-//       ssl_user_id: process.env.SSL_USER_ID,
-//       ssl_pin: process.env.SSL_PIN,
-//       ssl_transaction_type: 'ccsale',
-//       ssl_amount: '5.00'
-//     }
-//   }
-//   console.log('CONFIG: ', proxy, config.params)
+  // var proxy = process.env.REACT_APP_QUOTAGUARD_URL;
+  var agent = new httpsProxyAgent(proxy);
+  let url = 'https://api.demo.convergepay.com/hosted-payments/transaction_token'
+  var config = {
+    url: url,
+    httpsAgent: agent,
+    params: {
+      ssl_merchant_id: process.env.SSL_MERCHANT_ID,
+      ssl_user_id: process.env.SSL_USER_ID,
+      ssl_pin: process.env.SSL_PIN,
+      ssl_transaction_type: 'ccsale',
+      ssl_amount: '5.00'
+    }
+  }
+  console.log('CONFIG: ', proxy, config.params)
 
-//   axios({
-//     method: 'post',
-//     url: url,
-//     httpsAgent: agent,
-//     params: {
-//       ssl_merchant_id: process.env.SSL_MERCHANT_ID,
-//       ssl_user_id: process.env.SSL_USER_ID,
-//       ssl_pin: process.env.SSL_PIN,
-//       ssl_transaction_type: 'ccsale',
-//       ssl_amount: '5.00'
-//     }
-//     }).then((res) => {
-//         response.send(res.data)
-//     }).catch((error) => {
-//         console.log('there was an error getting transaction token: ', error)
-//     })
+  axios({
+    method: 'post',
+    url: url,
+    httpsAgent: agent,
+    params: {
+      ssl_merchant_id: process.env.SSL_MERCHANT_ID,
+      ssl_user_id: process.env.SSL_USER_ID,
+      ssl_pin: process.env.SSL_PIN,
+      ssl_transaction_type: 'ccsale',
+      ssl_amount: '5.00'
+    }
+    }).then((res) => {
+        response.send(res.data)
+    }).catch((error) => {
+        console.log('there was an error getting transaction token: ', error)
+    })
 
-// })
+})
 
 app.get('/express_backend', (req, res) => {
   res.send({ express: 'YOUR EXPRESS BACKEND IS CONNECTED TO REACT' });
@@ -600,5 +538,5 @@ app.get("*", (req, res) => {
 
 // Start the API server
 app.listen(PORT, () => {
-  console.log(`🌎  ==> API Server now listening on PORT(s) ${PORT}!`);
+  console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`);
 });
