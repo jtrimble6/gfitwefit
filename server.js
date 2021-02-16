@@ -40,7 +40,7 @@ app.use(function(req, res, next) { //allow cross origin requests
 app.use(morgan('dev'))
 // app.use(bodyParser.urlencoded({ extended: true }));
 // app.use(bodyParser.json());;
-app.use(methodOverride('_method'))
+// app.use(methodOverride('_method'))
 app.use(bodyParser.json());
 app.use(bodyParser.json({limit: '500mb'}));
 app.use(bodyParser.urlencoded({limit: '500mb', extended: true}));
