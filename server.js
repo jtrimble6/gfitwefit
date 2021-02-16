@@ -2,12 +2,12 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const morgan = require('morgan')
+const XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
 const session = require('express-session');
 const crypto = require('crypto')
 const multer = require('multer')
 const GridFsStorage = require('multer-gridfs-storage')
 const Grid = require('gridfs-stream')
-const methodOverride = require('method-override')
 const config = require('./config');
 const scheduleRoutes = require("./routes/API/scheduleAPI")
 const userRoutes = require("./routes/API/userAPI");
@@ -16,7 +16,7 @@ const contactRoutes = require('./routes/API/contactAPI')
 const userSignUpRoutes = require('./routes/API/userSignUpAPI')
 const userSubscriptionCancellationRoutes = require('./routes/API/userSubscriptionCancellationAPI')
 const userSubscriptionUpdateRoutes = require('./routes/API/userSubscriptionUpdateAPI')
-const convergePayRoutes = require('./routes/API/convergePayAPI')
+// const convergePayRoutes = require('./routes/API/convergePayAPI')
 const messageBoardRoutes = require('./routes/API/messageBoardAPI')
 const passwordResetRoutes = require('./routes/API/passwordResetAPI')
 // const videoRoutes = require('./routes/API/videoAPI/video')
@@ -25,7 +25,7 @@ const app = express();
 const path = require("path");
 const PORT = process.env.PORT || 3001;
 const axios = require('axios'); 
-let httpsProxyAgent = require('https-proxy-agent');
+const fs = require('fs-extra');
 require('dotenv').config();
 
 app.use(function(req, res, next) { //allow cross origin requests
@@ -40,10 +40,17 @@ app.use(function(req, res, next) { //allow cross origin requests
 app.use(morgan('dev'))
 // app.use(bodyParser.urlencoded({ extended: true }));
 // app.use(bodyParser.json());;
-app.use(methodOverride('_method'))
+// app.use(methodOverride('_method'))
 app.use(bodyParser.json());
 app.use(bodyParser.json({limit: '500mb'}));
 app.use(bodyParser.urlencoded({limit: '500mb', extended: true}));
+// app.use(busboy({
+//   highWaterMark: 2 * 1024 * 1024, // Set 2MiB buffer
+// })); // Insert the busboy middle-ware
+// const uploadPath = path.join(__dirname, 'uploads'); // Register the upload path
+// fs.ensureDir(uploadPath); // Make sure that the upload path exits
+
+
 // console.log('Limit file size: '+limit);
 
 
@@ -52,7 +59,7 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static(path.join(__dirname, "client", "build")));
 }
 
-app.use('/gfitwefit/', express.static(path.join(__dirname, "client/build")));
+app.use('/gfitwefitadmin/', express.static(path.join(__dirname, "client/build")));
 
 app.use(passport.initialize());
 app.use(passport.session());
@@ -66,7 +73,6 @@ app.use(
   userSignUpRoutes,
   userSubscriptionCancellationRoutes,
   userSubscriptionUpdateRoutes,
-  convergePayRoutes,
   messageBoardRoutes, 
   passwordResetRoutes
 );
@@ -97,6 +103,7 @@ const conn = mongoose.createConnection(process.env.MONGODB_URI || config.db);
 
 //Init gfs
 let gfs;
+const bucket = '';
 
 //HANDLE DISCONNECTIONS
 conn.on('error', function(e){
@@ -140,7 +147,16 @@ conn.once('open', function(err, database) {
   gfs = Grid(conn.db, mongoose.mongo)
   gfs.collection('uploads')
   db = database
+  // console.log('database is connected: ', gfs)
+
+  // bucket = new GridFSBucket(db, {
+  //   chunkSizeBytes: 1024,
+  //   bucketName: 'uploads'
+  // });
+  
+
 })
+
 
 // Create storage engine
 const storage = new GridFsStorage({
@@ -154,13 +170,15 @@ const storage = new GridFsStorage({
         const filename = buf.toString('hex') + path.extname(file.originalname);
         const fileInfo = {
           filename: filename,
+          chunkSizeBytes: 100000 * 1024,
           bucketName: 'uploads',
         };
         resolve(fileInfo);
       });
     });
   }
-});
+  });
+
 const upload = multer({ storage: storage,
   limits: { fileSize: '50mb' } });
 
@@ -282,25 +300,86 @@ function isInvalidRange (start, end, maxIdx) {
 }
 
 
+// Handle the upload post request
+// app.route('/upload/:videoTitle/:videoDesc/:equipmentNeeded/:fitnessLevel/:workoutCategory/:sampleVideo').post((req, res, next) => {
+ 
+//   req.pipe(req.busboy); // Pipe it through busboy
+
+//   req.busboy.on('file', (fieldname, file, filename) => {
+//       console.log(`Upload of '${filename}' started`);
+//       fs.createReadStream(`./${filename}`).
+//         pipe(bucket.openUploadStream(`${filename}`)).
+//         on('error', function(error) {
+//           assert.ifError(error);
+//         }).
+//         on('finish', function() {
+//           console.log('done!');
+//           process.exit(0);
+//         });
+//       // upload.single('file')
+//       // gfs.files.update({'filename': filename}, 
+//       // {'$set': 
+//       //   {
+//       //     'videoTitle': req.params.videoTitle,
+//       //     'videoDesc': req.params.videoDesc,
+//       //     'equipmentNeeded': req.params.equipmentNeeded,
+//       //     'fitnessLevel': req.params.fitnessLevel,
+//       //     'workoutCategory': req.params.workoutCategory,
+//       //     'sampleVideo': req.params.sampleVideo
+//       //   },
+//       // })
+//       // Create a write stream of the new file
+//       // const fstream = fs.createWriteStream(path.join(uploadPath, filename));
+//       // // Pipe it through
+//       // file.pipe(fstream);
+
+//       // On finish of the upload
+//       fstream.on('close', () => {
+//           console.log(`Upload of '${filename}' finished`);
+//           console.log('Upload file: ', file)
+//           // debugger;
+//           res.redirect('back');
+//       });
+//   });
+// });
+
 // @route POST /upload
 // @desc Uploads file to DB
 
-app.post('/upload/:videoTitle/:videoDesc/:equipmentNeeded/:fitnessLevel/:workoutCategory/:sampleVideo', upload.single('file'), (req, res) => {
+
+app.post('/upload/:videoTitle/:videoDesc/:equipmentNeeded/:fitnessLevel/:workoutCategory/:sampleVideo', upload.single('file'), (req, res, next) => {
   // res.json({file: req.file})
+
+  var url = "https://muse.ai/api/files/upload";
+
+  var xhr = new XMLHttpRequest();
+  xhr.open("POST", url);
+
+  xhr.setRequestHeader("Key", "TGS8RfCyEji4IyXlBSPcRoSF602421ad");
+  // xhr.setRequestHeader("Content-Length", "0");
+
+  xhr.onreadystatechange = function () {
+    if (xhr.readyState === 4) {
+        console.log(xhr.status);
+        console.log(xhr.responseText);
+    }};
+
+  xhr.send(req.file);
+  
   console.log('File sending: ', req.file)
   // debugger;
-  gfs.files.update({'filename': req.file.filename}, 
-    {'$set': 
-      {
-        'videoTitle': req.params.videoTitle,
-        'videoDesc': req.params.videoDesc,
-        'equipmentNeeded': req.params.equipmentNeeded,
-        'fitnessLevel': req.params.fitnessLevel,
-        'workoutCategory': req.params.workoutCategory,
-        'sampleVideo': req.params.sampleVideo
-      },
-    })
-    res.redirect('/adminHome')
+  // gfs.files.update({'filename': req.file.filename}, 
+  //   {'$set': 
+  //     {
+  //       'videoTitle': req.params.videoTitle,
+  //       'videoDesc': req.params.videoDesc,
+  //       'equipmentNeeded': req.params.equipmentNeeded,
+  //       'fitnessLevel': req.params.fitnessLevel,
+  //       'workoutCategory': req.params.workoutCategory,
+  //       'sampleVideo': req.params.sampleVideo
+  //     },
+  //   })
+  res.redirect('/adminHome')
   // try {
   //     return res.status(201).json({
   //       message: 'File uploded successfully'
@@ -312,7 +391,7 @@ app.post('/upload/:videoTitle/:videoDesc/:equipmentNeeded/:fitnessLevel/:workout
   //  // err is the error received from MongoDb
   //  res.status(500).send('Something broke!', err)
   //  console.log('HUGE ERROR: ', err)
-  // }f
+  // }
   
 })
 
@@ -320,25 +399,45 @@ app.post('/upload/:videoTitle/:videoDesc/:equipmentNeeded/:fitnessLevel/:workout
 // @desc Display all files in JSON
 
 app.get('/videos', (req, res) => {
-  gfs.files.find().toArray((err, files) => {
-    // Check if files exist
-    if(!files || files.length === 0) {
-      return res.status(404).json({
-        err: 'No videos exist'
-      })
-    } else {
-      files.map(file => {
-        if(file.contentType === 'video/quicktime' || file.contentType === 'video/mp4') {
-          file.isVideo === true
-        } else {
-          file.isVideo === false
-        }
-      })
-    }
+  var request = require('request');
 
-    // Files exist
-    return res.json(files)
-  })
+  var headers = {
+      'Key': 'TGS8RfCyEji4IyXlBSPcRoSF602421ad'
+  };
+
+  var options = {
+      url: 'https://muse.ai/api/files/list',
+      headers: headers
+  };
+
+  function callback(error, response, body) {
+      if (!error && response.statusCode == 200) {
+          // console.log(body);
+          return res.json(body)
+      }
+  }
+
+  request(options, callback);
+
+  // gfs.files.find().toArray((err, files) => {
+  //   // Check if files exist
+  //   if(!files || files.length === 0) {
+  //     return res.status(404).json({
+  //       err: 'No videos exist'
+  //     })
+  //   } else {
+  //     files.map(file => {
+  //       if(file.contentType === 'video/quicktime' || file.contentType === 'video/mp4') {
+  //         file.isVideo === true
+  //       } else {
+  //         file.isVideo === false
+  //       }
+  //     })
+  //   }
+
+  //   // Files exist
+  //   return res.json(files)
+  // })
 })
 
 app.get('/sampleVideos', (req, res) => {
@@ -378,6 +477,28 @@ app.get('/videos/:filename', (req, res) => {
     // File exists
     return res.json(file)
   })
+})
+
+app.get('/collections', (req, res) => {
+  var request = require('request');
+
+  var headers = {
+      'Key': 'TGS8RfCyEji4IyXlBSPcRoSF602421ad'
+  };
+
+  var options = {
+      url: 'https://muse.ai/api/files/collections',
+      headers: headers
+  };
+
+  function callback(error, response, body) {
+      if (!error && response.statusCode == 200) {
+          // console.log(body);
+          return res.json(body)
+      }
+  }
+
+  request(options, callback);
 })
 
 // @route GET /video/:filename
@@ -426,48 +547,48 @@ app.delete('/videos/:id', (req, res) => {
 // @route GET /converge_token_req
 // @desc Retrieves converge token for payment
 
-app.get('/converge_token_req', (request, response) => {
-  if (process.env.NODE_ENV === "development") {
-    console.log('DEV ENVIRONMENT')
-    var proxy = process.env.REACT_APP_QUOTAGUARD_URL;
-  } else {
-    var proxy = process.env.QUOTAGUARDSTATIC_URL;
-  }
+// app.get('/converge_token_req', (request, response) => {
+//   if (process.env.NODE_ENV === "development") {
+//     console.log('DEV ENVIRONMENT')
+//     var proxy = process.env.REACT_APP_QUOTAGUARD_URL;
+//   } else {
+//     var proxy = process.env.QUOTAGUARDSTATIC_URL;
+//   }
   
-  // var proxy = process.env.REACT_APP_QUOTAGUARD_URL;
-  var agent = new httpsProxyAgent(proxy);
-  let url = 'https://api.demo.convergepay.com/hosted-payments/transaction_token'
-  var config = {
-    url: url,
-    httpsAgent: agent,
-    params: {
-      ssl_merchant_id: process.env.SSL_MERCHANT_ID,
-      ssl_user_id: process.env.SSL_USER_ID,
-      ssl_pin: process.env.SSL_PIN,
-      ssl_transaction_type: 'ccsale',
-      ssl_amount: '5.00'
-    }
-  }
-  console.log('CONFIG: ', proxy, config.params)
+//   // var proxy = process.env.REACT_APP_QUOTAGUARD_URL;
+//   var agent = new httpsProxyAgent(proxy);
+//   let url = 'https://api.demo.convergepay.com/hosted-payments/transaction_token'
+//   var config = {
+//     url: url,
+//     httpsAgent: agent,
+//     params: {
+//       ssl_merchant_id: process.env.SSL_MERCHANT_ID,
+//       ssl_user_id: process.env.SSL_USER_ID,
+//       ssl_pin: process.env.SSL_PIN,
+//       ssl_transaction_type: 'ccsale',
+//       ssl_amount: '5.00'
+//     }
+//   }
+//   console.log('CONFIG: ', proxy, config.params)
 
-  axios({
-    method: 'post',
-    url: url,
-    httpsAgent: agent,
-    params: {
-      ssl_merchant_id: process.env.SSL_MERCHANT_ID,
-      ssl_user_id: process.env.SSL_USER_ID,
-      ssl_pin: process.env.SSL_PIN,
-      ssl_transaction_type: 'ccsale',
-      ssl_amount: '5.00'
-    }
-    }).then((res) => {
-        response.send(res.data)
-    }).catch((error) => {
-        console.log('there was an error getting transaction token: ', error)
-    })
+//   axios({
+//     method: 'post',
+//     url: url,
+//     httpsAgent: agent,
+//     params: {
+//       ssl_merchant_id: process.env.SSL_MERCHANT_ID,
+//       ssl_user_id: process.env.SSL_USER_ID,
+//       ssl_pin: process.env.SSL_PIN,
+//       ssl_transaction_type: 'ccsale',
+//       ssl_amount: '5.00'
+//     }
+//     }).then((res) => {
+//         response.send(res.data)
+//     }).catch((error) => {
+//         console.log('there was an error getting transaction token: ', error)
+//     })
 
-})
+// })
 
 app.get('/express_backend', (req, res) => {
   res.send({ express: 'YOUR EXPRESS BACKEND IS CONNECTED TO REACT' });
