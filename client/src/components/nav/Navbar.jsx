@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 // import { Collapse, Nav, NavItem } from 'reactstrap';
 import { NavLink } from 'reactstrap';
-import * as Scroll from 'react-scroll';
-import { Link, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
+// import * as Scroll from 'react-scroll';
+import { Link, Events, scrollSpy } from 'react-scroll'
 import { stack as Menu } from 'react-burger-menu'
 import classnames from "classnames";
 

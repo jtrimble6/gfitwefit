@@ -293,7 +293,7 @@ app.post('/upload/:videoTitle/:videoDesc/:equipmentNeeded/:fitnessLevel/:workout
   var xhr = new XMLHttpRequest();
   xhr.open("POST", url);
 
-  xhr.setRequestHeader("Key", "TGS8RfCyEji4IyXlBSPcRoSF602421ad");
+  xhr.setRequestHeader("Key", "c7vMKqWx6E57RuCH3obdfvfU6033ef36");
   // xhr.setRequestHeader("Content-Length", "0");
 
   xhr.onreadystatechange = function () {
@@ -340,7 +340,7 @@ app.get('/videos', (req, res) => {
   var request = require('request');
 
   var headers = {
-      'Key': 'TGS8RfCyEji4IyXlBSPcRoSF602421ad'
+      'Key': 'c7vMKqWx6E57RuCH3obdfvfU6033ef36'
   };
 
   var options = {
@@ -421,7 +421,7 @@ app.get('/collections', (req, res) => {
   var request = require('request');
 
   var headers = {
-      'Key': 'TGS8RfCyEji4IyXlBSPcRoSF602421ad'
+      'Key': 'c7vMKqWx6E57RuCH3obdfvfU6033ef36'
   };
 
   var options = {

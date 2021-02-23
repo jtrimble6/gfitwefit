@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Button, FormCheck } from 'react-bootstrap'
-import uploader from 'huge-uploader';
+// import uploader from 'huge-uploader';
 
 // CSS
 import '../../css/admin/admin.css'

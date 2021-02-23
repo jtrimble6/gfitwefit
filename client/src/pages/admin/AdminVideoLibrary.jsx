@@ -1,18 +1,18 @@
 import React, { Component } from "react"
 import axios from "axios"
-import { Player, BigPlayButton } from "video-react";
+// import { Player, BigPlayButton } from "video-react";
 import { Card, CardBody, Button, CardTitle, CardText } from "reactstrap";
-import {isMobile} from "react-device-detect";
+// import {isMobile} from "react-device-detect";
 import API from "../../utils/API"
 
 // CSS
-import backgroundImg from "../../css/images/GOUVEIA-FITNESS_Mark_White.png";
+// import backgroundImg from "../../css/images/GOUVEIA-FITNESS_Mark_White.png";
 import "../../../../node_modules/video-react/dist/video-react.css"; // import video-react css
 import "../../css/general/videoLibrary.css"
 import "../../css/admin/admin.css"
 
 // COMPONENTS
-import AdminVideoPreferences from "./AdminVideoPreferences.jsx"
+// import AdminVideoPreferences from "./AdminVideoPreferences.jsx"
 
 
 class AdminVideoLibrary extends Component {
@@ -27,7 +27,7 @@ class AdminVideoLibrary extends Component {
       filterShowing: false
     }
 
-    this.handleFilter = this.handleFilter.bind(this)
+    // this.handleFilter = this.handleFilter.bind(this)
     this.handleFilterReset = this.handleFilterReset.bind(this)
     this.handleChange = this.handleChange.bind(this)
     this.toggleFilter = this.toggleFilter.bind(this)
@@ -41,8 +41,7 @@ class AdminVideoLibrary extends Component {
 
   componentDidMount() {
     this.getUserData()
-    this.getVideos()
-    this.getCollections()
+    
     }
 
   getUserData = () => {
@@ -72,6 +71,9 @@ class AdminVideoLibrary extends Component {
                 equipmentNeeded = userPreferences.equipmentNeeded
               }
             }
+
+            this.getVideos()
+            this.getCollections()
 
             this.setState({
               workoutCategory: workoutCategory,
@@ -105,6 +107,7 @@ class AdminVideoLibrary extends Component {
   }
 
   getVideos = () => {
+    console.log('getting videos')
     axios.get("/videos").then(res => {
         let files = JSON.parse(res.data)
         console.log('VIDEO FILES: ', files)
@@ -159,101 +162,101 @@ class AdminVideoLibrary extends Component {
     })
     }
 
-  handleFilter = () => {
-    console.log("Equipment needed: ", this.state.equipmentNeeded)
-    console.log("Fitness level: ", this.state.fitnessLevel)
-    console.log("Workout category: ", this.state.workoutCategory)
+  // handleFilter = () => {
+  //   console.log("Equipment needed: ", this.state.equipmentNeeded)
+  //   console.log("Fitness level: ", this.state.fitnessLevel)
+  //   console.log("Workout category: ", this.state.workoutCategory)
     
-    let files = this.state.videoLibrary
-    let equipmentNeeded = this.state.equipmentNeeded
-    let fitnessLevel = this.state.fitnessLevel
-    let workoutCategory = this.state.workoutCategory
+  //   let files = this.state.videoLibrary
+  //   let equipmentNeeded = this.state.equipmentNeeded
+  //   let fitnessLevel = this.state.fitnessLevel
+  //   let workoutCategory = this.state.workoutCategory
 
-    if (equipmentNeeded && fitnessLevel && workoutCategory) {
-        let videoLibraryFiltered = files.filter(file => {
-            return (file.contentType === "video/quicktime" || file.contentType === "video/mp4") 
-            && (file.equipmentNeeded === this.state.equipmentNeeded 
-            && file.fitnessLevel === this.state.fitnessLevel
-            && file.workoutCategory === this.state.workoutCategory)
-        })
-        this.setState({
-            videoLibraryFiltered: videoLibraryFiltered
-        }, () => {
-            console.log(this.state.videoLibraryFiltered);
-        })
-    } else if (equipmentNeeded && !fitnessLevel && !workoutCategory) {
-        let videoLibraryFiltered = files.filter(file => {
-            return (file.contentType === "video/quicktime" || file.contentType === "video/mp4") 
-            && file.equipmentNeeded === this.state.equipmentNeeded 
-        })
-        this.setState({
-            videoLibraryFiltered: videoLibraryFiltered
-        }, () => {
-            console.log(this.state.videoLibraryFiltered);
-        })
-    } else if (equipmentNeeded && fitnessLevel && !workoutCategory) {
-        let videoLibraryFiltered = files.filter(file => {
-            return (file.contentType === "video/quicktime" || file.contentType === "video/mp4") 
-            && (file.equipmentNeeded === this.state.equipmentNeeded 
-            && file.fitnessLevel === this.state.fitnessLevel)
-        })
-        this.setState({
-            videoLibraryFiltered: videoLibraryFiltered
-        }, () => {
-            console.log(this.state.videoLibraryFiltered);
-        })
-    } else if (!equipmentNeeded && fitnessLevel && workoutCategory) {
-        let videoLibraryFiltered = files.filter(file => {
-            return (file.contentType === "video/quicktime" || file.contentType === "video/mp4") 
-            && (file.fitnessLevel === this.state.fitnessLevel
-            && file.workoutCategory === this.state.workoutCategory)
-        })
-        this.setState({
-            videoLibraryFiltered: videoLibraryFiltered
-        }, () => {
-            console.log(this.state.videoLibraryFiltered);
-        })
-    } else if (!equipmentNeeded && !fitnessLevel && workoutCategory) {
-        let videoLibraryFiltered = files.filter(file => {
-            return (file.contentType === "video/quicktime" || file.contentType === "video/mp4") 
-            && file.workoutCategory === this.state.workoutCategory
-        })
-        this.setState({
-            videoLibraryFiltered: videoLibraryFiltered
-        }, () => {
-            console.log(this.state.videoLibraryFiltered);
-        })
-    } else if (!equipmentNeeded && fitnessLevel && !workoutCategory) {
-        let videoLibraryFiltered = files.filter(file => {
-            return (file.contentType === "video/quicktime" || file.contentType === "video/mp4") 
-            && file.fitnessLevel === this.state.fitnessLevel
-        })
-        this.setState({
-            videoLibraryFiltered: videoLibraryFiltered
-        }, () => {
-            console.log(this.state.videoLibraryFiltered);
-        })
-    } else {
-        this.setState({
-            videoLibraryFiltered: files
-        }, () => {
-            console.log(this.state.videoLibraryFiltered);
-        })
-    }
+  //   if (equipmentNeeded && fitnessLevel && workoutCategory) {
+  //       let videoLibraryFiltered = files.filter(file => {
+  //           return (file.contentType === "video/quicktime" || file.contentType === "video/mp4") 
+  //           && (file.equipmentNeeded === this.state.equipmentNeeded 
+  //           && file.fitnessLevel === this.state.fitnessLevel
+  //           && file.workoutCategory === this.state.workoutCategory)
+  //       })
+  //       this.setState({
+  //           videoLibraryFiltered: videoLibraryFiltered
+  //       }, () => {
+  //           console.log(this.state.videoLibraryFiltered);
+  //       })
+  //   } else if (equipmentNeeded && !fitnessLevel && !workoutCategory) {
+  //       let videoLibraryFiltered = files.filter(file => {
+  //           return (file.contentType === "video/quicktime" || file.contentType === "video/mp4") 
+  //           && file.equipmentNeeded === this.state.equipmentNeeded 
+  //       })
+  //       this.setState({
+  //           videoLibraryFiltered: videoLibraryFiltered
+  //       }, () => {
+  //           console.log(this.state.videoLibraryFiltered);
+  //       })
+  //   } else if (equipmentNeeded && fitnessLevel && !workoutCategory) {
+  //       let videoLibraryFiltered = files.filter(file => {
+  //           return (file.contentType === "video/quicktime" || file.contentType === "video/mp4") 
+  //           && (file.equipmentNeeded === this.state.equipmentNeeded 
+  //           && file.fitnessLevel === this.state.fitnessLevel)
+  //       })
+  //       this.setState({
+  //           videoLibraryFiltered: videoLibraryFiltered
+  //       }, () => {
+  //           console.log(this.state.videoLibraryFiltered);
+  //       })
+  //   } else if (!equipmentNeeded && fitnessLevel && workoutCategory) {
+  //       let videoLibraryFiltered = files.filter(file => {
+  //           return (file.contentType === "video/quicktime" || file.contentType === "video/mp4") 
+  //           && (file.fitnessLevel === this.state.fitnessLevel
+  //           && file.workoutCategory === this.state.workoutCategory)
+  //       })
+  //       this.setState({
+  //           videoLibraryFiltered: videoLibraryFiltered
+  //       }, () => {
+  //           console.log(this.state.videoLibraryFiltered);
+  //       })
+  //   } else if (!equipmentNeeded && !fitnessLevel && workoutCategory) {
+  //       let videoLibraryFiltered = files.filter(file => {
+  //           return (file.contentType === "video/quicktime" || file.contentType === "video/mp4") 
+  //           && file.workoutCategory === this.state.workoutCategory
+  //       })
+  //       this.setState({
+  //           videoLibraryFiltered: videoLibraryFiltered
+  //       }, () => {
+  //           console.log(this.state.videoLibraryFiltered);
+  //       })
+  //   } else if (!equipmentNeeded && fitnessLevel && !workoutCategory) {
+  //       let videoLibraryFiltered = files.filter(file => {
+  //           return (file.contentType === "video/quicktime" || file.contentType === "video/mp4") 
+  //           && file.fitnessLevel === this.state.fitnessLevel
+  //       })
+  //       this.setState({
+  //           videoLibraryFiltered: videoLibraryFiltered
+  //       }, () => {
+  //           console.log(this.state.videoLibraryFiltered);
+  //       })
+  //   } else {
+  //       this.setState({
+  //           videoLibraryFiltered: files
+  //       }, () => {
+  //           console.log(this.state.videoLibraryFiltered);
+  //       })
+  //   }
 
-    // let videoLibraryFiltered = files.filter(file => {
-    //     return file.contentType === "video/quicktime" 
-    //     && file.equipmentNeeded === this.state.equipmentNeeded 
-    //     && file.fitnessLevel === this.state.fitnessLevel
-    //     && file.workoutCategory === this.state.workoutCategory
-    // })
-    // this.setState({
-    //     videoLibraryFiltered: videoLibraryFiltered
-    // }, () => {
-    //     console.log(this.state.videoLibraryFiltered);
-    // })
+  //   // let videoLibraryFiltered = files.filter(file => {
+  //   //     return file.contentType === "video/quicktime" 
+  //   //     && file.equipmentNeeded === this.state.equipmentNeeded 
+  //   //     && file.fitnessLevel === this.state.fitnessLevel
+  //   //     && file.workoutCategory === this.state.workoutCategory
+  //   // })
+  //   // this.setState({
+  //   //     videoLibraryFiltered: videoLibraryFiltered
+  //   // }, () => {
+  //   //     console.log(this.state.videoLibraryFiltered);
+  //   // })
      
-    }
+  //   }
 
   handleFilterReset = (event) => {
       event.preventDefault()
@@ -305,6 +308,7 @@ class AdminVideoLibrary extends Component {
                               <div key={video.fid} className="videoLibraryCardDiv">
                                   <Card className="card card-body mb-3 mx-auto videoLibraryCard">
                                     <iframe 
+                                      title={video.svid}
                                       src={"https://muse.ai/embed/" + video.svid + "?search=0&links=0&logo=0"} 
                                       width="100%" 
                                       height="324" 
