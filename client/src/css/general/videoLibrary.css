@@ -716,7 +716,7 @@
     }
     .videoLibraryCard {
       display: inline-flex;
-      width: 40%;
+      width: 100%;
     }
     .adminDeleteButton {
       margin-bottom: 5vw !important;

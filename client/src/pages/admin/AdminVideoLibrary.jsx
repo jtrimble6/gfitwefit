@@ -306,7 +306,7 @@ class AdminVideoLibrary extends Component {
                           <div className="videoLibraryDiv">
                             {this.state.videoLibraryFiltered.map((video, index) => (
                               <div key={video.fid} className="videoLibraryCardDiv">
-                                  <Card className="card card-body mb-3 mx-auto videoLibraryCard">
+                                  <Card className="card card-body mb-12 mx-auto videoLibraryCard">
                                     <iframe 
                                       title={video.svid}
                                       src={"https://muse.ai/embed/" + video.svid + "?search=0&links=0&logo=0"} 
