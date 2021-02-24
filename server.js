@@ -433,6 +433,9 @@ app.get('/collections', (req, res) => {
       if (!error && response.statusCode == 200) {
           // console.log(body);
           return res.json(body)
+      } else {
+        console.log('ERROR ON UPLOAD AUTH KEY: ', process.env.MUSE_API, response, body)
+        return res.json(body)
       }
   }
 
