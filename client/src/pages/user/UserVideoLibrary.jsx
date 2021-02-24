@@ -55,21 +55,21 @@ class UserVideoLibrary extends Component {
                 let user = res.data[0]
                 console.log('USER: ', user)
                 //CHECK USER PREFERENCES
-                let userPreferences = user.videoFilterPreferences
+                // let userPreferences = user.videoFilterPreferences
                 let workoutCategory = null
                 let fitnessLevel = null
                 let equipmentNeeded = null
-                if (userPreferences) {
-                    if (userPreferences.workoutCategory.length) {
-                        workoutCategory = userPreferences.workoutCategory
-                    }
-                    if (userPreferences.fitnessLevel.length) {
-                        fitnessLevel = userPreferences.fitnessLevel
-                    }
-                    if (userPreferences.equipmentNeeded.length) {
-                        equipmentNeeded = userPreferences.equipmentNeeded
-                    }
-                }
+                // if (userPreferences) {
+                //     if (userPreferences.workoutCategory.length) {
+                //         workoutCategory = userPreferences.workoutCategory
+                //     }
+                //     if (userPreferences.fitnessLevel.length) {
+                //         fitnessLevel = userPreferences.fitnessLevel
+                //     }
+                //     if (userPreferences.equipmentNeeded.length) {
+                //         equipmentNeeded = userPreferences.equipmentNeeded
+                //     }
+                // }
                 
 
                 this.setState({
@@ -78,7 +78,7 @@ class UserVideoLibrary extends Component {
                   equipmentNeeded: equipmentNeeded,
                 //   subscriptionStatus: user.paymentComplete
                 }, () => {
-                    this.getVideos(this.state.subscriptionStatus)
+                  this.getVideos(this.state.subscriptionStatus)
                 })
 
                 
