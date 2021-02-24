@@ -53,24 +53,24 @@ class AdminVideoLibrary extends Component {
             let user = res.data[0]
 
             //CHECK USER PREFERENCES
-            let userPreferences = user.videoFilterPreferences
+            // let userPreferences = user.videoFilterPreferences
             let workoutCategory = null
             let fitnessLevel = null
             let equipmentNeeded = null
 
-            console.log("PREFERENCES: ", userPreferences)
+            // console.log("PREFERENCES: ", userPreferences)
 
-            if (userPreferences !== undefined ) {
-              if (userPreferences.workoutCategory.length) {
-                workoutCategory = userPreferences.workoutCategory
-              }
-              if (userPreferences.fitnessLevel.length) {
-                fitnessLevel = userPreferences.fitnessLevel
-              }
-              if (userPreferences.equipmentNeeded.length) {
-                equipmentNeeded = userPreferences.equipmentNeeded
-              }
-            }
+            // if (userPreferences !== undefined ) {
+            //   if (userPreferences.workoutCategory.length) {
+            //     workoutCategory = userPreferences.workoutCategory
+            //   }
+            //   if (userPreferences.fitnessLevel.length) {
+            //     fitnessLevel = userPreferences.fitnessLevel
+            //   }
+            //   if (userPreferences.equipmentNeeded.length) {
+            //     equipmentNeeded = userPreferences.equipmentNeeded
+            //   }
+            // }
 
             this.getVideos()
             this.getCollections()
