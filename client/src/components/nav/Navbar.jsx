@@ -26,15 +26,15 @@ class Navbar extends Component {
     }
 
     componentDidMount() {
-        Events.scrollEvent.register('begin', function(to, element) {
-          console.log('begin', arguments);
-        });
+        // Events.scrollEvent.register('begin', function(to, element) {
+        //   console.log('begin', arguments);
+        // });
     
-        Events.scrollEvent.register('end', function(to, element) {
-          console.log('end', arguments);
-        });
+        // Events.scrollEvent.register('end', function(to, element) {
+        //   console.log('end', arguments);
+        // });
     
-        scrollSpy.update();
+        // scrollSpy.update();
         // window.addEventListener("scroll", this.handleScroll);
       }
     
@@ -44,11 +44,13 @@ class Navbar extends Component {
         // window.removeEventListener("scroll", this.handleScroll);
       }
 
-    handleScroll = () => {
-      this.toggleNavbar()
+    handleScroll = (event) => {
+      // this.toggleNavbar()
+      event.preventDefault()
       let scheduleInfo = document.getElementById('scheduleInfo')
       console.log('got element: ', scheduleInfo)
       scheduleInfo.scrollIntoView({behavior: "smooth"}); // Boolean parameter
+      console.log('TOGGLE NAVBAR SCROLL')
       // let scroll = Scroll.animateScroll;
       // scroll.scrollTo(400);
       // const { prevScrollPos } = this.state;
@@ -102,18 +104,26 @@ class Navbar extends Component {
             scheduleInfo.scrollIntoView({behavior: "smooth"}); // Boolean parameter
             console.log('TOGGLE NAVBAR SCROLL')
           }
-        }, 1000);
+        }, 500);
 
 
         
         
       } else {
         // event.preventDefault()
-        let scheduleInfo = document.getElementById('scheduleInfo')
-        console.log('got element: ', scheduleInfo)
-        scheduleInfo.scrollIntoView({behavior: "smooth"}); // Boolean parameter
-        console.log('TOGGLE NAVBAR SCROLL')
+        // let scheduleInfo = document.getElementById('scheduleInfo')
+        // console.log('got element: ', scheduleInfo)
+        // scheduleInfo.scrollIntoView({behavior: "smooth"}); // Boolean parameter
+        // console.log('TOGGLE NAVBAR SCROLL')
         let navbarElement = document.getElementById('burgerMenuElement')
+        setTimeout(function() {
+          // if (target === 'SEE SCHEDULE') {
+            let scheduleInfo = document.getElementById('scheduleInfo')
+            console.log('got element: ', scheduleInfo)
+            scheduleInfo.scrollIntoView({behavior: "smooth"}); // Boolean parameter
+            console.log('TOGGLE NAVBAR SCROLL')
+          // }
+        }, 1000);
         if (!this.state.collapsed) {
           this.setState({
             collapsed: true
@@ -242,12 +252,13 @@ class Navbar extends Component {
                               <Link
                                 activeClass="active"
                                 className='nav-link js-scroll-trigger'
+                                onClick={this.toggleNavbar}
                                 to="scheduleInfo"
                                 // spy={true}
                                 // smooth={true}
                                 // offset={-150}
                                 // duration={500}
-                                onClick={this.handleScroll}
+                                
                               > 
                                 SEE SCHEDULE
                               </Link>
