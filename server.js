@@ -96,7 +96,7 @@ mongoose.connect(process.env.MONGODB_URI || config.db);
 const conn = mongoose.createConnection(process.env.MONGODB_URI || config.db);
 
 //Init gfs
-let gfs;
+// let gfs;
 
 //HANDLE DISCONNECTIONS
 conn.on('error', function(e){
@@ -137,205 +137,161 @@ conn.once('open', function(err, database) {
   // Init stream
   if(err) throw err;
   
-  gfs = Grid(conn.db, mongoose.mongo)
-  gfs.collection('uploads')
-  db = database
+  // gfs = Grid(conn.db, mongoose.mongo)
+  // gfs.collection('uploads')
+  // db = database
 })
 
 // Create storage engine
-const storage = new GridFsStorage({
-  url: process.env.MONGODB_URI || config.db,
-  file: (req, file) => {
-    return new Promise((resolve, reject) => {
-      crypto.randomBytes(16, (err, buf) => {
-        if (err) {
-          return reject(err);
-        }
-        const filename = buf.toString('hex') + path.extname(file.originalname);
-        const fileInfo = {
-          filename: filename,
-          bucketName: 'uploads',
-        };
-        resolve(fileInfo);
-      });
-    });
-  }
-});
-const upload = multer({ storage: storage,
-  limits: { fileSize: '50mb' } });
+// const storage = new GridFsStorage({
+//   url: process.env.MONGODB_URI || config.db,
+//   file: (req, file) => {
+//     return new Promise((resolve, reject) => {
+//       crypto.randomBytes(16, (err, buf) => {
+//         if (err) {
+//           return reject(err);
+//         }
+//         const filename = buf.toString('hex') + path.extname(file.originalname);
+//         const fileInfo = {
+//           filename: filename,
+//           bucketName: 'uploads',
+//         };
+//         resolve(fileInfo);
+//       });
+//     });
+//   }
+// });
+// const upload = multer({ storage: storage,
+//   limits: { fileSize: '50mb' } });
 
-var mongo = require('mongodb');
 // var MongoClient = require('mongodb').MongoClient;
-var GridFSBucket = mongo.GridFSBucket;
-var ObjectID = require('mongodb').ObjectID;
+// var GridFSBucket = mongo.GridFSBucket;
+// var ObjectID = require('mongodb').ObjectID;
 
-function StreamGridFile(req, res, GridFile) {
-  if(req.headers['range']) {
-    // Range request, partialle stream the file
-    // console.log('Range Request', GridFile);
-    var parts = req.headers['range'].replace(/bytes=/, "").split("-");
-    var partialstart = parts[0];
-    var partialend = parts[1];
+// function StreamGridFile(req, res, GridFile) {
+//   if(req.headers['range']) {
+//     // Range request, partialle stream the file
+//     // console.log('Range Request', GridFile);
+//     var parts = req.headers['range'].replace(/bytes=/, "").split("-");
+//     var partialstart = parts[0];
+//     var partialend = parts[1];
 
 
-    var start = parseInt(partialstart, 10);
+//     var start = parseInt(partialstart, 10);
 
-    var end = partialend ? parseInt(partialend, 10) : GridFile.length -1;
-    var chunksize = (end-start)+1;
+//     var end = partialend ? parseInt(partialend, 10) : GridFile.length -1;
+//     var chunksize = (end-start)+1;
   
-    res.writeHead(206, {
-      'Content-disposition': 'filename=xyz',
-      'Accept-Ranges': 'bytes',
-      'Content-Type': GridFile.contentType,
-      'Content-Range': 'bytes ' + start + '-' + end + '/' + GridFile.length,
-      'Content-Length': chunksize
-    });
+//     res.writeHead(206, {
+//       'Content-disposition': 'filename=xyz',
+//       'Accept-Ranges': 'bytes',
+//       'Content-Type': GridFile.contentType,
+//       'Content-Range': 'bytes ' + start + '-' + end + '/' + GridFile.length,
+//       'Content-Length': chunksize
+//     });
 
-    var readstream = gfs.createReadStream({
-      _id: GridFile._id,
-      range: {
-        startPos: start,
-        endPos: end
-      }
-    });
-    readstream.pipe(res)
+//     var readstream = gfs.createReadStream({
+//       _id: GridFile._id,
+//       range: {
+//         startPos: start,
+//         endPos: end
+//       }
+//     });
+//     readstream.pipe(res)
 
-    // Set filepointer
-    // GridFile.seek(start, function() {
-    //   // get GridFile stream
-    //   var stream = GridFile.stream(true);
+//     // Set filepointer
+//     // GridFile.seek(start, function() {
+//     //   // get GridFile stream
+//     //   var stream = GridFile.stream(true);
 
-    //   // write to response
-    //   stream.on('data', function(buff) {
-    //     // count data to abort streaming if range-end is reached
-    //     // perhaps theres a better way?
-    //     if(start >= end) {
-    //       // enough data send, abort
-    //       GridFile.close();
-    //       res.end();
-    //     } else {
-    //       res.write(buff);
-    //     }
-    //   });
-    // });
+//     //   // write to response
+//     //   stream.on('data', function(buff) {
+//     //     // count data to abort streaming if range-end is reached
+//     //     // perhaps theres a better way?
+//     //     if(start >= end) {
+//     //       // enough data send, abort
+//     //       GridFile.close();
+//     //       res.end();
+//     //     } else {
+//     //       res.write(buff);
+//     //     }
+//     //   });
+//     // });
 
-  } else {
+//   } else {
 
-    // stream back whole file
-    console.log('No Range Request');
-    res.header('Content-Type', GridFile.contentType);
-    res.header('Content-Length', GridFile.length);
-    var readstream = gfs.createReadStream(GridFile.filename)
-    readstream.pipe(res)
-    // var stream = GridFile.stream(true);
-    // stream.pipe(res);
-  }
-}
+//     // stream back whole file
+//     console.log('No Range Request');
+//     res.header('Content-Type', GridFile.contentType);
+//     res.header('Content-Length', GridFile.length);
+//     var readstream = gfs.createReadStream(GridFile.filename)
+//     readstream.pipe(res)
+//     // var stream = GridFile.stream(true);
+//     // stream.pipe(res);
+//   }
+// }
 
-app.get('/video/:filename', function(req, res) {
-  gfs.files.findOne({filename: req.params.filename}, (err, file) => {
-    // Check if files exist
-    if(!file || file.length === 0) {
-      return res.status(404).json({
-        err: 'No videos exist'
-      })
-    }
-
-    // Check if video
-    if(file.contentType === 'video/quicktime' || file.contentType === 'video/mp4') {
-      // let newFileId = 
-      //   crypto.randomBytes(24, (err, buf) => {
-      //     if (err) {
-      //       return reject(err);
-      //     }
-      //     const fileId = buf.toString('hex');
-      //     return(fileId);
-      //   });
-      // console.log('NEW FILE ID: ', file._id)
-      // Read output to browser
-      // new GridFSBucket(db, new ObjectID(file._id), null, 'r').open(function(err, GridFile) {
-      //   if(!GridFile) {
-      //     res.send(404,'Not Found');
-      //     return;
-      //   }
-        
-      //   StreamGridFile(req, res, GridFile);
-      // });
-      StreamGridFile(req, res, file)
-      // var readstream = gfs.createReadStream(file.filename)
-      // readstream.pipe(res)
-    } else {
-      res.status(404).json({
-        err: 'Not a video'
-      })
-    }
-    
-  })
-  
-});
-
-function isInvalidRange (start, end, maxIdx) {
-  return start !== start  // NaN
-      || start < 0
-      || end < start
-      || start > maxIdx
-}
+// function isInvalidRange (start, end, maxIdx) {
+//   return start !== start  // NaN
+//       || start < 0
+//       || end < start
+//       || start > maxIdx
+// }
 
 
 // @route POST /upload
-// @desc Uploads file to DB
+// @desc Uploads file to Muse
 
-app.post('/upload/:videoTitle/:videoDesc/:equipmentNeeded/:fitnessLevel/:workoutCategory/:sampleVideo', upload.single('file'), (req, res, next) => {
-  // res.json({file: req.file})
+// app.post('/upload/:videoTitle/:videoDesc/:equipmentNeeded/:fitnessLevel/:workoutCategory/:sampleVideo', upload.single('file'), (req, res, next) => {
+//   // res.json({file: req.file})
 
-  var url = "https://muse.ai/api/files/upload";
+//   var url = "https://muse.ai/api/files/upload";
 
-  var xhr = new XMLHttpRequest();
-  xhr.open("POST", url);
+//   var xhr = new XMLHttpRequest();
+//   xhr.open("POST", url);
 
-  xhr.setRequestHeader("Key", "TGS8RfCyEji4IyXlBSPcRoSF602421ad");
-  // xhr.setRequestHeader("Content-Length", "0");
+//   xhr.setRequestHeader("Key", "TGS8RfCyEji4IyXlBSPcRoSF602421ad");
+//   // xhr.setRequestHeader("Content-Length", "0");
 
-  xhr.onreadystatechange = function () {
-    if (xhr.readyState === 4) {
-        console.log(xhr.status);
-        console.log(xhr.responseText);
-    }};
+//   xhr.onreadystatechange = function () {
+//     if (xhr.readyState === 4) {
+//         console.log(xhr.status);
+//         console.log(xhr.responseText);
+//     }};
 
-  xhr.send(req.file);
+//   xhr.send(req.file);
   
-  console.log('File sending: ', req.file)
-  // debugger;
-  // gfs.files.update({'filename': req.file.filename}, 
-  //   {'$set': 
-  //     {
-  //       'videoTitle': req.params.videoTitle,
-  //       'videoDesc': req.params.videoDesc,
-  //       'equipmentNeeded': req.params.equipmentNeeded,
-  //       'fitnessLevel': req.params.fitnessLevel,
-  //       'workoutCategory': req.params.workoutCategory,
-  //       'sampleVideo': req.params.sampleVideo
-  //     },
-  //   })
-  res.redirect('/adminHome')
-  // try {
-  //     return res.status(201).json({
-  //       message: 'File uploded successfully'
-  //   });
-  // } catch (error) {
-  //   console.log('BIG ERROR: ', error)
-  // }
-  // } else {
-  //  // err is the error received from MongoDb
-  //  res.status(500).send('Something broke!', err)
-  //  console.log('HUGE ERROR: ', err)
-  // }
+//   console.log('File sending: ', req.file)
+//   // debugger;
+//   // gfs.files.update({'filename': req.file.filename}, 
+//   //   {'$set': 
+//   //     {
+//   //       'videoTitle': req.params.videoTitle,
+//   //       'videoDesc': req.params.videoDesc,
+//   //       'equipmentNeeded': req.params.equipmentNeeded,
+//   //       'fitnessLevel': req.params.fitnessLevel,
+//   //       'workoutCategory': req.params.workoutCategory,
+//   //       'sampleVideo': req.params.sampleVideo
+//   //     },
+//   //   })
+//   res.redirect('/adminHome')
+//   // try {
+//   //     return res.status(201).json({
+//   //       message: 'File uploded successfully'
+//   //   });
+//   // } catch (error) {
+//   //   console.log('BIG ERROR: ', error)
+//   // }
+//   // } else {
+//   //  // err is the error received from MongoDb
+//   //  res.status(500).send('Something broke!', err)
+//   //  console.log('HUGE ERROR: ', err)
+//   // }
   
-})
+// })
 
-// @route GET /files
-// @desc Display all files in JSON
-
+// @route GET /videos
+// @desc Display all Muse videos in JSON
 app.get('/videos', (req, res) => {
   var request = require('request');
 
@@ -350,34 +306,16 @@ app.get('/videos', (req, res) => {
 
   function callback(error, response, body) {
       if (!error && response.statusCode == 200) {
-          console.log(body);
+          // console.log(body);
           return res.json(body)
       }
   }
 
   request(options, callback);
-
-  // gfs.files.find().toArray((err, files) => {
-  //   // Check if files exist
-  //   if(!files || files.length === 0) {
-  //     return res.status(404).json({
-  //       err: 'No videos exist'
-  //     })
-  //   } else {
-  //     files.map(file => {
-  //       if(file.contentType === 'video/quicktime' || file.contentType === 'video/mp4') {
-  //         file.isVideo === true
-  //       } else {
-  //         file.isVideo === false
-  //       }
-  //     })
-  //   }
-
-  //   // Files exist
-  //   return res.json(files)
-  // })
 })
 
+// @route GET /sampleVideos
+// @desc Display all Muse sample videos in JSON
 app.get('/sampleVideos', (req, res) => {
   gfs.files.find().toArray((err, files) => {
     // Check if files exist
@@ -402,7 +340,6 @@ app.get('/sampleVideos', (req, res) => {
 
 // @route GET /videos/:filename
 // @desc Display single file in JSON
-
 app.get('/videos/:filename', (req, res) => {
   gfs.files.findOne({filename: req.params.filename}, (err, file) => {
     // Check if files exist
@@ -417,6 +354,8 @@ app.get('/videos/:filename', (req, res) => {
   })
 })
 
+// @route GET /collections
+// @desc Retrieve Muse API Collections
 app.get('/collections', (req, res) => {
   var request = require('request');
 
@@ -434,7 +373,7 @@ app.get('/collections', (req, res) => {
           // console.log(body);
           return res.json(body)
       } else {
-        console.log('ERROR ON UPLOAD AUTH KEY: ', process.env.MUSE_API, response, body)
+        console.log('ERROR ON UPLOAD AUTH KEY: ', response, body)
         return res.json(body)
       }
   }
@@ -442,39 +381,37 @@ app.get('/collections', (req, res) => {
   request(options, callback);
 })
 
-// @route GET /video/:filename
-// @desc Display video
+// @route GET /key
+// @desc Retrieve Muse API Key
+app.get('/key', (req, res) => {
+  var request = require('request');
 
+  var headers = {
+      'Key': process.env.MUSE_API
+  };
 
-// ORIGINAL GET VIDEO FILE 
+  var options = {
+      url: 'https://muse.ai/api/auth/keys',
+      method: 'POST',
+      headers: headers
+  };
 
-// app.get('/video/:filename', (req, res) => {
-//   gfs.files.findOne({filename: req.params.filename}, (err, file) => {
-//     // Check if files exist
-//     if(!file || file.length === 0) {
-//       return res.status(404).json({
-//         err: 'No videos exist'
-//       })
-//     }
+  function callback(error, response, body) {
+      if (!error && response.statusCode == 200) {
+          console.log(body);
+          return res.json(body)
+      } else {
+        console.log('ERROR ON UPLOAD AUTH KEY: ', response, body)
+        return res.json(body)
+      }
+  }
 
-//     // Check if video
-//     if(file.contentType === 'video/quicktime' || file.contentType === 'video/mp4') {
-//       // Read output to browser
-//       StreamGridFile(req, res, file)
-//       // var readstream = gfs.createReadStream(file.filename)
-//       // readstream.pipe(res)
-//     } else {
-//       res.status(404).json({
-//         err: 'Not a video'
-//       })
-//     }
-    
-//   })
-// })
+  request(options, callback);
+
+})
 
 // @route DELETE /videos/:id
 // @desc Delete video
-
 app.delete('/videos/:id', (req, res) => {
   gfs.remove({ _id: req.params.id, root: 'uploads' }, (err, GridFSBucket) => {
     if(err) {
@@ -487,7 +424,6 @@ app.delete('/videos/:id', (req, res) => {
 
 // @route GET /converge_token_req
 // @desc Retrieves converge token for payment
-
 app.get('/converge_token_req', (request, response) => {
   if (process.env.NODE_ENV === "development") {
     console.log('DEV ENVIRONMENT')
@@ -531,10 +467,14 @@ app.get('/converge_token_req', (request, response) => {
 
 })
 
+// @route GET /express_backend
+// @desc Connect to express backend
 app.get('/express_backend', (req, res) => {
   res.send({ express: 'YOUR EXPRESS BACKEND IS CONNECTED TO REACT' });
 });
 
+// @route GET /*
+// @desc Send index.html file to any URL params
 app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "client/build/index.html"));
 });

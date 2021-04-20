@@ -34,6 +34,7 @@ class AdminVideoLibrary extends Component {
     this.getUserData = this.getUserData.bind(this)
     this.getVideos = this.getVideos.bind(this)
     this.getCollections = this.getCollections.bind(this)
+    this.getKey = this.getKey.bind(this)
     this.playVideo = this.playVideo.bind(this)
   }
 
@@ -74,6 +75,7 @@ class AdminVideoLibrary extends Component {
 
             this.getVideos()
             this.getCollections()
+            this.getKey()
 
             this.setState({
               workoutCategory: workoutCategory,
@@ -85,6 +87,13 @@ class AdminVideoLibrary extends Component {
             console.log(err)
         })
     }
+
+  getKey = () => {
+    axios.get('/key').then(res => {
+      let key = res.data
+      console.log('RETRIEVED KEY: ', key)
+    })
+  }
 
   getCollections = () => {
     axios.get("/collections").then(res => {

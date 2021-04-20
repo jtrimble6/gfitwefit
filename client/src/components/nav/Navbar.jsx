@@ -77,23 +77,38 @@ class Navbar extends Component {
     }
 
     toggleNavbar = (event) => {
-      // if (event) {
-      //   event.preventDefault()
-      //   console.log('TOGGLE NAVBAR')
-      //   let navbarElement = document.getElementById('burgerMenuElement')
-      //   if (!this.state.collapsed) {
-      //     this.setState({
-      //       collapsed: true
-      //     })
-      //     navbarElement.classList.add("navbarElementHidden");
-      //   } else {
-      //     this.setState({
-      //       collapsed: false
-      //     })
-      //     navbarElement.classList.remove("navbarElementHidden");
-      //   }
-      // } else {
+      if (event) {
         event.preventDefault()
+        console.log('TOGGLE NAVBAR: ', event.target.innerHTML)
+        let target = event.target.innerHTML
+        let navbarElement = document.getElementById('burgerMenuElement')
+
+        if (!this.state.collapsed) {
+          this.setState({
+            collapsed: true
+          })
+          navbarElement.classList.add("navbarElementHidden");
+        } else {
+          this.setState({
+            collapsed: false
+          })
+          navbarElement.classList.remove("navbarElementHidden");
+        }
+
+        setTimeout(function() {
+          if (target === 'SEE SCHEDULE') {
+            let scheduleInfo = document.getElementById('scheduleInfo')
+            console.log('got element: ', scheduleInfo)
+            scheduleInfo.scrollIntoView({behavior: "smooth"}); // Boolean parameter
+            console.log('TOGGLE NAVBAR SCROLL')
+          }
+        }, 1000);
+
+
+        
+        
+      } else {
+        // event.preventDefault()
         let scheduleInfo = document.getElementById('scheduleInfo')
         console.log('got element: ', scheduleInfo)
         scheduleInfo.scrollIntoView({behavior: "smooth"}); // Boolean parameter
@@ -110,7 +125,7 @@ class Navbar extends Component {
           })
           navbarElement.classList.remove("navbarElementHidden");
         }
-      // }
+      }
       
         // this.setState({
         //   collapsed: !this.state.collapsed
@@ -171,7 +186,7 @@ class Navbar extends Component {
                               activeClass="active"
                               className='iconBar nav-link'
                               onClick={this.toggleNavbar}
-                              // to="scheduleInfo"
+                              to="scheduleInfo"
                               // spy={true}
                               // smooth={true}
                               // offset={-150}
@@ -227,7 +242,7 @@ class Navbar extends Component {
                               <Link
                                 activeClass="active"
                                 className='nav-link js-scroll-trigger'
-                                // to="scheduleInfo"
+                                to="scheduleInfo"
                                 // spy={true}
                                 // smooth={true}
                                 // offset={-150}
