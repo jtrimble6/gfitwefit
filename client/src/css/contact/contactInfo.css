@@ -1,704 +1,624 @@
 @font-face {
-    font-family: 'gfitfont';
-    font-style: normal;
-    font-weight: bolder;
-    src: local('gfitfont'), url('../fonts/gfitfont.ttf'), url('../fonts/gfitfont.woff'), format('truetype');
-  }
+	font-family: 'gfitfont';
+	font-style: normal;
+	font-weight: bolder;
+	src: local('gfitfont'), url('../fonts/gfitfont.ttf'), url('../fonts/gfitfont.woff'), format('truetype');
+}
 @font-face {
-      font-family: 'gfitfont-bold';
-      font-style: normal;
-      font-weight: bolder;
-      src: local('gfitfontBold'), url('../fonts/gfitfontBold.ttf'), url('../fonts/gfitfontBold.woff') format('truetype');
-    }
+	font-family: 'gfitfont-bold';
+	font-style: normal;
+	font-weight: bolder;
+	src: local('gfitfontBold'), url('../fonts/gfitfontBold.ttf'), url('../fonts/gfitfontBold.woff') format('truetype');
+}
 
 .contactInfo {
-    height: 100%;
-    background-color: #667B99;
+	height: 100%;
+	background-color: #667b99;
 }
 
 .contactInfoSection {
-    width: 95%;
-    margin: 0 auto;
-    padding: 5%;
-    background-color: transparent;
+	width: 95%;
+	margin: 0 auto;
+	padding: 5%;
+	background-color: transparent;
 }
 
 .contactInfoHeaderRow {
-    font-family: 'gfitfont-bold', Times, serif;
-    margin-bottom: 3%;
+	font-family: 'gfitfont-bold', Times, serif;
+	margin-bottom: 3%;
 }
 
 .contactInfoHeaderLeft {
-    font-size: 2vw;
-    letter-spacing: 3px;
-    color: white;
-    font-weight: bolder; 
+	font-size: 2vw;
+	letter-spacing: 3px;
+	color: white;
+	font-weight: bolder;
 }
 
 .contactInfoHeaderRight {
-    font-size: 2vw;
-    letter-spacing: 3px;
-    color: #FAC04E;
-    font-weight: bolder; 
+	font-size: 2vw;
+	letter-spacing: 3px;
+	color: #fac04e;
+	font-weight: bolder;
 }
 
 .contactInfoBodyRow {
-    font-family: 'Arial';
-    font-size: 1.5vw;
-    line-height: 1.5;
-    color: white;
-    margin-top: 5%;
-    margin-bottom: 10%;
+	font-family: 'Arial';
+	font-size: 1.5vw;
+	line-height: 1.5;
+	color: white;
+	margin-top: 5%;
+	margin-bottom: 10%;
 }
 
 .contactInfoLeftSection {
-    border-right: 2px solid white;
-    padding-right: 5%;
+	border-right: 2px solid white;
+	padding-right: 5%;
 }
 
 #contactForm {
-    font-family: 'gfitfont-bold', Times, serif;
-    font-size: 1.3vw;
-    color: white;
-    font-weight: bolder;
-    width: 95%;
+	font-family: 'gfitfont-bold', Times, serif;
+	font-size: 1.3vw;
+	color: white;
+	font-weight: bolder;
+	width: 95%;
 }
 
 .formQuestion1 {
-    padding-left: 15px;
+	padding-left: 15px;
 }
 
 .formQuestion2 {
-    padding-left: 15px;
+	padding-left: 15px;
 }
 
 .contactFormSubmit {
-    background-color: white !important;
-    color: #667B99 !important;
-    border: none;
-    margin-left: 0px !important;
-    font-weight: bolder;
-    width: 10%;
+	background-color: white !important;
+	color: #667b99 !important;
+	border: none;
+	margin-left: 0px !important;
+	font-weight: bolder;
+	width: 100% !important;
 }
 
 .contactFormSubmit:hover {
-    background-color: #FAC04E;
+	background-color: #fac04e;
 }
 
 .contactInfoRightSection {
-    color: white;
-    margin-left: 5%;
+	color: white;
+	margin-left: 5%;
 }
 
 .contactInfoRightSectionHeader {
-    font-family: 'gfitfont-bold', Times, serif;
-    margin-top: 30%;
-    margin-bottom: 5%;
-    font-size: 2vw;
-    color: white;
-    font-weight: bolder;
+	font-family: 'gfitfont-bold', Times, serif;
+	margin-top: 30%;
+	margin-bottom: 5%;
+	font-size: 2vw;
+	color: white;
+	font-weight: bolder;
 }
 
 .contactInfoRightSectionAddress {
-    font-family: 'Arial';
-    font-size: 1.5vw;
-    color: white;
-    margin-bottom: 5%;
+	font-family: 'Arial';
+	font-size: 1.5vw;
+	color: white;
+	margin-bottom: 5%;
 }
 
 .contactInfoRightSectionPhone {
-    font-family: 'Arial';
-    font-size: 1.5vw;
-    margin-bottom: 5%;
+	font-family: 'Arial';
+	font-size: 1.5vw;
+	margin-bottom: 5%;
 }
 
 .contactInfoRightSectionEmail {
-    font-family: 'Arial';
-    font-size: 1.5vw;
+	font-family: 'Arial';
+	font-size: 1.5vw;
 }
 
 /* ----------- iPhone 4 and 4S ----------- */
 
 /* Portrait and Landscape */
-@media only screen 
-  and (min-device-width: 320px) 
-  and (max-device-width: 480px)
-  and (-webkit-min-device-pixel-ratio: 2) {
-
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
 }
 
 /* Portrait */
-@media only screen 
-  and (min-device-width: 320px) 
-  and (max-device-width: 480px)
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (orientation: portrait) {
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
 }
 
 /* Landscape */
-@media only screen 
-  and (min-device-width: 320px) 
-  and (max-device-width: 480px)
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (orientation: landscape) {
-
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
 }
 
 /* ----------- iPhone 5, 5S, 5C and 5SE ----------- */
 
 /* Portrait and Landscape */
-@media only screen 
-  and (min-device-width: 320px) 
-  and (max-device-width: 568px)
-  and (-webkit-min-device-pixel-ratio: 2) {
-
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
 }
 
 /* Portrait */
-@media only screen 
-  and (min-device-width: 320px) 
-  and (max-device-width: 568px)
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (orientation: portrait) {
-    .contactInfo {
-        height: 100%;
-        padding-top: 10%;
-    }
-    
-    .contactInfoSection {
-        padding: 5%;
-    }
-    
-    .contactInfoHeaderRow {
-        margin-bottom: 3%;
-    }
-    
-    .contactInfoHeaderLeft {
-        font-size: 5vw;
-        letter-spacing: 3px;
-    }
-    
-    .contactInfoHeaderRight {
-        font-size: 5vw;
-        letter-spacing: 3px;
-    }
-    
-    .contactInfoBodyRow {
-        font-size: 4vw;
-        line-height: 1.5;
-        color: white;
-        margin-top: 5%;
-        margin-bottom: 10%;
-    }
-    
-    #contactForm {
-        font-size: 3vw;
-        color: white;
-        font-weight: bolder;
-        width: 95%;
-    }
-    
-    .formQuestion1 {
-        padding-left: 15px;
-    }
-    
-    .formQuestion2 {
-        padding-left: 15px;
-    }
-    
-    .contactFormSubmit {
-        margin-left: 0px !important;
-        font-weight: bolder;
-        width: 40%;
-        margin-bottom: 15%;
-    }
-    
-    .contactFormSubmit:hover {
-        background-color: #FAC04E;
-    }
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+	.contactInfo {
+		height: 100%;
+		padding-top: 10%;
+	}
 
-    .contactInfoLeftSection {
-        border: none;
-    }
+	.contactInfoSection {
+		padding: 5%;
+	}
 
-    .contactInfoRightSection {
-        color: white;
-        margin-left: 0;
-    }
-    
-    .contactInfoRightSectionHeader {
-        margin-top: 5%;
-        margin-bottom: 2%;
-        font-size: 5vw;
-    }
-    
-    .contactInfoRightSectionAddress {
-        font-size: 3vw;
-        margin-bottom: 1%;
-    }
-    
-    .contactInfoRightSectionPhone {
-        font-size: 3vw;
-        margin-bottom: 1%;
-    }
-    
-    .contactInfoRightSectionEmail {
-        font-size: 3vw;
-    }
+	.contactInfoHeaderRow {
+		margin-bottom: 3%;
+	}
 
-    .custom-control-label {
-        /* margin-top: 25%; */
-    }
+	.contactInfoHeaderLeft {
+		font-size: 5vw;
+		letter-spacing: 3px;
+	}
+
+	.contactInfoHeaderRight {
+		font-size: 5vw;
+		letter-spacing: 3px;
+	}
+
+	.contactInfoBodyRow {
+		font-size: 4vw;
+		line-height: 1.5;
+		color: white;
+		margin-top: 5%;
+		margin-bottom: 10%;
+	}
+
+	#contactForm {
+		font-size: 3vw;
+		color: white;
+		font-weight: bolder;
+		width: 95%;
+	}
+
+	.formQuestion1 {
+		padding-left: 15px;
+	}
+
+	.formQuestion2 {
+		padding-left: 15px;
+	}
+
+	.contactFormSubmit {
+		margin-left: 0px !important;
+		font-weight: bolder;
+		width: 40%;
+		margin-bottom: 15%;
+	}
+
+	.contactFormSubmit:hover {
+		background-color: #fac04e;
+	}
+
+	.contactInfoLeftSection {
+		border: none;
+	}
+
+	.contactInfoRightSection {
+		color: white;
+		margin-left: 0;
+	}
+
+	.contactInfoRightSectionHeader {
+		margin-top: 5%;
+		margin-bottom: 2%;
+		font-size: 5vw;
+	}
+
+	.contactInfoRightSectionAddress {
+		font-size: 3vw;
+		margin-bottom: 1%;
+	}
+
+	.contactInfoRightSectionPhone {
+		font-size: 3vw;
+		margin-bottom: 1%;
+	}
+
+	.contactInfoRightSectionEmail {
+		font-size: 3vw;
+	}
+
+	.custom-control-label {
+		/* margin-top: 25%; */
+	}
 }
 
 /* Landscape */
-@media only screen 
-  and (min-device-width: 320px) 
-  and (max-device-width: 568px)
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (orientation: landscape) {
-    .contactInfo {
-        width: 223vw;
-    }
-    .contactInfoSection {
-        padding: 5%;
-    }
-    
-    .contactInfoHeaderRow {
-        margin-bottom: 3%;
-    }
-    
-    .contactInfoHeaderLeft {
-        font-size: 8vw;
-        letter-spacing: 3px;
-    }
-    
-    .contactInfoHeaderRight {
-        font-size: 8vw;
-        letter-spacing: 3px;
-    }
-    
-    .contactInfoBodyRow {
-        font-size: 6vw;
-        line-height: 1.5;
-        color: white;
-        margin-top: 1%;
-        margin-bottom: 2%;
-    }
-    
-    #contactForm {
-        font-size: 5vw;
-        color: white;
-        font-weight: bolder;
-        width: 95%;
-    }
-    
-    .formQuestion1 {
-        padding-left: 15px;
-    }
-    
-    .formQuestion2 {
-        padding-left: 15px;
-    }
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+	.contactInfo {
+		width: 223vw;
+	}
+	.contactInfoSection {
+		padding: 5%;
+	}
 
-    /* .custom-control-input {
+	.contactInfoHeaderRow {
+		margin-bottom: 3%;
+	}
+
+	.contactInfoHeaderLeft {
+		font-size: 8vw;
+		letter-spacing: 3px;
+	}
+
+	.contactInfoHeaderRight {
+		font-size: 8vw;
+		letter-spacing: 3px;
+	}
+
+	.contactInfoBodyRow {
+		font-size: 6vw;
+		line-height: 1.5;
+		color: white;
+		margin-top: 1%;
+		margin-bottom: 2%;
+	}
+
+	#contactForm {
+		font-size: 5vw;
+		color: white;
+		font-weight: bolder;
+		width: 95%;
+	}
+
+	.formQuestion1 {
+		padding-left: 15px;
+	}
+
+	.formQuestion2 {
+		padding-left: 15px;
+	}
+
+	/* .custom-control-input {
         
     } */
-    
-    .contactFormSubmit {
-        margin-left: 0px !important;
-        font-weight: bolder;
-        width: 40%;
-        margin-bottom: 15%;
-        font-size: 6vw;
-    }
-    
-    .contactFormSubmit:hover {
-        background-color: #FAC04E;
-    }
 
-    .contactInfoLeftSection {
-        border: none;
-    }
+	.contactFormSubmit {
+		margin-left: 0px !important;
+		font-weight: bolder;
+		width: 40%;
+		margin-bottom: 15%;
+		font-size: 6vw;
+	}
 
-    .contactInfoRightSection {
-        color: white;
-        margin-left: 0;
-    }
-    
-    .contactInfoRightSectionHeader {
-        margin-top: 5%;
-        margin-bottom: 2%;
-        font-size: 5vw;
-    }
-    
-    .contactInfoRightSectionAddress {
-        font-size: 4vw;
-        margin-bottom: 1%;
-    }
-    
-    .contactInfoRightSectionPhone {
-        font-size: 4vw;
-        margin-bottom: 1%;
-    }
-    
-    .contactInfoRightSectionEmail {
-        font-size: 4vw;
-    }
+	.contactFormSubmit:hover {
+		background-color: #fac04e;
+	}
+
+	.contactInfoLeftSection {
+		border: none;
+	}
+
+	.contactInfoRightSection {
+		color: white;
+		margin-left: 0;
+	}
+
+	.contactInfoRightSectionHeader {
+		margin-top: 5%;
+		margin-bottom: 2%;
+		font-size: 5vw;
+	}
+
+	.contactInfoRightSectionAddress {
+		font-size: 4vw;
+		margin-bottom: 1%;
+	}
+
+	.contactInfoRightSectionPhone {
+		font-size: 4vw;
+		margin-bottom: 1%;
+	}
+
+	.contactInfoRightSectionEmail {
+		font-size: 4vw;
+	}
 }
 
 /* ----------- iPhone 6, 6S, 7 and 8 ----------- */
 
 /* Portrait and Landscape */
-@media only screen 
-  and (min-device-width: 375px) 
-  and (max-device-width: 667px) 
-  and (-webkit-min-device-pixel-ratio: 2) { 
-
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
 }
 
 /* Portrait */
-@media only screen 
-  and (min-device-width: 375px) 
-  and (max-device-width: 667px) 
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (orientation: portrait) { 
-
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
 }
 
 /* Landscape */
-@media only screen 
-  and (min-device-width: 375px) 
-  and (max-device-width: 667px) 
-  and (min-device-height: 365px)
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (orientation: landscape) { 
-    .contactInfo {
-        width: 103vw;
-    }
-    .contactInfoSection {
-        padding: 5%;
-    }
-    
-    .contactInfoHeaderRow {
-        margin-bottom: 3%;
-    }
-    
-    .contactInfoHeaderLeft {
-        font-size: 4vw;
-        letter-spacing: 3px;
-    }
-    
-    .contactInfoHeaderRight {
-        font-size: 4vw;
-        letter-spacing: 3px;
-    }
-    
-    .contactInfoBodyRow {
-        font-size: 2vw;
-        line-height: 1.5;
-        color: white;
-        margin-top: 1%;
-        margin-bottom: 2%;
-    }
-    
-    #contactForm {
-        font-size: 1.5vw;
-        color: white;
-        font-weight: bolder;
-        width: 95%;
-    }
-    
-    .formQuestion1 {
-        padding-left: 15px;
-    }
-    
-    .formQuestion2 {
-        padding-left: 15px;
-    }
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (min-device-height: 365px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+	.contactInfo {
+		width: 103vw;
+	}
+	.contactInfoSection {
+		padding: 5%;
+	}
 
-    /* .custom-control-input {
+	.contactInfoHeaderRow {
+		margin-bottom: 3%;
+	}
+
+	.contactInfoHeaderLeft {
+		font-size: 4vw;
+		letter-spacing: 3px;
+	}
+
+	.contactInfoHeaderRight {
+		font-size: 4vw;
+		letter-spacing: 3px;
+	}
+
+	.contactInfoBodyRow {
+		font-size: 2vw;
+		line-height: 1.5;
+		color: white;
+		margin-top: 1%;
+		margin-bottom: 2%;
+	}
+
+	#contactForm {
+		font-size: 1.5vw;
+		color: white;
+		font-weight: bolder;
+		width: 95%;
+	}
+
+	.formQuestion1 {
+		padding-left: 15px;
+	}
+
+	.formQuestion2 {
+		padding-left: 15px;
+	}
+
+	/* .custom-control-input {
         
     } */
-    
-    .contactFormSubmit {
-        margin-left: 0px !important;
-        font-weight: bolder;
-        width: 40%;
-        margin-bottom: 15%;
-        font-size: 2.5vw;
-    }
-    
-    .contactFormSubmit:hover {
-        background-color: #FAC04E;
-    }
 
-    .contactInfoRightSection {
-        color: white;
-        margin: 0 auto;
-        margin-top: 10vw;
-    }
-    
-    .contactInfoRightSectionHeader {
-        margin-top: 5%;
-        margin-bottom: 2%;
-        font-size: 5vw;
-    }
-    
-    .contactInfoRightSectionAddress {
-        font-size: 2vw;
-        margin-bottom: 1%;
-    }
-    
-    .contactInfoRightSectionPhone {
-        font-size: 3vw;
-        margin-bottom: 1%;
-    }
-    
-    .contactInfoRightSectionEmail {
-        font-size: 2.5vw;
-    }
+	.contactFormSubmit {
+		margin-left: 0px !important;
+		font-weight: bolder;
+		width: 40%;
+		margin-bottom: 15%;
+		font-size: 2.5vw;
+	}
+
+	.contactFormSubmit:hover {
+		background-color: #fac04e;
+	}
+
+	.contactInfoRightSection {
+		color: white;
+		margin: 0 auto;
+		margin-top: 10vw;
+	}
+
+	.contactInfoRightSectionHeader {
+		margin-top: 5%;
+		margin-bottom: 2%;
+		font-size: 5vw;
+	}
+
+	.contactInfoRightSectionAddress {
+		font-size: 2vw;
+		margin-bottom: 1%;
+	}
+
+	.contactInfoRightSectionPhone {
+		font-size: 3vw;
+		margin-bottom: 1%;
+	}
+
+	.contactInfoRightSectionEmail {
+		font-size: 2.5vw;
+	}
 }
 
 /* ----------- iPhone 6+, 7+ and 8+ ----------- */
 
 /* Portrait and Landscape */
-@media only screen 
-  and (min-device-width: 414px) 
-  and (max-device-width: 736px) 
-  and (-webkit-min-device-pixel-ratio: 3) { 
-
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) {
 }
 
 /* Portrait */
-@media only screen 
-  and (min-device-width: 414px) 
-  and (max-device-width: 736px) 
-  and (-webkit-min-device-pixel-ratio: 3)
-  and (orientation: portrait) { 
-
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: portrait) {
 }
 
 /* Landscape */
-@media only screen 
-  and (min-device-width: 414px) 
-  and (max-device-width: 736px) 
-  and (-webkit-min-device-pixel-ratio: 3)
-  and (orientation: landscape) { 
-    .contactInfoHeaderLeft {
-        font-size: 3vw;
-        letter-spacing: 3px;
-    }
-    
-    .contactInfoHeaderRight {
-        font-size: 3vw;
-        letter-spacing: 3px;
-    }
-    
-    .contactInfoBodyRow {
-        font-size: 1.9vw;
-        line-height: 1.5;
-        color: white;
-        margin-top: 1%;
-        margin-bottom: 2%;
-    }
-    
-    #contactForm {
-        font-size: 1.5vw;
-        color: white;
-        font-weight: bolder;
-        width: 95%;
-    }
-    .contactFormSubmit {
-        margin-left: 0px !important;
-        font-weight: bolder;
-        width: 40%;
-        margin-bottom: 15%;
-        font-size: 2.5vw;
-    }
-    .contactInfoRightSection {
-        color: white;
-        margin: 0 auto;
-        margin-top: 10vw;
-    }
-    .contactInfoRightSectionHeader {
-        margin-top: 5%;
-        margin-bottom: 2%;
-        font-size: 3vw;
-    }
-    
-    .contactInfoRightSectionAddress {
-        font-size: 2vw;
-        margin-bottom: 1%;
-    }
-    
-    .contactInfoRightSectionPhone {
-        font-size: 3vw;
-        margin-bottom: 1%;
-    }
-    
-    .contactInfoRightSectionEmail {
-        font-size: 2.5vw;
-    }
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {
+	.contactInfoHeaderLeft {
+		font-size: 3vw;
+		letter-spacing: 3px;
+	}
+
+	.contactInfoHeaderRight {
+		font-size: 3vw;
+		letter-spacing: 3px;
+	}
+
+	.contactInfoBodyRow {
+		font-size: 1.9vw;
+		line-height: 1.5;
+		color: white;
+		margin-top: 1%;
+		margin-bottom: 2%;
+	}
+
+	#contactForm {
+		font-size: 1.5vw;
+		color: white;
+		font-weight: bolder;
+		width: 95%;
+	}
+	.contactFormSubmit {
+		margin-left: 0px !important;
+		font-weight: bolder;
+		width: 40%;
+		margin-bottom: 15%;
+		font-size: 2.5vw;
+	}
+	.contactInfoRightSection {
+		color: white;
+		margin: 0 auto;
+		margin-top: 10vw;
+	}
+	.contactInfoRightSectionHeader {
+		margin-top: 5%;
+		margin-bottom: 2%;
+		font-size: 3vw;
+	}
+
+	.contactInfoRightSectionAddress {
+		font-size: 2vw;
+		margin-bottom: 1%;
+	}
+
+	.contactInfoRightSectionPhone {
+		font-size: 3vw;
+		margin-bottom: 1%;
+	}
+
+	.contactInfoRightSectionEmail {
+		font-size: 2.5vw;
+	}
 }
 
 /* ----------- iPhone X ----------- */
 
 /* Portrait and Landscape */
-@media only screen 
-  and (min-device-width: 375px) 
-  and (max-device-width: 812px) 
-  and (-webkit-min-device-pixel-ratio: 3) { 
-
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
 }
 
 /* Portrait */
-@media only screen 
-  and (min-device-width: 375px) 
-  and (max-device-width: 812px) 
-  and (-webkit-min-device-pixel-ratio: 3)
-  and (orientation: portrait) { 
-    .contactInfo {
-        height: 100%;
-    }
-    
-    .contactInfoSection {
-        padding: 5%;
-    }
-    
-    .contactInfoHeaderRow {
-        margin-bottom: 3%;
-    }
-    
-    .contactInfoHeaderLeft {
-        font-size: 5vw;
-        letter-spacing: 3px;
-    }
-    
-    .contactInfoHeaderRight {
-        font-size: 5vw;
-        letter-spacing: 3px;
-    }
-    
-    .contactInfoBodyRow {
-        font-size: 3vw;
-        line-height: 1.5;
-        color: white;
-        margin-top: 5%;
-        margin-bottom: 10%;
-    }
-    
-    #contactForm {
-        font-size: 3vw;
-        color: white;
-        font-weight: bolder;
-        width: 95%;
-    }
-    
-    .formQuestion1 {
-        padding-left: 15px;
-    }
-    
-    .formQuestion2 {
-        padding-left: 15px;
-    }
-    
-    .contactFormSubmit {
-        margin-left: 0px !important;
-        font-weight: bolder;
-        width: 40%;
-        margin-bottom: 15%;
-    }
-    
-    .contactFormSubmit:hover {
-        background-color: #FAC04E;
-    }
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: portrait) {
+	.contactInfo {
+		height: 100%;
+	}
 
-    .contactInfoLeftSection {
-        border: none;
-    }
+	.contactInfoSection {
+		padding: 5%;
+	}
 
-    .contactInfoRightSection {
-        color: white;
-        margin-left: 0;
-    }
-    
-    .contactInfoRightSectionHeader {
-        margin-top: 5%;
-        margin-bottom: 2%;
-        font-size: 5vw;
-    }
-    
-    .contactInfoRightSectionAddress {
-        font-size: 3vw;
-        margin-bottom: 1%;
-    }
-    
-    .contactInfoRightSectionPhone {
-        font-size: 3vw;
-        margin-bottom: 1%;
-    }
-    
-    .contactInfoRightSectionEmail {
-        font-size: 3vw;
-    }
-    
+	.contactInfoHeaderRow {
+		margin-bottom: 3%;
+	}
+
+	.contactInfoHeaderLeft {
+		font-size: 5vw;
+		letter-spacing: 3px;
+	}
+
+	.contactInfoHeaderRight {
+		font-size: 5vw;
+		letter-spacing: 3px;
+	}
+
+	.contactInfoBodyRow {
+		font-size: 3vw;
+		line-height: 1.5;
+		color: white;
+		margin-top: 5%;
+		margin-bottom: 10%;
+	}
+
+	#contactForm {
+		font-size: 3vw;
+		color: white;
+		font-weight: bolder;
+		width: 95%;
+	}
+
+	.formQuestion1 {
+		padding-left: 15px;
+	}
+
+	.formQuestion2 {
+		padding-left: 15px;
+	}
+
+	.contactFormSubmit {
+		margin-left: 0px !important;
+		font-weight: bolder;
+		width: 40%;
+		margin-bottom: 15%;
+	}
+
+	.contactFormSubmit:hover {
+		background-color: #fac04e;
+	}
+
+	.contactInfoLeftSection {
+		border: none;
+	}
+
+	.contactInfoRightSection {
+		color: white;
+		margin-left: 0;
+	}
+
+	.contactInfoRightSectionHeader {
+		margin-top: 5%;
+		margin-bottom: 2%;
+		font-size: 5vw;
+	}
+
+	.contactInfoRightSectionAddress {
+		font-size: 3vw;
+		margin-bottom: 1%;
+	}
+
+	.contactInfoRightSectionPhone {
+		font-size: 3vw;
+		margin-bottom: 1%;
+	}
+
+	.contactInfoRightSectionEmail {
+		font-size: 3vw;
+	}
 }
 
 /* Landscape */
-@media only screen 
-  and (min-device-width: 375px) 
-  and (max-device-width: 812px) 
-  and (-webkit-min-device-pixel-ratio: 3)
-  and (orientation: landscape) { 
-    .contactFormSubmit {
-        margin-left: 0px !important;
-        font-weight: bolder;
-        width: 40%;
-        margin-bottom: 15%;
-        font-size: 2.5vw;
-    }
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {
+	.contactFormSubmit {
+		margin-left: 0px !important;
+		font-weight: bolder;
+		width: 40%;
+		margin-bottom: 15%;
+		font-size: 2.5vw;
+	}
 }
-
-
 
 /* ----------- LAPTOPS ----------- */
 
-
 /* ----------- Non-Retina Screens ----------- */
-@media screen 
-  and (min-device-width: 700px) 
-  and (max-device-width: 1600px) 
-  and (-webkit-min-device-pixel-ratio: 1) { 
-    .contactInfo {
-        padding-bottom: 10%;
-    }
+@media screen and (min-device-width: 700px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
+	.contactInfo {
+		padding-bottom: 10%;
+	}
 }
 
-@media screen 
-  and (min-device-width: 1600px)  
-  and (-webkit-min-device-pixel-ratio: 1) { 
-    .contactInfo {
-        padding-bottom: 10%;
-    }
+@media screen and (min-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
+	.contactInfo {
+		padding-bottom: 10%;
+	}
 }
 
 /* ----------- Retina Screens ----------- */
-@media screen 
-  and (min-device-width: 700px) 
-  and (max-device-width: 1600px) 
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (min-resolution: 192dpi) { 
-    .contactInfo {
-        padding-bottom: 10%;
-    }
+@media screen and (min-device-width: 700px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) {
+	.contactInfo {
+		padding-bottom: 10%;
+	}
 }
 
-@media screen 
-  and (min-device-width: 1600px) 
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (min-resolution: 192dpi) { 
-    .contactInfo {
-        padding-bottom: 10%;
-    }
+@media screen and (min-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) {
+	.contactInfo {
+		padding-bottom: 10%;
+	}
 }

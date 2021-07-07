@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { Row, Col, Form, Button } from 'react-bootstrap'
+import ContactSuccess from '../alerts/ContactSuccess'
+import ContactError from '../alerts/ContactError'
 import axios from 'axios'
 
 // CSS 
@@ -78,12 +80,17 @@ class ContactInfo extends Component {
                   contactSuccess: true
                 })
                 this.resetForm()
-            } else if(response.data.msg === 'fail'){
+            } else if (response.data.msg === 'fail'){
               console.log("Message failed to send.")
               this.setState({
                 contactError: true
               })
             }
+        }).catch(err => {
+          console.log("Message failed to send.")
+          this.setState({
+            contactError: true
+          })
         })
         this.resetForm()
     }
@@ -203,7 +210,9 @@ class ContactInfo extends Component {
                                 <Form.Label>HOW CAN WE HELP?*</Form.Label>
                                 <Form.Control id="message" as="textarea" rows="10" aria-label='Message' />
                             </Form.Group>
-
+                            <ContactSuccess contactSuccess={this.state.contactSuccess}/>
+                            <ContactError contactError={this.state.contactError} />
+                            <Button className='contactFormSubmit' type="submit" aria-label='Submit' onClick={this.handleSubmit}>SUBMIT</Button>
                           </Form>
                         </Row>
                     </Col>
@@ -221,9 +230,6 @@ class ContactInfo extends Component {
                             <p className='contactInfoRightSectionEmail'>HELLO@GFITWEFIT.COM</p>
                         </Row>
                     </Col>
-                </Row>
-                <Row>
-                  <Button className='contactFormSubmit' type="submit" aria-label='Submit' onClick={this.handleSubmit}>SUBMIT</Button>
                 </Row>
                 
               </div>
