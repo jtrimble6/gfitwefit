@@ -63,7 +63,7 @@ class ContactInfo extends Component {
         console.log(name, email, message, checkbox1, checkbox2)
         axios({
             method: "POST", 
-            url: this.state.env === 'DEVELOPMENT' ? "http://localhost:3000/send" : "http://gfitwefit.com/send",
+            url: this.state.env === 'DEVELOPMENT' ? "http://localhost:3000/send" : "https://gfitwefit.com/send",
             data: {
                 name: name,   
                 email: email,  
