@@ -215,7 +215,7 @@ class ContactInfo extends Component {
                             <p className='contactInfoRightSectionAddress'>18515 OLD STATESVILLE ROAD CORNELIUS, NC 28031</p>
                         </Row>
                         <Row>
-                            <p className='contactInfoRightSectionPhone'>### ### ####</p>
+                            <p className='contactInfoRightSectionPhone'>703.554.5731</p>
                         </Row>
                         <Row>
                             <p className='contactInfoRightSectionEmail'>HELLO@GFITWEFIT.COM</p>
