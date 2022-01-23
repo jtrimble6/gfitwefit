@@ -11,32 +11,27 @@ class GymInfo extends Component {
         return (
             <div className='gymInfo'>
                 <Row className='gymInfoRow'>
-                    <Col sm={6}>
-                        <Row className='gymInfoHeaderRow'>
-                            <h2 className='gymInfoHeaderLeft'>THE GYM/</h2> <h2 className='gymInfoHeaderRight'>/GET READY</h2> 
-                        </Row>
-                        <Row className='gymInfoAddressRow'>
-                            <h2 className='gymInfoAddress'>
-                              18515 OLD STATESVILLE ROAD
-                            </h2>
-                        </Row>
-                        <Row className='gymInfoAddressRow gymInfoAddressRow2'>
-                            <h2 className='gymInfoAddress gymInfoAddress2'>
-                              CORNELIUS, NC 28031
-                            </h2>
-                        </Row>
-                        <Row className='gymInfoBodyRow'>
-                            <p className='gymInfoBody'>
-                              Once you walk through our doors, you are considered family to us. Our top priority is to make sure you always have a safe and enjoyable experience with us at G-FIT.
-                            </p>
-                            <p className='gymInfoBody'>
-                              Think you’re ready for a workout? Fill out <a className='gymInfoLink' href='/userSignup'>this form</a> and let us know you’re coming! Your first week is FREE. 
-                            </p>
-                        </Row>
-                    </Col>
-                    <Col sm={6}>
+                    <div className='gymInfoLogoCol'>
                         <img src={logo} className="gymInfoLogo" alt="Gym Info Logo" />
-                    </Col>
+                    </div>
+                    <div className='gymInfoDetailsCol'>
+                        <Row className='gymInfoDetailsRow'>
+                            <h1 className='gymInfoDetailsHeader'>CREATIVE AND ENERGIZING WORKOUTS</h1>
+                            <p className='gymInfoDetailsBody'>60 minute workouts that create a challenging and safe environment that is designed for ALL fitness levels and ALL ages wherever you may be on your fitness journey.</p>
+                        </Row>
+                        <Row className='gymInfoDetailsRow'>
+                            <h1 className='gymInfoDetailsHeader'>BOXING/KICKBOXING TRAINING</h1>
+                            <p className='gymInfoDetailsBody'>For three days of the week we implement boxing/kickboxing training to our workouts to keep it fun and engaging while burning lots of calories. We teach basic combos and moves to make it easy for everyone to learn even if you have never boxed before.</p>
+                        </Row>
+                        <Row className='gymInfoDetailsRow'>
+                            <h1 className='gymInfoDetailsHeader'>KIDS SPEED AND STRENGTH CAMPS</h1>
+                            <p className='gymInfoDetailsBody'>We help young athletes to become faster, stronger, build confidence, and create a foundation of fitness they will use for a lifetime!</p>
+                        </Row>
+                        <Row className='gymInfoDetailsRow'>
+                            <h1 className='gymInfoDetailsHeader'>COMMUNITY EVENTS</h1>
+                            <p className='gymInfoDetailsBody'>We not only sweat together, but we do LIFE together. Our monthly events include 5ks, barbeques, outreach opportunities, and other fun activities.</p>
+                        </Row>
+                    </div>
                 </Row>
             </div>
         )

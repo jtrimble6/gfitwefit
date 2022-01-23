@@ -1,60 +1,50 @@
 body {
-  height: 100vh;
-  width: 100% !important;
-  position: relative;
-  /* overflow-y: auto !important; */
-  overflow-x: hidden;
-  background-color: white;
-  background-repeat: no-repeat;
-  background-position: center;
-  margin: 0;
-  padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+	height: 100vh;
+	width: 100vw !important;
+	position: relative;
+	/* overflow-y: auto !important; */
+	overflow-x: hidden;
+	background-color: white;
+	background-repeat: no-repeat;
+	background-position: center;
+	margin: 0;
+	padding: 0;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+		"Droid Sans", "Helvetica Neue", sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+	font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 
-html, body, #root, .App {
-  width: 100% !important;
-  height: 100% !important;
+html,
+body,
+#root,
+.App {
+	width: 100vw !important;
+	height: 100% !important;
 }
 
 /* ----------- iPhone 5, 5S, 5C and 5SE ----------- */
 
 /* Portrait and Landscape */
-@media only screen 
-  and (min-device-width: 320px) 
-  and (max-device-width: 568px)
-  and (-webkit-min-device-pixel-ratio: 2) {
-
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
 }
 
 /* Portrait */
-@media only screen 
-  and (min-device-width: 320px) 
-  and (max-device-width: 568px)
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (orientation: portrait) {
-   
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
 }
 
 /* Landscape */
-@media only screen 
-  and (min-device-width: 320px) 
-  and (max-device-width: 568px)
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (orientation: landscape) {
-    html, body, #root, .App {
-      width: 100% !important;
-      height: 100% !important;
-      overflow-x: hidden;
-    }
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+	html,
+	body,
+	#root,
+	.App {
+		width: 100% !important;
+		height: 100% !important;
+		overflow-x: hidden;
+	}
 }
-

@@ -1,794 +1,681 @@
 @font-face {
-    font-family: 'gfitfont';
-    font-style: normal;
-    font-weight: bolder;
-    src: local('gfitfont'), url('../fonts/gfitfont.ttf'), url('../fonts/gfitfont.woff'), format('truetype');
-  }
+	font-family: 'gfitfont';
+	font-style: normal;
+	font-weight: bolder;
+	src: local('gfitfont'), url('../fonts/gfitfont.ttf'), url('../fonts/gfitfont.woff'), format('truetype');
+}
 @font-face {
-    font-family: 'gfitfont-bold';
-    font-style: normal;
-    font-weight: bolder;
-    src: local('gfitfontBold'), url('../fonts/gfitfontBold.ttf'), url('../fonts/gfitfontBold.woff') format('truetype');
-  }
+	font-family: 'gfitfont-bold';
+	font-style: normal;
+	font-weight: bolder;
+	src: local('gfitfontBold'), url('../fonts/gfitfontBold.ttf'), url('../fonts/gfitfontBold.woff') format('truetype');
+}
 
 #userPage {
-    margin: 0 auto;
-    /* margin-top: 10%; */
-    margin-bottom: 20%;
-    /* color: white; */
-    text-align: center;
+	margin: 0 auto;
+	/* margin-top: 10%; */
+	margin-bottom: 20%;
+	/* color: white; */
+	text-align: center;
 }
 
 #loginPage {
-    width: 80%;
-    margin: 0 auto;
-    margin-top: 15vw;
-    margin-bottom: 15vw;
-    padding: 5%;
-    border-radius: 4%;
-    text-align: center;
-    background-color: #FAC04E;
-    font-family: 'gfitfont-bold';
-    
+	width: 80%;
+	margin: 0 auto;
+	margin-top: 15vh;
+	margin-bottom: 15vh;
+	padding: 5%;
+	border-radius: 4%;
+	text-align: center;
+	background-color: #fac04e;
+	font-family: 'gfitfont-bold';
 }
 
 .formLoginHeading {
-  color: white;
-  font-family: 'gfitfont-bold';
+	color: white;
+	font-family: 'gfitfont-bold';
 }
 
 .loginButton {
-  background-color: white;
+	background-color: white;
 }
 
 #signUpPage {
-    width: 100%;
-    margin: 0 auto;
-    /* margin-bottom: 80%; */
-    /* padding: 5%; */
-    text-align: center;
-    background-color: transparent;
-    margin-bottom: calc(100vh - 510px);
+	width: 100%;
+	margin: 0 auto;
+	/* margin-bottom: 80%; */
+	/* padding: 5%; */
+	text-align: center;
+	background-color: transparent;
+	margin-bottom: calc(100vh - 510px);
 }
 
 .signupWrap {
-    margin-top: 7%;
+	margin-top: 7%;
 }
 
 #userPage hr {
-    border-bottom: 2px solid #FAC04E !important;
-    width: 80%;
-    margin-top: 5% !important;
-    margin-bottom: 5% !important;
+	border-bottom: 2px solid #fac04e !important;
+	width: 80%;
+	margin-top: 5% !important;
+	margin-bottom: 5% !important;
 }
 
-#userPage h1, h2 {
-    color: #FAC04E
+#userPage h1,
+h2 {
+	color: #fac04e;
 }
 
 .formRow {
-    width: 50%;
-    margin-top: 5%;
-    margin: 0 auto;
+	width: 50%;
+	margin-top: 5%;
+	margin: 0 auto;
 }
 
 .formContainer {
-    width: 80% !important;
-    margin: 0 auto;
+	width: 80% !important;
+	margin: 0 auto;
 }
 
 .scheduleRow {
-    width: 100% !important;
-    margin: 0 auto !important;
+	width: 100% !important;
+	margin: 0 auto !important;
 }
 
 .scheduleFormSelectors {
-    margin-top: 7% !important;
+	margin-top: 7% !important;
 }
 
 .scheduleFormContainer {
-    width: 80%;
-    margin: 0 auto;
+	width: 80%;
+	margin: 0 auto;
 }
 
 .scheduleTable {
-    width: 100%;
-    margin: 0 auto !important;
-    padding-bottom: 10%;
-    text-align: center;
-    color: #FAC04E;
-    border-color: #FAC04E;
-    border-bottom: 2px solid #FAC04E !important;
-    align-content: center !important;
+	width: 100%;
+	margin: 0 auto !important;
+	padding-bottom: 10%;
+	text-align: center;
+	color: #fac04e;
+	border-color: #fac04e;
+	border-bottom: 2px solid #fac04e !important;
+	align-content: center !important;
 }
 
 .scheduleTable .rt-td {
-    white-space: pre-wrap !important;
-    color: white;
+	white-space: pre-wrap !important;
+	color: white;
 }
 
 .scheduleHeaders {
-    font-size: 24px;
-    color: #FAC04E
+	font-size: 24px;
+	color: #fac04e;
 }
 
 #logoutPage {
-    color: white;
-    text-align: center;
+	color: white;
+	text-align: center;
 }
 
 #logoutPage a {
-    color: #FAC04E
+	color: #fac04e;
 }
-
-
-
 
 /* ------------------------------------------------------------------ */
 /* MESSAGE BOARD PAGE */
 /* ------------------------------------------------------------------ */
 
-.messageBoardTitle, .videoLibraryForm-heading, .userProfileHeading {
-  font-family: 'gfitfont-bold';
-  font-size: 4vw;
-  padding-top: 2vw;
-  padding-bottom: 5vw;
-  margin-bottom: 1vw;
-  margin-top: 2vw;
+.messageBoardTitle,
+.videoLibraryForm-heading,
+.userProfileHeading {
+	font-family: 'gfitfont-bold';
+	font-size: 4vw;
+	padding-top: 2vw;
+	padding-bottom: 5vw;
+	margin-bottom: 1vw;
+	margin-top: 2vw;
 }
-
-
-
 
 /* ------------------------------------------------------------------ */
 /* ----------- USER PROFILE PAGE ----------- */
 /* ------------------------------------------------------------------ */
 #userProfilePage {
-    max-width: 80% !important;
-    margin: 0 auto !important;
-    margin-top: 15vh;
+	max-width: 80% !important;
+	margin: 0 auto !important;
+	margin-top: 15vh;
 }
 
 .userProfileHeading {
-    font-family: 'gfitfont-bold';
-    font-size: 4vw;
-    margin-bottom: 2vw;
+	font-family: 'gfitfont-bold';
+	font-size: 4vw;
+	margin-bottom: 2vw;
 }
 
 .userProfileAccordion {
-    background-color: white !important;
+	background-color: white !important;
 }
 
 .userEditProfileLabel {
-    width: 100%;
-    text-align: left;
-    margin-left: .5vw;
+	width: 100%;
+	text-align: left;
+	margin-left: .5vw;
 }
 
 .userProfileAccordionDetails {
-    width: 100%;
-    margin: 0 auto !important;
-    text-align: center;
-    justify-content: center;
-    margin-left: 5vw;
-    margin-bottom: 3vw;
+	width: 100%;
+	margin: 0 auto !important;
+	text-align: center;
+	justify-content: center;
+	margin-left: 5vw;
+	margin-bottom: 3vw;
 }
 
 .editSubscriptionForm {
-  margin: 0 auto;
+	margin: 0 auto;
 }
 
 .submitEditProfile {
-    width: 90%;
-    margin: 0 auto;
-    background-color: #FAC04E !important;
-    border-color: white !important;
+	width: 90%;
+	margin: 0 auto;
+	background-color: #fac04e !important;
+	border-color: white !important;
 }
 
 .updateUserInfoAlert {
-    width: 90%;
-    margin: 0 auto;
-    margin-top: 1vw;
+	width: 90%;
+	margin: 0 auto;
+	margin-top: 1vw;
 }
 
 .userEditPreferencesTitle {
-    color: black !important;
-    width: 90%;
-    margin: 0 auto;
-    margin-bottom: 2vw;
-    padding: 2% !important;
-    border-radius: 5%;
-    /* font-size: 2vw !important; */
-    font-family: 'gfitfont-bold' !important;
+	color: black !important;
+	width: 90%;
+	margin: 0 auto;
+	margin-bottom: 2vw;
+	padding: 2% !important;
+	border-radius: 5%;
+	/* font-size: 2vw !important; */
+	font-family: 'gfitfont-bold' !important;
 }
 
-
-
-#formGridSubscriptionStatus, #formGridLastPaymentDate {
-  text-align: center;
+#formGridSubscriptionStatus,
+#formGridLastPaymentDate {
+	text-align: center;
 }
 
 .subscriptionRenewDetails {
-  color: rgb(33, 146, 33);
-  margin: 0 auto;
+	color: rgb(33, 146, 33);
+	margin: 0 auto;
 }
 
-
 .personalInfoData {
-  text-align: left;
+	text-align: left;
 }
 
 .MuiAccordionSummary-content .MuiTypography-body1 {
-  /* font-size: 1vw; */
-  font-family: 'gfitfont-bold';
+	/* font-size: 1vw; */
+	font-family: 'gfitfont-bold';
 }
 
 .subscriptionModalBody {
-  text-align: center;
+	text-align: center;
 }
 
 #subscriptionModalBodyDetails {
-  width: 100%;
-  margin: 0 auto;
+	width: 100%;
+	margin: 0 auto;
 }
 
 .subscriptionModalBodyInfo {
-  margin: 0 auto;
+	margin: 0 auto;
 }
 
 .subscriptionModalBodyColumn1 {
-  text-align: center
+	text-align: center;
 }
 
 .userSubscriptionButton {
-  width: 100%;
-  background-color: #FAC04E;
+	width: 100%;
+	background-color: #fac04e;
 }
 
 .cancelSubscriptionButton {
-  width: 100%;
+	width: 100%;
 }
 
 #manageUserConvergeLightbox {
-  display: none;
-  width: 100%;
-  margin: auto;
+	display: none;
+	width: 100%;
+	margin: auto;
 }
 
 #txnDetailsButton {
-  margin: 0 auto;
-  margin-top: 5%;
+	margin: 0 auto;
+	margin-top: 5%;
 }
 
 .inactiveSubscriptionDetails {
-  color: black;
+	color: black;
 }
-
 
 /* ----------- iPhones ----------- */
 
 /* ----------- iPhone 4 and 4S ----------- */
 
 /* Portrait and Landscape */
-@media only screen 
-  and (min-device-width: 320px) 
-  and (max-device-width: 480px)
-  and (-webkit-min-device-pixel-ratio: 2) {
-
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
 }
 
 /* Portrait */
-@media only screen 
-  and (min-device-width: 320px) 
-  and (max-device-width: 480px)
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (orientation: portrait) {
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
 }
 
 /* Landscape */
-@media only screen 
-  and (min-device-width: 320px) 
-  and (max-device-width: 480px)
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (orientation: landscape) {
-
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
 }
 
 /* ----------- iPhone 5, 5S, 5C and 5SE ----------- */
 
 /* Portrait and Landscape */
-@media only screen 
-  and (min-device-width: 320px) 
-  and (max-device-width: 568px)
-  and (-webkit-min-device-pixel-ratio: 2) {
-
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
 }
 
 /* Portrait */
-@media only screen 
-  and (min-device-width: 320px) 
-  and (max-device-width: 568px)
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (orientation: portrait) {
-    #userPage {
-      width: 100vw;
-    }
-    #signUpPage {
-        width: 100%;
-        margin: 0 auto;
-        /* margin-bottom: 80%; */
-        /* padding: 5%; */
-        text-align: center;
-        background-color: transparent;
-        margin-bottom: calc(100vh - 510px);
-    }
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+	#userPage {
+		width: 100vw;
+	}
+	#signUpPage {
+		width: 100%;
+		margin: 0 auto;
+		/* margin-bottom: 80%; */
+		/* padding: 5%; */
+		text-align: center;
+		background-color: transparent;
+		margin-bottom: calc(100vh - 510px);
+	}
 
-    .signupWrap {
-        margin-top: 7%;
-    }
-    
-    #userPage {
-        /* margin-top: 20%; */
-        margin-bottom: 40%;
-    }
-    .scheduleFormContainer {
-        width: 80%;
-        margin: 0 auto;
-    }
-    
-    .scheduleTable {
-        width: 90% !important;
-        margin: 0 auto !important;
-        /* margin-left: 0 !important; */
-        /* margin-right: 0; */
-        border-bottom: 2px solid #FAC04E !important;
-        padding-bottom: 50px;
-    }
+	.signupWrap {
+		margin-top: 7%;
+	}
 
-    .scheduleTable .rt-table {
-        min-width: 100% !important;
-    }
+	#userPage {
+		/* margin-top: 20%; */
+		margin-bottom: 40%;
+	}
+	.scheduleFormContainer {
+		width: 80%;
+		margin: 0 auto;
+	}
 
-    .scheduleTable .rt-thead {
-        min-width: 100% !important;
-    }
+	.scheduleTable {
+		width: 90% !important;
+		margin: 0 auto !important;
+		/* margin-left: 0 !important; */
+		/* margin-right: 0; */
+		border-bottom: 2px solid #fac04e !important;
+		padding-bottom: 50px;
+	}
 
-    .scheduleTable .rt-tbody {
-        min-width: 100% !important;
-    }
-    
-    .scheduleTable .rt-td {
-        white-space: pre-wrap !important;
-        color: white;
-        font-size: 3vw;
-        width: 50%;
-    }
-    
-    .scheduleHeaders {
-        font-size: 5vw;
-        color: #FAC04E
-    }
-    .scheduleFormSelectors {
-        margin-top: 7%;
-    }
+	.scheduleTable .rt-table {
+		min-width: 100% !important;
+	}
 
-    #userProfilePage, #videoLibraryPage {
-      margin-top: 0;
-    }
+	.scheduleTable .rt-thead {
+		min-width: 100% !important;
+	}
 
-    .userProfileHeading, .videoLibraryForm-heading, .messageBoardTitle {
-      font-size: 10vw;
-      padding-top: 2vw;
-      padding-bottom: 5vw;
-      margin-bottom: 1vw;
-      margin-top: 2vw;
-    }
+	.scheduleTable .rt-tbody {
+		min-width: 100% !important;
+	}
 
-    .MuiAccordionSummary-content .MuiTypography-body1 {
-      font-size: 3.1vw;
-    }
+	.scheduleTable .rt-td {
+		white-space: pre-wrap !important;
+		color: white;
+		font-size: 3vw;
+		width: 50%;
+	}
 
-    
-    
-    
+	.scheduleHeaders {
+		font-size: 5vw;
+		color: #fac04e;
+	}
+	.scheduleFormSelectors {
+		margin-top: 7%;
+	}
+
+	#userProfilePage,
+	#videoLibraryPage {
+		margin-top: 0;
+	}
+
+	.userProfileHeading,
+	.videoLibraryForm-heading,
+	.messageBoardTitle {
+		font-size: 10vw;
+		padding-top: 2vw;
+		padding-bottom: 5vw;
+		margin-bottom: 1vw;
+		margin-top: 2vw;
+	}
+
+	.MuiAccordionSummary-content .MuiTypography-body1 {
+		font-size: 3.1vw;
+	}
 }
 
 /* Landscape */
-@media only screen 
-  and (min-device-width: 320px) 
-  and (max-device-width: 568px)
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (orientation: landscape) {
-    .userNavTabIcon {
-      font-size: 5vw;
-    }
-    .userProfileHeading, .videoLibraryForm-heading, .messageBoardTitle {
-      font-size: 6vw;
-      padding-top: 2vw;
-      padding-bottom: 5vw;
-      margin-bottom: 1vw;
-      margin-top: 2vw;
-    }
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+	.userNavTabIcon {
+		font-size: 5vw;
+	}
+	.userProfileHeading,
+	.videoLibraryForm-heading,
+	.messageBoardTitle {
+		font-size: 6vw;
+		padding-top: 2vw;
+		padding-bottom: 5vw;
+		margin-bottom: 1vw;
+		margin-top: 2vw;
+	}
 
-    #showHideFilterButton {
-      margin-bottom: 1vw;
-    }
-    
+	#showHideFilterButton {
+		margin-bottom: 1vw;
+	}
 }
 
 /* ----------- iPhone 6, 6S, 7 and 8 ----------- */
 
 /* Portrait and Landscape */
-@media only screen 
-  and (min-device-width: 375px) 
-  and (max-device-width: 667px) 
-  and (-webkit-min-device-pixel-ratio: 2) { 
-
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
 }
 
 /* Portrait */
-@media only screen 
-  and (min-device-width: 375px) 
-  and (max-device-width: 667px) 
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (orientation: portrait) { 
-    
-
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
 }
 
 /* Landscape */
-@media only screen 
-  and (min-device-width: 375px) 
-  and (max-device-width: 667px) 
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (orientation: landscape) { 
-    .userProfileHeading, .videoLibraryForm-heading, .messageBoardTitle {
-      font-size: 6vw;
-      padding-top: 2vw;
-      padding-bottom: 5vw;
-      margin-bottom: 1vw;
-      margin-top: 2vw;
-    }
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+	.userProfileHeading,
+	.videoLibraryForm-heading,
+	.messageBoardTitle {
+		font-size: 6vw;
+		padding-top: 2vw;
+		padding-bottom: 5vw;
+		margin-bottom: 1vw;
+		margin-top: 2vw;
+	}
 }
-
-
 
 /* ----------- iPhone X ----------- */
 
 /* Portrait and Landscape */
-@media only screen 
-  and (min-device-width: 375px) 
-  and (max-device-width: 812px) 
-  and (-webkit-min-device-pixel-ratio: 3) { 
-
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
 }
 
 /* Portrait */
-@media only screen 
-  and (min-device-width: 375px) 
-  and (max-device-width: 812px) 
-  and (-webkit-min-device-pixel-ratio: 3)
-  and (orientation: portrait) { 
-    #userPage {
-        /* margin-top: 25%; */
-        height: 500px;
-    }
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: portrait) {
+	#userPage {
+		/* margin-top: 25%; */
+		height: 500px;
+	}
 
-    #userProfilePage, #videoLibraryPage {
-      margin-top: 0;
-    }
+	#userProfilePage,
+	#videoLibraryPage {
+		margin-top: 0;
+	}
 
-    .userProfileHeading, .videoLibraryForm-heading, .messageBoardTitle {
-      font-size: 10vw;
-      padding-top: 2vw;
-      padding-bottom: 5vw;
-      margin-bottom: 1vw;
-      margin-top: 2vw;
-    }
+	.userProfileHeading,
+	.videoLibraryForm-heading,
+	.messageBoardTitle {
+		font-size: 10vw;
+		padding-top: 2vw;
+		padding-bottom: 5vw;
+		margin-bottom: 1vw;
+		margin-top: 2vw;
+	}
 
-    .MuiAccordionSummary-content .MuiTypography-body1 {
-      font-size: 3.1vw;
-    }
-
-    
+	.MuiAccordionSummary-content .MuiTypography-body1 {
+		font-size: 3.1vw;
+	}
 }
 
 /* Landscape */
-@media only screen 
-  and (min-device-width: 375px) 
-  and (max-device-width: 812px) 
-  and (-webkit-min-device-pixel-ratio: 3)
-  and (orientation: landscape) { 
-    .userProfileHeading, .videoLibraryForm-heading, .messageBoardTitle {
-      font-size: 6vw;
-      padding-top: 2vw;
-      padding-bottom: 5vw;
-      margin-bottom: 1vw;
-      margin-top: 2vw;
-    }
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {
+	.userProfileHeading,
+	.videoLibraryForm-heading,
+	.messageBoardTitle {
+		font-size: 6vw;
+		padding-top: 2vw;
+		padding-bottom: 5vw;
+		margin-bottom: 1vw;
+		margin-top: 2vw;
+	}
 }
 
 /* ----------- iPhone 6+, 7+ and 8+ ----------- */
 
 /* Portrait and Landscape */
-@media only screen 
-  and (min-device-width: 414px) 
-  and (max-device-width: 736px) 
-  and (-webkit-min-device-pixel-ratio: 3) { 
-
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) {
 }
 
 /* Portrait */
-@media only screen 
-  and (min-device-width: 414px) 
-  and (max-device-width: 736px) 
-  and (-webkit-min-device-pixel-ratio: 3)
-  and (orientation: portrait) { 
-    #userPage {
-        /* margin-top: 20%; */
-    }
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: portrait) {
+	#userPage {
+		/* margin-top: 20%; */
+	}
 }
 
 /* Landscape */
-@media only screen 
-  and (min-device-width: 414px) 
-  and (max-device-width: 736px) 
-  and (-webkit-min-device-pixel-ratio: 3)
-  and (orientation: landscape) { 
-    .userProfileHeading, .videoLibraryForm-heading, .messageBoardTitle {
-      font-size: 6vw;
-      padding-top: 2vw;
-      padding-bottom: 5vw;
-      margin-bottom: 1vw;
-      margin-top: 2vw;
-    }
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {
+	.userProfileHeading,
+	.videoLibraryForm-heading,
+	.messageBoardTitle {
+		font-size: 6vw;
+		padding-top: 2vw;
+		padding-bottom: 5vw;
+		margin-bottom: 1vw;
+		margin-top: 2vw;
+	}
 }
-
-
-
 
 /* ----------- iPads ----------- */
 
 /* ----------- iPad 1, 2, Mini and Air ----------- */
 
 /* Portrait and Landscape */
-@media only screen 
-  and (min-device-width: 768px) 
-  and (max-device-width: 1024px) 
-  and (-webkit-min-device-pixel-ratio: 1) {
-
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
 }
 
 /* Portrait */
-@media only screen 
-  and (min-device-width: 768px) 
-  and (max-device-width: 1024px) 
-  and (orientation: portrait) 
-  and (-webkit-min-device-pixel-ratio: 1) {
-    .userProfileAccordionSummary {
-      height: 20vw;
-    }
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
+	.userProfileAccordionSummary {
+		height: 20vw;
+	}
 
-    .MuiAccordionSummary-content .MuiTypography-body1 {
-      font-size: 3vw;
-    }
+	.MuiAccordionSummary-content .MuiTypography-body1 {
+		font-size: 3vw;
+	}
 
-    .MuiAccordionSummary-content .makeStyles-secondaryHeading-9 {
-      margin: 0 auto;
-    }
+	.MuiAccordionSummary-content .makeStyles-secondaryHeading-9 {
+		margin: 0 auto;
+	}
 
-    #userProfilePage, #videoLibraryPage {
-      margin-top: 0;
-    }
+	#userProfilePage,
+	#videoLibraryPage {
+		margin-top: 0;
+	}
 
-    .userProfileHeading, .videoLibraryForm-heading, .messageBoardTitle {
-      font-size: 10vw;
-      padding-top: 2vw;
-      padding-bottom: 5vw;
-      margin-bottom: 1vw;
-      margin-top: 2vw;
-    }
-
-    
+	.userProfileHeading,
+	.videoLibraryForm-heading,
+	.messageBoardTitle {
+		font-size: 10vw;
+		padding-top: 2vw;
+		padding-bottom: 5vw;
+		margin-bottom: 1vw;
+		margin-top: 2vw;
+	}
 }
 
 /* Landscape */
-@media only screen 
-  and (min-device-width: 768px) 
-  and (max-device-width: 1024px) 
-  and (orientation: landscape) 
-  and (-webkit-min-device-pixel-ratio: 1) {
-    .userProfileHeading, .videoLibraryForm-heading, .messageBoardTitle {
-      font-size: 6vw;
-      padding-top: 2vw;
-      padding-bottom: 5vw;
-      margin-bottom: 1vw;
-      margin-top: 2vw;
-    }
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
+	.userProfileHeading,
+	.videoLibraryForm-heading,
+	.messageBoardTitle {
+		font-size: 6vw;
+		padding-top: 2vw;
+		padding-bottom: 5vw;
+		margin-bottom: 1vw;
+		margin-top: 2vw;
+	}
 }
 
 /* ----------- iPad 3, 4 and Pro 9.7" ----------- */
 
 /* Portrait and Landscape */
-@media only screen 
-  and (min-device-width: 768px) 
-  and (max-device-width: 1024px) 
-  and (-webkit-min-device-pixel-ratio: 2) {
-
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {
 }
 
 /* Portrait */
-@media only screen 
-  and (min-device-width: 768px) 
-  and (max-device-width: 1024px) 
-  and (orientation: portrait) 
-  and (-webkit-min-device-pixel-ratio: 2) {
-    #signUpPage {
-        width: 80%;
-        margin: 0 auto;
-        /* margin-bottom: 80%; */
-        /* padding: 5%; */
-        text-align: center;
-        background-color: transparent;
-        margin-bottom: calc(100vh - 510px);
-    }
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+	#signUpPage {
+		width: 80%;
+		margin: 0 auto;
+		/* margin-bottom: 80%; */
+		/* padding: 5%; */
+		text-align: center;
+		background-color: transparent;
+		margin-bottom: calc(100vh - 510px);
+	}
 
-    .signupWrap {
-        margin-top: 7%;
-    }
-    
-    #userPage {
-        /* margin-top: 20%; */
-        position: relative;
-        top: 0;
-        margin-bottom: 40%;
-    }
-    .scheduleFormContainer {
-        width: 80%;
-        margin: 0 auto;
-    }
-    
-    .scheduleTable {
-        width: 100% !important;
-        margin: 0 auto !important;
-        margin-left: 0 !important;
-        margin-right: 0;
-        border-bottom: 2px solid #FAC04E !important;
-        padding-bottom: 50px;
-    }
+	.signupWrap {
+		margin-top: 7%;
+	}
 
-    .scheduleTable .rt-table {
-        min-width: 100% !important;
-    }
+	#userPage {
+		/* margin-top: 20%; */
+		position: relative;
+		top: 0;
+		margin-bottom: 40%;
+	}
+	.scheduleFormContainer {
+		width: 80%;
+		margin: 0 auto;
+	}
 
-    .scheduleTable .rt-thead {
-        min-width: 100% !important;
-    }
+	.scheduleTable {
+		width: 100% !important;
+		margin: 0 auto !important;
+		margin-left: 0 !important;
+		margin-right: 0;
+		border-bottom: 2px solid #fac04e !important;
+		padding-bottom: 50px;
+	}
 
-    .scheduleTable .rt-tbody {
-        min-width: 100% !important;
-    }
-    
-    .scheduleTable .rt-td {
-        white-space: pre-wrap !important;
-        color: white;
-        font-size: 3vw;
-        width: 50%;
-    }
-    
-    .scheduleHeaders {
-        font-size: 5vw;
-        color: #FAC04E
-    }
-    .scheduleFormSelectors {
-        margin-top: 7% !important;
-    }
-    
-    
-    
+	.scheduleTable .rt-table {
+		min-width: 100% !important;
+	}
+
+	.scheduleTable .rt-thead {
+		min-width: 100% !important;
+	}
+
+	.scheduleTable .rt-tbody {
+		min-width: 100% !important;
+	}
+
+	.scheduleTable .rt-td {
+		white-space: pre-wrap !important;
+		color: white;
+		font-size: 3vw;
+		width: 50%;
+	}
+
+	.scheduleHeaders {
+		font-size: 5vw;
+		color: #fac04e;
+	}
+	.scheduleFormSelectors {
+		margin-top: 7% !important;
+	}
 }
 
 /* Landscape */
-@media only screen 
-  and (min-device-width: 768px) 
-  and (max-device-width: 1024px) 
-  and (orientation: landscape) 
-  and (-webkit-min-device-pixel-ratio: 2) {
-    .userProfileHeading, .videoLibraryForm-heading, .messageBoardTitle {
-      font-size: 6vw;
-      padding-top: 2vw;
-      padding-bottom: 5vw;
-      margin-bottom: 1vw;
-      margin-top: 2vw;
-    }
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+	.userProfileHeading,
+	.videoLibraryForm-heading,
+	.messageBoardTitle {
+		font-size: 6vw;
+		padding-top: 2vw;
+		padding-bottom: 5vw;
+		margin-bottom: 1vw;
+		margin-top: 2vw;
+	}
 }
 
 /* ----------- iPad Pro 10.5" ----------- */
 
 /* Portrait and Landscape */
-@media only screen 
-  and (min-device-width: 834px) 
-  and (max-device-width: 1112px)
-  and (-webkit-min-device-pixel-ratio: 2) {
-
+@media only screen and (min-device-width: 834px) and (max-device-width: 1112px) and (-webkit-min-device-pixel-ratio: 2) {
 }
 
 /* Portrait */
 /* Declare the same value for min- and max-width to avoid colliding with desktops */
 /* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
-@media only screen 
-  and (min-device-width: 834px) 
-  and (max-device-width: 834px) 
-  and (orientation: portrait) 
-  and (-webkit-min-device-pixel-ratio: 2) {
-
+@media only screen and (min-device-width: 834px) and (max-device-width: 834px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
 }
 
 /* Landscape */
 /* Declare the same value for min- and max-width to avoid colliding with desktops */
 /* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
-@media only screen 
-  and (min-device-width: 1112px) 
-  and (max-device-width: 1112px) 
-  and (orientation: landscape) 
-  and (-webkit-min-device-pixel-ratio: 2) {
-    .userProfileHeading, .videoLibraryForm-heading, .messageBoardTitle {
-      font-size: 6vw;
-      padding-top: 2vw;
-      padding-bottom: 5vw;
-      margin-bottom: 1vw;
-      margin-top: 2vw;
-    }
+@media only screen and (min-device-width: 1112px) and (max-device-width: 1112px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+	.userProfileHeading,
+	.videoLibraryForm-heading,
+	.messageBoardTitle {
+		font-size: 6vw;
+		padding-top: 2vw;
+		padding-bottom: 5vw;
+		margin-bottom: 1vw;
+		margin-top: 2vw;
+	}
 }
 
 /* ----------- iPad Pro 12.9" ----------- */
 
 /* Portrait and Landscape */
-@media only screen 
-  and (min-device-width: 1024px) 
-  and (max-device-width: 1366px)
-  and (-webkit-min-device-pixel-ratio: 2) {
-    
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) {
 }
 
 /* Portrait */
 /* Declare the same value for min- and max-width to avoid colliding with desktops */
 /* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
-@media only screen 
-  and (min-device-width: 1024px) 
-  and (max-device-width: 1024px) 
-  and (orientation: portrait) 
-  and (-webkit-min-device-pixel-ratio: 2) {
-    
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
 }
 
 /* Landscape */
 /* Declare the same value for min- and max-width to avoid colliding with desktops */
 /* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
-@media only screen 
-  and (min-device-width: 1366px) 
-  and (max-device-width: 1366px) 
-  and (orientation: landscape) 
-  and (-webkit-min-device-pixel-ratio: 2) {
-    .userProfileHeading, .videoLibraryForm-heading, .messageBoardTitle {
-      font-size: 6vw;
-      padding-top: 2vw;
-      padding-bottom: 5vw;
-      margin-bottom: 1vw;
-      margin-top: 2vw;
-    }
+@media only screen and (min-device-width: 1366px) and (max-device-width: 1366px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+	.userProfileHeading,
+	.videoLibraryForm-heading,
+	.messageBoardTitle {
+		font-size: 6vw;
+		padding-top: 2vw;
+		padding-bottom: 5vw;
+		margin-bottom: 1vw;
+		margin-top: 2vw;
+	}
 
-    .MuiAccordionSummary-content .MuiTypography-body1 {
-      font-size: 2.1vw;
-    }
+	.MuiAccordionSummary-content .MuiTypography-body1 {
+		font-size: 2.1vw;
+	}
 
-    .userProfileAccordionDetails {
-      font-size: 1.5vw;
-    }
+	.userProfileAccordionDetails {
+		font-size: 1.5vw;
+	}
 }
 
 /* ----------- LAPTOPS ----------- */
-
 
 /* ----------- Non-Retina Screens ----------- */
 /* @media screen  
@@ -797,192 +684,62 @@
   
 } */
 
-@media screen  
-  and (min-device-width: 700px)
-  and (max-device-width: 1600px) 
-  and (-webkit-min-device-pixel-ratio: 1) { 
-    
+@media screen and (min-device-width: 700px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
 }
 
-@media screen 
-  and (min-device-width: 1600px) 
-  and (max-device-width: 2000px) 
-  and (-webkit-min-device-pixel-ratio: 1) { 
-    
+@media screen and (min-device-width: 1600px) and (max-device-width: 2000px) and (-webkit-min-device-pixel-ratio: 1) {
 }
 
-@media screen 
-  and (min-device-width: 2001px) 
-  and (max-device-width: 3000px) 
-  and (-webkit-min-device-pixel-ratio: 1) { 
-    
-    
+@media screen and (min-device-width: 2001px) and (max-device-width: 3000px) and (-webkit-min-device-pixel-ratio: 1) {
 }
 
-@media screen 
-  and (min-device-width: 2001px) 
-  and (max-device-width: 2100px) 
-  and (-webkit-min-device-pixel-ratio: 1) { 
-    
-    
+@media screen and (min-device-width: 2001px) and (max-device-width: 2100px) and (-webkit-min-device-pixel-ratio: 1) {
 }
-@media screen 
-  and (min-device-width: 2101px) 
-  and (max-device-width: 2200px) 
-  and (-webkit-min-device-pixel-ratio: 1) { 
-   
-    
+@media screen and (min-device-width: 2101px) and (max-device-width: 2200px) and (-webkit-min-device-pixel-ratio: 1) {
 }
-@media screen 
-  and (min-device-width: 2201px) 
-  and (max-device-width: 2300px) 
-  and (-webkit-min-device-pixel-ratio: 1) { 
-   
+@media screen and (min-device-width: 2201px) and (max-device-width: 2300px) and (-webkit-min-device-pixel-ratio: 1) {
 }
-@media screen 
-  and (min-device-width: 2301px) 
-  and (max-device-width: 2400px) 
-  and (-webkit-min-device-pixel-ratio: 1) { 
-    
+@media screen and (min-device-width: 2301px) and (max-device-width: 2400px) and (-webkit-min-device-pixel-ratio: 1) {
 }
-@media screen 
-  and (min-device-width: 2401px) 
-  and (max-device-width: 2500px) 
-  and (-webkit-min-device-pixel-ratio: 1) { 
-    
-    
+@media screen and (min-device-width: 2401px) and (max-device-width: 2500px) and (-webkit-min-device-pixel-ratio: 1) {
 }
-@media screen 
-  and (min-device-width: 2501px) 
-  and (max-device-width: 2600px) 
-  and (-webkit-min-device-pixel-ratio: 1) { 
-
+@media screen and (min-device-width: 2501px) and (max-device-width: 2600px) and (-webkit-min-device-pixel-ratio: 1) {
 }
-@media screen 
-  and (min-device-width: 2601px) 
-  and (max-device-width: 2700px) 
-  and (-webkit-min-device-pixel-ratio: 1) {
-
-    
+@media screen and (min-device-width: 2601px) and (max-device-width: 2700px) and (-webkit-min-device-pixel-ratio: 1) {
 }
-@media screen 
-  and (min-device-width: 2701px) 
-  and (max-device-width: 2800px) 
-  and (-webkit-min-device-pixel-ratio: 1) { 
-
-    
+@media screen and (min-device-width: 2701px) and (max-device-width: 2800px) and (-webkit-min-device-pixel-ratio: 1) {
 }
-@media screen 
-  and (min-device-width: 2801px) 
-  and (max-device-width: 2900px) 
-  and (-webkit-min-device-pixel-ratio: 1) { 
- 
-    
+@media screen and (min-device-width: 2801px) and (max-device-width: 2900px) and (-webkit-min-device-pixel-ratio: 1) {
 }
-@media screen 
-  and (min-device-width: 2901px) 
-  and (max-device-width: 3000px) 
-  and (-webkit-min-device-pixel-ratio: 1) { 
-    
+@media screen and (min-device-width: 2901px) and (max-device-width: 3000px) and (-webkit-min-device-pixel-ratio: 1) {
 }
 
 /* ----------- Retina Screens ----------- */
-@media screen 
-  and (min-device-width: 700px) 
-  and (max-device-width: 1600px) 
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (min-resolution: 192dpi) { 
-   
+@media screen and (min-device-width: 700px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) {
 }
 
-@media screen 
-  and (min-device-width: 1600px) 
-  and (max-device-width: 2000px) 
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (min-resolution: 192dpi) { 
-
+@media screen and (min-device-width: 1600px) and (max-device-width: 2000px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) {
 }
-@media screen 
-  and (min-device-width: 2001px) 
-  and (max-device-width: 3000px) 
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (min-resolution: 192dpi) { 
-    
+@media screen and (min-device-width: 2001px) and (max-device-width: 3000px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) {
 }
 
-@media screen 
-  and (min-device-width: 2001px) 
-  and (max-device-width: 2100px) 
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (min-resolution: 192dpi) { 
-    
-    
+@media screen and (min-device-width: 2001px) and (max-device-width: 2100px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) {
 }
-@media screen 
-  and (min-device-width: 2101px) 
-  and (max-device-width: 2200px) 
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (min-resolution: 192dpi) { 
-   
-    
+@media screen and (min-device-width: 2101px) and (max-device-width: 2200px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) {
 }
-@media screen 
-  and (min-device-width: 2201px) 
-  and (max-device-width: 2300px) 
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (min-resolution: 192dpi) { 
-   
+@media screen and (min-device-width: 2201px) and (max-device-width: 2300px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) {
 }
-@media screen 
-  and (min-device-width: 2301px) 
-  and (max-device-width: 2400px) 
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (min-resolution: 192dpi) { 
-    
+@media screen and (min-device-width: 2301px) and (max-device-width: 2400px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) {
 }
-@media screen 
-  and (min-device-width: 2401px) 
-  and (max-device-width: 2500px) 
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (min-resolution: 192dpi) { 
-    
-    
+@media screen and (min-device-width: 2401px) and (max-device-width: 2500px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) {
 }
-@media screen 
-  and (min-device-width: 2501px) 
-  and (max-device-width: 2600px) 
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (min-resolution: 192dpi) { 
-
+@media screen and (min-device-width: 2501px) and (max-device-width: 2600px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) {
 }
-@media screen 
-  and (min-device-width: 2601px) 
-  and (max-device-width: 2700px) 
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (min-resolution: 192dpi) {
-
-    
+@media screen and (min-device-width: 2601px) and (max-device-width: 2700px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) {
 }
-@media screen 
-  and (min-device-width: 2701px) 
-  and (max-device-width: 2800px) 
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (min-resolution: 192dpi) { 
-
-    
+@media screen and (min-device-width: 2701px) and (max-device-width: 2800px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) {
 }
-@media screen 
-  and (min-device-width: 2801px) 
-  and (max-device-width: 2900px) 
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (min-resolution: 192dpi) { 
- 
-    
+@media screen and (min-device-width: 2801px) and (max-device-width: 2900px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) {
 }
-@media screen 
-  and (min-device-width: 2901px) 
-  and (max-device-width: 3000px) 
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (min-resolution: 192dpi) { 
-    
+@media screen and (min-device-width: 2901px) and (max-device-width: 3000px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) {
 }

@@ -48,38 +48,41 @@ class Footer extends Component {
 
     render() {                                                          
         return (
-          <div className="footerLanding">
-            <Row className='footerRow'>
-                <Col className='footerBrand'>
-                  {/* <Row> */}
-                    <span className='footerLogoDiv'>
-                      <img src={logo} className="footerLogo" alt="Gouveia Fitness Footer Logo" />
-                    </span>
-                    <span className='footerTitleDiv'>
-                      <h2 className='footerTitle'>GOUVEIA FITNESS</h2>
-                    </span>
-                  {/* </Row> */}
-                </Col>
-                <Col className='footerInfo'>
-                  <Row className='footerAddress'>
-                    <p>18515 OLD STATESVILLE ROAD, CORNELIUS, NC 28031</p>
-                  </Row>
-                  <Row className='footerDisclaimer'>
-                    <p>All material copyright 2020 Gouveia Fitness, LLC, Use only with permission.</p>
-                  </Row>
-                </Col>
-                <Col className='footerSocial'>
-                  <a href='https://goo.gl/maps/C1jpxUZfzX1wt42D8' target='_blank' rel='noopener noreferrer' aria-label="Google Maps">
-                    <i className="fas fa-map-marker-alt footerIcon"></i>
-                  </a>
-                  <a href='https://www.instagram.com/gfitwefit/?hl=en' target='_blank' rel='noopener noreferrer' aria-label="Instagram">
-                    <i className="fab fa-instagram footerIcon"></i>
-                  </a>
-                  <a href='https://www.facebook.com/gfitwefit/' target='_blank' rel='noopener noreferrer' aria-label="Facebook">
-                    <i className="fab fa-facebook-square footerIcon"></i>
-                  </a>
-                </Col>
-            </Row>
+          <div className="footerLandingPage">
+            {/* <Row className='footerRow'> */}
+                <div className='footerTopRow'>
+                    <div className='footerDetailsDiv'>
+                      <p className='footerDetailsAddress'>18515 OLD STATESVILLE ROAD, CORNELIUS, NC 28031</p>
+                      <p className='footerDetailsCopyright'>All material copyright 2020 Gouveia Fitness, LLC, Use only with permission.</p>
+                    </div>
+                </div>
+                <div className='footerBottomRow'>
+                  {/* <div className='footerBrandCol'> */}
+                      <div className='footerLogoSpan'>
+                        <img src={logo} className="footerIconLogo" alt="Gouveia Fitness Footer Logo" />
+                        <h2 className='footerIconTitle'>GOUVEIA FITNESS</h2>
+                      </div>
+                  {/* </div> */}
+                  <div className='footerSocialCol'>
+                    <div className='footerSocialDiv'>
+                      <a href='https://goo.gl/maps/C1jpxUZfzX1wt42D8' target='_blank' rel='noopener noreferrer' aria-label="Google Maps">
+                        <i className="fas fa-map-marker-alt footerIcon"></i>
+                      </a>
+                    </div>
+                    <div className='footerSocialDiv'>
+                      <a href='https://www.instagram.com/gfitwefit/?hl=en' target='_blank' rel='noopener noreferrer' aria-label="Instagram">
+                        <i className="fab fa-instagram footerIcon"></i>
+                      </a>
+                    </div>
+                    <div className='footerSocialDiv'>
+                      <a href='https://www.facebook.com/gfitwefit/' target='_blank' rel='noopener noreferrer' aria-label="Facebook">
+                        <i className="fab fa-facebook-square footerIcon"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                
+            {/* </Row> */}
           </div>
         )
     }

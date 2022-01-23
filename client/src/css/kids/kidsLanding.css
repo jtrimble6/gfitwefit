@@ -1,0 +1,518 @@
+@font-face {
+	font-family: 'gfitfont';
+	font-style: normal;
+	font-weight: bolder;
+	src: local('gfitfont'), url('../fonts/gfitfont.ttf'), url('../fonts/gfitfont.woff'), format('truetype');
+}
+@font-face {
+	font-family: 'gfitfont-bold';
+	font-style: normal;
+	font-weight: bolder;
+	src: local('gfitfontBold'), url('../fonts/gfitfontBold.ttf'), url('../fonts/gfitfontBold.woff') format('truetype');
+}
+
+.kidsLanding {
+	min-height: 90vh;
+	background-color: black;
+	padding: 5vw;
+	/* margin-top: 8vh; */
+}
+
+.kidsLandingTitle {
+	font-family: 'gfitfont-bold', Times, serif;
+	padding-left: 15px;
+	margin-bottom: 3%;
+}
+
+.kidsLandingTitleLeft {
+	font-size: 2.5rem;
+	letter-spacing: 3px;
+	color: white;
+	font-weight: bolder;
+}
+
+.kidsLandingTitleRight {
+	font-size: 2.5rem;
+	letter-spacing: 3px;
+	color: #fac04e;
+	font-weight: bolder;
+}
+
+.kidsLandingBodyRow {
+	font-family: 'Arial';
+	font-size: 1.3vw;
+	font-weight: bold;
+	color: white;
+}
+
+.kidsLandingBody {
+	font-size: 1.5rem;
+}
+
+.kidsLandingScheduleHeader {
+	font-family: 'gfitfont-bold';
+	font-size: 1.5rem;
+	color: #fac04e;
+	margin-bottom: 1vh;
+}
+
+.kidsLandingScheduleText {
+	font-family: 'Arial';
+	margin-left: 2vw;
+	font-size: 1.5rem;
+}
+
+.kidsLandingPrice {
+	font-size: 1.2rem;
+	color: #fac04e;
+}
+
+.kidsRegisterRow {
+	width: 100%;
+}
+
+.kidsRegisterButton {
+	background-color: #fac04e;
+	border-color: #000000;
+	color: #000000;
+	min-width: 20vw;
+	margin-left: 5%;
+	font-family: 'gfitfont-bold';
+	font-size: 1.5rem;
+}
+
+.kidsRegisterButton:hover {
+	background-color: white;
+	border-color: #000000;
+	color: #000000;
+}
+
+.kidsRegisterButton:focus {
+	background-color: white;
+	border-color: #000000;
+	color: #000000;
+	box-shadow: 0 0 0 0.2rem #fac04e;
+}
+
+/* ----------- iPhone 5, 5S, 5C and 5SE ----------- */
+
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+	.kidsLandingTitleLeft,
+	.kidsLandingTitleRight {
+		font-size: 1.2rem;
+		letter-spacing: 0rem;
+	}
+
+	.kidsLandingBody {
+		font-size: 1rem;
+	}
+
+	.kidsLandingScheduleHeader,
+	.kidsLandingScheduleText {
+		font-size: 1rem;
+	}
+
+	.kidsRegisterButton {
+		font-size: 1rem;
+		margin-left: 10vw;
+	}
+}
+
+/* Portrait */
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+	.kidsLanding {
+		min-height: 90vh;
+		padding: 10%;
+	}
+
+	.kidsLandingTitle {
+		padding-left: 15px;
+		margin-bottom: 3%;
+		margin-top: 0vh;
+	}
+
+	.kidsLandingTitleLeft {
+		font-size: 1rem;
+		letter-spacing: 1px;
+		color: white;
+		font-weight: bolder;
+	}
+
+	.kidsLandingTitleRight {
+		font-size: 1rem;
+		letter-spacing: 1px;
+		color: #fac04e;
+		font-weight: bolder;
+	}
+
+	.kidsLandingBody,
+	.kidsLandingScheduleText {
+		font-size: 0.9rem;
+	}
+
+	.kidsLandingPrice {
+		font-size: 1rem;
+	}
+}
+
+/* Landscape */
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+	.kidsLanding {
+		padding: 5vw;
+		padding-top: 5vh;
+	}
+	.kidsLandingTitle {
+		margin-bottom: 1vh;
+	}
+	.kidsLandingBody,
+	.kidsLandingScheduleText {
+		margin-bottom: 2vh;
+		font-size: 0.8rem;
+	}
+
+	.kidsLandingTitleLeft,
+	.kidsLandingTitleRight {
+		margin-bottom: 1vh;
+	}
+
+	.kidsLandingScheduleHeader {
+		font-size: 0.8rem;
+	}
+
+	.kidsLandingPrice {
+		font-size: 0.8rem;
+		margin-bottom: 1vh;
+	}
+
+	.kidsRegisterButton {
+		font-size: 0.8rem;
+	}
+}
+
+/* ----------- iPhone 6, 6S, 7 and 8 ----------- */
+
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
+}
+
+/* Portrait */
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+	.kidsLandingBody,
+	.kidsLandingScheduleText {
+		font-size: 1rem;
+	}
+
+	.kidsLandingScheduleHeader {
+		font-size: 1.1rem;
+	}
+}
+
+/* Landscape */
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+	.kidsLanding {
+		padding: 5vw;
+		padding-top: 5vh;
+	}
+	.kidsLandingTitle {
+		margin-bottom: 1vh;
+	}
+	.kidsLandingTitleLeft,
+	.kidsLandingTitleRight {
+		font-size: 1.1rem;
+		letter-spacing: 0.1rem;
+	}
+
+	.kidsLandingBody {
+		font-size: 0.8rem;
+	}
+
+	.kidsLandingScheduleHeader,
+	.kidsLandingScheduleText {
+		font-size: 0.9rem;
+	}
+
+	.kidsLandingPrice {
+		font-size: 0.9rem;
+		margin-bottom: 2vh;
+	}
+
+	.kidsRegisterButton {
+		font-size: 0.9rem;
+	}
+}
+
+/* ----------- iPhone 6+, 7+ and 8+ ----------- */
+
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) {
+}
+
+/* Portrait */
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: portrait) {
+}
+
+/* Landscape */
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {
+	.kidsLanding {
+		padding: 5vw;
+	}
+	.kidsLandingTitle {
+		margin-bottom: 1vh;
+	}
+	.kidsLandingTitleLeft,
+	.kidsLandingTitleRight {
+		font-size: 1.1rem;
+		letter-spacing: 0.1rem;
+	}
+
+	.kidsLandingBody {
+		font-size: 0.8rem;
+	}
+
+	.kidsLandingScheduleHeader,
+	.kidsLandingScheduleText {
+		font-size: 0.9rem;
+	}
+
+	.kidsLandingPrice {
+		font-size: 0.9rem;
+		margin-bottom: 2vh;
+	}
+
+	.kidsRegisterButton {
+		font-size: 0.9rem;
+	}
+}
+
+/* ----------- iPhone X ----------- */
+
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
+}
+
+/* Portrait */
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: portrait) {
+	.kidsLandingTitleLeft,
+	.kidsLandingTitleRight {
+		font-size: 1.5rem;
+		letter-spacing: 0rem;
+	}
+
+	.kidsLandingBody {
+		font-size: 1.1rem;
+		margin-top: 3vh;
+		margin-bottom: 5vh;
+		line-height: 1.5rem;
+	}
+
+	.kidsLandingScheduleHeader,
+	.kidsLandingScheduleText {
+		font-size: 1rem;
+	}
+}
+
+/* Landscape */
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {
+	.kidsLanding {
+		padding: 5vw;
+	}
+	.kidsLandingTitle {
+		margin-bottom: 1vh;
+	}
+	.kidsLandingTitleLeft,
+	.kidsLandingTitleRight {
+		font-size: 1.1rem;
+		letter-spacing: 0.1rem;
+	}
+
+	.kidsLandingBody {
+		font-size: 0.8rem;
+	}
+
+	.kidsLandingScheduleHeader,
+	.kidsLandingScheduleText {
+		font-size: 0.9rem;
+	}
+
+	.kidsLandingPrice {
+		font-size: 0.9rem;
+		margin-bottom: 2vh;
+	}
+
+	.kidsRegisterButton {
+		font-size: 0.9rem;
+	}
+}
+
+/* ----------- iPads ----------- */
+
+/* ----------- iPad 1, 2, Mini and Air ----------- */
+
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+}
+
+/* Portrait */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1023px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
+	.kidsLanding {
+		padding: 7vw;
+	}
+
+	.kidsLandingTitleLeft,
+	.kidsLandingTitleRight {
+		font-size: 1.7rem;
+		letter-spacing: 0rem;
+	}
+	.kidsLandingBody {
+		width: 80%;
+		margin-bottom: 5vh;
+		line-height: 2.5rem;
+		font-size: 1.7rem;
+	}
+	.kidsLandingScheduleHeader {
+		font-size: 2rem;
+	}
+	.kidsLandingScheduleText {
+		font-size: 1.7rem;
+	}
+	.kidsLandingPrice {
+		font-size: 1.7rem;
+		margin-bottom: 4vh;
+	}
+}
+
+/* Landscape */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
+}
+
+/* ----------- iPad 3, 4 and Pro 9.7" ----------- */
+
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {
+}
+
+/* Portrait */
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+	.kidsLanding {
+		padding: 7vw;
+	}
+	.kidsLandingTitle {
+		white-space: nowrap;
+		width: 100%;
+	}
+	.kidsLandingTitleLeft,
+	.kidsLandingTitleRight {
+		font-size: 1.9rem;
+	}
+
+	.kidsLandingBody {
+		width: 95%;
+		font-size: 2rem;
+		line-height: 3.5rem;
+		margin-bottom: 4vh;
+	}
+
+	.kidsLandingScheduleHeader {
+		font-size: 2rem;
+	}
+
+	.kidsLandingScheduleText {
+		font-size: 2rem;
+	}
+
+	.kidsLandingPrice {
+		font-size: 2rem;
+		margin-bottom: 3vh;
+	}
+
+	.kidsRegisterButton {
+		font-size: 2.5rem;
+		padding: 2vw;
+	}
+}
+
+/* Landscape */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+}
+
+/* ----------- iPad Pro 10.5" ----------- */
+
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 834px) and (max-device-width: 1112px) and (-webkit-min-device-pixel-ratio: 2) {
+}
+
+/* Portrait */
+/* Declare the same value for min- and max-width to avoid colliding with desktops */
+/* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
+@media only screen and (min-device-width: 834px) and (max-device-width: 834px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+}
+
+/* Landscape */
+/* Declare the same value for min- and max-width to avoid colliding with desktops */
+/* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
+@media only screen and (min-device-width: 1112px) and (max-device-width: 1112px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+}
+
+/* ----------- iPad Pro 12.9" ----------- */
+
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) {
+}
+
+/* Portrait */
+/* Declare the same value for min- and max-width to avoid colliding with desktops */
+/* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+}
+
+/* Landscape */
+/* Declare the same value for min- and max-width to avoid colliding with desktops */
+/* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
+@media only screen and (min-device-width: 1366px) and (max-device-width: 1366px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+	.kidsLanding {
+		padding: 5rem;
+	}
+	.kidsLandingBody {
+		font-size: 2.3rem;
+	}
+	.kidsLandingScheduleHeader {
+		font-size: 2.2rem;
+	}
+	.kidsLandingScheduleText,
+	.kidsLandingPrice,
+	.kidsRegisterButton {
+		font-size: 2rem;
+	}
+	.kidsLandingPrice {
+		margin-bottom: 4vh;
+	}
+}
+
+/* ----------- LAPTOPS ----------- */
+
+/* ----------- Non-Retina Screens ----------- */
+@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
+}
+
+@media screen and (min-device-width: 1600px) and (max-device-width: 2000px) and (-webkit-min-device-pixel-ratio: 1) {
+}
+
+@media screen and (min-device-width: 2001px) and (-webkit-min-device-pixel-ratio: 1) {
+}
+
+/* ----------- Retina Screens ----------- */
+@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) {
+}
+
+@media screen and (min-device-width: 1600px) and (max-device-width: 2000px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) {
+	.contactLanding {
+		min-height: 80vh;
+	}
+	.kidsLanding {
+		height: 700px;
+	}
+}
+
+@media screen and (min-device-width: 2001px) and (-webkit-min-device-pixel-ratio: 2) {
+}

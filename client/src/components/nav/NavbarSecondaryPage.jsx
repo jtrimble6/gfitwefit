@@ -91,19 +91,13 @@ class NavbarSecondaryPage extends Component {
                           <NavLink 
                             className=' iconBar nav-link' 
                             onClick={this.toggleNavbar}
-                            href="/contact"
-                          > CONTACT US</NavLink>
+                            href="/kids"
+                          > KIDS SPEED & STRENGTH</NavLink>
                           <NavLink 
-                            className=' iconBar nav-link signUp' 
-                            onClick={this.toggleNavbar}
-                            href="/tryitout"
-                          > TRY IT OUT</NavLink>
-                          {/* <NavLink 
                             className=' iconBar nav-link' 
                             onClick={this.toggleNavbar}
-                            href="/admin"
-                          > ADMIN</NavLink> */}
-                          {/* <a onClick={ this.showSettings } className="menu-item--small" href="">Settings</a> */}
+                            href="/contact"
+                          > CONTACT US</NavLink>
                         </Menu>
                         </i>
                         <div className="collapse navbar-collapse" id="navbarResponsive">
@@ -119,13 +113,13 @@ class NavbarSecondaryPage extends Component {
                             </a>
                           </li>
                           <li className="nav-item" >
-                            <a className="nav-link js-scroll-trigger" href='/contact'>
-                              CONTACT US
+                            <a className="nav-link js-scroll-trigger" href='/kids'>
+                              KIDS SPEED & STRENGTH
                             </a>
                           </li>
                           <li className="nav-item" >
-                            <a className="nav-link js-scroll-trigger signUp" href='/tryitout'>
-                              TRY IT OUT
+                            <a className="nav-link js-scroll-trigger" href='/contact'>
+                              CONTACT US
                             </a>
                           </li>
                         </ul>

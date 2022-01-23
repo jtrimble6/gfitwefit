@@ -227,7 +227,7 @@ class ContactInfo extends Component {
                             <p className='contactInfoRightSectionPhone'>703.554.5731</p>
                         </Row>
                         <Row>
-                            <p className='contactInfoRightSectionEmail'>HELLO@GFITWEFIT.COM</p>
+                            <p className='contactInfoRightSectionEmail'>KGOUVEIA@GFITWEFIT.COM</p>
                         </Row>
                     </Col>
                 </Row>

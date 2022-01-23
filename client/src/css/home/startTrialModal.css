@@ -1,0 +1,59 @@
+@font-face {
+	font-family: 'gfitfont';
+	font-style: normal;
+	font-weight: bolder;
+	src: local('gfitfont'), url('../fonts/gfitfont.ttf'), url('../fonts/gfitfont.woff'), format('truetype');
+}
+@font-face {
+	font-family: 'gfitfont-bold';
+	font-style: normal;
+	font-weight: bolder;
+	src: local('gfitfontBold'), url('../fonts/gfitfontBold.ttf'), url('../fonts/gfitfontBold.woff') format('truetype');
+}
+
+#freeTrialForm {
+	padding: 5%;
+}
+
+.startTrailModalHeader {
+	font-family: 'gfitfont-bold';
+}
+
+.freeTrialFormLabel {
+	font-family: 'gfitfont-bold';
+	font-size: 0.7rem;
+}
+
+.freeTrialWaiver {
+	margin: 0 auto;
+}
+
+.freeTrialWaiverRow {
+	margin: 0 auto;
+	width: 100%;
+	justify-content: center;
+}
+
+.liabiityWaiverLabel {
+	font-family: 'gfitfont-bold';
+	margin-right: 2vw;
+	text-decoration: underline;
+	color: #fac04e;
+	cursor: pointer;
+	font-weight: bold;
+}
+
+.startTrialModalConfirmationTitle {
+	font-family: 'gfitfont';
+	font-size: 1.3rem;
+	font-weight: bold;
+	margin-bottom: 1vh;
+}
+
+.startTrailModalConfirmationMessage {
+	font-family: 'gfitfont';
+}
+
+.startTrialModalConfirmationMessageLine2 {
+	font-weight: bold;
+}

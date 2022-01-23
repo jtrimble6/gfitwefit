@@ -8,9 +8,8 @@ import API from './utils/API'
 // WEB PAGES
 import LandingPage from './pages/home/LandingPage'
 import ContactPage from './pages/home/ContactPage'
-import TryItOutPage from './pages/home/TryItOutPage'
+import KidsPage from './pages/home/KidsPage'
 import BioPage from './pages/home/BioPage'
-// import PricingPage from './pages/PricingPage'
 
 // ADMIN PAGES
 import AdminLogin from './pages/admin/AdminLogin'
@@ -113,9 +112,9 @@ class Landing extends Component {
                 <ContactPage />
               }
             />
-            <Route exact path='/tryitout'
+            <Route exact path='/kids'
               render={() =>
-                <TryItOutPage />
+                <KidsPage />
               }
             />
             <Route exact path='/bioPage'

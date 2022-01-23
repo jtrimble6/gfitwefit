@@ -94,127 +94,160 @@ class ScheduleInfo extends Component {
                                                 
         return (
             <div className='scheduleInfo' id='scheduleInfo'>
-              <div className='scheduleInfoSection'>
+                <div className='scheduleInfoSection'>
                 <Row className='scheduleInfoTitle'>
                     <h2 className='scheduleInfoTitleLeft'>SCHEDULE/</h2><h2 className='scheduleInfoTitleRight'>/GO</h2>
                 </Row>
                 <Row className='scheduleInfoRow1'>
-                    <Col sm={6}>
+                    <Col className='scheduleInfoRow1Body'>
                         <p>
-                          Never expect to get the same workout twice here! Each class is uniquely designed in order to keep your body guessing and help you get closer to your goals. No prior sign ups are required. Come on in whenever your schedule allows you too!
+                        Never expect to get the same workout twice here! Each class is uniquely designed in order to keep your body guessing and help you get closer to your goals. No prior sign ups are required. Come on in whenever your schedule allows you too!
                         </p>
                     </Col>
-                    <Col sm={6}>
-                        
-                    </Col>
+                    
                 </Row>
                 <Row className='scheduleInfoRow2'>
                     <Col sm className='scheduleInfoColumn' >
-                      <Row>
-                        <Col sm={3} className='scheduleDaysOfWeek'>
-                            <p>MONDAYS</p>
-                            <p>TUESDAYS</p>
-                            <p>WEDNESDAYS</p>
-                            <p>THURSDAYS</p>
-                            <p>FRIDAYS</p>
-                            <p>SATURDAYS</p>
-                        </Col>
-                        <Col sm={3} className='scheduleTypeOfWorkout'>
-                            <p>
-                                UPPERBODY//BOXING
-                                {/* {
-                                    sortedSchedule.length === 6 ? sortedSchedule[0].workout : 'TBD'
-                                } */}
-                            </p>
-                            <p>
-                                LOWERBODY//STRENGTH
-                                {/* {
-                                    sortedSchedule.length === 6 ? sortedSchedule[1].workout : 'TBD'
-                                } */}
-                            </p>
-                            <p>
-                                H.I.I.T//BOXING
-                                {/* {
-                                    sortedSchedule.length === 6 ? sortedSchedule[2].workout : 'TBD'
-                                } */}
-                            </p>
-                            <p>
-                                UPPER STRENGTH
-                                {/* {
-                                    sortedSchedule.length === 6 ? sortedSchedule[3].workout : 'TBD'
-                                } */}
-                            </p>
-                            <p>
-                                CARDIO//CORE
-                                {/* {
-                                    sortedSchedule.length === 6 ? sortedSchedule[4].workout : 'TBD'
-                                } */}
-                            </p>
-                            <p>
-                                H.I.I.T BOXING
-                                {/* {
-                                    sortedSchedule.length === 6 ? sortedSchedule[5].workout : 'TBD'
-                                } */}
-                            </p>
-                        </Col>
-                        <Col sm={6} className='scheduleTimeOfWorkout'>
-                            <p>
-                                5:30AM, 8AM, 9:30AM, 5:45PM
-                                {/* {
-                                    sortedSchedule.length === 6 ? sortedSchedule[0].times : 'TBD'
-                                } */}
-                            </p>
-                            <p>
-                                5:30AM, 8AM, 9:30AM, 5:45PM
-                                {/* {
-                                    sortedSchedule.length === 6 ? sortedSchedule[1].times : 'TBD'
-                                } */}
-                            </p>
-                            <p>
-                                5:30AM, 8AM, 9:30AM, 5:45PM
-                                {/* {
-                                    sortedSchedule.length === 6 ? sortedSchedule[2].times : 'TBD'
-                                } */}
-                            </p>
-                            <p>
-                                5:30AM, 8AM, 9:30AM, 5:45PM
-                                {/* {
-                                    sortedSchedule.length === 6 ? sortedSchedule[3].times : 'TBD'
-                                } */}
-                            </p>
-                            <p>
-                                8AM
-                                {/* {
-                                    sortedSchedule.length === 6 ? sortedSchedule[4].times : 'TBD'
-                                } */}
-                            </p>
-                            <p id='saturdayTime'>
-                                8AM, 9:30AM
-                                {/* {
-                                    sortedSchedule.length === 6 ? sortedSchedule[5].times : 'TBD'
-                                } */}
-                            </p>
-                        </Col>
-                      </Row>
-                    </Col>
-                </Row>
-                <Row className='scheduleInfoRow3'>
-                    <Col sm={6}>
-                      <p>
-                        Not quite ready to try the G FIT experience? Check out our digital workouts. They will walk you through some of our most common exercises so you’ll feel like you’re prepared when you show up for class!
-                      </p>
-                    </Col>
-                    <Col sm={6}>
+                        <Row className='scheduleInfoDetails'>
+                            <Row className='scheduleInfoDetailsRow'>
+                                <h1 className='scheduleInfoDetailsTitle'>
+                                MONDAYS
+                                </h1>
+                                <Row className='scheduleInfoDetailsColLeft'>
+                                    <p className='scheduleInfoDetailsBody'>
+                                    UPPERBODY // BOXING
+                                    {/* {
+                                        sortedSchedule.length === 6 ? sortedSchedule[0].workout : 'TBD'
+                                    } */}
+                                    </p>
+                                </Row>
+                                <Row className='scheduleInfoDetailsColRight'>
+                                    <p className='scheduleInfoDetailsBody scheduleInfoDetailsTimes'>
+                                    5:30AM, 8AM, 9:30AM, 5:45PM
+                                    {/* {
+                                        sortedSchedule.length === 6 ? sortedSchedule[0].times : 'TBD'
+                                    } */}
+                                    </p>
+                                </Row>
+                            </Row>
+
+                            <Row className='scheduleInfoDetailsRow'>
+                                <h1 className='scheduleInfoDetailsTitle'>
+                                TUESDAYS
+                                </h1>
+                                <Row className='scheduleInfoDetailsColLeft'>
+                                    <p className='scheduleInfoDetailsBody'>
+                                    LOWERBODY // STRENGTH
+                                    {/* {
+                                        sortedSchedule.length === 6 ? sortedSchedule[1].workout : 'TBD'
+                                    } */}
+                                    </p>
+                                </Row>
+                                <Row className='scheduleInfoDetailsColRight'>
+                                    <p className='scheduleInfoDetailsBody scheduleInfoDetailsTimes'>
+                                    5:30AM, 8AM, 9:30AM, 5:45PM
+                                    {/* {
+                                        sortedSchedule.length === 6 ? sortedSchedule[1].times : 'TBD'
+                                    } */}
+                                    </p>
+                                </Row>
+                            </Row>
+
+                            <Row className='scheduleInfoDetailsRow'>
+                                <h1 className='scheduleInfoDetailsTitle'>
+                                WEDNESDAYS
+                                </h1>
+                                <Row className='scheduleInfoDetailsColLeft'>
+                                    <p className='scheduleInfoDetailsBody'>
+                                    H.I.I.T // BOXING
+                                    {/* {
+                                        sortedSchedule.length === 6 ? sortedSchedule[2].workout : 'TBD'
+                                    } */}
+                                    </p>
+                                </Row>
+                                <Row className='scheduleInfoDetailsColRight'>
+                                    <p className='scheduleInfoDetailsBody scheduleInfoDetailsTimes'>
+                                    5:30AM, 8AM, 9:30AM, 5:45PM
+                                    {/* {
+                                        sortedSchedule.length === 6 ? sortedSchedule[2].times : 'TBD'
+                                    } */}
+                                    </p>
+                                </Row>
+                            </Row>
+
+                            <Row className='scheduleInfoDetailsRow'>
+                                <h1 className='scheduleInfoDetailsTitle'>
+                                THURSDAYS
+                                </h1>
+                                <Row className='scheduleInfoDetailsColLeft'>
+                                    <p className='scheduleInfoDetailsBody'>
+                                    UPPER STRENGTH
+                                    {/* {
+                                        sortedSchedule.length === 6 ? sortedSchedule[3].workout : 'TBD'
+                                    } */}
+                                    </p>
+                                </Row>
+                                <Row className='scheduleInfoDetailsColRight'>
+                                    <p className='scheduleInfoDetailsBody scheduleInfoDetailsTimes'>
+                                    5:30AM, 8AM, 9:30AM, 5:45PM
+                                    {/* {
+                                        sortedSchedule.length === 6 ? sortedSchedule[3].times : 'TBD'
+                                    } */}
+                                    </p>
+                                </Row>
+                            </Row>
+
+                            <Row className='scheduleInfoDetailsRow'>
+                                <h1 className='scheduleInfoDetailsTitle'>
+                                FRIDAYS
+                                </h1>
+                                <Row className='scheduleInfoDetailsColLeft'>
+                                    <p className='scheduleInfoDetailsBody'>
+                                    CARDIO // CORE
+                                    {/* {
+                                        sortedSchedule.length === 6 ? sortedSchedule[4].workout : 'TBD'
+                                    } */}
+                                    </p>
+                                </Row>
+                                <Row className='scheduleInfoDetailsColRight'>
+                                    <p className='scheduleInfoDetailsBody scheduleInfoDetailsTimes'>
+                                    8AM
+                                    {/* {
+                                        sortedSchedule.length === 6 ? sortedSchedule[4].times : 'TBD'
+                                    } */}
+                                    </p>
+                                </Row>
+                            </Row>
+
+                            <Row className='scheduleInfoDetailsRow'>
+                                <h1 className='scheduleInfoDetailsTitle'>
+                                SATURDAYS
+                                </h1>
+                                <Row className='scheduleInfoDetailsColLeft'>
+                                    <p className='scheduleInfoDetailsBody'>
+                                    H.I.I.T BOXING
+                                    {/* {
+                                        sortedSchedule.length === 6 ? sortedSchedule[5].workout : 'TBD'
+                                    } */}
+                                    </p>
+                                </Row>
+                                <Row className='scheduleInfoDetailsColRight'>
+                                    <p className='scheduleInfoDetailsBody scheduleInfoDetailsTimes'>
+                                    8AM, 9:30AM
+                                    {/* {
+                                        sortedSchedule.length === 6 ? sortedSchedule[5].times : 'TBD'
+                                    } */}
+                                    </p>
+                                </Row>
+                            </Row>
+
                         
-                    </Col>
-                </Row>
-                <Row className='scheduleInfoRow4'>
-                    <Button href='/tryitout' className='scheduleInfoButton'>
-                        TRY IT OUT
-                    </Button>
-                </Row>
-              </div>
+                            </Row>
+                        </Col>
+                    </Row>
+                </div>
             </div>
+            
         )
     }
 }

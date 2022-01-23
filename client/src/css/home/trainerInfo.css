@@ -1,26 +1,27 @@
 @font-face {
-  font-family: 'gfitfont';
-  font-style: normal;
-  font-weight: bolder;
-  src: local('gfitfont'), url('../fonts/gfitfont.ttf'), url('../fonts/gfitfont.woff'), format('truetype');
+	font-family: 'gfitfont';
+	font-style: normal;
+	font-weight: bolder;
+	src: local('gfitfont'), url('../fonts/gfitfont.ttf'), url('../fonts/gfitfont.woff'), format('truetype');
 }
 @font-face {
-    font-family: 'gfitfont-bold';
-    font-style: normal;
-    font-weight: bolder;
-    src: local('gfitfontBold'), url('../fonts/gfitfontBold.ttf'), url('../fonts/gfitfontBold.woff') format('truetype');
-  }
+	font-family: 'gfitfont-bold';
+	font-style: normal;
+	font-weight: bolder;
+	src: local('gfitfontBold'), url('../fonts/gfitfontBold.ttf'), url('../fonts/gfitfontBold.woff') format('truetype');
+}
 
 .trainerInfo {
-    font-family: 'gfitfont-bold', Times, serif;
-    height: 675px;
-    background-color: white;
+	font-family: 'gfitfont-bold', Times, serif;
+	height: 100%;
+	background-color: black;
+	background-image: linear-gradient(#888888, black);
 }
 
 .trainerBioCard {
-    background-color: #FAC04E;
-    margin-top: 2%;
-    height: 100%;
+	background-color: #fac04e;
+	margin-top: 2%;
+	height: 100%;
 }
 
 /* .trainerBioCard .card-body {
@@ -28,69 +29,68 @@
 } */
 
 .trainerInfoRow {
-    height: 20%;
-    width: 80%;
-    margin: 0 auto;
+	height: 20%;
+	width: 80%;
+	margin: 0 auto;
 }
 
 .trainerInfoHeaderLeft {
-    font-size: 1.8vw;
-    font-weight: bolder;
-    letter-spacing: 3px;
-    color: #000000;
-    margin-top: 10%;
+	font-size: 1.8vw;
+	font-weight: bolder;
+	letter-spacing: 3px;
+	color: #000000;
+	margin-top: 10%;
 }
 
 .trainerInfoHeaderRight {
-    font-size: 1.8vw;
-    font-weight: bolder;
-    letter-spacing: 3px;
-    color: #FAC04E;
-    margin-top: 10%;
+	font-size: 1.8vw;
+	font-weight: bolder;
+	letter-spacing: 3px;
+	color: #fac04e;
+	margin-top: 10%;
 }
 
 .trainerBioRow {
-    width: 90%;
-    margin: 0 auto;
-    margin-top: 5%;
-    
+	width: 90%;
+	margin: 0 auto;
+	margin-top: 5%;
 }
 
 .trainerBioImage {
-    width: 90%;
-    margin: 0 auto;
-    margin-top: 5%;
+	width: 90%;
+	margin: 0 auto;
+	margin-top: 5%;
 }
 
 .trainerBioTitle {
-    color: #000000;
-    font-weight: bolder;
+	color: #000000;
+	font-weight: bolder;
 }
 
 .trainerBioSubtitle {
-    color: #484543;
-    margin-bottom: 5%;
-    font-weight: bolder;
+	color: #484543;
+	margin-bottom: 5%;
+	font-weight: bolder;
 }
 
 .trainerBioButton {
-  background-color: #484543 !important;
-  border-color: #484543 !important;
-  color: white;
+	background-color: #484543 !important;
+	border-color: #484543 !important;
+	color: white;
 }
 
 .trainerBioButton:hover {
-    background-color: white !important;
-    border-color: #484543 !important;
-    color: #484543;
+	background-color: white !important;
+	border-color: #484543 !important;
+	color: #484543;
 }
 
 .trainerBioButton {
-    background-color: #484543;
-    border: 1px solid #484543;
-    min-width: 40%;
-    text-align: left;
-    font-weight: bolder;
+	background-color: #484543;
+	border: 1px solid #484543;
+	min-width: 40%;
+	text-align: left;
+	font-weight: bolder;
 }
 
 /* .trainerBioButton:hover {
@@ -101,581 +101,207 @@
     color: #484543;
 } */
 
-
 /* ----------- LAPTOPS ----------- */
 
-
 /* ----------- Non-Retina Screens ----------- */
-@media screen 
-  and (min-device-width: 1000px) 
-  and (max-device-width: 1600px) 
-  and (-webkit-min-device-pixel-ratio: 1) { 
-    .trainerInfo {
-      height: 120vw;
-      padding-bottom: 5%;
-    }
-
-    .trainerBioCardColumn {
-        margin-bottom: 5%;
-    }
-    
-    .trainerBioCard {
-        margin-top: 2%;
-    }
-    
-    .trainerInfoRow {
-        height: 10vw;
-        width: 80%;
-        margin: 0 auto;
-    }
-    
-    .trainerInfoHeaderLeft {
-        font-size: 3vw;
-        letter-spacing: 0.5px;
-        margin-top: 10%;
-    }
-    
-    .trainerInfoHeaderRight {
-        font-size: 3vw;
-        letter-spacing: 0.5px;
-        margin-top: 10%;
-    }
-    
-    .trainerBioRow {
-        width: 90%;
-        margin: 0 auto;
-        margin-top: 5%;
-        
-    }
-    
-    .trainerBioImage {
-        width: 90%;
-        margin: 0 auto;
-        margin-top: 5%;
-    }
-    
-    .trainerBioSubtitle {
-        margin-bottom: 5%;
-    }
-    
-    .trainerBioButton {
-        min-width: 40%;
-        text-align: left;
-        font-weight: bolder;
-    }
-    
-    .trainerBioButton:hover {
-        width: 40%;
-        text-align: left;
-    }
+@media screen and (min-device-width: 1000px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
 }
 
-@media screen 
-  and (min-device-width: 1600px) 
-  and (max-device-width: 2000px) 
-  and (-webkit-min-device-pixel-ratio: 1) { 
-    .trainerInfo {
-      height: 150vw !important;
-      padding-bottom: 25vw;
-    }
-
-    .trainerBioCardColumn {
-        margin-bottom: 5%;
-    }
-    
-    .trainerBioCard {
-        margin-top: 2%;
-    }
-    
-    .trainerInfoRow {
-        height: 20vw;
-        width: 80%;
-        margin: 0 auto;
-    }
-    
-    .trainerInfoHeaderLeft {
-        font-size: 3.5vw;
-        letter-spacing: 0.5px;
-        margin-top: 10%;
-    }
-    
-    .trainerInfoHeaderRight {
-        font-size: 3.5vw;
-        letter-spacing: 0.5px;
-        margin-top: 10%;
-    }
-    
-    .trainerBioRow {
-        width: 90%;
-        margin: 0 auto;
-        margin-top: 1vw;
-        
-    }
-    
-    .trainerBioImage {
-        width: 90%;
-        margin: 0 auto;
-        margin-top: 5%;
-    }
-    
-    .trainerBioTitle {
-      font-size: 2vw;
-    }
-    .trainerBioSubtitle {
-        font-size: 1.5vw;
-        margin-bottom: 5%;
-    }
-    
-    .trainerBioButton {
-      font-size: 1.5vw;
-        min-width: 40%;
-        text-align: left;
-        font-weight: bolder;
-    }
-    
-    .trainerBioButton:hover {
-        width: 40%;
-        text-align: left;
-    }
+@media screen and (min-device-width: 1600px) and (max-device-width: 2000px) and (-webkit-min-device-pixel-ratio: 1) {
 }
-@media screen 
-  and (min-device-width: 2001px) 
-  and (max-device-width: 3000px) 
-  and (-webkit-min-device-pixel-ratio: 1) { 
-    .trainerInfo {
-      height: 150vw !important;
-      padding-bottom: 25%;
-    }
-    .trainerBioCardColumn {
-      margin-bottom: 5%;
-    }
-    
-    .trainerBioCard {
-        margin-top: 2%;
-    }
-    
-    .trainerInfoRow {
-        height: 20%;
-        width: 80%;
-        margin: 0 auto;
-    }
-    
-    .trainerInfoHeaderLeft {
-        font-size: 3.5vw;
-        letter-spacing: 0.5px;
-        margin-top: 10%;
-    }
-    
-    .trainerInfoHeaderRight {
-        font-size: 3.5vw;
-        letter-spacing: 0.5px;
-        margin-top: 10%;
-    }
-    
-    .trainerBioRow {
-        width: 90%;
-        margin: 0 auto;
-        margin-top: 15%;
-        
-    }
-    
-    .trainerBioImage {
-        width: 90%;
-        margin: 0 auto;
-        margin-top: 5%;
-    }
-    
-    .trainerBioTitle {
-      font-size: 2vw;
-    }
-    .trainerBioSubtitle {
-        font-size: 1.5vw;
-        margin-bottom: 5%;
-    }
-    
-    .trainerBioButton {
-      font-size: 1.5vw;
-        min-width: 40%;
-        text-align: left;
-        font-weight: bolder;
-    }
-    
-    .trainerBioButton:hover {
-        width: 40%;
-        text-align: left;
-    }
-
-}
-
-@media screen 
-  and (min-device-width: 2001px) 
-  and (max-device-width: 2100px) 
-  and (-webkit-min-device-pixel-ratio: 1) { 
-    
-    
-}
-@media screen 
-  and (min-device-width: 2101px) 
-  and (max-device-width: 2200px) 
-  and (-webkit-min-device-pixel-ratio: 1) { 
-   
-    
-}
-@media screen 
-  and (min-device-width: 2201px) 
-  and (max-device-width: 2300px) 
-  and (-webkit-min-device-pixel-ratio: 1) { 
-   
-}
-@media screen 
-  and (min-device-width: 2301px) 
-  and (max-device-width: 2400px) 
-  and (-webkit-min-device-pixel-ratio: 1) { 
-    
-}
-@media screen 
-  and (min-device-width: 2401px) 
-  and (max-device-width: 2500px) 
-  and (-webkit-min-device-pixel-ratio: 1) { 
-    
-    
-}
-@media screen 
-  and (min-device-width: 2501px) 
-  and (max-device-width: 2600px) 
-  and (-webkit-min-device-pixel-ratio: 1) { 
-    .trainerInfo {
-      height: 1600px !important;
-    }
-
-}
-@media screen 
-  and (min-device-width: 2601px) 
-  and (max-device-width: 2700px) 
-  and (-webkit-min-device-pixel-ratio: 1) {
-    .trainerInfo {
-      height: 1600px !important;
-    }
-    
-}
-@media screen 
-  and (min-device-width: 2701px) 
-  and (max-device-width: 2800px) 
-  and (-webkit-min-device-pixel-ratio: 1) { 
-    .trainerInfo {
-      height: 1600px !important;
-    }
-    
-}
-@media screen 
-  and (min-device-width: 2801px) 
-  and (max-device-width: 2900px) 
-  and (-webkit-min-device-pixel-ratio: 1) { 
-    .trainerInfo {
-      height: 1800px !important;
-    }
-    
-}
-@media screen 
-  and (min-device-width: 2901px) 
-  and (max-device-width: 3000px) 
-  and (-webkit-min-device-pixel-ratio: 1) { 
-    .trainerInfo {
-      height: 1800px !important;
-    }
+@media screen and (min-device-width: 2001px) and (max-device-width: 3000px) and (-webkit-min-device-pixel-ratio: 1) {
+	.trainerBioTitle {
+		font-size: 3rem;
+	}
+	.trainerBioCardBody {
+		padding: 2vw;
+	}
 }
 
 /* ----------- Retina Screens ----------- */
-@media screen 
-  and (min-device-width: 1000px) 
-  and (max-device-width: 1600px) 
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (min-resolution: 192dpi) { 
-    .trainerInfo {
-      height: 120vw;
-      padding-bottom: 5%;
-    }
+@media screen and (min-device-width: 1000px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) {
+	/* .trainerInfo {
+		height: 120vw;
+		padding-bottom: 5%;
+	} */
 
-    .trainerBioCardColumn {
-        margin-bottom: 5%;
-    }
-    
-    .trainerBioCard {
-        margin-top: 2%;
-    }
-    
-    .trainerInfoRow {
-        height: 10vw;
-        width: 80%;
-        margin: 0 auto;
-    }
-    
-    .trainerInfoHeaderLeft {
-        font-size: 3vw;
-        letter-spacing: 0.5px;
-        margin-top: 10%;
-    }
-    
-    .trainerInfoHeaderRight {
-        font-size: 3vw;
-        letter-spacing: 0.5px;
-        margin-top: 10%;
-    }
-    
-    .trainerBioRow {
-        width: 90%;
-        margin: 0 auto;
-        margin-top: 5%;
-        
-    }
-    
-    .trainerBioImage {
-        width: 90%;
-        margin: 0 auto;
-        margin-top: 5%;
-    }
-    
-    .trainerBioSubtitle {
-        margin-bottom: 5%;
-    }
-    
-    .trainerBioButton {
-        min-width: 40%;
-        text-align: left;
-        font-weight: bolder;
-    }
-    
-    .trainerBioButton:hover {
-        width: 40%;
-        text-align: left;
-    }
+	.trainerBioCardColumn {
+		margin-bottom: 5%;
+	}
+
+	.trainerBioCard {
+		margin-top: 2%;
+	}
+
+	.trainerInfoRow {
+		height: 10vw;
+		width: 80%;
+		margin: 0 auto;
+	}
+
+	.trainerInfoHeaderLeft {
+		font-size: 3vw;
+		letter-spacing: 0.5px;
+		margin-top: 10%;
+	}
+
+	.trainerInfoHeaderRight {
+		font-size: 3vw;
+		letter-spacing: 0.5px;
+		margin-top: 10%;
+	}
+
+	.trainerBioRow {
+		width: 90%;
+		margin: 0 auto;
+		margin-top: 5%;
+	}
+
+	.trainerBioImage {
+		width: 90%;
+		margin: 0 auto;
+		margin-top: 5%;
+	}
+
+	.trainerBioSubtitle {
+		margin-bottom: 5%;
+	}
+
+	.trainerBioButton {
+		min-width: 40%;
+		text-align: left;
+		font-weight: bolder;
+	}
+
+	.trainerBioButton:hover {
+		width: 40%;
+		text-align: left;
+	}
 }
 
-@media screen 
-  and (min-device-width: 1601px) 
-  and (max-device-width: 2000px) 
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (min-resolution: 192dpi) { 
-    .trainerInfo {
-      height: 120vw !important;
-      padding-bottom: 25%;
-    }
+@media screen and (min-device-width: 1601px) and (max-device-width: 2000px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) {
+	/* .trainerInfo {
+		height: 120vw !important;
+		padding-bottom: 25%;
+	} */
 
-    .trainerBioCardColumn {
-        margin-bottom: 5%;
-    }
-    
-    .trainerBioCard {
-        margin-top: 2%;
-    }
-    
-    .trainerInfoRow {
-        height: 20%;
-        width: 80%;
-        margin: 0 auto;
-    }
-    
-    .trainerInfoHeaderLeft {
-        font-size: 3.5vw;
-        letter-spacing: 0.5px;
-        margin-top: 10%;
-    }
-    
-    .trainerInfoHeaderRight {
-        font-size: 3.5vw;
-        letter-spacing: 0.5px;
-        margin-top: 10%;
-    }
-    
-    .trainerBioRow {
-        width: 90%;
-        margin: 0 auto;
-        margin-top: 1%;
-    }
-    
-    .trainerBioImage {
-        width: 90%;
-        margin: 0 auto;
-        margin-top: 5%;
-    }
-    
-    .trainerBioTitle {
-      font-size: 2vw;
-    }
-    .trainerBioSubtitle {
-        font-size: 1.5vw;
-        margin-bottom: 5%;
-    }
-    
-    .trainerBioButton {
-      font-size: 1.5vw;
-        min-width: 40%;
-        text-align: left;
-        font-weight: bolder;
-    }
-    
-    .trainerBioButton:hover {
-        width: 40%;
-        text-align: left;
-    }
+	.trainerBioCardColumn {
+		margin-bottom: 5%;
+	}
+
+	.trainerBioCard {
+		margin-top: 2%;
+	}
+
+	.trainerInfoRow {
+		height: 20%;
+		width: 80%;
+		margin: 0 auto;
+	}
+
+	.trainerInfoHeaderLeft {
+		font-size: 3.5vw;
+		letter-spacing: 0.5px;
+		margin-top: 10%;
+	}
+
+	.trainerInfoHeaderRight {
+		font-size: 3.5vw;
+		letter-spacing: 0.5px;
+		margin-top: 10%;
+	}
+
+	.trainerBioRow {
+		width: 90%;
+		margin: 0 auto;
+		margin-top: 1%;
+	}
+
+	.trainerBioImage {
+		width: 90%;
+		margin: 0 auto;
+		margin-top: 5%;
+	}
+
+	.trainerBioTitle {
+		font-size: 2vw;
+	}
+	.trainerBioSubtitle {
+		font-size: 1.5vw;
+		margin-bottom: 5%;
+	}
+
+	.trainerBioButton {
+		font-size: 1.5vw;
+		min-width: 40%;
+		text-align: left;
+		font-weight: bolder;
+	}
+
+	.trainerBioButton:hover {
+		width: 40%;
+		text-align: left;
+	}
 }
 
-@media screen 
-  and (min-device-width: 2001px) 
-  and (max-device-width: 3000px) 
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (min-resolution: 192dpi) { 
-    .trainerInfo {
-      height: 140vw !important;
-      padding-bottom: 25%;
-    }
-    .trainerBioCardColumn {
-      margin-bottom: 5%;
-    }
-    
-    .trainerBioCard {
-        margin-top: 2%;
-    }
-    
-    .trainerInfoRow {
-        height: 20%;
-        width: 80%;
-        margin: 0 auto;
-    }
-    
-    .trainerInfoHeaderLeft {
-        font-size: 3.5vw;
-        letter-spacing: 0.5px;
-        margin-top: 10%;
-    }
-    
-    .trainerInfoHeaderRight {
-        font-size: 3.5vw;
-        letter-spacing: 0.5px;
-        margin-top: 10%;
-    }
-    
-    .trainerBioRow {
-        width: 90%;
-        margin: 0 auto;
-        margin-top: 15%;
-        
-    }
-    
-    .trainerBioImage {
-        width: 90%;
-        margin: 0 auto;
-        margin-top: 5%;
-    }
-    
-    .trainerBioTitle {
-      font-size: 2vw;
-    }
-    .trainerBioSubtitle {
-        font-size: 1.5vw;
-        margin-bottom: 5%;
-    }
-    
-    .trainerBioButton {
-      font-size: 1.5vw;
-        min-width: 40%;
-        text-align: left;
-        font-weight: bolder;
-    }
-    
-    .trainerBioButton:hover {
-        width: 40%;
-        text-align: left;
-    }
+@media screen and (min-device-width: 2001px) and (max-device-width: 3000px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) {
+	.trainerBioCardColumn {
+		margin-bottom: 5%;
+	}
 
-}
+	.trainerBioCard {
+		margin-top: 2%;
+	}
 
-@media screen 
-  and (min-device-width: 2001px) 
-  and (max-device-width: 2100px) 
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (min-resolution: 192dpi) { 
-    
-    
-}
-@media screen 
-  and (min-device-width: 2101px) 
-  and (max-device-width: 2200px) 
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (min-resolution: 192dpi) { 
-   
-    
-}
-@media screen 
-  and (min-device-width: 2201px) 
-  and (max-device-width: 2300px) 
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (min-resolution: 192dpi) { 
-   
-}
-@media screen 
-  and (min-device-width: 2301px) 
-  and (max-device-width: 2400px) 
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (min-resolution: 192dpi) { 
-    
-}
-@media screen 
-  and (min-device-width: 2401px) 
-  and (max-device-width: 2500px) 
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (min-resolution: 192dpi) { 
-    
-    
-}
-@media screen 
-  and (min-device-width: 2501px) 
-  and (max-device-width: 2600px) 
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (min-resolution: 192dpi) { 
-    .trainerInfo {
-      height: 1600px !important;
-    }
+	.trainerInfoRow {
+		height: 20%;
+		width: 80%;
+		margin: 0 auto;
+	}
 
-}
-@media screen 
-  and (min-device-width: 2601px) 
-  and (max-device-width: 2700px) 
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (min-resolution: 192dpi) {
-    .trainerInfo {
-      height: 1600px !important;
-    }
-    
-}
-@media screen 
-  and (min-device-width: 2701px) 
-  and (max-device-width: 2800px) 
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (min-resolution: 192dpi) { 
-    .trainerInfo {
-      height: 1600px !important;
-    }
-    
-}
-@media screen 
-  and (min-device-width: 2801px) 
-  and (max-device-width: 2900px) 
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (min-resolution: 192dpi) { 
-    .trainerInfo {
-      height: 1800px !important;
-    }
-    
-}
-@media screen 
-  and (min-device-width: 2901px) 
-  and (max-device-width: 3000px) 
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (min-resolution: 192dpi) { 
-    .trainerInfo {
-      height: 1800px !important;
-    }
+	.trainerInfoHeaderLeft {
+		font-size: 3.5vw;
+		letter-spacing: 0.5px;
+		margin-top: 10%;
+	}
+
+	.trainerInfoHeaderRight {
+		font-size: 3.5vw;
+		letter-spacing: 0.5px;
+		margin-top: 10%;
+	}
+
+	.trainerBioRow {
+		width: 90%;
+		margin: 0 auto;
+		margin-top: 15vh;
+	}
+
+	.trainerBioImage {
+		width: 90%;
+		margin: 0 auto;
+		margin-top: 5%;
+	}
+
+	.trainerBioTitle {
+		font-size: 2rem;
+	}
+	.trainerBioSubtitle {
+		font-size: 1.5vw;
+		margin-bottom: 5%;
+	}
+
+	.trainerBioButton {
+		font-size: 1.5vw;
+		min-width: 40%;
+		text-align: left;
+		font-weight: bolder;
+	}
+
+	.trainerBioButton:hover {
+		width: 40%;
+		text-align: left;
+	}
 }
 
 /* ----------- iPads ----------- */
@@ -683,851 +309,393 @@
 /* ----------- iPad 1, 2, Mini and Air ----------- */
 
 /* Portrait and Landscape */
-@media only screen 
-  and (min-device-width: 768px) 
-  and (max-device-width: 1024px) 
-  and (-webkit-min-device-pixel-ratio: 1) {
-
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
 }
 
 /* Portrait */
-@media only screen 
-  and (min-device-width: 768px) 
-  and (max-device-width: 1024px) 
-  and (orientation: portrait) 
-  and (-webkit-min-device-pixel-ratio: 1) {
-    
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
+	.trainerInfoHeaderLeft,
+	.trainerInfoHeaderRight {
+		font-size: 3rem;
+	}
+	.trainerBioCardColumn {
+		margin-bottom: 10vh;
+	}
+	.trainerBioCard {
+		width: 85vw;
+	}
+	.trainerBioCardBody {
+		width: 90%;
+		margin: 0 auto;
+	}
+	.trainerBioTitle {
+		font-size: 2rem;
+	}
+	.trainerBioSubtitle {
+		font-size: 1.5rem;
+	}
+	.trainerBioButton {
+		font-size: 1.5rem;
+	}
 }
 
 /* Landscape */
-@media only screen 
-  and (min-device-width: 768px) 
-  and (max-device-width: 1024px) 
-  and (orientation: landscape) 
-  and (-webkit-min-device-pixel-ratio: 1) {
-    .trainerInfo {
-      height: 100%;
-      width: 100vw !important;
-      padding-bottom: 25%;
-      padding-top: 15%;
-    }
-
-    .trainerBioCard {
-      width: 100%;
-      margin: 0 auto;
-    }
-
-    .trainerBioTitle {
-      font-size: 3.5vw;
-    }
-
-    .trainerBioSubtitle {
-      font-size: 3vw;
-      margin-bottom: 5%;
-    }
-    
-    .trainerInfoRow {
-      height: 20%;
-      width: 80%;
-      margin: 0 auto;
-    }
-    
-    .trainerInfoHeaderLeft {
-      font-size: 3.5vw;
-      letter-spacing: 1px;
-      margin-top: 5%;
-    }
-    
-    .trainerInfoHeaderRight {
-      font-size: 3.5vw;
-      letter-spacing: 1px;
-      margin-top: 5%;
-    }
-    
-    .trainerBioRow {
-      width: 90%;
-      margin: 0 auto;
-      margin-top: 5%;
-        
-    }
-    
-    .trainerBioImage {
-      width: 90%;
-      height: auto !important;
-      margin: 0 auto;
-      margin-top: 5%;
-    }
-    
-    .trainerBioButton {
-      min-width: 40%;
-      text-align: left;
-      font-weight: bolder;
-      font-size: 3vw;
-    }
-    
-    .trainerBioButton:hover {
-      width: 40%;
-      text-align: left;
-    }
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
 }
 
 /* ----------- iPad 3, 4 and Pro 9.7" ----------- */
 
 /* Portrait and Landscape */
-@media only screen 
-  and (min-device-width: 768px) 
-  and (max-device-width: 1024px) 
-  and (-webkit-min-device-pixel-ratio: 2) {
-
+@media only screen and (min-width: 1024px) and (max-height: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) {
 }
 
 /* Portrait */
-@media only screen 
-  and (min-device-width: 768px) 
-  and (max-device-width: 1024px) 
-  and (orientation: portrait) 
-  and (-webkit-min-device-pixel-ratio: 2) {
-    .trainerInfo {
-        height: 100%;
-        padding-bottom: 25%;
-
-    }
-
-    .trainerBioCardColumn {
-        margin-bottom: 5%;
-    }
-    
-    .trainerBioCard {
-        margin-top: 2%;
-    }
-    
-    .trainerInfoRow {
-        height: 20%;
-        width: 80%;
-        margin: 0 auto;
-    }
-    
-    .trainerInfoHeaderLeft {
-        font-size: 4vw;
-        letter-spacing: 1px;
-        margin-top: 10%;
-    }
-    
-    .trainerInfoHeaderRight {
-        font-size: 4vw;
-        letter-spacing: 1px;
-        margin-top: 10%;
-    }
-    
-    .trainerBioRow {
-        width: 90%;
-        margin: 0 auto;
-        margin-top: 5%;
-        
-    }
-    
-    .trainerBioImage {
-        width: 90%;
-        margin: 0 auto;
-        margin-top: 5%;
-    }
-    
-    .trainerBioSubtitle {
-        margin-bottom: 5%;
-
-    }
-    
-    .trainerBioButton {
-        min-width: 40%;
-        text-align: left;
-        font-weight: bolder;
-    }
-    
-    .trainerBioButton:hover {
-        width: 40%;
-        text-align: left;
-    }
-    
+@media only screen and (min-width: 1024px) and (max-height: 1366px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1.5) {
+	.trainerBioCard {
+		width: 42vw;
+	}
 }
 
 /* Landscape */
-@media only screen 
-  and (min-device-width: 768px) 
-  and (max-device-width: 1024px) 
-  and (orientation: landscape) 
-  and (-webkit-min-device-pixel-ratio: 2) {
-
+@media only screen and (min-width: 1024px) and (max-width: 1024px) and (max-height: 1366px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1.5) {
+	.trainerBioTitle {
+		font-size: 2rem;
+	}
+	.trainerBioSubtitle {
+		font-size: 1.5rem;
+	}
+	.trainerBioButton {
+		font-size: 1.5rem;
+	}
 }
 
 /* ----------- iPad Pro 10.5" ----------- */
 
 /* Portrait and Landscape */
-@media only screen 
-  and (min-device-width: 834px) 
-  and (max-device-width: 1112px)
-  and (-webkit-min-device-pixel-ratio: 2) {
-
+@media only screen and (min-device-width: 834px) and (max-device-width: 1112px) and (-webkit-min-device-pixel-ratio: 2) {
 }
 
 /* Portrait */
 /* Declare the same value for min- and max-width to avoid colliding with desktops */
 /* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
-@media only screen 
-  and (min-device-width: 834px) 
-  and (max-device-width: 834px) 
-  and (orientation: portrait) 
-  and (-webkit-min-device-pixel-ratio: 2) {
-
+@media only screen and (min-device-width: 834px) and (max-device-width: 834px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
 }
 
 /* Landscape */
 /* Declare the same value for min- and max-width to avoid colliding with desktops */
 /* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
-@media only screen 
-  and (min-device-width: 1112px) 
-  and (max-device-width: 1112px) 
-  and (orientation: landscape) 
-  and (-webkit-min-device-pixel-ratio: 2) {
-
+@media only screen and (min-device-width: 1112px) and (max-device-width: 1112px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
 }
 
 /* ----------- iPad Pro 12.9" ----------- */
 
 /* Portrait and Landscape */
-@media only screen 
-  and (min-device-width: 1024px) 
-  and (max-device-width: 1366px)
-  and (-webkit-min-device-pixel-ratio: 2) {
-    
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) {
 }
 
 /* Portrait */
 /* Declare the same value for min- and max-width to avoid colliding with desktops */
 /* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
-@media only screen 
-  and (min-device-width: 1024px) 
-  and (max-device-width: 1024px) 
-  and (orientation: portrait) 
-  and (-webkit-min-device-pixel-ratio: 2) {
-    
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
 }
 
 /* Landscape */
 /* Declare the same value for min- and max-width to avoid colliding with desktops */
 /* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
-@media only screen 
-  and (min-device-width: 1366px) 
-  and (max-device-width: 1366px) 
-  and (orientation: landscape) 
-  and (-webkit-min-device-pixel-ratio: 2) {
-
+@media only screen and (min-device-width: 1366px) and (max-device-width: 1366px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
 }
-
-
 
 /* ----------- iPhones ----------- */
 
 /* ----------- iPhone 4 and 4S ----------- */
 
 /* Portrait and Landscape */
-@media only screen 
-  and (min-device-width: 320px) 
-  and (max-device-width: 480px)
-  and (-webkit-min-device-pixel-ratio: 2) {
-
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
 }
 
 /* Portrait */
-@media only screen 
-  and (min-device-width: 320px) 
-  and (max-device-width: 480px)
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (orientation: portrait) {
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
 }
 
 /* Landscape */
-@media only screen 
-  and (min-device-width: 320px) 
-  and (max-device-width: 480px)
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (orientation: landscape) {
-
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
 }
 
 /* ----------- iPhone 5, 5S, 5C and 5SE ----------- */
 
 /* Portrait and Landscape */
-@media only screen 
-  and (min-device-width: 320px) 
-  and (max-device-width: 568px)
-  and (-webkit-min-device-pixel-ratio: 2) {
-
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
 }
 
 /* Portrait */
-@media only screen 
-  and (min-device-width: 320px) 
-  and (max-device-width: 568px)
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (orientation: portrait) {
-    .trainerInfo {
-        height: 100%;
-        padding-bottom: 25%;
-        padding-top: 15%;
-    }
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+	.trainerBioCardColumn {
+		margin-bottom: 5%;
+		padding-left: 1vw;
+		padding-right: 1vw;
+	}
 
-    .trainerBioCardColumn {
-        margin-bottom: 5% !important;
-    }
-    
-    .trainerBioCard {
-        margin-top: 2%;
-    }
-    
-    .trainerInfoRow {
-        height: 20%;
-        width: 80%;
-        margin: 0 auto;
-    }
-    
-    .trainerInfoHeaderLeft {
-        font-size: 5vw;
-        letter-spacing: 1px;
-        margin-top: 10%;
-    }
-    
-    .trainerInfoHeaderRight {
-        font-size: 5vw;
-        letter-spacing: 1px;
-        margin-top: 10%;
-    }
-    
-    .trainerBioRow {
-        width: 90%;
-        margin: 0 auto;
-        margin-top: 5%;
-        
-    }
-    
-    .trainerBioImage {
-        width: 90%;
-        margin: 0 auto;
-        margin-top: 5%;
-    }
-    
-    .trainerBioSubtitle {
-        margin-bottom: 5%;
-    }
-    
-    .trainerBioButton {
-        min-width: 40%;
-        text-align: left;
-        font-weight: bolder;
-    }
-    
-    .trainerBioButton:hover {
-        width: 40%;
-        text-align: left;
-    }
+	.trainerBioCard {
+		margin-top: 2%;
+		height: auto;
+		width: 90vw;
+	}
+
+	.trainerInfoRow {
+		width: 90vw;
+		margin: 0 auto;
+		margin-left: 5vw;
+	}
+
+	.trainerInfoHeaderLeft {
+		font-size: 1.5rem;
+		letter-spacing: 1px;
+		margin-top: 10%;
+	}
+
+	.trainerInfoHeaderRight {
+		font-size: 1.5rem;
+		letter-spacing: 1px;
+		margin-top: 10%;
+	}
+
+	.trainerBioRow {
+		width: 90%;
+		margin: 0 auto;
+		margin-top: 5%;
+	}
+
+	.trainerBioImage {
+		width: 90%;
+		margin: 0 auto;
+		margin-top: 5%;
+	}
+
+	.trainerBioTitle {
+		font-size: 1.5rem;
+	}
+
+	.trainerBioSubtitle {
+		margin-bottom: 5%;
+		font-size: 1rem;
+	}
+
+	.trainerBioButton {
+		min-width: 40%;
+		text-align: left;
+		font-weight: bolder;
+		font-size: 1rem;
+		margin-top: 3vh;
+	}
+
+	.trainerBioButton:hover {
+		width: 40%;
+		text-align: left;
+	}
 }
 
 /* Landscape */
-@media only screen 
-  and (min-device-width: 320px) 
-  and (max-device-width: 568px)
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (orientation: landscape) {
-    .trainerInfo {
-      height: 100%;
-      width: 100vw !important;
-      padding-bottom: 25%;
-      padding-top: 15%;
-    }
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+	.trainerBioCardColumn {
+		margin-bottom: 5% !important;
+	}
 
-    .trainerBioCardColumn {
-        margin-bottom: 5% !important;
-    }
-    
-    .trainerBioCard {
-        margin-top: 2%;
-        width: 80%;
-        margin: 0 auto;
-    }
+	.trainerInfoRow {
+		height: 20%;
+		width: 80%;
+		margin: 0 auto;
+	}
 
-    .trainerBioTitle {
-      font-size: 10vw;
-    }
+	.trainerInfoHeaderLeft,
+	.trainerInfoHeaderRight {
+		font-size: 1.2rem;
+	}
 
-    .trainerBioSubtitle {
-      font-size: 8vw;
-      margin-bottom: 5%;
-    }
-    
-    .trainerInfoRow {
-        height: 20%;
-        width: 80%;
-        margin: 0 auto;
-    }
-    
-    .trainerInfoHeaderLeft {
-        font-size: 12vw;
-        letter-spacing: 1px;
-        margin-top: 10%;
-    }
-    
-    .trainerInfoHeaderRight {
-        font-size: 12vw;
-        letter-spacing: 1px;
-        margin-top: 10%;
-    }
-    
-    .trainerBioRow {
-        width: 90%;
-        margin: 0 auto;
-        margin-top: 5%;
-        
-    }
-    
-    /* .trainerBioImage {
-        width: 90%;
-        max-width: 20vw;
-        margin: 0 auto;
-        margin-top: 5%;
-    } */
+	.trainerBioRow {
+		width: 90%;
+		margin: 0 auto;
+		margin-top: 5%;
+	}
 
-    .trainerBioImage {
-      position: relative;
-      width: 70vw;
-      height: 70vw;
-      overflow: hidden;
-      border-radius: .25rem;
-      margin: 0 auto;
-    }
-  
-    .trainerBioImage img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-    
-    .trainerBioButton {
-        min-width: 40%;
-        text-align: left;
-        font-weight: bolder;
-        font-size: 8vw;
-    }
-    
-    .trainerBioButton:hover {
-        width: 40%;
-        text-align: left;
-    }
+	.trainerBioImage {
+		position: relative;
+		width: 70vw;
+		height: 70vw;
+		overflow: hidden;
+		border-radius: .25rem;
+		margin: 0 auto;
+	}
+
+	.trainerBioImage img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+	.trainerBioButton:hover {
+		width: 40%;
+		text-align: left;
+	}
 }
 
 /* ----------- iPhone 6, 6S, 7 and 8 ----------- */
 
 /* Portrait and Landscape */
-@media only screen 
-  and (min-device-width: 375px) 
-  and (max-device-width: 667px) 
-  and (-webkit-min-device-pixel-ratio: 2) { 
-
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
 }
 
 /* Portrait */
-@media only screen 
-  and (min-device-width: 375px) 
-  and (max-device-width: 667px) 
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (orientation: portrait) { 
-    .trainerInfo {
-      height: 100%;
-      width: 100vw !important;
-      padding-bottom: 25%;
-      padding-top: 15%;
-    }
-
-    .trainerBioCard {
-      width: 100%;
-      margin: 0 auto;
-    }
-
-    .trainerBioTitle {
-      font-size: 3.5vw;
-    }
-
-    .trainerBioSubtitle {
-      font-size: 3vw;
-      margin-bottom: 5%;
-    }
-    
-    .trainerInfoRow {
-      height: 20%;
-      width: 80%;
-      margin: 0 auto;
-    }
-    
-    .trainerInfoHeaderLeft {
-      font-size: 3.5vw;
-      letter-spacing: 1px;
-      margin-top: 5%;
-    }
-    
-    .trainerInfoHeaderRight {
-      font-size: 3.5vw;
-      letter-spacing: 1px;
-      margin-top: 5%;
-    }
-    
-    .trainerBioRow {
-      width: 90%;
-      margin: 0 auto;
-      margin-top: 5%;
-        
-    }
-    
-    .trainerBioImage {
-      width: 90%;
-      height: auto !important;
-      margin: 0 auto;
-      margin-top: 5%;
-    }
-    
-    .trainerBioButton {
-      min-width: 40%;
-      text-align: left;
-      font-weight: bolder;
-      font-size: 3vw;
-    }
-    
-    .trainerBioButton:hover {
-      width: 40%;
-      text-align: left;
-    }
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
 }
 
 /* Landscape */
-@media only screen 
-  and (min-device-width: 375px) 
-  and (max-device-width: 667px) 
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (orientation: landscape) { 
-    .trainerInfo {
-      height: 100%;
-      width: 100vw !important;
-      padding-bottom: 25%;
-      padding-top: 15%;
-    }
-
-    .trainerBioCard {
-      width: 100%;
-      margin: 0 auto;
-    }
-
-    .trainerBioTitle {
-      font-size: 3.5vw;
-    }
-
-    .trainerBioSubtitle {
-      font-size: 3vw;
-      margin-bottom: 5%;
-    }
-    
-    .trainerInfoRow {
-      height: 20%;
-      width: 80%;
-      margin: 0 auto;
-    }
-    
-    .trainerInfoHeaderLeft {
-      font-size: 3.5vw;
-      letter-spacing: 1px;
-      margin-top: 5%;
-    }
-    
-    .trainerInfoHeaderRight {
-      font-size: 3.5vw;
-      letter-spacing: 1px;
-      margin-top: 5%;
-    }
-    
-    .trainerBioRow {
-      width: 90%;
-      margin: 0 auto;
-      margin-top: 5%;
-        
-    }
-    
-    .trainerBioImage {
-      width: 90%;
-      height: auto !important;
-      margin: 0 auto;
-      margin-top: 5%;
-    }
-    
-    .trainerBioButton {
-      min-width: 40%;
-      text-align: left;
-      font-weight: bolder;
-      font-size: 3vw;
-    }
-    
-    .trainerBioButton:hover {
-      width: 40%;
-      text-align: left;
-    }
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+	.trainerBioCard {
+		width: 100%;
+		margin: 0 auto;
+	}
+	.trainerInfoRow {
+		height: 20%;
+		width: 80%;
+		margin: 0 auto;
+	}
+	.trainerInfoHeaderLeft,
+	.trainerInfoHeaderRight {
+		font-size: 1.3rem;
+	}
+	.trainerBioRow {
+		width: 90%;
+		margin: 0 auto;
+		margin-top: 5%;
+	}
+	.trainerBioImage {
+		width: 90%;
+		height: auto !important;
+		margin: 0 auto;
+		margin-top: 5%;
+	}
+	.trainerBioButton:hover {
+		width: 40%;
+		text-align: left;
+	}
 }
 
 /* ----------- iPhone 6+, 7+ and 8+ ----------- */
 
 /* Portrait and Landscape */
-@media only screen 
-  and (min-device-width: 414px) 
-  and (max-device-width: 736px) 
-  and (-webkit-min-device-pixel-ratio: 3) { 
-
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) {
+	.trainerInfoHeaderLeft,
+	.trainerInfoHeaderRight {
+		font-size: 1.3rem;
+	}
 }
 
 /* Portrait */
-@media only screen 
-  and (min-device-width: 414px) 
-  and (max-device-width: 736px) 
-  and (-webkit-min-device-pixel-ratio: 3)
-  and (orientation: portrait) { 
-
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: portrait) {
 }
 
 /* Landscape */
-@media only screen 
-  and (min-device-width: 414px) 
-  and (max-device-width: 736px) 
-  and (-webkit-min-device-pixel-ratio: 3)
-  and (orientation: landscape) { 
-
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {
 }
 
 /* ----------- iPhone X ----------- */
 
 /* Portrait and Landscape */
-@media only screen 
-  and (min-device-width: 375px) 
-  and (max-device-width: 812px) 
-  and (-webkit-min-device-pixel-ratio: 3) { 
-
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
 }
 
 /* Portrait */
-@media only screen 
-  and (min-device-width: 375px) 
-  and (max-device-width: 812px) 
-  and (-webkit-min-device-pixel-ratio: 3)
-  and (orientation: portrait) { 
-    .trainerInfo {
-        height: 100%;
-        padding-bottom: 25%;
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: portrait) {
+	.trainerBioCardColumn {
+		margin-bottom: 5%;
+	}
 
-    }
+	.trainerBioCard {
+		width: 85vw;
+		margin-top: 2%;
+	}
 
-    .trainerBioCardColumn {
-        margin-bottom: 5%;
-    }
-    
-    .trainerBioCard {
-        margin-top: 2%;
-    }
-    
-    .trainerInfoRow {
-        height: 20%;
-        width: 80%;
-        margin: 0 auto;
-    }
-    
-    .trainerInfoHeaderLeft {
-        font-size: 5vw;
-        letter-spacing: 1px;
-        margin-top: 10%;
-    }
-    
-    .trainerInfoHeaderRight {
-        font-size: 5vw;
-        letter-spacing: 1px;
-        margin-top: 10%;
-    }
-    
-    .trainerBioRow {
-        width: 90%;
-        margin: 0 auto;
-        margin-top: 5%;
-        
-    }
-    
-    .trainerBioImage {
-        width: 90%;
-        margin: 0 auto;
-        margin-top: 5%;
-    }
-    
-    .trainerBioSubtitle {
-        margin-bottom: 5%;
-    }
-    
-    .trainerBioButton {
-        min-width: 40%;
-        text-align: left;
-        font-weight: bolder;
-    }
-    
-    .trainerBioButton:hover {
-        width: 40%;
-        text-align: left;
-    }
-    
+	.trainerInfoRow {
+		height: 20%;
+		width: 80%;
+		margin: 0 auto;
+	}
+
+	.trainerBioRow {
+		width: 90%;
+		margin: 0 auto;
+		margin-top: 5%;
+	}
+
+	.trainerBioImage {
+		width: 90%;
+		margin: 0 auto;
+		margin-top: 5%;
+	}
+
+	.trainerBioButton:hover {
+		width: 40%;
+		text-align: left;
+	}
 }
 
 /* Landscape */
-@media only screen 
-  and (min-device-width: 375px) 
-  and (max-device-width: 812px) 
-  and (-webkit-min-device-pixel-ratio: 3)
-  and (orientation: landscape) { 
-    .trainerInfo {
-      height: 100%;
-      width: 100vw !important;
-      padding-bottom: 25%;
-      padding-top: 15%;
-    }
-
-    .trainerBioCard {
-      width: 100%;
-      margin: 0 auto;
-    }
-
-    .trainerBioTitle {
-      font-size: 3.5vw;
-    }
-
-    .trainerBioSubtitle {
-      font-size: 3vw;
-      margin-bottom: 5%;
-    }
-    
-    .trainerInfoRow {
-      height: 20%;
-      width: 80%;
-      margin: 0 auto;
-    }
-    
-    .trainerInfoHeaderLeft {
-      font-size: 3.5vw;
-      letter-spacing: 1px;
-      margin-top: 5%;
-    }
-    
-    .trainerInfoHeaderRight {
-      font-size: 3.5vw;
-      letter-spacing: 1px;
-      margin-top: 5%;
-    }
-    
-    .trainerBioRow {
-      width: 90%;
-      margin: 0 auto;
-      margin-top: 5%;
-        
-    }
-    
-    .trainerBioImage {
-      width: 90%;
-      height: auto !important;
-      margin: 0 auto;
-      margin-top: 5%;
-    }
-    
-    .trainerBioButton {
-      min-width: 40%;
-      text-align: left;
-      font-weight: bolder;
-      font-size: 3vw;
-    }
-    
-    .trainerBioButton:hover {
-      width: 40%;
-      text-align: left;
-    }
-    
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {
+	.trainerInfoHeaderLeft,
+	.trainerInfoHeaderRight {
+		font-size: 1.5rem;
+	}
+	.trainerBioCard {
+		width: 100%;
+		margin: 0 auto;
+	}
+	.trainerInfoRow {
+		height: 20%;
+		width: 80%;
+		margin: 0 auto;
+	}
+	.trainerBioRow {
+		width: 90%;
+		margin: 0 auto;
+		margin-top: 5%;
+	}
+	.trainerBioImage {
+		width: 90%;
+		height: auto !important;
+		margin: 0 auto;
+		margin-top: 5%;
+	}
+	.trainerBioButton:hover {
+		width: 40%;
+		text-align: left;
+	}
 }
 
 /* ----------- Pixel 2 ----------- */
 
-@media only screen 
-  and (min-device-width: 375px) 
-  and (max-device-width: 812px) 
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (orientation: landscape) { 
-    .trainerInfo {
-      height: 100%;
-      width: 100vw !important;
-      padding-bottom: 25%;
-      padding-top: 15%;
-    }
-
-    .trainerBioCard {
-      width: 100%;
-      margin: 0 auto;
-    }
-
-    .trainerBioTitle {
-      font-size: 3.5vw;
-    }
-
-    .trainerBioSubtitle {
-      font-size: 3vw;
-      margin-bottom: 5%;
-    }
-    
-    .trainerInfoRow {
-      height: 20%;
-      width: 80%;
-      margin: 0 auto;
-    }
-    
-    .trainerInfoHeaderLeft {
-      font-size: 3.5vw;
-      letter-spacing: 1px;
-      margin-top: 5%;
-    }
-    
-    .trainerInfoHeaderRight {
-      font-size: 3.5vw;
-      letter-spacing: 1px;
-      margin-top: 5%;
-    }
-    
-    .trainerBioRow {
-      width: 90%;
-      margin: 0 auto;
-      margin-top: 5%;
-        
-    }
-    
-    .trainerBioImage {
-      width: 90%;
-      height: auto !important;
-      margin: 0 auto;
-      margin-top: 5%;
-    }
-    
-    .trainerBioButton {
-      min-width: 40%;
-      text-align: left;
-      font-weight: bolder;
-      font-size: 3vw;
-    }
-    
-    .trainerBioButton:hover {
-      width: 40%;
-      text-align: left;
-    }
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+	.trainerBioCard {
+		width: 100%;
+		margin: 0 auto;
+	}
+	.trainerInfoRow {
+		height: 20%;
+		width: 80%;
+		margin: 0 auto;
+	}
+	.trainerBioRow {
+		width: 90%;
+		margin: 0 auto;
+		margin-top: 5%;
+	}
+	.trainerBioImage {
+		width: 90%;
+		height: auto !important;
+		margin: 0 auto;
+		margin-top: 5%;
+	}
+	.trainerBioButton:hover {
+		width: 40%;
+		text-align: left;
+	}
 }
-
-
-

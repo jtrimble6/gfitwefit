@@ -21,7 +21,7 @@ class TrainerInfo extends Component {
                       <Col sm-6='true' className='trainerBioCardColumn'>
                         <Card className='trainerBioCard'>
                           <Card.Img className='trainerBioImage' variant="top" src={walt} alt="Walt Gouveia" />
-                          <Card.Body>
+                          <Card.Body className='trainerBioCardBody'>
                               <Card.Title className='trainerBioTitle'>WALT GOUVEIA</Card.Title>
                               <Card.Subtitle className='trainerBioSubtitle'>OWNER + TRAINER</Card.Subtitle>
                               <Button href='/' className='trainerBioButton'>BIO //</Button>
@@ -34,7 +34,7 @@ class TrainerInfo extends Component {
                       <Col sm-6='true' className='trainerBioCardColumn'>
                         <Card className='trainerBioCard'>
                           <Card.Img className='trainerBioImage' variant="top" src={kyle} alt="Kyle Gouveia" />
-                          <Card.Body>
+                          <Card.Body className='trainerBioCardBody'>
                               <Card.Title className='trainerBioTitle'>KYLE GOUVEIA</Card.Title>
                               <Card.Subtitle className='trainerBioSubtitle'>OWNER + TRAINER</Card.Subtitle>
                               {/* <Button href='/' className='trainerBioButton'>BIO //</Button> */}
@@ -43,34 +43,6 @@ class TrainerInfo extends Component {
                         </Card>
                       </Col>
                     </Row>
-
-                    <Row className='trainerBioRow'>
-                    {/* TRAINER BIO 3 */}
-                    <Col sm-6='true' className='trainerBioCardColumn'>
-                      <Card className='trainerBioCard'>
-                        <Card.Img className='trainerBioImage' variant="top" src={jenn} alt="Jennifer Coleman"/>
-                        <Card.Body>
-                            <Card.Title className='trainerBioTitle'>JENNIFER COLEMAN</Card.Title>
-                            <Card.Subtitle className='trainerBioSubtitle'>TRAINER</Card.Subtitle>
-                            {/* <Button href='/' className='trainerBioButton'>BIO //</Button> */}
-                            <Button href='/bioPage?trainer=jenn' className='trainerBioButton'>BIO //</Button>
-                        </Card.Body>
-                      </Card>
-                    </Col>
-
-                    {/* TRAINER BIO 4 */}
-                    <Col sm-6='true' className='trainerBioCardColumn'>
-                      <Card className='trainerBioCard'>
-                        <Card.Img className='trainerBioImage' variant="top" src={jacob} alt="Jacob Erdtmann" />
-                        <Card.Body>
-                            <Card.Title className='trainerBioTitle'>JACOB ERDTMANN</Card.Title>
-                            <Card.Subtitle className='trainerBioSubtitle'>TRAINER</Card.Subtitle>
-                            {/* <Button href='/' className='trainerBioButton'>BIO //</Button> */}
-                            <Button href='/bioPage?trainer=jacob' className='trainerBioButton'>BIO //</Button>
-                        </Card.Body>
-                      </Card>
-                    </Col>
-                </Row>
             </div>
         )
     }

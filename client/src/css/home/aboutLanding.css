@@ -1,1284 +1,543 @@
 @font-face {
-  font-family: 'gfitfont';
-  font-style: normal;
-  font-weight: bolder;
-  src: local('gfitfont'), url('../fonts/gfitfont.ttf'), url('../fonts/gfitfont.woff'), format('truetype');
+	font-family: 'gfitfont';
+	font-style: normal;
+	font-weight: bolder;
+	src: local('gfitfont'), url('../fonts/gfitfont.ttf'), url('../fonts/gfitfont.woff'), format('truetype');
 }
 @font-face {
-    font-family: 'gfitfont-bold';
-    font-style: normal;
-    font-weight: bolder;
-    src: local('gfitfontBold'), url('../fonts/gfitfontBold.ttf'), url('../fonts/gfitfontBold.woff') format('truetype');
-  }
+	font-family: 'gfitfont-bold';
+	font-style: normal;
+	font-weight: bolder;
+	src: local('gfitfontBold'), url('../fonts/gfitfontBold.ttf'), url('../fonts/gfitfontBold.woff') format('truetype');
+}
 
 .aboutLanding {
-    font-family: 'gfitfont-bold';
-    height: 575px;
-    width: 100% !important;
-    background-image: url('../images/aboutLanding.jpg');
-    background-position: center; /* Center the image */
-    background-repeat: no-repeat; /* Do not repeat the image */
-    background-size: cover; 
+	font-family: 'gfitfont-bold';
+	height: 90vh;
+	width: 100% !important;
+	background-image: url('../images/aboutLanding.jpg');
+	background-position: center; /* Center the image */
+	background-repeat: no-repeat; /* Do not repeat the image */
+	background-size: cover;
 }
 
 .aboutJumbotron {
-    width: 90%;
-    /* min-height: 250px; */
-    margin: 0 auto;
-    position: relative;
-    bottom: -430px;
-    padding-top: 2.5%;
-}
-.aboutJumbotronHeaderRow {
-    margin-top: 5%;
-}
-
-.aboutJumbotronHeaderLeft {
-    position: relative;
-    float: left;
-    color: #000000;
-    font-size: 1.8vw;
-    font-weight: bolder;
-    letter-spacing: 3px;
-    padding-left: 15px;
+	width: 50vw;
+	float: left;
+	margin: 0 auto;
+	position: relative;
+	top: 20vh;
+	padding-top: 1.5vw;
+	padding-bottom: 1.5vw;
+	opacity: 90%;
+	text-align: center;
 }
 
-.aboutJumbotronHeaderRight {
-    position: relative;
-    float: left;
-    color: #FAC04E;
-    font-size: 1.8vw;
-    font-weight: bolder;
-    letter-spacing: 3px;
+.aboutJumbotronHeaderPrimary {
+	color: #000000;
+	font-size: 1.8vw;
+	font-weight: bolder;
+	letter-spacing: 3px;
+	padding-left: 15px;
+	text-align: center;
+}
+
+.aboutJumbotronHeaderSecondary {
+	color: #fac04e;
+	font-size: 1.2vw;
+	padding-left: 15px;
+	text-align: center;
+	width: 100%;
+}
+
+.freeTrialButton {
+	background-color: #fac04e;
+	border-color: #000000;
+	color: white;
+}
+
+.freeTrialButton:hover {
+	background-color: white;
+	border-color: #000000;
+	color: #000000;
+}
+
+.freeTrialButton:focus {
+	background-color: white;
+	border-color: #000000;
+	color: #000000;
+	box-shadow: 0 0 0 0.2rem #fac04e;
 }
 
 .aboutJumbotronBody {
-    float: left;
-    font-size: 1.1vw;
-    font-weight: bold;
-    text-align: left;
+	font-family: 'gfitfont';
+	font-size: 1rem;
+	font-weight: 540;
+	text-align: center;
 }
 
 .aboutJumbotronLogo {
-    background-color: #FAC04E;
-    position: relative;
-    float: left;
-    left: -80px;
-    top: 10%;
-    width: 115%;
+	background-color: #fac04e;
+	position: relative;
+	float: left;
+	left: -80px;
+	top: 10%;
+	width: 115%;
 }
-
 
 /* ----------- LAPTOPS ----------- */
 
-
 /* ----------- Non-Retina Screens ----------- */
-@media screen 
-  and (min-device-width: 1200px) 
-  and (max-device-width: 1600px) 
-  and (-webkit-min-device-pixel-ratio: 1) { 
-    .aboutLanding {
-      height: 875px;
-    }
-    .aboutJumbotron {
-        bottom: -580px;
-    }
-    .aboutJumbotronHeaderLeft {
-        font-size: 2.5vw;
-        letter-spacing: 1px;
-    }
-    
-    .aboutJumbotronHeaderRight {
-        font-size: 2.5vw;
-        letter-spacing: 1px;
-    }
-    
-    .aboutJumbotronBody {
-        float: left;
-        font-size: 1.4vw;
-        font-weight: bold;
-    }
-    .aboutJumbotronLogo {
-        position: relative;
-        float: none;
-        left: -105px;
-        top: 60px;
-        width: 130%;
-        height: auto;
-    }
-    .gFitStrongLeftLanding {
-      margin-left: 1.3vw;
-    }
-}
-
-@media screen 
-  and (min-device-width: 1600px) 
-  and (max-device-width: 2000px) 
-  and (-webkit-min-device-pixel-ratio: 1) { 
-    .aboutLanding {
-      height: 600px;
-    }
-    .aboutJumbotron {
-        bottom: -450px;
-    }
-    .aboutJumbotronHeaderLeft {
-        font-size: 2.5vw;
-        letter-spacing: 1px;
-    }
-    
-    .aboutJumbotronHeaderRight {
-        font-size: 2.5vw;
-        letter-spacing: 1px;
-    }
-    
-    .aboutJumbotronBody {
-        float: left;
-        font-size: 1.4vw;
-        font-weight: bold;
-    }
-    .aboutJumbotronLogo {
-        position: relative;
-        float: none;
-        left: -105px;
-        top: 60px;
-        width: 110%;
-        height: auto;
-    }
-}
-
-@media screen 
-  and (min-device-width: 2001px) 
-  and (max-device-width: 3000px) 
-  and (-webkit-min-device-pixel-ratio: 1) { 
-    .aboutLanding {
-      height: 1475px;
-    }
-    .aboutJumbotron {
-        bottom: -1050px;
-    }
-    .aboutJumbotronHeaderLeft {
-        font-size: 2.5vw;
-        letter-spacing: 1px;
-    }
-    
-    .aboutJumbotronHeaderRight {
-        font-size: 2.5vw;
-        letter-spacing: 1px;
-    }
-    
-    .aboutJumbotronBody {
-        float: left;
-        font-size: 1.4vw;
-        font-weight: bold;
-    }
-    .aboutJumbotronLogo {
-        position: relative;
-        float: none;
-        left: -105px;
-        top: 60px;
-        width: 110%;
-        height: auto;
-    }
-}
-
-@media screen 
-  and (min-device-width: 2001px) 
-  and (max-device-width: 2100px) 
-  and (-webkit-min-device-pixel-ratio: 1) { 
-    .aboutLanding {
-      height: 1075px;
-    }
-    .aboutJumbotron {
-      bottom: -850px;
-    }
-}
-@media screen 
-  and (min-device-width: 2101px) 
-  and (max-device-width: 2200px) 
-  and (-webkit-min-device-pixel-ratio: 1) { 
-    .aboutLanding {
-      height: 1075px;
-    }
-    .aboutJumbotron {
-      bottom: -850px;
-    }
-}
-@media screen 
-  and (min-device-width: 2201px) 
-  and (max-device-width: 2300px) 
-  and (-webkit-min-device-pixel-ratio: 1) { 
-    .aboutLanding {
-      height: 1075px;
-    }
-    .aboutJumbotron {
-      bottom: -850px;
-    }
-}
-@media screen 
-  and (min-device-width: 2301px) 
-  and (max-device-width: 2400px) 
-  and (-webkit-min-device-pixel-ratio: 1) { 
-    .aboutLanding {
-      height: 1075px;
-    }
-    .aboutJumbotron {
-      bottom: -850px;
-    }
-}
-@media screen 
-  and (min-device-width: 2401px) 
-  and (max-device-width: 2500px) 
-  and (-webkit-min-device-pixel-ratio: 1) { 
-    .aboutLanding {
-      height: 1075px;
-    }
-    .aboutJumbotron {
-      bottom: -850px;
-    }
-}
-@media screen 
-  and (min-device-width: 2501px) 
-  and (max-device-width: 2600px) 
-  and (-webkit-min-device-pixel-ratio: 1) { 
-    .aboutLanding {
-      height: 1075px;
-    }
-    .aboutJumbotron {
-      bottom: -850px;
-    }
-}
-@media screen 
-  and (min-device-width: 2601px) 
-  and (max-device-width: 2700px) 
-  and (-webkit-min-device-pixel-ratio: 1) {
-
-    
-}
-@media screen 
-  and (min-device-width: 2701px) 
-  and (max-device-width: 2800px) 
-  and (-webkit-min-device-pixel-ratio: 1) { 
-
-    
-}
-@media screen 
-  and (min-device-width: 2801px) 
-  and (max-device-width: 2900px) 
-  and (-webkit-min-device-pixel-ratio: 1) { 
- 
-    
-}
-@media screen 
-  and (min-device-width: 2901px) 
-  and (max-device-width: 3000px) 
-  and (-webkit-min-device-pixel-ratio: 1) { 
-    
+@media screen and (min-device-width: 1024px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
+	.aboutLanding {
+		height: 90vh;
+	}
+	.aboutJumbotronBody {
+		line-height: 1.3rem;
+	}
+	.aboutJumbotronHeaderPrimary {
+		font-size: 1.5rem;
+	}
 }
 
 /* ----------- Retina Screens ----------- */
-@media screen 
-  and (min-device-width: 1200px) 
-  and (max-device-width: 1600px) 
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (min-resolution: 192dpi) { 
-    .aboutLanding {
-      height: 675px;
-    }
-    .aboutJumbotron {
-        width: 90%;
-        min-height: 250px;
-        margin: 0 auto;
-        position: relative;
-        bottom: -480px;
-        padding-top: 2.5%;
-        text-align: center;
+@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) {
+	.aboutLanding {
+		height: 90vh;
+	}
+	.aboutJumbotron {
+		/* width: 90%; */
+		min-height: 250px;
+		margin: 0 auto;
+		position: relative;
+		bottom: -480px;
+		padding-top: 2.5%;
+		text-align: center;
+	}
+	.aboutJumbotronHeaderPrimary {
+		font-size: 2.5vw;
+		letter-spacing: 1px;
+	}
 
-    }
-    .aboutJumbotronHeaderLeft {
-        font-size: 2.5vw;
-        letter-spacing: 1px;
-    }
-    
-    .aboutJumbotronHeaderRight {
-        font-size: 2.5vw;
-        letter-spacing: 1px;
-    }
-    
-    .aboutJumbotronBody {
-        float: left;
-        font-size: 1.4vw;
-        font-weight: bold;
-    }
-    .aboutJumbotronLogo {
-        position: relative;
-        float: none;
-        left: -105px;
-        top: 60px;
-        width: 130%;
-        height: auto;
-    }
+	.aboutJumbotronHeaderRight {
+		font-size: 2.5vw;
+		letter-spacing: 1px;
+	}
+
+	.aboutJumbotronBody {
+		font-size: 1.4vw;
+	}
+	.aboutJumbotronLogo {
+		position: relative;
+		float: none;
+		left: -105px;
+		top: 60px;
+		width: 130%;
+		height: auto;
+	}
 }
 
-@media screen 
-  and (min-device-width: 1600px) 
-  and (max-device-width: 2000px) 
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (min-resolution: 192dpi) { 
-    .aboutLanding {
-      height: 1075px;
-    }
-    .aboutJumbotron {
-        width: 90%;
-        min-height: 250px;
-        margin: 0 auto;
-        position: relative;
-        bottom: -750px;
-        padding-top: 2.5%;
-        text-align: center;
+@media screen and (min-device-width: 1600px) and (max-device-width: 2000px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) {
+	.aboutLanding {
+		height: 90vh;
+	}
+	.aboutJumbotron {
+		/* width: 90%; */
+		min-height: 250px;
+		margin: 0 auto;
+		position: relative;
+		bottom: -750px;
+		padding-top: 2.5%;
+		text-align: center;
+	}
+	.aboutJumbotronHeaderPrimary {
+		font-size: 2.5vw;
+		letter-spacing: 1px;
+	}
 
-    }
-    .aboutJumbotronHeaderLeft {
-        font-size: 2.5vw;
-        letter-spacing: 1px;
-    }
-    
-    .aboutJumbotronHeaderRight {
-        font-size: 2.5vw;
-        letter-spacing: 1px;
-    }
-    
-    .aboutJumbotronBody {
-        float: left;
-        font-size: 1.4vw;
-        font-weight: bold;
-    }
-    .aboutJumbotronLogo {
-        position: relative;
-        float: none;
-        left: -105px;
-        top: 60px;
-        width: 110%;
-        height: auto;
-    }
-}
-@media screen 
-  and (min-device-width: 2001px) 
-  and (max-device-width: 3000px) 
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (min-resolution: 192dpi) { 
-    .aboutLanding {
-      height: 1475px;
-    }
-    .aboutJumbotron {
-        width: 90%;
-        min-height: 250px;
-        margin: 0 auto;
-        position: relative;
-        bottom: -1050px;
-        padding-top: 2.5%;
-        text-align: center;
-    }
-    .aboutJumbotronHeaderLeft {
-        font-size: 2.5vw;
-        letter-spacing: 1px;
-    }
-    
-    .aboutJumbotronHeaderRight {
-        font-size: 2.5vw;
-        letter-spacing: 1px;
-    }
-    
-    .aboutJumbotronBody {
-        float: left;
-        font-size: 1.4vw;
-        font-weight: bold;
-    }
-    .aboutJumbotronLogo {
-        position: relative;
-        float: none;
-        left: -105px;
-        top: 60px;
-        width: 110%;
-        height: auto;
-    }
+	.aboutJumbotronHeaderRight {
+		font-size: 2.5vw;
+		letter-spacing: 1px;
+	}
+
+	.aboutJumbotronBody {
+		font-size: 1.4vw;
+	}
+	.aboutJumbotronLogo {
+		position: relative;
+		float: none;
+		left: -105px;
+		top: 60px;
+		width: 110%;
+		height: auto;
+	}
 }
 
-@media screen 
-  and (min-device-width: 2001px) 
-  and (max-device-width: 2100px) 
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (min-resolution: 192dpi) { 
-    .aboutLanding {
-      height: 1075px;
-    }
-    .aboutJumbotron {
-      bottom: -850px;
-    }
-    
-}
-@media screen 
-  and (min-device-width: 2101px) 
-  and (max-device-width: 2200px) 
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (min-resolution: 192dpi) { 
-    .aboutLanding {
-      height: 1075px;
-    }
-    .aboutJumbotron {
-      bottom: -850px;
-    }
-    
-}
-@media screen 
-  and (min-device-width: 2201px) 
-  and (max-device-width: 2300px) 
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (min-resolution: 192dpi) { 
-    .aboutLanding {
-      height: 1075px;
-    }
-    .aboutJumbotron {
-      bottom: -850px;
-    }
-   
-}
-@media screen 
-  and (min-device-width: 2301px) 
-  and (max-device-width: 2400px) 
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (min-resolution: 192dpi) { 
-    .aboutLanding {
-      height: 1075px;
-    }
-    .aboutJumbotron {
-      bottom: -850px;
-    }
-}
-@media screen 
-  and (min-device-width: 2401px) 
-  and (max-device-width: 2500px) 
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (min-resolution: 192dpi) { 
-    .aboutLanding {
-      height: 1075px;
-    }
-    .aboutJumbotron {
-      bottom: -850px;
-    }
-}
-@media screen 
-  and (min-device-width: 2501px) 
-  and (max-device-width: 2600px) 
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (min-resolution: 192dpi) { 
-    
-}
-@media screen 
-  and (min-device-width: 2601px) 
-  and (max-device-width: 2700px) 
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (min-resolution: 192dpi) {
+@media screen and (min-device-width: 2001px) and (max-device-width: 3000px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) {
+	.aboutLanding {
+		height: 90vh;
+	}
+	.aboutJumbotron {
+		/* width: 90%; */
+		min-height: 250px;
+		margin: 0 auto;
+		position: relative;
+		bottom: -1050px;
+		padding-top: 2.5%;
+		text-align: center;
+	}
+	.aboutJumbotronHeaderPrimary {
+		font-size: 2.5vw;
+		letter-spacing: 1px;
+	}
 
-}
-@media screen 
-  and (min-device-width: 2701px) 
-  and (max-device-width: 2800px) 
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (min-resolution: 192dpi) { 
-    
-    
-}
-@media screen 
-  and (min-device-width: 2801px) 
-  and (max-device-width: 2900px) 
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (min-resolution: 192dpi) { 
-   
-    
-}
-@media screen 
-  and (min-device-width: 2901px) 
-  and (max-device-width: 3000px) 
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (min-resolution: 192dpi) { 
-    
-}
-@media screen 
-  and (min-device-width: 3001px) 
-  and (max-device-width: 4000px) 
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (min-resolution: 192dpi) { 
-    .aboutLanding {
-      height: 1075px;
-    }
-    .aboutJumbotron {
-      bottom: -850px;
-    }
-}
+	.aboutJumbotronHeaderRight {
+		font-size: 2.5vw;
+		letter-spacing: 1px;
+	}
 
+	.aboutJumbotronBody {
+		font-size: 1.4vw;
+	}
+	.aboutJumbotronLogo {
+		position: relative;
+		float: none;
+		left: -105px;
+		top: 60px;
+		width: 110%;
+		height: auto;
+	}
+}
 
 /* ----------- iPads ----------- */
 
 /* ----------- iPad 1, 2, Mini and Air ----------- */
 
 /* Portrait and Landscape */
-@media only screen 
-  and (min-device-width: 768px) 
-  and (max-device-width: 1024px) 
-  and (-webkit-min-device-pixel-ratio: 1) {
-
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
 }
 
 /* Portrait */
-@media only screen 
-  and (min-device-width: 768px) 
-  and (max-device-width: 1024px) 
-  and (orientation: portrait) 
-  and (-webkit-min-device-pixel-ratio: 1) {
-    .aboutLanding {
-      height: 655px;
-    }
-    .aboutJumbotron {
-        bottom: -450px;
-    }
-    .aboutJumbotronHeaderLeft {
-        font-size: 2.5vw;
-        letter-spacing: 1px;
-    }
-    
-    .aboutJumbotronHeaderRight {
-        font-size: 2.5vw;
-        letter-spacing: 1px;
-    }
-    
-    .aboutJumbotronBody {
-        float: left;
-        font-size: 1.5vw;
-        font-weight: bold;
-    }
-    .aboutJumbotronLogo {
-        position: relative;
-        float: none;
-        left: -75px;
-        top: 50px;
-        width: 145%;
-        height: auto;
-    }
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
+	.aboutLanding {
+		height: 95vh;
+	}
+	.aboutJumbotron {
+		top: 50vh;
+		width: 90vw;
+		height: auto;
+		margin-left: 5vw;
+	}
+	.aboutJumbotronHeaderPrimary {
+		font-size: 2rem;
+	}
+	.aboutJumbotronHeaderSecondary {
+		font-size: 1.5rem;
+	}
+	.aboutJumbotronBody {
+		font-size: 1.4rem;
+	}
 }
 
 /* Landscape */
-@media only screen 
-  and (min-device-width: 768px) 
-  and (max-device-width: 1024px) 
-  and (orientation: landscape) 
-  and (-webkit-min-device-pixel-ratio: 1) {
-
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
+	.aboutLanding {
+		height: 90vh;
+	}
+	.aboutJumbotron {
+		top: 20vh;
+		width: 60vw;
+	}
+	.aboutJumbotronHeaderPrimary {
+		font-size: 2rem;
+	}
+	.aboutJumbotronHeaderSecondary {
+		font-size: 1.5rem;
+	}
+	.aboutJumbotronBody {
+		font-size: 1.2rem;
+	}
 }
 
 /* ----------- iPad 3, 4 and Pro 9.7" ----------- */
 
 /* Portrait and Landscape */
-@media only screen 
-  and (min-device-width: 768px) 
-  and (max-device-width: 1024px) 
-  and (-webkit-min-device-pixel-ratio: 2) {
-
+@media only screen and (min-width: 1024px) and (max-height: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) {
 }
 
 /* Portrait */
-@media only screen 
-  and (min-device-width: 768px) 
-  and (max-device-width: 1024px) 
-  and (orientation: portrait) 
-  and (-webkit-min-device-pixel-ratio: 2) {
-    .aboutLanding {
-        height: 655px;
-    }
-    .aboutJumbotron {
-        bottom: -450px;
-    }
-    .aboutJumbotronHeaderLeft {
-        font-size: 2.5vw;
-        letter-spacing: 1px;
-    }
-    
-    .aboutJumbotronHeaderRight {
-        font-size: 2.5vw;
-        letter-spacing: 1px;
-    }
-    
-    .aboutJumbotronBody {
-        float: left;
-        font-size: 1.5vw;
-        font-weight: bold;
-    }
-    .aboutJumbotronLogo {
-        position: relative;
-        float: none;
-        left: -75px;
-        top: 50px;
-        width: 145%;
-        height: auto;
-    }
+@media only screen and (min-width: 1024px) and (max-width: 1024px) and (max-height: 1366px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1.5) {
+	.aboutLanding {
+		height: 60vh;
+	}
+	.aboutJumbotron {
+		top: 15vh;
+		width: 60vw;
+		margin-left: 0;
+	}
+	.aboutJumbotronHeaderPrimary {
+		font-size: 2rem;
+	}
+	.aboutJumbotronHeaderSecondary {
+		font-size: 1.7rem;
+	}
+	.aboutJumbotronBody {
+		font-size: 1.3rem;
+	}
+	.freeTrialButton {
+		font-size: 1.3rem;
+	}
 }
 
 /* Landscape */
-@media only screen 
-  and (min-device-width: 768px) 
-  and (max-device-width: 1024px) 
-  and (orientation: landscape) 
-  and (-webkit-min-device-pixel-ratio: 2) {
-    
+@media only screen and (min-width: 1024px) and (max-width: 1024px) and (max-height: 1366px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1.5) {
+	.aboutLanding {
+		height: 80vh;
+	}
 }
 
 /* ----------- iPad Pro 10.5" ----------- */
 
 /* Portrait and Landscape */
-@media only screen 
-  and (min-device-width: 834px) 
-  and (max-device-width: 1112px)
-  and (-webkit-min-device-pixel-ratio: 2) {
-
+@media only screen and (min-device-width: 834px) and (max-device-width: 1112px) and (-webkit-min-device-pixel-ratio: 2) {
 }
 
 /* Portrait */
 /* Declare the same value for min- and max-width to avoid colliding with desktops */
 /* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
-@media only screen 
-  and (min-device-width: 834px) 
-  and (max-device-width: 834px) 
-  and (orientation: portrait) 
-  and (-webkit-min-device-pixel-ratio: 2) {
-
+@media only screen and (min-device-width: 834px) and (max-device-width: 834px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
 }
 
 /* Landscape */
 /* Declare the same value for min- and max-width to avoid colliding with desktops */
 /* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
-@media only screen 
-  and (min-device-width: 1112px) 
-  and (max-device-width: 1112px) 
-  and (orientation: landscape) 
-  and (-webkit-min-device-pixel-ratio: 2) {
-
+@media only screen and (min-device-width: 1112px) and (max-device-width: 1112px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
 }
 
 /* ----------- iPad Pro 12.9" ----------- */
 
 /* Portrait and Landscape */
-@media only screen 
-  and (min-device-width: 1024px) 
-  and (max-device-width: 1366px)
-  and (-webkit-min-device-pixel-ratio: 2) {
-    
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) {
 }
 
 /* Portrait */
 /* Declare the same value for min- and max-width to avoid colliding with desktops */
 /* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
-@media only screen 
-  and (min-device-width: 1024px) 
-  and (max-device-width: 1024px) 
-  and (orientation: portrait) 
-  and (-webkit-min-device-pixel-ratio: 2) {
-    .aboutLanding {
-        height: 655px;
-    }
-    .aboutJumbotron {
-        bottom: -450px;
-    }
-    .aboutJumbotronHeaderLeft {
-        font-size: 2.5vw;
-        letter-spacing: 1px;
-    }
-    
-    .aboutJumbotronHeaderRight {
-        font-size: 2.5vw;
-        letter-spacing: 1px;
-    }
-    
-    .aboutJumbotronBody {
-        float: left;
-        font-size: 1.5vw;
-        font-weight: bold;
-    }
-    .aboutJumbotronLogo {
-        position: relative;
-        float: none;
-        left: -75px;
-        top: 60px;
-        width: 130%;
-        height: auto;
-    }
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
 }
 
 /* Landscape */
 /* Declare the same value for min- and max-width to avoid colliding with desktops */
 /* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
-@media only screen 
-  and (min-device-width: 1366px) 
-  and (max-device-width: 1366px) 
-  and (orientation: landscape) 
-  and (-webkit-min-device-pixel-ratio: 2) {
-    .aboutLanding {
-      height: 50vw;
-      width: 100vw !important;
-    }
-    .aboutJumbotron {
-      bottom: -35vw;
-      height: 70%;
-    }
-    .aboutJumbotronHeaderRow {
-      margin-bottom: 2%;
-    }
-    .aboutJumbotronHeaderLeft {
-      font-size: 2.5vw;
-      font-weight: bolder;
-      letter-spacing: .1vw;
-      padding-left: 15px;
-    }
-    .aboutJumbotronHeaderRight {
-        font-size: 2.5vw;
-        font-weight: bolder;
-        letter-spacing: .1vw;
-    }
-    .aboutJumbotronBody {
-      position: relative;
-      top: -15px;
-      float: left;
-      font-size: 1.5vw;
-      font-weight: bold;
-      line-height: 1.3;
-      text-align: left;
-    }
+@media only screen and (min-device-width: 1366px) and (max-device-width: 1366px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
 }
-
 
 /* ----------- iPhones ----------- */
-
-/* ----------- iPhone 4 and 4S ----------- */
-
-/* Portrait and Landscape */
-@media only screen 
-  and (min-device-width: 320px) 
-  and (max-device-width: 480px)
-  and (-webkit-min-device-pixel-ratio: 2) {
-
-}
-
-/* Portrait */
-@media only screen 
-  and (min-device-width: 320px) 
-  and (max-device-width: 480px)
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (orientation: portrait) {
-}
-
-/* Landscape */
-@media only screen 
-  and (min-device-width: 320px) 
-  and (max-device-width: 480px)
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (orientation: landscape) {
-
-}
 
 /* ----------- iPhone 5, 5S, 5C and 5SE ----------- */
 
 /* Portrait and Landscape */
-@media only screen 
-  and (min-device-width: 320px) 
-  and (max-device-width: 568px)
-  and (-webkit-min-device-pixel-ratio: 2) {
-
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
 }
 
 /* Portrait */
-@media only screen 
-  and (min-device-width: 320px) 
-  and (max-device-width: 568px)
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (orientation: portrait) {
-    .aboutLanding {
-        height: 405px;
-    }
-    .aboutJumbotron {
-        bottom: -320px;
-    }
-    .aboutJumbotronLogo {
-        position: relative;
-        float: none;
-        left: 0;
-        top: -50px;
-        width: 72vw;
-        margin: 0 auto;
-    }
-    .aboutJumbotronLogoColumn {
-        width: 90%;
-        margin: 0 auto;
-    }
-    .aboutJumbotronBodyColumn {
-        position: relative;
-        width: 90%;
-        margin: 0 auto;
-    }
-    .aboutJumbotronHeaderRow {
-        position: relative;
-        top: -25px;
-        left: 10px;
-        white-space: nowrap !important;
-        /* display: block; */
-    }
-    .aboutJumbotronHeaderLeft {
-        font-size: 3.2vw;
-        font-weight: bolder;
-        letter-spacing: 0px;
-        padding-left: 0px;
-        /* padding-left: 8vw; */
-    }
-    .aboutJumbotronHeaderRight {
-        font-size: 3.2vw;
-        font-weight: bolder;
-        letter-spacing: 0px;
-        /* float: left; */
-        /* display: block; */
-    }
-    .aboutJumbotronBody {
-        position: relative;
-        top: -15px;
-        float: left;
-        font-size: 4vw;
-        font-weight: bold;
-        line-height: 1.3;
-        text-align: center;
-    }
-    .gFitStrongLeftLanding, .gFitStrongRightLanding {
-      margin-top: 1px !important;
-      font-size: 3.5vw !important;
-    }
-    #tagLineDiv {
-      margin: 0 auto;
-    }
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+	.aboutLanding {
+		height: 89vh;
+	}
+	.aboutJumbotron {
+		top: 20vh;
+		width: 90vw;
+		margin-left: 5vw;
+		margin-right: 5vw;
+		height: auto;
+		padding-top: 5vh;
+		text-align: center;
+	}
+	.aboutJumbotronHeaderPrimary {
+		font-size: 1.2rem;
+		font-weight: bolder;
+		letter-spacing: 0px;
+		padding-left: 0px;
+	}
+	.aboutJumbotronHeaderSecondary {
+		color: #fac04e;
+		font-size: 1rem;
+		text-align: center;
+		width: 100%;
+		letter-spacing: .1vw;
+	}
+	.aboutJumbotronBody {
+		line-height: 1.2rem;
+	}
+	.freeTrialButton {
+		background-color: #fac04e;
+		border-color: #000000;
+		color: white;
+		margin-bottom: 2vh;
+	}
 }
 
 /* Landscape */
-@media only screen 
-  and (min-device-width: 320px) 
-  and (max-device-width: 568px)
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (orientation: landscape) {
-    .aboutLanding {
-      height: 48vw;
-    }
-    .aboutJumbotron {
-      bottom: -33vw;
-      width: 75%;
-      height: 38vw;
-    }
-    .aboutJumbotronLogoColumn {
-      width: 30%;
-    }
-    .aboutJumbotronLogo {
-      width: 33vw;
-      left: -80px;
-      top: 6vw;
-    }
-    .aboutJumbotronHeaderLeft {
-      font-size: 2vw;
-      font-weight: bolder;
-      letter-spacing: .1vw;
-      padding-left: 15px;
-      padding-left: 0;
-    }
-    .aboutJumbotronHeaderRight {
-      font-size: 2vw;
-      font-weight: bolder;
-      letter-spacing: .1vw;
-    }
-    .aboutJumbotronBodyColumn {
-      max-width: 66.67%;
-    }
-    .aboutJumbotronBody {
-      font-size: 1.5vw;
-      margin-bottom: 1vw;
-    }
-    .gFitStrongLeftLanding {
-      margin-left: 1vw;
-    }
-    .gFitStrongLeftLanding, .gFitStrongRightLanding {
-      font-size: 2vw !important
-    }
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+	.aboutLanding {
+		height: 48vw;
+	}
+	.aboutJumbotron {
+		bottom: -33vw;
+		width: 90vw;
+		margin-left: 5vw;
+		height: auto;
+	}
+	.aboutJumbotronHeaderPrimary {
+		font-size: 1rem;
+		letter-spacing: .1vw;
+		padding-left: 15px;
+		padding-left: 0;
+		width: 100%;
+	}
+	.aboutJumbotronHeaderSecondary {
+		font-size: 1rem;
+		letter-spacing: .1vw;
+	}
+	.aboutJumbotronBodyColumn {
+		width: 100%;
+	}
+	.aboutJumbotronBody {
+		font-size: 0.8rem;
+		margin-bottom: 1vw;
+	}
+	.freeTrialButton {
+		font-size: 0.8rem;
+	}
 }
 
 /* ----------- iPhone 6, 6S, 7 and 8 ----------- */
 
 /* Portrait and Landscape */
-@media only screen 
-  and (min-device-width: 375px) 
-  and (max-device-width: 667px) 
-  and (-webkit-min-device-pixel-ratio: 2) { 
-
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
 }
 
 /* Portrait */
-@media only screen 
-  and (min-device-width: 375px) 
-  and (max-device-width: 667px) 
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (orientation: portrait) { 
-
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+	.aboutJumbotron {
+		top: 30vh;
+	}
 }
 
 /* Landscape */
-@media only screen 
-  and (min-device-width: 569px) 
-  and (max-device-width: 667px) 
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (orientation: landscape) { 
-    .aboutLanding {
-      height: 48vw;
-    }
-    .aboutJumbotron {
-      bottom: -30vw;
-      width: 75%;
-      height: 38vw;
-    }
-    .aboutJumbotronLogo {
-      width: 35vw;
-      margin: 0 auto;
-      left: -100px;
-      top: 6vw;
-    }
-    .aboutJumbotronHeaderLeft {
-      font-size: 2vw;
-      font-weight: bolder;
-      letter-spacing: .1vw;
-      /* padding-left: 1vw; */
-      padding-left: 0;
-    }
-    .aboutJumbotronHeaderRight {
-      font-size: 2vw;
-      font-weight: bolder;
-      letter-spacing: .1vw;
-    }
-    .aboutJumbotronBody {
-      font-size: .62rem;
-      margin-bottom: 1vw;
-    }
-    .gFitStrongLeftLanding {
-      margin-left: 1vw;
-    }
+@media only screen and (min-device-width: 569px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+	.aboutLanding {
+		height: 86vh;
+	}
+	.aboutJumbotron {
+		bottom: -33vw;
+		width: 90vw;
+		height: auto;
+		margin-left: 5vw;
+	}
+	.aboutJumbotronBody {
+		font-size: 0.8rem;
+	}
+	.aboutJumbotronHeaderPrimary {
+		padding-left: 0;
+		width: 100%;
+		font-size: 1rem;
+	}
+	.aboutJumbotronHeaderSecondary {
+		font-size: 0.9rem;
+	}
 }
 
 /* ----------- iPhone X ----------- */
 
 /* Portrait and Landscape */
-@media only screen 
-  and (min-device-width: 375px) 
-  and (max-device-width: 812px) 
-  and (-webkit-min-device-pixel-ratio: 3) { 
-
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
 }
 
 /* Portrait */
-@media only screen 
-  and (min-device-width: 375px) 
-  and (max-device-width: 812px) 
-  and (-webkit-min-device-pixel-ratio: 3)
-  and (orientation: portrait) { 
-    .aboutLanding {
-        height: 500px;
-    }
-    .aboutJumbotron {
-        bottom: -380px;
-    }
-    .aboutJumbotronLogo {
-        position: relative;
-        float: none;
-        left: 0;
-        top: -50px;
-        width: 100%;
-    }
-    .aboutJumbotronLogoColumn {
-        width: 90%;
-        margin: 0 auto;
-    }
-    .aboutJumbotronBodyColumn {
-        position: relative;
-        width: 90%;
-        margin: 0 auto;
-    }
-    .aboutJumbotronHeaderRow {
-        position: relative;
-        top: -25px;
-        left: 10px;
-    }
-    .aboutJumbotronHeaderLeft {
-        font-size: 3vw;
-        font-weight: bolder;
-        letter-spacing: .2vw;
-        padding-left: 15px;
-    }
-    .aboutJumbotronHeaderRight {
-        font-size: 3vw;
-        font-weight: bolder;
-        letter-spacing: .2vw;
-    }
-    .aboutJumbotronBody {
-        position: relative;
-        top: -15px;
-        float: left;
-        font-size: 2.8vw;
-        font-weight: bold;
-        line-height: 1.3;
-        text-align: center;
-    }
-    
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: portrait) {
+	.aboutLanding {
+		height: 89vh;
+	}
+	.aboutJumbotron {
+		top: 40vh;
+		width: 90vw;
+		margin-left: 5vw;
+		margin-right: 5vw;
+		height: auto;
+		padding-top: 5vh;
+		text-align: center;
+	}
+	.aboutJumbotronHeaderPrimary {
+		font-size: 1.5rem;
+		font-weight: bolder;
+		letter-spacing: 0px;
+		padding-left: 0px;
+	}
+	.aboutJumbotronHeaderSecondary {
+		color: #fac04e;
+		font-size: 1rem;
+		text-align: center;
+		width: 100%;
+		letter-spacing: .1vw;
+	}
+	.freeTrialButton {
+		background-color: #fac04e;
+		border-color: #000000;
+		color: white;
+		margin-bottom: 2vh;
+	}
 }
 
 /* Landscape */
-@media only screen 
-  and (min-device-width: 375px) 
-  and (max-device-width: 812px) 
-  and (-webkit-min-device-pixel-ratio: 3)
-  and (orientation: landscape) { 
-    .aboutLanding {
-      height: 45vw;
-      width: 100vw !important;
-    }
-    .aboutJumbotron {
-      bottom: -33vw;
-      width: 75%;
-      height: 38vw;
-    }
-    .aboutJumbotronLogo {
-      width: 30vw;
-      margin: 0 auto;
-    }
-    .aboutJumbotronHeaderLeft {
-      font-size: 2vw;
-      font-weight: bolder;
-      letter-spacing: .1vw;
-      padding-left: 15px;
-      padding-left: 0;
-    }
-    .aboutJumbotronHeaderRight {
-      font-size: 2vw;
-      font-weight: bolder;
-      letter-spacing: .1vw;
-    }
-    .aboutJumbotronBody {
-      font-size: 1.5vw;
-    }
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {
+	.aboutLanding {
+		height: 86vh;
+	}
+	.aboutJumbotron {
+		bottom: -33vw;
+		width: 90vw;
+		height: auto;
+		margin-left: 5vw;
+	}
+	.aboutJumbotronBody {
+		font-size: 0.8rem;
+	}
+	.aboutJumbotronHeaderPrimary {
+		padding-left: 0;
+		width: 100%;
+		font-size: 1rem;
+	}
+	.aboutJumbotronHeaderSecondary {
+		font-size: 0.9rem;
+	}
 }
 
 /* ----------- iPhone 6+, 7+ and 8+ ----------- */
 
 /* Portrait and Landscape */
-@media only screen 
-  and (min-device-width: 414px) 
-  and (max-device-width: 736px) 
-  and (-webkit-min-device-pixel-ratio: 3) { 
-
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) {
 }
 
 /* Portrait */
-@media only screen 
-  and (min-device-width: 414px) 
-  and (max-device-width: 736px) 
-  and (-webkit-min-device-pixel-ratio: 3)
-  and (orientation: portrait) { 
-    .aboutLanding {
-        height: 455px;
-    }
-    .aboutJumbotron {
-        bottom: -350px;
-    }
-    .aboutJumbotronLogo {
-        position: relative;
-        float: none;
-        left: 0;
-        top: -50px;
-        width: 100%;
-    }
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: portrait) {
+	.aboutJumbotron {
+		top: 30vh;
+	}
+	.aboutJumbotronBody {
+		line-height: 1.5rem;
+	}
+	.freeTrialButton {
+		width: 70vw;
+	}
 }
 
 /* Landscape */
-@media only screen 
-  and (min-device-width: 414px) 
-  and (max-device-width: 736px) 
-  and (-webkit-min-device-pixel-ratio: 3)
-  and (orientation: landscape) { 
-
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {
 }
 
 /* ----------- Pixel 2 ----------- */
 
-@media only screen 
-  and (min-device-width: 675px) 
-  and (max-device-width: 812px) 
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (orientation: landscape) { 
-    .aboutLanding {
-      height: 45vw;
-      width: 100vw !important;
-    }
-    .aboutJumbotron {
-      bottom: -33vw;
-      width: 75%;
-      height: 38vw;
-    }
-    .aboutJumbotronLogo {
-      width: 30vw;
-      margin: 0 auto;
-    }
-    .aboutJumbotronHeaderLeft {
-      font-size: 2vw;
-      font-weight: bolder;
-      letter-spacing: .1vw;
-      padding-left: 15px;
-      padding-left: 0;
-    }
-    .aboutJumbotronHeaderRight {
-      font-size: 2vw;
-      font-weight: bolder;
-      letter-spacing: .1vw;
-    }
-    .aboutJumbotronBody {
-      font-size: 1.5vw;
-    }
+@media only screen and (min-device-width: 675px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
 }
-
-/* ----------- iPads ----------- */
-
-/* ----------- iPad 1, 2, Mini and Air ----------- */
-
-/* Portrait and Landscape */
-@media only screen 
-  and (min-device-width: 768px) 
-  and (max-device-width: 1024px) 
-  and (-webkit-min-device-pixel-ratio: 1) {
-
-}
-
-/* Portrait */
-@media only screen 
-  and (min-device-width: 768px) 
-  and (max-device-width: 1024px) 
-  and (orientation: portrait) 
-  and (-webkit-min-device-pixel-ratio: 1) {
-   .gFitStrongLeftLanding {
-     margin-left: 2vw;
-     font-size: 2.5vw !important;
-   }
-   .gFitStrongRightLanding {
-     font-size: 2.5vw !important;
-   }
-}
-
-/* Landscape */
-@media only screen 
-  and (min-device-width: 768px) 
-  and (max-device-width: 1024px) 
-  and (orientation: landscape) 
-  and (-webkit-min-device-pixel-ratio: 1) {
-
-}
-
-/* ----------- iPad 3, 4 and Pro 9.7" ----------- */
-
-/* Portrait and Landscape */
-@media only screen 
-  and (min-device-width: 768px) 
-  and (max-device-width: 1024px) 
-  and (-webkit-min-device-pixel-ratio: 2) {
-
-}
-
-/* Portrait */
-@media only screen 
-  and (min-device-width: 768px) 
-  and (max-device-width: 1024px) 
-  and (orientation: portrait) 
-  and (-webkit-min-device-pixel-ratio: 2) {
-    .bioInfoBodyRow {
-      font-size: 2rem;
-    }
-    
-}
-
-/* Landscape */
-@media only screen 
-  and (min-device-width: 768px) 
-  and (max-device-width: 1024px) 
-  and (orientation: landscape) 
-  and (-webkit-min-device-pixel-ratio: 2) {
-
-}
-
-/* ----------- iPad Pro 10.5" ----------- */
-
-/* Portrait and Landscape */
-@media only screen 
-  and (min-device-width: 834px) 
-  and (max-device-width: 1112px)
-  and (-webkit-min-device-pixel-ratio: 2) {
-
-}
-
-/* Portrait */
-/* Declare the same value for min- and max-width to avoid colliding with desktops */
-/* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
-@media only screen 
-  and (min-device-width: 834px) 
-  and (max-device-width: 834px) 
-  and (orientation: portrait) 
-  and (-webkit-min-device-pixel-ratio: 2) {
-
-}
-
-/* Landscape */
-/* Declare the same value for min- and max-width to avoid colliding with desktops */
-/* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
-@media only screen 
-  and (min-device-width: 1112px) 
-  and (max-device-width: 1112px) 
-  and (orientation: landscape) 
-  and (-webkit-min-device-pixel-ratio: 2) {
-
-}
-
-/* ----------- iPad Pro 12.9" ----------- */
-
-/* Portrait and Landscape */
-@media only screen 
-  and (min-device-width: 1024px) 
-  and (max-device-width: 1366px)
-  and (-webkit-min-device-pixel-ratio: 2) {
-    
-}
-
-/* Portrait */
-/* Declare the same value for min- and max-width to avoid colliding with desktops */
-/* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
-@media only screen 
-  and (min-device-width: 1024px) 
-  and (max-device-width: 1024px) 
-  and (orientation: portrait) 
-  and (-webkit-min-device-pixel-ratio: 2) {
-    
-}
-
-/* Landscape */
-/* Declare the same value for min- and max-width to avoid colliding with desktops */
-/* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
-@media only screen 
-  and (min-device-width: 1366px) 
-  and (max-device-width: 1366px) 
-  and (orientation: landscape) 
-  and (-webkit-min-device-pixel-ratio: 2) {
-
-}
-
-
-

@@ -191,50 +191,34 @@ class Navbar extends Component {
                             > 
                               HOME
                             </NavLink>
-
                             <Link
                               activeClass="active"
                               className='iconBar nav-link'
                               onClick={this.toggleNavbar}
                               to="scheduleInfo"
-                              // spy={true}
-                              // smooth={true}
-                              // offset={-150}
-                              // duration={500}
                             > 
                               SEE SCHEDULE 
                             </Link>
-                            
                             <NavLink 
                               className='iconBar nav-link' 
-                              // onClick={this.toggleNavbar}
-                              href="/contact"
-                            > 
-                              CONTACT US
-                            </NavLink>
-
-                            <NavLink 
-                              className='iconBar nav-link' 
-                              // onClick={this.toggleNavbar}
                               href="/userLogin"
                             > 
                               G-FIT GOLD
                             </NavLink>
-
                             <NavLink 
-                              className='iconBar nav-link signUp' 
-                              // onClick={this.toggleNavbar}
-                              href="/tryitout"
+                              className=' iconBar nav-link' 
+                              onClick={this.toggleNavbar}
+                              href="/kids"
                             > 
-                              TRY IT OUT
+                              KIDS SPEED & STRENGTH
                             </NavLink>
 
-                            {/* <NavLink 
+                            <NavLink 
                               className='iconBar nav-link' 
-                              onClick={this.toggleNavbar}
-                              href="/admin"
-                            > ADMIN</NavLink> */}
-                            {/* <a onClick={ this.showSettings } className="menu-item--small" href="">Settings</a> */}
+                              href="/contact"
+                            > 
+                              CONTACT US
+                            </NavLink>
                           </Menu>
                         </i>
 
@@ -254,31 +238,23 @@ class Navbar extends Component {
                                 className='nav-link js-scroll-trigger'
                                 onClick={this.toggleNavbar}
                                 to="scheduleInfo"
-                                // spy={true}
-                                // smooth={true}
-                                // offset={-150}
-                                // duration={500}
-                                
                               > 
                                 SEE SCHEDULE
                               </Link>
                             </li>
-
-                            <li className="nav-item">
-                              <a className="nav-link js-scroll-trigger" href='/contact'>
-                                CONTACT US
-                              </a>
-                            </li>
-
                             <li className="nav-item">
                               <a className="nav-link js-scroll-trigger" href='/userLogin'>
                                 G-FIT GOLD
                               </a>
                             </li>
-                            
+                            <li className="nav-item" >
+                              <a className="nav-link js-scroll-trigger" href='/kids'>
+                                KIDS SPEED & STRENGTH
+                              </a>
+                            </li>
                             <li className="nav-item">
-                              <a className="nav-link js-scroll-trigger signUp" href='/tryitout'>
-                                TRY IT OUT
+                              <a className="nav-link js-scroll-trigger" href='/contact'>
+                                CONTACT US
                               </a>
                             </li>
                           </ul>
