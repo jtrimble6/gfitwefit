@@ -1,189 +1,183 @@
 @font-face {
-    font-family: 'gfitfont';
-    font-style: normal;
-    font-weight: bolder;
-    src: local('gfitfont'), url('../fonts/gfitfont.ttf'), url('../fonts/gfitfont.woff'), format('truetype');
-  }
-  @font-face {
-    font-family: 'gfitfont-bold';
-    font-style: normal;
-    font-weight: bolder;
-    src: local('gfitfontBold'), url('../fonts/gfitfontBold.ttf'), url('../fonts/gfitfontBold.woff') format('truetype');
-  }
-  
-  .bioInfo {
-    height: 675px;
-    background-color: #FAC04E;
-  }
+	font-family: 'gfitfont';
+	font-style: normal;
+	font-weight: bolder;
+	src: local('gfitfont'), url('../fonts/gfitfont.ttf'), url('../fonts/gfitfont.woff'), format('truetype');
+}
+@font-face {
+	font-family: 'gfitfont-bold';
+	font-style: normal;
+	font-weight: bolder;
+	src: local('gfitfontBold'), url('../fonts/gfitfontBold.ttf'), url('../fonts/gfitfontBold.woff') format('truetype');
+}
 
-  .bioInfoRow {
-    margin-top: 30vw;
-  }
+.bioInfo {
+	height: 675px;
+	background-color: #fac04e;
+}
 
-  .bioInfoImgRow {
-    position: absolute;
-    top: 90vw;
-    width: 100% !important;
-    margin: 0 auto !important; 
-  }
-  
-  .bioInfoSection {
-    width: 95%;
-    margin: 0 auto;
-    margin-bottom: 10%;
-    padding: 5%;
-    background-color: transparent;
-  }
+.bioInfoRow {
+	margin-top: 30vw;
+}
 
-  .trainerBioCircleImg {
-    position: relative;
-    width: 70vw;
-    height: 70vw;
-    overflow: hidden;
-    border-radius: 50%;
-    margin: 0 auto;
-  }
+.bioInfoImgRow {
+	position: absolute;
+	top: 90vw;
+	width: 100% !important;
+	margin: 0 auto !important;
+}
 
-  .trainerBioCircleImg img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  .bioInfoHeaderLeft {
-    font-family: 'gfitfont-bold', Times, serif;
-    font-size: 2vw;
-    letter-spacing: 3px;
-    color: white;
-    font-weight: bolder; 
-  }
-  
-  .bioInfoHeaderRight {
-    font-family: 'gfitfont-bold', Times, serif;
-    font-size: 2vw;
-    letter-spacing: 3px;
-    color: black;
-    font-weight: bolder; 
-  }
-  .bioInfoName {
-    font-family: 'gfitfont-bold', Times, serif;
-    font-size: 2vw;
-    letter-spacing: 3px;
-    color: white;
-    font-weight: bolder; 
-    text-shadow: 2px 2px white;
-    background-color: transparent !important;
-    color: #000000;
-  }
-  .bioInfoBodyRow {
-    font-family: 'Arial';
-    font-size: 1.1vw;
-    font-weight: bolder;
-    line-height: 1.5;
-    color: white;
-    margin-top: 5%;
-    margin-bottom: 10%;
-  }
-  
-  .bioMembershipHeaderLeftMain {
-      font-family: 'gfitfont-bold', Times, serif;
-      font-size: 2vw;
-      letter-spacing: 3px;
-      color: white;
-      font-weight: bolder; 
-  }
-  
-  .bioMembershipHeaderLeft {
-      font-family: 'gfitfont-bold', Times, serif;
-      font-size: 1.5vw;
-      letter-spacing: 3px;
-      color: white;
-      font-weight: bolder; 
-  }
-  
-  .bioMembershipHeaderRight {
-      font-family: 'gfitfont-bold', Times, serif;
-      font-size: 1.5vw;
-      letter-spacing: 3px;
-      color: #FAC04E;
-      font-weight: bolder; 
-  }
-  
-  .bioMembershipLeftColumn {
-      border-right: 2px solid white;
-      margin-right: 5%;
-      padding-right: 5%;
-  }
-  
-  .bioMembershipBodyRow {
-      font-family: 'Arial';
-      font-size: 1.1vw;
-      color: white;
-  }
-  
+.bioInfoSection {
+	width: 95%;
+	margin: 0 auto;
+	margin-bottom: 10%;
+	padding: 5%;
+	background-color: transparent;
+}
 
+.trainerBioCircleImg {
+	position: relative;
+	width: 70vw;
+	height: 70vw;
+	overflow: hidden;
+	border-radius: 50%;
+	margin: 0 auto;
+}
+
+.trainerBioCircleImg img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.bioInfoHeaderLeft {
+	font-family: 'gfitfont-bold', Times, serif;
+	font-size: 2vw;
+	letter-spacing: 3px;
+	color: white;
+	font-weight: bolder;
+}
+
+.bioInfoHeaderRight {
+	font-family: 'gfitfont-bold', Times, serif;
+	font-size: 2vw;
+	letter-spacing: 3px;
+	color: black;
+	font-weight: bolder;
+}
+.bioInfoName {
+	font-family: 'gfitfont-bold', Times, serif;
+	font-size: 2vw;
+	letter-spacing: 3px;
+	color: white;
+	font-weight: bolder;
+	text-shadow: 2px 2px white;
+	background-color: transparent !important;
+	color: #000000;
+}
+.bioInfoBodyRow {
+	font-family: 'Arial';
+	font-size: 1.1vw;
+	font-weight: bolder;
+	line-height: 1.5;
+	color: white;
+	margin-top: 5%;
+	margin-bottom: 10%;
+}
+
+.bioMembershipHeaderLeftMain {
+	font-family: 'gfitfont-bold', Times, serif;
+	font-size: 2vw;
+	letter-spacing: 3px;
+	color: white;
+	font-weight: bolder;
+}
+
+.bioMembershipHeaderLeft {
+	font-family: 'gfitfont-bold', Times, serif;
+	font-size: 1.5vw;
+	letter-spacing: 3px;
+	color: white;
+	font-weight: bolder;
+}
+
+.bioMembershipHeaderRight {
+	font-family: 'gfitfont-bold', Times, serif;
+	font-size: 1.5vw;
+	letter-spacing: 3px;
+	color: #fac04e;
+	font-weight: bolder;
+}
+
+.bioMembershipLeftColumn {
+	border-right: 2px solid white;
+	margin-right: 5%;
+	padding-right: 5%;
+}
+
+.bioMembershipBodyRow {
+	font-family: 'Arial';
+	font-size: 1.1vw;
+	color: white;
+}
 
 /* ----------- LAPTOPS ----------- */
 
-
 /* ----------- Non-Retina Screens ----------- */
-@media screen 
-/* and (min-device-width: 800px)  */
-and (max-device-width: 1600px) 
-and (-webkit-min-device-pixel-ratio: 1) { 
-  .bioInfo {
-    height: 150vw;
-  }
+@media screen and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
+	.bioInfo {
+		height: 150vw;
+	}
 
-  .bioInfoRow {
-    margin-top: 1vw;
-    position: relative;
-    top: -20vw;
-  }
-  .bioInfoBodyRow {
-    font-size: 1.2rem;
-    font-weight: 800;
-  }
+	.bioInfoRow {
+		margin-top: 1vw;
+		position: relative;
+		top: -20vw;
+	}
+	.bioInfoBodyRow {
+		font-size: 1.2rem;
+		font-weight: 800;
+	}
 
-  .bioInfoImgRow {
-    position: relative;
-    top: -20vw;
-    width: 100% !important;
-    margin: 0 auto !important; 
-  }
-  
-  .bioInfoSection {
-    width: 100%;
-    height: 100%;
-    margin: 0 auto;
-    margin-bottom: 0;
-    margin-top: 40vw;
-    padding: 5%;
-    height: 70vw;
-  }
+	.bioInfoImgRow {
+		position: relative;
+		top: -20vw;
+		width: 100% !important;
+		margin: 0 auto !important;
+	}
 
-  .trainerBioCircleImg {
-    position: relative;
-    width: 30vw;
-    height: 30vw;
-    border-radius: 50%;
-    margin: 0 auto;
-  }
+	.bioInfoSection {
+		width: 100%;
+		height: 100%;
+		margin: 0 auto;
+		margin-bottom: 0;
+		margin-top: 40vw;
+		padding: 5%;
+		height: 70vw;
+	}
 
-  .trainerBioCircleImg img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  .bioInfoHeaderLeft {
-    font-size: 2rem;
-  }
-  
-  .bioInfoHeaderRight {
-    font-size: 2rem; 
-  }
-  /* 
+	.trainerBioCircleImg {
+		position: relative;
+		width: 30vw;
+		height: 30vw;
+		border-radius: 50%;
+		margin: 0 auto;
+	}
+
+	.trainerBioCircleImg img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+	.bioInfoHeaderLeft {
+		font-size: 2rem;
+	}
+
+	.bioInfoHeaderRight {
+		font-size: 2rem;
+	}
+	/* 
   .bioInfoBodyRow {
       font-family: 'Arial';
       font-size: 1.1vw;
@@ -228,848 +222,692 @@ and (-webkit-min-device-pixel-ratio: 1) {
       font-size: 1.1vw;
       color: white;
   } */
-  
 }
 
-@media screen 
-and (min-device-width: 1601px) 
-and (max-device-width: 3000px) 
-and (-webkit-min-device-pixel-ratio: 1) { 
-  .bioInfo {
-    height: 150vw;
-  }
+@media screen and (min-device-width: 1601px) and (max-device-width: 3000px) and (-webkit-min-device-pixel-ratio: 1) {
+	.bioInfo {
+		height: 150vw;
+	}
 
-  .bioInfoRow {
-    position: relative;
-    top: -15vw;
-    margin-top: 1vw;
-    /* overflow: hidden; */
-  }
+	.bioInfoRow {
+		position: relative;
+		top: -15vw;
+		margin-top: 1vw;
+		/* overflow: hidden; */
+	}
 
-  .bioInfoImgRow {
-    position: relative;
-    top: -20vw;
-    width: 100% !important;
-    margin: 0 auto !important; 
-  }
-  
-  .bioInfoSection {
-    width: 100%;
-    margin: 0 auto;
-    margin-bottom: 0;
-    margin-top: 30vw;
-    padding: 5%;
-    padding-bottom: 100%;
-    height: 70vw;
-  }
-  .trainerBioCircleImg {
-    position: relative;
-    width: 30vw;
-    height: 30vw;
-    border-radius: 50%;
-    margin: 0 auto;
-  }
-  .trainerBioCircleImg img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  .bioInfoHeaderLeft {
-    font-size: 2.5rem;
-  }
-  .bioInfoHeaderRight {
-    font-size: 2.5rem; 
-  }
-  .bioInfoName {
-    font-size: 2.3rem; 
-  }
-  .bioInfoBodyRow {
-    font-size: 1.5rem;
-  }
+	.bioInfoImgRow {
+		position: relative;
+		top: -20vw;
+		width: 100% !important;
+		margin: 0 auto !important;
+	}
+
+	.bioInfoSection {
+		width: 100%;
+		margin: 0 auto;
+		margin-bottom: 0;
+		margin-top: 30vw;
+		padding: 5%;
+		padding-bottom: 100%;
+		height: 70vw;
+	}
+	.trainerBioCircleImg {
+		position: relative;
+		width: 30vw;
+		height: 30vw;
+		border-radius: 50%;
+		margin: 0 auto;
+	}
+	.trainerBioCircleImg img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+	.bioInfoHeaderLeft {
+		font-size: 2.5rem;
+	}
+	.bioInfoHeaderRight {
+		font-size: 2.5rem;
+	}
+	.bioInfoName {
+		font-size: 2.3rem;
+	}
+	.bioInfoBodyRow {
+		font-size: 1.5rem;
+	}
 }
 
 /* ----------- Retina Screens ----------- */
-@media screen 
-and (min-device-width: 1000px) 
-and (max-device-width: 2000px) 
-and (-webkit-min-device-pixel-ratio: 2)
-and (min-resolution: 192dpi) { 
-  
+@media screen and (min-device-width: 1000px) and (max-device-width: 2000px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) {
 }
 
-@media screen 
-and (min-device-width: 2001px) 
-and (max-device-width: 3000px) 
-and (-webkit-min-device-pixel-ratio: 2)
-and (min-resolution: 192dpi) { 
-  
+@media screen and (min-device-width: 2001px) and (max-device-width: 3000px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) {
 }
-  
-  
-  
+
 /* ----------- iPhones ----------- */
 
 /* ----------- iPhone 4 and 4S ----------- */
 
 /* Portrait and Landscape */
-@media only screen 
-  and (min-device-width: 320px) 
-  and (max-device-width: 480px)
-  and (-webkit-min-device-pixel-ratio: 2) {
-
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
 }
 
 /* Portrait */
-@media only screen 
-  and (min-device-width: 320px) 
-  and (max-device-width: 480px)
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (orientation: portrait) {
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
 }
 
 /* Landscape */
-@media only screen 
-  and (min-device-width: 320px) 
-  and (max-device-width: 480px)
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (orientation: landscape) {
-
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
 }
 
 /* ----------- iPhone 5, 5S, 5C and 5SE ----------- */
 
 /* Portrait and Landscape */
-@media only screen 
-  and (min-device-width: 320px) 
-  and (max-device-width: 568px)
-  and (-webkit-min-device-pixel-ratio: 2) {
-
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
 }
 
 /* Portrait */
-@media only screen 
-  and (min-device-width: 320px) 
-  and (max-device-width: 568px)
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (orientation: portrait) {
-    .bioInfo {
-      height: 100%;
-    }
-  
-    .bioInfoRow {
-      position: relative;
-      top: -25vw;
-      margin-top: 1vw;
-      /* overflow: hidden; */
-    }
-  
-    .bioInfoImgRow {
-      position: relative;
-      top: -35vw;
-      width: 100% !important;
-      margin: 0 auto !important; 
-    }
-    
-    .bioInfoSection {
-      width: 100%;
-      margin: 0 auto;
-      margin-bottom: 0;
-      margin-top: 70vw;
-      padding: 10%;
-      padding-bottom: 10%;
-      background-color: #FAC04E;
-      height: 100%;
-    }
-    .trainerBioCircleImg {
-      position: relative;
-      width: 50vw;
-      height: 50vw;
-      border-radius: 50%;
-      margin: 0 auto;
-    }
-    .trainerBioCircleImg img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-    .bioInfoHeaderLeft {
-      font-size: 1.1rem;
-    }
-    .bioInfoHeaderRight {
-      font-size: 1.1rem; 
-    }
-    .bioInfoName {
-      font-size: 1.3rem; 
-    }
-    .bioInfoBodyRow {
-      font-size: 1rem;
-    }
-    
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+	.bioInfo {
+		height: 100%;
+	}
+
+	.bioInfoRow {
+		position: relative;
+		top: -25vw;
+		margin-top: 1vw;
+		/* overflow: hidden; */
+	}
+
+	.bioInfoImgRow {
+		position: relative;
+		top: -35vw;
+		width: 100% !important;
+		margin: 0 auto !important;
+	}
+
+	.bioInfoSection {
+		width: 100%;
+		margin: 0 auto;
+		margin-bottom: 0;
+		margin-top: 70vw;
+		padding: 10%;
+		padding-bottom: 10%;
+		background-color: #fac04e;
+		height: 100%;
+	}
+	.trainerBioCircleImg {
+		position: relative;
+		width: 50vw;
+		height: 50vw;
+		border-radius: 50%;
+		margin: 0 auto;
+	}
+	.trainerBioCircleImg img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+	.bioInfoHeaderLeft {
+		font-size: 1.1rem;
+	}
+	.bioInfoHeaderRight {
+		font-size: 1.1rem;
+	}
+	.bioInfoName {
+		font-size: 1.3rem;
+	}
+	.bioInfoBodyRow {
+		font-size: 1rem;
+	}
 }
 
 /* Landscape */
-@media only screen 
-  and (min-device-width: 320px) 
-  and (max-device-width: 568px)
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (orientation: landscape) {
-    .bioInfo {
-      height: 100%;
-    }
-  
-    .bioInfoRow {
-      position: relative;
-      top: -25vw;
-      margin-top: 1vw;
-      /* overflow: hidden; */
-    }
-  
-    .bioInfoImgRow {
-      position: relative;
-      top: -35vw;
-      width: 100% !important;
-      margin: 0 auto !important; 
-    }
-    
-    .bioInfoSection {
-      width: 100%;
-      margin: 0 auto;
-      margin-bottom: 0;
-      margin-top: 40vw;
-      padding: 10%;
-      padding-bottom: 10%;
-      background-color: #FAC04E;
-      height: 100%;
-    }
-    .trainerBioCircleImg {
-      position: relative;
-      width: 50vw;
-      height: 50vw;
-      border-radius: 50%;
-      margin: 0 auto;
-    }
-    .trainerBioCircleImg img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-    .bioInfoHeaderLeft {
-      font-size: 1.1rem;
-    }
-    .bioInfoHeaderRight {
-      font-size: 1.1rem; 
-    }
-    .bioInfoName {
-      font-size: 1.3rem; 
-    }
-    .bioInfoBodyRow {
-      font-size: 1rem;
-    }
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+	.bioInfo {
+		height: 100%;
+	}
+
+	.bioInfoRow {
+		position: relative;
+		top: -25vw;
+		margin-top: 1vw;
+		/* overflow: hidden; */
+	}
+
+	.bioInfoImgRow {
+		position: relative;
+		top: -35vw;
+		width: 100% !important;
+		margin: 0 auto !important;
+	}
+
+	.bioInfoSection {
+		width: 100%;
+		margin: 0 auto;
+		margin-bottom: 0;
+		margin-top: 40vw;
+		padding: 10%;
+		padding-bottom: 10%;
+		background-color: #fac04e;
+		height: 100%;
+	}
+	.trainerBioCircleImg {
+		position: relative;
+		width: 50vw;
+		height: 50vw;
+		border-radius: 50%;
+		margin: 0 auto;
+	}
+	.trainerBioCircleImg img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+	.bioInfoHeaderLeft {
+		font-size: 1.1rem;
+	}
+	.bioInfoHeaderRight {
+		font-size: 1.1rem;
+	}
+	.bioInfoName {
+		font-size: 1.3rem;
+	}
+	.bioInfoBodyRow {
+		font-size: 1rem;
+	}
 }
 
 /* ----------- iPhone 6, 6S, 7 and 8 ----------- */
 
 /* Portrait and Landscape */
-@media only screen 
-  and (min-device-width: 375px) 
-  and (max-device-width: 667px) 
-  and (-webkit-min-device-pixel-ratio: 2) { 
-
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
 }
 
 /* Portrait */
-@media only screen 
-  and (min-device-width: 375px) 
-  and (max-device-width: 667px) 
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (orientation: portrait) { 
-      
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
 }
 
 /* Landscape */
-@media only screen 
-  and (min-device-width: 375px) 
-  and (max-device-width: 667px) 
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (orientation: landscape) { 
-    .bioInfo {
-      height: 100%;
-    }
-  
-    .bioInfoRow {
-      position: relative;
-      top: -25vw;
-      margin-top: 1vw;
-      /* overflow: hidden; */
-    }
-  
-    .bioInfoImgRow {
-      position: relative;
-      top: -35vw;
-      width: 100% !important;
-      margin: 0 auto !important; 
-    }
-    
-    .bioInfoSection {
-      width: 100%;
-      margin: 0 auto;
-      margin-bottom: 0;
-      margin-top: 45vw;
-      padding: 10%;
-      padding-bottom: 10%;
-      background-color: #FAC04E;
-      height: 100%;
-    }
-    .trainerBioCircleImg {
-      position: relative;
-      width: 50vw;
-      height: 50vw;
-      border-radius: 50%;
-      margin: 0 auto;
-    }
-    .trainerBioCircleImg img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-    .bioInfoHeaderLeft {
-      font-size: 1.1rem;
-    }
-    .bioInfoHeaderRight {
-      font-size: 1.1rem; 
-    }
-    .bioInfoName {
-      font-size: 1.3rem; 
-    }
-    .bioInfoBodyRow {
-      font-size: 1rem;
-    }
-}
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+	.bioInfo {
+		height: 100%;
+	}
 
+	.bioInfoRow {
+		position: relative;
+		top: -25vw;
+		margin-top: 1vw;
+		/* overflow: hidden; */
+	}
+
+	.bioInfoImgRow {
+		position: relative;
+		top: -35vw;
+		width: 100% !important;
+		margin: 0 auto !important;
+	}
+
+	.bioInfoSection {
+		width: 100%;
+		margin: 0 auto;
+		margin-bottom: 0;
+		margin-top: 45vw;
+		padding: 10%;
+		padding-bottom: 10%;
+		background-color: #fac04e;
+		height: 100%;
+	}
+	.trainerBioCircleImg {
+		position: relative;
+		width: 50vw;
+		height: 50vw;
+		border-radius: 50%;
+		margin: 0 auto;
+	}
+	.trainerBioCircleImg img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+	.bioInfoHeaderLeft {
+		font-size: 1.1rem;
+	}
+	.bioInfoHeaderRight {
+		font-size: 1.1rem;
+	}
+	.bioInfoName {
+		font-size: 1.3rem;
+	}
+	.bioInfoBodyRow {
+		font-size: 1rem;
+	}
+}
 
 /* ----------- iPhone X ----------- */
 
 /* Portrait and Landscape */
-@media only screen 
-  and (min-device-width: 375px) 
-  and (max-device-width: 812px) 
-  and (-webkit-min-device-pixel-ratio: 3) { 
-
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
 }
 
 /* Portrait */
-@media only screen 
-  and (min-device-width: 375px) 
-  and (max-device-width: 812px) 
-  and (-webkit-min-device-pixel-ratio: 3)
-  and (orientation: portrait) { 
-    
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: portrait) {
 }
 
 /* Landscape */
-@media only screen 
-  and (min-device-width: 375px) 
-  and (max-device-width: 812px) 
-  and (-webkit-min-device-pixel-ratio: 3)
-  and (orientation: landscape) { 
-    .bioInfo {
-      height: 130vw;
-    }
-    .bioInfoRow {
-      position: relative;
-      top: -25vw;
-      margin-top: 1vw;
-      /* overflow: hidden; */
-    }
-  
-    .bioInfoImgRow {
-      position: relative;
-      top: -35vw;
-      width: 100% !important;
-      margin: 0 auto !important; 
-    }
-    
-    .bioInfoSection {
-      width: 100%;
-      margin: 0 auto;
-      margin-bottom: 0;
-      margin-top: 45vw;
-      padding: 10%;
-      padding-bottom: 10%;
-      background-color: #FAC04E;
-      height: 100%;
-    }
-    .trainerBioCircleImg {
-      position: relative;
-      width: 50vw;
-      height: 50vw;
-      border-radius: 50%;
-      margin: 0 auto;
-    }
-    .trainerBioCircleImg img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-    .bioInfoHeaderLeft {
-      font-size: 1.1rem;
-    }
-    .bioInfoHeaderRight {
-      font-size: 1.1rem; 
-    }
-    .bioInfoName {
-      font-size: 1.3rem; 
-    }
-    .bioInfoBodyRow {
-      font-size: 1rem;
-    }
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {
+	.bioInfo {
+		height: 130vw;
+	}
+	.bioInfoRow {
+		position: relative;
+		top: -25vw;
+		margin-top: 1vw;
+		/* overflow: hidden; */
+	}
+
+	.bioInfoImgRow {
+		position: relative;
+		top: -35vw;
+		width: 100% !important;
+		margin: 0 auto !important;
+	}
+
+	.bioInfoSection {
+		width: 100%;
+		margin: 0 auto;
+		margin-bottom: 0;
+		margin-top: 45vw;
+		padding: 10%;
+		padding-bottom: 10%;
+		background-color: #fac04e;
+		height: 100%;
+	}
+	.trainerBioCircleImg {
+		position: relative;
+		width: 50vw;
+		height: 50vw;
+		border-radius: 50%;
+		margin: 0 auto;
+	}
+	.trainerBioCircleImg img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+	.bioInfoHeaderLeft {
+		font-size: 1.1rem;
+	}
+	.bioInfoHeaderRight {
+		font-size: 1.1rem;
+	}
+	.bioInfoName {
+		font-size: 1.3rem;
+	}
+	.bioInfoBodyRow {
+		font-size: 1rem;
+	}
 }
 
 /* ----------- iPhone 6+, 7+ and 8+ ----------- */
 
 /* Portrait and Landscape */
-@media only screen 
-  and (min-device-width: 414px) 
-  and (max-device-width: 736px) 
-  and (-webkit-min-device-pixel-ratio: 3) { 
-
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) {
 }
 
 /* Portrait */
-@media only screen 
-  and (min-device-width: 414px) 
-  and (max-device-width: 736px) 
-  and (-webkit-min-device-pixel-ratio: 3)
-  and (orientation: portrait) { 
-    .bioInfo {
-      height: 100%;
-    }
-  
-    .bioInfoRow {
-      position: relative;
-      top: -25vw;
-      margin-top: 1vw;
-      /* overflow: hidden; */
-    }
-  
-    .bioInfoImgRow {
-      position: relative;
-      top: -35vw;
-      width: 100% !important;
-      margin: 0 auto !important; 
-    }
-    
-    .bioInfoSection {
-      width: 100%;
-      margin: 0 auto;
-      margin-bottom: 0;
-      margin-top: 75vw;
-      padding: 10%;
-      padding-bottom: 10%;
-      background-color: #FAC04E;
-      height: 100%;
-    }
-    .trainerBioCircleImg {
-      position: relative;
-      width: 50vw;
-      height: 50vw;
-      border-radius: 50%;
-      margin: 0 auto;
-    }
-    .trainerBioCircleImg img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-    .bioInfoHeaderLeft {
-      font-size: 1.1rem;
-    }
-    .bioInfoHeaderRight {
-      font-size: 1.1rem; 
-    }
-    .bioInfoName {
-      font-size: 1.3rem; 
-    }
-    .bioInfoBodyRow {
-      font-size: 1rem;
-    }
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: portrait) {
+	.bioInfo {
+		height: 100%;
+	}
+
+	.bioInfoRow {
+		position: relative;
+		top: -25vw;
+		margin-top: 1vw;
+		/* overflow: hidden; */
+	}
+
+	.bioInfoImgRow {
+		position: relative;
+		top: -35vw;
+		width: 100% !important;
+		margin: 0 auto !important;
+	}
+
+	.bioInfoSection {
+		width: 100%;
+		margin: 0 auto;
+		margin-bottom: 0;
+		margin-top: 75vw;
+		padding: 10%;
+		padding-bottom: 10%;
+		background-color: #fac04e;
+		height: 100%;
+	}
+	.trainerBioCircleImg {
+		position: relative;
+		width: 50vw;
+		height: 50vw;
+		border-radius: 50%;
+		margin: 0 auto;
+	}
+	.trainerBioCircleImg img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+	.bioInfoHeaderLeft {
+		font-size: 1.1rem;
+	}
+	.bioInfoHeaderRight {
+		font-size: 1.1rem;
+	}
+	.bioInfoName {
+		font-size: 1.3rem;
+	}
+	.bioInfoBodyRow {
+		font-size: 1rem;
+	}
 }
 
 /* Landscape */
-@media only screen 
-  and (min-device-width: 414px) 
-  and (max-device-width: 736px) 
-  and (-webkit-min-device-pixel-ratio: 3)
-  and (orientation: landscape) { 
-    .bioInfo {
-      height: 100%;
-    }
-  
-    .bioInfoRow {
-      position: relative;
-      top: -25vw;
-      margin-top: 1vw;
-      /* overflow: hidden; */
-    }
-  
-    .bioInfoImgRow {
-      position: relative;
-      top: -35vw;
-      width: 100% !important;
-      margin: 0 auto !important; 
-    }
-    
-    .bioInfoSection {
-      width: 100%;
-      margin: 0 auto;
-      margin-bottom: 0;
-      margin-top: 45vw;
-      padding: 10%;
-      padding-bottom: 10%;
-      background-color: #FAC04E;
-      height: 100%;
-    }
-    .trainerBioCircleImg {
-      position: relative;
-      width: 50vw;
-      height: 50vw;
-      border-radius: 50%;
-      margin: 0 auto;
-    }
-    .trainerBioCircleImg img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-    .bioInfoHeaderLeft {
-      font-size: 1.1rem;
-    }
-    .bioInfoHeaderRight {
-      font-size: 1.1rem; 
-    }
-    .bioInfoName {
-      font-size: 1.3rem; 
-    }
-    .bioInfoBodyRow {
-      font-size: 1rem;
-    }
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {
+	.bioInfo {
+		height: 100%;
+	}
+
+	.bioInfoRow {
+		position: relative;
+		top: -25vw;
+		margin-top: 1vw;
+		/* overflow: hidden; */
+	}
+
+	.bioInfoImgRow {
+		position: relative;
+		top: -35vw;
+		width: 100% !important;
+		margin: 0 auto !important;
+	}
+
+	.bioInfoSection {
+		width: 100%;
+		margin: 0 auto;
+		margin-bottom: 0;
+		margin-top: 45vw;
+		padding: 10%;
+		padding-bottom: 10%;
+		background-color: #fac04e;
+		height: 100%;
+	}
+	.trainerBioCircleImg {
+		position: relative;
+		width: 50vw;
+		height: 50vw;
+		border-radius: 50%;
+		margin: 0 auto;
+	}
+	.trainerBioCircleImg img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+	.bioInfoHeaderLeft {
+		font-size: 1.1rem;
+	}
+	.bioInfoHeaderRight {
+		font-size: 1.1rem;
+	}
+	.bioInfoName {
+		font-size: 1.3rem;
+	}
+	.bioInfoBodyRow {
+		font-size: 1rem;
+	}
 }
 
 /* ----------- Pixel 2 ----------- */
 /* Portrait */
-@media only screen 
-  and (min-device-width: 375px) 
-  and (max-device-width: 760px) 
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (orientation: portrait) { 
-    
+@media only screen and (min-device-width: 375px) and (max-device-width: 760px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
 }
 
 /* Landscape */
-@media only screen 
-  and (min-device-width: 675px) 
-  and (max-device-width: 735px) 
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (orientation: landscape) { 
-    .bioInfo {
-      height: 130vw;
-    }
-    .bioInfoRow {
-      position: relative;
-      top: -25vw;
-      margin-top: 1vw;
-      /* overflow: hidden; */
-    }
-  
-    .bioInfoImgRow {
-      position: relative;
-      top: -35vw;
-      width: 100% !important;
-      margin: 0 auto !important; 
-    }
-    
-    .bioInfoSection {
-      width: 100%;
-      margin: 0 auto;
-      margin-bottom: 0;
-      margin-top: 45vw;
-      padding: 10%;
-      padding-bottom: 10%;
-      background-color: #FAC04E;
-      height: 100%;
-    }
-    .trainerBioCircleImg {
-      position: relative;
-      width: 50vw;
-      height: 50vw;
-      border-radius: 50%;
-      margin: 0 auto;
-    }
-    .trainerBioCircleImg img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-    .bioInfoHeaderLeft {
-      font-size: 1.1rem;
-    }
-    .bioInfoHeaderRight {
-      font-size: 1.1rem; 
-    }
-    .bioInfoName {
-      font-size: 1.3rem; 
-    }
-    .bioInfoBodyRow {
-      font-size: 1rem;
-    }
+@media only screen and (min-device-width: 675px) and (max-device-width: 735px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+	.bioInfo {
+		height: 130vw;
+	}
+	.bioInfoRow {
+		position: relative;
+		top: -25vw;
+		margin-top: 1vw;
+		/* overflow: hidden; */
+	}
+
+	.bioInfoImgRow {
+		position: relative;
+		top: -35vw;
+		width: 100% !important;
+		margin: 0 auto !important;
+	}
+
+	.bioInfoSection {
+		width: 100%;
+		margin: 0 auto;
+		margin-bottom: 0;
+		margin-top: 45vw;
+		padding: 10%;
+		padding-bottom: 10%;
+		background-color: #fac04e;
+		height: 100%;
+	}
+	.trainerBioCircleImg {
+		position: relative;
+		width: 50vw;
+		height: 50vw;
+		border-radius: 50%;
+		margin: 0 auto;
+	}
+	.trainerBioCircleImg img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+	.bioInfoHeaderLeft {
+		font-size: 1.1rem;
+	}
+	.bioInfoHeaderRight {
+		font-size: 1.1rem;
+	}
+	.bioInfoName {
+		font-size: 1.3rem;
+	}
+	.bioInfoBodyRow {
+		font-size: 1rem;
+	}
 }
 
 /* ----------- Pixel 2 XL ----------- */
 /* Portrait */
-@media only screen 
-  and (min-device-width: 375px) 
-  and (max-device-width: 760px) 
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (orientation: portrait) { 
-    
+@media only screen and (min-device-width: 375px) and (max-device-width: 760px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
 }
 
 /* Landscape */
-@media only screen 
-  and (min-device-width: 820px) 
-  and (max-device-width: 825px) 
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (orientation: landscape) { 
-    .bioInfo {
-      height: 130vw;
-    }
-    .bioInfoRow {
-      position: relative;
-      top: -25vw;
-      margin-top: 1vw;
-      /* overflow: hidden; */
-    }
-  
-    .bioInfoImgRow {
-      position: relative;
-      top: -35vw;
-      width: 100% !important;
-      margin: 0 auto !important; 
-    }
-    
-    .bioInfoSection {
-      width: 100%;
-      margin: 0 auto;
-      margin-bottom: 0;
-      margin-top: 45vw;
-      padding: 10%;
-      padding-bottom: 10%;
-      background-color: #FAC04E;
-      height: 100%;
-    }
-    .trainerBioCircleImg {
-      position: relative;
-      width: 50vw;
-      height: 50vw;
-      border-radius: 50%;
-      margin: 0 auto;
-    }
-    .trainerBioCircleImg img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-    .bioInfoHeaderLeft {
-      font-size: 1.1rem;
-    }
-    .bioInfoHeaderRight {
-      font-size: 1.1rem; 
-    }
-    .bioInfoName {
-      font-size: 1.3rem; 
-    }
-    .bioInfoBodyRow {
-      font-size: 1rem;
-    }
+@media only screen and (min-device-width: 820px) and (max-device-width: 825px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+	.bioInfo {
+		height: 130vw;
+	}
+	.bioInfoRow {
+		position: relative;
+		top: -25vw;
+		margin-top: 1vw;
+		/* overflow: hidden; */
+	}
+
+	.bioInfoImgRow {
+		position: relative;
+		top: -35vw;
+		width: 100% !important;
+		margin: 0 auto !important;
+	}
+
+	.bioInfoSection {
+		width: 100%;
+		margin: 0 auto;
+		margin-bottom: 0;
+		margin-top: 45vw;
+		padding: 10%;
+		padding-bottom: 10%;
+		background-color: #fac04e;
+		height: 100%;
+	}
+	.trainerBioCircleImg {
+		position: relative;
+		width: 50vw;
+		height: 50vw;
+		border-radius: 50%;
+		margin: 0 auto;
+	}
+	.trainerBioCircleImg img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+	.bioInfoHeaderLeft {
+		font-size: 1.1rem;
+	}
+	.bioInfoHeaderRight {
+		font-size: 1.1rem;
+	}
+	.bioInfoName {
+		font-size: 1.3rem;
+	}
+	.bioInfoBodyRow {
+		font-size: 1rem;
+	}
 }
-
-
 
 /* ----------- iPads ----------- */
 
 /* ----------- iPad 1, 2, Mini and Air ----------- */
 
 /* Portrait and Landscape */
-@media only screen 
-  and (min-device-width: 768px) 
-  and (max-device-width: 1024px) 
-  and (-webkit-min-device-pixel-ratio: 1) {
-
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
 }
 
 /* Portrait */
-@media only screen 
-  and (min-device-width: 768px) 
-  and (max-device-width: 1024px) 
-  and (orientation: portrait) 
-  and (-webkit-min-device-pixel-ratio: 1) {
-    .bioInfo {
-      height: 100%;
-    }
-  
-    .bioInfoRow {
-      position: relative;
-      top: -25vw;
-      margin-top: 1vw;
-      /* overflow: hidden; */
-    }
-  
-    .bioInfoImgRow {
-      position: relative;
-      top: -35vw;
-      width: 100% !important;
-      margin: 0 auto !important; 
-    }
-    
-    .bioInfoSection {
-      width: 100%;
-      margin: 0 auto;
-      margin-bottom: 0;
-      margin-top: 70vw;
-      padding: 10%;
-      padding-bottom: 10%;
-      background-color: #FAC04E;
-      height: 100%;
-    }
-    .trainerBioCircleImg {
-      position: relative;
-      width: 50vw;
-      height: 50vw;
-      border-radius: 50%;
-      margin: 0 auto;
-    }
-    .trainerBioCircleImg img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-    .bioInfoHeaderRow {
-      white-space: nowrap;
-    }
-    .bioInfoHeaderLeft {
-      font-size: 2rem;
-    }
-    .bioInfoHeaderRight {
-      font-size: 2rem; 
-    }
-    .bioInfoName {
-      font-size: 1.8rem; 
-    }
-    .bioInfoBodyRow {
-      font-size: 1.5rem;
-    }
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
+	.bioInfo {
+		height: 100%;
+	}
+
+	.bioInfoRow {
+		position: relative;
+		top: -25vw;
+		margin-top: 1vw;
+		/* overflow: hidden; */
+	}
+
+	.bioInfoImgRow {
+		position: relative;
+		top: -35vw;
+		width: 100% !important;
+		margin: 0 auto !important;
+	}
+
+	.bioInfoSection {
+		width: 100%;
+		margin: 0 auto;
+		margin-bottom: 0;
+		margin-top: 70vw;
+		padding: 10%;
+		padding-bottom: 10%;
+		background-color: #fac04e;
+		height: 100%;
+	}
+	.trainerBioCircleImg {
+		position: relative;
+		width: 50vw;
+		height: 50vw;
+		border-radius: 50%;
+		margin: 0 auto;
+	}
+	.trainerBioCircleImg img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+	.bioInfoHeaderRow {
+		white-space: nowrap;
+	}
+	.bioInfoHeaderLeft {
+		font-size: 2rem;
+	}
+	.bioInfoHeaderRight {
+		font-size: 2rem;
+	}
+	.bioInfoName {
+		font-size: 1.8rem;
+	}
+	.bioInfoBodyRow {
+		font-size: 1.5rem;
+	}
 }
 
 /* Landscape */
-@media only screen 
-  and (min-device-width: 768px) 
-  and (max-device-width: 1024px) 
-  and (orientation: landscape) 
-  and (-webkit-min-device-pixel-ratio: 1) {
-
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
 }
 
 /* ----------- iPad 3, 4 and Pro 9.7" ----------- */
 
 /* Portrait and Landscape */
-@media only screen 
-  and (min-device-width: 768px) 
-  and (max-device-width: 1024px) 
-  and (-webkit-min-device-pixel-ratio: 2) {
-
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {
 }
 
 /* Portrait */
-@media only screen 
-  and (min-device-width: 768px) 
-  and (max-device-width: 1024px) 
-  and (orientation: portrait) 
-  and (-webkit-min-device-pixel-ratio: 2) {
-    .bioInfoBodyRow {
-      font-size: 2rem;
-    }
-    
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+	.bioInfoBodyRow {
+		font-size: 2rem;
+	}
 }
 
 /* Landscape */
-@media only screen 
-  and (min-device-width: 768px) 
-  and (max-device-width: 1024px) 
-  and (orientation: landscape) 
-  and (-webkit-min-device-pixel-ratio: 2) {
-
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
 }
 
 /* ----------- iPad Pro 10.5" ----------- */
 
 /* Portrait and Landscape */
-@media only screen 
-  and (min-device-width: 834px) 
-  and (max-device-width: 1112px)
-  and (-webkit-min-device-pixel-ratio: 2) {
-
+@media only screen and (min-device-width: 834px) and (max-device-width: 1112px) and (-webkit-min-device-pixel-ratio: 2) {
 }
 
 /* Portrait */
 /* Declare the same value for min- and max-width to avoid colliding with desktops */
 /* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
-@media only screen 
-  and (min-device-width: 834px) 
-  and (max-device-width: 834px) 
-  and (orientation: portrait) 
-  and (-webkit-min-device-pixel-ratio: 2) {
-
+@media only screen and (min-device-width: 834px) and (max-device-width: 834px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
 }
 
 /* Landscape */
 /* Declare the same value for min- and max-width to avoid colliding with desktops */
 /* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
-@media only screen 
-  and (min-device-width: 1112px) 
-  and (max-device-width: 1112px) 
-  and (orientation: landscape) 
-  and (-webkit-min-device-pixel-ratio: 2) {
-
+@media only screen and (min-device-width: 1112px) and (max-device-width: 1112px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
 }
 
 /* ----------- iPad Pro 12.9" ----------- */
 
 /* Portrait and Landscape */
-@media only screen 
-  and (min-device-width: 1024px) 
-  and (max-device-width: 1366px)
-  and (-webkit-min-device-pixel-ratio: 2) {
-    
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) {
 }
 
 /* Portrait */
 /* Declare the same value for min- and max-width to avoid colliding with desktops */
 /* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
-@media only screen 
-  and (min-device-width: 1024px) 
-  and (max-device-width: 1024px) 
-  and (orientation: portrait) 
-  and (-webkit-min-device-pixel-ratio: 2) {
-    
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
 }
 
 /* Landscape */
 /* Declare the same value for min- and max-width to avoid colliding with desktops */
 /* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
-@media only screen 
-  and (min-device-width: 1366px) 
-  and (max-device-width: 1366px) 
-  and (orientation: landscape) 
-  and (-webkit-min-device-pixel-ratio: 2) {
-
+@media only screen and (min-device-width: 1366px) and (max-device-width: 1366px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
 }

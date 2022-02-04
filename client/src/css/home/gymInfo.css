@@ -262,6 +262,17 @@
 /* Declare the same value for min- and max-width to avoid colliding with desktops */
 /* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
 @media only screen and (min-device-width: 1024px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+	.gymInfoDetailsHeader,
+	.gymInfoDetailsBody {
+		margin: 1.5vw;
+	}
+	.gymInfoDetailsHeader {
+		font-size: 1.5rem;
+		margin-bottom: 0;
+	}
+	.gymInfoDetailsBody {
+		font-size: 1rem;
+	}
 }
 
 /* Landscape */
@@ -481,6 +492,11 @@
 /* ----------- Pixel 2 ----------- */
 
 @media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+}
+
+/* ----------- Surface Duo ----------- */
+
+@media only screen and (min-device-width: 540px) and (max-device-width: 540px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
 }
 
 /* ----------- LAPTOPS ----------- */

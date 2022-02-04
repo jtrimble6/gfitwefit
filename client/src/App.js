@@ -91,37 +91,14 @@ class Landing extends Component {
   }
 
   render() {
-    // let background1 = require('./css/images/gfitinsta/insta6.jpg')
-    // let landingStyle = {
-    //   zIndex: '100'
-    // }       
-    // let instafeedStyle = {
-    //   zIndex: '1'
-    // }    
     return (
       <Router>
         <div id='appRoot' className="App">
           <Switch>
-            <Route exact path='/'
-              render={() =>
-                <LandingPage />
-              }
-            />
-            <Route exact path='/contact'
-              render={() =>
-                <ContactPage />
-              }
-            />
-            <Route exact path='/kids'
-              render={() =>
-                <KidsPage />
-              }
-            />
-            <Route exact path='/bioPage'
-              render={() =>
-                <BioPage />
-              }
-            />
+            <Route exact path='/' component={LandingPage}/>
+            <Route exact path='/contact' component={ContactPage}/>
+            <Route exact path='/kids' component={KidsPage}/>
+            <Route exact path='/bioPage' component={BioPage}/>
             <Route exact path='/logout'
               render={() =>
                 <Logout 

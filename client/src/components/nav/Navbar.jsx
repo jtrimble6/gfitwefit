@@ -157,7 +157,7 @@ class Navbar extends Component {
               id="mainNav"
             >
               <span className="brandName">
-                {/* <a className="navbar-brand js-scroll-trigger" href="/">GFIT</a> */}
+                {/* <NavLink className="navbar-brand js-scroll-trigger" href="/">GFIT</NavLink> */}
                 <img src={logo} className="navbar-brand Navbar-logo" alt="logo" />
               </span>
                 {/* <div className="container"> */}
@@ -227,9 +227,9 @@ class Navbar extends Component {
                           <ul className="navbar-nav ml-auto">
 
                             <li className="nav-item" >
-                              <a className="nav-link js-scroll-trigger" href='/'>
+                              <NavLink className="nav-link js-scroll-trigger" href='/'>
                                 HOME
-                              </a>
+                              </NavLink>
                             </li>
                             
                             <li className="nav-item">
@@ -243,19 +243,19 @@ class Navbar extends Component {
                               </Link>
                             </li>
                             <li className="nav-item">
-                              <a className="nav-link js-scroll-trigger" href='/userLogin'>
+                              <NavLink className="nav-link js-scroll-trigger" href='/userLogin'>
                                 G-FIT GOLD
-                              </a>
+                              </NavLink>
                             </li>
                             <li className="nav-item" >
-                              <a className="nav-link js-scroll-trigger" href='/kids'>
+                              <NavLink className="nav-link js-scroll-trigger" href='/kids'>
                                 KIDS SPEED & STRENGTH
-                              </a>
+                              </NavLink>
                             </li>
                             <li className="nav-item">
-                              <a className="nav-link js-scroll-trigger" href='/contact'>
+                              <NavLink className="nav-link js-scroll-trigger" href='/contact'>
                                 CONTACT US
-                              </a>
+                              </NavLink>
                             </li>
                           </ul>
                         </div>

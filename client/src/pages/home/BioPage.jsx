@@ -40,7 +40,11 @@ class BioPage extends Component {
             case 'walt':
                 this.setState({
                   trainerImg: walt,
-                  trainerName: 'Walt Gouveia'
+                  trainerName: 'Walt Gouveia',
+                  trainerBio1: 'Walt Gouveia is the co-owner of Gouveia Fitness (G-FIT). He played football and baseball in high school and went on to play college football for Shepherd University. He earned 1st team All Conference Linebacker honors and received 4 conference championship rings.',
+                  trainerBio2: 'After his college career, we was under his mentor Eddie Mason, who played Linebacker for the Washington Redskins. He worked for Eddie’s gym (Mase Training) for 3 years where he learned the business of health and fitness.',
+                  trainerBio3: 'In 2018 he and his brother Kyle decided to step out in Faith and went to pursue their childhood dream which was to open a gym of their own. They are now training adults and kids in the Cornelius / Huntersville area of North Carolina. They also coach JV football for SouthLake Christian. Go Eagles!!!',
+                  trainerBio4: 'Walt lives in Davidson NC with the love of his life (Rhema) and doing their best to raise 2 kids. Liliana and Gavin. We also can’t forget their pup Samson.'
                 });
                 break;
             case 'kyle':
@@ -52,26 +56,6 @@ class BioPage extends Component {
                   trainerBio3: '“I became a gym owner because I wanted to help change lives forever. It was always something Walt and I had talked about since we were younger. In God’s timing we were finally able to make it happen. We didnt want to start just any gym, but rather build a community where people can have fun, feel healthy, and create life long memories.”',
                   trainerBio4: 'We are proud of our Gouveia Fitness family, and the community that has formed. We are excited to see how G-Fit impacts each and every persons’ health and fitness journey!'
                 });
-                break;
-            case 'jenn':
-                this.setState({
-                  trainerImg: jenn,
-                  trainerName: 'Jennifer Coleman',
-                  trainerBio1: 'Jennifer is a Christ following fitness lover!  She is a firm believer that exercise is not just about “fixing up” what we see on the outside.  Exercise and movement are a means to reach what’s happening on the inside as well.   With Jennifer’s thoughtful workouts, sessions won’t be mundane or boring.  She takes careful consideration when creating any group or individual workout in order to provide challenging, fun and highly effective workouts, no matter your fitness level.   She strives to push people to be the best, strongest and healthiest versions of themselves through faith, healthy living and exercise. Her passion lies in putting Christ first, both personally and professionally, healthy living and exercise!',
-                  trainerBio2: 'Jennifer spent two decades working twelve hour shifts as a Dispatcher and 911 operator. She is no stranger to the negative mental and physical effects of high stress and working long hours in a desk-bound environment. Fitness became the perfect outlet while also decreasing the challenges that can be associated with having Type One diabetes for nearly a lifetime.  She dedicates her personal journey to inspire her clients to walk in faith, live healthier lives, and move the bodies that were created just for them!',
-                  trainerBio3: 'If you’re feeling scared – look up -you are not alone! If you are feeling weak- He’s got you! If you’re feeling doubtful – turn it over to Him!  Jennifer is a certified Personal Trainer and Group Fitness Instructor though the National Academy of Sports Medicine. She is currently working on her certification as a Fitness Instructor with Revelation Wellness.',
-                  trainerBio4: ''
-                })
-                break;
-            case 'jacob':
-                this.setState({
-                  trainerImg: jacob,
-                  trainerName: 'Jacob Erdtmann',
-                  trainerBio1: 'GFIT’s newest trainer!  NASM certified personal trainer with a love for exercise. Born and raised in Milwaukee, WI, and a recent college graduate from the University of Wisconsin-Madison. After working a front dest job at a gym in college, he developed a passion for getting fit and helping others with their goals, and is continuing to do so at GFIT. He currently works with boxing, HIIT and strength training, and coaches his own group fitness class once per week.',
-                  trainerBio2: '',
-                  trainerBio3: '',
-                  trainerBio4: ''
-                })
                 break;
             default:
                 return;

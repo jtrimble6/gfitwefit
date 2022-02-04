@@ -24,7 +24,7 @@ class TrainerInfo extends Component {
                           <Card.Body className='trainerBioCardBody'>
                               <Card.Title className='trainerBioTitle'>WALT GOUVEIA</Card.Title>
                               <Card.Subtitle className='trainerBioSubtitle'>OWNER + TRAINER</Card.Subtitle>
-                              <Button href='/' className='trainerBioButton'>BIO //</Button>
+                              <Button href='/bioPage?trainer=walt' className='trainerBioButton'>BIO //</Button>
                               {/* <Button href='/bioPage?trainer=walt' className='trainerBioButton'>BIO //</Button> */}
                           </Card.Body>
                         </Card>
