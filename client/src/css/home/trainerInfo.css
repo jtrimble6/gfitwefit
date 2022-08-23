@@ -105,9 +105,17 @@
 
 /* ----------- Non-Retina Screens ----------- */
 @media screen and (min-device-width: 1000px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
+	.trainerBioCardSolo {
+		max-width: 50%;
+		margin: 0 auto;
+	}
 }
 
 @media screen and (min-device-width: 1600px) and (max-device-width: 2000px) and (-webkit-min-device-pixel-ratio: 1) {
+	.trainerBioCardSolo {
+		max-width: 50%;
+		margin: 0 auto;
+	}
 }
 @media screen and (min-device-width: 2001px) and (max-device-width: 3000px) and (-webkit-min-device-pixel-ratio: 1) {
 	.trainerBioTitle {
@@ -115,6 +123,10 @@
 	}
 	.trainerBioCardBody {
 		padding: 2vw;
+	}
+	.trainerBioCardSolo {
+		max-width: 50%;
+		margin: 0 auto;
 	}
 }
 

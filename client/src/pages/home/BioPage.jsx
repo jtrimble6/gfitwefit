@@ -57,6 +57,16 @@ class BioPage extends Component {
                   trainerBio4: 'We are proud of our Gouveia Fitness family, and the community that has formed. We are excited to see how G-Fit impacts each and every persons’ health and fitness journey!'
                 });
                 break;
+              case 'jenn':
+                this.setState({
+                  trainerImg: jenn,
+                  trainerName: 'Jenn',
+                  trainerBio1: 'Jennifer is a Christ following fitness lover! She is a firm believer that exercise is not just about “fixing up” what we see on the outside. Exercise and movement are a means to reach what’s happening on the inside as well. With Jennifer’s thoughtful workouts, sessions won’t be mundane or boring. She takes careful consideration when creating any group or individual workout in order to provide challenging, fun and highly effective workouts, no matter your fitness level. She strives to push people to be the best, strongest and healthiest versions of themselves through faith, healthy living and exercise. Her passion lies in putting Christ first, both personally and professionally, healthy living and exercise!',
+                  trainerBio2: 'Jennifer spent two decades working twelve hour shifts as a Dispatcher and 911 operator. She is no stranger to the negative mental and physical effects of high stress and working long hours in a desk-bound environment. Fitness became the perfect outlet while also decreasing the challenges that can be associated with having Type One diabetes for nearly a lifetime. She dedicates her personal journey to inspire her clients to walk in faith, live healthier lives, and move the bodies that were created just for them!',
+                  trainerBio3: 'If you’re feeling scared – look up -you are not alone! If you are feeling weak- He’s got you! If you’re feeling doubtful – turn it over to Him! Jennifer is a certified Personal Trainer and Group Fitness Instructor though the National Academy of Sports Medicine. She is currently working on her certification as a Fitness Instructor with Revelation Wellness.',
+                  trainerBio4: ''
+                });
+                break;
             default:
                 return;
         }

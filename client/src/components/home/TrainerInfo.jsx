@@ -43,6 +43,21 @@ class TrainerInfo extends Component {
                         </Card>
                       </Col>
                     </Row>
+
+                    <Row className='trainerBioRow'>
+                    {/* TRAINER BIO 3 */}
+                    <Col sm-6='true' className='trainerBioCardColumn'>
+                        <Card className='trainerBioCard trainerBioCardSolo'>
+                          <Card.Img className='trainerBioImage' variant="top" src={jenn} alt="Jenn" />
+                          <Card.Body className='trainerBioCardBody'>
+                              <Card.Title className='trainerBioTitle'>JENN COLEMAN</Card.Title>
+                              <Card.Subtitle className='trainerBioSubtitle'>TRAINER</Card.Subtitle>
+                              {/* <Button href='/' className='trainerBioButton'>BIO //</Button> */}
+                              <Button href='/bioPage?trainer=jenn' className='trainerBioButton'>BIO //</Button>
+                          </Card.Body>
+                        </Card>
+                      </Col>
+                    </Row>
             </div>
         )
     }
