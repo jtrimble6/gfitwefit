@@ -568,3 +568,30 @@
 		line-height: 3rem;
 	}
 }
+
+/* ----------- GENERAL ----------- */
+
+@media only screen and (min-device-width: 1001px) {
+	.gymInfo {
+		padding-top: 20vh;
+		margin-bottom: 15vh;
+		height: 165vh;
+	}
+	.gymInfoLogoCol {
+		width: 70vw;
+		margin-left: 5vw;
+	}
+	.gymInfoDetailsCol {
+		width: 55vw;
+		left: 45vw;
+	}
+	.gymInfoDetailsBody {
+		font-size: 1.6rem;
+		line-height: 1.7rem;
+	}
+	.gymInfoDetailsRow {
+		width: 52vw;
+		padding-left: 2vw;
+	}
+}
+

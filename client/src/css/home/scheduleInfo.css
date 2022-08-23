@@ -874,7 +874,35 @@
 @media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {
 }
 
-/* ----------- Pixel 2 ----------- */
+/* ----------- GENERAL ----------- */
 
-@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+@media only screen and (min-device-width: 1001px) {
+	.scheduleInfoButton {
+		font-size: 1.5vw;
+	}
+
+	.scheduleInfoDetailsRow {
+		width: 50%;
+		margin-bottom: 5vh;
+	}
+	.scheduleInfoDetailsTitle,
+	.scheduleInfoDetailsColLeft,
+	.scheduleInfoDetailsColRight {
+		width: 100%;
+		display: block;
+	}
+	.scheduleInfoDetailsTitle {
+		margin-left: 5vw;
+		font-size: 2rem;
+	}
+	.scheduleInfoDetailsColLeft,
+	.scheduleInfoDetailsColRight {
+		margin-left: 10vw;
+	}
+	.scheduleInfoRow1Body {
+		font-size: 1.5rem;
+	}
+	.scheduleInfoDetailsBody {
+		font-size: 1.5rem;
+	}
 }
