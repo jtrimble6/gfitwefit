@@ -83,11 +83,11 @@ class NavbarSecondaryPage extends Component {
                             onClick={this.toggleNavbar}
                             href="/"
                           > HOME</NavLink>
-                          <NavLink 
+                          {/* <NavLink 
                             className=' iconBar nav-link' 
                             onClick={this.toggleNavbar}
                             href="/userLogin"
-                          > G-FIT GOLD</NavLink>
+                          > G-FIT GOLD</NavLink> */}
                           <NavLink 
                             className=' iconBar nav-link' 
                             onClick={this.toggleNavbar}
@@ -107,11 +107,11 @@ class NavbarSecondaryPage extends Component {
                               HOME
                             </a>
                           </li>
-                          <li className="nav-item" >
+                          {/* <li className="nav-item" >
                             <a className="nav-link js-scroll-trigger" href='/userLogin'>
                               G-FIT GOLD
                             </a>
-                          </li>
+                          </li> */}
                           <li className="nav-item" >
                             <a className="nav-link js-scroll-trigger" href='/kids'>
                               KIDS SPEED & STRENGTH

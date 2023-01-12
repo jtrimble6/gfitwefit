@@ -199,12 +199,12 @@ class Navbar extends Component {
                             > 
                               SEE SCHEDULE 
                             </Link>
-                            <NavLink 
+                            {/* <NavLink 
                               className='iconBar nav-link' 
                               href="/userLogin"
                             > 
                               G-FIT GOLD
-                            </NavLink>
+                            </NavLink> */}
                             <NavLink 
                               className=' iconBar nav-link' 
                               onClick={this.toggleNavbar}
@@ -242,11 +242,11 @@ class Navbar extends Component {
                                 SEE SCHEDULE
                               </Link>
                             </li>
-                            <li className="nav-item">
+                            {/* <li className="nav-item">
                               <NavLink className="nav-link js-scroll-trigger" href='/userLogin'>
                                 G-FIT GOLD
                               </NavLink>
-                            </li>
+                            </li> */}
                             <li className="nav-item" >
                               <NavLink className="nav-link js-scroll-trigger" href='/kids'>
                                 KIDS SPEED & STRENGTH
