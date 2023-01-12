@@ -100,9 +100,9 @@ class KidsLanding extends Component {
 							training.
 						</p>
 						<p className="kidsLandingScheduleHeader">MONDAYS AND WEDNESDAYS</p>
-						<p className="kidsLandingScheduleText">4:30-5:30pm for all 4th, 5th, and 6th graders.</p>
+						<p className="kidsLandingScheduleText">4:30-5:30pm for all 3rd, 4th, and 5th graders.</p>
 						<p className="kidsLandingScheduleHeader">TUESDAYS AND THURSDAYS</p>
-						<p className="kidsLandingScheduleText">4:30-5:30pm for all 7th, 8th, and 9th graders.</p>
+						<p className="kidsLandingScheduleText">4:30-5:30pm for all 6th, 7th, and 8th graders.</p>
 						{/* <p className="kidsLandingPrice">
                             $250/participant for 12 sessions 
                         </p> */}
