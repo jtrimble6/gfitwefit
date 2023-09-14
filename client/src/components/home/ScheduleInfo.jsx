@@ -233,7 +233,7 @@ class ScheduleInfo extends Component {
                                 </Row>
                                 <Row className='scheduleInfoDetailsColRight'>
                                     <p className='scheduleInfoDetailsBody scheduleInfoDetailsTimes'>
-                                    8AM, 9:30AM
+                                    8AM
                                     {/* {
                                         sortedSchedule.length === 6 ? sortedSchedule[5].times : 'TBD'
                                     } */}
